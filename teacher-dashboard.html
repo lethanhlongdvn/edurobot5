@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng điều khiển Giáo viên - EduRobot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- SheetJS for Excel Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #f8fafc;
+        }
+
+        .dashboard-card {
+            transition: all 0.3s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="p-4 md:p-8">
+    <!-- Login Screen -->
+    <div id="login-screen"
+        class="fixed inset-0 bg-slate-900/40 backdrop-blur-md z-[100] flex items-center justify-center p-4">
+        <div class="bg-white rounded-[32px] p-10 max-w-md w-full shadow-2xl text-center">
+            <div class="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center text-4xl mx-auto mb-6">👩‍🏫
+            </div>
+            <h2 class="text-3xl font-black text-gray-800 mb-2">Giáo viên</h2>
+            <p class="text-gray-500 mb-8 font-bold text-sm uppercase tracking-widest">Đăng nhập báo cáo</p>
+
+            <div class="space-y-4">
+                <input type="password" id="teacher-password" placeholder="Nhập mật khẩu..."
+                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-100 focus:border-blue-500 transition-all outline-none font-bold text-center text-xl tracking-widest">
+                <button onclick="checkLogin()"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-2xl shadow-xl shadow-blue-200 transition-all transform active:scale-95 uppercase tracking-widest">
+                    Vào hệ thống
+                </button>
+            </div>
+            <a href="index.html"
+                class="inline-block mt-8 text-sm font-bold text-gray-400 hover:text-blue-600 transition-colors uppercase tracking-widest">Quay
+                lại trang chủ</a>
+        </div>
+    </div>
+
+    <div id="dashboard" class="max-w-6xl mx-auto hidden">
+        <header class="flex justify-between items-center mb-8 bg-white p-6 rounded-3xl shadow-sm border border-blue-50">
+            <div class="flex items-center space-x-4">
+                <div
+                    class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-lg">
+                    T</div>
+                <div>
+                    <h1 class="text-2xl font-black text-gray-800">Quản lý Lớp học</h1>
+                    <p class="text-gray-400 font-bold text-xs uppercase tracking-widest leading-none mt-1">Hệ thống học
+                        tập EduRobot</p>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <a href="teacher.html"
+                    class="bg-indigo-50 text-indigo-600 font-black px-4 py-2 rounded-xl hover:bg-indigo-100 transition-colors flex items-center gap-2">
+                    <span>📝</span> Điểm Trắc Nghiệm
+                </a>
+                <button onclick="exportToExcel()"
+                    class="bg-green-50 text-green-600 font-black px-4 py-2 rounded-xl hover:bg-green-100 transition-colors flex items-center gap-2">
+                    <span>📊</span> XUẤT EXCEL
+                </button>
+                <button onclick="location.reload()"
+                    class="bg-blue-50 text-blue-600 font-bold px-4 py-2 rounded-xl hover:bg-blue-100 transition-colors">Làm
+                    mới</button>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Sidebar: Stats -->
+            <div class="lg:col-span-1 space-y-6">
+                <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-6 rounded-[32px] text-white shadow-xl">
+                    <h2 class="text-xl font-black mb-4">Tổng quan</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-white/20 pb-3">
+                            <span class="font-bold">Bài chưa chấm:</span>
+                            <span id="stat-pending" class="text-2xl font-black text-yellow-300">0</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/20 pb-3">
+                            <span class="font-bold">Dự án sáng tạo:</span>
+                            <span id="stat-projects" class="text-2xl font-black text-green-300">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-[32px] border border-gray-100 shadow-sm">
+                    <h3 class="font-black text-gray-800 mb-4 uppercase text-xs tracking-widest">Hướng dẫn nhanh</h3>
+                    <ul class="text-sm font-bold text-gray-500 space-y-3">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-500">1.</span> Xem nội dung bài viết/dự án của học sinh.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-500">2.</span> Nhập điểm (0-10) và lời phê của Thầy/Cô.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-500">3.</span> Nhấn "Lưu & Đăng" để học sinh thấy kết quả.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content: List -->
+            <div class="lg:col-span-2 space-y-6">
+                <div class="flex flex-col sm:flex-row gap-2 mb-4">
+                    <div class="flex space-x-2 bg-white p-1 rounded-2xl shadow-sm border border-gray-100 w-fit">
+                        <button id="tab-essays" onclick="switchView('essays_v2')"
+                            class="px-6 py-2 rounded-xl font-black text-sm transition-all bg-blue-600 text-white">Bài
+                            Tự Luận Toán</button>
+                        <button id="tab-projects" onclick="switchView('projects')"
+                            class="px-6 py-2 rounded-xl font-black text-sm transition-all text-gray-400 hover:bg-gray-50">Dự
+                            Án</button>
+                        <button id="tab-blacklist" onclick="switchView('blacklisted_devices')"
+                            class="px-6 py-2 rounded-xl font-black text-sm transition-all text-gray-400 hover:bg-gray-50">D.S
+                            Chặn</button>
+                    </div>
+
+                    <div class="relative flex-1 max-w-xs">
+                        <select id="lesson-filter" onchange="loadData()"
+                            class="w-full pl-4 pr-10 py-2 rounded-xl border-2 border-blue-50 focus:border-blue-500 outline-none font-bold text-gray-600 appearance-none bg-white cursor-pointer transition-all text-sm shadow-sm">
+                            <option value="">Tất cả bài học</option>
+                        </select>
+                        <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-blue-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 id="stats-title" class="text-xl font-black text-gray-800 uppercase tracking-tight mb-4 px-1">DANH
+                    SÁCH BÀI LÀM</h3>
+
+                <div id="loading" class="text-center py-20">
+                    <div
+                        class="animate-spin h-10 w-10 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4">
+                    </div>
+                    <p class="font-black text-gray-400 uppercase tracking-widest text-xs">Đang tải dữ liệu học sinh...
+                    </p>
+                </div>
+
+                <div id="content-list" class="space-y-6">
+                    <!-- Cards will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Grading -->
+    <div id="grade-modal"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-[40px] p-8 max-w-lg w-full shadow-2xl animate-in fade-in zoom-in duration-300">
+            <h3 class="text-2xl font-black text-gray-800 mb-2">Chấm điểm & Lời phê</h3>
+            <p id="modal-student-info" class="text-blue-600 font-bold mb-6 italic"></p>
+
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-[10px] font-black text-gray-400 uppercase mb-2">Lời phê của Thầy/Cô</label>
+                    <textarea id="teacher-comment"
+                        placeholder="Ví dụ: Bài viết rất sinh động, có nhiều hình ảnh nhân hóa..."
+                        class="w-full p-4 bg-gray-50 rounded-2xl border-none focus:ring-2 focus:ring-blue-200 font-bold min-h-[120px]"></textarea>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-black text-gray-400 uppercase mb-2">Điểm số (0-10)</label>
+                    <input type="number" id="teacher-grade" min="0" max="10" step="0.5"
+                        class="w-full p-4 bg-gray-50 rounded-2xl border-none focus:ring-2 focus:ring-blue-200 font-black text-2xl text-blue-600">
+                </div>
+                <div class="flex gap-4">
+                    <button onclick="closeModal()"
+                        class="flex-1 py-4 font-black border-2 border-gray-100 rounded-2xl hover:bg-gray-50 transition-all text-gray-400">ĐÓNG</button>
+                    <button onclick="saveGrade()"
+                        class="flex-2 bg-blue-600 hover:bg-blue-700 text-white font-black py-4 px-8 rounded-2x2 shadow-lg shadow-blue-100 transition-all flex-1">LƯU
+                        & ĐĂNG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Authentication Logic
+        function checkLogin() {
+            const pass = document.getElementById('teacher-password').value;
+            if (pass === "123456") {
+                document.getElementById('login-screen').classList.add('hidden');
+                document.getElementById('dashboard').classList.remove('hidden');
+                // Initial Load
+                switchView('essays_v2');
+            } else {
+                alert("Mật khẩu không đúng! Thầy/Cô vui lòng thử lại.");
+            }
+        }
+
+        function logout() {
+            window.location.reload();
+        }
+
+        // Placeholder - Update with your credentials
+        const firebaseConfig = {
+            apiKey: "AIzaSyC6zlWn8BKYU7P6A2-PYq6IIWOzaqJWFhc",
+            authDomain: "gamhoctap.firebaseapp.com",
+            projectId: "gamhoctap",
+            storageBucket: "gamhoctap.firebasestorage.app",
+            messagingSenderId: "833329613932",
+            appId: "1:833329613932:web:0d8574827bcfe50b535c49"
+        };
+
+        if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        let currentMode = 'essays';
+        let currentDocId = null;
+
+        function switchView(mode) {
+            currentMode = mode;
+            document.getElementById('tab-essays').className = mode === 'essays' ? 'px-6 py-2 rounded-xl font-black text-sm transition-all bg-blue-600 text-white' : 'px-6 py-2 rounded-xl font-black text-sm transition-all text-gray-400 hover:bg-gray-50';
+            document.getElementById('tab-projects').className = mode === 'projects' ? 'px-6 py-2 rounded-xl font-black text-sm transition-all bg-blue-600 text-white' : 'px-6 py-2 rounded-xl font-black text-sm transition-all text-gray-400 hover:bg-gray-50';
+            loadData();
+        }
+
+        let allDataSnapshot = [];
+
+        async function loadData() {
+            const list = document.getElementById('content-list');
+            const loading = document.getElementById('loading');
+            const lessonFilter = document.getElementById('lesson-filter').value;
+            list.innerHTML = "";
+            loading.classList.remove('hidden');
+
+            console.log("Loading data with mode:", currentMode);
+
+            try {
+                // SOLUTION: Fetch ALL data first, then Filter/Sort on Client-side.
+                // This avoids the "Requires an Index" error from Firestore for complex compound queries.
+                let queries = [];
+                if (currentMode === 'essays_v2') {
+                    // Fetch only Math lessons
+                    queries.push(db.collection('essays_v2').where('type', '==', 'math_lesson').get());
+                } else {
+                    queries.push(db.collection(currentMode).get());
+                }
+
+                const snapshots = await Promise.all(queries);
+
+                loading.classList.add('hidden');
+                allDataSnapshot = [];
+
+                let allDocs = [];
+                let lessonTitles = new Set(); // Track titles for filter dropdown
+                let pendingCount = 0;
+                let projectCount = 0;
+
+                snapshots.forEach(snapshot => {
+                    snapshot.forEach(doc => {
+                        const d = doc.data();
+                        d.id = doc.id;
+
+                        // Collect Metadata
+                        if (d.lessonTitle) lessonTitles.add(d.lessonTitle);
+                        if (d.status === "Chưa chấm") pendingCount++;
+                        if (currentMode === 'projects') projectCount++;
+
+                        // Client-side Filter
+                        if (lessonFilter && d.lessonTitle !== lessonFilter) return;
+
+                        allDocs.push(d);
+                    });
+                });
+
+                if (allDocs.length === 0) {
+                    list.innerHTML = `<div class="text-center text-gray-400 font-bold col-span-2 py-8">Chưa có bài nào. Thầy/Cô hãy nhắc nhở học sinh nộp nhé!</div>`;
+
+                    // Still update stats even if empty list (for the counts)
+                    document.getElementById('stat-pending').innerText = pendingCount;
+                    document.getElementById('stat-projects').innerText = projectCount;
+                    updateFilterDropdown(lessonTitles);
+                    return;
+                }
+
+                document.getElementById('stats-title').innerText = lessonFilter ? `DANH SÁCH: ${lessonFilter.toUpperCase()} (${allDocs.length})` : `TẤT CẢ BÀI HỌC (${allDocs.length})`;
+
+                // Manual Client-side Sort (Newest first)
+                const getTime = (t) => {
+                    if (!t) return 0;
+                    if (t.seconds) return t.seconds * 1000;
+                    if (t.toDate) return t.toDate().getTime();
+                    return new Date(t).getTime();
+                };
+
+                allDocs.sort((a, b) => getTime(b.timestamp) - getTime(a.timestamp));
+
+                allDocs.forEach((data, index) => {
+                    allDataSnapshot.push(data);
+
+                    const card = document.createElement('div');
+                    card.className = "dashboard-card bg-white p-6 rounded-[32px] shadow-sm border border-gray-100 space-y-4";
+
+                    let mediaHtml = data.fileUrl ? `<div class="bg-gray-100 p-2 rounded-2xl"><img src="${data.fileUrl}" class="w-full max-h-[300px] object-contain rounded-xl shadow-sm"></div>` : "";
+
+                    // Handle rawScores from LTVC Full
+                    let scoresHtml = "";
+                    if (data.rawScores) {
+                        const rs = data.rawScores;
+                        scoresHtml = `
+                         <div class="grid grid-cols-4 gap-2 mt-2 text-[10px] font-bold text-gray-500 bg-blue-50 p-2 rounded-xl text-center">
+                            <div>1a: ${rs.ex1a.score}</div>
+                            <div>1b: ${rs.ex1b.score}</div>
+                            <div>2: ${rs.ex2.score}</div>
+                            <div>3: ${rs.ex3.score}</div>
+                         </div>
+                         `;
+                    }
+
+                    card.innerHTML = `
+                        <div class="flex justify-between items-start">
+                             <div class="flex gap-4 items-center">
+                                <div class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center font-black text-gray-400 text-xs">${index + 1}</div>
+                                <div>
+                                    <h4 class="text-lg font-black text-gray-800">${data.studentName}</h4>
+                                    <span class="text-xs font-bold text-blue-500 uppercase tracking-widest">Lớp: ${data.studentClass}</span>
+                                    <div class="text-[10px] text-gray-400 font-bold mt-1">${data.lessonTitle || "Bài tập"}</div>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-lg text-[10px] font-black uppercase ${data.status === 'Chưa chấm' ? 'bg-yellow-100 text-yellow-600' : 'bg-green-100 text-green-600'}">
+                                ${data.status}
+                            </span>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-2xl text-sm font-medium text-gray-600 leading-relaxed max-h-40 overflow-y-auto italic">
+                            "${data.content}"
+                        </div>
+                        ${mediaHtml}
+                        ${scoresHtml}
+                        <div class="flex justify-between items-center pt-2">
+                             <div class="flex flex-col">
+                                <span class="text-[10px] text-gray-400 font-bold">${data.timestamp ? new Date(data.timestamp.toDate ? data.timestamp.toDate() : data.timestamp).toLocaleString('vi-VN') : ''}</span>
+                                <span class="text-[10px] text-indigo-500 font-bold">Điểm E dự kiến: ${data.aiGrade || 0}đ</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <button onclick="aiGradeSubmission('${data.id}', \`${data.content.replace(/`/g, '\\`').replace(/\n/g, ' ')}\`, '${data.lessonTitle || ''}')" class="bg-indigo-50 hover:bg-indigo-100 text-indigo-600 px-4 py-2 rounded-xl font-bold text-sm transition-all flex items-center gap-2">
+                                    <div class="w-4 h-4 bg-indigo-600 rounded flex items-center justify-center text-white font-black text-[8px] shadow-sm">E</div> Chấm tự động
+                                </button>
+                                <button onclick="openGrading('${data.id}', '${data.studentName}', '${data.studentClass}')" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl font-bold text-sm transition-all shadow-md shadow-blue-200">
+                                    Chấm bài
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-2 border-t border-gray-50">
+                            <span class="text-[9px] text-gray-300 font-mono">ID: ${data.deviceId ? data.deviceId.substring(0, 10) + '...' : 'N/A'}</span>
+                            <div class="flex gap-2">
+                                <button onclick="deleteRecord('${data.id}')" class="text-xs font-bold text-red-400 hover:text-red-600 transition-colors">Xóa bài</button>
+                                ${data.deviceId ? `<button onclick="blacklistDevice('${data.deviceId}', '${data.studentName}')" class="text-xs font-bold text-orange-400 hover:text-orange-600 transition-colors">Chặn thiết bị</button>` : ''}
+                            </div>
+                        </div>
+                        ${data.teacherFeedback ? `
+                            <div class="mt-4 p-4 border-t-2 border-dashed border-blue-50 pt-4">
+                                <p class="text-[10px] font-black text-blue-400 uppercase mb-1">Lời phê cũ:</p>
+                                <p class="text-xs font-bold text-gray-500 italic">"${data.teacherFeedback}" - <b>Điểm: ${data.teacherGrade}</b></p>
+                            </div>
+                        ` : ''}
+                    `;
+                    list.appendChild(card);
+                });
+
+                document.getElementById('stat-pending').innerText = pendingCount;
+                document.getElementById('stat-projects').innerText = projectCount;
+
+                if (currentMode === 'blacklisted_devices') {
+                    renderBlacklist(allDocs);
+                } else {
+                    updateFilterDropdown(lessonTitles);
+                }
+
+            } catch (error) {
+                console.error("Error loading data:", error);
+                // Show actual error to debug
+                loading.innerHTML = `<p class="text-red-500 bg-red-50 p-4 rounded-xl">Lỗi: ${error.message}<br><small>Thầy/Cô vui lòng nhấn Ctrl+F5 để tải lại.</small></p>`;
+            }
+        }
+
+        function updateFilterDropdown(titles) {
+            const filter = document.getElementById('lesson-filter');
+            const currentVal = filter.value;
+            // Only update if needed or empty to preserve selection context if re-run
+            // Actually, simplest is to rebuild it preserving selection
+
+            let html = '<option value="">Tất cả bài học</option>';
+            Array.from(titles).sort().forEach(title => {
+                html += `<option value="${title}" ${title === currentVal ? 'selected' : ''}>${title}</option>`;
+            });
+            filter.innerHTML = html;
+        }
+
+        function openGrading(id, name, cls) {
+            currentDocId = id;
+            document.getElementById('modal-student-info').innerText = `Học sinh: ${name} - Lớp: ${cls}`;
+            document.getElementById('grade-modal').classList.remove('hidden');
+            document.getElementById('grade-modal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('grade-modal').classList.add('hidden');
+            document.getElementById('grade-modal').classList.remove('flex');
+        }
+
+        async function saveGrade() {
+            const comment = document.getElementById('teacher-comment').value.trim();
+            const grade = document.getElementById('teacher-grade').value.trim();
+
+            if (!comment || !grade) {
+                alert("Thầy/Cô hãy nhập đủ Điểm và Lời phê nhé!");
+                return;
+            }
+
+            try {
+                await db.collection(currentMode).doc(currentDocId).update({
+                    teacherFeedback: comment,
+                    teacherGrade: grade,
+                    status: "Đã chấm"
+                });
+                alert("Đã đăng kết quả thành công cho học sinh!");
+                closeModal();
+                loadData();
+            } catch (error) {
+                console.error("Error updating grade:", error);
+                alert("Lỗi khi lưu điểm. Thầy/Cô hãy thử lại nhé!");
+            }
+        }
+
+        async function exportToExcel() {
+            try {
+                const lessonFilter = document.getElementById('lesson-filter').value;
+                const data = [];
+                let index = 1;
+
+                allDataSnapshot.forEach(row => {
+                    // Safety check: ensure row is a data object with properties
+                    if (!row || typeof row !== 'object') return;
+
+                    let timeStr = "";
+                    if (row.timestamp) {
+                        try {
+                            if (row.timestamp.toDate) timeStr = row.timestamp.toDate().toLocaleString('vi-VN');
+                            else if (row.timestamp.seconds) timeStr = new Date(row.timestamp.seconds * 1000).toLocaleString('vi-VN');
+                            else timeStr = new Date(row.timestamp).toLocaleString('vi-VN');
+                        } catch (e) {
+                            timeStr = "Lỗi thời gian";
+                        }
+                    }
+
+                    data.push({
+                        "STT": index++,
+                        "Họ tên": row.studentName || "N/A",
+                        "Lớp": "'" + (row.studentClass || "N/A"), // Prevent Excel date formatting
+                        "Trường": row.studentSchool || "",
+                        "Điểm AI": row.aiGrade || row.aiScore || 0,
+                        "Nội dung bài làm": row.content || "",
+                        "Phân loại": row.type || "math_lesson",
+                        "Lời phê giáo viên": row.teacherFeedback || "",
+                        "Điểm giáo viên": row.teacherGrade || "",
+                        "Link ảnh nộp": row.fileUrl || "",
+                        "Thời gian nộp": timeStr
+                    });
+                });
+
+                if (data.length === 0) {
+                    alert("Không có dữ liệu để xuất!");
+                    return;
+                }
+
+                const worksheet = XLSX.utils.json_to_sheet(data);
+                const workbook = XLSX.utils.book_new();
+
+                // Determine sheet name based on mode
+                let sheetName = "Dữ liệu";
+                if (currentMode.includes('essay')) sheetName = "Tự Luận Toán";
+                else if (currentMode.includes('project')) sheetName = "Dự Án Sáng Tạo";
+
+                XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+
+                // Set column widths
+                const wscols = [
+                    { wch: 5 }, { wch: 20 }, { wch: 10 }, { wch: 20 }, { wch: 25 }, { wch: 10 }, { wch: 50 }, { wch: 30 }, { wch: 30 }, { wch: 15 }, { wch: 30 }, { wch: 20 }
+                ];
+                worksheet['!cols'] = wscols;
+
+                const dateStr = new Date().toLocaleDateString('vi-VN').replace(/\//g, '-');
+                const safeFilter = lessonFilter ? lessonFilter.replace(/[^a-zA-Z0-9]/g, '_') : 'Tat_Ca';
+                let filePrefix = currentMode.includes('essay') ? "Bai_Van" : "Du_An";
+                const fileName = `${filePrefix}_${safeFilter}_${dateStr}.xlsx`;
+
+                XLSX.writeFile(workbook, fileName);
+            } catch (error) {
+                console.error("Export Error:", error);
+                alert("Lỗi khi xuất file Excel: " + error.message);
+            }
+        }
+
+        function switchView(mode) {
+            currentMode = mode;
+            document.querySelectorAll('[id^="tab-"]').forEach(btn => {
+                btn.className = 'px-6 py-2 rounded-xl font-black text-sm transition-all text-gray-400 hover:bg-gray-50';
+            });
+            // Fix: active class for correct tab
+            const tabId = mode === 'essays_v2' ? 'tab-essays' : (mode === 'essays' ? 'tab-old-essays' : 'tab-projects');
+            const activeBtn = document.getElementById(tabId);
+            if (activeBtn) activeBtn.className = 'px-6 py-2 rounded-xl font-black text-sm transition-all bg-blue-600 text-white';
+
+            loadData();
+        }
+
+        async function aiGradeSubmission(docId, content, lessonTitle) {
+            if (!confirm("Bạn có muốn yêu cầu hệ thống chấm thử bài này không? (Kết quả sẽ cập nhật vào cột 'Điểm E dự kiến')")) return;
+
+            // Tìm nút bấm để hiển thị trạng thái loading
+            const btn = event.currentTarget;
+            const originalHtml = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = "⏳ Đang chấm...";
+
+            try {
+                // Xác định tuần học từ tên bài học để lấy ngữ cảnh (nếu có thể)
+                let weekMatch = lessonTitle ? lessonTitle.match(/\d+/) : null;
+                let weekNumber = weekMatch ? parseInt(weekMatch[0]) : 22;
+
+                const response = await fetch('https://tiengviet5.netlify.app/.netlify/functions/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sentence: content,
+                        weekNumber: weekNumber,
+                        persona: 'tlv' // Creative Writing Teacher
+                    })
+                });
+
+                if (!response.ok) throw new Error("Lỗi kết nối AI");
+
+                const result = await response.json();
+                const score = parseFloat(result.diem) || result.grade || 0;
+                const feedback = result.response || result.content || "";
+
+                // Cập nhật Firestore
+                await db.collection(currentMode).doc(docId).update({
+                    aiGrade: score,
+                    aiFeedback: feedback
+                });
+
+                alert(`EduRobot đã chấm xong! Điểm dự kiến: ${score}đ.\nNhận xét: ${feedback.substring(0, 50)}...`);
+                loadData(); // Tải lại danh sách
+            } catch (error) {
+                console.error("AI Grading Error:", error);
+                alert("Lỗi khi gọi EduRobot chấm bài: " + error.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalHtml;
+            }
+        }
+
+        async function deleteRecord(id) {
+            if (!confirm("Thầy/Cô có chắc chắn muốn XÓA bài làm này không? Hành động này không thể hoàn tác.")) return;
+            try {
+                await db.collection(currentMode).doc(id).delete();
+                alert("Đã xóa bài làm thành công.");
+                loadData();
+            } catch (e) { alert("Lỗi khi xóa: " + e.message); }
+        }
+
+        async function blacklistDevice(deviceId, studentName) {
+            if (!confirm(`Thầy/Cô có muốn CHẶN THIẾT BỊ của học sinh "${studentName}" không?\nHọc sinh này sẽ không thể nộp bài từ thiết bị hiện tại nữa.`)) return;
+            try {
+                await db.collection("blacklisted_devices").doc(deviceId).set({
+                    studentName: studentName,
+                    reason: "Chặn từ Dashboard",
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                });
+                alert("Đã chặn thiết bị thành công. Học sinh này sẽ không thể nộp bài nữa.");
+            } catch (e) { alert("Lỗi khi chặn: " + e.message); }
+        }
+    </script>
+    <script src="js/floating-menu.js?v=1009"></script>
+</body>
+
+</html>
