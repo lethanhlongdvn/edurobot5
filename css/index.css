@@ -1,0 +1,402 @@
+/* index.css - Custom CSS for premium EduRobot experience */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #2D68FF;
+    /* Xanh dương chủ đạo - 30% */
+    --accent-color: #F59E0B;
+    /* Vàng cam nhấn - 10% (Tăng độ rực) */
+    --accent-soft: rgba(245, 158, 11, 0.1);
+    --bg-light: #F8FAFC;
+    /* Nền sáng - 60% */
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --border-radius-lg: 32px;
+    --border-radius-md: 20px;
+    --premium-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: var(--bg-light);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(45, 104, 255, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(245, 158, 11, 0.05) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.03) 0px, transparent 50%);
+    min-height: 100vh;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+}
+
+.lesson-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #334155;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--premium-shadow);
+}
+
+.subject-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.subject-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.lesson-card-hover {
+    transition: all 0.3s ease;
+}
+
+.lesson-card-hover:hover {
+    background: white;
+    transform: translateX(8px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-fade-out {
+    animation: fadeOut 0.3s ease-in forwards;
+}
+
+.animate-pop-in {
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-right {
+    animation: slideRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-down {
+    animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.glow-pink {
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+}
+
+.glow-emerald {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+/* Reading & Decorative Styles */
+.serif-font {
+    font-family: 'Be Vietnam Pro', serif;
+    /* Or use a dedicated serif font if available */
+    font-weight: 500;
+}
+
+.bg-paper {
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(rgba(241, 245, 249, 0.5) 1px, transparent 1px);
+    background-size: 100% 3rem;
+}
+
+.reading-content p {
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.animate-bounce-short {
+    animation: bounceShort 0.5s ease-in-out;
+}
+
+@keyframes bounceShort {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* 3D Cube System */
+.scene-3d {
+    width: 240px;
+    height: 240px;
+    perspective: 1000px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: grab;
+    user-select: none;
+}
+
+.scene-3d:active {
+    cursor: grabbing;
+}
+
+.cube-3d {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-22deg) rotateY(35deg);
+    transition: transform 0.1s ease-out;
+}
+
+.cube-3d.auto-rotate {
+    animation: rotateCube 15s infinite linear;
+}
+
+.cube-face {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 238, 140, 0.9);
+    /* Màu vàng nhạt giống SGK */
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    box-sizing: border-box;
+    backface-visibility: visible;
+}
+
+/* Kẻ ô 10x10 (100 ô mỗi mặt) */
+.cube-face::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 10% 10%;
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(80px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(80px);
+    border-left-color: rgba(0, 0, 0, 0.3);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(80px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(80px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(80px);
+    background: rgba(255, 245, 180, 0.95);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(80px);
+    background: rgba(200, 180, 50, 0.9);
+}
+
+/* Nhãn kích thước */
+.cube-label {
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    color: #1e293b;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.label-w {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.label-h {
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.label-d {
+    left: -80px;
+    top: 20%;
+    transform: rotate(-45deg);
+}
+
+@keyframes rotateCube {
+    0% {
+        transform: rotateX(-22deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(-22deg) rotateY(360deg);
+    }
+}
+
+/* Slogan Banner Animations */
+@keyframes slideRightSlow {
+    from {
+        transform: translateX(-100%) skewX(30deg);
+    }
+
+    to {
+        transform: translateX(300%) skewX(30deg);
+    }
+}
+
+@keyframes slideLeftSlow {
+    from {
+        transform: translateX(100%) skewX(30deg);
+    }
+
+    to {
+        transform: translateX(-300%) skewX(30deg);
+    }
+}
+
+@keyframes pulseSlow {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    50% {
+        opacity: 0.95;
+        transform: scale(1.01);
+        filter: brightness(1.1);
+    }
+}
+
+.animate-slide-right-slow {
+    animation: slideRightSlow 15s linear infinite;
+}
+
+.animate-slide-left-slow {
+    animation: slideLeftSlow 18s linear infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulseSlow 6s ease-in-out infinite;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
