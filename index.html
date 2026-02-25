@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Học tập EduRobot - Lớp 5</title>
+    <!-- CSS Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 px-4 py-2">
+        <nav class="container mx-auto glass-card rounded-2xl px-5 py-2 flex justify-between items-center shadow-lg">
+            <div class="flex items-center space-x-4">
+                <a href="#" onclick="router.goHome(); return false;" class="flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                        E</div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl font-black text-blue-600 leading-none">EduRobot</span>
+                        <div id="subject-badge"
+                            class="hidden px-2 py-1 rounded-lg text-[10px] font-black text-white uppercase tracking-tighter">
+                        </div>
+                    </div>
+                </a>
+                <div id="navbar-metadata" class="hidden md:flex items-center space-x-4 border-l-2 border-gray-100 pl-4">
+                    <!-- Metadata (Chủ điểm | Tuần | Bài) sẽ được chèn ở đây -->
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <ul id="navbar-menu"
+                    class="flex space-x-6 text-[11px] font-black items-center uppercase tracking-wider">
+                    <li id="menu-subjects-container" class="relative group hidden">
+                        <!-- Dropdown môn học sẽ được chèn ở đây -->
+                    </li>
+                    <li><a href="#" onclick="router.goHome(); return false;"
+                            class="text-gray-500 hover:text-blue-600 transition-colors py-2">Trang chủ</a></li>
+                    <li class="hidden md:block"><button
+                            class="text-gray-500 hover:text-blue-600 transition-colors py-2">Chia sẻ</button></li>
+                    <li><button onclick="openTeacherAuthModal()"
+                            class="bg-blue-50 text-blue-600 font-black px-4 py-2 rounded-xl border border-blue-100 transition-all hover:bg-blue-100 active:scale-95">Giáo
+                            viên</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Slogan Banner: Nổi bật & Hiện đại -->
+    <div class="bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-800 py-2 relative overflow-hidden shadow-lg z-40">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <p class="text-yellow-300 text-[11px] md:text-sm font-black uppercase tracking-[0.3em] animate-pulse-slow"
+                style="text-shadow: 0 0 10px rgba(253, 224, 71, 0.5), 2px 2px 4px rgba(0,0,0,0.3);">
+                Cùng EduRobot chinh phục tri thức, vững bước vào tương lai.
+            </p>
+        </div>
+        <!-- Decorative light streaks -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <div class="absolute -left-full top-0 w-full h-full bg-white/30 skew-x-[30deg] animate-slide-right-slow">
+            </div>
+            <div class="absolute -right-full top-0 w-full h-full bg-white/30 skew-x-[30deg] animate-slide-left-slow">
+            </div>
+        </div>
+    </div>
+
+    <main id="app-content" class="container mx-auto px-4 py-8 flex-grow animate-fade-in">
+        <!-- Nội dung sẽ được nạp động bởi các module JS -->
+        <div class="flex flex-col items-center justify-center h-64">
+            <div class="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4"></div>
+            <p class="text-blue-800 font-bold animate-pulse">Đang tải vũ trụ kiến thức...</p>
+        </div>
+    </main>
+
+    <footer class="py-6 px-4 mt-8 bg-white/40 backdrop-blur-md border-t border-white/50 w-full flex-none">
+        <div class="container mx-auto text-center">
+            <p class="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em] mb-2">© 2026 EduRobot - Hệ thống
+                học tập thông minh</p>
+            <p class="text-sm font-bold text-blue-600">Phát triển bởi LÊ THÀNH LONG</p>
+        </div>
+    </footer>
+
+    </footer>
+
+    <!-- Student Info Modal -->
+    <div id="student-modal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 w-[90%] max-w-md shadow-2xl scale-95 transition-transform duration-300 transform-gpu"
+            id="student-modal-content">
+            <h3 class="text-2xl font-black text-blue-800 mb-2 uppercase tracking-wide text-center">Bắt đầu nộp bài</h3>
+            <p class="text-gray-500 text-sm font-medium mb-6 text-center italic">Bạn hãy nhập đúng thông tin để Thầy/Cô
+                nhận ra bạn nhé!</p>
+
+            <div class="space-y-4">
+                <!-- Name -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase tracking-widest mb-1 ml-1">Họ và
+                        Tên</label>
+                    <input type="text" id="studentName" placeholder="VD: Nguyễn Văn A"
+                        class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-gray-800 focus:border-blue-500 focus:bg-white outline-none transition-all placeholder:text-gray-400">
+                </div>
+
+                <!-- School -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase tracking-widest mb-1 ml-1">Trường Tiểu
+                        học</label>
+                    <div class="relative">
+                        <select id="schoolSelect" onchange="window.checkSchool()"
+                            class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-gray-800 focus:border-blue-500 focus:bg-white outline-none transition-all appearance-none">
+                            <option value="">-- Chọn trường --</option>
+                            <option value="Tiểu học Đỗ Văn Nại">Tiểu học Đỗ Văn Nại</option>
+                            <option value="Khác">Trường Khác...</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other School (Hidden) -->
+                <div id="otherSchoolContainer" class="hidden">
+                    <input type="text" id="otherSchool" placeholder="Nhập tên trường của bạn..."
+                        class="w-full bg-gray-50 border-2 border-blue-200 rounded-xl px-4 py-3 text-sm font-bold text-blue-800 focus:border-blue-500 focus:bg-white outline-none transition-all placeholder:text-blue-300">
+                </div>
+
+                <!-- Class -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase tracking-widest mb-1 ml-1">Lớp</label>
+                    <div class="relative">
+                        <select id="studentClass"
+                            class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-gray-800 focus:border-blue-500 focus:bg-white outline-none transition-all appearance-none">
+                            <option value="">-- Chọn lớp --</option>
+                            <option value="5/1">Lớp 5/1</option>
+                            <option value="5/2">Lớp 5/2</option>
+                            <option value="5/3">Lớp 5/3</option>
+                            <option value="5/4">Lớp 5/4</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 flex gap-3">
+                <button onclick="closeStudentModal()"
+                    class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-600 font-bold py-3 rounded-xl transition-colors active:scale-95 text-sm uppercase">Đóng</button>
+                <button id="btn-save-student" onclick="window.saveStudentInfo()"
+                    class="flex-[2] bg-blue-600 hover:bg-blue-700 text-white font-black py-3 rounded-xl transition-colors shadow-lg shadow-blue-200 active:scale-95 text-sm uppercase flex justify-center items-center gap-2">
+                    Lưu & Nộp Bài <span class="text-xs">🚀</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teacher Auth Modal -->
+    <div id="teacher-auth-modal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 w-[90%] max-w-sm shadow-2xl scale-95 transition-transform duration-300 transform-gpu"
+            id="teacher-auth-content">
+            <h3 class="text-xl font-black text-rose-600 mb-2 uppercase tracking-wide text-center">Khu vực Giáo Viên</h3>
+            <p class="text-gray-500 text-xs font-medium mb-6 text-center">Nhập mật khẩu để truy cập trang quản lý và tải
+                dữ liệu bảng điểm.</p>
+
+            <input type="password" id="teacherPassword" placeholder="Mật khẩu..."
+                class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 text-center text-lg font-bold text-gray-800 focus:border-rose-400 focus:ring-4 focus:ring-rose-50 outline-none transition-all placeholder:text-gray-300 tracking-widest mb-6">
+
+            <div class="flex gap-3">
+                <button onclick="closeTeacherAuthModal()"
+                    class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-600 font-bold py-3 rounded-xl transition-colors active:scale-95 text-sm uppercase">Đóng</button>
+                <button onclick="verifyTeacherPassword()"
+                    class="flex-1 bg-rose-500 hover:bg-rose-600 text-white font-black py-3 rounded-xl transition-colors shadow-lg shadow-rose-200 active:scale-95 text-sm uppercase">Đăng
+                    nhập</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="js/firebase-logic.js"></script>
+
+    <script>
+        // UI scripts for modals
+        window.openTeacherAuthModal = function () {
+            const modal = document.getElementById('teacher-auth-modal');
+            const content = document.getElementById('teacher-auth-content');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => content.classList.replace('scale-95', 'scale-100'), 10);
+            document.getElementById('teacherPassword').focus();
+        };
+
+        window.closeTeacherAuthModal = function () {
+            const modal = document.getElementById('teacher-auth-modal');
+            const content = document.getElementById('teacher-auth-content');
+            content.classList.replace('scale-100', 'scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.getElementById('teacherPassword').value = '';
+            }, 300);
+        };
+
+        window.verifyTeacherPassword = function () {
+            const pwd = document.getElementById('teacherPassword').value;
+            // Password hardcoded - simple security based on user request
+            if (pwd === "gv123" || pwd === "admin") {
+                window.location.href = "teacher.html";
+            } else {
+                alert("Mật khẩu không đúng. Vui lòng thử lại!");
+            }
+        };
+    </script>
+
+    <script src="js/app.js" type="module"></script>
+</body>
+
+</html>
