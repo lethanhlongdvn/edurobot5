@@ -1,0 +1,307 @@
+import os
+import re
+
+def final_repair():
+    base_dir = "js/data/vietnamese"
+    index_path = os.path.join(base_dir, "index.js")
+    
+    # Files with stray semicolons identified by subagent
+    bad_files = ["131.js", "150.js", "152.js", "172.js", "173.js", "194.js", "215.js", "236.js"]
+    
+    for f in bad_files:
+        path = os.path.join(base_dir, f)
+        if os.path.exists(path):
+            with open(path, 'r', encoding='utf-8') as file:
+                content = file.read()
+            
+            # Remove any ;; or };; or }; ;
+            new_content = content.replace("};;", "};").replace("}; ;", "};").replace(";;", ";")
+            # Also catch the specific };}; from my previous script mistake if it happened
+            new_content = new_content.replace("};};", "};")
+            # Ensure it ends with exactly one };
+            new_content = new_content.strip()
+            if new_content.endswith("};"):
+                pass
+            elif new_content.endswith("}"):
+                new_content += ";"
+            
+            if new_content != content:
+                with open(path, 'w', encoding='utf-8') as file:
+                    file.write(new_content)
+    
+    # Re-reconcile index.js to handle missing files and fix encoding
+    existing_files = [f for f in os.listdir(base_dir) if f.endswith(".js") and f != "index.js"]
+    existing_periods = [f.replace(".js", "") for f in existing_files]
+    
+    # Re-read index.js or just re-generate it to be safe (since it's metadata)
+    # We need the metadata for ALL 245 slots
+    all_metadata = [
+        {"week": "1", "period": "1", "title": "Thanh âm của gió"},
+        {"week": "1", "period": "2", "title": "Luyện tập về danh từ, động từ, tính từ"},
+        {"week": "1", "period": "3", "title": "Tìm hiểu cách viết bài văn kể chuyện sáng tạo"},
+        {"week": "1", "period": "4", "title": "Cánh đồng hoa"},
+        {"week": "1", "period": "5", "title": "Cánh đồng hoa"},
+        {"week": "1", "period": "6", "title": "Tìm hiểu cách viết bài văn kể chuyện sáng tạo (tiếp theo)"},
+        {"week": "1", "period": "7", "title": "Đọc mở rộng"},
+        {"week": "2", "period": "8", "title": "Tuổi Ngựa"},
+        {"week": "2", "period": "9", "title": "Đại từ"},
+        {"week": "2", "period": "10", "title": "Lập dàn ý cho bài văn kể chuyện sáng tạo"},
+        {"week": "2", "period": "11", "title": "Bến sông tuổi thơ"},
+        {"week": "2", "period": "12", "title": "Bến sông tuổi thơ"},
+        {"week": "2", "period": "13", "title": "Viết bài văn kể chuyện sáng tạo"},
+        {"week": "2", "period": "14", "title": "Những câu chuyện thú vị"},
+        {"week": "3", "period": "15", "title": "Tiếng hạt nảy mầm"},
+        {"week": "3", "period": "16", "title": "Luyện tập về đại từ"},
+        {"week": "3", "period": "17", "title": "Đánh giá, chỉnh sửa bài văn kể chuyện sáng tạo"},
+        {"week": "3", "period": "18", "title": "Ngôi sao sân cỏ"},
+        {"week": "3", "period": "19", "title": "Ngôi sao sân cỏ"},
+        {"week": "3", "period": "20", "title": "Tìm hiểu cách viết báo cáo công việc"},
+        {"week": "3", "period": "21", "title": "Đọc mở rộng"},
+        {"week": "4", "period": "22", "title": "Bộ sưu tập độc đáo"},
+        {"week": "4", "period": "23", "title": "Luyện tập về đại từ (tiếp theo)"},
+        {"week": "4", "period": "24", "title": "Viết báo cáo công việc"},
+        {"week": "4", "period": "25", "title": "Hành tinh kì lạ"},
+        {"week": "4", "period": "26", "title": "Hành tinh kì lạ"},
+        {"week": "4", "period": "27", "title": "Đánh giá, chỉnh sửa báo cáo công việc"},
+        {"week": "4", "period": "28", "title": "Những điểm vui chơi lí thú"},
+        {"week": "5", "period": "29", "title": "Trước cổng trời"},
+        {"week": "5", "period": "30", "title": "Từ đồng nghĩa"},
+        {"week": "5", "period": "31", "title": "Tìm hiểu cách viết bài văn tả phong cảnh"},
+        {"week": "5", "period": "32", "title": "Kì diệu rừng xanh"},
+        {"week": "5", "period": "33", "title": "Kì diệu rừng xanh"},
+        {"week": "5", "period": "34", "title": "Tìm hiểu cách viết bài văn tả phong cảnh (tiếp theo)"},
+        {"week": "5", "period": "35", "title": "Đọc mở rộng"},
+        {"week": "6", "period": "36", "title": "Hang Sơn Đoòng - Những điều kì thú"},
+        {"week": "6", "period": "37", "title": "Luyện tập về từ đồng nghĩa"},
+        {"week": "6", "period": "38", "title": "Viết mở bài và kết bài cho bài văn tả phong cảnh"},
+        {"week": "6", "period": "39", "title": "Những hòn đảo trên vịnh Hạ Long"},
+        {"week": "6", "period": "40", "title": "Những hòn đảo trên vịnh Hạ Long"},
+        {"week": "6", "period": "41", "title": "Quan sát phong cảnh"},
+        {"week": "6", "period": "42", "title": "Bảo tồn động vật hoang dã"},
+        {"week": "7", "period": "43", "title": "Mầm non"},
+        {"week": "7", "period": "44", "title": "Từ đa nghĩa"},
+        {"week": "7", "period": "45", "title": "Lập dàn ý cho bài văn tả phong cảnh"},
+        {"week": "7", "period": "46", "title": "Những ngọn núi nóng rẫy"},
+        {"week": "7", "period": "47", "title": "Những ngọn núi nóng rẫy"},
+        {"week": "7", "period": "48", "title": "Viết đoạn văn tả phong cảnh"},
+        {"week": "7", "period": "49", "title": "Đọc mở rộng"},
+        {"week": "8", "period": "50", "title": "Bài ca về mặt trời"},
+        {"week": "8", "period": "51", "title": "Luyện tập về từ đa nghĩa"},
+        {"week": "8", "period": "52", "title": "Viết bài văn tả phong cảnh"},
+        {"week": "8", "period": "53", "title": "Xin chào, Xa-ha-ra"},
+        {"week": "8", "period": "54", "title": "Xin chào, Xa-ha-ra"},
+        {"week": "8", "period": "55", "title": "Đánh giá, chỉnh sửa bài văn tả phong cảnh"},
+        {"week": "8", "period": "56", "title": "Cảnh đẹp thiên nhiên"},
+        {"week": "9", "period": "57", "title": "Ôn tập và đánh giá giữa HKI (Tiết 1)"},
+        {"week": "9", "period": "58", "title": "Ôn tập và đánh giá giữa HKI (Tiết 2)"},
+        {"week": "9", "period": "59", "title": "Ôn tập và đánh giá giữa HKI (Tiết 3)"},
+        {"week": "9", "period": "60", "title": "Ôn tập và đánh giá giữa HKI (Tiết 4+5)"},
+        {"week": "9", "period": "61", "title": "Ôn tập và đánh giá giữa HKI (Tiết 4+5)"},
+        {"week": "9", "period": "62", "title": "Kiểm tra Đọc (tiết 6)"},
+        {"week": "9", "period": "63", "title": "Kiểm tra Đọc hiểu – viết (tiết 7)"},
+        {"week": "10", "period": "64", "title": "Thư gửi các học sinh"},
+        {"week": "10", "period": "65", "title": "Sử dụng từ điển"},
+        {"week": "10", "period": "66", "title": "Tìm hiểu cách đoạn văn giới thiệu nhân vật trong một cuốn sách"},
+        {"week": "10", "period": "67", "title": "Tấm gương tự học"},
+        {"week": "10", "period": "68", "title": "Tấm gương tự học"},
+        {"week": "10", "period": "69", "title": "Tìm ý cho đoạn văn giới thiệu nhân vật trong một cuốn sách"},
+        {"week": "10", "period": "70", "title": "Đọc mở rộng"},
+        {"week": "11", "period": "71", "title": "Trải nghiệm để sáng tạo"},
+        {"week": "11", "period": "72", "title": "Luyện tập sử dụng từ điển"},
+        {"week": "11", "period": "73", "title": "Viết đoạn văn giới thiệu nhân vật trong một cuốn sách"},
+        {"week": "11", "period": "74", "title": "Khổ luyện thành tài"},
+        {"week": "11", "period": "75", "title": "Khổ luyện thành tài"},
+        {"week": "11", "period": "76", "title": "Đánh giá, chỉnh sửa đoạn văn giới thiệu nhân vật trong một cuốn sách"},
+        {"week": "11", "period": "77", "title": "Cuốn sách tôi yêu"},
+        {"week": "12", "period": "78", "title": "Thế giới trong trang sách"},
+        {"week": "12", "period": "79", "title": "Dấu gạch ngang"},
+        {"week": "12", "period": "80", "title": "Tìm hiểu cách viết đoạn văn thể hiện tình cảm, cảm sức về một câu chuyện"},
+        {"week": "12", "period": "81", "title": "Từ những câu chuyện ấu thơ"},
+        {"week": "12", "period": "82", "title": "Từ những câu chuyện ấu thơ"},
+        {"week": "12", "period": "83", "title": "Tìm ý cho đoạn văn thể hiện tình cảm, cảm xúc về một câu chuyện"},
+        {"week": "12", "period": "84", "title": "Đọc mở rộng"},
+        {"week": "13", "period": "85", "title": "Giới thiệu sách Dế Mèn phiêu lưu kí"},
+        {"week": "13", "period": "86", "title": "Luyện tập về dấu gạch ngang"},
+        {"week": "13", "period": "87", "title": "Viết đoạn văn thể hiện tình cảm, cảm xúc về một câu chuyện"},
+        {"week": "13", "period": "88", "title": "Tinh thần học tập của nhà Phi-lít"},
+        {"week": "13", "period": "89", "title": "Tinh thần học tập của nhà Phi-lít"},
+        {"week": "13", "period": "90", "title": "Đánh giá, chỉnh sửa đoạn văn thể hiện tình cảm, cảm xúc về một câu chuyện"},
+        {"week": "13", "period": "91", "title": "Lợi ích của tự học"},
+        {"week": "14", "period": "92", "title": "Tiếng đàn ba-la-lai-ca trên sông Đà"},
+        {"week": "14", "period": "93", "title": "Biện pháp điệp từ, điệp ngữ"},
+        {"week": "14", "period": "94", "title": "Tìm hiểu cách viết đoạn văn thể hiện tình cảm, cảm xúc về một bài thơ"},
+        {"week": "14", "period": "95", "title": "Trí tưởng tượng phong phú"},
+        {"week": "14", "period": "96", "title": "Trí tưởng tượng phong phú"},
+        {"week": "14", "period": "97", "title": "Tìm ý cho đoạn văn thể hiện tình cảm, cảm xúc về một bài thơ"},
+        {"week": "14", "period": "98", "title": "Đọc mở rộng"},
+        {"week": "15", "period": "99", "title": "Tranh làng Hồ"},
+        {"week": "15", "period": "100", "title": "Luyện tập về điệp từ, điệp ngữ"},
+        {"week": "15", "period": "101", "title": "Viết đoạn văn thể hiện tình cảm, cảm xúc về một bài thơ"},
+        {"week": "15", "period": "102", "title": "Tập hát quan họ"},
+        {"week": "15", "period": "103", "title": "Tập hát quan họ"},
+        {"week": "15", "period": "104", "title": "Đánh giá, chỉnh sửa đoạn văn thể hiện tình cảm, cảm xúc về một bài thơ"},
+        {"week": "15", "period": "105", "title": "Chương trình nghệ thuật em yêu thích"},
+        {"week": "16", "period": "106", "title": "Chú ốc sên bay"},
+        {"week": "16", "period": "107", "title": "Kết từ"},
+        {"week": "16", "period": "108", "title": "Tìm hiểu cách viết đoạn văn giới thiệu nhân vật trong một bộ phim hoạt hình"},
+        {"week": "16", "period": "109", "title": "Nghệ thuật múa ba lê"},
+        {"week": "16", "period": "110", "title": "Nghệ thuật múa ba lê"},
+        {"week": "16", "period": "111", "title": "Tím ý cho đoạn văn giới thiệu nhân vật trong một bộ phim hoạt hình"},
+        {"week": "16", "period": "112", "title": "Đọc mở rộng"},
+        {"week": "17", "period": "113", "title": "Một ngôi chùa độc đáo"},
+        {"week": "17", "period": "114", "title": "Luyện tập về kết từ"},
+        {"week": "17", "period": "115", "title": "Viết đoạn văn giới thiệu nhân vật trong một bộ phim hoạt hình"},
+        {"week": "17", "period": "116", "title": "Sự tích chú Tễu"},
+        {"week": "17", "period": "117", "title": "Sự tích chú Tễu"},
+        {"week": "17", "period": "118", "title": "Đánh giá, chỉnh sửa đoạn văn giới thiệu nhân vật trong một bộ phim hoạt hình"},
+        {"week": "17", "period": "119", "title": "Bộ phim yêu thích"},
+        {"week": "18", "period": "120", "title": "Ôn tập và đánh giá cuối HKI (Tiết 1)"},
+        {"week": "18", "period": "121", "title": "Ôn tập và đánh giá cuối HKI (Tiết 2)"},
+        {"week": "18", "period": "122", "title": "Ôn tập và đánh giá cuối HKI (Tiết 3)"},
+        {"week": "18", "period": "123", "title": "Ôn tập và đánh giá cuối HKI (Tiết 4+5)"},
+        {"week": "18", "period": "124", "title": "Ôn tập và đánh giá cuối HKI (Tiết 4+5)"},
+        {"week": "18", "period": "125", "title": "Kiểm tra Đọc (tiết 6)"},
+        {"week": "18", "period": "126", "title": "Kiểm tra Đọc hiểu – viết (tiết 7)"},
+        {"week": "19", "period": "127", "title": "Tiếng hát của người đá"},
+        {"week": "19", "period": "128", "title": "Câu đơn và câu ghép"},
+        {"week": "19", "period": "129", "title": "Tìm hiểu cách viết bài văn tả người"},
+        {"week": "19", "period": "130", "title": "Khúc hát ru những em bé lớn trên lưng mẹ"},
+        {"week": "19", "period": "131", "title": "Khúc hát ru những em bé lớn trên lưng mẹ"},
+        {"week": "19", "period": "132", "title": "Viết mở bài và kết bài cho bài văn tả người"},
+        {"week": "19", "period": "133", "title": "Đọc mở rộng"},
+        {"week": "20", "period": "134", "title": "Vẽ màu"},
+        {"week": "20", "period": "135", "title": "Cách nối các vế câu ghép"},
+        {"week": "20", "period": "136", "title": "Quan sát để viết bài văn tả người"},
+        {"week": "20", "period": "137", "title": "Con đường không dẫn đến đâu"},
+        {"week": "20", "period": "138", "title": "Con đường không dẫn đến đâu"},
+        {"week": "20", "period": "139", "title": "Lập dàn ý cho bài văn tả người"},
+        {"week": "20", "period": "140", "title": "Nét đẹp học đường"},
+        {"week": "21", "period": "141", "title": "Phép màu"},
+        {"week": "21", "period": "142", "title": "Cách nối các vế câu ghép (Tiếp theo)"},
+        {"week": "21", "period": "143", "title": "Viết đoạn văn tả người"},
+        {"week": "21", "period": "144", "title": "Chim bói cá"},
+        {"week": "21", "period": "145", "title": "Chim bói cá"},
+        {"week": "21", "period": "146", "title": "Viết bài văn tả người (Bài viết số 1)"},
+        {"week": "21", "period": "147", "title": "Đọc mở rộng"},
+        {"week": "22", "period": "148", "title": "Tết của búp bê"},
+        {"week": "22", "period": "149", "title": "Sử dụng từ ngữ thay thế để liên kết câu"},
+        {"week": "22", "period": "150", "title": "Luyện tập viết bài văn tả người"},
+        {"week": "22", "period": "151", "title": "Chuỗi hạt cườm"},
+        {"week": "22", "period": "152", "title": "Chuỗi hạt cườm"},
+        {"week": "22", "period": "153", "title": "Viết bài văn tả người (Bài viết số 2)"},
+        {"week": "22", "period": "154", "title": "Những ý kiến khác biệt"},
+        {"week": "23", "period": "155", "title": "Hội thổi cơm thi ở Đồng Văn"},
+        {"week": "23", "period": "156", "title": "Liên kết câu bằng cách lặp từ ngữ"},
+        {"week": "23", "period": "157", "title": "Tìm hiểu cách viết đoạn văn thể hiện tình cảm, cảm xúc về một sự việc"},
+        {"week": "23", "period": "158", "title": "Những búp chè trên cây cổ thụ"},
+        {"week": "23", "period": "159", "title": "Những búp chè trên cây cổ thụ"},
+        {"week": "23", "period": "160", "title": "Tìm ý cho đoạn văn thể hiện tình cảm, cảm xúc về một sự việc"},
+        {"week": "23", "period": "161", "title": "Đọc mở rộng"},
+        {"week": "24", "period": "162", "title": "Ruộng bậc thang ở Mù Cang Chải"},
+        {"week": "24", "period": "163", "title": "Liên kết câu bằng từ ngữ nối"},
+        {"week": "24", "period": "164", "title": "Vũ điệu trên tiền thổ cẩm"},
+        {"week": "24", "period": "165", "title": "Vũ điệu trên tiền thổ cẩm"},
+        {"week": "24", "period": "166", "title": "Vũ điệu trên tiền thổ cẩm"},
+        {"week": "24", "period": "167", "title": "Đánh giá, chỉnh sửa đoạn văn thể hiện tình cảm, cảm xúc về một sự việc"},
+        {"week": "24", "period": "168", "title": "Địa điểm tham quan, du lịch"},
+        {"week": "25", "period": "169", "title": "Đường quê Đồng Tháp Mười"},
+        {"week": "25", "period": "170", "title": "Liên kết câu bằng từ ngữ thay thế"},
+        {"week": "25", "period": "171", "title": "Tìm hiểu cách viết chương trình hoạt động"},
+        {"week": "25", "period": "172", "title": "Đường quê Đồng Tháp Mười"},
+        {"week": "25", "period": "173", "title": "Đường quê Đồng Tháp Mười"},
+        {"week": "25", "period": "174", "title": "Viết chương trình hoạt động (Bài viết số 1)"},
+        {"week": "25", "period": "175", "title": "Đọc mở rộng"},
+        {"week": "26", "period": "176", "title": "Về thăm Đất Mũi"},
+        {"week": "26", "period": "177", "title": "Luyện tập về liên kết cấu trong đoạn văn viết"},
+        {"week": "26", "period": "178", "title": "Đánh giá, chỉnh sửa chương trình hoạt động"},
+        {"week": "26", "period": "179", "title": "Về thăm Đất Mũi"},
+        {"week": "26", "period": "180", "title": "Về thăm Đất Mũi"},
+        {"week": "26", "period": "181", "title": "Viết chương trình hoạt động (Bài viết số 2)"},
+        {"week": "26", "period": "182", "title": "Sản vật địa phương"},
+        {"week": "27", "period": "183", "title": "Ôn tập và đánh giá giữa HKII (Tiết 1)"},
+        {"week": "27", "period": "184", "title": "Ôn tập và đánh giá giữa HKII (Tiết 2)"},
+        {"week": "27", "period": "185", "title": "Ôn tập và đánh giá giữa HKII (Tiết 3)"},
+        {"week": "27", "period": "186", "title": "Ôn tập và đánh giá giữa HKII (Tiết 4)"},
+        {"week": "27", "period": "187", "title": "Ôn tập và đánh giá giữa HKII (Tiết 5)"},
+        {"week": "27", "period": "188", "title": "Kiểm tra Đọc (tiết 6)"},
+        {"week": "27", "period": "189", "title": "Kiểm tra Đọc hiểu – viết (tiết 7)"},
+        {"week": "28", "period": "190", "title": "Dưới bóng xanh của rừng"},
+        {"week": "28", "period": "191", "title": "Cách nối các vế câu ghép bằng từ ngữ có tác dụng nối"},
+        {"week": "28", "period": "192", "title": "Tìm hiểu cách viết bài văn giới thiệu một di tích lịch sử - văn hóa hoặc một cảnh quan thiên nhiên"},
+        {"week": "28", "period": "193", "title": "Hành trình của các loài chim"},
+        {"week": "28", "period": "194", "title": "Hành trình của các loài chim"},
+        {"week": "28", "period": "195", "title": "Quan sát, tìm ý cho bài văn giới thiệu di tích lịch sử - văn hóa hoặc cảnh quan thiên nhiên"},
+        {"week": "28", "period": "196", "title": "Đọc mở rộng"},
+        {"week": "29", "period": "197", "title": "Sơn Đoòng - Kỳ quan trong lòng đất"},
+        {"week": "29", "period": "198", "title": "Luyện tập nối các vế câu ghép"},
+        {"week": "29", "period": "199", "title": "Lập dàn ý cho bài văn giới thiệu di tích lịch sử - văn hóa hoặc cảnh quan thiên nhiên"},
+        {"week": "29", "period": "200", "title": "Chuyện trên đảo vắng"},
+        {"week": "29", "period": "201", "title": "Chuyện trên đảo vắng"},
+        {"week": "29", "period": "202", "title": "Viết bài văn giới thiệu di tích lịch sử - văn hóa hoặc cảnh quan thiên nhiên"},
+        {"week": "29", "period": "203", "title": "Đền ơn đáp nghĩa"},
+        {"week": "30", "period": "204", "title": "Sống để yêu thương"},
+        {"week": "30", "period": "205", "title": "Dấu ngoặc kép"},
+        {"week": "30", "period": "206", "title": "Đánh giá, chỉnh sửa bài văn giới thiệu di tích lịch sử - văn hóa hoặc cảnh quan thiên nhiên"},
+        {"week": "30", "period": "207", "title": "Gia đình yêu thương"},
+        {"week": "30", "period": "208", "title": "Gia đình yêu thương"},
+        {"week": "30", "period": "209", "title": "Tìm hiểu cách viết đoạn văn giới thiệu một nhân vật trong văn học"},
+        {"week": "30", "period": "210", "title": "Đọc mở rộng"},
+        {"week": "31", "period": "211", "title": "Sông Cửu Long"},
+        {"week": "31", "period": "212", "title": "Luyện tập về dấu ngoặc kép"},
+        {"week": "31", "period": "213", "title": "Viết đoạn văn giới thiệu một nhân vật trong văn học"},
+        {"week": "31", "period": "214", "title": "Hà Nội trong mắt một người nước ngoài"},
+        {"week": "31", "period": "215", "title": "Hà Nội trong mắt một người nước ngoài"},
+        {"week": "31", "period": "216", "title": "Đánh giá, chỉnh sửa đoạn văn giới thiệu một nhân vật trong văn học"},
+        {"week": "31", "period": "217", "title": "Di tích lịch sử"},
+        {"week": "32", "period": "218", "title": "Ngọn đuốc trong đêm"},
+        {"week": "32", "period": "219", "title": "Dấu ngoặc đơn"},
+        {"week": "32", "period": "220", "title": "Tìm hiểu cách viết bài văn tả người (Tiếp theo)"},
+        {"week": "32", "period": "221", "title": "Hành tinh xanh"},
+        {"week": "32", "period": "222", "title": "Hành tinh xanh"},
+        {"week": "32", "period": "223", "title": "Luyện viết bài văn tả người"},
+        {"week": "32", "period": "224", "title": "Đọc mở rộng"},
+        {"week": "33", "period": "225", "title": "Bức thư của người thủ lĩnh da đỏ"},
+        {"week": "33", "period": "226", "title": "Luyện tập về dấu ngoặc đơn"},
+        {"week": "33", "period": "227", "title": "Tìm hiểu cách viết thư"},
+        {"week": "33", "period": "228", "title": "Những ngày xuân rực rỡ"},
+        {"week": "33", "period": "229", "title": "Những ngày xuân rực rỡ"},
+        {"week": "33", "period": "230", "title": "Viết thư cho người thân"},
+        {"week": "33", "period": "231", "title": "Trái đất của chúng mình"},
+        {"week": "34", "period": "232", "title": "Việt Nam quê hương ta"},
+        {"week": "34", "period": "233", "title": "Ôn tập về từ loại và các thành phần câu"},
+        {"week": "34", "period": "234", "title": "Đánh giá, chỉnh sửa bức thư"},
+        {"week": "34", "period": "235", "title": "Cánh chim trên sóng"},
+        {"week": "34", "period": "236", "title": "Cánh chim trên sóng"},
+        {"week": "34", "period": "237", "title": "Những điều cần ghi nhớ"},
+        {"week": "34", "period": "238", "title": "Đọc mở rộng"},
+        {"week": "35", "period": "239", "title": "Ôn tập và đánh giá cuối HKII (Tiết 1)"},
+        {"week": "35", "period": "240", "title": "Ôn tập và đánh giá cuối HKII (Tiết 2)"},
+        {"week": "35", "period": "241", "title": "Ôn tập và đánh giá cuối HKII (Tiết 3)"},
+        {"week": "35", "period": "242", "title": "Ôn tập và đánh giá cuối HKII (Tiết 4)"},
+        {"week": "35", "period": "243", "title": "Ôn tập và đánh giá cuối HKII (Tiết 5)"},
+        {"week": "35", "period": "244", "title": "Kiểm tra Đọc (tiết 6)"},
+        {"week": "35", "period": "245", "title": "Kiểm tra Đọc hiểu – viết (tiết 7)"}
+    ]
+    
+    # Write repaired index.js with correct encoding and filtered imports
+    with open(index_path, 'w', encoding='utf-8') as f:
+        # Imports only for existing files
+        for m in all_metadata:
+            period = m["period"]
+            if period in existing_periods:
+                f.write(f"import {{ lesson{period} }} from './{period}.js';\n")
+        
+        f.write("\nexport const vietnameseData = [\n")
+        
+        entries = []
+        for m in all_metadata:
+            period = m["period"]
+            if period in existing_periods:
+                entries.append(f"lesson{period}")
+            else:
+                entries.append('{ "week": "' + m["week"] + '", "period": "' + m["period"] + '", "title": "' + m["title"] + '" }')
+        
+        f.write("    " + ",\n    ".join(entries) + "\n];\n")
+
+if __name__ == "__main__":
+    final_repair()
