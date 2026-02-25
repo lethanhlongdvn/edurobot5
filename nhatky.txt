@@ -1,0 +1,152 @@
+NHẬT KÝ CO-PILOT: EDUROBOT 5 (TOÁN HỌC)
+========================================
+
+Ngày 23/02/2026:
+----------------
+[17:30] Khởi động dự án nâng cấp giao diện Bài học.
+- Mục tiêu: Tối ưu không gian, thêm hệ thống 3 tab, tích hợp AI và Quiz.
+
+[17:45] Thực hiện Refactor Header & Tab:
+- Thiết kế Header 2 dòng: Breadcrumb (Dòng 1) và Tiêu đề bài (Dòng 2).
+- Triển khai 3 tab chức năng: Tìm hiểu bài, Luyện tập, Củng cố.
+- File chỉnh sửa chính: components.js, router.js.
+
+[18:00] Tích hợp AI Chatbot:
+- Tạo module ai.js chuyên trách Toán lớp 5.
+- Kết nối API từ dự án tiengviet5.
+- Thiết kế nút chat nổi thu nhỏ ở góc phải màn hình.
+
+[18:15] Triển khai Hệ thống Quiz:
+- Thuật toán chọn 10 câu ngẫu nhiên từ pool 20 câu theo tỷ lệ 5 Dễ - 4 TB - 1 Khó.
+- Nạp mẫu 20 câu hỏi cho Tiết 1 mộn Toán.
+
+[18:30] Cập nhật theo phản hồi người dùng (Branding v2.2):
+- Đổi toàn bộ icon Robot sang chữ E (EduRobot) để đồng bộ với môn Tiếng Việt.
+- Xây dựng Thầy E tương tác (Interactive Tutor): Giảng giải khi học sinh sai, khen ngợi khi học sinh đúng.
+
+[18:45] Xử lý lỗi hệ thống (v2.3):
+- Khắc phục lỗi ReferenceError gây treo màn hình loading.
+- Chuyển đổi sang hệ thống Placeholder thông minh [[TUTOR|id|req]] để đảm bảo dữ liệu an toàn và ứng dụng ổn định.
+
+[18:48] Khởi tạo file nhatky.txt theo yêu cầu của người dùng để lưu lại lộ trình phát triển.
+
+[18:55] Hoàn thành nạp liệu Tiết 2 môn Toán:
+- Nội dung: So sánh số tự nhiên, số chẵn/lẻ.
+- Tích hợp 2 Thử thách Thầy E tương tác.
+- Bộ 20 câu hỏi trắc nghiệm bám sát chương trình.
+
+[19:05] Hoàn thành nạp liệu Tiết 3 môn Toán:
+- Nội dung: Phép cộng, phép trừ số tự nhiên.
+- Tính chất giao hoán, kết hợp và mẹo tìm X.
+- Tích hợp hệ thống Tutor tương tác chấm bài thực tế.
+- Bộ 20 câu hỏi trắc nghiệm 5-4-1 (Dễ-TB-Khó).
+
+[19:15] Triển khai Bài 47: Mét khối (Tiết 111 - Tuần 23):
+- Nội dung: Khái niệm m³, mối liên hệ m³ - dm³ - cm³.
+- Thiết kế giao diện trực quan cho khái niệm mét khối.
+- Tích hợp Thầy E hướng dẫn giải toán xe tải thực tế.
+- Bộ 20 câu hỏi trắc nghiệm chuyên sâu về mét khối.
+
+[19:20] Nâng cấp công nghệ 3D Visual:
+- Thay thế minh họa tĩnh bằng Khối lập phương 3D thực (CSS 3D Transforms).
+- Sửa lỗi: Đã bổ sung CSS bị thiếu và gỡ bỏ clipping overflow để khối 3D hiển thị rõ nét.
+- Hiệu ứng xoay liên tục, mang lại trải nghiệm học tập hiện đại cho học sinh.
+
+[19:25] Tích hợp Hệ thống Tìm kiếm & Lọc thông minh:
+- Thêm thanh tìm kiếm Real-time tại mỗi môn học.
+- Hỗ trợ lọc nhanh theo Tuần (vd: "Tuần 23"), Tiết PPCT (vd: "111") hoặc Tên bài học.
+
+[19:30] Đột phá công nghệ 3D Visual (Version 2.0):
+- Nâng cấp khối lập phương với lưới 10x10 (mô phỏng 1000 khối dm³).
+- Tích hợp nhãn kích thước (1m) chuẩn theo sách giáo khoa.
+- Kích hoạt xoay tay 360 độ bằng chuột và cảm ứng (Global UI Event Binding).
+
+[19:35] Tối ưu hóa không gian hiển thị (Compact- 25/02/2026:
+  - Cập nhật persona AI thành "EduRobot", xưng hô thân thiện "AI E/Mình" và "Bạn" thay vì Thầy - Con. Đồng bộ màu sắc, logo chữ "E" thanh lịch khắp hệ thống.
+  - Tích hợp thành công **hệ thống Nộp Bài (Firebase)** sử dụng chung API với Tiếng Việt nhưng có định danh thẻ riêng (`subject: 'Toán học'`).
+  - Thêm Modal yêu cầu thu thập thông tin (Học Tên, Dropdown chọn Lớp, Trường "Tiểu học Đỗ Văn Nại" hoặc Khác).
+  - Hoàn thiện luồng duyệt mật khẩu riêng cho tính năng "Giáo viên", tạo ra 2 trang Dashboard (Quản lý tự luận - `teacher-dashboard.html` & Quản lý điểm Trắc nghiệm - `teacher.html`).
+  - Sửa lỗi định dạng Excel tự chuyển đổi Lớp thành Ngày tháng khi dùng SheetJS (thêm dấu `'` prefix).
+  - Chuẩn hóa form nộp bài để có thể tái sử dụng cho toàn bộ các bài Toán lớp 5 tiếp theo.
+  - **Refactor phần Luyện Tập**: Thay đổi thiết kế từ "Nộp từng bài" sang "Nộp Bài Luyện Tập" (toàn phần) đặt ở cuối trang. Hệ thống tự động quét tất cả các đáp án (từ ô nhập liệu đến tự luận và điểm AI) vào một Payload duy nhất gửi Thầy Cô.
+  - **Refactor phần Củng Cố (Quiz.js)**: Chuyển sang hiển thị 1 câu / 1 màn hình với font rất to (`text-3xl`, `text-4xl`) để giáo viên tiện trình chiếu trên TV. Thêm bộ đếm điểm (+10đ/câu đúng), tự động điều hướng chờ 1.5s - 2.5s và kết nối nộp kết quả lên Firebase. Trang quản lý giáo viên tự động lọc **lấy 1 lần điểm cao nhất** của học sinh.
+
+Ngày 24/02/2026:
+----------------
+[05:55] Phục hồi dự án về trạng thái 19:35 ngày 23/02/2026:
+- Revert toàn bộ cấu trúc dữ liệu từ Module hóa (nhiều file) về đơn khối (js/data/math.js).
+- Loại bỏ tích hợp Tiếng Việt (Project tiengviet5) để quay về bản Toán học thuần túy.
+- Khôi phục js/data.js và cập nhật link import trong router.js.
+- Xóa bỏ các thư mục rác phát sinh từ quá trình modular hóa (js/data/math, vietnamese, ...).
+
+[08:10] Tái cấu trúc Module hóa Dữ liệu (Modular Data Refactor):
+- Chuyển đổi thành cấu trúc: `js/data/[môn_học]/[bài_học].js`.
+- Triển khai `js/data_loader.js` nạp liệu tập trung cho toàn bộ hệ thống.
+- Di trú mẫu 4 bài Toán (1, 2, 3, 111) và 2 bài Tiếng Việt (191, 192).
+- Chuẩn hóa schema dữ liệu Tiếng Việt để tương thích hoàn toàn với UI EduRobot 5.
+
+[10:15] Hoàn thiện Trang chủ Dashboard v5.2 (Premium Edition):
+- Sidebar môn học thông minh, tự động đổi màu Accent theo môn học.
+- Hệ thống Dashboard 2 cột: Danh sách Tuần học và Danh sách Tiết học.
+- Tính năng "Học tiếp" (Continue Learning): Tự động ghi nhớ và hiển thị bài học vừa xem gần nhất.
+- Bộ lọc kỳ học chuyên nghiệp (GIỮA KỲ 1, CUỐI KỲ 1, GIỮA KỲ 2, CUỐI KỲ 2) và tìm kiếm thời gian thực.
+- 24/02/2026: Tinh chỉnh nhãn kỳ học theo yêu cầu người dùng.
+- 24/02/2026: Triển khai Logic phân bổ tuần tự động theo Kỳ học (Giữa kỳ 1: 1-9, Cuối kỳ 1: 10-18, Giữa kỳ 2: 19-27, Cuối kỳ 2: 28-35).
+Trạng thái: Dự án Dashboard đã hoàn thành xuất sắc. Sẵn sàng bàn giao.
+Trạng thái hiện tại: Hệ thống đã được Module hóa thành công. Dễ dàng quản lý và mở rộng.
+
+[11:14] Cải tiến giao diện Bài học (v5.3):
+- Bổ sung nút "MÔN HỌC" vào Header điều hướng trong bài học, cho phép quay lại danh sách môn nhanh chóng.
+- Tối ưu hóa Metadata: Ẩn thông tin "CHỦ ĐIỂM" đối với riêng môn Toán học để giao diện gọn gàng hơn.
+- Đồng bộ hóa logic hiển thị Header giữa Dashboard và Trang bài học.
+
+[11:18] Nâng cấp thanh điều hướng (v5.4):
+- Thay thế nút "MÔN HỌC" bằng Menu xổ xuống (Dropdown) hiện đại.
+- Hỗ trợ chuyển đổi nhanh giữa tất cả các môn học (Toán, Tiếng Việt, Khoa học, ...) ngay tại trang bài học.
+- Tích hợp hiệu ứng hover mượt mà và đồng bộ màu sắc thương hiệu EduRobot.
+
+[13:45] Tối ưu hóa hệ thống & Nâng cấp AI Tutor (v6.0):
+- Tái cấu trúc toàn diện: Chia nhỏ js/components.js thành hệ thống module (Dashboard, Lesson, AIInteraction, Quiz, Visuals, common).
+- Nâng cấp Thầy E: Tích hợp Prompt sư phạm chuyên nghiệp, giao tiếp hòa nhã, nhận xét chi tiết và chấm điểm thang 10.
+- Dọn dẹp hệ thống: Di chuyển các script Python cũ vào thư mục tools/ và loại bỏ main.js dư thừa.
+- Tối ưu hóa Router: Cập nhật cơ chế nạp module linh hoạt hơn.
+
+[14:00] Hoàn thiện Trang chủ Premium 6.2+:
+- Chuẩn hóa Bố cục: Áp dụng tỷ lệ 1:3 chuẩn cho Sidebar và Main Content.
+- Nâng cấp Visual: Icons 6xl, tiêu đề Black font, thanh tìm kiếm kích thước lớn với hiệu ứng focus cao cấp.
+- Tối ưu trải nghiệm: Nâng cấp khối Lộ trình học tập và trạng thái bài học với màu nhấn Amber.
+- Hiệu ứng: Cập nhật premium-shadow (0.04) và glass-morphism tinh tế hơn.
+
+[17:15] Nâng cấp Dashboard "Ultra-Premium" (Version 7.0):
+- Tái cấu trúc 3 cột kiểu TC: Sidebar dọc, Timeline Tuần và Nội dung chính.
+- Tinh chỉnh Slim UI: Giảm 30% kích thước font chữ, thu hẹp padding và mở rộng container ra sát viền.
+- Tích hợp logic điều hướng mượt mà: Chuyển đổi môn học và tuần học tức thì không cần tải lại trang.
+- Đồng bộ Dark mode toàn diện cho cấu trúc mới.
+[17:55] Hoàn tất Giao diện Slim Premium (Chuẩn 11:18):
+- Navbar toàn cục: Tích hợp Metadata (Chủ điểm | Tuần | Bài) và Menu chọn môn học (Dropdown) cạnh Trang chủ.
+[18:22] Tinh chỉnh Spacing:
+- Thu nhỏ khoảng cách trên (padding-top) và dưới (margin-bottom) của tiêu đề bài học để giao diện cô đọng và sát mẫu Hình 1 hơn.
+[18:25] Tái cấu trúc Tab Bar:
+- Thay đổi thiết kế thanh Tab: mảnh mai hơn (p-1), kéo dài ngang Navbar (max-w-7xl), các nút bo tròn hoàn toàn.
+- Loại bỏ khung viền cứng quanh nút, tối ưu hóa font size đạt hiệu ứng "Ultra-Slim".
+
+[21:10] Sửa lỗi tương tác Bài 112:
+- Cập nhật tham số kết quả cho thẻ [[MATH_EX]] tại Bài 1 (Chọn số đo phù hợp).
+- Cho phép học sinh nhập "cm3", "dm3", "m3" thay vì ký tự đặc biệt để tăng tính tiện dụng.
+- Kích hoạt hệ thống gợi ý từ Thầy E khi học sinh trả lời sai.
+
+[21:20] Triển khai thành phần Interactive Chat Quiz:
+- Xây dựng thành phần [[CHAT_QUIZ]] cho phép hội thoại nhiều lượt (Multi-turn).
+- Chuyển đổi hộp "Nhắc lại kiến thức" tĩnh trong Bài 112 thành Chatbot tương tác.
+- Tích hợp logic quản lý trạng thái (Sẵn sàng -> Câu hỏi -> Nhận xét -> Hoàn thành).
+
+Ngày 25/02/2026:
+----------------
+[21:18] Nâng cấp Giao diện Bài 111 & Tinh chỉnh AI:
+- Thiết kế layout hội thoại "Trang sách động" (Comic book style) có hiệu ứng pop-in và fall-back CSS art cho bài 111.
+- Tích hợp iframe khối lập phương 3D tương tác (xoay, kéo, cuộn), tích hợp nút "Bật/Tắt tương tác 3D" để tối ưu UX khi scroll trang.
+- Đồng bộ hóa thương hiệu: Đổi toàn bộ icon Robot thành biểu tượng chữ E.
+- Thay đổi văn phong xưng hô của tính năng AI chatbox. Đổi phần gửi bài tập thành "EduRobot" thay vì AI E.
+- Tối ưu hóa lại nút bấm nộp bài bằng icon dấu ✓ thay vì E để tránh nhầm lẫn.
+
+Trạng thái hiện tại: Giao diện bài học 111 đã sinh động với nội dung sách nói dạng comic, có 3D thực tế; hệ thống chat AI thống nhất với branding chữ E của toàn dự án EduRobot.
