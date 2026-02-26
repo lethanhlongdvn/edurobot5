@@ -447,7 +447,7 @@ b) 8,5 x 0,5 = \${b3_b1}
                                   }
                               };
 
-                              let recognition_b112_4 = null;
+                              window.recognition_b112_4 = window.recognition_b112_4 || null;
                               window.toggleSpeechRec_b112_4 = function () {
                                   const btn = document.getElementById('btn-mic-b112');
                                   const status = document.getElementById('mic-status-b112');
@@ -458,42 +458,42 @@ b) 8,5 x 0,5 = \${b3_b1}
                                       return;
                                   }
 
-                                  if (recognition_b112_4 && btn.classList.contains('recording')) {
-                                      recognition_b112_4.stop();
+                                  if (window.recognition_b112_4 && btn.classList.contains('recording')) {
+                                      window.recognition_b112_4.stop();
                                       return;
                                   }
 
                                   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-                                  recognition_b112_4 = new SpeechRecognition();
-                                  recognition_b112_4.lang = 'vi-VN';
-                                  recognition_b112_4.continuous = false;
-                                  recognition_b112_4.interimResults = false;
+                                  window.recognition_b112_4 = new SpeechRecognition();
+                                  window.recognition_b112_4.lang = 'vi-VN';
+                                  window.recognition_b112_4.continuous = false;
+                                  window.recognition_b112_4.interimResults = false;
 
-                                  recognition_b112_4.onstart = function () {
+                                  window.recognition_b112_4.onstart = function () {
                                       btn.classList.add('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
                                       btn.classList.remove('bg-emerald-50', 'text-emerald-600', 'border-emerald-200');
                                       status.classList.remove('hidden');
                                   };
 
-                                  recognition_b112_4.onresult = function (event) {
+                                  window.recognition_b112_4.onresult = function (event) {
                                       const transcript = event.results[0][0].transcript;
                                       const currentVal = input.value;
-                                      input.value = currentVal ? (currentVal + ' \\n' + transcript) : transcript;
+                                      input.value = currentVal ? (currentVal + ' \n' + transcript) : transcript;
                                   };
 
-                                  recognition_b112_4.onerror = function (event) {
+                                  window.recognition_b112_4.onerror = function (event) {
                                       status.classList.add('hidden');
                                       btn.classList.remove('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
                                       alert("Lỗi Micro: " + event.error);
                                   };
 
-                                  recognition_b112_4.onend = function () {
+                                  window.recognition_b112_4.onend = function () {
                                       btn.classList.remove('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
                                       btn.classList.add('bg-emerald-50', 'text-emerald-600', 'border-emerald-200');
                                       status.classList.add('hidden');
                                   };
 
-                                  recognition_b112_4.start();
+                                  window.recognition_b112_4.start();
                               };
                           </script>
                      </div>
