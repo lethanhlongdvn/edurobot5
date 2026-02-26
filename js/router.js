@@ -19,7 +19,57 @@ export const router = {
         window.UI = UI;
         window.subjects = subjects;
         window.lessons = lessons;
-        this.renderHome();
+
+        // Phục hồi trạng thái (kỳ, tuần) nếu có
+        try {
+            const savedState = sessionStorage.getItem('edurobot_router_state');
+            if (savedState) {
+                const state = JSON.parse(savedState);
+                if (state.currentSubject) this.currentSubject = state.currentSubject;
+                if (state.currentWeek) this.currentWeek = state.currentWeek;
+                if (state.currentPeriod) this.currentPeriod = state.currentPeriod;
+            }
+        } catch (e) {
+            console.error('Lỗi đọc state:', e);
+        }
+
+        window.addEventListener('hashchange', () => this.handleHashChange());
+
+        // Xử lý route ban đầu
+        if (window.location.hash && window.location.hash !== '#' && window.location.hash !== '#/') {
+            this.handleHashChange();
+        } else {
+            this.renderHome();
+        }
+    },
+
+    saveState() {
+        sessionStorage.setItem('edurobot_router_state', JSON.stringify({
+            currentSubject: this.currentSubject,
+            currentWeek: this.currentWeek,
+            currentPeriod: this.currentPeriod
+        }));
+    },
+
+    handleHashChange() {
+        let hash = window.location.hash.slice(1);
+        if (hash.startsWith('/')) {
+            hash = hash.slice(1);
+        }
+
+        if (!hash || hash === '') {
+            this.renderHome(true);
+            return;
+        }
+
+        const parts = hash.split('/');
+        if (parts[0] === 'lesson' && parts[1] && parts[2]) {
+            this.renderLesson(parts[1], parts[2], true);
+        } else if (parts[0] === 'subject' && parts[1]) {
+            this.renderSubject(parts[1], true);
+        } else {
+            this.renderHome(true);
+        }
     },
 
     // Phương thức điều hướng môn học tập trung
@@ -34,7 +84,14 @@ export const router = {
         }
     },
 
-    renderHome() {
+    renderHome(fromHash = false) {
+        this.saveState();
+        const currentHash = window.location.hash;
+        if (!fromHash && currentHash !== '' && currentHash !== '#' && currentHash !== '#/') {
+            window.location.hash = '/';
+            return;
+        }
+
         // Đảm bảo hiển thị Header chính của index.html khi quay về trang chủ
         const globalHeader = document.querySelector('header');
         if (globalHeader) globalHeader.style.display = 'block';
@@ -100,11 +157,17 @@ export const router = {
         this.renderHome();
     },
 
-    renderSubject(subId) {
+    renderSubject(subId, fromHash = false) {
+        if (!fromHash) {
+            window.location.hash = `/subject/${subId}`;
+            return;
+        }
+
         const subject = subjects.find(s => s.id === subId);
         if (!subject) return;
 
         this.currentSubject = subId;
+        this.saveState();
 
         // Đảm bảo hiển thị Header chính của index.html
         const globalHeader = document.querySelector('header');
@@ -166,9 +229,16 @@ export const router = {
         }
     },
 
-    renderLesson(subId, period) {
+    renderLesson(subId, period, fromHash = false) {
+        if (!fromHash) {
+            window.location.hash = `/lesson/${subId}/${period}`;
+            return;
+        }
+
         this.currentSubject = subId;
         this.currentLessonPeriod = period;
+        this.saveState();
+
         const subject = subjects.find(s => s.id === subId);
         const lesson = lessons[subId].find(l => l.period === period);
 
@@ -230,7 +300,7 @@ export const router = {
     },
 
     goHome() {
-        this.renderHome();
+        window.location.hash = '/';
     },
 
     switchTab(tabId) {
