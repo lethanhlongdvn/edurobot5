@@ -96,31 +96,31 @@ export const Lesson = {
 
         return `
             <div class="flex flex-col mb-4">
-                <div class="conv-exercise p-4 md:p-5 bg-white rounded-3xl border border-gray-100 shadow-sm hover:border-blue-200 transition-all flex items-center justify-between gap-3 group" data-exercise-id="${id}">
-                    <div class="flex items-center gap-3 shrink-0 font-black text-blue-900 text-lg md:text-xl">
+                <div class="conv-exercise p-4 md:p-6 bg-white rounded-[32px] border-2 border-transparent shadow-sm hover:border-blue-200 transition-all flex items-center justify-between gap-4 md:gap-6 group" data-exercise-id="${id}">
+                    <div class="flex items-center gap-3 shrink-0 font-black text-blue-900 text-xl md:text-2xl">
                         <span>${displayValue}</span>
                         <span class="text-gray-400 font-medium">=</span>
                     </div>
-                    <div class="relative flex-grow flex items-center gap-2">
-                        <div class="relative w-full">
+                    <div class="relative flex-grow flex items-center gap-4 justify-end">
+                        <div class="relative w-24 md:w-32">
                             <input type="text" id="input-${id}" 
-                                class="w-full min-w-[50px] bg-gray-50 border-2 border-transparent rounded-xl px-2 py-3 pr-10 text-center text-lg md:text-xl font-bold text-blue-800 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:bg-white outline-none transition-all placeholder:text-gray-200"
+                                class="w-full h-16 md:h-20 bg-orange-50/50 border-[3px] border-orange-500 rounded-3xl px-2 py-3 text-center text-xl md:text-3xl font-black text-blue-800 focus:ring-4 focus:ring-orange-200 focus:border-orange-600 focus:bg-orange-50 outline-none transition-all placeholder:text-transparent"
                                 placeholder="?">
                             <!-- Mic Button -->
                             <button id="btn-mic-${id}" onclick="Lesson.toggleSpeechRec('${id}')" title="Nhập bằng giọng nói" 
-                                class="absolute right-1 top-1 bottom-1 w-8 bg-transparent hover:bg-blue-100 text-blue-400 hover:text-blue-600 rounded-lg flex items-center justify-center transition-all active:scale-95">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                                class="absolute inset-0 w-full h-full bg-transparent hover:bg-orange-100/50 text-blue-400 hover:text-blue-600 rounded-3xl flex items-center justify-center transition-all active:scale-95 group-focus-within:opacity-0 peer" onfocus="document.getElementById('input-${id}').focus()">
+                                <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                             </button>
                             <div id="mic-status-${id}" class="absolute -top-3 right-0 px-2 py-1 bg-red-500 text-white text-[9px] font-bold rounded-full animate-pulse hidden z-10">Đang nghe...</div>
                         </div>
-                        <span class="font-black text-gray-700 text-base md:text-lg shrink-0 min-w-[2.5rem] text-left">${unit}</span>
+                        <span class="font-black text-gray-700 text-xl md:text-3xl shrink-0 min-w-[2.5rem] text-left">${unit}</span>
                         <button onclick="Lesson.checkMathExercise('${id}', '${finalAnswer.replace(/'/g, "\\'")}', 'Đổi đơn vị', '${displayValue.replace(/'/g, "\\'")}')" 
-                            class="w-11 h-11 shrink-0 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xl font-black transition-all active:scale-95 shadow-md shadow-blue-200 flex items-center justify-center ml-1">
-                            <svg class="w-6 h-6 transform" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            class="w-16 h-16 md:w-20 md:h-20 shrink-0 bg-blue-600 hover:bg-blue-700 text-white rounded-[24px] md:rounded-[28px] text-2xl font-black transition-all active:scale-95 shadow-lg shadow-blue-200 flex items-center justify-center ml-2">
+                            <svg class="w-8 h-8 md:w-10 md:h-10 transform" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                     </div>
                 </div>
-                <div id="feedback-${id}" class="hidden animate-fade-in mt-2 w-full"></div>
+                <div id="feedback-${id}" class="hidden animate-fade-in mt-3 w-full"></div>
             </div>
         `;
     },
