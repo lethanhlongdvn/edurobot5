@@ -507,7 +507,7 @@ b) 8,5 x 0,5 = \${b3_b1}
                     <p class="text-emerald-700 font-bold text-sm md:text-base">Hệ thống sẽ lưu lại toàn bộ bài làm để Thầy/Cô chấm điểm nhé.</p>
                 </div>
                 <button id="btn-submit-all-practice-112" onclick="submitAllPractice112()" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-5 rounded-3xl font-black text-base md:text-lg uppercase tracking-wide shadow-xl shadow-emerald-200 transition-all flex justify-center items-center gap-3 active:scale-95 group">
-                    <span>Nộp Bài Luyện Tập</span>
+                    <span>NỘP BÀI</span>
                     <span class="text-2xl group-hover:translate-x-1 transition-transform">🚀</span>
                 </button>
             </div>
