@@ -149,35 +149,95 @@ export const lesson112 = {
                     <span class="w-8 h-8 md:w-10 md:h-10 bg-blue-50 rounded-xl flex items-center justify-center font-black text-blue-800">3</span>
                     Tính.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-4">
-                        <p class="font-bold text-gray-800">a)</p>
-                        <div class="flex items-center gap-3">
-                            <span class="font-bold whitespace-nowrap">3,5 m³ + 6,05 m³ =</span>
-                            <input type="text" id="b112-3a-1" class="w-24 p-2 text-center border-b-2 border-blue-400 font-black text-blue-800 outline-none bg-transparent focus:border-blue-600" placeholder="...">
-                            <span class="font-bold">m³</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pl-2 md:pl-4">
+                    <!-- Cột a -->
+                    <div class="space-y-6">
+                        <p class="font-bold text-gray-800 text-lg">a)</p>
+                        
+                        <div class="relative group">
+                            <div class="flex items-center gap-3">
+                                <span class="font-bold whitespace-nowrap text-blue-900 text-lg">3,5 m³ + 6,05 m³ =</span>
+                                <input type="text" id="b112-3a-1" class="w-24 p-2 text-center border-b-2 border-blue-400 font-black text-blue-800 outline-none bg-transparent focus:border-blue-700 transition-colors" placeholder="...">
+                                <span class="font-bold text-blue-900 text-lg">m³</span>
+                                
+                                <button onclick="checkB112B3('b112-3a-1', '9,55')" class="ml-2 w-10 h-10 bg-blue-100 hover:bg-blue-600 hover:text-white text-blue-600 rounded-xl flex items-center justify-center transition-all active:scale-95 shadow-sm">
+                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
+                            </div>
+                            <div id="fb-b112-3a-1" class="absolute -bottom-6 left-0 text-xs font-bold w-full hidden"></div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <span class="font-bold whitespace-nowrap">1 000 m³ – 510 m³ =</span>
-                            <input type="text" id="b112-3a-2" class="w-24 p-2 text-center border-b-2 border-blue-400 font-black text-blue-800 outline-none bg-transparent focus:border-blue-600" placeholder="...">
-                            <span class="font-bold">m³</span>
+
+                        <div class="relative group">
+                            <div class="flex items-center gap-3">
+                                <span class="font-bold whitespace-nowrap text-blue-900 text-lg">1 000 m³ – 510 m³ =</span>
+                                <input type="text" id="b112-3a-2" class="w-24 p-2 text-center border-b-2 border-blue-400 font-black text-blue-800 outline-none bg-transparent focus:border-blue-700 transition-colors" placeholder="...">
+                                <span class="font-bold text-blue-900 text-lg">m³</span>
+                                
+                                <button onclick="checkB112B3('b112-3a-2', '490')" class="ml-2 w-10 h-10 bg-blue-100 hover:bg-blue-600 hover:text-white text-blue-600 rounded-xl flex items-center justify-center transition-all active:scale-95 shadow-sm">
+                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
+                            </div>
+                            <div id="fb-b112-3a-2" class="absolute -bottom-6 left-0 text-xs font-bold w-full hidden"></div>
                         </div>
                     </div>
 
-                    <div class="space-y-4">
-                        <p class="font-bold text-gray-800">b)</p>
-                        <div class="flex items-center gap-3">
-                            <span class="font-bold whitespace-nowrap">8,5 m³ × 0,5 =</span>
-                            <input type="text" id="b112-3b-1" class="w-24 p-2 text-center border-b-2 border-blue-400 font-black text-blue-800 outline-none bg-transparent focus:border-blue-600" placeholder="...">
-                            <span class="font-bold">m³</span>
+                    <!-- Cột b -->
+                    <div class="space-y-6">
+                        <p class="font-bold text-gray-800 text-lg">b)</p>
+                        
+                        <div class="relative group">
+                            <div class="flex items-center gap-3">
+                                <span class="font-bold whitespace-nowrap text-blue-900 text-lg">8,5 m³ × 0,5 =</span>
+                                <input type="text" id="b112-3b-1" class="w-24 p-2 text-center border-b-2 border-blue-400 font-black text-blue-800 outline-none bg-transparent focus:border-blue-700 transition-colors" placeholder="...">
+                                <span class="font-bold text-blue-900 text-lg">m³</span>
+                                
+                                <button onclick="checkB112B3('b112-3b-1', '4,25')" class="ml-2 w-10 h-10 bg-blue-100 hover:bg-blue-600 hover:text-white text-blue-600 rounded-xl flex items-center justify-center transition-all active:scale-95 shadow-sm">
+                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
+                            </div>
+                            <div id="fb-b112-3b-1" class="absolute -bottom-6 left-0 text-xs font-bold w-full hidden"></div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <span class="font-bold whitespace-nowrap">1 875 m³ : 5 =</span>
-                            <input type="text" id="b112-3b-2" class="w-24 p-2 text-center border-b-2 border-blue-400 font-black text-blue-800 outline-none bg-transparent focus:border-blue-600" placeholder="...">
-                            <span class="font-bold">m³</span>
+
+                        <div class="relative group">
+                            <div class="flex items-center gap-3">
+                                <span class="font-bold whitespace-nowrap text-blue-900 text-lg">1 875 m³ : 5 =</span>
+                                <input type="text" id="b112-3b-2" class="w-24 p-2 text-center border-b-2 border-blue-400 font-black text-blue-800 outline-none bg-transparent focus:border-blue-700 transition-colors" placeholder="...">
+                                <span class="font-bold text-blue-900 text-lg">m³</span>
+                                
+                                <button onclick="checkB112B3('b112-3b-2', '375')" class="ml-2 w-10 h-10 bg-blue-100 hover:bg-blue-600 hover:text-white text-blue-600 rounded-xl flex items-center justify-center transition-all active:scale-95 shadow-sm">
+                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
+                            </div>
+                            <div id="fb-b112-3b-2" class="absolute -bottom-6 left-0 text-xs font-bold w-full hidden"></div>
                         </div>
                     </div>
                 </div>
+
+                <script>
+                    window.checkB112B3 = function(inputId, correctAns) {
+                        const input = document.getElementById(inputId);
+                        const fb = document.getElementById('fb-' + inputId);
+                        const userVal = input.value.trim().replace(/,/g, '.'); // Đổi phẩy thành chấm nếu có
+                        const ans = correctAns.replace(/,/g, '.');
+
+                        fb.classList.remove('hidden');
+                        
+                        if (!userVal) {
+                            fb.innerHTML = '<span class="text-amber-500">Hãy điền kết quả vào ô trống nhé!</span>';
+                            return;
+                        }
+
+                        if (Number(userVal) === Number(ans)) {
+                            fb.innerHTML = '<span class="text-emerald-500">✓ Tuyệt vời! Bạn tính đúng rồi.</span>';
+                            input.classList.add('border-emerald-500', 'text-emerald-700');
+                            input.classList.remove('border-blue-400', 'border-red-500', 'text-red-700');
+                        } else {
+                            fb.innerHTML = '<span class="text-red-500">✗ Sai mất rồi. Hãy tính lại thật kỹ nha!</span>';
+                            input.classList.add('border-red-500', 'text-red-700');
+                            input.classList.remove('border-blue-400', 'border-emerald-500', 'text-emerald-700');
+                        }
+                    }
+                </script>
             </div>
 
             <!-- Bài tập 4: Giải toán có lời văn -->
