@@ -66,15 +66,15 @@ export const Quiz = {
 
         this.currentQuiz = [...lv1, ...lv2, ...lv3];
         // Nếu không đủ bộ phân cấp thì cứ lấy đủ 10 câu ngẫu nhiên
-        if(this.currentQuiz.length < 10) {
-             this.currentQuiz = pool.sort(() => 0.5 - Math.random()).slice(0, 10);
+        if (this.currentQuiz.length < 10) {
+            this.currentQuiz = pool.sort(() => 0.5 - Math.random()).slice(0, 10);
         }
-        
+
         // Xáo trộn lần cuối
         this.currentQuiz.sort(() => 0.5 - Math.random());
-        
+
         // Cắt đúng 10 câu phòng hờ
-        if(this.currentQuiz.length > 10) this.currentQuiz = this.currentQuiz.slice(0, 10);
+        if (this.currentQuiz.length > 10) this.currentQuiz = this.currentQuiz.slice(0, 10);
 
         this.currentIndex = 0;
         this.score = 0;
@@ -96,17 +96,17 @@ export const Quiz = {
 
         const q = this.currentQuiz[this.currentIndex];
         const container = document.getElementById('quiz-content');
-        
+
         // Tối ưu UI cho TV: text-2xl/3xl, card to, gap lớn
         container.innerHTML = `
-            <div class="animate-slide-in-right">
-                <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 md:mb-12 leading-relaxed text-center sm:text-left">
+            <div class="animate-slide-in-right relative z-30">
+                <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 md:mb-12 leading-relaxed text-center sm:text-left drop-shadow-sm">
                     <span class="text-orange-500 font-black mr-2">Q${this.currentIndex + 1}.</span> ${q.question}
                 </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6" id="opts-container">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 relative z-30" id="opts-container">
                     ${q.options.map((opt, optIdx) => `
-                         <button onclick="Quiz.selectAnswer(${optIdx})" class="quiz-opt-btn relative w-full text-left p-6 md:p-8 rounded-[24px] md:rounded-[32px] border-4 border-gray-100 bg-gray-50 hover:bg-orange-50 hover:border-orange-200 hover:shadow-lg hover:-translate-y-1 transition-all group overflow-hidden">
-                            <div class="flex items-center">
+                         <button onclick="Quiz.selectAnswer(${optIdx})" class="quiz-opt-btn relative w-full text-left p-6 md:p-8 rounded-[24px] md:rounded-[32px] border-4 border-gray-100 bg-gray-50 hover:bg-orange-50 hover:border-orange-200 hover:shadow-lg hover:-translate-y-1 transition-all group overflow-hidden cursor-pointer">
+                            <div class="flex items-center pointer-events-none">
                                 <div class="w-8 h-8 md:w-10 md:h-10 border-4 border-gray-200 rounded-full flex-shrink-0 mr-4 md:mr-6 group-hover:border-orange-400 transition-colors flex items-center justify-center opt-indicator"></div>
                                 <span class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 group-hover:text-orange-900 transition-colors leading-tight">${opt}</span>
                             </div>
@@ -123,18 +123,18 @@ export const Quiz = {
 
         const q = this.currentQuiz[this.currentIndex];
         const isCorrect = (selectedIndex === q.answer);
-        
+
         if (isCorrect) {
             this.score += 10;
             document.getElementById('quiz-score-display').innerText = this.score;
             document.getElementById('quiz-score-display').classList.add('animate-bounce-subtle');
             setTimeout(() => document.getElementById('quiz-score-display').classList.remove('animate-bounce-subtle'), 500);
-            if(typeof confetti === 'function') confetti({ particleCount: 50, spread: 60, origin: { y: 0.8 } });
+            if (typeof confetti === 'function') confetti({ particleCount: 50, spread: 60, origin: { y: 0.8 } });
         }
 
         const buttons = document.querySelectorAll('.quiz-opt-btn');
         const indicators = document.querySelectorAll('.opt-indicator');
-        
+
         // Disable all buttons immediately
         buttons.forEach(btn => {
             btn.onclick = null;
@@ -145,7 +145,7 @@ export const Quiz = {
         // Bôi màu đáp án
         buttons.forEach((btn, idx) => {
             const indicatorEl = indicators[idx];
-            
+
             if (idx === q.answer) {
                 // Đáp án đúng luôn xanh
                 btn.classList.remove('border-gray-100', 'bg-gray-50', 'opacity-60');
@@ -165,12 +165,12 @@ export const Quiz = {
 
         // Chờ 1.5s - 2s rồi qua câu mới
         const waitTime = isCorrect ? 1500 : 2500; // Khuyến khích đọc câu sai lâu hơn xíu
-        
+
         setTimeout(() => {
             const currentContainer = document.querySelector('.animate-slide-in-right');
             currentContainer.classList.remove('animate-slide-in-right');
             currentContainer.classList.add('animate-slide-out-left');
-            
+
             setTimeout(() => {
                 this.currentIndex++;
                 this.isProcessing = false;
@@ -181,7 +181,7 @@ export const Quiz = {
 
     finishQuiz() {
         document.getElementById('quiz-progress-fill').style.width = '100%';
-        
+
         const container = document.getElementById('quiz-content');
         container.innerHTML = `
             <div class="text-center animate-fade-in py-8">
@@ -196,15 +196,15 @@ export const Quiz = {
                 </div>
             </div>
         `;
-        
-        if(typeof celebrate === 'function') celebrate();
+
+        if (typeof celebrate === 'function') celebrate();
         else if (typeof confetti === 'function') setTimeout(() => confetti({ particleCount: 150, spread: 100 }), 300);
     },
-    
+
     submitToFirebase() {
-        const fullContent = `Trắc nghiệm tổng: ${this.score} điểm (${this.score/10}/10 câu đúng).`;
+        const fullContent = `Trắc nghiệm tổng: ${this.score} điểm (${this.score / 10}/10 câu đúng).`;
         const score = this.score;
-        
+
         if (window.submitMathLesson) {
             window.submitMathLesson(fullContent, score, "btn-submit-final-score");
         } else {
