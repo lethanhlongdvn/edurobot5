@@ -37,6 +37,11 @@
                     </li>
                     <li><a href="#" onclick="router.goHome(); return false;"
                             class="text-gray-500 hover:text-blue-600 transition-colors py-2">Trang chủ</a></li>
+                    <li><button onclick="toggleFullScreen()"
+                            class="text-gray-500 hover:text-blue-600 transition-colors py-2 flex items-center gap-1 group">
+                            <svg class="w-4 h-4 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                            <span class="hidden md:inline">Toàn màn hình</span>
+                        </button></li>
                     <li class="hidden md:block"><button
                             class="text-gray-500 hover:text-blue-600 transition-colors py-2">Chia sẻ</button></li>
                     <li><button onclick="openTeacherAuthModal()"
@@ -190,6 +195,32 @@
     <script src="js/firebase-logic.js"></script>
 
     <script>
+        // Fullscreen toggle logic
+        function toggleFullScreen() {
+            if (!document.fullscreenElement &&    // alternative standard method
+                !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {  // current working methods
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.msRequestFullscreen) {
+                    document.documentElement.msRequestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+            }
+        }
+
         // UI scripts for modals
         window.openTeacherAuthModal = function () {
             const modal = document.getElementById('teacher-auth-modal');
