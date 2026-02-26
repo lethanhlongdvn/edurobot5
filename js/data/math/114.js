@@ -1,4 +1,11 @@
-export const lesson114 = {\n    "topic": "Hình học và Đo lường",\n    "week": "23",\n    "period": "114",\n    "title": "LUYỆN TẬP CHUNG (Tiết 2)",\n    "desc": "Bài 48: Luyện tập giải các bài toán thực tế về thể tích (Trang 39).",\n    "content": `        <div class="space-y-4 md:space-y-6">
+export const lesson114 = {
+
+    "topic": "Hình học và Đo lường", 
+    "week": "23", 
+    "period": "114", 
+    "title": "LUYỆN TẬP CHUNG (Tiết 2)", 
+    "desc": "Bài 48: Luyện tập giải các bài toán thực tế về thể tích (Trang 39).", 
+    "content": `        <div class="space-y-4 md:space-y-6">
             <div class="bg-gradient-to-r from-emerald-600 to-teal-700 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center gap-8">
                 <!-- Background decoration -->
                 <div class="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl mix-blend-overlay"></div>
@@ -20,7 +27,8 @@ export const lesson114 = {\n    "topic": "Hình học và Đo lường",\n    "w
                     </button>
                 </div>
             </div>
-        </div>`,\n    "practice": `        <div class="space-y-12">
+        </div>`, 
+    "practice": `        <div class="space-y-12">
             <!-- ====== PHẦN 2: TIẾT 114 (Trang 39) ====== --> -->
             <div class="bg-emerald-50/50 p-6 md:p-8 rounded-[40px] border-4 border-emerald-100 mt-12">
                 <div class="inline-flex items-center gap-3 bg-emerald-600 text-white px-6 py-3 rounded-full font-black text-lg md:text-xl uppercase tracking-widest mb-8 shadow-md">
@@ -247,7 +255,10 @@ export const lesson114 = {\n    "topic": "Hình học và Đo lường",\n    "w
                             <div class="relative group mt-2">
                                 <textarea id="ans-b114-4-text" rows="5" 
                                     class="w-full bg-white border-2 border-blue-100 rounded-[24px] p-6 pr-14 text-base font-bold text-gray-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none transition-all placeholder:text-gray-300 shadow-inner resize-none leading-relaxed" 
-                                    placeholder="Ví dụ:\nLượng nước đã hút ra là: ...\nSố nước còn lại trong bể là: ...\nĐáp số: ..."></textarea>
+                                    placeholder="Ví dụ:
+Lượng nước đã hút ra là: ...
+Số nước còn lại trong bể là: ...
+Đáp số: ..."></textarea>
                                 
                                 <button id="btn-mic-b114" onclick="toggleSpeechRec_b114()" title="Nhập bằng giọng nói" class="absolute right-4 bottom-4 w-12 h-12 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center transition-all opacity-70 hover:opacity-100 active:scale-90 border border-blue-200">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
@@ -300,7 +311,8 @@ export const lesson114 = {\n    "topic": "Hình học và Đo lường",\n    "w
                                     fbBox.innerHTML = \`
                                         <div class="bg-white border-2 border-emerald-500 p-6 md:p-8 rounded-[32px] shadow-xl shadow-emerald-100 relative">
                                             <div class="absolute -top-3 left-6 px-4 py-1.5 bg-emerald-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-md">Nhận xét của Cố Vấn AI</div>
-                                            <div class="text-[15px] font-medium text-gray-800 leading-relaxed pt-2 space-y-2">\${feedback.replace(/\\n/g, '<br>')}</div>
+                                            <div class="text-[15px] font-medium text-gray-800 leading-relaxed pt-2 space-y-2">\${feedback.replace(/\
+/g, '<br>')}</div>
                                         </div>
                                     \`;
                                     resetBtn.classList.remove('hidden');
@@ -345,7 +357,8 @@ export const lesson114 = {\n    "topic": "Hình học và Đo lường",\n    "w
                                     status.classList.remove('hidden');
                                 };
                                 recognition_b114.onresult = function (event) {
-                                    input.value += (input.value ? ' \\n' : '') + event.results[0][0].transcript;
+                                    input.value += (input.value ? ' \
+' : '') + event.results[0][0].transcript;
                                 };
                                 recognition_b114.onerror = function (event) {
                                     status.classList.add('hidden');
@@ -372,7 +385,7 @@ export const lesson114 = {\n    "topic": "Hình học và Đo lường",\n    "w
                     <p class="text-gray-400 font-bold">Lưu lại bài làm của Tiết 114 để Thầy Cô xem lại nhé!</p>
                 </div>
                 <button onclick="submitAllPractice114()" class="relative z-10 w-full md:w-auto bg-white text-gray-900 px-8 py-5 rounded-3xl font-black text-lg uppercase shadow-xl hover:-translate-y-1 transition-transform active:scale-95 flex items-center justify-center gap-2">
-                    Nộp bài 📤
+                    NỘP BÀI
                 </button>
             </div>
             
@@ -381,7 +394,15 @@ export const lesson114 = {\n    "topic": "Hình học và Đo lường",\n    "w
                     const t39b2 = document.getElementById('b114-2-ans')?.value || "";
                     const dt39b4 = document.getElementById('ans-b114-4-text')?.value || "";
                     
-                    const fullContent = "\nBÀI 48 - LUYỆN TẬP CHUNG (Tiết 114)\n=====================================\n[TRANG 39]\nBài 2: Tính ra dùng hết " + t39b2 + " m3 / tháng.\nBài 4: (Tự luận học sinh)\n" + dt39b4 + "\n=====================================\n";
+                    const fullContent = "
+BÀI 48 - LUYỆN TẬP CHUNG (Tiết 114)
+=====================================
+[TRANG 39]
+Bài 2: Tính ra dùng hết " + t39b2 + " m3 / tháng.
+Bài 4: (Tự luận học sinh)
+" + dt39b4 + "
+=====================================
+";
                     
                     if (window.submitMathLesson) {
                         window.submitMathLesson(fullContent, "KT Luyện tập chung 114", "Nộp Tiết 114");
@@ -390,4 +411,7 @@ export const lesson114 = {\n    "topic": "Hình học và Đo lường",\n    "w
                     }
                 };
             </script>
-        </div>`,\n    "quizPool": []\n};\n
+        </div>`, 
+    "quizPool": []
+
+}; 
