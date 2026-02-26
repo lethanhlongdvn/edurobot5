@@ -37,37 +37,86 @@ export const lesson112 = {
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Hộp 1 -->
-                    <div class="bg-yellow-50 rounded-3xl p-6 flex flex-col items-center justify-center border-2 border-yellow-200 shadow-sm hover:scale-105 transition-transform">
-                        <div class="text-6xl mb-4 animate-[bounce_2s_infinite]">👆</div>
-                        <select id="b112-1a" class="w-full text-center p-3 rounded-2xl border-2 border-yellow-400 font-black text-yellow-800 outline-none focus:ring-4 focus:ring-yellow-200">
+                    <div class="bg-yellow-50 rounded-3xl p-6 flex flex-col items-center justify-center border-2 border-yellow-200 shadow-sm hover:scale-105 transition-transform group relative">
+                        <img src="hinh_anh/112-b1-1.png" alt="Hộp nhỏ gọn" class="w-24 h-24 object-contain mb-4 animate-[bounce_2s_infinite] drop-shadow-md" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'currentColor\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\\'/></svg>'">
+                        <select id="b112-1a" class="w-full text-center p-3 rounded-2xl border-2 border-yellow-400 font-black text-yellow-800 outline-none focus:ring-4 focus:ring-yellow-200 appearance-none bg-white">
                             <option value="">-- Chọn --</option>
                             <option value="1 dm3">1 dm³</option>
                             <option value="1 m3">1 m³</option>
                             <option value="1 cm3">1 cm³</option>
                         </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-4 flex items-center pt-28 text-yellow-600">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
                     </div>
                     
                     <!-- Hộp 2 -->
-                    <div class="bg-blue-50 rounded-3xl p-6 flex flex-col items-center justify-center border-2 border-blue-200 shadow-sm hover:scale-105 transition-transform">
-                        <div class="text-6xl mb-4 float-idle">📦</div>
-                        <select id="b112-1b" class="w-full text-center p-3 rounded-2xl border-2 border-blue-400 font-black text-blue-800 outline-none focus:ring-4 focus:ring-blue-200">
+                    <div class="bg-blue-50 rounded-3xl p-6 flex flex-col items-center justify-center border-2 border-blue-200 shadow-sm hover:scale-105 transition-transform group relative">
+                        <img src="hinh_anh/112-b1-2.png" alt="Hộp vừa" class="w-32 h-32 object-contain mb-4 float-idle drop-shadow-md" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'currentColor\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\\'/></svg>'">
+                        <select id="b112-1b" class="w-full text-center p-3 rounded-2xl border-2 border-blue-400 font-black text-blue-800 outline-none focus:ring-4 focus:ring-blue-200 appearance-none bg-white">
                             <option value="">-- Chọn --</option>
                             <option value="1 dm3">1 dm³</option>
                             <option value="1 m3">1 m³</option>
                             <option value="1 cm3">1 cm³</option>
                         </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-4 flex items-center pt-36 text-blue-600">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
                     </div>
 
                     <!-- Hộp 3 -->
-                    <div class="bg-emerald-50 rounded-3xl p-6 flex flex-col items-center justify-center border-2 border-emerald-200 shadow-sm hover:scale-105 transition-transform">
-                        <div class="text-6xl mb-4 animate-[bounce_3s_infinite]">🚚</div>
-                        <select id="b112-1c" class="w-full text-center p-3 rounded-2xl border-2 border-emerald-400 font-black text-emerald-800 outline-none focus:ring-4 focus:ring-emerald-200">
+                    <div class="bg-emerald-50 rounded-3xl p-6 flex flex-col items-center justify-center border-2 border-emerald-200 shadow-sm hover:scale-105 transition-transform group relative">
+                        <img src="hinh_anh/112-b1-3.png" alt="Thùng lớn" class="w-48 h-32 object-contain mb-4 animate-[bounce_3s_infinite] drop-shadow-md" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'currentColor\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z\\'/></svg>'">
+                        <select id="b112-1c" class="w-full text-center p-3 rounded-2xl border-2 border-emerald-400 font-black text-emerald-800 outline-none focus:ring-4 focus:ring-emerald-200 appearance-none bg-white">
                             <option value="">-- Chọn --</option>
                             <option value="1 dm3">1 dm³</option>
                             <option value="1 m3">1 m³</option>
                             <option value="1 cm3">1 cm³</option>
                         </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-4 flex items-center pt-36 text-emerald-600">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
                     </div>
+                </div>
+                
+                <!-- Khu vực Nút Kiểm tra và Kết quả cho Bài 1 -->
+                <div class="mt-6 flex flex-col md:flex-row items-center justify-between bg-blue-50/50 p-4 rounded-3xl border border-blue-100 gap-4">
+                     <div id="fb-b112-1" class="hidden text-sm md:text-base font-bold animate-fade-in flex-1"></div>
+                     <button onclick="checkB112B1(this)" class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-2xl font-black text-sm uppercase tracking-wide shadow-lg shadow-blue-200 transition-all flex items-center justify-center gap-2 active:scale-95 group shrink-0">
+                          Kiểm tra Bài 1
+                          <span class="text-xl group-hover:scale-125 transition-transform">✨</span>
+                     </button>
+                </div>
+
+                <script>
+                    window.checkB112B1 = function(btn) {
+                        const a = document.getElementById('b112-1a').value;
+                        const b = document.getElementById('b112-1b').value;
+                        const c = document.getElementById('b112-1c').value;
+                        const fb = document.getElementById('fb-b112-1');
+
+                        if (!a || !b || !c) {
+                            fb.innerHTML = '<span class="text-amber-600 bg-amber-100 px-4 py-2 rounded-xl">⚠️ Bạn cần chọn đủ 3 đáp án nhé!</span>';
+                            fb.classList.remove('hidden');
+                            return;
+                        }
+
+                        let score = 0;
+                        if (a === '1 cm3') score++;
+                        if (b === '1 dm3') score++;
+                        if (c === '1 m3') score++;
+
+                        if (score === 3) {
+                            fb.innerHTML = '<span class="text-emerald-600 bg-emerald-100 px-4 py-2 rounded-xl flex items-center gap-2">🎉 Giỏi quá! Cả 3 đáp án đều chính xác rồi!</span>';
+                            btn.classList.replace('bg-blue-600', 'bg-emerald-600');
+                            btn.classList.replace('hover:bg-blue-700', 'hover:bg-emerald-700');
+                            btn.innerHTML = 'Xuất sắc! ✨';
+                        } else {
+                            fb.innerHTML = '<span class="text-red-500 bg-red-100 px-4 py-2 rounded-xl flex items-center gap-2">🤔 Bạn bị sai ' + (3 - score) + ' chỗ. Hãy quan sát kỹ kích thước tay và hộp xem sao nhé!</span>';
+                        }
+                        fb.classList.remove('hidden');
+                    };
+                </script>
                 </div>
             </div>
 
