@@ -96,34 +96,34 @@ export const Lesson = {
 
         return `
             <div class="flex flex-col mb-3">
-                <div class="conv-exercise p-3 md:p-4 bg-white rounded-2xl border-2 border-transparent shadow-sm hover:border-blue-200 transition-all flex items-center justify-between gap-3 group" data-exercise-id="${id}">
-                    <div class="flex items-center gap-2 shrink-0 font-black text-blue-900 text-base md:text-lg">
+                <div class="conv-exercise py-2 flex items-center justify-between gap-3 group" data-exercise-id="${id}">
+                    <div class="flex items-center gap-2 shrink-0 font-bold text-blue-900 text-base md:text-lg">
                         <span>${displayValue}</span>
                         <span class="text-gray-400 font-medium">=</span>
                     </div>
                     <div class="relative flex-grow flex items-center gap-3 justify-end">
-                        <div class="relative w-16 md:w-24">
+                        <div class="relative w-16 md:w-20">
                             <input type="text" id="input-${id}" 
-                                class="w-full h-10 md:h-12 bg-orange-50/50 border-2 border-orange-500 rounded-xl px-2 py-2 text-center text-base md:text-lg font-black text-blue-800 focus:ring-4 focus:ring-orange-100 focus:border-orange-600 focus:bg-orange-50 outline-none transition-all placeholder:text-transparent"
-                                placeholder="?">
+                                class="w-full bg-transparent border-b-2 border-blue-400 px-1 py-1 text-center text-base md:text-lg font-black text-emerald-700 focus:border-blue-700 outline-none transition-all placeholder:text-transparent"
+                                placeholder="...">
                         </div>
                         
                         <!-- Mic Button -->
                         <div class="relative">
                             <button id="btn-mic-${id}" onclick="Lesson.toggleSpeechRec('${id}')" title="Nhập bằng giọng nói" 
-                                class="w-10 h-10 md:w-12 md:h-12 bg-transparent hover:bg-orange-100/50 text-blue-400 hover:text-blue-600 rounded-xl flex items-center justify-center transition-all active:scale-95 border border-transparent hover:border-blue-200">
+                                class="w-8 h-8 md:w-10 md:h-10 bg-transparent text-blue-400 hover:text-blue-600 rounded-full flex items-center justify-center transition-all active:scale-95">
                                 <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                             </button>
                             <div id="mic-status-${id}" class="absolute -top-3 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-red-500 text-white text-[9px] font-bold rounded-full animate-pulse hidden z-10 whitespace-nowrap">Đang nghe...</div>
                         </div>
-                        <span class="font-black text-gray-700 text-base md:text-xl shrink-0 min-w-[2rem] text-left">${unit}</span>
+                        <span class="font-bold text-blue-900 text-base md:text-lg shrink-0 min-w-[2rem] text-left">${unit}</span>
                         <button onclick="Lesson.checkMathExercise('${id}', '${finalAnswer.replace(/'/g, "\\'")}', 'Đổi đơn vị', '${displayValue.replace(/'/g, "\\'")}')" 
-                            class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg font-black transition-all active:scale-95 shadow-md shadow-blue-200 flex items-center justify-center ml-1">
-                            <svg class="w-5 h-5 md:w-6 md:h-6 transform" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            class="w-8 h-8 md:w-10 md:h-10 shrink-0 bg-blue-100 hover:bg-blue-600 hover:text-white text-blue-600 rounded-xl flex items-center justify-center transition-all active:scale-95 shadow-sm ml-1">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                         </button>
                     </div>
                 </div>
-                <div id="feedback-${id}" class="hidden animate-fade-in mt-2 w-full"></div>
+                <div id="feedback-${id}" class="hidden animate-fade-in mt-1 w-full text-xs font-bold pl-2"></div>
             </div>
         `;
     },
@@ -181,27 +181,22 @@ export const Lesson = {
         feedback.classList.remove('hidden');
         if (cleanValue === cleanAnswer) {
             feedback.innerHTML = `
-                <div class="bg-emerald-50 border-2 border-emerald-500 p-4 rounded-2xl flex items-center gap-4 animate-bounce-short">
-                    <div class="text-2xl">🌟</div>
-                    <div>
-                        <p class="text-emerald-900 font-black text-sm">Tuyệt vời! Bạn giỏi quá!</p>
-                        <p class="text-emerald-700 text-xs font-medium">Bạn đã trả lời chính xác rồi đấy.</p>
-                    </div>
+                <div class="flex items-center gap-1 text-emerald-600 font-bold ml-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Tuyệt vời! Bạn tính đúng rồi.</span>
                 </div>
             `;
-            input.classList.add('border-emerald-500', 'bg-emerald-50');
+            input.classList.add('border-emerald-500', 'text-emerald-600', 'bg-transparent');
+            input.classList.remove('border-blue-400', 'text-emerald-700');
         } else {
             feedback.innerHTML = `
-                <div class="bg-orange-50 border-2 border-orange-500 p-4 rounded-2xl flex items-center gap-4">
-                    <div class="text-2xl">💡</div>
-                    <div>
-                        <p class="text-orange-900 font-black text-sm">Gần đúng rồi, bạn thử lại nhé!</p>
-                        <button onclick="AIInteraction.showAiModal('Gợi ý từ AI E', 'Mình thấy bạn đang làm bài <b>${label}: ${displayValue}</b>. Bạn hãy bình tĩnh kiểm tra lại kỹ các hàng và lớp của số này nhé. Mình tin lần tới bạn sẽ làm đúng!')" 
-                                class="text-orange-600 text-xs font-black uppercase tracking-widest mt-1 hover:underline">Xem gợi ý từ AI E</button>
-                    </div>
+                <div class="flex items-center gap-1 text-orange-500 font-bold ml-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <span>Sai mất rồi. Thử lại nhé!</span>
                 </div>
             `;
-            input.classList.add('border-orange-500', 'bg-orange-50');
+            input.classList.add('border-orange-500', 'text-orange-600', 'bg-transparent');
+            input.classList.remove('border-blue-400', 'text-emerald-700');
         }
     },
 
