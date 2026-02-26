@@ -14,7 +14,7 @@ export const Lesson = {
                 </div>
 
                 <!-- Tabs Navigation: Mảnh & Rộng (Khớp Navbar) -->
-                <div class="flex justify-center mb-10 overflow-x-auto px-4 sticky top-24 z-30">
+                <div class="flex justify-center mb-10 overflow-x-auto px-4 sticky top-16 z-40">
                     <div class="bg-white/95 backdrop-blur-2xl p-1 rounded-full border border-gray-100 shadow-xl shadow-blue-900/5 flex gap-1 w-full max-w-7xl px-8">
                         <button id="tab-study" onclick="router.switchTab('study')" class="tab-btn active flex-1 py-3 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95">
                             <span class="text-base">📖</span> Tìm hiểu bài
@@ -234,7 +234,7 @@ export const Lesson = {
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
         const recognition = new SpeechRecognition();
         window.lessonSpeechRecognitions[id] = recognition;
-        
+
         recognition.lang = 'vi-VN';
         recognition.continuous = false;
         recognition.interimResults = false;
@@ -242,7 +242,7 @@ export const Lesson = {
         recognition.onstart = function () {
             btn.classList.add('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
             btn.classList.remove('bg-blue-50', 'text-blue-600', 'border-blue-100', 'bg-transparent', 'text-blue-400');
-            if(status) status.classList.remove('hidden');
+            if (status) status.classList.remove('hidden');
         };
 
         recognition.onresult = function (event) {
@@ -260,7 +260,7 @@ export const Lesson = {
         };
 
         recognition.onerror = function (event) {
-            if(status) status.classList.add('hidden');
+            if (status) status.classList.add('hidden');
             btn.classList.remove('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
             if (event.error !== 'aborted') {
                 alert("Lỗi Micro: " + event.error);
@@ -269,8 +269,8 @@ export const Lesson = {
 
         recognition.onend = function () {
             btn.classList.remove('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
-            if(status) status.classList.add('hidden');
-            
+            if (status) status.classList.add('hidden');
+
             // Revert classes logically based on size
             if (btn.classList.contains('w-8')) {
                 btn.classList.add('bg-transparent', 'text-blue-400');
