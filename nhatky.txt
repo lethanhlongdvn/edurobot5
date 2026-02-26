@@ -150,3 +150,10 @@ Ngày 25/02/2026:
 - Tối ưu hóa lại nút bấm nộp bài bằng icon dấu ✓ thay vì E để tránh nhầm lẫn.
 
 Trạng thái hiện tại: Giao diện bài học 111 đã sinh động với nội dung sách nói dạng comic, có 3D thực tế; hệ thống chat AI thống nhất với branding chữ E của toàn dự án EduRobot.
+
+Ngày 26/02/2026:
+----------------
+[13:30] Nâng cấp Giao diện Luyện Tập:
+- Bổ sung nút Microphone vào các ô nhập liệu Bài tập Toán (đọc/viết và đổi đơn vị).
+- Tích hợp hàm Lesson.toggleSpeechRec quản lý vòng đời bộ nhận diện giọng nói vi-VN.
+- Cải thiện UX: Hiển thị trạng thái "Đang nghe...", tự động điền kết quả vào ô input theo Real-time Transcript.
