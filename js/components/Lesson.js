@@ -106,12 +106,15 @@ export const Lesson = {
                             <input type="text" id="input-${id}" 
                                 class="w-full h-10 md:h-12 bg-orange-50/50 border-2 border-orange-500 rounded-xl px-2 py-2 text-center text-base md:text-lg font-black text-blue-800 focus:ring-4 focus:ring-orange-100 focus:border-orange-600 focus:bg-orange-50 outline-none transition-all placeholder:text-transparent"
                                 placeholder="?">
-                            <!-- Mic Button -->
+                        </div>
+                        
+                        <!-- Mic Button -->
+                        <div class="relative">
                             <button id="btn-mic-${id}" onclick="Lesson.toggleSpeechRec('${id}')" title="Nhập bằng giọng nói" 
-                                class="absolute inset-0 w-full h-full bg-transparent hover:bg-orange-100/50 text-blue-400 hover:text-blue-600 rounded-xl flex items-center justify-center transition-all active:scale-95 group-focus-within:opacity-0 peer" onfocus="document.getElementById('input-${id}').focus()">
+                                class="w-10 h-10 md:w-12 md:h-12 bg-transparent hover:bg-orange-100/50 text-blue-400 hover:text-blue-600 rounded-xl flex items-center justify-center transition-all active:scale-95 border border-transparent hover:border-blue-200">
                                 <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                             </button>
-                            <div id="mic-status-${id}" class="absolute -top-3 right-0 px-2 py-0.5 bg-red-500 text-white text-[9px] font-bold rounded-full animate-pulse hidden z-10">Đang nghe...</div>
+                            <div id="mic-status-${id}" class="absolute -top-3 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-red-500 text-white text-[9px] font-bold rounded-full animate-pulse hidden z-10 whitespace-nowrap">Đang nghe...</div>
                         </div>
                         <span class="font-black text-gray-700 text-base md:text-xl shrink-0 min-w-[2rem] text-left">${unit}</span>
                         <button onclick="Lesson.checkMathExercise('${id}', '${finalAnswer.replace(/'/g, "\\'")}', 'Đổi đơn vị', '${displayValue.replace(/'/g, "\\'")}')" 
