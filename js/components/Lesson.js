@@ -102,9 +102,17 @@ export const Lesson = {
                         <span class="text-gray-400 font-medium">=</span>
                     </div>
                     <div class="relative flex-grow flex items-center gap-2">
-                        <input type="text" id="input-${id}" 
-                            class="w-full min-w-[50px] bg-gray-50 border-2 border-transparent rounded-xl px-2 py-3 text-center text-lg md:text-xl font-bold text-blue-800 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:bg-white outline-none transition-all placeholder:text-gray-200"
-                            placeholder="?">
+                        <div class="relative w-full">
+                            <input type="text" id="input-${id}" 
+                                class="w-full min-w-[50px] bg-gray-50 border-2 border-transparent rounded-xl px-2 py-3 pr-10 text-center text-lg md:text-xl font-bold text-blue-800 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:bg-white outline-none transition-all placeholder:text-gray-200"
+                                placeholder="?">
+                            <!-- Mic Button -->
+                            <button id="btn-mic-${id}" onclick="Lesson.toggleSpeechRec('${id}')" title="Nhập bằng giọng nói" 
+                                class="absolute right-1 top-1 bottom-1 w-8 bg-transparent hover:bg-blue-100 text-blue-400 hover:text-blue-600 rounded-lg flex items-center justify-center transition-all active:scale-95">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                            </button>
+                            <div id="mic-status-${id}" class="absolute -top-3 right-0 px-2 py-1 bg-red-500 text-white text-[9px] font-bold rounded-full animate-pulse hidden z-10">Đang nghe...</div>
+                        </div>
                         <span class="font-black text-gray-700 text-base md:text-lg shrink-0 min-w-[2.5rem] text-left">${unit}</span>
                         <button onclick="Lesson.checkMathExercise('${id}', '${finalAnswer.replace(/'/g, "\\'")}', 'Đổi đơn vị', '${displayValue.replace(/'/g, "\\'")}')" 
                             class="w-11 h-11 shrink-0 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xl font-black transition-all active:scale-95 shadow-md shadow-blue-200 flex items-center justify-center ml-1">
@@ -135,10 +143,18 @@ export const Lesson = {
                     <span class="text-sm font-bold text-gray-400 uppercase tracking-tighter whitespace-nowrap shrink-0 md:ml-4">${actionLabel}</span>
                     <div class="relative flex-grow w-full">
                         <input type="text" id="input-${id}" 
-                            class="w-full bg-white border-2 border-white rounded-2xl px-6 py-4 pr-16 text-sm font-bold shadow-sm focus:ring-4 focus:ring-blue-100 focus:border-blue-500 outline-none transition-all placeholder:text-gray-200"
+                            class="w-full bg-white border-2 border-white rounded-2xl px-6 py-4 pr-28 text-sm font-bold shadow-sm focus:ring-4 focus:ring-blue-100 focus:border-blue-500 outline-none transition-all placeholder:text-gray-200"
                             placeholder="Nhập kết quả...">
+                        
+                        <!-- Mic Button -->
+                        <button id="btn-mic-${id}" onclick="Lesson.toggleSpeechRec('${id}')" title="Nhập bằng giọng nói" 
+                            class="absolute right-14 top-2 bottom-2 w-11 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center transition-all shadow-sm active:scale-95 border border-blue-100 z-10">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                        </button>
+                        <div id="mic-status-${id}" class="absolute -top-3 right-14 px-2 py-1 bg-red-500 text-white text-[9px] font-bold rounded-full animate-pulse hidden z-20">Đang nghe...</div>
+
                         <button onclick="Lesson.checkMathExercise('${id}', '${finalAnswer.replace(/'/g, "\\'")}', '${label}', '${displayValue.replace(/'/g, "\\'")}')" 
-                            class="absolute right-2 top-2 bottom-2 w-11 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg font-black transition-all active:scale-95 shadow-md shadow-blue-200 flex items-center justify-center">
+                            class="absolute right-2 top-2 bottom-2 w-11 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg font-black transition-all active:scale-95 shadow-md shadow-blue-200 flex items-center justify-center z-10">
                             <svg class="w-6 h-6 transform" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                     </div>
@@ -194,6 +210,76 @@ export const Lesson = {
                 <p class="text-gray-400 font-bold uppercase text-[10px] tracking-[0.3em]">EduRobot đang trên đường thám hiểm</p>
             </div>
         `;
+    },
+
+    toggleSpeechRec(id) {
+        const btn = document.getElementById(`btn-mic-${id}`);
+        const status = document.getElementById(`mic-status-${id}`);
+        const input = document.getElementById(`input-${id}`);
+
+        if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+            alert("Trình duyệt của bạn không hỗ trợ tính năng nhận diện giọng nói. Vui lòng dùng Chrome hoặc tải app EduRobot nhé!");
+            return;
+        }
+
+        if (!window.lessonSpeechRecognitions) {
+            window.lessonSpeechRecognitions = {};
+        }
+
+        if (window.lessonSpeechRecognitions[id] && btn.classList.contains('recording')) {
+            window.lessonSpeechRecognitions[id].stop();
+            return;
+        }
+
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition = new SpeechRecognition();
+        window.lessonSpeechRecognitions[id] = recognition;
+        
+        recognition.lang = 'vi-VN';
+        recognition.continuous = false;
+        recognition.interimResults = false;
+
+        recognition.onstart = function () {
+            btn.classList.add('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
+            btn.classList.remove('bg-blue-50', 'text-blue-600', 'border-blue-100', 'bg-transparent', 'text-blue-400');
+            if(status) status.classList.remove('hidden');
+        };
+
+        recognition.onresult = function (event) {
+            let transcript = event.results[0][0].transcript.trim();
+            // Remove trailing dot occasionally added by speech API
+            if (transcript.endsWith('.')) {
+                transcript = transcript.slice(0, -1);
+            }
+            if (input.value) {
+                // Determine logic: for reading exercises maybe replace, but append is safer
+                input.value = input.value + ' ' + transcript;
+            } else {
+                input.value = transcript;
+            }
+        };
+
+        recognition.onerror = function (event) {
+            if(status) status.classList.add('hidden');
+            btn.classList.remove('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
+            if (event.error !== 'aborted') {
+                alert("Lỗi Micro: " + event.error);
+            }
+        };
+
+        recognition.onend = function () {
+            btn.classList.remove('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
+            if(status) status.classList.add('hidden');
+            
+            // Revert classes logically based on size
+            if (btn.classList.contains('w-8')) {
+                btn.classList.add('bg-transparent', 'text-blue-400');
+            } else {
+                btn.classList.add('bg-blue-50', 'text-blue-600', 'border-blue-100');
+            }
+        };
+
+        recognition.start();
     }
 };
 
