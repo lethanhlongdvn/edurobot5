@@ -157,3 +157,11 @@ Ngày 26/02/2026:
 - Bổ sung nút Microphone vào các ô nhập liệu Bài tập Toán (đọc/viết và đổi đơn vị).
 - Tích hợp hàm Lesson.toggleSpeechRec quản lý vòng đời bộ nhận diện giọng nói vi-VN.
 - Cải thiện UX: Hiển thị trạng thái "Đang nghe...", tự động điền kết quả vào ô input theo Real-time Transcript.
+
+[14:15] Hoàn thiện hệ thống Điều hướng (Router v8.0):
+- Tích hợp Hash-based Routing (URL Fragment) vào `router.js` theo yêu cầu của giáo viên.
+- Lưu lại trạng thái môn học và bài học (Subject, Week, Period) trên URL để dễ dàng sao chép.
+- Hỗ trợ tải lại trang (F5/Reload) tự động phục hồi vị trí đang học, không bị văng về Trang chủ.
+- Tự động bắt sự kiện `hashchange` trên toàn hệ thống mà không cần sửa mã UI Components.
+
+Trạng thái hiện tại: Hệ thống điều hướng SPA (Single Page Application) đã hỗ trợ Load/Reload ổn định tại từng bài học (ví dụ: Bài 111).
