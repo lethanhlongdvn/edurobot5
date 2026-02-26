@@ -350,7 +350,7 @@ f) 800 000 cm³ = \${b2_f} m³
 };
 
 // Speech Recognition Logic
-let recognition_b111_3 = null;
+window.recognition_b111_3 = window.recognition_b111_3 || null;
 window.toggleSpeechRec_b111_3 = function () {
     const btn = document.getElementById('btn-mic-b111');
     const status = document.getElementById('mic-status-b111');
@@ -361,42 +361,42 @@ window.toggleSpeechRec_b111_3 = function () {
         return;
     }
 
-    if (recognition_b111_3 && btn.classList.contains('recording')) {
-        recognition_b111_3.stop();
+    if (window.recognition_b111_3 && btn.classList.contains('recording')) {
+        window.recognition_b111_3.stop();
         return;
     }
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    recognition_b111_3 = new SpeechRecognition();
-    recognition_b111_3.lang = 'vi-VN';
-    recognition_b111_3.continuous = false;
-    recognition_b111_3.interimResults = false;
+    window.recognition_b111_3 = new SpeechRecognition();
+    window.recognition_b111_3.lang = 'vi-VN';
+    window.recognition_b111_3.continuous = false;
+    window.recognition_b111_3.interimResults = false;
 
-    recognition_b111_3.onstart = function () {
+    window.recognition_b111_3.onstart = function () {
         btn.classList.add('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
         btn.classList.remove('bg-blue-50', 'text-blue-600', 'border-blue-200');
         status.classList.remove('hidden');
     };
 
-    recognition_b111_3.onresult = function (event) {
+    window.recognition_b111_3.onresult = function (event) {
         const transcript = event.results[0][0].transcript;
         const currentVal = input.value;
-        input.value = currentVal ? (currentVal + ' \\n' + transcript) : transcript;
+        input.value = currentVal ? (currentVal + ' \n' + transcript) : transcript;
     };
 
-    recognition_b111_3.onerror = function (event) {
+    window.recognition_b111_3.onerror = function (event) {
         status.classList.add('hidden');
         btn.classList.remove('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
         alert("Lỗi Micro: " + event.error);
     };
 
-    recognition_b111_3.onend = function () {
+    window.recognition_b111_3.onend = function () {
         btn.classList.remove('recording', 'bg-red-100', 'text-red-600', 'border-red-300', 'animate-pulse');
         btn.classList.add('bg-blue-50', 'text-blue-600', 'border-blue-200');
         status.classList.add('hidden');
     };
 
-    recognition_b111_3.start();
+    window.recognition_b111_3.start();
 };
                           </script>
                      </div>
