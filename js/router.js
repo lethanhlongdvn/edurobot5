@@ -356,6 +356,16 @@ export const router = {
         }
 
         container.innerHTML = html;
+
+        // Execute scripts embedded in the loaded HTML (since innerHTML doesn't execute them)
+        const scripts = container.querySelectorAll('script');
+        scripts.forEach(oldScript => {
+            const newScript = document.createElement('script');
+            Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+            newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+        });
+
         if (tabId === 'quiz') UI.initQuiz(lesson);
 
         // Cuộn lên đầu trang mượt mà khi đổi tab
