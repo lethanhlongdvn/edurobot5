@@ -1,4 +1,11 @@
-export const lesson113 = {\n    "topic": "Hình học và Đo lường",\n    "week": "23",\n    "period": "113",\n    "title": "LUYỆN TẬP CHUNG (Tiết 1)",\n    "desc": "Bài 48: Ôn tập về đọc, viết, đổi đơn vị đo thể tích xăng-ti-mét khối, đề-xi-mét khối, mét khối (Trang 38).",\n    "content": `        <div class="space-y-4 md:space-y-6">
+export const lesson113 = {
+
+    "topic": "Hình học và Đo lường", 
+    "week": "23", 
+    "period": "113", 
+    "title": "LUYỆN TẬP CHUNG (Tiết 1)", 
+    "desc": "Bài 48: Ôn tập về đọc, viết, đổi đơn vị đo thể tích xăng-ti-mét khối, đề-xi-mét khối, mét khối (Trang 38).", 
+    "content": `        <div class="space-y-4 md:space-y-6">
             <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center gap-8">
                 <!-- Background decoration -->
                 <div class="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl mix-blend-overlay"></div>
@@ -20,7 +27,8 @@ export const lesson113 = {\n    "topic": "Hình học và Đo lường",\n    "w
                     </button>
                 </div>
             </div>
-        </div>`,\n    "practice": `        <div class="space-y-12">
+        </div>`, 
+    "practice": `        <div class="space-y-12">
             <!-- ====== PHẦN 1: TIẾT 113 (Trang 38) ====== --> -->
             <div class="bg-blue-50/50 p-6 md:p-8 rounded-[40px] border-4 border-blue-100">
                 <div class="inline-flex items-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-full font-black text-lg md:text-xl uppercase tracking-widest mb-8 shadow-md">
@@ -281,7 +289,7 @@ export const lesson113 = {\n    "topic": "Hình học và Đo lường",\n    "w
                     <p class="text-gray-400 font-bold">Lưu lại bài làm của Tiết 113 để Thầy Cô xem lại nhé!</p>
                 </div>
                 <button onclick="submitAllPractice113()" class="relative z-10 w-full md:w-auto bg-white text-gray-900 px-8 py-5 rounded-3xl font-black text-lg uppercase shadow-xl hover:-translate-y-1 transition-transform active:scale-95 flex items-center justify-center gap-2">
-                    Nộp bài 📤
+                    NỘP BÀI
                 </button>
             </div>
             
@@ -290,7 +298,14 @@ export const lesson113 = {\n    "topic": "Hình học và Đo lường",\n    "w
                     const t38b3 = document.getElementById('b113-3-ans')?.value || "";
                     const t38b5 = document.getElementById('b113-5-ans')?.value || "";
                     
-                    const fullContent = "\nBÀI 48 - LUYỆN TẬP CHUNG (Tiết 113)\n=====================================\n[TRANG 38]\nBài 3: Thể tích đếm được là " + t38b3 + " lập phương.\nBài 5: Rô bốt xếp được " + t38b5 + " hộp.\n=====================================\n";
+                    const fullContent = "
+BÀI 48 - LUYỆN TẬP CHUNG (Tiết 113)
+=====================================
+[TRANG 38]
+Bài 3: Thể tích đếm được là " + t38b3 + " lập phương.
+Bài 5: Rô bốt xếp được " + t38b5 + " hộp.
+=====================================
+";
                     
                     if (window.submitMathLesson) {
                         window.submitMathLesson(fullContent, "KT Luyện tập chung 113", "Nộp Tiết 113");
@@ -299,4 +314,7 @@ export const lesson113 = {\n    "topic": "Hình học và Đo lường",\n    "w
                     }
                 };
             </script>
-        </div>`,\n    "quizPool": []\n};\n
+        </div>`, 
+    "quizPool": []
+
+}; 
