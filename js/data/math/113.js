@@ -235,27 +235,33 @@ export const lesson113 = {
                     <span class="text-3xl">4️⃣</span> Thợ săn Số đo (Số?)
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-[48px] p-8 md:p-12 border-2 border-purple-100">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-white p-6 rounded-[32px] shadow-sm hover:shadow-md transition-shadow">
-                            <div class="text-purple-600 font-black text-xs uppercase tracking-[0.2em] mb-4">Câu A</div>
-                            <div class="space-y-4">
+                <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-[48px] p-6 md:p-12 border-2 border-purple-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-[32px] shadow-sm hover:shadow-md transition-shadow">
+                            <div class="text-purple-600 font-black text-xs uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
+                                <span class="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center">A</span> Câu A
+                            </div>
+                            <div class="space-y-6">
                                 [[CONV_EX|b113-4-a1|5 m³|dm³|5000]]
                                 [[CONV_EX|b113-4-a2|480 dm³|m³|0,48]]
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-[32px] shadow-sm hover:shadow-md transition-shadow">
-                            <div class="text-purple-600 font-black text-xs uppercase tracking-[0.2em] mb-4">Câu B</div>
-                            <div class="space-y-4">
+                        <div class="bg-white p-8 rounded-[32px] shadow-sm hover:shadow-md transition-shadow">
+                            <div class="text-purple-600 font-black text-xs uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
+                                <span class="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center">B</span> Câu B
+                            </div>
+                            <div class="space-y-6">
                                 [[CONV_EX|b113-4-b1|0,25 m³|cm³|250000]]
                                 [[CONV_EX|b113-4-b2|5 000 cm³|m³|0,005]]
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-[32px] shadow-sm hover:shadow-md transition-shadow">
-                            <div class="text-purple-600 font-black text-xs uppercase tracking-[0.2em] mb-4">Câu C</div>
-                            <div class="space-y-4">
+                        <div class="bg-white p-8 rounded-[32px] shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+                            <div class="text-purple-600 font-black text-xs uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
+                                <span class="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center">C</span> Câu C
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 [[CONV_EX|b113-4-c1|1,9 dm³|cm³|1900]]
                                 [[CONV_EX|b113-4-c2|2 650 cm³|dm³|2,65]]
                             </div>
