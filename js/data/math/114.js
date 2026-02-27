@@ -5,7 +5,28 @@ export const lesson114 = {
     "period": "114",
     "title": "LUYỆN TẬP CHUNG (Tiết 2)",
     "desc": "Bài 48: Luyện tập giải các bài toán thực tế về thể tích (Trang 39).",
-    "content": ``,
+    "content": `        <div class="space-y-4 md:space-y-6">
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-700 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center gap-8">
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl mix-blend-overlay"></div>
+                <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-emerald-400/20 rounded-full blur-3xl mix-blend-overlay"></div>
+                
+                <div class="w-32 h-32 md:w-48 md:h-48 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-md border-[8px] border-white/20 shrink-0 relative z-10 animate-bounce-short">
+                    <span class="text-6xl md:text-8xl">🎯</span>
+                </div>
+                
+                <div class="relative z-10 text-center md:text-left flex-grow">
+                    <div class="inline-block px-4 py-1.5 bg-emerald-500/30 backdrop-blur-md rounded-full text-emerald-100 font-bold uppercase tracking-widest text-xs md:text-sm border border-emerald-400/30 mb-4">Bài 48 (Tiết 114)</div>
+                    <h3 class="text-white font-black text-3xl md:text-5xl mb-4 leading-tight">Luyện tập chung<br>Trang 39</h3>
+                    <p class="text-emerald-100 font-medium text-base md:text-xl leading-relaxed max-w-2xl">
+                        Cùng EduRobot giải các bài toán thực tế về thể tích vô cùng thú vị nhé!
+                    </p>
+                    <button onclick="router.switchTab('practice')" class="mt-8 bg-white text-emerald-700 hover:bg-emerald-50 px-8 py-4 rounded-full font-black text-lg shadow-xl shadow-emerald-900/20 transition-all hover:scale-105 active:scale-95 flex items-center gap-2 mx-auto md:mx-0 group">
+                        Bắt đầu ngay
+                        <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>`,
     "practice": `        <div class="space-y-12">
                 <div class="space-y-8">
                     <!-- Bài 1: Khối lượng xếp lớn nhất -->
