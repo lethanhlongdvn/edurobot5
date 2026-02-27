@@ -1109,17 +1109,6 @@ export const placeholderLessons = [
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
   },
-
-  {
-    "topic": "Chương trình Toán 5",
-    "week": "24",
-    "period": "118",
-    "title": "BÀI 50. DIỆN TÍCH XUNG QUANH VÀ DIỆN TÍCH TOÀN PHẦN CỦA HÌNH HỘP CHỮ NHẬT (TIẾT 2)",
-    "desc": "Bài 50. Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (tiết 2)",
-    "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 50. Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (tiết 2) (Tiết 118) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
-    "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
-    "quizPool": []
-  },
   {
     "topic": "Chương trình Toán 5",
     "week": "24",
