@@ -165,3 +165,48 @@ Ngày 26/02/2026:
 - Tự động bắt sự kiện `hashchange` trên toàn hệ thống mà không cần sửa mã UI Components.
 
 Trạng thái hiện tại: Hệ thống điều hướng SPA (Single Page Application) đã hỗ trợ Load/Reload ổn định tại từng bài học (ví dụ: Bài 111).
+
+Ngày 27/02/2026:
+----------------
+[05:40] Chuẩn hóa Giao diện Nút Nộp Bài:
+- Lược bỏ hoàn toàn nút chứa icon (Tên lửa, Hộp thư) ở tất cả các bài học (111, 112, 113, 114, template).
+- Đổi đồng loạt text thành "NỘP BÀI" để giao diện gọn gàng và tinh tế hơn.
+
+[05:45] Tích hợp Bài 115 (Hình học Không gian):
+- Nội dung: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ.
+- Giao diện: Tông gradient cam nổi bật, hiện đại.
+- Bài tập: Tích hợp dạng trắc nghiệm tương tác mới mẻ, chọn A-B-C-D với logic siêu chi tiết chống click bừa và hướng dẫn cực kỹ.
+
+[06:15] Cập nhật toàn bộ phân phối chương trình môn Toán Lớp 5:
+- Phân tích tự động file PPCT TOAN 5.xlsx qua Node.js.
+- Cấu trúc lại danh mục bài giảng, sinh tự động 175 file bài giảng trống (placeholder) có dán nhãn "Đang xây dựng".
+- Hệ thống Router và Menu đã được cập nhật thuật toán sắp xếp (sort) chuẩn theo thứ tự Tiết học từ 1 đến 175, bao phủ trọn bộ cả năm.
+
+[06:30] Phân bổ và Khởi tạo Kế hoạch Tiếng Việt Lớp 5:
+- Phân tích file PPCT TV 5.xlsx xử lý tự động 253 dòng dữ liệu, trích xuất chính xác 245 tiết học Tiếng Việt Lớp 5.
+- Đã xuất bản Artifact: Kế hoạch triển khai cấu trúc và hệ thống cho môn Tiếng Việt với 3 Giao đoạn (Gợi ý tự động tạo Placeholder, Tùy chỉnh màu UI riêng và Soạn Template riêng biệt).
+
+[08:15] Thực thi Giai đoạn 1 - Khởi tạo 210 bài học Tiếng Việt:
+- Viết script `generate_tv_placeholders.js` đọc dữ liệu JSON từ PPCT Tiếng Việt (gồm 245 tiết).
+- Áp dụng logic gộp tiết học (Tiết 4+5 trong tuần Ôn tập, và các tiết trùng tên) để chuẩn hóa số lượng bài học: đúng 6 bài học mỗi tuần x 35 tuần = 210 bài học.
+- Sinh tự động 210 file placeholder cho môn Tiếng Việt và lưu vào `js/data/vietnamese/placeholders.js`.
+- Cập nhật `js/data/vietnamese/index.js` tự động import danh sách placeholder và nối với bài học có sẵn, áp dụng thuật toán sort theo số tiết nhằm đảm bảo thứ tự chính xác.
+
+Trạng thái hiện tại: Đã phủ sóng 100% lộ trình môn Toán (175 tiết) và Tiếng Việt Lớp 5 (210 bài học) lên hệ thống bằng placeholder. Giai đoạn 1 của Tiếng Việt đã hoàn tất, chuẩn bị vào Giai đoạn 2 (Tùy chỉnh màu UI hiển thị chuyên biệt cho Tiếng Việt).
+
+[11:14] Dọn dẹp & Tối ưu hệ thống (Cleanup v1.0):
+- Sửa bug: Xóa thẻ </footer> thừa (đóng 2 lần) trong index.html.
+- Di chuyển 20+ file/thư mục không sử dụng vào _archive/:
+  + style.css (CSS cũ, không được import).
+  + js/data/math.js (file monolithic cũ 39KB, đã thay bằng hệ thống modular).
+  + js/components.js (wrapper tương thích ngược, không ai import).
+  + generate-placeholders.js, parse_tv.js (scripts một lần, đã chạy xong).
+  + ppct.json, ppct_tv.json (JSON trung gian, đã tiêu thụ).
+  + PPCT TOAN 5.xlsx, PPCT TV 5.xlsx (trùng với bản trong PPCT5/).
+  + PPCT5/ (6 file Excel trùng lặp).
+  + tools/ (11 scripts sửa lỗi/migration cũ).
+  + skills/ (40 template Gemini, không phải code ứng dụng).
+  + node_modules/, package.json, package-lock.json (chỉ dùng cho script 1 lần).
+- Cấu trúc dự án giảm từ 15 files + 11 folders xuống còn 6 files + 8 folders (gọn 60%).
+
+Trạng thái hiện tại: Dự án đã được dọn dẹp sạch sẽ. Cấu trúc gọn gàng, chỉ giữ lại code chạy thực tế. File archive nằm trong _archive/ để phòng khi cần khôi phục.
