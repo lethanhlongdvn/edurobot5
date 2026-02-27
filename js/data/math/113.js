@@ -79,20 +79,31 @@ export const lesson113 = {
             <!-- BÀI 2: CHỌN CÂU TRẢ LỜI ĐÚNG -->
             <section class="bg-white rounded-[32px] p-6 md:p-10 shadow-lg border border-gray-100">
                 <div class="flex items-center gap-3 mb-4">
-                    <span class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md">2</span>
-                    <h4 class="text-2xl font-black text-gray-800">Chọn câu trả lời đúng.</h4>
+                    <span class="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black text-xl shadow-md">2</span>
+                    <h4 class="text-3xl font-black text-gray-800">Chọn câu trả lời đúng.</h4>
                 </div>
-                <p class="text-2xl font-bold text-gray-800 mb-8 leading-relaxed">Thể tích của khối băng có dạng hình lập phương trong hình vẽ khoảng:</p>
-                <div class="flex flex-col sm:flex-row items-center gap-4 mb-4">
-                    <select id="b113-2-sel" class="w-full sm:w-96 bg-gray-50 border-2 border-gray-200 rounded-2xl py-4 px-6 font-bold text-xl text-gray-700 outline-none focus:border-blue-500 appearance-none cursor-pointer">
-                        <option value="">Chọn đáp án...</option>
-                        <option value="A">A. 1 cm³</option>
-                        <option value="B">B. 1 dm³</option>
-                        <option value="C">C. 1 m³</option>
-                    </select>
-                    <button onclick="c113Sel()" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button>
-                    <span id="r-b2" class="font-black text-2xl"></span>
-                    <button id="r-b2-retry" onclick="retry113Sel()" class="hidden w-9 h-9 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button>
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="w-full lg:w-1/2">
+                        <p class="text-2xl font-bold text-gray-800 mb-6 leading-relaxed">Thể tích của khối băng có dạng hình lập phương trong hình vẽ khoảng:</p>
+                        <div class="flex items-center gap-4 flex-wrap mb-4">
+                            <select id="b113-2-sel" class="w-full bg-gray-50 border-2 border-gray-200 rounded-2xl py-4 px-6 font-bold text-2xl text-gray-700 outline-none focus:border-blue-500 appearance-none cursor-pointer">
+                                <option value="">Chọn đáp án...</option>
+                                <option value="A">A. 1 cm³</option>
+                                <option value="B">B. 1 dm³</option>
+                                <option value="C">C. 1 m³</option>
+                            </select>
+                            <div class="flex items-center gap-2">
+                                <button onclick="c113Sel()" class="w-12 h-12 bg-blue-500 hover:bg-blue-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button>
+                                <span id="r-b2" class="font-black text-3xl"></span>
+                                <button id="r-b2-retry" onclick="retry113Sel()" class="hidden w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 flex justify-center items-start">
+                        <div class="bg-gray-50 rounded-3xl p-4 border border-gray-100 min-h-[200px] flex items-center justify-center w-full">
+                            <img src="hinh_anh/113_b2.png" alt="Hình SGK bài 2" class="max-w-full h-auto rounded-2xl max-h-[300px] object-contain" onerror="this.parentElement.innerHTML='<p class=\'text-gray-400 font-bold text-lg\'>📷 Chỗ chèn ảnh SGK</p>'">
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -184,27 +195,27 @@ export const lesson113 = {
                 </div>
             </section>
 
-            <!-- BÀI 5: BÀI TOÁN - CHỮ TO, BỎ ẢNH -->
+            <!-- BÀI 5: BÀI TOÁN - CHỮ TO, BỎ ẢNH, THẦY E CHẤM -->
             <section class="bg-white rounded-[32px] p-6 md:p-10 shadow-lg border border-gray-100">
                 <div class="flex items-center gap-3 mb-6">
-                    <span class="w-10 h-10 bg-orange-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md">5</span>
-                    <h4 class="text-2xl font-black text-gray-800">Số ?</h4>
+                    <span class="w-12 h-12 bg-orange-600 text-white rounded-xl flex items-center justify-center font-black text-xl shadow-md">5</span>
+                    <h4 class="text-3xl font-black text-gray-800">Bài toán</h4>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 mb-6">
-                    <p class="text-2xl font-medium text-gray-800 leading-relaxed">Rô-bốt có một cái thùng dạng hình hộp chữ nhật với chiều dài <strong class="text-blue-700 text-3xl">6 dm</strong>, chiều rộng <strong class="text-blue-700 text-3xl">4 dm</strong>, chiều cao <strong class="text-blue-700 text-3xl">3 dm</strong>.</p>
-                </div>
-                <div class="flex items-center gap-3 flex-wrap mb-6">
-                    <span class="text-2xl font-bold text-gray-800">Vậy Rô-bốt có thể xếp được</span>
-                    <input type="number" id="b113-5-ans" class="w-24 bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-3 text-center text-2xl font-black text-orange-700 focus:border-orange-500 outline-none" placeholder="?">
-                    <span class="text-2xl font-bold text-gray-800">hộp đèn hình lập phương có thể tích 1 dm³ để đầy chiếc thùng đó.</span>
-                    <button onclick="c113Num('b113-5-ans','72','r-b5')" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button>
-                    <span id="r-b5" class="font-black text-2xl"></span>
-                    <button id="r-b5-retry" onclick="retry113('b113-5-ans','r-b5')" class="hidden w-9 h-9 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button>
+                    <p class="text-2xl md:text-3xl font-medium text-gray-800 leading-relaxed">Rô-bốt có một cái thùng dạng hình hộp chữ nhật với chiều dài <strong class="text-blue-700 text-3xl md:text-4xl">6 dm</strong>, chiều rộng <strong class="text-blue-700 text-3xl md:text-4xl">4 dm</strong>, chiều cao <strong class="text-blue-700 text-3xl md:text-4xl">3 dm</strong>.</p>
+                    <p class="text-2xl md:text-3xl font-bold text-gray-800 mt-4 leading-relaxed">Vậy Rô-bốt có thể xếp được bao nhiêu hộp đèn hình lập phương có thể tích 1 dm³ để đầy chiếc thùng đó?</p>
                 </div>
                 <div class="mb-4">
-                    <p class="text-xl text-gray-600 font-bold mb-2">Trình bày lời giải:</p>
-                    <textarea id="b113-5-exp" class="w-full bg-gray-50 border-2 border-gray-200 rounded-2xl py-4 px-5 text-xl font-medium text-gray-800 focus:border-blue-500 outline-none min-h-[120px] resize-none" placeholder="Hãy trình bày chi tiết tại đây..."></textarea>
+                    <p class="text-2xl text-gray-600 font-bold mb-3">✍️ Trình bày lời giải:</p>
+                    <textarea id="b113-5-exp" class="w-full bg-gray-50 border-2 border-gray-200 rounded-2xl py-5 px-6 text-2xl font-medium text-gray-800 focus:border-blue-500 outline-none min-h-[180px] resize-none" placeholder="Bài giải&#10;&#10;Thể tích cái thùng là:&#10;...&#10;Đáp số: ... hộp"></textarea>
                 </div>
+                <div class="flex items-center gap-3">
+                    <button id="btn-b5-grade" onclick="gradeB113B5()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-black text-xl shadow-lg transition-all active:scale-95 flex items-center gap-3">
+                        <span class="text-2xl">🤖</span> Thầy E chấm & nhận xét
+                    </button>
+                    <button id="btn-b5-retry" onclick="document.getElementById('b113-5-exp').value='';document.getElementById('fb-b5').classList.add('hidden')" class="hidden w-12 h-12 bg-gray-200 hover:bg-gray-300 rounded-xl flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button>
+                </div>
+                <div id="fb-b5" class="hidden mt-6 animate-slide-up"></div>
             </section>
 
             <!-- NỘP BÀI -->
@@ -316,6 +327,28 @@ export const lesson113 = {
                     if (sp) sp.textContent = '';
                     if (retryBtn) retryBtn.classList.add('hidden');
                 };
+                // Grade Bai 5 with AI
+                window.gradeB113B5 = function() {
+                    var exp = (document.getElementById('b113-5-exp')||{}).value || '';
+                    var fb = document.getElementById('fb-b5');
+                    var retryBtn = document.getElementById('btn-b5-retry');
+                    if (!exp.trim()) {
+                        if (fb) { fb.classList.remove('hidden'); fb.innerHTML = '<div class=\"bg-amber-50 text-amber-700 p-5 rounded-2xl font-bold text-xl border border-amber-200\">⚠️ Em chưa viết lời giải!</div>'; }
+                        return;
+                    }
+                    var btn = document.getElementById('btn-b5-grade');
+                    if (btn) { btn.disabled = true; btn.innerHTML = '<span class=\"animate-spin\">⏳</span> Đang chấm...'; }
+                    var prompt = "Bai toan: Thung hinh hop chu nhat dai 6dm, rong 4dm, cao 3dm. Hoi xep duoc bao nhieu hop den hinh lap phuong the tich 1dm3? Dap an dung: 72 hop.\\nBai lam cua hoc sinh:\\n" + exp;
+                    if (window.submitMathLesson) {
+                        window.submitMathLesson(prompt, "Cham Bai 5 - Tiet 113", "btn-b5-grade");
+                    }
+                    if (fb) {
+                        fb.classList.remove('hidden');
+                        fb.innerHTML = '<div class=\"bg-blue-50 text-blue-700 p-5 rounded-2xl font-bold text-xl border border-blue-200\">🤖 Thầy E đã nhận bài. Kết quả sẽ hiển thị ở khung chat bên phải!</div>';
+                    }
+                    if (retryBtn) retryBtn.classList.remove('hidden');
+                    setTimeout(function() { if (btn) { btn.disabled = false; btn.innerHTML = '<span class=\"text-2xl\">🤖</span> Thầy E chấm & nhận xét'; } }, 3000);
+                };
                 // Submit all
                 window.submitAllPractice113 = function() {
                     var s = "BAI 48 - TIET 113\\n";
@@ -323,7 +356,7 @@ export const lesson113 = {
                     s += "[B2] " + (document.getElementById('b113-2-sel')||{}).value + "\\n";
                     s += "[B3] " + (document.getElementById('b113-3-ans')||{}).value + "\\n";
                     s += "[B4] " + (document.getElementById('b113-4a1')||{}).value + "|" + (document.getElementById('b113-4a2')||{}).value + "|" + (document.getElementById('b113-4b1')||{}).value + "|" + (document.getElementById('b113-4b2')||{}).value + "|" + (document.getElementById('b113-4c1')||{}).value + "|" + (document.getElementById('b113-4c2')||{}).value + "\\n";
-                    s += "[B5] " + (document.getElementById('b113-5-ans')||{}).value + " | " + (document.getElementById('b113-5-exp')||{}).value;
+                    s += "[B5] Loi giai: " + (document.getElementById('b113-5-exp')||{}).value;
                     if (window.submitMathLesson) { window.submitMathLesson(s, "Bai 113", "btn-submit-all-practice-113"); }
                     else { alert("Da nhan bai!"); }
                 };
