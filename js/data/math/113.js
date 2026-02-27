@@ -57,336 +57,408 @@ export const lesson113 = {
                     <p class="text-purple-600/60 font-medium text-sm mt-1">Đơn vị nhỏ nhất ở đây</p>
                 </div>
             </div>
-
-            <!-- Robot Tutor Section -->
-            <div class="bg-white rounded-[40px] p-8 border-2 border-dashed border-gray-200 flex flex-col md:flex-row items-center gap-8">
-                <div class="w-32 h-32 md:w-32 md:h-32 bg-gray-100 rounded-full flex items-center justify-center text-5xl shrink-0 animate-bounce-short">🤖</div>
-                <div class="flex-grow">
-                     [[TUTOR|b113-intro|Chào các bạn nhỏ! Để chuẩn bị cho phần thực hành, các bạn hãy thử nhắc lại: Muốn đổi từ Mét khối ra Đề-xi-mét khối thì mình làm phép tính gì nhỉ?]]
-                </div>
-            </div>
         </div>`,
 
     "practice": `        
-        <div class="space-y-16 py-10">
-            <!-- Section 1: Đọc và Viết số đo -->
-            <section class="relative">
-                <div class="inline-flex items-center gap-4 bg-blue-600 text-white px-8 py-4 rounded-3xl font-black text-xl uppercase tracking-widest mb-10 shadow-xl shadow-blue-200 -rotate-2">
-                    <span class="text-3xl">1️⃣</span> Thử thách Đọc & Viết
+        <div class="space-y-12 py-6">
+            <!-- Nhãn Luyện tập -->
+            <div class="flex items-center gap-3 mb-2">
+                <span class="bg-emerald-100 text-emerald-700 px-5 py-2 rounded-full font-black text-sm uppercase tracking-widest">✍️ Luyện tập</span>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- BÀI 1: HOÀN THÀNH BẢNG SAU (Dạng Table) -->
+            <!-- ============================================ -->
+            <section class="bg-white rounded-[32px] p-6 md:p-10 shadow-lg border border-gray-100">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md">1</span>
+                    <h4 class="text-xl font-black text-gray-800">Hoàn thành bảng sau.</h4>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Pair 1 -->
-                    <div class="p-2 border-4 border-dashed border-blue-100 rounded-[48px]">
-                        [[MATH_EX|b113-1-a|?|Tám trăm hai mươi mốt đề-xi-mét khối|viết là|821 dm3]]
-                    </div>
-                    <!-- Pair 2 -->
-                    <div class="p-2 border-4 border-dashed border-pink-100 rounded-[48px]">
-                        [[READING_EX|b113-1-b|0,015 m³|Đo thể tích|đọc là|Không phẩy không trăm mười lăm mét khối]]
-                    </div>
-                    <!-- Pair 3 -->
-                    <div class="p-2 border-4 border-dashed border-emerald-100 rounded-[48px]">
-                        [[MATH_EX|b113-1-c|?|Mười ba phẩy không năm mét khối|viết là|13,05 m3]]
-                    </div>
-                    <!-- Pair 4 -->
-                    <div class="p-2 border-4 border-dashed border-indigo-100 rounded-[48px]">
-                        [[READING_EX|b113-1-d|100,2 cm³|Đo thể tích|đọc là|Một trăm phẩy hai xăng-ti-mét khối]]
-                    </div>
+                <!-- Table Header -->
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse text-base">
+                        <thead>
+                            <tr>
+                                <th class="bg-red-50 text-red-700 font-black text-center py-4 px-6 border border-gray-200 rounded-tl-2xl w-1/3">Đọc</th>
+                                <th class="bg-red-50 text-red-700 font-black text-center py-4 px-6 border border-gray-200 w-1/3">Viết</th>
+                                <th class="bg-red-50 text-red-700 font-black text-center py-4 px-4 border border-gray-200 rounded-tr-2xl w-[80px]">Chấm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Row 1: Cho sẵn cách đọc, HS viết -->
+                            <tr>
+                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-medium">Một trăm phẩy không năm mét khối</td>
+                                <td class="border border-gray-200 py-4 px-4">
+                                    <input type="text" id="b113-t1-write1" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-lg text-blue-800 focus:border-blue-500 outline-none transition-all" placeholder="?">
+                                </td>
+                                <td class="border border-gray-200 text-center">
+                                    <button onclick="checkB113Table(1)" class="w-10 h-10 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center mx-auto transition-all active:scale-90 shadow-sm">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Row 2: Cho sẵn cách viết, HS điền cách viết (biến đổi) -->
+                            <tr>
+                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-medium"></td>
+                                <td class="border border-gray-200 py-4 px-4">
+                                    <input type="text" id="b113-t1-write2" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-lg text-blue-800 focus:border-blue-500 outline-none transition-all" placeholder="?" value="0,001 m³" disabled>
+                                </td>
+                                <td class="border border-gray-200 text-center">
+                                    <button onclick="checkB113Table(2)" class="w-10 h-10 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center mx-auto transition-all active:scale-90 shadow-sm">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Row 3: Cho sẵn cách đọc, HS viết -->
+                            <tr>
+                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-medium">Tám trăm hai mươi mốt đề-xi-mét khối</td>
+                                <td class="border border-gray-200 py-4 px-4">
+                                    <input type="text" id="b113-t1-write3" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-lg text-blue-800 focus:border-blue-500 outline-none transition-all" placeholder="?">
+                                </td>
+                                <td class="border border-gray-200 text-center">
+                                    <button onclick="checkB113Table(3)" class="w-10 h-10 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center mx-auto transition-all active:scale-90 shadow-sm">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Row 4: Cho sẵn cách viết, HS đọc -->
+                            <tr>
+                                <td class="border border-gray-200 py-4 px-4">
+                                    <input type="text" id="b113-t1-read4" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-lg text-blue-800 focus:border-blue-500 outline-none transition-all" placeholder="?">
+                                </td>
+                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-bold text-center text-lg">100,2 cm³</td>
+                                <td class="border border-gray-200 text-center">
+                                    <button onclick="checkB113Table(4)" class="w-10 h-10 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center mx-auto transition-all active:scale-90 shadow-sm">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </section>
-
-            <!-- Section 2: Ước lượng thể tích -->
-            <section>
-                <div class="inline-flex items-center gap-4 bg-emerald-600 text-white px-8 py-4 rounded-3xl font-black text-xl uppercase tracking-widest mb-10 shadow-xl shadow-emerald-200">
-                    <span class="text-3xl">2️⃣</span> Ước lượng thể tích khoảng
-                </div>
-                
-                <div class="bg-white rounded-[48px] p-8 md:p-12 shadow-xl border border-gray-100 overflow-hidden relative">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-50 rounded-full blur-3xl -z-10"></div>
-                    
-                    <p class="text-2xl font-black text-gray-800 mb-10 text-center leading-tight">
-                        Chọn câu trả lời đúng:<br>
-                        <span class="text-blue-600">Thể tích của khối băng trong hình vẽ khoảng bao nhiêu?</span>
-                    </p>
-
-                    <div class="flex flex-col lg:flex-row items-center gap-12">
-                        <!-- Image Area -->
-                        <div class="w-full lg:w-1/2 relative group">
-                            <div class="absolute -inset-4 bg-gradient-to-tr from-blue-400 to-indigo-500 rounded-[40px] blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                            <div class="relative bg-white p-4 rounded-[40px] border-2 border-blue-50 flex items-center justify-center">
-                                <img src="hinh_anh/113_bg_khoibang.png" alt="Khối băng to" class="max-w-full h-auto rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-[1.02]" 
-                                    onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'%2360a5fa\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\\'/></svg>'">
-                            </div>
-                            <div class="mt-4 text-center">
-                                <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-black text-sm uppercase tracking-widest">Khối băng so với người đi đường</span>
-                            </div>
-                        </div>
-
-                        <!-- Options Area -->
-                        <div class="w-full lg:w-1/2 space-y-6">
-                            <button onclick="checkB113B2(this, 'A')" class="b113-2-opt group w-full bg-gray-50 hover:bg-white border-2 border-gray-100 hover:border-blue-500 p-8 rounded-[32px] transition-all flex items-center text-2xl font-black text-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1">
-                                <span class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mr-6 group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-sm">A</span>
-                                1 cm³
-                            </button>
-                            <button onclick="checkB113B2(this, 'B')" class="b113-2-opt group w-full bg-gray-50 hover:bg-white border-2 border-gray-100 hover:border-blue-500 p-8 rounded-[32px] transition-all flex items-center text-2xl font-black text-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1">
-                                <span class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mr-6 group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-sm">B</span>
-                                1 dm³
-                            </button>
-                            <button onclick="checkB113B2(this, 'C')" class="b113-2-opt group w-full bg-gray-50 hover:bg-white border-2 border-gray-100 hover:border-blue-500 p-8 rounded-[32px] transition-all flex items-center text-2xl font-black text-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1">
-                                <span class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mr-6 group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-sm">C</span>
-                                1 m³
-                            </button>
-                            
-                            <div id="fb-b113-2" class="hidden animate-slide-up bg-blue-50 p-6 rounded-3xl border-2 border-blue-200 text-xl font-bold text-blue-800 text-center"></div>
-                        </div>
-                    </div>
-                </div>
+                <div id="fb-b113-table" class="hidden mt-4 animate-slide-up"></div>
 
                 <script>
-                    window.checkB113B2 = function(btn, ans) {
-                        const opts = document.querySelectorAll('.b113-2-opt');
-                        opts.forEach(o => {
-                            o.classList.remove('border-emerald-500', 'bg-white', 'shadow-emerald-100', 'border-red-400', 'shadow-red-50');
-                            o.querySelector('span').classList.remove('bg-emerald-600', 'bg-red-500', 'text-white');
-                        });
+                    window.checkB113Table = function(row) {
+                        var fb = document.getElementById('fb-b113-table');
+                        fb.classList.remove('hidden');
+                        var correct = false;
+                        var val = '';
 
-                        const fb = document.getElementById('fb-b113-2');
-                        fb.classList.remove('hidden', 'bg-emerald-50', 'border-emerald-200', 'text-emerald-800', 'bg-red-50', 'border-red-200', 'text-red-800');
+                        if (row === 1) {
+                            val = (document.getElementById('b113-t1-write1').value || '').trim().replace(/\\s/g,'').toLowerCase();
+                            correct = val === '100,05m3' || val === '100,05m³' || val === '100.05m3' || val === '100.05m³';
+                        } else if (row === 2) {
+                            correct = true;
+                            fb.innerHTML = '<div class="bg-blue-50 text-blue-700 p-4 rounded-2xl font-bold border border-blue-100">ℹ️ Dòng này là ví dụ mẫu: 0,001 m³ đọc là "Không phẩy không không một mét khối".</div>';
+                            return;
+                        } else if (row === 3) {
+                            val = (document.getElementById('b113-t1-write3').value || '').trim().replace(/\\s/g,'').toLowerCase();
+                            correct = val === '821dm3' || val === '821dm³';
+                        } else if (row === 4) {
+                            val = (document.getElementById('b113-t1-read4').value || '').trim().toLowerCase();
+                            correct = val.includes('trăm') && val.includes('hai') && val.includes('xăng-ti-mét khối') || val.includes('xăng ti mét khối');
+                        }
 
-                        if (ans === 'C') {
-                            btn.classList.add('border-emerald-500', 'bg-white', 'shadow-xl', 'shadow-emerald-100');
-                            btn.querySelector('span').classList.add('bg-emerald-600', 'text-white');
-                            fb.classList.remove('hidden');
-                            fb.classList.add('bg-emerald-50', 'border-emerald-200', 'text-emerald-800');
-                            fb.innerHTML = '✨ <b>Chính xác!</b> Một khối băng khổng lồ như vậy chắc chắn phải có thể tích khoảng 1 mét khối (1 m³).';
-                            window.b113_ans_2 = "C";
+                        if (correct) {
+                            fb.innerHTML = '<div class="bg-emerald-50 text-emerald-700 p-4 rounded-2xl font-bold border border-emerald-200">✅ Chính xác! Bạn giỏi lắm!</div>';
                         } else {
-                            btn.classList.add('border-red-400', 'bg-white', 'shadow-xl', 'shadow-red-50');
-                            btn.querySelector('span').classList.add('bg-red-500', 'text-white');
-                            fb.classList.remove('hidden');
-                            fb.classList.add('bg-red-50', 'border-red-200', 'text-red-800');
-                            fb.innerHTML = '😞 <b>Chưa đúng rồi!</b> Hãy nhớ: 1 cm³ chỉ bằng hạt đậu, 1 dm³ chỉ bằng hộp sữa. Khối băng này to hơn nhiều đúng không nào? Thử lại nhé!';
+                            fb.innerHTML = '<div class="bg-red-50 text-red-700 p-4 rounded-2xl font-bold border border-red-200">❌ Chưa đúng rồi. Hãy kiểm tra lại nhé!</div>';
                         }
                     };
                 </script>
             </section>
 
-            <!-- Section 3: Đếm khối lập phương -->
-            <section>
-                <div class="inline-flex items-center gap-4 bg-indigo-600 text-white px-8 py-4 rounded-3xl font-black text-xl uppercase tracking-widest mb-10 shadow-xl shadow-indigo-200 rotate-1">
-                    <span class="text-3xl">3️⃣</span> Đếm khối lập phương
+            <!-- ============================================ -->
+            <!-- BÀI 2: CHỌN CÂU TRẢ LỜI ĐÚNG -->
+            <!-- ============================================ -->
+            <section class="bg-white rounded-[32px] p-6 md:p-10 shadow-lg border border-gray-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md">2</span>
+                    <h4 class="text-xl font-black text-gray-800">Chọn câu trả lời đúng.</h4>
+                </div>
+                
+                <p class="text-gray-600 font-medium mb-6">Thể tích của khối băng có dạng hình lập phương trong hình vẽ khoảng:</p>
+                
+                <div class="flex flex-col lg:flex-row items-start gap-8">
+                    <div class="w-full lg:w-1/2">
+                        <!-- Dropdown chọn đáp án -->
+                        <select id="b113-2-select" class="w-full bg-gray-50 border-2 border-gray-200 rounded-2xl py-4 px-6 font-bold text-lg text-gray-700 outline-none focus:border-blue-500 transition-all appearance-none cursor-pointer mb-4">
+                            <option value="">Chọn đáp án...</option>
+                            <option value="A">A. 1 cm³</option>
+                            <option value="B">B. 1 dm³</option>
+                            <option value="C">C. 1 m³</option>
+                        </select>
+                        <button onclick="checkB113B2Select()" class="w-10 h-10 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
+                        <div id="fb-b113-2" class="hidden mt-4 animate-slide-up"></div>
+                    </div>
+                    
+                    <div class="w-full lg:w-1/2 flex justify-center">
+                        <div class="bg-gray-50 rounded-3xl p-4 border border-gray-100">
+                            <img src="hinh_anh/113_bg_khoibang.png" alt="Khối băng" class="max-w-full h-auto rounded-2xl max-h-[280px] object-contain"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22none%22 viewBox=%220 0 24 24%22 stroke=%22%2360a5fa%22><path stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%222%22 d=%22M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4%22/></svg>'">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-gray-50 rounded-[48px] p-8 md:p-14 border-2 border-gray-100 shadow-inner">
-                    <div class="flex flex-col lg:flex-row items-center gap-16">
-                        <div class="w-full lg:w-1/2 flex flex-col items-center">
-                            <div class="relative group bg-white p-8 rounded-[40px] shadow-2xl border-2 border-indigo-50">
-                                <img src="hinh_anh/113_b3.png" alt="Hình lập phương xếp" class="max-w-full h-auto object-contain hover:scale-110 transition-transform duration-700" 
-                                    onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'%236366f1\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\\'/></svg>'">
-                                <div class="absolute -bottom-4 -left-4 bg-indigo-600 text-white px-4 py-2 rounded-2xl font-black text-xs">Mỗi khối nhỏ là 1 cm³</div>
-                            </div>
-                        </div>
+                <script>
+                    window.checkB113B2Select = function() {
+                        var sel = document.getElementById('b113-2-select');
+                        var fb = document.getElementById('fb-b113-2');
+                        var val = sel.value;
+                        fb.classList.remove('hidden');
                         
-                        <div class="w-full lg:w-1/2 space-y-8 text-center lg:text-left">
-                            <h4 class="text-3xl font-black text-gray-800 leading-tight">Rô-bốt đã xếp được một hình bậc thang.<br><span class="text-indigo-600">Thể tích của hình đó là bao nhiêu?</span></h4>
-                            
-                            <div class="flex flex-col items-center lg:items-start gap-6">
-                                <div class="flex items-center gap-4 p-4 bg-white rounded-[32px] shadow-xl border-2 border-indigo-100">
-                                    <input type="number" id="b113-3-ans" class="w-32 h-20 bg-gray-50 border-4 border-indigo-100 rounded-2xl text-center text-4xl font-black text-indigo-700 focus:border-indigo-500 focus:bg-white outline-none transition-all" placeholder="?">
-                                    <span class="text-3xl font-black text-gray-400 mr-4">cm³</span>
-                                    <button onclick="checkB113B3()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 h-20 rounded-2xl font-black text-xl uppercase tracking-wider transition-all active:scale-95 shadow-lg shadow-indigo-100">Xác nhận</button>
-                                </div>
-                                <div id="fb-b113-3" class="hidden mt-2 p-6 rounded-3xl text-lg font-bold w-full max-w-md animate-slide-up"></div>
-                            </div>
-                            
-                            <div class="p-6 bg-white/50 rounded-3xl border-2 border-dashed border-gray-200">
-                                <p class="text-gray-500 font-bold italic tracking-wide">💡 Mẹo nhỏ: Em hãy đếm số khối ở từng cột (từ trái qua phải hoặc từ phải qua trái) rồi cộng tất cả lại nhé!</p>
-                            </div>
+                        if (!val) {
+                            fb.innerHTML = '<div class="bg-amber-50 text-amber-700 p-4 rounded-2xl font-bold border border-amber-200">⚠️ Bạn chưa chọn đáp án!</div>';
+                            return;
+                        }
+                        if (val === 'C') {
+                            fb.innerHTML = '<div class="bg-emerald-50 text-emerald-700 p-4 rounded-2xl font-bold border border-emerald-200">✅ Chính xác! Khối băng to như vậy có thể tích khoảng 1 m³.</div>';
+                            window.b113_ans_2 = 'C';
+                        } else {
+                            fb.innerHTML = '<div class="bg-red-50 text-red-700 p-4 rounded-2xl font-bold border border-red-200">❌ Chưa đúng. Hãy nhớ: 1 cm³ chỉ bằng hạt đậu, 1 dm³ chỉ bằng hộp sữa. Khối băng này to hơn nhiều!</div>';
+                        }
+                    };
+                </script>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- BÀI 3: SỐ ? (Đếm khối lập phương) -->
+            <!-- ============================================ -->
+            <section class="bg-white rounded-[32px] p-6 md:p-10 shadow-lg border border-gray-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md">3</span>
+                    <h4 class="text-xl font-black text-gray-800">Số ?</h4>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row items-center gap-10">
+                    <div class="w-full lg:w-1/2">
+                        <p class="text-gray-700 font-medium mb-4">Rô-bốt đã xếp các hình lập phương 1 cm³ thành hình bên.</p>
+                        <p class="text-gray-800 font-bold text-lg mb-6">Thể tích của hình bên là: 
+                            <input type="number" id="b113-3-ans" class="w-20 bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center text-xl font-black text-blue-700 focus:border-blue-500 outline-none transition-all mx-1 inline-block" placeholder="?">
+                            cm³
+                        </p>
+                        <button onclick="checkB113B3()" class="w-10 h-10 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
+                        <div id="fb-b113-3" class="hidden mt-4 animate-slide-up"></div>
+                    </div>
+                    
+                    <div class="w-full lg:w-1/2 flex justify-center">
+                        <div class="bg-gray-50 rounded-3xl p-4 border border-gray-100">
+                            <img src="hinh_anh/113_b3.png" alt="Hình lập phương xếp" class="max-w-full h-auto rounded-2xl max-h-[280px] object-contain"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22none%22 viewBox=%220 0 24 24%22 stroke=%22%236366f1%22><path stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%222%22 d=%22M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z%22/></svg>'">
                         </div>
                     </div>
                 </div>
 
                 <script>
                     window.checkB113B3 = function() {
-                        const input = document.getElementById('b113-3-ans');
-                        const fb = document.getElementById('fb-b113-3');
-                        const val = input.value.trim();
-
-                        fb.classList.remove('hidden', 'bg-emerald-100', 'text-emerald-800', 'border-2', 'border-emerald-200', 'bg-red-100', 'text-red-800', 'border-red-200');
-                        
+                        var input = document.getElementById('b113-3-ans');
+                        var fb = document.getElementById('fb-b113-3');
+                        var val = input.value.trim();
+                        fb.classList.remove('hidden');
                         if (!val) return;
-
                         if (val === '10') {
-                            fb.classList.add('bg-emerald-100', 'text-emerald-800', 'border-2', 'border-emerald-200');
-                            fb.innerHTML = '🎉 <b>Tuyệt quá!</b> 4 + 3 + 2 + 1 = 10 khối. Vậy thể tích là 10 cm³.';
-                            input.classList.add('border-emerald-500', 'text-emerald-700');
+                            fb.innerHTML = '<div class="bg-emerald-50 text-emerald-700 p-4 rounded-2xl font-bold border border-emerald-200">✅ Tuyệt quá! 4 + 3 + 2 + 1 = 10 cm³.</div>';
                         } else {
-                            fb.classList.add('bg-red-100', 'text-red-800', 'border-2', 'border-red-200');
-                            fb.innerHTML = '🤔 <b>Chưa đúng rồi!</b> Hãy đếm kỹ từng bậc thang nào: bậc 1 có 4 hình, bậc 2 có 3 hình... Tổng là bao nhiêu nhỉ?';
-                            input.classList.add('border-red-400', 'text-red-700');
+                            fb.innerHTML = '<div class="bg-red-50 text-red-700 p-4 rounded-2xl font-bold border border-red-200">❌ Chưa đúng. Đếm kỹ từng bậc: 4 + 3 + 2 + 1 = ?</div>';
                         }
                     };
                 </script>
             </section>
 
-            <!-- Section 4: Đổi đơn vị đo -->
-            <section>
-                <div class="inline-flex items-center gap-4 bg-purple-600 text-white px-8 py-4 rounded-3xl font-black text-xl uppercase tracking-widest mb-10 shadow-xl shadow-purple-200">
-                    <span class="text-3xl">4️⃣</span> Thợ săn Số đo (Số?)
+            <!-- ============================================ -->
+            <!-- BÀI 4: SỐ ? (Đổi đơn vị) -->
+            <!-- ============================================ -->
+            <section class="bg-white rounded-[32px] p-6 md:p-10 shadow-lg border border-gray-100">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md">4</span>
+                    <h4 class="text-xl font-black text-gray-800">Số ?</h4>
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-[48px] p-6 md:p-12 border-2 border-purple-100">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-white p-8 rounded-[32px] shadow-sm hover:shadow-md transition-shadow">
-                            <div class="text-purple-600 font-black text-xs uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
-                                <span class="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center">A</span> Câu A
-                            </div>
-                            <div class="space-y-6">
-                                [[CONV_EX|b113-4-a1|5 m³|dm³|5000]]
-                                [[CONV_EX|b113-4-a2|480 dm³|m³|0,48]]
-                            </div>
-                        </div>
-
-                        <div class="bg-white p-8 rounded-[32px] shadow-sm hover:shadow-md transition-shadow">
-                            <div class="text-purple-600 font-black text-xs uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
-                                <span class="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center">B</span> Câu B
-                            </div>
-                            <div class="space-y-6">
-                                [[CONV_EX|b113-4-b1|0,25 m³|cm³|250000]]
-                                [[CONV_EX|b113-4-b2|5 000 cm³|m³|0,005]]
-                            </div>
-                        </div>
-
-                        <div class="bg-white p-8 rounded-[32px] shadow-sm hover:shadow-md transition-shadow md:col-span-2">
-                            <div class="text-purple-600 font-black text-xs uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
-                                <span class="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center">C</span> Câu C
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                [[CONV_EX|b113-4-c1|1,9 dm³|cm³|1900]]
-                                [[CONV_EX|b113-4-c2|2 650 cm³|dm³|2,65]]
-                            </div>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                    <!-- Row 1 -->
+                    <div class="flex items-center gap-3 py-3">
+                        <span class="text-lg font-bold text-gray-700 whitespace-nowrap">a) 5 m³ =</span>
+                        <input type="text" id="b113-4-a1" class="w-24 bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-lg text-blue-700 focus:border-blue-500 outline-none" placeholder="?">
+                        <span class="text-lg font-bold text-gray-700">dm³</span>
+                        <button onclick="checkB113Conv('b113-4-a1','5000')" class="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
                     </div>
-                </div>
-            </section>
-
-            <!-- Section 5: Giải toán thực tế -->
-            <section>
-                <div class="inline-flex items-center gap-4 bg-orange-600 text-white px-8 py-4 rounded-3xl font-black text-xl uppercase tracking-widest mb-10 shadow-xl shadow-orange-200 -rotate-1">
-                    <span class="text-3xl">5️⃣</span> Rô-bốt xếp hàng hóa
-                </div>
-
-                <div class="bg-white rounded-[48px] border-4 border-orange-100 p-8 md:p-14 relative overflow-hidden shadow-2xl">
-                    <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-orange-50 rounded-full blur-3xl opacity-60"></div>
-                    
-                    <div class="flex flex-col lg:flex-row gap-12 relative z-10">
-                        <div class="w-full lg:w-2/3">
-                            <div class="bg-orange-50/50 p-8 rounded-[40px] border-2 border-orange-100 mb-8">
-                                <p class="text-2xl font-medium text-gray-800 leading-[1.6] text-justify">
-                                    Rô-bốt có một cái thùng dạng hình hộp chữ nhật với:<br>
-                                    • Chiều dài: <strong class="text-blue-700 font-black text-3xl">6 dm</strong><br>
-                                    • Chiều rộng: <strong class="text-blue-700 font-black text-3xl">4 dm</strong><br>
-                                    • Chiều cao: <strong class="text-blue-700 font-black text-3xl">3 dm</strong><br><br>
-                                    Vậy Rô-bốt có thể xếp được bao nhiêu hộp đèn hình lập phương có thể tích <strong class="text-red-500 bg-red-50 px-2 rounded">1 dm³</strong> để đầy chiếc thùng đó?
-                                </p>
-                            </div>
-
-                            <div class="flex flex-col sm:flex-row items-center gap-6">
-                                <div class="flex items-center gap-4 bg-white p-4 rounded-3xl shadow-xl border-2 border-orange-100 w-full sm:w-auto">
-                                    <input type="number" id="b113-5-ans" class="w-32 h-16 bg-gray-50 border-4 border-orange-100 rounded-2xl text-center text-3xl font-black text-orange-700 focus:border-orange-500 outline-none transition-all" placeholder="?">
-                                    <span class="text-xl font-black text-gray-400 mr-2 uppercase">hộp</span>
-                                </div>
-                                <button onclick="checkB113B5()" class="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white px-10 py-5 rounded-[24px] font-black text-lg uppercase tracking-widest shadow-lg shadow-orange-200 transition-all active:scale-95 group flex items-center justify-center gap-3">
-                                    Kiểm tra
-                                    <span class="group-hover:rotate-12 transition-transform">📦</span>
-                                </button>
-                            </div>
-                            <div id="fb-b113-5" class="hidden mt-6 p-6 rounded-3xl text-xl font-bold animate-slide-up border-2"></div>
-                        </div>
-
-                        <div class="w-full lg:w-1/3 flex justify-center items-center">
-                            <div class="relative group">
-                                <div class="absolute inset-0 bg-orange-400 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                                <img src="hinh_anh/113_b5.png" alt="Rô bốt" class="relative max-w-full h-auto drop-shadow-2xl animate-float" 
-                                    onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'%23f97316\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\\'/></svg>'">
-                            </div>
-                        </div>
+                    <div class="flex items-center gap-3 py-3">
+                        <span class="text-lg font-bold text-gray-700 whitespace-nowrap">480 dm³ =</span>
+                        <input type="text" id="b113-4-a2" class="w-24 bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-lg text-blue-700 focus:border-blue-500 outline-none" placeholder="?">
+                        <span class="text-lg font-bold text-gray-700">m³</span>
+                        <button onclick="checkB113Conv('b113-4-a2','0,48')" class="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="flex items-center gap-3 py-3">
+                        <span class="text-lg font-bold text-gray-700 whitespace-nowrap">b) 0,25 m³ =</span>
+                        <input type="text" id="b113-4-b1" class="w-24 bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-lg text-blue-700 focus:border-blue-500 outline-none" placeholder="?">
+                        <span class="text-lg font-bold text-gray-700">cm³</span>
+                        <button onclick="checkB113Conv('b113-4-b1','250000')" class="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-3 py-3">
+                        <span class="text-lg font-bold text-gray-700 whitespace-nowrap">5 000 cm³ =</span>
+                        <input type="text" id="b113-4-b2" class="w-24 bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-lg text-blue-700 focus:border-blue-500 outline-none" placeholder="?">
+                        <span class="text-lg font-bold text-gray-700">m³</span>
+                        <button onclick="checkB113Conv('b113-4-b2','0,005')" class="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="flex items-center gap-3 py-3">
+                        <span class="text-lg font-bold text-gray-700 whitespace-nowrap">c) 1,9 dm³ =</span>
+                        <input type="text" id="b113-4-c1" class="w-24 bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-lg text-blue-700 focus:border-blue-500 outline-none" placeholder="?">
+                        <span class="text-lg font-bold text-gray-700">cm³</span>
+                        <button onclick="checkB113Conv('b113-4-c1','1900')" class="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-3 py-3">
+                        <span class="text-lg font-bold text-gray-700 whitespace-nowrap">2 650 cm³ =</span>
+                        <input type="text" id="b113-4-c2" class="w-24 bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-lg text-blue-700 focus:border-blue-500 outline-none" placeholder="?">
+                        <span class="text-lg font-bold text-gray-700">dm³</span>
+                        <button onclick="checkB113Conv('b113-4-c2','2,65')" class="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
                     </div>
                 </div>
 
                 <script>
-                    window.checkB113B5 = function() {
-                        const input = document.getElementById('b113-5-ans');
-                        const fb = document.getElementById('fb-b113-5');
-                        const val = input.value.trim();
-
-                        fb.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800', 'border-emerald-200', 'bg-red-50', 'text-red-800', 'border-red-200');
-                        
+                    window.checkB113Conv = function(inputId, answer) {
+                        var input = document.getElementById(inputId);
+                        var val = (input.value || '').trim().replace(/\\s/g, '').replace(/,/g, '.');
+                        var cleanAns = answer.replace(/\\s/g, '').replace(/,/g, '.');
                         if (!val) return;
-
-                        if (val === '72') {
-                            fb.classList.add('bg-emerald-50', 'text-emerald-800', 'border-emerald-200');
-                            fb.innerHTML = '✨ <b>Hợp lý!</b> Thể tích thùng là: 6 × 4 × 3 = 72 dm³. Mỗi hộp là 1 dm³ nên xếp được 72 hộp.';
+                        if (val === cleanAns) {
+                            input.classList.remove('border-gray-200', 'border-red-400');
                             input.classList.add('border-emerald-500', 'bg-emerald-50');
                         } else {
-                            fb.classList.add('bg-red-50', 'text-red-800', 'border-red-200');
-                            fb.innerHTML = '🤔 <b>Tính lại nào!</b> Em hãy tính thể tích của thùng (Dài × Rộng × Cao) trước nhé!';
+                            input.classList.remove('border-gray-200', 'border-emerald-500', 'bg-emerald-50');
                             input.classList.add('border-red-400', 'bg-red-50');
                         }
                     };
                 </script>
             </section>
 
-            <!-- Final Submission Section -->
-            <div class="mt-20 bg-gray-900 p-10 md:p-16 rounded-[56px] shadow-3xl flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden group">
-                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30 group-hover:opacity-40 transition-opacity"></div>
-                <div class="absolute -top-1/2 -left-1/4 w-full h-full bg-blue-600/20 rounded-full blur-[120px] mix-blend-screen"></div>
-                
-                <div class="relative z-10 text-center md:text-left">
-                    <h3 class="text-white font-black text-3xl md:text-5xl mb-4 tracking-tight uppercase">Hoàn thành thử thách Tiết 113!</h3>
-                    <p class="text-gray-400 font-bold text-lg md:text-2xl max-w-xl">Hệ thống sẽ tổng hợp tất cả câu trả lời của em để gửi đến Thầy Cô nhé!</p>
+            <!-- ============================================ -->
+            <!-- BÀI 5: SỐ ? (Bài toán thực tế) -->
+            <!-- ============================================ -->
+            <section class="bg-white rounded-[32px] p-6 md:p-10 shadow-lg border border-gray-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-10 h-10 bg-orange-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md">5</span>
+                    <h4 class="text-xl font-black text-gray-800">Số ?</h4>
                 </div>
                 
-                <button id="btn-submit-all-practice-113" onclick="submitAllPractice113()" class="relative z-10 w-full md:w-auto bg-white text-gray-900 px-12 py-6 rounded-3xl font-black text-2xl uppercase tracking-widest shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:-translate-y-2 hover:bg-blue-50 transition-all active:scale-95 flex items-center justify-center gap-4 group">
-                    NỘP BÀI TẬP
-                    <svg class="w-8 h-8 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="w-full lg:w-2/3">
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 mb-6">
+                            <p class="text-gray-700 font-medium leading-relaxed">
+                                Rô-bốt có một cái thùng dạng hình hộp chữ nhật với chiều dài <strong class="text-blue-700">6 dm</strong>, chiều rộng <strong class="text-blue-700">4 dm</strong>, chiều cao <strong class="text-blue-700">3 dm</strong>.
+                            </p>
+                            <p class="text-gray-800 font-bold mt-4 text-lg">
+                                Vậy Rô-bốt có thể xếp được 
+                                <input type="number" id="b113-5-ans" class="w-20 bg-white border-2 border-gray-200 rounded-xl py-2 px-3 text-center text-xl font-black text-orange-700 focus:border-orange-500 outline-none transition-all mx-1 inline-block" placeholder="?">
+                                hộp đèn hình lập phương có thể tích 1 dm³ để đầy chiếc thùng đó.
+                            </p>
+                        </div>
+
+                        <!-- Trình bày lời giải -->
+                        <div class="mb-4">
+                            <p class="text-gray-600 font-bold text-sm mb-2">Trình bày lời giải:</p>
+                            <textarea id="b113-5-explain" class="w-full bg-gray-50 border-2 border-gray-200 rounded-2xl py-4 px-5 text-base font-medium text-gray-800 focus:border-blue-500 outline-none transition-all min-h-[120px] resize-none" placeholder="Hãy trình bày chi tiết tại đây..."></textarea>
+                        </div>
+
+                        <button onclick="checkB113B5()" class="w-10 h-10 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
+                        <div id="fb-b113-5" class="hidden mt-4 animate-slide-up"></div>
+                    </div>
+                    
+                    <div class="w-full lg:w-1/3 flex justify-center items-start">
+                        <div class="bg-gray-50 rounded-3xl p-4 border border-gray-100">
+                            <img src="hinh_anh/113_b5.png" alt="Rô bốt xếp hàng" class="max-w-full h-auto rounded-2xl max-h-[300px] object-contain"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22none%22 viewBox=%220 0 24 24%22 stroke=%22%23f97316%22><path stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%222%22 d=%22M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4%22/></svg>'">
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    window.checkB113B5 = function() {
+                        var input = document.getElementById('b113-5-ans');
+                        var fb = document.getElementById('fb-b113-5');
+                        var val = input.value.trim();
+                        fb.classList.remove('hidden');
+                        if (!val) return;
+                        if (val === '72') {
+                            fb.innerHTML = '<div class="bg-emerald-50 text-emerald-700 p-4 rounded-2xl font-bold border border-emerald-200">✅ Hợp lý! Thể tích thùng: 6 x 4 x 3 = 72 dm³. Mỗi hộp 1 dm³ nên xếp được 72 hộp.</div>';
+                        } else {
+                            fb.innerHTML = '<div class="bg-red-50 text-red-700 p-4 rounded-2xl font-bold border border-red-200">❌ Tính lại nào! Em hãy tính V = Dài x Rộng x Cao trước nhé!</div>';
+                        }
+                    };
+                </script>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- NỘP BÀI -->
+            <!-- ============================================ -->
+            <div class="flex items-center justify-between py-6 px-4">
+                <p class="text-gray-400 font-bold text-sm">Bài tập thực hành chương Thể tích</p>
+                <button id="btn-submit-all-practice-113" onclick="submitAllPractice113()" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-black text-base uppercase tracking-wider shadow-lg shadow-blue-200 transition-all active:scale-95 flex items-center gap-2">
+                    Nộp Bài
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
                 </button>
             </div>
             
             <script>
                 window.submitAllPractice113 = function () {
-                    // Collect all values
-                    const b1a = document.getElementById('input-b113-1-a') ? document.getElementById('input-b113-1-a').value : "";
-                    const b1b = document.getElementById('input-b113-1-b') ? document.getElementById('input-b113-1-b').value : "";
-                    const b1c = document.getElementById('input-b113-1-c') ? document.getElementById('input-b113-1-c').value : "";
-                    const b1d = document.getElementById('input-b113-1-d') ? document.getElementById('input-b113-1-d').value : "";
+                    var b1w1 = document.getElementById('b113-t1-write1') ? document.getElementById('b113-t1-write1').value : '';
+                    var b1w3 = document.getElementById('b113-t1-write3') ? document.getElementById('b113-t1-write3').value : '';
+                    var b1r4 = document.getElementById('b113-t1-read4') ? document.getElementById('b113-t1-read4').value : '';
                     
-                    const b2 = window.b113_ans_2 || "Chưa chọn";
+                    var b2 = window.b113_ans_2 || 'Chua chon';
+                    var b3 = document.getElementById('b113-3-ans') ? document.getElementById('b113-3-ans').value : '';
                     
-                    const b3 = document.getElementById('b113-3-ans') ? document.getElementById('b113-3-ans').value : "";
+                    var b4a1 = document.getElementById('b113-4-a1') ? document.getElementById('b113-4-a1').value : '';
+                    var b4a2 = document.getElementById('b113-4-a2') ? document.getElementById('b113-4-a2').value : '';
+                    var b4b1 = document.getElementById('b113-4-b1') ? document.getElementById('b113-4-b1').value : '';
+                    var b4b2 = document.getElementById('b113-4-b2') ? document.getElementById('b113-4-b2').value : '';
+                    var b4c1 = document.getElementById('b113-4-c1') ? document.getElementById('b113-4-c1').value : '';
+                    var b4c2 = document.getElementById('b113-4-c2') ? document.getElementById('b113-4-c2').value : '';
                     
-                    const b4_a1 = document.getElementById('input-b113-4-a1') ? document.getElementById('input-b113-4-a1').value : "";
-                    const b4_a2 = document.getElementById('input-b113-4-a2') ? document.getElementById('input-b113-4-a2').value : "";
-                    const b4_b1 = document.getElementById('input-b113-4-b1') ? document.getElementById('input-b113-4-b1').value : "";
-                    const b4_b2 = document.getElementById('input-b113-4-b2') ? document.getElementById('input-b113-4-b2').value : "";
-                    const b4_c1 = document.getElementById('input-b113-4-c1') ? document.getElementById('input-b113-4-c1').value : "";
-                    const b4_c2 = document.getElementById('input-b113-4-c2') ? document.getElementById('input-b113-4-c2').value : "";
+                    var b5ans = document.getElementById('b113-5-ans') ? document.getElementById('b113-5-ans').value : '';
+                    var b5exp = document.getElementById('b113-5-explain') ? document.getElementById('b113-5-explain').value : '';
                     
-                    const b5 = document.getElementById('b113-5-ans') ? document.getElementById('b113-5-ans').value : "";
-                    
-                    const header = "BÀI 48 - LUYỆN TẬP CHUNG (Tiết 113)\\n=====================================";
-                    const section1 = "\\n[BÀI 1: ĐỌC VIẾT]\\n- 821 dm3: " + b1a + "\\n- 0,015 m3: " + b1b + "\\n- 13,05 m3: " + b1c + "\\n- 100,2 cm3: " + b1d;
-                    const section2 = "\\n\\n[BÀI 2: ƯỚC LƯỢNG]\\n- Kết quả chọn: " + b2;
-                    const section3 = "\\n\\n[BÀI 3: ĐẾM KHỐI]\\n- Thể tích đếm được: " + b3 + " cm3";
-                    const section4 = "\\n\\n[BÀI 4: ĐỔI ĐƠN VỊ]\\n- 5 m3 = " + b4_a1 + " dm3\\n- 480 dm3 = " + b4_a2 + " m3\\n- 0,25 m3 = " + b4_b1 + " cm3\\n- 5 000 cm3 = " + b4_b2 + " m3\\n- 1,9 dm3 = " + b4_c1 + " cm3\\n- 2 650 cm3 = " + b4_c2 + " dm3";
-                    const section5 = "\\n\\n[BÀI 5: GIẢI TOÁN]\\n- Số hộp xếp được: " + b5 + " hộp\\n=====================================";
-
-                    const fullContent = header + section1 + section2 + section3 + section4 + section5;
+                    var summary = "BAI 48 - LUYEN TAP CHUNG (Tiet 113)\\n";
+                    summary += "=====================================\\n";
+                    summary += "[BAI 1] Doc/Viet:\\n";
+                    summary += "- 100,05 m3: " + b1w1 + "\\n";
+                    summary += "- 821 dm3: " + b1w3 + "\\n";
+                    summary += "- 100,2 cm3: " + b1r4 + "\\n";
+                    summary += "[BAI 2] Uoc luong: " + b2 + "\\n";
+                    summary += "[BAI 3] Dem khoi: " + b3 + " cm3\\n";
+                    summary += "[BAI 4] Doi don vi:\\n";
+                    summary += "- 5m3=" + b4a1 + "dm3, 480dm3=" + b4a2 + "m3\\n";
+                    summary += "- 0.25m3=" + b4b1 + "cm3, 5000cm3=" + b4b2 + "m3\\n";
+                    summary += "- 1.9dm3=" + b4c1 + "cm3, 2650cm3=" + b4c2 + "dm3\\n";
+                    summary += "[BAI 5] So hop: " + b5ans + "\\n";
+                    summary += "Loi giai: " + b5exp + "\\n";
+                    summary += "=====================================";
                     
                     if (window.submitMathLesson) {
-                        window.submitMathLesson(fullContent, "Tổng hợp Bài 113", "btn-submit-all-practice-113");
+                        window.submitMathLesson(summary, "Tong hop Bai 113", "btn-submit-all-practice-113");
                     } else {
-                        alert("Hệ thống đã nhận bài làm của em!");
+                        alert("He thong da nhan bai lam cua em!");
                     }
                 };
             </script>
