@@ -210,3 +210,31 @@ Trạng thái hiện tại: Đã phủ sóng 100% lộ trình môn Toán (175 ti
 - Cấu trúc dự án giảm từ 15 files + 11 folders xuống còn 6 files + 8 folders (gọn 60%).
 
 Trạng thái hiện tại: Dự án đã được dọn dẹp sạch sẽ. Cấu trúc gọn gàng, chỉ giữ lại code chạy thực tế. File archive nằm trong _archive/ để phòng khi cần khôi phục.
+
+[14:30] Tinh chỉnh Bài 113 (Luyện tập chung Tiết 1):
+- Tăng font toàn bài cho phù hợp chiếu TV trong lớp (text-2xl → text-3xl cho tiêu đề, text-xl → text-2xl cho nội dung).
+- Bài 2: Chỉnh layout 2 cột, chừa chỗ bên phải cho ảnh SGK.
+- Bài 5: Bỏ ô nhập số, dời nút kiểm xuống dưới textarea, đổi thành chức năng "Thầy E chấm" (AI grading qua submitMathLesson).
+- Tích hợp hàm gradeB113B5() gọi AI tutor chấm bài tự luận.
+
+[21:50] Thiết kế lại Bài 115 (Bài 49 - Hình khai triển HLP, HHCN, Hình trụ):
+- Tạo project trên Stitch để lấy tham khảo thiết kế desktop cho TV & mobile.
+- Viết lại toàn bộ 115.js với 4 bài trắc nghiệm hình ảnh:
+  + Bài 1: Ghép đèn lồng với hình khai triển (3 dropdown: HLP=B, HHCN=A, Trụ=C).
+  + Bài 2: Chọn miếng bìa làm đèn con cá (A/B/C/D, đáp án C).
+  + Bài 3: Chọn hình khai triển hình trụ (A/B/C/D, đáp án C).
+  + Bài 4: Gấp tấm bìa thành hình nào (A/B/C/D, đáp án D).
+- Thiết kế responsive 2 cột (ảnh SGK bên phải, đáp án bên trái) trên desktop, 1 cột trên mobile.
+- Font 3xl cho tiêu đề, 2xl-3xl cho nội dung — rõ ràng trên TV.
+- Hệ thống Đ/S feedback + nút làm lại cho từng bài.
+- Chừa khung placeholder ảnh SGK với tên file rõ ràng (115_b1.png, 115_b2A-D.png, 115_b3A-D.png, 115_b4A-D.png...).
+
+[22:30] Chỉnh sửa Bài 114 (Luyện tập chung Tiết 2):
+- Bỏ header thừa "LUYỆN TẬP (TRANG 39)" và ký tự "-->" bị lỗi trên giao diện.
+- Giữ tab Tìm hiểu bài với hero section (hệ thống yêu cầu content không được rỗng).
+- Bài 2: Thiết kế lại từ ô nhập số đơn giản → Giải toán có lời văn + Textarea + AI chấm (giống Bài 4).
+- Thêm nút micro 🎤 cho Bài 2 và Bài 4 (nhập liệu dài).
+- Quy tắc mới: Bài nhập liệu dài → có micro, bài nhập số/chữ ngắn → không cần micro.
+- Ảnh SGK cần cập nhật: 114-b1-A.png, 114-b1-B.png, 114-b1-C.png, 114-b1-D.png.
+
+Trạng thái hiện tại: Bài 113, 114, 115 đã hoàn thiện giao diện TV-friendly. Bài 115 có placeholder ảnh SGK sẵn sàng cập nhật. Hệ thống AI chấm đã đồng nhất giữa các bài tự luận.
