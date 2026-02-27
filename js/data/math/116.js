@@ -41,8 +41,8 @@ export const lesson116 = {
                 <div class="flex flex-col lg:flex-row gap-8">
                     <!-- Ảnh Hình khai triển (SVG) -->
                     <div class="w-full lg:w-1/2">
-                        <div class="bg-blue-50 rounded-3xl p-8 border border-blue-100 flex items-center justify-center min-h-[300px]">
-                            <svg viewBox="0 0 400 200" class="w-full h-auto max-w-[350px]">
+                        <div class="bg-blue-50 rounded-4xl p-10 border border-blue-100 flex items-center justify-center min-h-[400px]">
+                            <svg viewBox="0 0 400 200" class="w-full h-auto max-w-[550px]">
                                 <!-- Hình chữ nhật khai triển -->
                                 <rect x="50" y="60" width="280" height="80" fill="#bae6fd" stroke="#0284c7" stroke-width="3" />
                                 <!-- Hai đáy tròn -->
@@ -55,42 +55,42 @@ export const lesson116 = {
                     </div>
                     <!-- Chọn đáp án -->
                     <div class="w-full lg:w-1/2">
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-                            <button onclick="check116B1(this, 'A')" class="b116-b1-opt bg-white border-3 border-gray-100 p-4 rounded-2xl hover:border-blue-400 transition-all flex flex-col items-center gap-4 group">
-                                <div class="bg-gray-50 p-4 rounded-xl w-full flex justify-center">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
+                            <button onclick="check116B1(this, 'A')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-3xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
+                                <div class="bg-gray-50 p-6 rounded-2xl w-full flex justify-center">
                                     <!-- A: Hình trụ cao -->
-                                    <svg viewBox="0 0 100 150" class="w-16 h-24">
+                                    <svg viewBox="0 0 100 150" class="w-24 h-36">
                                         <ellipse cx="50" cy="20" rx="30" ry="10" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
                                         <rect x="20" y="20" width="60" height="100" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
                                         <path d="M20 120 Q50 135 80 120" fill="none" stroke="#0284c7" stroke-width="2" />
                                         <ellipse cx="50" cy="120" rx="30" ry="10" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
                                     </svg>
                                 </div>
-                                <span class="font-black text-3xl text-gray-400 group-hover:text-blue-600">A</span>
+                                <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600">A</span>
                             </button>
-                            <button onclick="check116B1(this, 'B')" class="b116-b1-opt bg-white border-3 border-gray-100 p-4 rounded-2xl hover:border-blue-400 transition-all flex flex-col items-center gap-4 group">
-                                <div class="bg-gray-50 p-4 rounded-xl w-full flex justify-center">
+                            <button onclick="check116B1(this, 'B')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-3xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
+                                <div class="bg-gray-50 p-6 rounded-2xl w-full flex justify-center">
                                     <!-- B: Hình trụ thấp -->
-                                    <svg viewBox="0 0 100 150" class="w-20 h-24">
+                                    <svg viewBox="0 0 100 150" class="w-32 h-36">
                                         <ellipse cx="50" cy="60" rx="45" ry="15" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
                                         <rect x="5" y="60" width="90" height="40" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
                                         <path d="M5 100 Q50 120 95 100" fill="none" stroke="#0284c7" stroke-width="2" />
                                         <ellipse cx="50" cy="100" rx="45" ry="15" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
                                     </svg>
                                 </div>
-                                <span class="font-black text-3xl text-gray-400 group-hover:text-blue-600">B</span>
+                                <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600">B</span>
                             </button>
-                            <button onclick="check116B1(this, 'C')" class="b116-b1-opt bg-white border-3 border-gray-100 p-4 rounded-2xl hover:border-blue-400 transition-all flex flex-col items-center gap-4 group">
-                                <div class="bg-gray-50 p-4 rounded-xl w-full flex justify-center">
+                            <button onclick="check116B1(this, 'C')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-3xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
+                                <div class="bg-gray-50 p-6 rounded-2xl w-full flex justify-center">
                                     <!-- C: Hình trụ nằm ngang -->
-                                    <svg viewBox="0 0 150 100" class="w-32 h-24 pt-4">
+                                    <svg viewBox="0 0 150 100" class="w-48 h-36 pt-4">
                                         <ellipse cx="30" cy="50" rx="10" ry="30" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
                                         <rect x="30" y="20" width="100" height="60" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
                                         <path d="M130 20 Q145 50 130 80" fill="none" stroke="#0284c7" stroke-width="2" />
                                         <ellipse cx="130" cy="50" rx="10" ry="30" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
                                     </svg>
                                 </div>
-                                <span class="font-black text-3xl text-gray-400 group-hover:text-blue-600">C</span>
+                                <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600">C</span>
                             </button>
                         </div>
                         <div class="flex items-center gap-4">
@@ -109,8 +109,8 @@ export const lesson116 = {
                 </div>
                 <div class="bg-emerald-50 rounded-3xl p-6 mb-8 border border-emerald-100">
                     <p class="text-xl font-medium text-emerald-800 mb-6">Em hãy quan sát các hình khai triển dưới đây và ghi nhớ cách gấp:</p>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="bg-white p-4 rounded-2xl shadow-sm border border-emerald-200">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="bg-white p-8 rounded-[32px] shadow-sm border border-emerald-200">
                             <svg viewBox="0 0 100 100" class="w-full h-auto">
                                 <rect x="30" y="10" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
                                 <rect x="10" y="30" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
@@ -120,7 +120,7 @@ export const lesson116 = {
                                 <rect x="30" y="50" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
                             </svg>
                         </div>
-                        <div class="bg-white p-4 rounded-2xl shadow-sm border border-emerald-200">
+                        <div class="bg-white p-8 rounded-[32px] shadow-sm border border-emerald-200">
                             <svg viewBox="0 0 100 100" class="w-full h-auto">
                                 <rect x="40" y="10" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
                                 <rect x="40" y="30" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
@@ -130,7 +130,7 @@ export const lesson116 = {
                                 <rect x="40" y="70" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
                             </svg>
                         </div>
-                        <div class="bg-white p-4 rounded-2xl shadow-sm border border-emerald-200">
+                        <div class="bg-white p-8 rounded-[32px] shadow-sm border border-emerald-200">
                             <svg viewBox="0 0 100 100" class="w-full h-auto">
                                 <rect x="10" y="10" width="20" height="20" fill="#86efac" stroke="#16a34a" />
                                 <rect x="10" y="30" width="20" height="20" fill="#86efac" stroke="#16a34a" />
@@ -140,7 +140,7 @@ export const lesson116 = {
                                 <rect x="50" y="70" width="20" height="20" fill="#86efac" stroke="#16a34a" />
                             </svg>
                         </div>
-                        <div class="bg-white p-4 rounded-2xl shadow-sm border border-emerald-200">
+                        <div class="bg-white p-8 rounded-[32px] shadow-sm border border-emerald-200">
                             <svg viewBox="0 0 100 100" class="w-full h-auto">
                                 <rect x="10" y="10" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
                                 <rect x="30" y="10" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
@@ -180,11 +180,11 @@ export const lesson116 = {
                     <h4 class="text-3xl font-black text-gray-800">Hình nào là hình khai triển của hình lập phương?</h4>
                 </div>
                 <p class="text-xl text-gray-600 mb-8">Hãy chọn những hình có thể gấp thành hình lập phương (có thể chọn nhiều hình):</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <!-- Hình A -->
-                    <button onclick="toggle116B3(this, 'A')" id="b116-3a" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[40px] p-8 transition-all hover:translate-y-[-8px]">
-                        <div class="mb-6 flex justify-center h-48 items-center">
-                            <svg viewBox="0 0 140 120" class="w-full h-full max-w-[150px]">
+                    <button onclick="toggle116B3(this, 'A')" id="b116-3a" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[48px] p-12 transition-all hover:translate-y-[-8px]">
+                        <div class="mb-8 flex justify-center h-80 items-center">
+                            <svg viewBox="0 0 140 120" class="w-full h-full max-w-[280px]">
                                 <rect x="40" y="10" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
                                 <rect x="20" y="30" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
                                 <rect x="40" y="30" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
@@ -194,16 +194,16 @@ export const lesson116 = {
                             </svg>
                         </div>
                         <div class="text-center">
-                            <span class="inline-block px-6 py-2 bg-white rounded-full font-black text-2xl text-gray-500 group-[.selected]:text-indigo-600 group-[.selected]:shadow-lg transition-all shadow-sm">Hình A</span>
+                            <span class="inline-block px-8 py-3 bg-white rounded-full font-black text-3xl text-gray-500 group-[.selected]:text-indigo-600 group-[.selected]:shadow-lg transition-all shadow-sm">Hình A</span>
                         </div>
-                        <div class="absolute top-4 right-4 opacity-0 group-[.selected]:opacity-100 transition-opacity">
-                            <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center shadow-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                        <div class="absolute top-6 right-6 opacity-0 group-[.selected]:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center shadow-lg"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg></div>
                         </div>
                     </button>
                     <!-- Hình B -->
-                    <button onclick="toggle116B3(this, 'B')" id="b116-3b" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[40px] p-8 transition-all hover:translate-y-[-8px]">
-                        <div class="mb-6 flex justify-center h-48 items-center">
-                            <svg viewBox="0 0 140 120" class="w-full h-full max-w-[150px]">
+                    <button onclick="toggle116B3(this, 'B')" id="b116-3b" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[48px] p-12 transition-all hover:translate-y-[-8px]">
+                        <div class="mb-8 flex justify-center h-80 items-center">
+                            <svg viewBox="0 0 140 120" class="w-full h-full max-w-[280px]">
                                 <rect x="40" y="10" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
                                 <rect x="60" y="10" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
                                 <rect x="20" y="30" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
@@ -213,16 +213,16 @@ export const lesson116 = {
                             </svg>
                         </div>
                         <div class="text-center">
-                            <span class="inline-block px-6 py-2 bg-white rounded-full font-black text-2xl text-gray-500 group-[.selected]:text-indigo-600 group-[.selected]:shadow-lg transition-all shadow-sm">Hình B</span>
+                            <span class="inline-block px-8 py-3 bg-white rounded-full font-black text-3xl text-gray-500 group-[.selected]:text-indigo-600 group-[.selected]:shadow-lg transition-all shadow-sm">Hình B</span>
                         </div>
-                        <div class="absolute top-4 right-4 opacity-0 group-[.selected]:opacity-100 transition-opacity">
-                            <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center shadow-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                        <div class="absolute top-6 right-6 opacity-0 group-[.selected]:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center shadow-lg"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg></div>
                         </div>
                     </button>
                     <!-- Hình C -->
-                    <button onclick="toggle116B3(this, 'C')" id="b116-3c" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[40px] p-8 transition-all hover:translate-y-[-8px]">
-                        <div class="mb-6 flex justify-center h-48 items-center">
-                            <svg viewBox="0 0 140 120" class="w-full h-full max-w-[150px]">
+                    <button onclick="toggle116B3(this, 'C')" id="b116-3c" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[48px] p-12 transition-all hover:translate-y-[-8px]">
+                        <div class="mb-8 flex justify-center h-80 items-center">
+                            <svg viewBox="0 0 140 120" class="w-full h-full max-w-[280px]">
                                 <rect x="20" y="10" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
                                 <rect x="40" y="10" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
                                 <rect x="40" y="30" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
@@ -232,10 +232,10 @@ export const lesson116 = {
                             </svg>
                         </div>
                         <div class="text-center">
-                            <span class="inline-block px-6 py-2 bg-white rounded-full font-black text-2xl text-gray-500 group-[.selected]:text-indigo-600 group-[.selected]:shadow-lg transition-all shadow-sm">Hình C</span>
+                            <span class="inline-block px-8 py-3 bg-white rounded-full font-black text-3xl text-gray-500 group-[.selected]:text-indigo-600 group-[.selected]:shadow-lg transition-all shadow-sm">Hình C</span>
                         </div>
-                        <div class="absolute top-4 right-4 opacity-0 group-[.selected]:opacity-100 transition-opacity">
-                            <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center shadow-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                        <div class="absolute top-6 right-6 opacity-0 group-[.selected]:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center shadow-lg"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg></div>
                         </div>
                     </button>
                 </div>
@@ -257,49 +257,49 @@ export const lesson116 = {
                     <span class="text-lg font-medium text-blue-500 ml-2">(Nhấn vào hình để cắt)</span>
                 </p>
                 
-                <div class="bg-slate-50 rounded-[40px] p-8 md:p-16 flex justify-center overflow-x-auto">
+                <div class="bg-slate-50 rounded-[40px] p-8 md:p-24 flex justify-center overflow-x-auto scale-100 lg:scale-125 origin-center my-10">
                     <div class="flex items-center">
                         <!-- 1. Mặt Xanh lá -->
-                        <div id="cut-green" onclick="toggleCut('green')" class="cut-opt w-16 h-32 bg-[#22c55e] border-2 border-[#15803d] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                            <span class="text-white font-bold text-xs pointer-events-none">Xanh lá</span>
-                            <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-2xl">✕</div>
+                        <div id="cut-green" onclick="toggleCut('green')" class="cut-opt w-32 h-64 bg-[#22c55e] border-4 border-[#15803d] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <span class="text-white font-black text-xl pointer-events-none">Xanh lá</span>
+                            <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-5xl">✕</div>
                         </div>
 
                         <!-- 2. Cột chính (Tím - Xanh dương - Trắng) -->
                         <div class="flex flex-col items-center">
                             <!-- Mặt Tím (Gắn vào Xanh dương) -->
-                            <div id="cut-purple" onclick="toggleCut('purple')" class="cut-opt w-32 h-16 bg-[#a855f7] border-2 border-[#7e22ce] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center mb-[-2px]">
-                                <span class="text-white font-bold text-xs pointer-events-none">Tím</span>
-                                <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-2xl">✕</div>
+                            <div id="cut-purple" onclick="toggleCut('purple')" class="cut-opt w-64 h-32 bg-[#a855f7] border-4 border-[#7e22ce] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center mb-[-4px]">
+                                <span class="text-white font-black text-xl pointer-events-none">Tím</span>
+                                <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-5xl">✕</div>
                             </div>
                             <!-- Mặt Xanh dương -->
-                            <div id="cut-blue" onclick="toggleCut('blue')" class="cut-opt w-32 h-32 bg-[#3b82f6] border-2 border-[#1d4ed8] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center z-10">
-                                <span class="text-white font-bold text-xs pointer-events-none">Xanh dương</span>
-                                <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-3xl">✕</div>
+                            <div id="cut-blue" onclick="toggleCut('blue')" class="cut-opt w-64 h-64 bg-[#3b82f6] border-4 border-[#1d4ed8] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center z-10">
+                                <span class="text-white font-black text-2xl pointer-events-none">Xanh dương</span>
+                                <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-6xl">✕</div>
                             </div>
                             <!-- Mặt Trắng (Gắn vào Xanh dương) -->
-                            <div id="cut-white" onclick="toggleCut('white')" class="cut-opt w-32 h-16 bg-white border-2 border-gray-400 cursor-pointer transition-all hover:bg-gray-50 relative flex items-center justify-center mt-[-2px]">
-                                <span class="text-gray-500 font-bold text-xs pointer-events-none">Trắng</span>
-                                <div class="x-mark hidden absolute inset-0 bg-gray-200/80 flex items-center justify-center text-red-600 font-black text-3xl">✕</div>
+                            <div id="cut-white" onclick="toggleCut('white')" class="cut-opt w-64 h-32 bg-white border-4 border-gray-400 cursor-pointer transition-all hover:bg-gray-50 relative flex items-center justify-center mt-[-4px]">
+                                <span class="text-gray-500 font-black text-xl pointer-events-none">Trắng</span>
+                                <div class="x-mark hidden absolute inset-0 bg-gray-200/80 flex items-center justify-center text-red-600 font-black text-6xl">✕</div>
                             </div>
                         </div>
 
                         <!-- 3. Mặt Đỏ -->
-                        <div id="cut-red" onclick="toggleCut('red')" class="cut-opt w-16 h-32 bg-[#ef4444] border-2 border-[#b91c1c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                            <span class="text-white font-bold text-xs pointer-events-none">Đỏ</span>
-                            <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-xl">✕</div>
+                        <div id="cut-red" onclick="toggleCut('red')" class="cut-opt w-32 h-64 bg-[#ef4444] border-4 border-[#b91c1c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <span class="text-white font-black text-xl pointer-events-none">Đỏ</span>
+                            <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-4xl">✕</div>
                         </div>
 
                         <!-- 4. Mặt Cam -->
-                        <div id="cut-orange" onclick="toggleCut('orange')" class="cut-opt w-32 h-32 bg-[#f97316] border-2 border-[#c2410c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                            <span class="text-white font-bold text-xs pointer-events-none">Cam</span>
-                            <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-3xl">✕</div>
+                        <div id="cut-orange" onclick="toggleCut('orange')" class="cut-opt w-64 h-64 bg-[#f97316] border-4 border-[#c2410c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <span class="text-white font-black text-2xl pointer-events-none">Cam</span>
+                            <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-6xl">✕</div>
                         </div>
 
                         <!-- 5. Mặt Vàng -->
-                        <div id="cut-yellow" onclick="toggleCut('yellow')" class="cut-opt w-16 h-32 bg-[#fde047] border-2 border-[#a16207] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                            <span class="text-[#a16207] font-bold text-xs pointer-events-none">Vàng</span>
-                            <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-xl">✕</div>
+                        <div id="cut-yellow" onclick="toggleCut('yellow')" class="cut-opt w-32 h-64 bg-[#fde047] border-4 border-[#a16207] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <span class="text-[#a16207] font-black text-xl pointer-events-none">Vàng</span>
+                            <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-4xl">✕</div>
                         </div>
                     </div>
                 </div>
