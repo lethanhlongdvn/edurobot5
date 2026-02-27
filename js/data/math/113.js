@@ -241,8 +241,13 @@ export const lesson113 = {
                     var sp = document.getElementById(rId);
                     var retryBtn = document.getElementById(rId + '-retry');
                     if (!el || !sp) return;
-                    var val = (el.value||'').trim().toLowerCase().replace(/-/g,' ').replace(/\\s+/g,' ');
-                    var ans = answer.toLowerCase().replace(/-/g,' ').replace(/\\s+/g,' ');
+                    var normalize = function(s) {
+                        return s.toLowerCase().replace(/-/g,' ').replace(/\\s+/g,' ').trim()
+                            .replace(/xăng/g,'xen').replace(/xang/g,'xen')
+                            .replace(/đề/g,'đê').replace(/mươi một/g,'mươi mốt');
+                    };
+                    var val = normalize(el.value||'');
+                    var ans = normalize(answer);
                     if (!val) return;
                     if (val === ans || val.replace(/\\s/g,'') === ans.replace(/\\s/g,'')) {
                         sp.textContent = 'Đ'; sp.className = 'font-black text-2xl text-emerald-600';
