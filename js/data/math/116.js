@@ -58,12 +58,12 @@ export const lesson116 = {
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
                             <button onclick="check116B1(this, 'A')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-3xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
                                 <div class="bg-gray-50 p-6 rounded-2xl w-full flex justify-center">
-                                    <!-- A: Hình trụ cao -->
-                                    <svg viewBox="0 0 100 150" class="w-24 h-36">
-                                        <ellipse cx="50" cy="20" rx="30" ry="10" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
-                                        <rect x="20" y="20" width="60" height="100" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
-                                        <path d="M20 120 Q50 135 80 120" fill="none" stroke="#0284c7" stroke-width="2" />
-                                        <ellipse cx="50" cy="120" rx="30" ry="10" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
+                                    <!-- A: Hình trụ cao gầy -->
+                                    <svg viewBox="0 0 100 200" class="w-24 h-48">
+                                        <ellipse cx="50" cy="20" rx="20" ry="7" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
+                                        <rect x="30" y="20" width="40" height="150" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
+                                        <path d="M30 170 Q50 185 70 170" fill="none" stroke="#0284c7" stroke-width="2" />
+                                        <ellipse cx="50" cy="170" rx="20" ry="7" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
                                     </svg>
                                 </div>
                                 <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600">A</span>
@@ -82,12 +82,12 @@ export const lesson116 = {
                             </button>
                             <button onclick="check116B1(this, 'C')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-3xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
                                 <div class="bg-gray-50 p-6 rounded-2xl w-full flex justify-center">
-                                    <!-- C: Hình trụ nằm ngang -->
-                                    <svg viewBox="0 0 150 100" class="w-48 h-36 pt-4">
-                                        <ellipse cx="30" cy="50" rx="10" ry="30" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
-                                        <rect x="30" y="20" width="100" height="60" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
-                                        <path d="M130 20 Q145 50 130 80" fill="none" stroke="#0284c7" stroke-width="2" />
-                                        <ellipse cx="130" cy="50" rx="10" ry="30" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
+                                    <!-- C: Hình trụ dẹt dài nằm ngang -->
+                                    <svg viewBox="0 0 200 100" class="w-56 h-36 pt-4">
+                                        <ellipse cx="25" cy="50" rx="8" ry="25" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
+                                        <rect x="25" y="25" width="150" height="50" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
+                                        <path d="M175 25 Q190 50 175 75" fill="none" stroke="#0284c7" stroke-width="2" />
+                                        <ellipse cx="175" cy="50" rx="8" ry="25" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
                                     </svg>
                                 </div>
                                 <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600">C</span>
@@ -257,48 +257,48 @@ export const lesson116 = {
                     <span class="text-lg font-medium text-blue-500 ml-2">(Nhấn vào hình để cắt)</span>
                 </p>
                 
-                <div class="bg-slate-50 rounded-[40px] p-8 md:p-24 flex justify-center overflow-x-auto scale-100 lg:scale-125 origin-center my-10">
+                <div class="bg-slate-50 rounded-[40px] p-8 md:p-12 flex justify-center overflow-x-auto my-10">
                     <div class="flex items-center">
                         <!-- 1. Mặt Xanh lá -->
-                        <div id="cut-green" onclick="toggleCut('green')" class="cut-opt w-32 h-64 bg-[#22c55e] border-4 border-[#15803d] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                            <span class="text-white font-black text-xl pointer-events-none">Xanh lá</span>
+                        <div id="cut-green" onclick="toggleCut('green')" class="cut-opt w-24 h-48 bg-[#22c55e] border-4 border-[#15803d] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <span class="text-white font-black text-lg pointer-events-none">Xanh lá</span>
                             <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-5xl">✕</div>
                         </div>
 
                         <!-- 2. Cột chính (Tím - Xanh dương - Trắng) -->
                         <div class="flex flex-col items-center">
-                            <!-- Mặt Tím (Gắn vào Xanh dương) -->
-                            <div id="cut-purple" onclick="toggleCut('purple')" class="cut-opt w-64 h-32 bg-[#a855f7] border-4 border-[#7e22ce] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center mb-[-4px]">
-                                <span class="text-white font-black text-xl pointer-events-none">Tím</span>
+                            <!-- Mặt Tím -->
+                            <div id="cut-purple" onclick="toggleCut('purple')" class="cut-opt w-48 h-24 bg-[#a855f7] border-4 border-[#7e22ce] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center mb-[-4px]">
+                                <span class="text-white font-black text-lg pointer-events-none">Tím</span>
                                 <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-5xl">✕</div>
                             </div>
                             <!-- Mặt Xanh dương -->
-                            <div id="cut-blue" onclick="toggleCut('blue')" class="cut-opt w-64 h-64 bg-[#3b82f6] border-4 border-[#1d4ed8] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center z-10">
-                                <span class="text-white font-black text-2xl pointer-events-none">Xanh dương</span>
+                            <div id="cut-blue" onclick="toggleCut('blue')" class="cut-opt w-48 h-48 bg-[#3b82f6] border-4 border-[#1d4ed8] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center z-10">
+                                <span class="text-white font-black text-xl pointer-events-none">Xanh dương</span>
                                 <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-6xl">✕</div>
                             </div>
-                            <!-- Mặt Trắng (Gắn vào Xanh dương) -->
-                            <div id="cut-white" onclick="toggleCut('white')" class="cut-opt w-64 h-32 bg-white border-4 border-gray-400 cursor-pointer transition-all hover:bg-gray-50 relative flex items-center justify-center mt-[-4px]">
-                                <span class="text-gray-500 font-black text-xl pointer-events-none">Trắng</span>
+                            <!-- Mặt Trắng -->
+                            <div id="cut-white" onclick="toggleCut('white')" class="cut-opt w-48 h-24 bg-white border-4 border-gray-400 cursor-pointer transition-all hover:bg-gray-50 relative flex items-center justify-center mt-[-4px]">
+                                <span class="text-gray-500 font-black text-lg pointer-events-none">Trắng</span>
                                 <div class="x-mark hidden absolute inset-0 bg-gray-200/80 flex items-center justify-center text-red-600 font-black text-6xl">✕</div>
                             </div>
                         </div>
 
                         <!-- 3. Mặt Đỏ -->
-                        <div id="cut-red" onclick="toggleCut('red')" class="cut-opt w-32 h-64 bg-[#ef4444] border-4 border-[#b91c1c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                            <span class="text-white font-black text-xl pointer-events-none">Đỏ</span>
+                        <div id="cut-red" onclick="toggleCut('red')" class="cut-opt w-24 h-48 bg-[#ef4444] border-4 border-[#b91c1c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <span class="text-white font-black text-lg pointer-events-none">Đỏ</span>
                             <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-4xl">✕</div>
                         </div>
 
                         <!-- 4. Mặt Cam -->
-                        <div id="cut-orange" onclick="toggleCut('orange')" class="cut-opt w-64 h-64 bg-[#f97316] border-4 border-[#c2410c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                            <span class="text-white font-black text-2xl pointer-events-none">Cam</span>
+                        <div id="cut-orange" onclick="toggleCut('orange')" class="cut-opt w-48 h-48 bg-[#f97316] border-4 border-[#c2410c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <span class="text-white font-black text-xl pointer-events-none">Cam</span>
                             <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-6xl">✕</div>
                         </div>
 
                         <!-- 5. Mặt Vàng -->
-                        <div id="cut-yellow" onclick="toggleCut('yellow')" class="cut-opt w-32 h-64 bg-[#fde047] border-4 border-[#a16207] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                            <span class="text-[#a16207] font-black text-xl pointer-events-none">Vàng</span>
+                        <div id="cut-yellow" onclick="toggleCut('yellow')" class="cut-opt w-24 h-48 bg-[#fde047] border-4 border-[#a16207] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <span class="text-[#a16207] font-black text-lg pointer-events-none">Vàng</span>
                             <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-4xl">✕</div>
                         </div>
                     </div>
