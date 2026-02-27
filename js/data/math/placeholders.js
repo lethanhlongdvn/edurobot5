@@ -8,7 +8,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 1. Ôn tập số tự nhiên (tiết 1) (Tiết 1) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "1",
@@ -18,7 +18,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 1. Ôn tập số tự nhiên (tiết 2) (Tiết 2) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "1",
@@ -28,7 +28,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 2. Ôn tập các phép tính với số tự nhiên (Tiết 1) (Tiết 3) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "1",
@@ -38,7 +38,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 2. Ôn tập các phép tính với số tự nhiên (Tiết 2) (Tiết 4) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "1",
@@ -48,7 +48,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 3. Ôn tập phân số (Tiết 1) (Tiết 5) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "2",
@@ -58,7 +58,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 3. Ôn tập phân số (Tiết 2) (Tiết 6) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "2",
@@ -68,7 +68,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 4. Phân số thập phân (Tiết 7) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "2",
@@ -78,7 +78,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 5. Ôn tập các phép tính với phân số (Tiết 1) (Tiết 8) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "2",
@@ -88,7 +88,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 5. Ôn tập các phép tính với phân số (Tiết 2) (Tiết 9) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "2",
@@ -98,7 +98,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 5. Ôn tập các phép tính với phân số (Tiết 3) (Tiết 10) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "3",
@@ -108,7 +108,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 6. Cộng, trừ hai phân số khác mẫu số (Tiết 1) (Tiết 11) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "3",
@@ -118,7 +118,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 6. Cộng, trừ hai phân số khác mẫu số (Tiết 2) (Tiết 12) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "3",
@@ -128,7 +128,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 7. Hỗn số (Tiết 1) (Tiết 13) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "3",
@@ -138,7 +138,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 7. Hỗn số (Tiết 2) (Tiết 14) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "3",
@@ -148,7 +148,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 8. Ôn tập hình học và đo lường (Tiết 1) (Tiết 15) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "4",
@@ -158,7 +158,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 8. Ôn tập hình học và đo lường (Tiết 2) (Tiết 16) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "4",
@@ -168,7 +168,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 9. Luyện tập chung (tiết 1) (Tiết 17) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "4",
@@ -178,7 +178,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 9. Luyện tập chung (tiết 2) (Tiết 18) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "4",
@@ -188,7 +188,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 9. Luyện tập chung (tiết 3) (Tiết 19) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "4",
@@ -198,7 +198,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 10. Khái niệm số thập phân (Tiết 1) (Tiết 20) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "5",
@@ -208,7 +208,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 10. Khái niệm số thập phân (Tiết 2) (Tiết 21) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "5",
@@ -218,7 +218,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 10. Khái niệm số thập phân (Tiết 3) (Tiết 22) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "5",
@@ -228,7 +228,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 11. So sánh các số thập phân (Tiết 1) (Tiết 23) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "5",
@@ -238,7 +238,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 11. So sánh các số thập phân (Tiết 2) (Tiết 24) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "5",
@@ -248,7 +248,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 12. Viết số đo đại lượng dưới dạng số thập phân (Tiết 1) (Tiết 25) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "6",
@@ -258,7 +258,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 12. Viết số đo đại lượng dưới dạng số thập phân (Tiết 2) (Tiết 26) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "6",
@@ -268,7 +268,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 12. Viết số đo đại lượng dưới dạng số thập phân (Tiết 3 (Tiết 27) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "6",
@@ -278,7 +278,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 13. Làm tròn số thập phân (Tiết 1) (Tiết 28) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "6",
@@ -288,7 +288,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 13. Làm tròn số thập phân (Tiết 2) (Tiết 29) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "6",
@@ -298,7 +298,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 14. Luyện tập chung (Tiết 1) (Tiết 30) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "7",
@@ -308,7 +308,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 14. Luyện tập chung (Tiết 2) (Tiết 31) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "7",
@@ -318,7 +318,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 15. Ki-lô-mét vuông. Héc-ta (tiết 1) (Tiết 32) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "7",
@@ -328,7 +328,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 15. Ki-lô-mét vuông. Héc-ta (tiết 2) (Tiết 33) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "7",
@@ -338,7 +338,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 16. Các đơn vị đo diện tích (Tiết 1) (Tiết 34) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "7",
@@ -348,7 +348,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 16. Các đơn vị đo diện tích (Tiết 2) (Tiết 35) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "8",
@@ -358,7 +358,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 17. Thực hành và trải nghiệm với một số đơn vị đo đại lượng (Tiết 1) (Tiết 36) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "8",
@@ -368,7 +368,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 17. Thực hành và trải nghiệm với một số đơn vị đo đại lượng (Tiết 2) (Tiết 37) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "8",
@@ -378,7 +378,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 18. Luyện tập chung (Tiết 1) (Tiết 38) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "8",
@@ -388,7 +388,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 18. Luyện tập chung (Tiết 2) (Tiết 39) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "8",
@@ -398,7 +398,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 19: Phép cộng số thập phân (Tiết 1) (Tiết 40) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "9",
@@ -408,7 +408,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 19: Phép cộng số thập phân (Tiết 2) (Tiết 41) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "9",
@@ -418,7 +418,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 20. Phép trừ số thập phân (Tiết 1) (Tiết 42) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "9",
@@ -428,7 +428,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 20. Phép trừ số thập phân (Tiết 2) (Tiết 43) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "9",
@@ -438,7 +438,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 21: Phép nhân số thập phân (Tiết 1) (Tiết 44) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "9",
@@ -448,7 +448,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 21: Phép nhân số thập phân (Tiết 2) (Tiết 45) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "10",
@@ -458,7 +458,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 21: Phép nhân số thập phân (Tiết 3) (Tiết 46) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "10",
@@ -468,7 +468,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 22: Phép chia số thập phân (Tiết 1) (Tiết 47) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "10",
@@ -478,7 +478,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 22: Phép chia số thập phân (Tiết 2) (Tiết 48) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "10",
@@ -488,7 +488,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 22: Phép chia số thập phân (Tiết 3) (Tiết 49) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "10",
@@ -498,7 +498,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 22: Phép chia số thập phân (Tiết 4) (Tiết 50) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "11",
@@ -508,7 +508,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 23. Nhân, chia số thập phân với 10; 100; 1000;... hoặc với 0,1; 0,01;0,001… (Tiết 1) (Tiết 51) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "11",
@@ -518,7 +518,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 23. Nhân, chia số thập phân với 10; 100; 1000;... hoặc với 0,1; 0,01;0,001… (Tiết 2) (Tiết 52) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "11",
@@ -528,7 +528,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 24. Luyện tập chung (Tiết 1) (Tiết 53) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "11",
@@ -538,7 +538,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 24. Luyện tập chung (Tiết 2) (Tiết 54) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "11",
@@ -548,7 +548,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 24. Luyện tập chung (Tiết 3) (Tiết 55) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "12",
@@ -558,7 +558,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 25. Hình tam giác. Diện tích hình tam giác (Tiết 1) (Tiết 56) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "12",
@@ -568,7 +568,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 25. Hình tam giác. Diện tích hình tam giác (Tiết 2) (Tiết 57) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "12",
@@ -578,7 +578,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 25. Hình tam giác. Diện tích hình tam giác (Tiết 3) (Tiết 58) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "12",
@@ -588,7 +588,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 25. Hình tam giác. Diện tích hình tam giác (Tiết 4) (Tiết 59) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "12",
@@ -598,7 +598,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 26. Hình thang. Diện tích hình thang (Tiết 1) (Tiết 60) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "13",
@@ -608,7 +608,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 26. Hình thang. Diện tích hình thang (Tiết 2) (Tiết 61) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "13",
@@ -618,7 +618,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 26. Hình thang. Diện tích hình thang (Tiết 3) (Tiết 62) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "13",
@@ -628,7 +628,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 26. Hình thang. Diện tích hình thang (Tiết 4) (Tiết 63) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "13",
@@ -638,7 +638,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 27. Đường tròn. Chu vi và diện tích hình tròn (Tiết 1) (Tiết 64) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "13",
@@ -648,7 +648,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 27. Đường tròn. Chu vi và diện tích hình tròn (Tiết 2) (Tiết 65) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "14",
@@ -658,7 +658,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 27. Đường tròn. Chu vi và diện tích hình tròn (Tiết 3) (Tiết 66) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "14",
@@ -668,7 +668,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 27. Đường tròn. Chu vi và diện tích hình tròn (Tiết 4) (Tiết 67) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "14",
@@ -678,7 +678,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 27. Đường tròn. Chu vi và diện tích hình tròn (Tiết 5) (Tiết 68) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "14",
@@ -688,7 +688,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 28. Thực hành và trải nghiệm đo, vẽ, lắp ghép, tạo hình (Tiết 1) (Tiết 69) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "14",
@@ -698,7 +698,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 28. Thực hành và trải nghiệm đo, vẽ, lắp ghép, tạo hình (Tiết 2) (Tiết 70) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "15",
@@ -708,7 +708,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 29. Luyện tập chung (Tiết 1) (Tiết 71) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "15",
@@ -718,7 +718,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 29. Luyện tập chung (Tiết 2) (Tiết 72) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "15",
@@ -728,7 +728,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 29. Luyện tập chung (Tiết 3) (Tiết 73) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "15",
@@ -738,7 +738,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 30. Ôn tập số thập phân (Tiết 1) (Tiết 74) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "15",
@@ -748,7 +748,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 30. Ôn tập số thập phân (Tiết 2) (Tiết 75) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "16",
@@ -758,7 +758,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 30. Ôn tập số thập phân (Tiết 3) (Tiết 76) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "16",
@@ -768,7 +768,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 31. Ôn tập các phép tính với số thập phân (Tiết 1) (Tiết 77) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "16",
@@ -778,7 +778,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 31. Ôn tập các phép tính với số thập phân (Tiết 2) (Tiết 78) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "16",
@@ -788,7 +788,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 31. Ôn tập các phép tính với số thập phân (Tiết 3) (Tiết 79) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "16",
@@ -798,7 +798,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 31. Ôn tập các phép tính với số thập phân (Tiết 4) (Tiết 80) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "17",
@@ -808,7 +808,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 32. Ôn tập một số hình phẳng (Tiết 1) (Tiết 81) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "17",
@@ -818,7 +818,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 32. Ôn tập một số hình phẳng (Tiết 2) (Tiết 82) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "17",
@@ -828,7 +828,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 33. Ôn tập diện tích, chu vi một số hình phẳng (Tiết 1) (Tiết 83) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "17",
@@ -838,7 +838,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 33. Ôn tập diện tích, chu vi một số hình phẳng (Tiết 2) (Tiết 84) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "17",
@@ -848,7 +848,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 33. Ôn tập diện tích, chu vi một số hình phẳng (Tiết 3) (Tiết 85) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "18",
@@ -858,7 +858,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 34: Ôn tập đo lường (Tiết 1) (Tiết 86) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "18",
@@ -868,7 +868,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 34: Ôn tập đo lường (Tiết 2) (Tiết 87) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "18",
@@ -878,7 +878,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 35: Ôn tập chung (Tiết 1) (Tiết 88) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "18",
@@ -888,7 +888,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 35: Ôn tập chung (Tiết 2) (Tiết 89) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "18",
@@ -898,7 +898,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 35: Ôn tập chung (Tiết 3) (Tiết 90) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "19",
@@ -908,7 +908,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 36. Tỉ số. Tỉ số phần trăm (tiết 1) (Tiết 91) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "19",
@@ -918,7 +918,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 36. Tỉ số. Tỉ số phần trăm (tiết 2) (Tiết 92) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "19",
@@ -928,7 +928,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 37. Tỉ lệ bản đồ và ứng dụng (tiết 1) (Tiết 93) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "19",
@@ -938,7 +938,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 37. Tỉ lệ bản đồ và ứng dụng (tiết 2) (Tiết 94) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "19",
@@ -948,7 +948,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 38. Tìm hai số khi biết tổng và tỉ số của hai số đó (tiết 1) (Tiết 95) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "20",
@@ -958,7 +958,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 38. Tìm hai số khi biết tổng và tỉ số của hai số đó (tiết 2) (Tiết 96) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "20",
@@ -968,7 +968,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 39. Tìm hai số khi biết hiệu và tỉ số của hai số đó (tiết 1) (Tiết 97) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "20",
@@ -978,7 +978,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 39. Tìm hai số khi biết hiệu và tỉ số của hai số đó (tiết 2) (Tiết 98) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "20",
@@ -988,7 +988,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 40. Tìm tỉ số phần trăm của hai số (tiết 1) (Tiết 99) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "20",
@@ -998,7 +998,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 40. Tìm tỉ số phần trăm của hai số (tiết 2) (Tiết 100) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "21",
@@ -1008,7 +1008,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 41. Tìm giá trị phần trăm của một số (tiết 1) (Tiết 101) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "21",
@@ -1018,7 +1018,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 41. Tìm giá trị phần trăm của một số (tiết 2) (Tiết 102) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "21",
@@ -1028,7 +1028,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 42. Máy tính cầm tay (tiết 1) (Tiết 103) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "21",
@@ -1038,7 +1038,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 42. Máy tính cầm tay (tiết 2) (Tiết 104) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "21",
@@ -1048,7 +1048,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 43. Thực hành và trải nghiệm sử dụng máy tính cầm tay (Tiết 105) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "22",
@@ -1058,7 +1058,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 44. Luyện tập chung (tiết 1) (Tiết 106) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "22",
@@ -1068,7 +1068,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 44. Luyện tập chung (tiết 2) (Tiết 107) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "22",
@@ -1078,7 +1078,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 45. Thể tích của một hình (Tiết 108) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "22",
@@ -1088,7 +1088,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 46. Xăng-ti-mét khối. Đề-xi-mét khối (tiết 1) (Tiết 109) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "22",
@@ -1098,7 +1098,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 46. Xăng-ti-mét khối. Đề-xi-mét khối (tiết 2) (Tiết 110) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "24",
@@ -1108,17 +1108,8 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 49. Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ (tiết 2) (Tiết 116) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
-  {
-    "topic": "Chương trình Toán 5",
-    "week": "24",
-    "period": "117",
-    "title": "BÀI 50. DIỆN TÍCH XUNG QUANH VÀ DIỆN TÍCH TOÀN PHẦN CỦA HÌNH HỘP CHỮ NHẬT (TIẾT 1)",
-    "desc": "Bài 50. Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (tiết 1)",
-    "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 50. Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (tiết 1) (Tiết 117) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
-    "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
-    "quizPool": []
-},
+  },
+
   {
     "topic": "Chương trình Toán 5",
     "week": "24",
@@ -1128,7 +1119,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 50. Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (tiết 2) (Tiết 118) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "24",
@@ -1138,7 +1129,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 50. Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (tiết 3) (Tiết 119) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "24",
@@ -1148,7 +1139,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 51. Diện tích xung quanh và diện tích toàn phần của hình lập phương (tiết 1) (Tiết 120) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "25",
@@ -1158,7 +1149,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 51. Diện tích xung quanh và diện tích toàn phần của hình lập phương (tiết 2) (Tiết 121) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "25",
@@ -1168,7 +1159,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 52. Thể tích của hình hộp chữ nhật (tiết 1) (Tiết 122) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "25",
@@ -1178,7 +1169,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 52. Thể tích của hình hộp chữ nhật (tiết 2) (Tiết 123) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "25",
@@ -1188,7 +1179,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 53. Thể tích của hình lập phương (tiết 1) (Tiết 124) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "25",
@@ -1198,7 +1189,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 53. Thể tích của hình lập phương (tiết 2) (Tiết 125) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "26",
@@ -1208,7 +1199,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 54. Thực hành tính toán và ước lượng thể tích một số hình khối (Tiết 126) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "26",
@@ -1218,7 +1209,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 55. Luyện tập chung (Tiết 1) (Tiết 127) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "26",
@@ -1228,7 +1219,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 55. Luyện tập chung (Tiết 2) (Tiết 128) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "26",
@@ -1238,7 +1229,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 55. Luyện tập chung (Tiết 3) (Tiết 129) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "26",
@@ -1248,7 +1239,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 56. Các đơn vị đo thời gian (Tiết 130) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "27",
@@ -1258,7 +1249,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 57. Cộng, trừ số đo thời gian (tiết 1) (Tiết 131) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "27",
@@ -1268,7 +1259,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 57. Cộng, trừ số đo thời gian (tiết 2) (Tiết 132) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "27",
@@ -1278,7 +1269,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 58. Nhân, chia số đo thời gian với một số (tiết 1) (Tiết 133) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "27",
@@ -1288,7 +1279,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 58. Nhân, chia số đo thời gian với một số (tiết 2) (Tiết 134) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "27",
@@ -1298,7 +1289,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 58. Nhân, chia số đo thời gian với một số (tiết 3) (Tiết 135) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "28",
@@ -1308,7 +1299,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 59. Vận tốc của một chuyển động đều (tiết 1) (Tiết 136) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "28",
@@ -1318,7 +1309,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 59. Vận tốc của một chuyển động đều (tiết 2) (Tiết 137) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "28",
@@ -1328,7 +1319,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 60. Quãng đường, thời gian của một chuyển động đều (tiết 1) (Tiết 138) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "28",
@@ -1338,7 +1329,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 60. Quãng đường, thời gian của một chuyển động đều (tiết 2) (Tiết 139) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "28",
@@ -1348,7 +1339,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 60. Quãng đường, thời gian của một chuyển động đều (tiết 3) (Tiết 140) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "29",
@@ -1358,7 +1349,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 61. Thực hành tính toán và ước lượng về vận tốc, quãng đường, thời gian trong chuyển động đều (Tiết 1) (Tiết 141) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "29",
@@ -1368,7 +1359,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 61. Thực hành tính toán và ước lượng về vận tốc, quãng đường, thời gian trong chuyển động đều (Tiết 2) (Tiết 142) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "29",
@@ -1378,7 +1369,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 62. Luyện tập chung (Tiết 1) (Tiết 143) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "29",
@@ -1388,7 +1379,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 62. Luyện tập chung (Tiết 2) (Tiết 144) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "29",
@@ -1398,7 +1389,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 62. Luyện tập chung (Tiết 3) (Tiết 145) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "30",
@@ -1408,7 +1399,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 63. Thu thập, phân loại, sắp xếp các số liệu (Tiết 146) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "30",
@@ -1418,7 +1409,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 64. Biểu đồ hình quạt tròn (Tiết 1) (Tiết 147) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "30",
@@ -1428,7 +1419,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 64. Biểu đồ hình quạt tròn (Tiết 2) (Tiết 148) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "30",
@@ -1438,7 +1429,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 65. Tỉ số của số lần lặp lại một sự kiện so với tổng số lần thực hiện (Tiết 149) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "30",
@@ -1448,7 +1439,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 66. Thực hành và trải nghiệm thu thập, phân tích, biểu diễn các số liệu thống kê (Tiết 1) (Tiết 150) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "31",
@@ -1458,7 +1449,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 66. Thực hành và trải nghiệm thu thập, phân tích, biểu diễn các số liệu thống kê (Tiết 2) (Tiết 151) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "31",
@@ -1468,7 +1459,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 67. Luyện tập chung (Tiết 152) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "31",
@@ -1478,7 +1469,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 68. Ôn tập số tự nhiên, phân số, số thập phân (tiết 1) (Tiết 153) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "31",
@@ -1488,7 +1479,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 68. Ôn tập số tự nhiên, phân số, số thập phân (tiết 2) (Tiết 154) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "31",
@@ -1498,7 +1489,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 68. Ôn tập số tự nhiên, phân số, số thập phân (tiết 3) (Tiết 155) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "32",
@@ -1508,7 +1499,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 69. Ôn tập các phép tính với số tự nhiên, phân số, số thập phân (Tiết 1) (Tiết 156) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "32",
@@ -1518,7 +1509,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 69. Ôn tập các phép tính với số tự nhiên, phân số, số thập phân (Tiết 2) (Tiết 157) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "32",
@@ -1528,7 +1519,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 69. Ôn tập các phép tính với số tự nhiên, phân số, số thập phân (Tiết 3) (Tiết 158) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "32",
@@ -1538,7 +1529,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 69. Ôn tập các phép tính với số tự nhiên, phân số, số thập phân (Tiết 4) (Tiết 159) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "32",
@@ -1548,7 +1539,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 70. Ôn tập tỉ số, tỉ số phần trăm (Tiết 1) (Tiết 160) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "33",
@@ -1558,7 +1549,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 70. Ôn tập tỉ số, tỉ số phần trăm (Tiết 2) (Tiết 161) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "33",
@@ -1568,7 +1559,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 71. Ôn tập hình học (Tiết 1) (Tiết 162) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "33",
@@ -1578,7 +1569,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 71. Ôn tập hình học (Tiết 2) (Tiết 163) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "33",
@@ -1588,7 +1579,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 71. Ôn tập hình học (Tiết 3) (Tiết 164) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "33",
@@ -1598,7 +1589,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 71. Ôn tập hình học (Tiết 4) (Tiết 165) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "34",
@@ -1608,7 +1599,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 72. Ôn tập đo lường (tiết 1) (Tiết 166) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "34",
@@ -1618,7 +1609,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 72. Ôn tập đo lường (tiết 2) (Tiết 167) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "34",
@@ -1628,7 +1619,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 73. Ôn tập toán chuyển động đều (tiết 1) (Tiết 168) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "34",
@@ -1638,7 +1629,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 73. Ôn tập toán chuyển động đều (tiết 2) (Tiết 169) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "34",
@@ -1648,7 +1639,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 74. Ôn tập một số yếu tố thống kê và xác suất (Tiết 1) (Tiết 170) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "35",
@@ -1658,7 +1649,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 74. Ôn tập một số yếu tố thống kê và xác suất (Tiết 2) (Tiết 171) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "35",
@@ -1668,7 +1659,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 75. Ôn tập chung (tiết 1) (Tiết 172) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "35",
@@ -1678,7 +1669,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 75. Ôn tập chung (tiết 2) (Tiết 173) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "35",
@@ -1688,7 +1679,7 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 75. Ôn tập chung (tiết 3) (Tiết 174) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-},
+  },
   {
     "topic": "Chương trình Toán 5",
     "week": "35",
@@ -1698,5 +1689,5 @@ export const placeholderLessons = [
     "content": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[48px] shadow-inner text-center\">\n                            <h3 class=\"text-gray-400 font-black text-2xl md:text-4xl mb-4\">🚧 Đang xây dựng...</h3>\n                            <p class=\"text-gray-500 font-medium text-lg\">Nội dung Bài 75. Ôn tập chung (tiết 4) (Tiết 175) đang được biên soạn. Thầy Cô vui lòng quay lại sau nhé!</p>\n                        </div>\n                    </div>\n                ",
     "practice": "\n                    <div class=\"space-y-4 md:space-y-6\">\n                        <div class=\"bg-gray-50 p-8 md:p-12 rounded-[32px] md:rounded-[48px] border-4 border-dashed border-gray-200 text-center\">\n                            <p class=\"text-gray-400 font-black text-xl\">Luyện tập chưa có sẵn</p>\n                        </div>\n                    </div>\n                ",
     "quizPool": []
-}
+  }
 ];
