@@ -80,7 +80,7 @@ export const lesson112 = {
                     <!-- Hộp 1 -->
                     <div class="bg-white rounded-[40px] p-8 border-2 border-gray-100 shadow-xl hover:border-blue-500 transition-all group flex flex-col items-center">
                         <div class="w-32 h-32 bg-yellow-50 rounded-3xl flex items-center justify-center mb-8 border border-yellow-100 group-hover:scale-110 transition-transform">
-                             <img src="hinh_anh/112-b1-1.png" alt="Hộp nhỏ" class="w-20 h-20 object-contain drop-shadow-md" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'%23f59e0b\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\\'/></svg>'">
+                             <img src="hinh_anh/112-b1-1.png" alt="Hộp nhỏ" class="w-20 h-20 object-contain drop-shadow-md">
                         </div>
                         <h4 class="text-lg font-black text-gray-800 mb-6">Hộp phấn nhỏ</h4>
                         <select id="b112-1a" class="w-full bg-gray-50 border-4 border-gray-100 rounded-2xl py-4 px-6 font-black text-xl text-center text-blue-900 outline-none focus:border-blue-500 transition-all appearance-none cursor-pointer">
@@ -94,7 +94,7 @@ export const lesson112 = {
                     <!-- Hộp 2 -->
                     <div class="bg-white rounded-[40px] p-8 border-2 border-gray-100 shadow-xl hover:border-blue-500 transition-all group flex flex-col items-center">
                         <div class="w-32 h-32 bg-blue-50 rounded-3xl flex items-center justify-center mb-8 border border-blue-100 group-hover:scale-110 transition-transform">
-                             <img src="hinh_anh/112-b1-2.png" alt="Hộp vừa" class="w-24 h-24 object-contain drop-shadow-md" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'%233b82f6\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\\'/></svg>'">
+                             <img src="hinh_anh/112-b1-2.png" alt="Hộp vừa" class="w-24 h-24 object-contain drop-shadow-md">
                         </div>
                         <h4 class="text-lg font-black text-gray-800 mb-6">Chiếc máy giặt</h4>
                         <select id="b112-1b" class="w-full bg-gray-50 border-4 border-gray-100 rounded-2xl py-4 px-6 font-black text-xl text-center text-blue-900 outline-none focus:border-blue-500 transition-all appearance-none cursor-pointer">
@@ -108,7 +108,7 @@ export const lesson112 = {
                     <!-- Hộp 3 -->
                     <div class="bg-white rounded-[40px] p-8 border-2 border-gray-100 shadow-xl hover:border-blue-500 transition-all group flex flex-col items-center">
                         <div class="w-32 h-32 bg-emerald-50 rounded-3xl flex items-center justify-center mb-8 border border-emerald-100 group-hover:scale-110 transition-transform">
-                             <img src="hinh_anh/112-b1-3.png" alt="Thùng to" class="w-28 h-20 object-contain drop-shadow-md" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'%2310b981\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\\'/></svg>'">
+                             <img src="hinh_anh/112-b1-3.png" alt="Thùng to" class="w-28 h-20 object-contain drop-shadow-md">
                         </div>
                         <h4 class="text-lg font-black text-gray-800 mb-6">Thùng Container</h4>
                         <select id="b112-1c" class="w-full bg-gray-50 border-4 border-gray-100 rounded-2xl py-4 px-6 font-black text-xl text-center text-blue-900 outline-none focus:border-blue-500 transition-all appearance-none cursor-pointer">
@@ -129,10 +129,10 @@ export const lesson112 = {
 
                 <script>
                     window.checkB112B1 = function(btn) {
-                        const a = document.getElementById('b112-1a').value;
-                        const b = document.getElementById('b112-1b').value;
-                        const c = document.getElementById('b112-1c').value;
-                        const fb = document.getElementById('fb-b112-1');
+                        var a = document.getElementById('b112-1a').value;
+                        var b = document.getElementById('b112-1b').value;
+                        var c = document.getElementById('b112-1c').value;
+                        var fb = document.getElementById('fb-b112-1');
                         
                         fb.classList.remove('hidden');
                         if(!a || !b || !c) {
@@ -140,7 +140,7 @@ export const lesson112 = {
                             return;
                         }
 
-                        let correct = (a === '1 cm3' && b === '1 dm3' && c === '1 m3');
+                        var correct = (a === '1 cm3' && b === '1 dm3' && c === '1 m3');
                         if(correct) {
                             fb.innerHTML = '<div class="bg-emerald-100 text-emerald-800 p-6 rounded-3xl font-black border-2 border-emerald-200 text-xl">✨ QUÁ CHÍNH XÁC! Bạn thật là tinh mắt.</div>';
                             btn.classList.replace('bg-blue-600', 'bg-emerald-600');
@@ -267,12 +267,12 @@ export const lesson112 = {
 
                 <script>
                     window.checkLesson112B4_Text = async function(btn) {
-                        const input = document.getElementById('ans-b112-4-text');
-                        const fb = document.getElementById('fb-b112-4-ai');
-                        const val = input.value.trim();
+                        var input = document.getElementById('ans-b112-4-text');
+                        var fb = document.getElementById('fb-b112-4-ai');
+                        var val = input.value.trim();
                         if(!val) { alert("Nhập bài giải trước nha!"); return; }
 
-                        const og = btn.innerHTML;
+                        var og = btn.innerHTML;
                         btn.disabled = true;
                         btn.innerHTML = '<div class="w-6 h-6 border-4 border-white border-t-transparent rounded-full animate-spin"></div>';
                         
@@ -280,12 +280,13 @@ export const lesson112 = {
                         fb.innerHTML = '<div class="bg-gray-100 p-6 rounded-3xl font-bold italic animate-pulse">EduRobot đang nghiên cứu lời giải của bạn...</div>';
 
                         try {
-                            const req = "Hãy chấm bài toán tính tiền nước. Đề bài: 15 m3 nước. 10 m3 đầu giá 5973, 5 m3 sau giá 7052. Tổng tiền đúng là 10*5973 + 5*7052 = 94990 đồng. Hãy đóng vai thầy giáo tiểu học nhận xét vui vẻ, khích lệ.";
-                            const res = await AI.tutor(val, "Toán 5 - Tiết 112", req);
-                            fb.innerHTML = \`<div class="bg-white border-4 border-orange-500 p-8 rounded-[40px] shadow-2xl relative">
-                                <div class="absolute -top-4 left-8 px-4 py-1 bg-orange-600 text-white text-xs font-black uppercase rounded-full">KẾT QUẢ CHẤM BÀI</div>
-                                <div class="text-gray-800 font-medium leading-relaxed">\${res.replace(/\\n/g, '<br>')}</div>
-                            </div>\`;
+                            var req = "Hãy chấm bài toán tính tiền nước. Đề bài: 15 m3 nước. 10 m3 đầu giá 5973, 5 m3 sau giá 7052. Tổng tiền đúng là 10*5973 + 5*7052 = 94990 đồng. Hãy đóng vai thầy giáo tiểu học nhận xét vui vẻ, khích lệ.";
+                            var res = await AI.tutor(val, "Toán 5 - Tiết 112", req);
+                            var feedbackHtml = '<div class="bg-white border-4 border-orange-500 p-8 rounded-[40px] shadow-2xl relative">' +
+                                '<div class="absolute -top-4 left-8 px-4 py-1 bg-orange-600 text-white text-xs font-black uppercase rounded-full">KẾT QUẢ CHẤM BÀI</div>' +
+                                '<div class="text-gray-800 font-medium leading-relaxed">' + res.replace(/\\n/g, '<br>') + '</div>' +
+                                '</div>';
+                            fb.innerHTML = feedbackHtml;
                         } catch(e) {
                             fb.innerHTML = '<div class="text-red-500 font-bold p-4">Lỗi kết nối AI.</div>';
                         } finally {
@@ -296,9 +297,9 @@ export const lesson112 = {
 
                     window.toggleSpeechRec_112 = function() {
                         if (!('webkitSpeechRecognition' in window)) { alert("Trình duyệt không hỗ trợ giọng nói."); return; }
-                        const recognition = new webkitSpeechRecognition();
+                        var recognition = new webkitSpeechRecognition();
                         recognition.lang = 'vi-VN';
-                        recognition.onresult = (e) => {
+                        recognition.onresult = function(e) {
                             document.getElementById('ans-b112-4-text').value += ' ' + e.results[0][0].transcript;
                         };
                         recognition.start();
@@ -308,7 +309,7 @@ export const lesson112 = {
 
             <!-- Final Submission -->
             <div class="mt-20 bg-gray-900 p-10 md:p-16 rounded-[56px] shadow-3xl flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden group">
-                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
+                <div class="absolute inset-0 bg-white/5 opacity-30"></div>
                 
                 <div class="relative z-10 text-center md:text-left">
                     <h3 class="text-white font-black text-3xl md:text-5xl mb-4 tracking-tight uppercase">Kết thúc Luyện tập 112!</h3>
@@ -322,30 +323,26 @@ export const lesson112 = {
             </div>
         </div>
     `,
-    "quizPool": [
-        { "question": "1 m³ bằng bao nhiêu dm³?", "options": ["10", "100", "1 000", "10 000"], "answer": 2, "level": 1 },
-        { "question": "Số đo 3 900 cm³ bằng bao nhiêu dm³?", "options": ["39 dm³", "3,9 dm³", "0,39 dm³", "390 dm³"], "answer": 1, "level": 2 },
-        { "question": "Nếu dùng 15 m³ nước, thì 5 m³ sau tính giá bao nhiêu đồng/m³?", "options": ["5 973", "7 052", "8 669", "15 929"], "answer": 1, "level": 2 }
-    ]
+    "quizPool": []
 };
 
 // Global Submit Function
 window.submitAllPractice112 = function () {
-    const b1a = document.getElementById('b112-1a')?.value;
-    const b1b = document.getElementById('b112-1b')?.value;
-    const b1c = document.getElementById('b112-1c')?.value;
+    var b1a = document.getElementById('b112-1a') ? document.getElementById('b112-1a').value : "";
+    var b1b = document.getElementById('b112-1b') ? document.getElementById('b112-1b').value : "";
+    var b1c = document.getElementById('b112-1c') ? document.getElementById('b112-1c').value : "";
 
-    const b2a1 = document.getElementById('input-b112-2a-1')?.value;
-    const b2a2 = document.getElementById('input-b112-2a-2')?.value;
-    const b4text = document.getElementById('ans-b112-4-text')?.value;
+    var b2a1 = document.getElementById('input-b112-2a-1') ? document.getElementById('input-b112-2a-1').value : "";
+    var b2a2 = document.getElementById('input-b112-2a-2') ? document.getElementById('input-b112-2a-2').value : "";
+    var b4text = document.getElementById('ans-b112-4-text') ? document.getElementById('ans-b112-4-text').value : "";
 
-    const summary = \`====== BÀI 112: LUYỆN TẬP ======
-1. Chọn đơn vị: Hộp phấn: \${b1a}, Máy giặt: \${b1b}, Container: \${b1c}
-2. Đổi đơn vị: 2.5m3 = \${b2a1}dm3, 3900cm3 = \${b2a2}dm3
-4. Bài toán nước: \${b4text}
-=================================\`;
+    var summary = "====== BÀI 112: LUYỆN TẬP ======\n";
+    summary += "1. Chọn đơn vị: Hộp phấn: " + b1a + ", Máy giặt: " + b1b + ", Container: " + b1c + "\n";
+    summary += "2. Đổi đơn vị: 2.5m3 = " + b2a1 + "dm3, 3900cm3 = " + b2a2 + "dm3\n";
+    summary += "4. Bài toán nước: " + b4text + "\n";
+    summary += "=================================";
 
-    if(window.submitMathLesson) {
+    if (window.submitMathLesson) {
         window.submitMathLesson(summary, "Kết quả Tiết 112", "btn-submit-all-practice-112");
     } else {
         alert("Bài làm đã được hệ thống ghi nhận!");
