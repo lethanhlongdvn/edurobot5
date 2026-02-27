@@ -1,6 +1,6 @@
 export const lesson115 = {
     "topic": "Hình học và Đo lường",
-    "week": "24",
+    "week": "23",
     "period": "115",
     "title": "HÌNH KHAI TRIỂN CỦA HÌNH KHỐI",
     "desc": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ (Trang 41).",
