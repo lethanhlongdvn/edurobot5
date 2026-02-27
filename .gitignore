@@ -1,6 +1,11 @@
 # Dependencies
 node_modules/
-_archive/node_modules/
+
+# Archive (local-only backup files)
+_archive/
+
+# Agent config (local-only)
+.agent/
 
 # OS files
 .DS_Store
