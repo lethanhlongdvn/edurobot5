@@ -45,7 +45,7 @@ export const lesson117 = {
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start">
+                <div class="grid grid-cols-1 gap-12 md:gap-16 items-start">
                     <div class="space-y-10">
                         <div class="p-8 md:p-10 bg-amber-50 rounded-[48px] border-4 border-amber-200 relative shadow-inner">
                             <p class="text-amber-800 font-bold text-xl md:text-2xl mb-8 italic text-center">
@@ -204,7 +204,12 @@ export const lesson117 = {
                 <div class="bg-gray-50 p-8 md:p-14 rounded-[56px] shadow-inner border-2 border-gray-100">
                     <p class="text-gray-400 font-black text-xs md:text-sm uppercase mb-6 tracking-widest text-center md:text-left">Lời giải & đáp số</p>
                     <div class="space-y-8">
-                        <textarea id="ans-117-2-text" rows="5" class="w-full p-8 md:p-10 text-2xl md:text-3xl font-bold text-gray-700 bg-white rounded-[40px] border-4 border-gray-100 shadow-xl focus:border-emerald-500 focus:ring-0 transition-all resize-none" placeholder="Cùng giải bài toán này nhé..."></textarea>
+                        <div class="relative group">
+                            <textarea id="ans-117-2-text" rows="5" class="w-full p-8 md:p-10 text-2xl md:text-3xl font-bold text-gray-700 bg-white rounded-[40px] border-4 border-gray-100 shadow-xl focus:border-emerald-500 focus:ring-0 transition-all resize-none" placeholder="Trình bày lời giải của em..."></textarea>
+                            <button onclick="startVoiceInput('ans-117-2-text')" class="absolute bottom-6 right-6 p-4 bg-emerald-100 text-emerald-600 rounded-2xl hover:bg-emerald-600 hover:text-white transition-all shadow-lg active:scale-90 group-hover:block sm:hidden md:block">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                            </button>
+                        </div>
                         
                         <div class="flex flex-col xl:flex-row items-stretch gap-8">
                             <div class="flex-1 bg-white p-8 md:p-10 rounded-[40px] shadow-xl border-4 border-gray-50 flex items-center justify-between gap-6">
@@ -213,7 +218,7 @@ export const lesson117 = {
                             </div>
                             
                             <button id="btn-submit-117" onclick="submit117()" class="xl:w-[350px] bg-emerald-600 hover:bg-emerald-700 text-white p-8 md:p-10 rounded-[40px] font-black text-3xl md:text-4xl shadow-2xl shadow-emerald-200 active:scale-95 transition-all flex justify-center items-center gap-6 group">
-                                <span class="tracking-widest">NỘP BÀI</span>
+                                <span class="tracking-widest capitalize">Nộp Bài</span>
                                 <svg class="w-10 h-10 group-hover:translate-x-3 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </button>
                         </div>
@@ -222,77 +227,141 @@ export const lesson117 = {
             </div>
 
             <script>
-                window.submit117 = function() {
+                /**
+                 * Chấm điểm tự động cho Bài 117
+                 */
+                window.submit117 = async function() {
                     const a1a = document.getElementById('ans-117-1a').value;
                     const a1b = document.getElementById('ans-117-1b').value;
                     const a2n = document.getElementById('ans-117-2-num').value;
                     const a2t = document.getElementById('ans-117-2-text').value;
 
                     if (!a1a || !a1b || !a2n) {
-                        alert("Em hãy hoàn thành các ô trống trước khi nộp bài nhé!");
+                        alert("Thầy E nhắc bé: Hãy hoàn thành đủ các ô đáp số trước khi nộp bài nhé! ✨");
                         return;
                     }
 
-                    let score = 0;
+                    // Vô hiệu hóa nút và hiển thị trạng thái đang chấm
+                    const btn = document.getElementById('btn-submit-117');
+                    const originalContent = btn.innerHTML;
+                    btn.disabled = true;
+                    btn.innerHTML = `< span class= "animate-pulse" > ĐANG CHẤM...</span> `;
+
                     let feedback = "";
+                    let score = 0;
 
-                    // Check 1a: (7+5)*2*4 = 96
-                    if (parseInt(a1a) === 96) { score += 3.33; feedback += "✅ Bài 1a đúng! "; } 
-                    else { feedback += "❌ Bài 1a chưa đúng (Gợi ý: (7+5)x2x4). "; }
+                    // 1. Chấm Bài 1a (30%)
+                    if (parseInt(a1a) === 96) { 
+                        score += 3; 
+                        feedback += "⭐ Bài 1a xuất sắc!\\n"; 
+                    } else { 
+                        feedback += "❌ Bài 1a chưa đúng (7 + 5) x 2 x 4 = 96 dm².\\n"; 
+                    }
 
-                    // Check 1b: (6.5+3.5)*2*5 = 100
-                    if (parseFloat(a1b) === 100) { score += 3.33; feedback += "✅ Bài 1b đúng! "; }
-                    else { feedback += "❌ Bài 1b chưa đúng. "; }
+                    // 2. Chấm Bài 1b (30%)
+                    if (parseFloat(a1b) === 100) { 
+                        score += 3; 
+                        feedback += "⭐ Bài 1b chính xác!\\n"; 
+                    } else { 
+                        feedback += "❌ Bài 1b (6,5 + 3,5) x 2 x 5 = 100 cm².\\n"; 
+                    }
 
-                    // Check 2: (10+4)*2*1.5 = 42
-                    if (parseFloat(a2n) === 42) { score += 3.34; feedback += "✅ Bài 2 đúng!"; }
-                    else { feedback += "❌ Bài 2 chưa đúng (Đáp số đúng là 42 m²)."; }
+                    // 3. Chấm Bài 2 (40%) - Kết hợp AI chấm nội dung và số học
+                    const isMathCorrect = parseFloat(a2n) === 42;
+                    let aiFeedback = "";
+                    
+                    if (isMathCorrect) {
+                        score += 2; // Điểm đáp số đúng
+                        if (window.checkAIExplanation) {
+                            const aiResult = await window.checkAIExplanation(
+                                a2t, 
+                                "Tính diện tích xung quanh bể bơi dài 10m, rộng 4m, sâu 1.5m. Đáp số đúng phải là 42 m2. Kiểm tra xem lời giải và phép tính có hợp lý không."
+                            );
+                            if (aiResult.isCorrect) {
+                                score += 2;
+                                aiFeedback = "💎 Lời giải bài 2 rất tốt: " + aiResult.comment;
+                            } else {
+                                aiFeedback = "⚠️ Đáp số bài 2 đúng nhưng lời giải cần xem lại nhé: " + aiResult.comment;
+                            }
+                        } else {
+                            score += 2;
+                            aiFeedback = "✅ Đáp số bài 2 chính xác!";
+                        }
+                    } else {
+                        aiFeedback = "❌ Đáp số bài 2 chưa đúng (10 + 4) x 2 x 1,5 = 42 m².";
+                    }
+                    
+                    feedback += aiFeedback;
 
+                    // Tổng hợp kết quả
                     const finalScore = Math.round(score);
-                    const status = finalScore >= 7 ? "XS" : (finalScore >= 5 ? "Đ" : "CĐ");
+                    const status = finalScore >= 8 ? "XS" : (finalScore >= 5 ? "Đ" : "CĐ");
 
                     if (window.submitMathLesson) {
-                        const report = \`Bài 1a: \${a1a}\\nBài 1b: \${a1b}\\nBài 2 (Lời giải): \${a2t}\\nSố đo: \${a2n}\`;
+                        const report = \`Bài 1a: \${a1a}\\nBài 1b: \${a1b}\\nBể bơi (Số): \${a2n}\\nBể bơi (Lời giải): \${a2t}\`;
                         window.submitMathLesson(report, status, "btn-submit-117");
-                        alert(feedback + "\\n\\nĐiểm của em: " + finalScore + "/10");
+                    }
+
+                    alert(feedback + "\\n\\nĐiểm của bé: " + finalScore + "/10");
+                    
+                    // Khôi phục trạng thái nút
+                    btn.disabled = false;
+                    btn.innerHTML = originalContent;
+                };
+
+                /**
+                 * Giả lập ghi âm (Voice Input)
+                 */
+                window.startVoiceInput = function(targetId) {
+                    if (window.eduRobotVoice) {
+                        window.eduRobotVoice(targetId);
+                    } else {
+                        alert("Tính năng Microphone đang được khởi động... Bé hãy nhấn lại sau nhé! 🎤");
+                        // Thử kích hoạt SpeechRecognition cơ bản nếu có
+                        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+                        recognition.lang = 'vi-VN';
+                        recognition.onresult = (event) => {
+                            document.getElementById(targetId).value = event.results[0][0].transcript;
+                        };
+                        recognition.start();
                     }
                 };
             </script>
         </div>
     `,
-    "quizPool": [
-        {
-            "question": "Công thức tính diện tích xung quanh của hình hộp chữ nhật là:",
-            "options": [
-                "S = (a + b) × 2 × h",
-                "S = a × b × h",
-                "S = (a + b) × h",
-                "S = a × b × 2"
-            ],
-            "answer": 0,
-            "level": 1
-        },
-        {
-            "question": "Một hình hộp chữ nhật có chu vi đáy là 20cm, chiều cao 5cm. Diện tích xung quanh là:",
-            "options": [
-                "50 cm²",
-                "100 cm²",
-                "100 cm",
-                "25 cm²"
-            ],
-            "answer": 1,
-            "level": 1
-        },
-        {
-            "question": "Diện tích xung quanh là tổng diện tích của mấy mặt bên?",
-            "options": [
-                "2 mặt",
-                "4 mặt",
-                "6 mặt",
-                "5 mặt"
-            ],
-            "answer": 1,
-            "level": 1
-        }
-    ]
+"quizPool": [
+    {
+        "question": "Công thức tính diện tích xung quanh của hình hộp chữ nhật là:",
+        "options": [
+            "S = (a + b) × 2 × h",
+            "S = a × b × h",
+            "S = (a + b) × h",
+            "S = a × b × 2"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Một hình hộp chữ nhật có chu vi đáy là 20cm, chiều cao 5cm. Diện tích xung quanh là:",
+        "options": [
+            "50 cm²",
+            "100 cm²",
+            "100 cm",
+            "25 cm²"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Diện tích xung quanh là tổng diện tích của mấy mặt bên?",
+        "options": [
+            "2 mặt",
+            "4 mặt",
+            "6 mặt",
+            "5 mặt"
+        ],
+        "answer": 1,
+        "level": 1
+    }
+]
 };
