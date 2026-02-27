@@ -297,8 +297,8 @@ export const lesson116 = {
                         </div>
 
                         <!-- 5. Mặt Vàng -->
-                        <div id="cut-yellow" onclick="toggleCut('yellow')" class="cut-opt w-12 h-32 bg-[#fde047] border-2 border-[#a16207] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                            <span class="text-[#a16207] font-bold text-[10px] pointer-events-none">Vàng</span>
+                        <div id="cut-yellow" onclick="toggleCut('yellow')" class="cut-opt w-16 h-32 bg-[#fde047] border-2 border-[#a16207] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <span class="text-[#a16207] font-bold text-xs pointer-events-none">Vàng</span>
                             <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-xl">✕</div>
                         </div>
                     </div>
@@ -392,7 +392,8 @@ export const lesson116 = {
                 window.check116B4 = function() {
                     var sp = document.getElementById('r-116-4');
                     var retryBtn = document.getElementById('retry-116-4');
-                    if (window.lastCut === 'green') {
+                    // Correct: EITHER green OR yellow
+                    if (window.lastCut === 'green' || window.lastCut === 'yellow') {
                         sp.textContent = 'Đ'; sp.className = 'font-black text-4xl text-emerald-600';
                     } else {
                         sp.textContent = 'S'; sp.className = 'font-black text-4xl text-red-600';
