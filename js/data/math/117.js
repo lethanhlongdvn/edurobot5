@@ -53,18 +53,15 @@ export const lesson117 = {
                             </p>
                             <div class="flex justify-center p-6 md:p-10 bg-white/70 rounded-[40px] shadow-sm">
                                 <svg viewBox="0 0 400 150" class="w-full h-auto drop-shadow-xl">
-                                    <!-- Net of lateral faces - increased height from 40 to 60 -->
                                     <rect x="20" y="20" width="80" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
                                     <rect x="100" y="20" width="100" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
                                     <rect x="200" y="20" width="80" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
                                     <rect x="280" y="20" width="100" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
-                                    <!-- Labels - increased font size -->
                                     <text x="60" y="105" text-anchor="middle" class="text-[18px] font-black fill-amber-700">4m</text>
                                     <text x="150" y="105" text-anchor="middle" class="text-[18px] font-black fill-amber-700">5m</text>
                                     <text x="240" y="105" text-anchor="middle" class="text-[18px] font-black fill-amber-700">4m</text>
                                     <text x="330" y="105" text-anchor="middle" class="text-[18px] font-black fill-amber-700">5m</text>
                                     <text x="390" y="55" text-anchor="start" class="text-[18px] font-black fill-blue-700">2m</text>
-                                    <!-- Brace for 2m height -->
                                     <line x1="385" y1="20" x2="385" y2="80" stroke="#ca8a04" stroke-width="2" />
                                     <line x1="380" y1="20" x2="390" y2="20" stroke="#ca8a04" stroke-width="2" />
                                     <line x1="380" y1="80" x2="390" y2="80" stroke="#ca8a04" stroke-width="2" />
@@ -124,7 +121,6 @@ export const lesson117 = {
             <!-- 🤖 Thầy E hướng dẫn -->
             [[TUTOR|math-50-intro|Các em hãy nhớ: Muốn tính diện tích xung quanh, mình cần tìm Chu vi đáy trước rồi mới nhân cho Chiều cao nhé! Phải cùng đơn vị đo đấy nha!]]
         </div>
-
     `,
     "practice": `
         <div class="space-y-12 md:space-y-20">
@@ -227,9 +223,6 @@ export const lesson117 = {
             </div>
 
             <script>
-                /**
-                 * Chấm điểm tự động cho Bài 117
-                 */
                 window.submit117 = async function() {
                     const a1a = document.getElementById('ans-117-1a').value;
                     const a1b = document.getElementById('ans-117-1b').value;
@@ -241,16 +234,14 @@ export const lesson117 = {
                         return;
                     }
 
-                    // Vô hiệu hóa nút và hiển thị trạng thái đang chấm
                     const btn = document.getElementById('btn-submit-117');
                     const originalContent = btn.innerHTML;
                     btn.disabled = true;
-                    btn.innerHTML = `< span class= "animate-pulse" > ĐANG CHẤM...</span> `;
+                    btn.innerHTML = \`<span class="animate-pulse">ĐANG CHẤM...</span>\`;
 
                     let feedback = "";
                     let score = 0;
 
-                    // 1. Chấm Bài 1a (30%)
                     if (parseInt(a1a) === 96) { 
                         score += 3; 
                         feedback += "⭐ Bài 1a xuất sắc!\\n"; 
@@ -258,7 +249,6 @@ export const lesson117 = {
                         feedback += "❌ Bài 1a chưa đúng (7 + 5) x 2 x 4 = 96 dm².\\n"; 
                     }
 
-                    // 2. Chấm Bài 1b (30%)
                     if (parseFloat(a1b) === 100) { 
                         score += 3; 
                         feedback += "⭐ Bài 1b chính xác!\\n"; 
@@ -266,12 +256,11 @@ export const lesson117 = {
                         feedback += "❌ Bài 1b (6,5 + 3,5) x 2 x 5 = 100 cm².\\n"; 
                     }
 
-                    // 3. Chấm Bài 2 (40%) - Kết hợp AI chấm nội dung và số học
                     const isMathCorrect = parseFloat(a2n) === 42;
                     let aiFeedback = "";
                     
                     if (isMathCorrect) {
-                        score += 2; // Điểm đáp số đúng
+                        score += 2;
                         if (window.checkAIExplanation) {
                             const aiResult = await window.checkAIExplanation(
                                 a2t, 
@@ -292,76 +281,71 @@ export const lesson117 = {
                     }
                     
                     feedback += aiFeedback;
-
-                    // Tổng hợp kết quả
                     const finalScore = Math.round(score);
                     const status = finalScore >= 8 ? "XS" : (finalScore >= 5 ? "Đ" : "CĐ");
 
                     if (window.submitMathLesson) {
-                        const report = \`Bài 1a: \${a1a}\\nBài 1b: \${a1b}\\nBể bơi (Số): \${a2n}\\nBể bơi (Lời giải): \${a2t}\`;
+                        const report = "Bài 1a: " + a1a + "\\nBài 1b: " + a1b + "\\nBể bơi (Số): " + a2n + "\\nBể bơi (Lời giải): " + a2t;
                         window.submitMathLesson(report, status, "btn-submit-117");
                     }
 
                     alert(feedback + "\\n\\nĐiểm của bé: " + finalScore + "/10");
-                    
-                    // Khôi phục trạng thái nút
                     btn.disabled = false;
                     btn.innerHTML = originalContent;
                 };
 
-                /**
-                 * Giả lập ghi âm (Voice Input)
-                 */
                 window.startVoiceInput = function(targetId) {
                     if (window.eduRobotVoice) {
                         window.eduRobotVoice(targetId);
                     } else {
                         alert("Tính năng Microphone đang được khởi động... Bé hãy nhấn lại sau nhé! 🎤");
-                        // Thử kích hoạt SpeechRecognition cơ bản nếu có
-                        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-                        recognition.lang = 'vi-VN';
-                        recognition.onresult = (event) => {
-                            document.getElementById(targetId).value = event.results[0][0].transcript;
-                        };
-                        recognition.start();
+                        const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                        if (Recognition) {
+                            const recognition = new Recognition();
+                            recognition.lang = 'vi-VN';
+                            recognition.onresult = (event) => {
+                                document.getElementById(targetId).value = event.results[0][0].transcript;
+                            };
+                            recognition.start();
+                        }
                     }
                 };
             </script>
         </div>
     `,
-"quizPool": [
-    {
-        "question": "Công thức tính diện tích xung quanh của hình hộp chữ nhật là:",
-        "options": [
-            "S = (a + b) × 2 × h",
-            "S = a × b × h",
-            "S = (a + b) × h",
-            "S = a × b × 2"
-        ],
-        "answer": 0,
-        "level": 1
-    },
-    {
-        "question": "Một hình hộp chữ nhật có chu vi đáy là 20cm, chiều cao 5cm. Diện tích xung quanh là:",
-        "options": [
-            "50 cm²",
-            "100 cm²",
-            "100 cm",
-            "25 cm²"
-        ],
-        "answer": 1,
-        "level": 1
-    },
-    {
-        "question": "Diện tích xung quanh là tổng diện tích của mấy mặt bên?",
-        "options": [
-            "2 mặt",
-            "4 mặt",
-            "6 mặt",
-            "5 mặt"
-        ],
-        "answer": 1,
-        "level": 1
-    }
-]
+    "quizPool": [
+        {
+            "question": "Công thức tính diện tích xung quanh của hình hộp chữ nhật là:",
+            "options": [
+                "S = (a + b) × 2 × h",
+                "S = a × b × h",
+                "S = (a + b) × h",
+                "S = a × b × 2"
+            ],
+            "answer": 0,
+            "level": 1
+        },
+        {
+            "question": "Một hình hộp chữ nhật có chu vi đáy là 20cm, chiều cao 5cm. Diện tích xung quanh là:",
+            "options": [
+                "50 cm²",
+                "100 cm²",
+                "100 cm",
+                "25 cm²"
+            ],
+            "answer": 1,
+            "level": 1
+        },
+        {
+            "question": "Diện tích xung quanh là tổng diện tích của mấy mặt bên?",
+            "options": [
+                "2 mặt",
+                "4 mặt",
+                "6 mặt",
+                "5 mặt"
+            ],
+            "answer": 1,
+            "level": 1
+        }
+    ]
 };
