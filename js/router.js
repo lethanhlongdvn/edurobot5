@@ -342,10 +342,6 @@ export const router = {
         } else if (tabId === 'practice') {
             html = `
                 <div class="glass-card rounded-[40px] p-8 md:p-12 bg-white min-h-[500px] animate-fade-in text-gray-700">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="w-1.5 h-8 bg-emerald-500 rounded-full"></div>
-                        <h2 class="text-2xl font-black text-gray-900 m-0">Bài tập Luyện tập</h2>
-                    </div>
                     <div class="space-y-6">
                         ${UI.parseTutor(lesson.practice || UI.renderEmptyPractice())}
                     </div>
