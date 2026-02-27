@@ -1,5 +1,4 @@
 export const lesson113 = {
-
     "topic": "Hình học và Đo lường",
     "week": "23",
     "period": "113",
@@ -351,50 +350,32 @@ export const lesson113 = {
             <script>
                 window.submitAllPractice113 = function () {
                     // Collect all values
-                    const b1a = document.getElementById('input-b113-1-a')?.value || "";
-                    const b1b = document.getElementById('input-b113-1-b')?.value || "";
-                    const b1c = document.getElementById('input-b113-1-c')?.value || "";
-                    const b1d = document.getElementById('input-b113-1-d')?.value || "";
+                    const b1a = document.getElementById('input-b113-1-a') ? document.getElementById('input-b113-1-a').value : "";
+                    const b1b = document.getElementById('input-b113-1-b') ? document.getElementById('input-b113-1-b').value : "";
+                    const b1c = document.getElementById('input-b113-1-c') ? document.getElementById('input-b113-1-c').value : "";
+                    const b1d = document.getElementById('input-b113-1-d') ? document.getElementById('input-b113-1-d').value : "";
                     
                     const b2 = window.b113_ans_2 || "Chưa chọn";
                     
-                    const b3 = document.getElementById('b113-3-ans')?.value || "";
+                    const b3 = document.getElementById('b113-3-ans') ? document.getElementById('b113-3-ans').value : "";
                     
-                    const b4_a1 = document.getElementById('input-b113-4-a1')?.value || "";
-                    const b4_a2 = document.getElementById('input-b113-4-a2')?.value || "";
-                    const b4_b1 = document.getElementById('input-b113-4-b1')?.value || "";
-                    const b4_b2 = document.getElementById('input-b113-4-b2')?.value || "";
-                    const b4_c1 = document.getElementById('input-b113-4-c1')?.value || "";
-                    const b4_c2 = document.getElementById('input-b113-4-c2')?.value || "";
+                    const b4_a1 = document.getElementById('input-b113-4-a1') ? document.getElementById('input-b113-4-a1').value : "";
+                    const b4_a2 = document.getElementById('input-b113-4-a2') ? document.getElementById('input-b113-4-a2').value : "";
+                    const b4_b1 = document.getElementById('input-b113-4-b1') ? document.getElementById('input-b113-4-b1').value : "";
+                    const b4_b2 = document.getElementById('input-b113-4-b2') ? document.getElementById('input-b113-4-b2').value : "";
+                    const b4_c1 = document.getElementById('input-b113-4-c1') ? document.getElementById('input-b113-4-c1').value : "";
+                    const b4_c2 = document.getElementById('input-b113-4-c2') ? document.getElementById('input-b113-4-c2').value : "";
                     
-                    const b5 = document.getElementById('b113-5-ans')?.value || "";
+                    const b5 = document.getElementById('b113-5-ans') ? document.getElementById('b113-5-ans').value : "";
                     
-                    const fullContent = \`
-BÀI 48 - LUYỆN TẬP CHUNG (Tiết 113)
-=====================================
-[BÀI 1: ĐỌC VIẾT]
-- 13,05 m³: \${b1a}
-- 0,857 m³: \${b1b}
-- 821 dm³: \${b1c}
-- 100,5 cm³: \${b1d}
+                    const header = "BÀI 48 - LUYỆN TẬP CHUNG (Tiết 113)\\n=====================================";
+                    const section1 = "\\n[BÀI 1: ĐỌC VIẾT]\\n- 13,05 m3: " + b1a + "\\n- 0,857 m3: " + b1b + "\\n- 821 dm3: " + b1c + "\\n- 100,5 cm3: " + b1d;
+                    const section2 = "\\n\\n[BÀI 2: ƯỚC LƯỢNG]\\n- Kết quả chọn: " + b2;
+                    const section3 = "\\n\\n[BÀI 3: ĐẾM KHỐI]\\n- Thể tích đếm được: " + b3 + " cm3";
+                    const section4 = "\\n\\n[BÀI 4: ĐỔI ĐƠN VỊ]\\n- 5 m3 = " + b4_a1 + " dm3\\n- 480 dm3 = " + b4_a2 + " m3\\n- 0,25 m3 = " + b4_b1 + " cm3\\n- 5 000 cm3 = " + b4_b2 + " m3\\n- 1,9 dm3 = " + b4_c1 + " cm3\\n- 2 650 cm3 = " + b4_c2 + " dm3";
+                    const section5 = "\\n\\n[BÀI 5: GIẢI TOÁN]\\n- Số hộp xếp được: " + b5 + " hộp\\n=====================================";
 
-[BÀI 2: ƯỚC LƯỢNG]
-- Kết quả chọn: \${b2}
-
-[BÀI 3: ĐẾM KHỐI]
-- Thể tích đếm được: \${b3} cm³
-
-[BÀI 4: ĐỔI ĐƠN VỊ]
-- 5 m³ = \${b4_a1} dm³
-- 480 dm³ = \${b4_a2} m³
-- 0,25 m³ = \${b4_b1} cm³
-- 5 000 cm³ = \${b4_b2} m³
-- 1,9 dm³ = \${b4_c1} cm³
-- 2 650 cm³ = \${b4_c2} dm³
-
-[BÀI 5: GIẢI TOÁN]
-- Số hộp xếp được: \${b5} hộp
-=====================================\`;
+                    const fullContent = header + section1 + section2 + section3 + section4 + section5;
                     
                     if (window.submitMathLesson) {
                         window.submitMathLesson(fullContent, "Tổng hợp Bài 113", "btn-submit-all-practice-113");
@@ -403,11 +384,10 @@ BÀI 48 - LUYỆN TẬP CHUNG (Tiết 113)
                     }
                 };
             </script>
-        </div>\`, 
+        </div>`,
     "quizPool": [
         { "question": "Số đo 13,05 m³ viết bằng chữ là:", "options": ["Mười ba phẩy không năm mét khối", "Mười ba nghìn không trăm linh năm mét khối", "Mười ba phẩy năm mét khối", "Mười ba phẩy không không năm mét khối"], "answer": 0, "level": 1 },
         { "question": "Điền số thích hợp: 0,5 m³ = ... dm³", "options": ["5", "50", "500", "5000"], "answer": 2, "level": 2 },
         { "question": "Lớp học có thể tích khoảng 150 ... (chọn đơn vị phù hợp)", "options": ["cm³", "dm³", "m³", "lít"], "answer": 2, "level": 2 }
     ]
-
 }; 
