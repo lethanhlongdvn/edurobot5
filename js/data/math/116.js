@@ -258,45 +258,46 @@ export const lesson116 = {
                 </p>
                 
                 <div class="bg-slate-50 rounded-[40px] p-8 md:p-16 flex justify-center overflow-x-auto">
-                    <div class="flex items-end">
+                    <div class="flex items-center">
                         <!-- 1. Mặt Xanh lá -->
-                        <div id="cut-green" onclick="toggleCut('green')" class="cut-opt w-16 h-32 bg-[#22c55e] border-2 border-[#15803d] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center mb-16">
+                        <div id="cut-green" onclick="toggleCut('green')" class="cut-opt w-16 h-32 bg-[#22c55e] border-2 border-[#15803d] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
                             <span class="text-white font-bold text-xs pointer-events-none">Xanh lá</span>
                             <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-2xl">✕</div>
                         </div>
 
-                        <!-- 2. Cột Xanh dương + Trắng -->
+                        <!-- 2. Cột chính (Tím - Xanh dương - Trắng) -->
                         <div class="flex flex-col items-center">
-                            <div id="cut-blue" onclick="toggleCut('blue')" class="cut-opt w-32 h-32 bg-[#3b82f6] border-2 border-[#1d4ed8] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <!-- Mặt Tím (Gắn vào Xanh dương) -->
+                            <div id="cut-purple" onclick="toggleCut('purple')" class="cut-opt w-32 h-16 bg-[#a855f7] border-2 border-[#7e22ce] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center mb-[-2px]">
+                                <span class="text-white font-bold text-xs pointer-events-none">Tím</span>
+                                <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-2xl">✕</div>
+                            </div>
+                            <!-- Mặt Xanh dương -->
+                            <div id="cut-blue" onclick="toggleCut('blue')" class="cut-opt w-32 h-32 bg-[#3b82f6] border-2 border-[#1d4ed8] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center z-10">
                                 <span class="text-white font-bold text-xs pointer-events-none">Xanh dương</span>
                                 <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-3xl">✕</div>
                             </div>
-                            <div id="cut-white" onclick="toggleCut('white')" class="cut-opt w-32 h-16 bg-white border-2 border-gray-400 cursor-pointer transition-all hover:bg-gray-50 relative flex items-center justify-center">
+                            <!-- Mặt Trắng (Gắn vào Xanh dương) -->
+                            <div id="cut-white" onclick="toggleCut('white')" class="cut-opt w-32 h-16 bg-white border-2 border-gray-400 cursor-pointer transition-all hover:bg-gray-50 relative flex items-center justify-center mt-[-2px]">
                                 <span class="text-gray-500 font-bold text-xs pointer-events-none">Trắng</span>
                                 <div class="x-mark hidden absolute inset-0 bg-gray-200/80 flex items-center justify-center text-red-600 font-black text-3xl">✕</div>
                             </div>
                         </div>
 
-                        <!-- 3. Cột Tím + Đỏ -->
-                        <div class="flex flex-col items-center">
-                            <div id="cut-purple" onclick="toggleCut('purple')" class="cut-opt w-16 h-16 bg-[#a855f7] border-2 border-[#7e22ce] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                                <span class="text-white font-bold text-xs pointer-events-none">Tím</span>
-                                <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-2xl">✕</div>
-                            </div>
-                            <div id="cut-red" onclick="toggleCut('red')" class="cut-opt w-16 h-32 bg-[#ef4444] border-2 border-[#b91c1c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
-                                <span class="text-white font-bold text-xs pointer-events-none">Đỏ</span>
-                                <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-xl">✕</div>
-                            </div>
+                        <!-- 3. Mặt Đỏ -->
+                        <div id="cut-red" onclick="toggleCut('red')" class="cut-opt w-16 h-32 bg-[#ef4444] border-2 border-[#b91c1c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
+                            <span class="text-white font-bold text-xs pointer-events-none">Đỏ</span>
+                            <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-xl">✕</div>
                         </div>
 
                         <!-- 4. Mặt Cam -->
-                        <div id="cut-orange" onclick="toggleCut('orange')" class="cut-opt w-32 h-32 bg-[#f97316] border-2 border-[#c2410c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center mb-16">
+                        <div id="cut-orange" onclick="toggleCut('orange')" class="cut-opt w-32 h-32 bg-[#f97316] border-2 border-[#c2410c] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
                             <span class="text-white font-bold text-xs pointer-events-none">Cam</span>
                             <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-3xl">✕</div>
                         </div>
 
                         <!-- 5. Mặt Vàng -->
-                        <div id="cut-yellow" onclick="toggleCut('yellow')" class="cut-opt w-12 h-32 bg-[#fde047] border-2 border-[#a16207] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center mb-16">
+                        <div id="cut-yellow" onclick="toggleCut('yellow')" class="cut-opt w-12 h-32 bg-[#fde047] border-2 border-[#a16207] cursor-pointer transition-all hover:brightness-110 relative flex items-center justify-center">
                             <span class="text-[#a16207] font-bold text-[10px] pointer-events-none">Vàng</span>
                             <div class="x-mark hidden absolute inset-0 bg-white/80 flex items-center justify-center text-red-600 font-black text-xl">✕</div>
                         </div>
