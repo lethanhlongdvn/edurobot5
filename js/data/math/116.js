@@ -182,8 +182,8 @@ export const lesson116 = {
                 <p class="text-xl text-gray-600 mb-8">Hãy chọn những hình có thể gấp thành hình lập phương (có thể chọn nhiều hình):</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <!-- Hình A -->
-                    <button onclick="toggle116B3(this, 'A')" id="b116-3a" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[48px] p-12 transition-all hover:translate-y-[-8px]">
-                        <div class="mb-8 flex justify-center h-80 items-center">
+                    <button onclick="toggle116B3(this, 'A')" id="b116-3a" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[48px] p-8 transition-all hover:translate-y-[-8px]">
+                        <div class="mb-2 flex justify-center h-48 items-center">
                             <svg viewBox="0 0 140 120" class="w-full h-full max-w-[280px]">
                                 <rect x="40" y="10" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
                                 <rect x="20" y="30" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
@@ -201,8 +201,8 @@ export const lesson116 = {
                         </div>
                     </button>
                     <!-- Hình B -->
-                    <button onclick="toggle116B3(this, 'B')" id="b116-3b" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[48px] p-12 transition-all hover:translate-y-[-8px]">
-                        <div class="mb-8 flex justify-center h-80 items-center">
+                    <button onclick="toggle116B3(this, 'B')" id="b116-3b" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[48px] p-8 transition-all hover:translate-y-[-8px]">
+                        <div class="mb-2 flex justify-center h-48 items-center">
                             <svg viewBox="0 0 140 120" class="w-full h-full max-w-[280px]">
                                 <rect x="40" y="10" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
                                 <rect x="60" y="10" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
@@ -220,8 +220,8 @@ export const lesson116 = {
                         </div>
                     </button>
                     <!-- Hình C -->
-                    <button onclick="toggle116B3(this, 'C')" id="b116-3c" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[48px] p-12 transition-all hover:translate-y-[-8px]">
-                        <div class="mb-8 flex justify-center h-80 items-center">
+                    <button onclick="toggle116B3(this, 'C')" id="b116-3c" class="b116-3-opt group relative bg-gray-50 border-3 border-transparent rounded-[48px] p-8 transition-all hover:translate-y-[-8px]">
+                        <div class="mb-2 flex justify-center h-48 items-center">
                             <svg viewBox="0 0 140 120" class="w-full h-full max-w-[280px]">
                                 <rect x="20" y="10" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
                                 <rect x="40" y="10" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
