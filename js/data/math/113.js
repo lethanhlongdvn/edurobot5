@@ -38,37 +38,37 @@ export const lesson113 = {
             <!-- BÀI 1: BẢNG ĐỌC VIẾT -->
             <section class="bg-white rounded-[32px] p-6 md:p-10 shadow-lg border border-gray-100">
                 <div class="flex items-center gap-3 mb-8">
-                    <span class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md">1</span>
-                    <h4 class="text-2xl font-black text-gray-800">Hoàn thành bảng sau.</h4>
+                    <span class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black text-xl shadow-md">1</span>
+                    <h4 class="text-3xl font-black text-gray-800">Hoàn thành bảng sau.</h4>
                 </div>
                 <div class="overflow-x-auto">
-                    <table class="w-full border-collapse text-lg">
+                    <table class="w-full border-collapse text-xl">
                         <thead>
                             <tr>
-                                <th class="bg-red-50 text-red-700 font-black text-center py-4 px-6 border border-gray-200 w-[40%]">Đọc</th>
-                                <th class="bg-red-50 text-red-700 font-black text-center py-4 px-6 border border-gray-200 w-[40%]">Viết</th>
-                                <th class="bg-red-50 text-red-700 font-black text-center py-4 px-4 border border-gray-200 w-[20%]">Chấm</th>
+                                <th class="bg-red-50 text-red-700 font-black text-center py-5 px-6 border border-gray-200 w-[40%] text-2xl">Đọc</th>
+                                <th class="bg-red-50 text-red-700 font-black text-center py-5 px-6 border border-gray-200 w-[40%] text-2xl">Viết</th>
+                                <th class="bg-red-50 text-red-700 font-black text-center py-5 px-4 border border-gray-200 w-[20%] text-2xl">Chấm</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-semibold text-lg">Một trăm phẩy không năm mét khối</td>
-                                <td class="border border-gray-200 py-4 px-4"><input type="text" id="b113-t1-w1" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-xl text-blue-800 focus:border-blue-500 outline-none" placeholder="?"></td>
+                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-bold text-2xl">Một trăm phẩy không năm mét khối</td>
+                                <td class="border border-gray-200 py-4 px-4"><input type="text" id="b113-t1-w1" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-2xl text-blue-800 focus:border-blue-500 outline-none" placeholder="?"></td>
                                 <td class="border border-gray-200 text-center"><div class="flex items-center justify-center gap-2"><button onclick="c113('b113-t1-w1','100,05 m3','r1')" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button><span id="r1" class="font-black text-2xl"></span><button id="r1-retry" onclick="retry113('b113-t1-w1','r1')" class="hidden w-9 h-9 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button></div></td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-200 py-4 px-4"><input type="text" id="b113-t1-r2" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-xl text-blue-800 focus:border-blue-500 outline-none" placeholder="?"></td>
-                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-bold text-center text-xl">0,015 m³</td>
+                                <td class="border border-gray-200 py-4 px-4"><input type="text" id="b113-t1-r2" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-2xl text-blue-800 focus:border-blue-500 outline-none" placeholder="?"></td>
+                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-bold text-center text-2xl">0,015 m³</td>
                                 <td class="border border-gray-200 text-center"><div class="flex items-center justify-center gap-2"><button onclick="c113Read('b113-t1-r2','không phẩy không trăm mười lăm mét khối','r2')" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button><span id="r2" class="font-black text-2xl"></span><button id="r2-retry" onclick="retry113('b113-t1-r2','r2')" class="hidden w-9 h-9 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button></div></td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-semibold text-lg">Tám trăm hai mươi mốt đề-xi-mét khối</td>
-                                <td class="border border-gray-200 py-4 px-4"><input type="text" id="b113-t1-w3" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-xl text-blue-800 focus:border-blue-500 outline-none" placeholder="?"></td>
+                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-bold text-2xl">Tám trăm hai mươi mốt đề-xi-mét khối</td>
+                                <td class="border border-gray-200 py-4 px-4"><input type="text" id="b113-t1-w3" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-2xl text-blue-800 focus:border-blue-500 outline-none" placeholder="?"></td>
                                 <td class="border border-gray-200 text-center"><div class="flex items-center justify-center gap-2"><button onclick="c113('b113-t1-w3','821 dm3','r3')" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button><span id="r3" class="font-black text-2xl"></span><button id="r3-retry" onclick="retry113('b113-t1-w3','r3')" class="hidden w-9 h-9 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button></div></td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-200 py-4 px-4"><input type="text" id="b113-t1-r4" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-xl text-blue-800 focus:border-blue-500 outline-none" placeholder="?"></td>
-                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-bold text-center text-xl">100,2 cm³</td>
+                                <td class="border border-gray-200 py-4 px-4"><input type="text" id="b113-t1-r4" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-4 text-center font-bold text-2xl text-blue-800 focus:border-blue-500 outline-none" placeholder="?"></td>
+                                <td class="border border-gray-200 py-4 px-6 text-gray-700 font-bold text-center text-2xl">100,2 cm³</td>
                                 <td class="border border-gray-200 text-center"><div class="flex items-center justify-center gap-2"><button onclick="c113Read('b113-t1-r4','một trăm phẩy hai xăng-ti-mét khối','r4')" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button><span id="r4" class="font-black text-2xl"></span><button id="r4-retry" onclick="retry113('b113-t1-r4','r4')" class="hidden w-9 h-9 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button></div></td>
                             </tr>
                         </tbody>
@@ -110,16 +110,16 @@ export const lesson113 = {
             <!-- BÀI 3: ĐẾM KHỐI -->
             <section class="bg-white rounded-[32px] p-6 md:p-10 shadow-lg border border-gray-100">
                 <div class="flex items-center gap-3 mb-6">
-                    <span class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md">3</span>
-                    <h4 class="text-2xl font-black text-gray-800">Số ?</h4>
+                    <span class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black text-xl shadow-md">3</span>
+                    <h4 class="text-3xl font-black text-gray-800">Số ?</h4>
                 </div>
                 <div class="flex flex-col lg:flex-row items-center gap-10">
                     <div class="w-full lg:w-1/2">
-                        <p class="text-xl font-medium text-gray-700 mb-4">Rô-bốt đã xếp các hình lập phương 1 cm³ thành hình bên.</p>
+                        <p class="text-2xl font-medium text-gray-700 mb-4">Rô-bốt đã xếp các hình lập phương 1 cm³ thành hình bên.</p>
                         <div class="flex items-center gap-3 flex-wrap mb-2">
-                            <span class="text-xl font-bold text-gray-800">Thể tích của hình bên là:</span>
-                            <input type="number" id="b113-3-ans" class="w-24 bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-3 text-center text-2xl font-black text-blue-700 focus:border-blue-500 outline-none" placeholder="?">
-                            <span class="text-xl font-bold text-gray-800">cm³</span>
+                            <span class="text-2xl font-bold text-gray-800">Thể tích của hình bên là:</span>
+                            <input type="number" id="b113-3-ans" class="w-28 bg-gray-50 border-2 border-gray-200 rounded-xl py-3 px-3 text-center text-3xl font-black text-blue-700 focus:border-blue-500 outline-none" placeholder="?">
+                            <span class="text-2xl font-bold text-gray-800">cm³</span>
                             <button onclick="c113Num('b113-3-ans','44','r-b3')" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button>
                             <span id="r-b3" class="font-black text-2xl"></span>
                             <button id="r-b3-retry" onclick="retry113('b113-3-ans','r-b3')" class="hidden w-9 h-9 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button>
@@ -136,58 +136,58 @@ export const lesson113 = {
             <!-- BÀI 4: ĐỔI ĐƠN VỊ - THẲNG CỘT -->
             <section class="bg-white rounded-[32px] p-6 md:p-10 shadow-lg border border-gray-100">
                 <div class="flex items-center gap-3 mb-8">
-                    <span class="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md">4</span>
-                    <h4 class="text-2xl font-black text-gray-800">Số ?</h4>
+                    <span class="w-12 h-12 bg-purple-600 text-white rounded-xl flex items-center justify-center font-black text-xl shadow-md">4</span>
+                    <h4 class="text-3xl font-black text-gray-800">Số ?</h4>
                 </div>
                 <div class="overflow-x-auto">
-                    <table class="w-full border-collapse text-lg">
+                    <table class="w-full border-collapse text-2xl">
                         <tbody>
                             <tr>
                                 <td class="py-3 pr-2 text-right font-bold text-gray-700 whitespace-nowrap w-[30%]">a) 5 m³ =</td>
-                                <td class="py-3 w-[15%]"><input type="text" id="b113-4a1" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
+                                <td class="py-3 w-[15%]"><input type="text" id="b113-4a1" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-2xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
                                 <td class="py-3 pl-2 font-bold text-gray-700 w-[10%]">dm³</td>
                                 <td class="py-3 text-center w-[5%]"><button onclick="c113Num('b113-4a1','5000','r-4a1')" class="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button></td>
-                                <td class="py-3 w-[5%]"><span id="r-4a1" class="font-black text-xl"></span></td>
+                                <td class="py-3 w-[5%]"><span id="r-4a1" class="font-black text-2xl"></span></td>
                                 <td class="py-3 w-[3%]"><button id="r-4a1-retry" onclick="retry113('b113-4a1','r-4a1')" class="hidden w-8 h-8 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button></td>
                             </tr>
                             <tr>
                                 <td class="py-3 pr-2 text-right font-bold text-gray-700 whitespace-nowrap">480 dm³ =</td>
-                                <td class="py-3"><input type="text" id="b113-4a2" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
+                                <td class="py-3"><input type="text" id="b113-4a2" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-2xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
                                 <td class="py-3 pl-2 font-bold text-gray-700">m³</td>
                                 <td class="py-3 text-center"><button onclick="c113Num('b113-4a2','0,48','r-4a2')" class="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button></td>
-                                <td class="py-3"><span id="r-4a2" class="font-black text-xl"></span></td>
+                                <td class="py-3"><span id="r-4a2" class="font-black text-2xl"></span></td>
                                 <td class="py-3"><button id="r-4a2-retry" onclick="retry113('b113-4a2','r-4a2')" class="hidden w-8 h-8 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button></td>
                             </tr>
                             <tr>
                                 <td class="py-3 pr-2 text-right font-bold text-gray-700 whitespace-nowrap">b) 0,25 m³ =</td>
-                                <td class="py-3"><input type="text" id="b113-4b1" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
+                                <td class="py-3"><input type="text" id="b113-4b1" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-2xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
                                 <td class="py-3 pl-2 font-bold text-gray-700">cm³</td>
                                 <td class="py-3 text-center"><button onclick="c113Num('b113-4b1','250000','r-4b1')" class="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button></td>
-                                <td class="py-3"><span id="r-4b1" class="font-black text-xl"></span></td>
+                                <td class="py-3"><span id="r-4b1" class="font-black text-2xl"></span></td>
                                 <td class="py-3"><button id="r-4b1-retry" onclick="retry113('b113-4b1','r-4b1')" class="hidden w-8 h-8 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button></td>
                             </tr>
                             <tr>
                                 <td class="py-3 pr-2 text-right font-bold text-gray-700 whitespace-nowrap">5 000 cm³ =</td>
-                                <td class="py-3"><input type="text" id="b113-4b2" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
+                                <td class="py-3"><input type="text" id="b113-4b2" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-2xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
                                 <td class="py-3 pl-2 font-bold text-gray-700">m³</td>
                                 <td class="py-3 text-center"><button onclick="c113Num('b113-4b2','0,005','r-4b2')" class="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button></td>
-                                <td class="py-3"><span id="r-4b2" class="font-black text-xl"></span></td>
+                                <td class="py-3"><span id="r-4b2" class="font-black text-2xl"></span></td>
                                 <td class="py-3"><button id="r-4b2-retry" onclick="retry113('b113-4b2','r-4b2')" class="hidden w-8 h-8 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button></td>
                             </tr>
                             <tr>
                                 <td class="py-3 pr-2 text-right font-bold text-gray-700 whitespace-nowrap">c) 1,9 dm³ =</td>
-                                <td class="py-3"><input type="text" id="b113-4c1" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
+                                <td class="py-3"><input type="text" id="b113-4c1" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-2xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
                                 <td class="py-3 pl-2 font-bold text-gray-700">cm³</td>
                                 <td class="py-3 text-center"><button onclick="c113Num('b113-4c1','1900','r-4c1')" class="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button></td>
-                                <td class="py-3"><span id="r-4c1" class="font-black text-xl"></span></td>
+                                <td class="py-3"><span id="r-4c1" class="font-black text-2xl"></span></td>
                                 <td class="py-3"><button id="r-4c1-retry" onclick="retry113('b113-4c1','r-4c1')" class="hidden w-8 h-8 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button></td>
                             </tr>
                             <tr>
                                 <td class="py-3 pr-2 text-right font-bold text-gray-700 whitespace-nowrap">2 650 cm³ =</td>
-                                <td class="py-3"><input type="text" id="b113-4c2" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
+                                <td class="py-3"><input type="text" id="b113-4c2" class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl py-2 px-3 text-center font-bold text-2xl text-blue-700 focus:border-blue-500 outline-none" placeholder="?"></td>
                                 <td class="py-3 pl-2 font-bold text-gray-700">dm³</td>
                                 <td class="py-3 text-center"><button onclick="c113Num('b113-4c2','2,65','r-4c2')" class="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button></td>
-                                <td class="py-3"><span id="r-4c2" class="font-black text-xl"></span></td>
+                                <td class="py-3"><span id="r-4c2" class="font-black text-2xl"></span></td>
                                 <td class="py-3"><button id="r-4c2-retry" onclick="retry113('b113-4c2','r-4c2')" class="hidden w-8 h-8 bg-gray-200 hover:bg-gray-300 rounded-lg flex items-center justify-center transition-all active:scale-90"><svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button></td>
                             </tr>
                         </tbody>
