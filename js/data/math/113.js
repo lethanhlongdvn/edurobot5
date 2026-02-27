@@ -78,19 +78,19 @@ export const lesson113 = {
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Pair 1 -->
                     <div class="p-2 border-4 border-dashed border-blue-100 rounded-[48px]">
-                        [[MATH_EX|b113-1-a|?|Mười ba phẩy không năm mét khối|viết là|13,05 m3]]
+                        [[MATH_EX|b113-1-a|?|Tám trăm hai mươi mốt đề-xi-mét khối|viết là|821 dm3]]
                     </div>
                     <!-- Pair 2 -->
                     <div class="p-2 border-4 border-dashed border-pink-100 rounded-[48px]">
-                        [[READING_EX|b113-1-b|0,857 m³|Đo thể tích|đọc là|Không phẩy tám trăm năm mươi bảy mét khối]]
+                        [[READING_EX|b113-1-b|0,015 m³|Đo thể tích|đọc là|Không phẩy không trăm mười lăm mét khối]]
                     </div>
                     <!-- Pair 3 -->
                     <div class="p-2 border-4 border-dashed border-emerald-100 rounded-[48px]">
-                        [[MATH_EX|b113-1-c|?|Tám trăm hai mươi mốt đề-xi-mét khối|viết là|821 dm3]]
+                        [[MATH_EX|b113-1-c|?|Mười ba phẩy không năm mét khối|viết là|13,05 m3]]
                     </div>
                     <!-- Pair 4 -->
                     <div class="p-2 border-4 border-dashed border-indigo-100 rounded-[48px]">
-                        [[READING_EX|b113-1-d|100,5 cm³|Đo thể tích|đọc là|Một trăm phẩy năm xăng-ti-mét khối]]
+                        [[READING_EX|b113-1-d|100,2 cm³|Đo thể tích|đọc là|Một trăm phẩy hai xăng-ti-mét khối]]
                     </div>
                 </div>
             </section>
@@ -114,7 +114,7 @@ export const lesson113 = {
                         <div class="w-full lg:w-1/2 relative group">
                             <div class="absolute -inset-4 bg-gradient-to-tr from-blue-400 to-indigo-500 rounded-[40px] blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
                             <div class="relative bg-white p-4 rounded-[40px] border-2 border-blue-50 flex items-center justify-center">
-                                <img src="hinh_anh/113-bg-khoibang.png" alt="Khối băng to" class="max-w-full h-auto rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-[1.02]" 
+                                <img src="hinh_anh/113_bg_khoibang.png" alt="Khối băng to" class="max-w-full h-auto rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-[1.02]" 
                                     onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'%2360a5fa\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\\'/></svg>'">
                             </div>
                             <div class="mt-4 text-center">
@@ -181,7 +181,7 @@ export const lesson113 = {
                     <div class="flex flex-col lg:flex-row items-center gap-16">
                         <div class="w-full lg:w-1/2 flex flex-col items-center">
                             <div class="relative group bg-white p-8 rounded-[40px] shadow-2xl border-2 border-indigo-50">
-                                <img src="hinh_anh/113-b3.png" alt="Hình lập phương xếp" class="max-w-full h-auto object-contain hover:scale-110 transition-transform duration-700" 
+                                <img src="hinh_anh/113_b3.png" alt="Hình lập phương xếp" class="max-w-full h-auto object-contain hover:scale-110 transition-transform duration-700" 
                                     onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'%236366f1\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\\'/></svg>'">
                                 <div class="absolute -bottom-4 -left-4 bg-indigo-600 text-white px-4 py-2 rounded-2xl font-black text-xs">Mỗi khối nhỏ là 1 cm³</div>
                             </div>
@@ -301,7 +301,7 @@ export const lesson113 = {
                         <div class="w-full lg:w-1/3 flex justify-center items-center">
                             <div class="relative group">
                                 <div class="absolute inset-0 bg-orange-400 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                                <img src="hinh_anh/113-b5.png" alt="Rô bốt" class="relative max-w-full h-auto drop-shadow-2xl animate-float" 
+                                <img src="hinh_anh/113_b5.png" alt="Rô bốt" class="relative max-w-full h-auto drop-shadow-2xl animate-float" 
                                     onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' fill=\\'none\\' viewBox=\\'0 0 24 24\\' stroke=\\'%23f97316\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\\'/></svg>'">
                             </div>
                         </div>
@@ -369,7 +369,7 @@ export const lesson113 = {
                     const b5 = document.getElementById('b113-5-ans') ? document.getElementById('b113-5-ans').value : "";
                     
                     const header = "BÀI 48 - LUYỆN TẬP CHUNG (Tiết 113)\\n=====================================";
-                    const section1 = "\\n[BÀI 1: ĐỌC VIẾT]\\n- 13,05 m3: " + b1a + "\\n- 0,857 m3: " + b1b + "\\n- 821 dm3: " + b1c + "\\n- 100,5 cm3: " + b1d;
+                    const section1 = "\\n[BÀI 1: ĐỌC VIẾT]\\n- 821 dm3: " + b1a + "\\n- 0,015 m3: " + b1b + "\\n- 13,05 m3: " + b1c + "\\n- 100,2 cm3: " + b1d;
                     const section2 = "\\n\\n[BÀI 2: ƯỚC LƯỢNG]\\n- Kết quả chọn: " + b2;
                     const section3 = "\\n\\n[BÀI 3: ĐẾM KHỐI]\\n- Thể tích đếm được: " + b3 + " cm3";
                     const section4 = "\\n\\n[BÀI 4: ĐỔI ĐƠN VỊ]\\n- 5 m3 = " + b4_a1 + " dm3\\n- 480 dm3 = " + b4_a2 + " m3\\n- 0,25 m3 = " + b4_b1 + " cm3\\n- 5 000 cm3 = " + b4_b2 + " m3\\n- 1,9 dm3 = " + b4_c1 + " cm3\\n- 2 650 cm3 = " + b4_c2 + " dm3";
