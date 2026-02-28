@@ -1,6 +1,6 @@
 export const lesson116 = {
     "topic": "Hình học và Đo lường",
-    "week": "23",
+    "week": "24",
     "period": "116",
     "title": "LUYỆN TẬP",
     "desc": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ (Tiết 116 - Luyện tập - Trang 42-43).",
