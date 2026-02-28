@@ -38,65 +38,71 @@ export const lesson116 = {
                     <h4 class="text-3xl font-black text-gray-800">Chọn câu trả lời đúng.</h4>
                 </div>
                 <p class="text-2xl font-bold text-gray-700 mb-6 leading-relaxed">Hình bên là khai triển của hình nào dưới đây?</p>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <!-- 1. Ảnh Hình khai triển (Mẫu) -->
-                    <div class="bg-blue-50 rounded-4xl p-6 border border-blue-100 flex items-center justify-center min-h-[350px]">
-                        <svg viewBox="0 0 400 200" class="w-full h-auto">
-                            <!-- Hình chữ nhật khai triển -->
-                            <rect x="50" y="60" width="280" height="80" fill="#bae6fd" stroke="#0284c7" stroke-width="3" />
-                            <!-- Hai đáy tròn -->
-                            <circle cx="330" cy="30" r="30" fill="#fca5a5" stroke="#ef4444" stroke-width="3" />
-                            <circle cx="330" cy="170" r="30" fill="#fca5a5" stroke="#ef4444" stroke-width="3" />
-                            <!-- Kích thước minh họa -->
-                            <text x="190" y="105" text-anchor="middle" font-weight="bold" fill="#0369a1" font-size="20">Mặt bên</text>
-                        </svg>
+                <div class="space-y-8">
+                    <!-- Hàng 1: Ảnh Hình khai triển (Mẫu) - Full Width -->
+                    <div class="bg-blue-50 rounded-4xl p-8 border-2 border-blue-200 flex items-center justify-center min-h-[300px] shadow-inner">
+                        <div class="max-w-2xl w-full">
+                            <p class="text-center text-blue-800 font-black text-xl mb-4 uppercase tracking-widest">Hình khai triển mẫu</p>
+                            <svg viewBox="0 0 400 200" class="w-full h-auto drop-shadow-lg">
+                                <!-- Hình chữ nhật khai triển -->
+                                <rect x="50" y="60" width="280" height="80" fill="#bae6fd" stroke="#0284c7" stroke-width="3" />
+                                <!-- Hai đáy tròn -->
+                                <circle cx="330" cy="30" r="30" fill="#fca5a5" stroke="#ef4444" stroke-width="3" />
+                                <circle cx="330" cy="170" r="30" fill="#fca5a5" stroke="#ef4444" stroke-width="3" />
+                                <!-- Kích thước minh họa -->
+                                <text x="190" y="105" text-anchor="middle" font-weight="bold" fill="#0369a1" font-size="20">Mặt bên</text>
+                            </svg>
+                        </div>
                     </div>
 
-                    <!-- 2. Đáp án A -->
-                    <button onclick="check116B1(this, 'A')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-4xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
-                        <div class="bg-gray-50 p-6 rounded-3xl w-full flex justify-center h-[250px] items-center">
-                            <!-- A: Hình trụ cao gầy (Mới) -->
-                            <svg viewBox="0 0 100 200" class="w-24 h-56">
-                                <ellipse cx="50" cy="30" rx="25" ry="8" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
-                                <rect x="25" y="30" width="50" height="140" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
-                                <path d="M25 170 Q50 185 75 170" fill="none" stroke="#0284c7" stroke-width="2" />
-                                <ellipse cx="50" cy="170" rx="25" ry="8" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
-                            </svg>
-                        </div>
-                        <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600">A</span>
-                    </button>
+                    <!-- Hàng 2: Đáp án A, B, C (3 cột ngang) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Đáp án A -->
+                        <button onclick="check116B1(this, 'A')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-4xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
+                            <div class="bg-gray-50 p-6 rounded-3xl w-full flex justify-center h-[250px] items-center">
+                                <!-- A: Hình trụ cao gầy (Mới) -->
+                                <svg viewBox="0 0 100 200" class="w-24 h-56 drop-shadow-md">
+                                    <ellipse cx="50" cy="30" rx="25" ry="8" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
+                                    <rect x="25" y="30" width="50" height="140" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
+                                    <path d="M25 170 Q50 185 75 170" fill="none" stroke="#0284c7" stroke-width="2" />
+                                    <ellipse cx="50" cy="170" rx="25" ry="8" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
+                                </svg>
+                            </div>
+                            <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600 transition-colors">A</span>
+                        </button>
 
-                    <!-- 3. Đáp án B -->
-                    <button onclick="check116B1(this, 'B')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-4xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
-                        <div class="bg-gray-50 p-6 rounded-3xl w-full flex justify-center h-[250px] items-center">
-                            <!-- B: Hình trụ thấp -->
-                            <svg viewBox="0 0 100 150" class="w-32 h-32">
-                                <ellipse cx="50" cy="60" rx="45" ry="15" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
-                                <rect x="5" y="60" width="90" height="40" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
-                                <path d="M5 100 Q50 120 95 100" fill="none" stroke="#0284c7" stroke-width="2" />
-                                <ellipse cx="50" cy="100" rx="45" ry="15" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
-                            </svg>
-                        </div>
-                        <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600">B</span>
-                    </button>
+                        <!-- Đáp án B -->
+                        <button onclick="check116B1(this, 'B')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-4xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
+                            <div class="bg-gray-50 p-6 rounded-3xl w-full flex justify-center h-[250px] items-center">
+                                <!-- B: Hình trụ thấp -->
+                                <svg viewBox="0 0 100 150" class="w-32 h-32 drop-shadow-md">
+                                    <ellipse cx="50" cy="60" rx="45" ry="15" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
+                                    <rect x="5" y="60" width="90" height="40" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
+                                    <path d="M5 100 Q50 120 95 100" fill="none" stroke="#0284c7" stroke-width="2" />
+                                    <ellipse cx="50" cy="100" rx="45" ry="15" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
+                                </svg>
+                            </div>
+                            <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600 transition-colors">B</span>
+                        </button>
 
-                    <!-- 4. Đáp án C -->
-                    <button onclick="check116B1(this, 'C')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-4xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
-                        <div class="bg-gray-50 p-6 rounded-3xl w-full flex justify-center h-[250px] items-center">
-                            <!-- C: Hình trụ nằm ngang dài (Mới) -->
-                            <svg viewBox="0 0 220 100" class="w-48 h-28">
-                                <ellipse cx="30" cy="50" rx="10" ry="30" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
-                                <rect x="30" y="20" width="160" height="60" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
-                                <path d="M190 20 Q205 50 190 80" fill="none" stroke="#0284c7" stroke-width="2" />
-                                <ellipse cx="190" cy="50" rx="10" ry="30" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
-                            </svg>
-                        </div>
-                        <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600">C</span>
-                    </button>
-                    
-                    <div class="col-span-full mt-4 flex items-center gap-4">
+                        <!-- Đáp án C -->
+                        <button onclick="check116B1(this, 'C')" class="b116-b1-opt bg-white border-3 border-gray-100 p-6 rounded-4xl hover:border-blue-400 transition-all flex flex-col items-center gap-6 group">
+                            <div class="bg-gray-50 p-6 rounded-3xl w-full flex justify-center h-[250px] items-center">
+                                <!-- C: Hình trụ nằm ngang dài (Mới) -->
+                                <svg viewBox="0 0 220 100" class="w-48 h-28 drop-shadow-md">
+                                    <ellipse cx="30" cy="50" rx="10" ry="30" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
+                                    <rect x="30" y="20" width="160" height="60" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
+                                    <path d="M190 20 Q205 50 190 80" fill="none" stroke="#0284c7" stroke-width="2" />
+                                    <ellipse cx="190" cy="50" rx="10" ry="30" fill="#fca5a5" stroke="#ef4444" stroke-width="2" fill-opacity="0.5" />
+                                </svg>
+                            </div>
+                            <span class="font-black text-4xl text-gray-400 group-hover:text-blue-600 transition-colors">C</span>
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-4">
                         <span id="r-116-1" class="font-black text-4xl"></span>
-                        <button id="retry-116-1" onclick="retry116B1()" class="hidden bg-gray-100 hover:bg-gray-200 p-3 rounded-xl transition-all"><svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button>
+                        <button id="retry-116-1" onclick="retry116B1()" class="hidden bg-gray-100 hover:bg-gray-200 p-4 rounded-2xl transition-all active:scale-95"><svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button>
                     </div>
                 </div>
             </section>
