@@ -44,14 +44,34 @@ export const lesson118 = {
                         </div>
                     </div>
 
-                    <!-- Layout 1 cột lớn cho TV -->
-                    <div class="grid grid-cols-1 gap-16 items-start mt-12 text-center">
-                        <div class="p-10 md:p-14 bg-amber-50 rounded-[56px] border-4 border-amber-200 relative shadow-2xl">
-                            <p class="text-amber-800 font-black text-2xl md:text-3xl mb-12 italic">
-                                "Diện tích tất cả các mặt của một hình hộp chữ nhật là diện tích toàn phần."
-                            </p>
-                            <div class="flex justify-center p-10 bg-white rounded-[40px] shadow-sm">
-                                <svg viewBox="0 0 400 300" class="w-full max-w-lg h-auto drop-shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch mt-12">
+                        <!-- Hình hộp chữ nhật 3D -->
+                        <div class="p-10 md:p-14 bg-blue-50/50 rounded-[56px] border-4 border-blue-100 relative shadow-xl flex flex-col items-center justify-center">
+                            <p class="text-blue-800 font-black text-xl md:text-2xl mb-10 tracking-widest uppercase opacity-60">Hình hộp chữ nhật</p>
+                            <div class="flex justify-center w-full">
+                                <svg viewBox="0 0 300 250" class="w-full max-w-sm h-auto drop-shadow-2xl">
+                                    <!-- Hidden edges (Dashed) -->
+                                    <path d="M60 80 L110 50 M110 50 L210 50 M110 50 L110 150" stroke="#0369a1" stroke-width="2" stroke-dasharray="8,5" opacity="0.3" />
+                                    <!-- Front face -->
+                                    <rect x="60" y="80" width="100" height="120" fill="#0ea5e9" stroke="#0369a1" stroke-width="3" />
+                                    <!-- Side face -->
+                                    <path d="M160 80 L210 50 L210 170 L160 200 Z" fill="#0284c7" stroke="#0369a1" stroke-width="3" />
+                                    <!-- Top face -->
+                                    <path d="M60 80 L110 50 L210 50 L160 80 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="3" />
+                                    
+                                    <!-- Labels -->
+                                    <text x="110" y="230" text-anchor="middle" class="text-[18px] font-black fill-blue-900">25 cm</text>
+                                    <text x="210" y="215" text-anchor="middle" class="text-[16px] font-black fill-blue-900">20 cm</text>
+                                    <text x="50" y="145" text-anchor="end" class="text-[18px] font-black fill-blue-900">30 cm</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Sơ đồ khai triển (Net) -->
+                        <div class="p-10 md:p-14 bg-amber-50 rounded-[56px] border-4 border-amber-200 relative shadow-xl flex flex-col items-center justify-center">
+                            <p class="text-amber-800 font-black text-xl md:text-2xl mb-10 tracking-widest uppercase opacity-60">Sơ đồ khai triển</p>
+                            <div class="flex justify-center w-full">
+                                <svg viewBox="0 0 400 300" class="w-full h-auto drop-shadow-xl">
                                     <!-- Top base -->
                                     <rect x="130" y="20" width="100" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
                                     <!-- Lateral faces -->
@@ -69,20 +89,20 @@ export const lesson118 = {
                                 </svg>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="bg-indigo-950 p-12 md:p-16 rounded-[64px] text-white shadow-3xl relative overflow-hidden border-4 border-indigo-400/20">
-                            <div class="absolute -right-20 -top-20 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl"></div>
-                            <h5 class="text-3xl md:text-5xl font-black mb-12 flex items-center justify-center gap-6 text-indigo-300">
-                                💡 CÁCH TÍNH CHI TIẾT
-                            </h5>
+                    <div class="bg-indigo-900 p-12 md:p-16 rounded-[64px] text-white shadow-3xl relative overflow-hidden border-4 border-indigo-400/20 mt-12">
+                        <div class="p-6 bg-white/10 rounded-[32px] mb-12 text-center italic text-2xl md:text-3xl text-indigo-100">
+                            "Diện tích tất cả các mặt của một hình hộp chữ nhật là diện tích toàn phần."
+                        </div>
                             <div class="space-y-8 font-black">
-                                <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg-white/5 p-8 rounded-[40px] border-2 border-white/10">
-                                    <p class="text-2xl md:text-3xl text-indigo-100">1. Diện tích xung quanh:</p>
-                                    <p class="text-3xl md:text-5xl text-yellow-300">(25 + 20) × 2 × 30 = 2700 <span class="text-xl">cm²</span></p>
+                                <div class="flex flex-col items-center gap-4 bg-white/5 p-8 rounded-[40px] border-2 border-white/10 text-center">
+                                    <p class="text-3xl md:text-4xl text-indigo-100 mb-4">1. Diện tích xung quanh:</p>
+                                    <p class="text-4xl md:text-6xl text-yellow-300">(25 + 20) × 2 × 30 = 2700 <span class="text-2xl">cm²</span></p>
                                 </div>
-                                <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg-white/5 p-8 rounded-[40px] border-2 border-white/10">
-                                    <p class="text-2xl md:text-3xl text-indigo-100">2. Diện tích hai đáy:</p>
-                                    <p class="text-3xl md:text-5xl text-yellow-300">25 × 20 × 2 = 1000 <span class="text-xl">cm²</span></p>
+                                <div class="flex flex-col items-center gap-4 bg-white/5 p-8 rounded-[40px] border-2 border-white/10 text-center">
+                                    <p class="text-3xl md:text-4xl text-indigo-100 mb-4">2. Diện tích hai đáy:</p>
+                                    <p class="text-4xl md:text-6xl text-yellow-300">25 × 20 × 2 = 1000 <span class="text-2xl">cm²</span></p>
                                 </div>
                                 <div class="bg-indigo-600 p-10 md:p-12 rounded-[48px] border-4 border-yellow-400 shadow-2xl relative">
                                     <div class="mb-4 text-indigo-200 text-xl md:text-2xl uppercase tracking-[0.2em] font-black">3. DIỆN TÍCH TOÀN PHẦN</div>
