@@ -117,6 +117,63 @@ export const lesson124 = {
                 </div>
             </div>
 
+            <!-- Bài tập 3 -->
+            <div class="p-8 md:p-14 bg-white rounded-[48px] md:rounded-[64px] border border-gray-100 shadow-2xl relative overflow-hidden">
+                <p class="font-black text-3xl md:text-5xl mb-12 text-rose-700 flex items-baseline gap-6 leading-tight">
+                    <span class="w-16 h-16 md:w-20 md:h-20 bg-rose-600 text-white rounded-[24px] md:rounded-[32px] flex items-center justify-center font-black shadow-xl shrink-0">3</span>
+                    Thử tài tinh mắt cùng Mai và Rô-bốt
+                </p>
+                <div class="flex flex-col items-center gap-10">
+                    <img src="hinh_anh/toan/toan_tap_2/124-b3-mairobot.png" alt="Xếp hình lập phương" class="w-full max-w-4xl h-auto rounded-[32px] border-4 border-rose-50 shadow-xl">
+                    
+                    <div class="w-full grid md:grid-cols-2 gap-8">
+                        <div class="bg-rose-50 p-8 rounded-[32px]">
+                            <p class="text-xl font-bold text-rose-900 mb-6">a) Mai cần bỏ đi bao nhiêu hình lập phương nhỏ?</p>
+                            <div class="flex flex-col gap-4">
+                                <label class="flex items-center gap-4 cursor-pointer group">
+                                    <input type="radio" name="ans-124-3a" value="A" class="w-8 h-8 text-rose-500 focus:ring-rose-400">
+                                    <span class="text-2xl font-bold text-rose-800 group-hover:text-rose-600 transition-colors">A. 12 hình</span>
+                                </label>
+                                <label class="flex items-center gap-4 cursor-pointer group">
+                                    <input type="radio" name="ans-124-3a" value="B" class="w-8 h-8 text-rose-500 focus:ring-rose-400">
+                                    <span class="text-2xl font-bold text-rose-800 group-hover:text-rose-600 transition-colors">B. 10 hình</span>
+                                </label>
+                                <label class="flex items-center gap-4 cursor-pointer group">
+                                    <input type="radio" name="ans-124-3a" value="C" class="w-8 h-8 text-rose-500 focus:ring-rose-400">
+                                    <span class="text-2xl font-bold text-rose-800 group-hover:text-rose-600 transition-colors">C. 8 hình</span>
+                                </label>
+                                <label class="flex items-center gap-4 cursor-pointer group">
+                                    <input type="radio" name="ans-124-3a" value="D" class="w-8 h-8 text-rose-500 focus:ring-rose-400">
+                                    <span class="text-2xl font-bold text-rose-800 group-hover:text-rose-600 transition-colors">D. 6 hình</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="bg-pink-50 p-8 rounded-[32px]">
+                            <p class="text-xl font-bold text-pink-900 mb-6">b) Thể tích hình của Rô-bốt là bao nhiêu xăng-ti-mét khối?</p>
+                            <div class="flex flex-col gap-4">
+                                <label class="flex items-center gap-4 cursor-pointer group">
+                                    <input type="radio" name="ans-124-3b" value="A" class="w-8 h-8 text-pink-500 focus:ring-pink-400">
+                                    <span class="text-2xl font-bold text-pink-800 group-hover:text-pink-600 transition-colors">A. 96 cm³</span>
+                                </label>
+                                <label class="flex items-center gap-4 cursor-pointer group">
+                                    <input type="radio" name="ans-124-3b" value="B" class="w-8 h-8 text-pink-500 focus:ring-pink-400">
+                                    <span class="text-2xl font-bold text-pink-800 group-hover:text-pink-600 transition-colors">B. 72 cm³</span>
+                                </label>
+                                <label class="flex items-center gap-4 cursor-pointer group">
+                                    <input type="radio" name="ans-124-3b" value="C" class="w-8 h-8 text-pink-500 focus:ring-pink-400">
+                                    <span class="text-2xl font-bold text-pink-800 group-hover:text-pink-600 transition-colors">C. 64 cm³</span>
+                                </label>
+                                <label class="flex items-center gap-4 cursor-pointer group">
+                                    <input type="radio" name="ans-124-3b" value="D" class="w-8 h-8 text-pink-500 focus:ring-pink-400">
+                                    <span class="text-2xl font-bold text-pink-800 group-hover:text-pink-600 transition-colors">D. 32 cm³</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Nộp bài -->
             <div class="flex justify-center py-10">
                 <button id="btn-submit-124" onclick="submit124()" class="px-24 py-10 bg-indigo-600 hover:bg-indigo-700 text-white rounded-[56px] font-black text-5xl shadow-2xl shadow-indigo-200 active:scale-95 transition-all flex items-center gap-8 group">
@@ -132,37 +189,44 @@ export const lesson124 = {
                     const a1c = document.getElementById('ans-124-1c').value;
                     const a2a = document.getElementById('ans-124-2a').value;
                     const a2b = document.getElementById('ans-124-2b').value;
+                    const a3a = document.querySelector('input[name="ans-124-3a"]:checked')?.value;
+                    const a3b = document.querySelector('input[name="ans-124-3b"]:checked')?.value;
 
-                    if (!a1a || !a1b || !a1c || !a2a || !a2b) {
-                        alert("Thầy E nhắc bé: Hãy hoàn thành tất cả các ô trống trước khi nộp nhé! 🚀");
+                    if (!a1a || !a1b || !a1c || !a2a || !a2b || !a3a || !a3b) {
+                        alert("Thầy E nhắc bé: Hãy hoàn thành tất cả các bài tập trước khi nộp nhé! 🚀");
                         return;
                     }
 
                     let score = 0;
                     let feedback = "";
 
-                    // Bài 1: 
-                    // 10 * 10 * 10 = 1000
-                    if (parseFloat(a1a) === 1000) { score += 2; feedback += "✅ Bài 1.a: Tính đúng 10 × 10 × 10 = 1000!\\n"; } else { feedback += "❌ Bài 1.a: Thể tích lấy cạnh × cạnh × cạnh nha.\\n"; }
-                    // 2.5 * 2.5 * 2.5 = 15.625
-                    if (parseFloat(a1b) === 15.625) { score += 2; feedback += "✅ Bài 1.b: Tính đúng 15,625! Rất chính xác!\\n"; } else { feedback += "❌ Bài 1.b: Bé tính lại 2,5 × 2,5 × 2,5 nhé.\\n"; }
-                    // 0.4 * 0.4 * 0.4 = 0.064
-                    if (parseFloat(a1c) === 0.064) { score += 2; feedback += "✅ Bài 1.c: Tính số thập phân giỏi lắm (0,064)!\\n"; } else { feedback += "❌ Bài 1.c: Phép tính là 0,4 × 0,4 × 0,4 nhé.\\n"; }
+                    // Bài 1
+                    if (parseFloat(a1a) === 1000) { score += 1.5; feedback += "✅ Bài 1.a: Tính đúng 10 × 10 × 10 = 1000!\\n"; } else { feedback += "❌ Bài 1.a: Thể tích lấy 10 × 10 × 10 nha.\\n"; }
+                    if (parseFloat(a1b) === 15.625) { score += 1.5; feedback += "✅ Bài 1.b: Tính đúng 15,625! Rất chính xác!\\n"; } else { feedback += "❌ Bài 1.b: Bé tính lại 2,5 × 2,5 × 2,5 nhé.\\n"; }
+                    if (parseFloat(a1c) === 1.5) { score += 1.5; feedback += "✅ Bài 1.c: Tính số thập phân giỏi lắm (0,064)!\\n"; } else { 
+                        if (parseFloat(a1c) === 0.064) {
+                            score += 1.5; feedback += "✅ Bài 1.c: Tính giỏi lắm!\\n";
+                        } else {
+                            feedback += "❌ Bài 1.c: Phép tính là 0,4 × 0,4 × 0,4 (phải bằng 0,064) nhé.\\n"; 
+                        }
+                    }
 
-                    // Bài 2:
-                    // a) V = 12 * 12 * 6 = 864
-                    if (parseInt(a2a) === 864) { score += 2; feedback += "✅ Bài 2.a: Khối lượng bánh đúng rồi (12 × 12 × 6 = 864 cm³).\\n"; } else { feedback += "❌ Bài 2.a: Bánh có đáy vuông 12cm, cao 6cm. Công thức 12 × 12 × 6.\\n"; }
-                    // b) V còn = 864 - (6*6*6) = 864 - 216 = 648
-                    if (parseInt(a2b) === 648) { score += 2; feedback += "✅ Bài 2.b: Xuất sắc! Phần bánh còn lại là 648 cm³.\\n"; } else { feedback += "❌ Bài 2.b: Lấy thể tích bánh trừ đi thể tích hộp lập phương (6×6×6 = 216) bé nhé.\\n"; }
+                    // Bài 2
+                    if (parseFloat(a2a) === 864) { score += 1.5; feedback += "✅ Bài 2.a: Thể tích bánh đúng 864 cm³.\\n"; } else { feedback += "❌ Bài 2.a: 12 × 12 × 6 = 864.\\n"; }
+                    if (parseFloat(a2b) === 648) { score += 1.5; feedback += "✅ Bài 2.b: Trừ đúng 648 cm³.\\n"; } else { feedback += "❌ Bài 2.b: 864 - (6×6×6) = 648 nhé.\\n"; }
+
+                    // Bài 3
+                    if (a3a === "B") { score += 1.5; feedback += "✅ Bài 3.a: Đúng rồi! Mai có 18 hình, Rô-bốt có 8 hình, nên phải bỏ 10 hình.\\n"; } else { feedback += "❌ Bài 3.a: Mai xếp 3×3×2=18 khối, Rô-bốt xếp 2×2×2=8 khối. Hãy suy nghĩ lại nhé.\\n"; }
+                    if (a3b === "C") { score += 1; feedback += "✅ Bài 3.b: Hình của Rô bốt có 8 khối, mỗi khối 2×2×2=8cm³, tổng cộng 64 cm³.\\n"; } else { feedback += "❌ Bài 3.b: Cạnh khối lớn Rô-bốt xếp là 4cm, thể tích là 4×4×4 = 64 nhé.\\n"; }
 
                     const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
                     
                     if (window.submitMathLesson) {
-                        const report = "1: " + a1a + "," + a1b + "," + a1c + " | 2: " + a2a + "," + a2b;
+                        const report = "1: " + a1a + "," + a1b + "," + a1c + " | 2: " + a2a + "," + a2b + " | 3: " + a3a + "," + a3b;
                         window.submitMathLesson(report, status, "btn-submit-124");
                     }
 
-                    alert(feedback + "\\nĐiểm của bé: " + score + "/10");
+                    alert(feedback + "\\nĐiểm của bé: " + Math.round(score*10)/10 + "/10");
                 };
             </script>
         </div>
