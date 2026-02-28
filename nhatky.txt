@@ -238,3 +238,13 @@ Trạng thái hiện tại: Dự án đã được dọn dẹp sạch sẽ. Cấ
 - Ảnh SGK cần cập nhật: 114-b1-A.png, 114-b1-B.png, 114-b1-C.png, 114-b1-D.png.
 
 Trạng thái hiện tại: Bài 113, 114, 115 đã hoàn thiện giao diện TV-friendly. Bài 115 có placeholder ảnh SGK sẵn sàng cập nhật. Hệ thống AI chấm đã đồng nhất giữa các bài tự luận.
+
+Ngày 28/02/2026:
+----------------
+[17:47] Cập nhật nhatky.txt theo yêu cầu của người dùng:
+- Hoàn thành Tiết 123 (Bài 52): Luyện tập Thể tích HHCN. Trích xuất chính xác 03 hình ảnh từ SGK trang 54-55.
+- Hoàn thành Tiết 124 (Bài 53): Thể tích của hình lập phương. Trích xuất 04 hình ảnh (Khám phá, Công thức, Bài 2, Bài 3). Đặc biệt đã bổ sung Bài 3 (ghép hình Mai & Rô-bốt) bị thiếu.
+- Hoàn thành Tiết 125 (Bài 53 - Tiết 2): Luyện tập tính Thể tích HLP. Trích xuất 03 hình ảnh (Bài 2, Bài 3, Bài 4). Thiết kế 4 bài luyện tập đầy đủ.
+- Hoàn thành Tiết 126 (Bài 54): Thực hành tính toán & ước lượng thể tích. Trích xuất 03 hình ảnh (Bài 1 Thùng chậu cây, Bài 2 Kho hàng Rô-bốt).
+- Sửa lỗi Tiết 117: Loại bỏ hình ảnh sai tại Bài 2 (Bể bơi) và thiết kế lại giao diện chữ đẹp mắt, do SGK bài này không có hình minh họa.
+- Đồng bộ hóa dữ liệu: Cập nhật index.js, gỡ bỏ placeholders tương ứng, dọn dẹp file tạm và đẩy toàn bộ lên Github.
