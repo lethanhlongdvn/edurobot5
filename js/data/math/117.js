@@ -110,26 +110,26 @@ export const lesson117 = {
         </div>
     `,
     "practice": `
-        <div class="space-y-6 md:space-y-8">
+        <div class="space-y-2 md:space-y-4">
             <!-- Bài tập 1 -->
-            <div class="p-4 md:p-6 bg-white rounded-[48px] border border-gray-100 shadow-2xl relative overflow-hidden">
+            <div class="p-1 bg-white rounded-[48px] border border-gray-100 shadow-2xl relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-48 h-48 bg-indigo-50 rounded-bl-full opacity-50 -mr-16 -mt-16"></div>
-                <p class="font-black text-2xl md:text-4xl mb-4 text-indigo-700 flex items-baseline gap-4">
+                <p class="font-black text-2xl md:text-3xl mb-1 text-indigo-700 flex items-baseline gap-2">
                     <span class="w-16 h-16 md:w-20 md:h-20 bg-indigo-600 text-white rounded-[24px] md:rounded-[32px] flex items-center justify-center font-black shadow-xl shadow-indigo-200">1</span>
                     Tính diện tích xung quanh của hình hộp chữ nhật:
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     <!-- Câu a -->
-                    <div class="bg-gray-50 p-4 md:p-6 rounded-[32px] border-2 border-transparent hover:border-indigo-200 transition-all group shadow-inner">
+                    <div class="bg-gray-50 p-1 rounded-[32px] border-2 border-transparent hover:border-indigo-200 transition-all group shadow-inner">
                         <div class="flex items-center gap-4 mb-4">
                             <span class="w-12 h-12 md:w-16 md:h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-black text-2xl md:text-3xl">a</span>
                             <p class="text-2xl md:text-3xl font-bold text-gray-700 leading-relaxed">
                                 Dài <span class="text-indigo-600">7 dm</span>, rộng <span class="text-indigo-600">5 dm</span>, cao <span class="text-indigo-600">4 dm</span>.
                             </p>
                         </div>
-                        <div class="space-y-6">
-                            <div id="box-117-1a" class="bg-white p-6 md:p-8 rounded-[32px] shadow-xl border-4 border-gray-50 flex items-center justify-center gap-4 transition-all">
+                        <div class="space-y-1">
+                            <div id="box-117-1a" class="bg-white p-2 rounded-[32px] shadow-xl border-4 border-gray-50 flex items-center justify-center gap-4 transition-all">
                                 <input type="number" id="ans-117-1a" class="w-full text-5xl md:text-7xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 placeholder-gray-100 text-right" placeholder="?">
                                 <span class="text-3xl md:text-5xl font-black text-gray-300">dm²</span>
                             </div>
@@ -137,15 +137,15 @@ export const lesson117 = {
                     </div>
 
                     <!-- Câu b -->
-                    <div class="bg-gray-50 p-4 md:p-6 rounded-[32px] border-2 border-transparent hover:border-indigo-200 transition-all group shadow-inner">
+                    <div class="bg-gray-50 p-1 rounded-[32px] border-2 border-transparent hover:border-indigo-200 transition-all group shadow-inner">
                         <div class="flex items-center gap-4 mb-4">
                             <span class="w-12 h-12 md:w-16 md:h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-black text-2xl md:text-3xl">b</span>
                             <p class="text-2xl md:text-3xl font-bold text-gray-700 leading-relaxed">
                                 Dài <span class="text-indigo-600">6,5 cm</span>, rộng <span class="text-indigo-600">3,5 cm</span>, cao <span class="text-indigo-600">5 cm</span>.
                             </p>
                         </div>
-                        <div class="space-y-6">
-                            <div id="box-117-1b" class="bg-white p-6 md:p-8 rounded-[32px] shadow-xl border-4 border-gray-50 flex items-center justify-center gap-4 transition-all">
+                        <div class="space-y-1">
+                            <div id="box-117-1b" class="bg-white p-2 rounded-[32px] shadow-xl border-4 border-gray-50 flex items-center justify-center gap-4 transition-all">
                                 <input type="number" id="ans-117-1b" class="w-full text-5xl md:text-7xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 placeholder-gray-100 text-right" placeholder="?">
                                 <span class="text-3xl md:text-5xl font-black text-gray-300">cm²</span>
                             </div>
@@ -154,7 +154,7 @@ export const lesson117 = {
                 </div>
 
                 <!-- Nút Kiểm tra Bài 1 -->
-                <div class="mt-4 flex items-center gap-4">
+                <div class="mt-2 flex items-center gap-2">
                     <button onclick="check117B1()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-[28px] font-black text-2xl shadow-xl shadow-indigo-100 active:scale-95 transition-all flex items-center gap-3">
                         Kiểm tra
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
@@ -164,35 +164,35 @@ export const lesson117 = {
             </div>
 
             <!-- Bài tập 2 -->
-            <div class="p-4 md:p-6 bg-white rounded-[48px] border border-gray-100 shadow-2xl relative overflow-hidden">
-                <p class="font-black text-2xl md:text-4xl mb-4 text-emerald-700 flex items-baseline gap-4">
+            <div class="p-1 bg-white rounded-[48px] border border-gray-100 shadow-2xl relative overflow-hidden">
+                <p class="font-black text-2xl md:text-3xl mb-1 text-emerald-700 flex items-baseline gap-2">
                     <span class="w-16 h-16 md:w-20 md:h-20 bg-emerald-600 text-white rounded-[24px] md:rounded-[32px] flex items-center justify-center font-black shadow-xl shadow-emerald-200">2</span>
                     Bài toán về bể bơi
                 </p>
-                <div class="bg-emerald-600 p-6 md:p-8 rounded-[40px] text-white shadow-2xl relative overflow-hidden mb-4">
+                <div class="bg-emerald-600 p-2 rounded-[40px] text-white shadow-2xl relative overflow-hidden mb-2">
                     <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
                     <div class="flex flex-col items-center gap-4 mb-4">
                         <p class="text-2xl md:text-4xl leading-relaxed font-bold text-center text-white">
                             Một bể bơi dạng hình hộp chữ nhật có chiều dài 10 m, chiều rộng 4 m và sâu 1,5 m. Người ta muốn ốp gạch men xung quanh thành bể bơi. Tính phần diện tích được ốp gạch men (diện tích mạch vữa không đáng kể).
                         </p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-                        <div class="bg-white/20 p-6 rounded-[32px] border-2 border-white/20 backdrop-blur-md flex flex-col items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 relative z-10">
+                        <div class="bg-white/20 p-2 rounded-[32px] border-2 border-white/20 backdrop-blur-md flex flex-col items-center">
                             <p class="text-xs font-black uppercase opacity-60 mb-2">Chiều dài</p>
                             <p class="text-3xl md:text-4xl font-black text-yellow-300">10 m</p>
                         </div>
-                        <div class="bg-white/20 p-6 rounded-[32px] border-2 border-white/20 backdrop-blur-md flex flex-col items-center">
+                        <div class="bg-white/20 p-2 rounded-[32px] border-2 border-white/20 backdrop-blur-md flex flex-col items-center">
                             <p class="text-xs font-black uppercase opacity-60 mb-2">Chiều rộng</p>
                             <p class="text-3xl md:text-4xl font-black text-yellow-300">4 m</p>
                         </div>
-                        <div class="bg-white/20 p-6 rounded-[32px] border-2 border-white/20 backdrop-blur-md flex flex-col items-center">
+                        <div class="bg-white/20 p-2 rounded-[32px] border-2 border-white/20 backdrop-blur-md flex flex-col items-center">
                             <p class="text-xs font-black uppercase opacity-60 mb-2">Sâu (Chiều cao)</p>
                             <p class="text-3xl md:text-4xl font-black text-yellow-300">1,5 m</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 p-4 md:p-6 rounded-[32px] shadow-inner border-2 border-gray-100">
+                <div class="bg-gray-50 p-1 rounded-[32px] shadow-inner border-2 border-gray-100">
                     <p class="text-gray-400 font-black text-[10px] md:text-xs uppercase mb-2 tracking-widest text-center md:text-left">Lời giải của em</p>
                     <div class="space-y-4">
                         <div class="relative group">
@@ -215,7 +215,7 @@ export const lesson117 = {
             </div>
 
             <!-- Nút Nộp Bài Tổng Kết -->
-            <div class="flex justify-center mt-4 md:mt-6">
+            <div class="flex justify-center mt-2">
                 <button id="btn-submit-117" onclick="submitFinal117()" class="w-full md:w-auto min-w-[300px] bg-indigo-600 hover:bg-indigo-700 text-white p-6 md:p-8 rounded-[40px] font-black text-2xl md:text-4xl shadow-2xl shadow-indigo-100 active:scale-95 transition-all flex justify-center items-center gap-6 group">
                     <span class="tracking-widest uppercase">Nộp Bài</span>
                     <div class="bg-white/20 p-2 rounded-2xl group-hover:translate-x-3 transition-transform">
