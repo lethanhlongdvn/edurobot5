@@ -110,7 +110,7 @@ export const lesson117 = {
         </div>
     `,
     "practice": `
-        <div class="space-y-12 md:space-y-20">
+        <div class="space-y-6 md:space-y-8">
             <!-- Bài tập 1 -->
             <div class="p-8 md:p-14 bg-white rounded-[48px] md:rounded-[64px] border border-gray-100 shadow-2xl relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-48 h-48 bg-indigo-50 rounded-bl-full opacity-50 -mr-16 -mt-16"></div>
@@ -194,7 +194,7 @@ export const lesson117 = {
 
                 <div class="bg-gray-50 p-8 md:p-14 rounded-[56px] shadow-inner border-2 border-gray-100">
                     <p class="text-gray-400 font-black text-xs md:text-sm uppercase mb-6 tracking-widest text-center md:text-left">Lời giải của em</p>
-                    <div class="space-y-8">
+                    <div class="space-y-4">
                         <div class="relative group">
                             <textarea id="ans-117-2-text" rows="7" class="w-full p-8 md:p-10 text-2xl md:text-4xl font-bold text-indigo-800 bg-white rounded-[40px] border-4 border-gray-100 shadow-xl focus:border-emerald-500 focus:ring-0 transition-all resize-none leading-relaxed" placeholder="Bé hãy viết lời giải và phép tính vào đây nhé..."></textarea>
                             <button onclick="startVoiceInput('ans-117-2-text')" class="absolute bottom-6 right-6 p-4 bg-emerald-100 text-emerald-600 rounded-2xl hover:bg-emerald-600 hover:text-white transition-all shadow-lg active:scale-90 group-hover:block sm:hidden md:block">
@@ -215,7 +215,7 @@ export const lesson117 = {
             </div>
 
             <!-- Nút Nộp Bài Tổng Kết -->
-            <div class="flex justify-center mt-12 md:mt-16">
+            <div class="flex justify-center mt-6 md:mt-8">
                 <button id="btn-submit-117" onclick="submitFinal117()" class="w-full md:w-auto min-w-[300px] bg-indigo-600 hover:bg-indigo-700 text-white p-6 md:p-8 rounded-[40px] font-black text-2xl md:text-4xl shadow-2xl shadow-indigo-100 active:scale-95 transition-all flex justify-center items-center gap-6 group">
                     <span class="tracking-widest uppercase">Nộp Bài</span>
                     <div class="bg-white/20 p-2 rounded-2xl group-hover:translate-x-3 transition-transform">
