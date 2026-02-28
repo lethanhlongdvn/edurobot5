@@ -37,61 +37,59 @@ export const lesson115 = {
                     <span class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black text-xl shadow-md">1</span>
                     <h4 class="text-3xl font-black text-gray-800">Tìm miếng bìa là hình khai triển thích hợp với mỗi chiếc đèn lồng.</h4>
                 </div>
-                <div class="flex flex-col lg:flex-row gap-8">
-                    <!-- Ảnh SGK -->
-                    <div class="w-full lg:w-1/2">
-                        <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 min-h-[280px] flex items-center justify-center">
-                            <img src="hinh_anh/toan/115_b1.png" alt="Hình SGK bài 1" class="max-w-full h-auto rounded-2xl max-h-[400px] object-contain" onerror="this.parentElement.innerHTML='<div class=\\'text-center\\'><p class=\\'text-gray-400 font-bold text-3xl mb-2\\'>📷</p><p class=\\'text-gray-400 font-bold text-xl\\'>115_b1.png</p><p class=\\'text-gray-300 text-base mt-1\\'>Ảnh đèn lồng & hình khai triển A, B, C</p></div>'">
-                        </div>
+                <div class="space-y-8">
+                    <!-- Hàng 1: Ảnh SGK (full width) -->
+                    <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 flex items-center justify-center">
+                        <img src="hinh_anh/toan/115_b1.png" alt="Hình SGK bài 1" class="max-w-full h-auto rounded-2xl max-h-[450px] object-contain" onerror="this.parentElement.innerHTML='<div class=\\'text-center\\'><p class=\\'text-gray-400 font-bold text-3xl mb-2\\'>📷</p><p class=\\'text-gray-400 font-bold text-xl\\'>115_b1.png</p><p class=\\'text-gray-300 text-base mt-1\\'>Ảnh đèn lồng & hình khai triển A, B, C</p></div>'">
                     </div>
-                    <!-- Chọn đáp án -->
-                    <div class="w-full lg:w-1/2 space-y-5">
-                        <p class="text-2xl font-bold text-gray-700 mb-2">Ghép đèn lồng với hình khai triển:</p>
-                        <!-- Đèn 1: Hình lập phương -->
-                        <div class="bg-yellow-50 p-5 rounded-2xl border-2 border-yellow-200 flex items-center gap-4">
-                            <span class="text-3xl">🟨</span>
-                            <div class="flex-grow">
-                                <p class="font-bold text-2xl text-gray-800 mb-2">Đèn hộp vuông (HLP)</p>
-                                <select id="b115-1-1" class="w-full bg-white border-2 border-yellow-400 p-3 rounded-xl font-bold text-2xl text-gray-800 outline-none focus:ring-4 ring-yellow-200">
-                                    <option value="">-- Chọn --</option>
-                                    <option value="A">Hình A</option>
-                                    <option value="B">Hình B</option>
-                                    <option value="C">Hình C</option>
-                                </select>
+                    <!-- Hàng 2: 3 lựa chọn ngang -->
+                    <p class="text-2xl font-bold text-gray-700">Ghép đèn lồng với hình khai triển:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <!-- Đèn 1: HLP -->
+                        <div class="bg-yellow-50 p-5 rounded-2xl border-2 border-yellow-200">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-3xl">🟨</span>
+                                <p class="font-bold text-2xl text-gray-800">Đèn hộp vuông (HLP)</p>
                             </div>
+                            <select id="b115-1-1" class="w-full bg-white border-2 border-yellow-400 p-3 rounded-xl font-bold text-2xl text-gray-800 outline-none focus:ring-4 ring-yellow-200">
+                                <option value="">-- Chọn --</option>
+                                <option value="A">Hình A</option>
+                                <option value="B">Hình B</option>
+                                <option value="C">Hình C</option>
+                            </select>
                         </div>
-                        <!-- Đèn 2: Hình hộp chữ nhật -->
-                        <div class="bg-green-50 p-5 rounded-2xl border-2 border-green-200 flex items-center gap-4">
-                            <span class="text-3xl">🟩</span>
-                            <div class="flex-grow">
-                                <p class="font-bold text-2xl text-gray-800 mb-2">Đèn hộp chữ nhật</p>
-                                <select id="b115-1-2" class="w-full bg-white border-2 border-green-400 p-3 rounded-xl font-bold text-2xl text-gray-800 outline-none focus:ring-4 ring-green-200">
-                                    <option value="">-- Chọn --</option>
-                                    <option value="A">Hình A</option>
-                                    <option value="B">Hình B</option>
-                                    <option value="C">Hình C</option>
-                                </select>
+                        <!-- Đèn 2: HHCN -->
+                        <div class="bg-green-50 p-5 rounded-2xl border-2 border-green-200">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-3xl">🟩</span>
+                                <p class="font-bold text-2xl text-gray-800">Đèn hộp chữ nhật</p>
                             </div>
+                            <select id="b115-1-2" class="w-full bg-white border-2 border-green-400 p-3 rounded-xl font-bold text-2xl text-gray-800 outline-none focus:ring-4 ring-green-200">
+                                <option value="">-- Chọn --</option>
+                                <option value="A">Hình A</option>
+                                <option value="B">Hình B</option>
+                                <option value="C">Hình C</option>
+                            </select>
                         </div>
                         <!-- Đèn 3: Hình trụ -->
-                        <div class="bg-blue-50 p-5 rounded-2xl border-2 border-blue-200 flex items-center gap-4">
-                            <span class="text-3xl">🔵</span>
-                            <div class="flex-grow">
-                                <p class="font-bold text-2xl text-gray-800 mb-2">Đèn hình trụ</p>
-                                <select id="b115-1-3" class="w-full bg-white border-2 border-blue-400 p-3 rounded-xl font-bold text-2xl text-gray-800 outline-none focus:ring-4 ring-blue-200">
-                                    <option value="">-- Chọn --</option>
-                                    <option value="A">Hình A</option>
-                                    <option value="B">Hình B</option>
-                                    <option value="C">Hình C</option>
-                                </select>
+                        <div class="bg-blue-50 p-5 rounded-2xl border-2 border-blue-200">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-3xl">🔵</span>
+                                <p class="font-bold text-2xl text-gray-800">Đèn hình trụ</p>
                             </div>
+                            <select id="b115-1-3" class="w-full bg-white border-2 border-blue-400 p-3 rounded-xl font-bold text-2xl text-gray-800 outline-none focus:ring-4 ring-blue-200">
+                                <option value="">-- Chọn --</option>
+                                <option value="A">Hình A</option>
+                                <option value="B">Hình B</option>
+                                <option value="C">Hình C</option>
+                            </select>
                         </div>
-                        <!-- Nút kiểm + kết quả -->
-                        <div class="flex items-center gap-3 mt-4">
-                            <button onclick="checkB115B1()" class="w-14 h-14 bg-blue-500 hover:bg-blue-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button>
-                            <span id="r-b115-1" class="font-black text-3xl"></span>
-                            <button id="r-b115-1-retry" onclick="retryB115B1()" class="hidden w-11 h-11 bg-gray-200 hover:bg-gray-300 rounded-xl flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button>
-                        </div>
+                    </div>
+                    <!-- Nút kiểm + kết quả -->
+                    <div class="flex items-center gap-3">
+                        <button onclick="checkB115B1()" class="w-14 h-14 bg-blue-500 hover:bg-blue-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-sm shrink-0"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></button>
+                        <span id="r-b115-1" class="font-black text-3xl"></span>
+                        <button id="r-b115-1-retry" onclick="retryB115B1()" class="hidden w-11 h-11 bg-gray-200 hover:bg-gray-300 rounded-xl flex items-center justify-center transition-all active:scale-90" title="Làm lại"><svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button>
                     </div>
                 </div>
             </section>
