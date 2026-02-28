@@ -248,3 +248,36 @@ Ngày 28/02/2026:
 - Hoàn thành Tiết 126 (Bài 54): Thực hành tính toán & ước lượng thể tích. Trích xuất 03 hình ảnh (Bài 1 Thùng chậu cây, Bài 2 Kho hàng Rô-bốt).
 - Sửa lỗi Tiết 117: Loại bỏ hình ảnh sai tại Bài 2 (Bể bơi) và thiết kế lại giao diện chữ đẹp mắt, do SGK bài này không có hình minh họa.
 - Đồng bộ hóa dữ liệu: Cập nhật index.js, gỡ bỏ placeholders tương ứng, dọn dẹp file tạm và đẩy toàn bộ lên Github.
+
+[20:30] Cải tiến Giao diện Trang chủ (Sprint 1 - Stitch Design Overhaul):
+- Phân tích thiết kế Stitch: Tải và so sánh 5 screen (1 desktop + 1 mobile chính thức + 3 mobile tham khảo) từ 2 project Stitch (EduRobot-5 & Minimalist Style).
+- Lập kế hoạch cải tiến 6 giai đoạn dựa trên gap analysis giữa Stitch design và code hiện tại.
+- Rewrite hoàn toàn Dashboard.js theo thiết kế Stitch:
+  + Sidebar: Từ thanh dọc hẹp w-16 (vertical text) → Sidebar rộng w-64 với text ngang, icon emoji, active highlight xanh + chevron (desktop).
+  + Bottom Tab Bar: Thêm bottom navigation cố định trên mobile (md:hidden), thay thế sidebar, hiển thị 6 môn học với icon + tên.
+  + Week Selector: Từ cột dọc riêng biệt → Timeline ngang (horizontal scroll), tuần active = circle filled xanh, các tuần khác opacity thấp.
+  + Period Tabs: Từ buttons nhỏ inline → Pill tabs centered (rounded-full), active = bg-blue-600 + shadow, scroll ngang trên mobile.
+  + Lesson Cards: Từ glass-card 2 cột → Border-left 4px + grid 3 cột desktop / 1 cột mobile, badge "Tiết X", touch feedback active:scale(0.98).
+  + Progress Summary: Giữ nguyên thiết kế premium, thêm responsive 1 cột mobile / 3 cột desktop.
+- CSS mới: .no-scrollbar (ẩn scrollbar cho horizontal scroll), .sidebar-active (highlight xanh), .touch-feedback (phản hồi chạm mobile).
+- index.html: Thêm pb-20 md:pb-8 cho bottom nav spacing trên mobile.
+
+[21:08] Dark Mode (Phase 6 - Hoàn thiện):
+- Cấu hình Tailwind darkMode: 'class' trong index.html.
+- Thêm nút toggle 🌙/☀️ trên navbar với SVG moon/sun icon swap.
+- Logic: localStorage persistence + auto-detect system preference (prefers-color-scheme: dark).
+- Dark variants toàn diện cho:
+  + Header/Nav: dark:shadow-slate-900, dark:text-blue-400, dark:border-slate-700.
+  + Banner: dark:from-blue-900 dark:via-indigo-900 dark:to-blue-950.
+  + Sidebar: dark:bg-slate-800, dark:hover:bg-slate-700.
+  + Lesson Cards: dark:bg-slate-800, dark:border-slate-700, dark:text-slate-200.
+  + Week Selector: dark:border-slate-700, dark:text-slate-400/500.
+  + Period Tabs: dark:bg-slate-700, dark:text-slate-400.
+  + Progress Summary: dark:bg-slate-800, dark:bg-slate-700/50.
+  + Bottom Nav: dark:bg-slate-900/95, dark:border-slate-700.
+  + Footer: dark:bg-slate-900/60, dark:text-slate-500.
+  + Scrollbar: dark track (#1e293b), dark thumb (#475569).
+- CSS body: transition 0.3s ease cho background-color và color.
+- Giữ nguyên điểm mạnh: Glass nav, gradient background, slogan animations, font Be Vietnam Pro.
+
+Trạng thái hiện tại: Giao diện trang chủ đã được cải tiến toàn diện theo thiết kế Stitch. Hỗ trợ responsive desktop/mobile và Dark Mode. Đã push 2 commits lên Github (9e6745f, 46493ff).
