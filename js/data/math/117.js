@@ -72,7 +72,7 @@ export const lesson117 = {
                         <div class="p-10 bg-blue-600 rounded-[48px] shadow-2xl transform hover:scale-[1.03] transition-transform">
                             <p class="text-blue-200 text-lg uppercase font-black mb-4 tracking-widest text-center">Ví dụ tính toán</p>
                             <div class="flex flex-col items-center gap-4">
-                                <p class="text-white text-3xl md:text-5xl font-black text-center">
+                                <p class="text-white text-2xl md:text-4xl font-black text-center whitespace-nowrap">
                                     (4 + 5 + 4 + 5) × 2 = <span class="text-yellow-300 underline underline-offset-8">36 (m²)</span>
                                 </p>
                                 <div class="h-1 w-24 bg-blue-400/30 rounded-full"></div>
