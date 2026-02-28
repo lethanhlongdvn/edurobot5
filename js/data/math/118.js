@@ -3,7 +3,7 @@ export const lesson118 = {
     "week": "24",
     "period": "118",
     "title": "DIỆN TÍCH TOÀN PHẦN HÌNH HỘP CHỮ NHẬT",
-    "desc": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (Tiết 118 - Trang 46-47).",
+    "desc": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (Tiết 118 - Trang 45-46).",
     "content": `
         <div class="space-y-12 md:space-y-20">
             <!-- 🎯 Mục tiêu bài học -->
