@@ -1,3 +1,4 @@
+import { lesson106 } from './106.js';
 import { lesson107 } from './107.js';
 import { lesson108 } from './108.js';
 import { lesson109 } from './109.js';
@@ -22,6 +23,7 @@ import { lessonTemplate } from './template.js';
 import { placeholderLessons } from './placeholders.js';
 
 export const mathData = [
+    lesson106,
     lesson107,
     lesson108,
     lesson109,
