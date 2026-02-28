@@ -213,9 +213,10 @@ export const lesson112 = {
                 <div class="bg-white rounded-[48px] border-4 border-orange-100 p-8 md:p-14 relative overflow-hidden shadow-2xl">
                     <div class="absolute -top-10 -right-10 w-40 h-40 bg-orange-50 rounded-full blur-3xl opacity-60"></div>
                     
-                    <div class="flex flex-col lg:flex-row gap-12 relative z-10">
-                        <div class="w-full lg:w-3/5">
-                            <div class="bg-blue-50 p-8 rounded-[40px] border-2 border-blue-100 mb-8">
+                    <div class="space-y-10 relative z-10">
+                        <!-- Hàng 1: Bảng giá (trái) + Thử thách (phải) -->
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <div class="bg-blue-50 p-8 rounded-[40px] border-2 border-blue-100">
                                 <h5 class="text-blue-900 font-black text-xl mb-6 flex items-center gap-3">
                                     <span class="text-2xl">📋</span> Bảng giá nước sinh hoạt:
                                 </h5>
@@ -239,7 +240,7 @@ export const lesson112 = {
                                 </div>
                             </div>
 
-                            <div class="bg-orange-50/50 p-8 rounded-[40px] border-2 border-orange-100">
+                            <div class="bg-orange-50/50 p-8 rounded-[40px] border-2 border-orange-100 flex flex-col justify-center">
                                 <p class="text-2xl font-black text-orange-900 leading-tight mb-4 tracking-tighter italic">🤔 THỬ THÁCH CHO BẠN:</p>
                                 <p class="text-xl font-medium text-gray-800 leading-relaxed text-justify">
                                     Tháng trước nhà Việt dùng hết <strong class="text-blue-700 font-black text-3xl">15 m³</strong> nước. Việt hãy tính xem tháng đó gia đình mình phải trả bao nhiêu tiền nước nhé?
@@ -247,9 +248,10 @@ export const lesson112 = {
                             </div>
                         </div>
 
-                        <div class="w-full lg:w-2/5 flex flex-col items-center gap-6">
-                            <div class="relative w-full">
-                                <textarea id="ans-b112-4-text" class="w-full bg-white border-4 border-gray-100 rounded-[40px] p-8 text-xl font-bold text-gray-800 focus:border-blue-500 outline-none transition-all placeholder:text-gray-300 shadow-inner min-h-[300px]" placeholder="Trình bày bài giải của bạn tại đây..."></textarea>
+                        <!-- Hàng 2: Ô nhập bài làm + Nút chấm (full width) -->
+                        <div class="space-y-6">
+                            <div class="relative">
+                                <textarea id="ans-b112-4-text" class="w-full bg-gray-50 border-4 border-gray-100 rounded-[40px] p-8 text-xl font-bold text-gray-800 focus:border-blue-500 outline-none transition-all placeholder:text-gray-300 shadow-inner min-h-[200px]" placeholder="Trình bày bài giải của bạn tại đây..."></textarea>
                                 
                                 <button onclick="toggleSpeechRec_112()" class="absolute right-6 bottom-6 w-16 h-16 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-[24px] flex items-center justify-center transition-all shadow-md active:scale-95 border border-blue-100">
                                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
