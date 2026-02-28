@@ -97,17 +97,21 @@ export const lesson118 = {
                         </div>
                             <div class="space-y-8 font-black">
                                 <div class="flex flex-col items-center gap-4 bg-white/5 p-8 rounded-[40px] border-2 border-white/10 text-center">
-                                    <p class="text-3xl md:text-4xl text-indigo-100 mb-4">1. Diện tích xung quanh:</p>
-                                    <p class="text-4xl md:text-6xl text-yellow-300">(25 + 20) × 2 × 30 = 2700 <span class="text-2xl">cm²</span></p>
+                                    <p class="text-2xl md:text-3xl text-indigo-100 mb-2">1. Diện tích xung quanh:</p>
+                                    <p class="text-3xl md:text-5xl text-yellow-300 font-black whitespace-nowrap">
+                                        (25 + 20) × 2 × 30 = 2700 <span class="text-xl md:text-2xl">cm²</span>
+                                    </p>
                                 </div>
                                 <div class="flex flex-col items-center gap-4 bg-white/5 p-8 rounded-[40px] border-2 border-white/10 text-center">
-                                    <p class="text-3xl md:text-4xl text-indigo-100 mb-4">2. Diện tích hai đáy:</p>
-                                    <p class="text-4xl md:text-6xl text-yellow-300">25 × 20 × 2 = 1000 <span class="text-2xl">cm²</span></p>
+                                    <p class="text-2xl md:text-3xl text-indigo-100 mb-2">2. Diện tích hai đáy:</p>
+                                    <p class="text-3xl md:text-5xl text-yellow-300 font-black whitespace-nowrap">
+                                        25 × 20 × 2 = 1000 <span class="text-xl md:text-2xl">cm²</span>
+                                    </p>
                                 </div>
-                                <div class="bg-indigo-600 p-10 md:p-12 rounded-[48px] border-4 border-yellow-400 shadow-2xl relative">
+                                <div class="bg-indigo-600 p-10 md:p-12 rounded-[48px] border-4 border-yellow-400 shadow-2xl relative text-center">
                                     <div class="mb-4 text-indigo-200 text-xl md:text-2xl uppercase tracking-[0.2em] font-black">3. DIỆN TÍCH TOÀN PHẦN</div>
-                                    <p class="text-4xl md:text-7xl text-yellow-400">
-                                        2700 + 1000 = 3700 <span class="text-2xl">cm²</span>
+                                    <p class="text-3xl md:text-6xl text-yellow-400 font-black whitespace-nowrap">
+                                        2700 + 1000 = 3700 <span class="text-xl md:text-3xl">cm²</span>
                                     </p>
                                 </div>
                             </div>
