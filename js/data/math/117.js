@@ -52,20 +52,7 @@ export const lesson117 = {
                                 "Bốn mặt xung quanh của hình hộp chữ nhật có thể được trải thành một hình chữ nhật lớn."
                             </p>
                             <div class="flex justify-center p-6 md:p-10 bg-white/70 rounded-[40px] shadow-sm">
-                                <svg viewBox="0 0 400 150" class="w-full h-auto drop-shadow-xl">
-                                    <rect x="20" y="20" width="80" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
-                                    <rect x="100" y="20" width="100" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
-                                    <rect x="200" y="20" width="80" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
-                                    <rect x="280" y="20" width="100" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
-                                    <text x="60" y="105" text-anchor="middle" class="text-[18px] font-black fill-amber-700">4m</text>
-                                    <text x="150" y="105" text-anchor="middle" class="text-[18px] font-black fill-amber-700">5m</text>
-                                    <text x="240" y="105" text-anchor="middle" class="text-[18px] font-black fill-amber-700">4m</text>
-                                    <text x="330" y="105" text-anchor="middle" class="text-[18px] font-black fill-amber-700">5m</text>
-                                    <text x="390" y="55" text-anchor="start" class="text-[18px] font-black fill-blue-700">2m</text>
-                                    <line x1="385" y1="20" x2="385" y2="80" stroke="#ca8a04" stroke-width="2" />
-                                    <line x1="380" y1="20" x2="390" y2="20" stroke="#ca8a04" stroke-width="2" />
-                                    <line x1="380" y1="80" x2="390" y2="80" stroke="#ca8a04" stroke-width="2" />
-                                </svg>
+                                <img src="hinh_anh/toan_tap_2/117-khampha.png" alt="Sơ đồ khai triển tiết 117" class="w-full max-w-4xl h-auto rounded-3xl shadow-xl border-4 border-amber-200">
                             </div>
                         </div>
 
@@ -175,12 +162,12 @@ export const lesson117 = {
                 </p>
                 <div class="bg-emerald-600 p-10 md:p-14 rounded-[56px] text-white shadow-2xl relative overflow-hidden mb-12">
                     <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
-                    <div class="absolute top-10 right-14 opacity-20 scale-150">
-                        <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M1.5 21C2.33 21 3 20.33 3 19.5V11C3 9.9 3.9 9 5 9H13C14.1 9 15 9.9 15 11V19.5C15 20.33 15.67 21 16.5 21S18 20.33 18 19.5V11C18 8.24 15.76 6 13 6H5C2.24 6 0 8.24 0 11V19.5C0 20.33 0.67 21 1.5 21M22.5 10C21.67 10 21 10.67 21 11.5V19C21 20.1 20.1 21 19 21S17 20.1 17 19V11.5C17 8.46 19.46 6 22.5 6S28 8.46 28 11.5V19C28 20.1 27.1 21 26 21S24 20.1 24 19V11.5C24 10.67 23.33 10 22.5 10Z"/></svg>
+                    <div class="flex flex-col items-center gap-8 mb-12">
+                        <img src="hinh_anh/toan_tap_2/117-b2.png" alt="Bài toán bể bơi" class="w-full max-w-4xl h-auto rounded-[48px] shadow-2xl border-4 border-white/50">
+                        <p class="text-2xl md:text-3xl leading-relaxed font-bold italic text-center text-cyan-50">
+                            (Một bể bơi có chiều dài 10m, chiều rộng 4m và sâu 1,5m)
+                        </p>
                     </div>
-                    <p class="text-2xl md:text-4xl leading-relaxed md:leading-[1.4] font-medium italic mb-12 relative z-10 text-center md:text-left">
-                        "Một bể bơi dạng hình hộp chữ nhật có chiều dài <span class="text-yellow-300 font-black">10 m</span>, chiều rộng <span class="text-yellow-300 font-black">4 m</span> và sâu <span class="text-yellow-300 font-black">1,5 m</span>. Người ta muốn ốp gạch men xung quanh thành bể bơi. Tính diện tích được ốp gạch."
-                    </p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
                         <div class="bg-white/20 p-6 rounded-[32px] border-2 border-white/20 backdrop-blur-md flex flex-col items-center">
                             <p class="text-xs font-black uppercase opacity-60 mb-2">Chiều dài</p>
