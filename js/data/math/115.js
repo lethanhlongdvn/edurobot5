@@ -41,7 +41,7 @@ export const lesson115 = {
                     <!-- Ảnh SGK -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 min-h-[280px] flex items-center justify-center">
-                            <img src="hinh_anh/115_b1.png" alt="Hình SGK bài 1" class="max-w-full h-auto rounded-2xl max-h-[400px] object-contain" onerror="this.parentElement.innerHTML='<div class=\\'text-center\\'><p class=\\'text-gray-400 font-bold text-3xl mb-2\\'>📷</p><p class=\\'text-gray-400 font-bold text-xl\\'>115_b1.png</p><p class=\\'text-gray-300 text-base mt-1\\'>Ảnh đèn lồng & hình khai triển A, B, C</p></div>'">
+                            <img src="hinh_anh/toan/115_b1.png" alt="Hình SGK bài 1" class="max-w-full h-auto rounded-2xl max-h-[400px] object-contain" onerror="this.parentElement.innerHTML='<div class=\\'text-center\\'><p class=\\'text-gray-400 font-bold text-3xl mb-2\\'>📷</p><p class=\\'text-gray-400 font-bold text-xl\\'>115_b1.png</p><p class=\\'text-gray-300 text-base mt-1\\'>Ảnh đèn lồng & hình khai triển A, B, C</p></div>'">
                         </div>
                     </div>
                     <!-- Chọn đáp án -->
@@ -108,25 +108,25 @@ export const lesson115 = {
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                             <button onclick="check115MCQ(this, 'A', 'b115-2', 'C')" class="b115-2-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-emerald-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b2A.png" alt="A" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b2A.png</span>'">
+                                    <img src="hinh_anh/toan/115_b2A.png" alt="A" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b2A.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-emerald-500 transition-colors">A</span>
                             </button>
                             <button onclick="check115MCQ(this, 'B', 'b115-2', 'C')" class="b115-2-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-emerald-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b2B.png" alt="B" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b2B.png</span>'">
+                                    <img src="hinh_anh/toan/115_b2B.png" alt="B" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b2B.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-emerald-500 transition-colors">B</span>
                             </button>
                             <button onclick="check115MCQ(this, 'C', 'b115-2', 'C')" class="b115-2-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-emerald-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b2C.png" alt="C" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b2C.png</span>'">
+                                    <img src="hinh_anh/toan/115_b2C.png" alt="C" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b2C.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-emerald-500 transition-colors">C</span>
                             </button>
                             <button onclick="check115MCQ(this, 'D', 'b115-2', 'C')" class="b115-2-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-emerald-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b2D.png" alt="D" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b2D.png</span>'">
+                                    <img src="hinh_anh/toan/115_b2D.png" alt="D" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b2D.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-emerald-500 transition-colors">D</span>
                             </button>
@@ -139,7 +139,7 @@ export const lesson115 = {
                     <!-- Ảnh đèn con cá -->
                     <div class="w-full lg:w-1/3 flex justify-center items-start">
                         <div class="bg-gray-50 rounded-3xl p-4 border border-gray-100 min-h-[220px] flex items-center justify-center w-full">
-                            <img src="hinh_anh/115_b2_ca.png" alt="Đèn hình con cá" class="max-w-full h-auto rounded-2xl max-h-[280px] object-contain" onerror="this.parentElement.innerHTML='<div class=\\'text-center\\'><p class=\\'text-gray-400 font-bold text-3xl mb-2\\'>🐟</p><p class=\\'text-gray-400 font-bold text-xl\\'>115_b2_ca.png</p><p class=\\'text-gray-300 text-base\\'>Ảnh đèn con cá</p></div>'">
+                            <img src="hinh_anh/toan/115_b2_ca.png" alt="Đèn hình con cá" class="max-w-full h-auto rounded-2xl max-h-[280px] object-contain" onerror="this.parentElement.innerHTML='<div class=\\'text-center\\'><p class=\\'text-gray-400 font-bold text-3xl mb-2\\'>🐟</p><p class=\\'text-gray-400 font-bold text-xl\\'>115_b2_ca.png</p><p class=\\'text-gray-300 text-base\\'>Ảnh đèn con cá</p></div>'">
                         </div>
                     </div>
                 </div>
@@ -157,25 +157,25 @@ export const lesson115 = {
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                             <button onclick="check115MCQ(this, 'A', 'b115-3', 'C')" class="b115-3-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-indigo-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b3A.png" alt="A" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b3A.png</span>'">
+                                    <img src="hinh_anh/toan/115_b3A.png" alt="A" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b3A.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-indigo-500 transition-colors">A</span>
                             </button>
                             <button onclick="check115MCQ(this, 'B', 'b115-3', 'C')" class="b115-3-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-indigo-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b3B.png" alt="B" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b3B.png</span>'">
+                                    <img src="hinh_anh/toan/115_b3B.png" alt="B" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b3B.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-indigo-500 transition-colors">B</span>
                             </button>
                             <button onclick="check115MCQ(this, 'C', 'b115-3', 'C')" class="b115-3-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-indigo-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b3C.png" alt="C" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b3C.png</span>'">
+                                    <img src="hinh_anh/toan/115_b3C.png" alt="C" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b3C.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-indigo-500 transition-colors">C</span>
                             </button>
                             <button onclick="check115MCQ(this, 'D', 'b115-3', 'C')" class="b115-3-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-indigo-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b3D.png" alt="D" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b3D.png</span>'">
+                                    <img src="hinh_anh/toan/115_b3D.png" alt="D" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b3D.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-indigo-500 transition-colors">D</span>
                             </button>
@@ -188,7 +188,7 @@ export const lesson115 = {
                     <!-- Ảnh hình trụ tham chiếu -->
                     <div class="w-full lg:w-1/3 flex justify-center items-start">
                         <div class="bg-gray-50 rounded-3xl p-4 border border-gray-100 min-h-[220px] flex items-center justify-center w-full">
-                            <img src="hinh_anh/115_b3_tru.png" alt="Hình trụ" class="max-w-full h-auto rounded-2xl max-h-[280px] object-contain" onerror="this.parentElement.innerHTML='<div class=\\'text-center\\'><p class=\\'text-gray-400 font-bold text-3xl mb-2\\'>🧊</p><p class=\\'text-gray-400 font-bold text-xl\\'>115_b3_tru.png</p><p class=\\'text-gray-300 text-base\\'>Ảnh cô bé & hình trụ</p></div>'">
+                            <img src="hinh_anh/toan/115_b3_tru.png" alt="Hình trụ" class="max-w-full h-auto rounded-2xl max-h-[280px] object-contain" onerror="this.parentElement.innerHTML='<div class=\\'text-center\\'><p class=\\'text-gray-400 font-bold text-3xl mb-2\\'>🧊</p><p class=\\'text-gray-400 font-bold text-xl\\'>115_b3_tru.png</p><p class=\\'text-gray-300 text-base\\'>Ảnh cô bé & hình trụ</p></div>'">
                         </div>
                     </div>
                 </div>
@@ -206,25 +206,25 @@ export const lesson115 = {
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                             <button onclick="check115MCQ(this, 'A', 'b115-4', 'D')" class="b115-4-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-orange-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b4A.png" alt="A" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b4A.png</span>'">
+                                    <img src="hinh_anh/toan/115_b4A.png" alt="A" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b4A.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-orange-500 transition-colors">A</span>
                             </button>
                             <button onclick="check115MCQ(this, 'B', 'b115-4', 'D')" class="b115-4-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-orange-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b4B.png" alt="B" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b4B.png</span>'">
+                                    <img src="hinh_anh/toan/115_b4B.png" alt="B" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b4B.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-orange-500 transition-colors">B</span>
                             </button>
                             <button onclick="check115MCQ(this, 'C', 'b115-4', 'D')" class="b115-4-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-orange-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b4C.png" alt="C" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b4C.png</span>'">
+                                    <img src="hinh_anh/toan/115_b4C.png" alt="C" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b4C.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-orange-500 transition-colors">C</span>
                             </button>
                             <button onclick="check115MCQ(this, 'D', 'b115-4', 'D')" class="b115-4-opt bg-white border-3 border-gray-200 p-5 rounded-2xl hover:border-orange-400 hover:shadow-lg transition-all text-center group">
                                 <div class="bg-gray-50 rounded-xl p-3 mb-3 min-h-[110px] flex items-center justify-center">
-                                    <img src="hinh_anh/115_b4D.png" alt="D" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b4D.png</span>'">
+                                    <img src="hinh_anh/toan/115_b4D.png" alt="D" class="max-h-[100px] object-contain" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-300 text-base\\'>115_b4D.png</span>'">
                                 </div>
                                 <span class="font-black text-3xl text-gray-400 group-hover:text-orange-500 transition-colors">D</span>
                             </button>
@@ -237,7 +237,7 @@ export const lesson115 = {
                     <!-- Ảnh tấm bìa + Rô-bốt -->
                     <div class="w-full lg:w-1/3 flex justify-center items-start">
                         <div class="bg-gray-50 rounded-3xl p-4 border border-gray-100 min-h-[220px] flex items-center justify-center w-full">
-                            <img src="hinh_anh/115_b4_bia.png" alt="Tấm bìa khai triển" class="max-w-full h-auto rounded-2xl max-h-[280px] object-contain" onerror="this.parentElement.innerHTML='<div class=\\'text-center\\'><p class=\\'text-gray-400 font-bold text-3xl mb-2\\'>📄</p><p class=\\'text-gray-400 font-bold text-xl\\'>115_b4_bia.png</p><p class=\\'text-gray-300 text-base\\'>Ảnh tấm bìa & Rô-bốt</p></div>'">
+                            <img src="hinh_anh/toan/115_b4_bia.png" alt="Tấm bìa khai triển" class="max-w-full h-auto rounded-2xl max-h-[280px] object-contain" onerror="this.parentElement.innerHTML='<div class=\\'text-center\\'><p class=\\'text-gray-400 font-bold text-3xl mb-2\\'>📄</p><p class=\\'text-gray-400 font-bold text-xl\\'>115_b4_bia.png</p><p class=\\'text-gray-300 text-base\\'>Ảnh tấm bìa & Rô-bốt</p></div>'">
                         </div>
                     </div>
                 </div>

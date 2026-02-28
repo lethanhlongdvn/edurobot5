@@ -80,7 +80,7 @@ export const lesson112 = {
                     <!-- Hộp 1 -->
                     <div class="bg-white rounded-[40px] p-8 border-2 border-gray-100 shadow-xl hover:border-blue-500 transition-all group flex flex-col items-center">
                         <div class="w-32 h-32 bg-yellow-50 rounded-3xl flex items-center justify-center mb-8 border border-yellow-100 group-hover:scale-110 transition-transform">
-                             <img src="hinh_anh/112-b1-1.png" alt="Hộp nhỏ" class="w-20 h-20 object-contain drop-shadow-md">
+                             <img src="hinh_anh/toan/112-b1-1.png" alt="Hộp nhỏ" class="w-20 h-20 object-contain drop-shadow-md">
                         </div>
                         <h4 class="text-lg font-black text-gray-800 mb-6">Hộp phấn nhỏ</h4>
                         <select id="b112-1a" class="w-full bg-gray-50 border-4 border-gray-100 rounded-2xl py-4 px-6 font-black text-xl text-center text-blue-900 outline-none focus:border-blue-500 transition-all appearance-none cursor-pointer">
@@ -94,7 +94,7 @@ export const lesson112 = {
                     <!-- Hộp 2 -->
                     <div class="bg-white rounded-[40px] p-8 border-2 border-gray-100 shadow-xl hover:border-blue-500 transition-all group flex flex-col items-center">
                         <div class="w-32 h-32 bg-blue-50 rounded-3xl flex items-center justify-center mb-8 border border-blue-100 group-hover:scale-110 transition-transform">
-                             <img src="hinh_anh/112-b1-2.png" alt="Hộp vừa" class="w-24 h-24 object-contain drop-shadow-md">
+                             <img src="hinh_anh/toan/112-b1-2.png" alt="Hộp vừa" class="w-24 h-24 object-contain drop-shadow-md">
                         </div>
                         <h4 class="text-lg font-black text-gray-800 mb-6">Chiếc máy giặt</h4>
                         <select id="b112-1b" class="w-full bg-gray-50 border-4 border-gray-100 rounded-2xl py-4 px-6 font-black text-xl text-center text-blue-900 outline-none focus:border-blue-500 transition-all appearance-none cursor-pointer">
@@ -108,7 +108,7 @@ export const lesson112 = {
                     <!-- Hộp 3 -->
                     <div class="bg-white rounded-[40px] p-8 border-2 border-gray-100 shadow-xl hover:border-blue-500 transition-all group flex flex-col items-center">
                         <div class="w-32 h-32 bg-emerald-50 rounded-3xl flex items-center justify-center mb-8 border border-emerald-100 group-hover:scale-110 transition-transform">
-                             <img src="hinh_anh/112-b1-3.png" alt="Thùng to" class="w-28 h-20 object-contain drop-shadow-md">
+                             <img src="hinh_anh/toan/112-b1-3.png" alt="Thùng to" class="w-28 h-20 object-contain drop-shadow-md">
                         </div>
                         <h4 class="text-lg font-black text-gray-800 mb-6">Thùng Container</h4>
                         <select id="b112-1c" class="w-full bg-gray-50 border-4 border-gray-100 rounded-2xl py-4 px-6 font-black text-xl text-center text-blue-900 outline-none focus:border-blue-500 transition-all appearance-none cursor-pointer">

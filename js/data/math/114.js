@@ -39,19 +39,19 @@ export const lesson114 = {
 
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-center font-sans tracking-wide">
                             <button onclick="checkB114B1(this, 'A')" class="b114-1-opt bg-white border-2 border-gray-200 p-4 rounded-3xl hover:border-emerald-400 hover:shadow-lg transition-all group pt-6">
-                                <img src="hinh_anh/114-b1-A.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình A">
+                                <img src="hinh_anh/toan/114-b1-A.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình A">
                                 <span class="font-black text-3xl text-gray-300 group-hover:text-emerald-400 transition-colors">A</span>
                             </button>
                             <button onclick="checkB114B1(this, 'B')" class="b114-1-opt bg-white border-2 border-gray-200 p-4 rounded-3xl hover:border-emerald-400 hover:shadow-lg transition-all group pt-6">
-                                <img src="hinh_anh/114-b1-B.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình B">
+                                <img src="hinh_anh/toan/114-b1-B.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình B">
                                 <span class="font-black text-3xl text-gray-300 group-hover:text-emerald-400 transition-colors">B</span>
                             </button>
                             <button onclick="checkB114B1(this, 'C')" class="b114-1-opt bg-white border-2 border-gray-200 p-4 rounded-3xl hover:border-emerald-400 hover:shadow-lg transition-all group pt-6">
-                                <img src="hinh_anh/114-b1-C.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình C">
+                                <img src="hinh_anh/toan/114-b1-C.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình C">
                                 <span class="font-black text-3xl text-gray-300 group-hover:text-emerald-400 transition-colors">C</span>
                             </button>
                             <button onclick="checkB114B1(this, 'D')" class="b114-1-opt bg-white border-2 border-gray-200 p-4 rounded-3xl hover:border-emerald-400 hover:shadow-lg transition-all group pt-6">
-                                <img src="hinh_anh/114-b1-D.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình D">
+                                <img src="hinh_anh/toan/114-b1-D.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình D">
                                 <span class="font-black text-3xl text-gray-300 group-hover:text-emerald-400 transition-colors">D</span>
                             </button>
                         </div>

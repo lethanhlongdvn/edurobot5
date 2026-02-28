@@ -44,7 +44,7 @@ export const lesson111 = {
                 
                 <!-- Khu vực Trang Sách / Hình Ảnh (Người dùng chèn ảnh vào đây) -->
                 <div class="relative w-full h-auto bg-blue-50/50 flex align-center justify-center p-4">
-                    <img src="hinh_anh/111-khampha.png" alt="Khám phá bể bơi" class="w-full h-auto max-w-2xl object-contain drop-shadow-md rounded-2xl hover:scale-[1.02] transition-transform duration-500 z-10 relative" onerror="this.style.display='none'; document.getElementById('css-art-fallback').style.display='flex'">
+                    <img src="hinh_anh/toan/111-khampha.png" alt="Khám phá bể bơi" class="w-full h-auto max-w-2xl object-contain drop-shadow-md rounded-2xl hover:scale-[1.02] transition-transform duration-500 z-10 relative" onerror="this.style.display='none'; document.getElementById('css-art-fallback').style.display='flex'">
                     
                     <!-- CSS Art Fallback (Dự phòng nếu chưa có ảnh) -->
                     <div id="css-art-fallback" class="hidden w-full h-[250px] md:h-[350px] items-end justify-center perspective-1000 relative pb-6">

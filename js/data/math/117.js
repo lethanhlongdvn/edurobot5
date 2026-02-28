@@ -52,7 +52,7 @@ export const lesson117 = {
                                 "Bốn mặt xung quanh của hình hộp chữ nhật có thể được trải thành một hình chữ nhật lớn."
                             </p>
                             <div class="flex justify-center p-6 md:p-10 bg-white/70 rounded-[40px] shadow-sm">
-                                <img src="hinh_anh/toan_tap_2/117-khampha.png" alt="Sơ đồ khai triển tiết 117" class="w-full max-w-4xl h-auto rounded-3xl shadow-xl border-4 border-amber-200">
+                                <img src="hinh_anh/toan/toan_tap_2/117-khampha.png" alt="Sơ đồ khai triển tiết 117" class="w-full max-w-4xl h-auto rounded-3xl shadow-xl border-4 border-amber-200">
                             </div>
                         </div>
 
@@ -163,7 +163,7 @@ export const lesson117 = {
                 <div class="bg-emerald-600 p-10 md:p-14 rounded-[56px] text-white shadow-2xl relative overflow-hidden mb-12">
                     <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
                     <div class="flex flex-col items-center gap-8 mb-12">
-                        <img src="hinh_anh/toan_tap_2/117-b2.png" alt="Bài toán bể bơi" class="w-full max-w-4xl h-auto rounded-[48px] shadow-2xl border-4 border-white/50">
+                        <img src="hinh_anh/toan/toan_tap_2/117-b2.png" alt="Bài toán bể bơi" class="w-full max-w-4xl h-auto rounded-[48px] shadow-2xl border-4 border-white/50">
                         <p class="text-2xl md:text-3xl leading-relaxed font-bold italic text-center text-cyan-50">
                             (Một bể bơi có chiều dài 10m, chiều rộng 4m và sâu 1,5m)
                         </p>

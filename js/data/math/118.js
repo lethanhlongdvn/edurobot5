@@ -46,7 +46,7 @@ export const lesson118 = {
 
                     <div class="flex flex-col items-center gap-12 mt-12 bg-white/10 p-10 rounded-[64px] border-4 border-white/20 shadow-3xl">
                         <p class="text-white font-black text-2xl md:text-3xl tracking-[0.3em] uppercase opacity-80 decoration-yellow-400 decoration-4 underline-offset-8 underline text-center">HÌNH MINH HỌA & SƠ ĐỒ</p>
-                        <img src="hinh_anh/toan_tap_2/118-khampha-illus.png" alt="Khám phá tiết 118" class="w-full max-w-5xl h-auto rounded-[48px] shadow-2xl border-8 border-white/10">
+                        <img src="hinh_anh/toan/toan_tap_2/118-khampha-illus.png" alt="Khám phá tiết 118" class="w-full max-w-5xl h-auto rounded-[48px] shadow-2xl border-8 border-white/10">
                     </div>
 
                     <div class="bg-indigo-900 p-12 md:p-16 rounded-[64px] text-white shadow-3xl relative overflow-hidden border-4 border-indigo-400/20 mt-12">
@@ -102,7 +102,7 @@ export const lesson118 = {
                 </p>
 
                 <div class="bg-gray-50 p-10 md:p-16 rounded-[64px] border-4 border-dashed border-blue-200 shadow-inner flex flex-col items-center gap-12">
-                    <img src="hinh_anh/toan_tap_2/118-b1-images.png" alt="Các hình khối bài 1" class="w-full max-w-5xl h-auto rounded-[48px] shadow-2xl">
+                    <img src="hinh_anh/toan/toan_tap_2/118-b1-images.png" alt="Các hình khối bài 1" class="w-full max-w-5xl h-auto rounded-[48px] shadow-2xl">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
                         <!-- Đáp án A -->
                         <div class="space-y-4">
@@ -142,7 +142,7 @@ export const lesson118 = {
                 </p>
 
                 <div class="flex flex-col items-center gap-12 mb-16 px-10">
-                    <img src="hinh_anh/toan_tap_2/118-b2-boxes.png" alt="So sánh các hộp bài 2" class="w-full max-w-6xl h-auto rounded-[64px] shadow-3xl border-8 border-white/5">
+                    <img src="hinh_anh/toan/toan_tap_2/118-b2-boxes.png" alt="So sánh các hộp bài 2" class="w-full max-w-6xl h-auto rounded-[64px] shadow-3xl border-8 border-white/5">
                 </div>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-20">

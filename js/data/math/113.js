@@ -101,7 +101,7 @@ export const lesson113 = {
                     </div>
                     <div class="w-full lg:w-1/2 flex justify-center items-start">
                         <div class="bg-gray-50 rounded-3xl p-4 border border-gray-100 min-h-[200px] flex items-center justify-center w-full">
-                            <img src="hinh_anh/113_b2.png" alt="Hình SGK bài 2" class="max-w-full h-auto rounded-2xl max-h-[300px] object-contain" onerror="this.parentElement.innerHTML='<p class=\'text-gray-400 font-bold text-lg\'>📷 Chỗ chèn ảnh SGK</p>'">
+                            <img src="hinh_anh/toan/113_b2.png" alt="Hình SGK bài 2" class="max-w-full h-auto rounded-2xl max-h-[300px] object-contain" onerror="this.parentElement.innerHTML='<p class=\'text-gray-400 font-bold text-lg\'>📷 Chỗ chèn ảnh SGK</p>'">
                         </div>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ export const lesson113 = {
                     </div>
                     <div class="w-full lg:w-1/2 flex justify-center">
                         <div class="bg-gray-50 rounded-3xl p-4 border border-gray-100">
-                            <img src="hinh_anh/113_b3.png" alt="Hình xếp khối" class="max-w-full h-auto rounded-2xl max-h-[300px] object-contain">
+                            <img src="hinh_anh/toan/113_b3.png" alt="Hình xếp khối" class="max-w-full h-auto rounded-2xl max-h-[300px] object-contain">
                         </div>
                     </div>
                 </div>

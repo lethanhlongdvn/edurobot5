@@ -58,7 +58,7 @@ export const lesson119 = {
                 </h4>
                 
                 <div class="bg-white p-10 md:p-14 rounded-[64px] border-4 border-indigo-100 shadow-2xl flex flex-col items-center gap-12 text-center">
-                    <img src="hinh_anh/toan_tap_2/119-b1.png" alt="Bài 1 Tiết 119" class="w-full max-w-4xl h-auto rounded-[48px] shadow-xl border-4 border-white">
+                    <img src="hinh_anh/toan/toan_tap_2/119-b1.png" alt="Bài 1 Tiết 119" class="w-full max-w-4xl h-auto rounded-[48px] shadow-xl border-4 border-white">
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
                         <div class="space-y-6">
@@ -87,7 +87,7 @@ export const lesson119 = {
                 </h4>
                 
                 <div class="bg-blue-900 p-10 md:p-16 rounded-[72px] shadow-3xl flex flex-col items-center gap-12">
-                    <img src="hinh_anh/toan_tap_2/119-b2.png" alt="Bài 2 Tiết 119" class="w-full max-w-5xl h-auto rounded-[56px] shadow-2xl border-4 border-blue-400/30">
+                    <img src="hinh_anh/toan/toan_tap_2/119-b2.png" alt="Bài 2 Tiết 119" class="w-full max-w-5xl h-auto rounded-[56px] shadow-2xl border-4 border-blue-400/30">
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-full text-white">
                         <div class="bg-white/10 p-8 rounded-[40px] border-2 border-white/20">
@@ -124,7 +124,7 @@ export const lesson119 = {
                     </h4>
                     
                     <div class="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
-                        <img src="hinh_anh/toan_tap_2/119-b3.png" alt="Bài 3 Tiết 119" class="w-full h-auto rounded-[48px] shadow-2xl border-4 border-amber-400">
+                        <img src="hinh_anh/toan/toan_tap_2/119-b3.png" alt="Bài 3 Tiết 119" class="w-full h-auto rounded-[48px] shadow-2xl border-4 border-amber-400">
                         <div class="space-y-8 bg-white/10 p-10 rounded-[48px] border-2 border-white/20 h-full flex flex-col justify-center">
                             <p class="text-2xl md:text-3xl leading-relaxed italic font-medium">
                                 "Thanh gỗ dài 55cm có đủ để làm một chiếc khuôn vuông 16,5cm không?"
@@ -146,7 +146,7 @@ export const lesson119 = {
                 </h4>
                 
                 <div class="bg-gray-100 p-10 md:p-14 rounded-[64px] shadow-inner flex flex-col items-center gap-12">
-                    <img src="hinh_anh/toan_tap_2/119-b4.png" alt="Bài 4 Tiết 119" class="w-full max-w-6xl h-auto rounded-[56px] shadow-2xl border-8 border-white">
+                    <img src="hinh_anh/toan/toan_tap_2/119-b4.png" alt="Bài 4 Tiết 119" class="w-full max-w-6xl h-auto rounded-[56px] shadow-2xl border-8 border-white">
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
                         <div class="bg-white p-8 rounded-[48px] shadow-xl border-4 border-indigo-50">
