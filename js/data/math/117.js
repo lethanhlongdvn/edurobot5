@@ -203,15 +203,25 @@ export const lesson117 = {
                         </div>
                         
                         <div class="flex justify-center">
-                            <button id="btn-check-117-ai" onclick="submit117B2()" class="w-full md:w-auto min-w-[320px] bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white p-8 md:p-10 rounded-[40px] font-black text-3xl md:text-4xl shadow-2xl shadow-emerald-200 active:scale-95 transition-all flex justify-center items-center gap-6 group">
-                                <span class="tracking-widest">THẦY E CHẤM</span>
+                            <button id="btn-check-117-ai" onclick="submit117B2()" class="w-full md:w-auto min-w-[200px] bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white p-4 md:p-6 rounded-[24px] font-black text-xl md:text-2xl shadow-xl shadow-emerald-100 active:scale-95 transition-all flex justify-center items-center gap-4 group">
+                                <span class="tracking-widest capitalize">Thầy E chấm</span>
                                 <div class="bg-white/20 p-2 rounded-xl group-hover:rotate-12 transition-transform">
-                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                                 </div>
                             </button>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Nút Nộp Bài Tổng Kết -->
+            <div class="flex justify-center mt-12 md:mt-16">
+                <button id="btn-submit-117" onclick="submitFinal117()" class="w-full md:w-auto min-w-[300px] bg-indigo-600 hover:bg-indigo-700 text-white p-6 md:p-8 rounded-[40px] font-black text-2xl md:text-4xl shadow-2xl shadow-indigo-100 active:scale-95 transition-all flex justify-center items-center gap-6 group">
+                    <span class="tracking-widest uppercase">Nộp Bài</span>
+                    <div class="bg-white/20 p-2 rounded-2xl group-hover:translate-x-3 transition-transform">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                </button>
             </div>
 
             <script>
@@ -242,37 +252,55 @@ export const lesson117 = {
                 // Bài 2 - AI chấm
                 window.submit117B2 = async function() {
                     const a2t = document.getElementById('ans-117-2-text').value;
-
                     if (!a2t || a2t.length < 10) {
                         alert("Thầy E nhắc bé: Hãy viết lời giải chi tiết vào ô trống trước khi nhờ thầy chấm nhé! ✨");
                         return;
                     }
-
                     const btn = document.getElementById('btn-check-117-ai');
                     const originalContent = btn.innerHTML;
                     btn.disabled = true;
-                    btn.innerHTML = '<span class="animate-pulse">THẦY E ĐANG ĐỌC...</span>';
-
-                    let report = "Bài toán bể bơi: \n" + a2t;
+                    btn.innerHTML = '<span class="animate-pulse">Thầy E đang đọc...</span>';
                     
                     if (window.checkAIExplanation) {
                         const aiResult = await window.checkAIExplanation(
                             a2t, 
                             "Tính diện tích xung quanh bể bơi dài 10m, rộng 4m, sâu 1.5m. Đáp số đúng phải là 42 m2. Kiểm tra xem lời giải và phép tính có hợp lý không."
                         );
-                        
-                        const status = aiResult.isCorrect ? "Đ" : "S";
-                        if (window.submitMathLesson) {
-                            window.submitMathLesson(report, status, "btn-check-117-ai");
-                        }
-                        
                         alert((aiResult.isCorrect ? "⭐ GIỎI QUÁ! \n" : "⚠️ CỐ GẮNG LÊN! \n") + aiResult.comment);
                     } else {
-                        alert("Thầy E đang bận một xíu, bé hãy nộp lại sau nhé!");
+                        alert("Thầy E đang bận một xíu, bé hãy thử lại sau nhé!");
                     }
-                    
                     btn.disabled = false;
                     btn.innerHTML = originalContent;
+                };
+
+                // Nộp bài tổng kết
+                window.submitFinal117 = function() {
+                    const a1a = document.getElementById('ans-117-1a').value;
+                    const a1b = document.getElementById('ans-117-1b').value;
+                    const a2t = document.getElementById('ans-117-2-text').value;
+                    if (!a1a || !a1b || !a2t) {
+                        alert("Thầy E nhắc bé: Hãy hoàn thành cả Bài 1 và Bài 2 trước khi nộp bài tổng kết nhé! ✨");
+                        return;
+                    }
+                    const btn = document.getElementById('btn-submit-117');
+                    btn.disabled = true;
+                    const originalHTML = btn.innerHTML;
+                    btn.innerHTML = '<span class="animate-pulse">ĐANG GỬI BÀI...</span>';
+
+                    let report = "Bài 1a: " + a1a + "\nBài 1b: " + a1b + "\nBài 2 (Lời giải): " + a2t;
+                    let score = 0;
+                    if (parseInt(a1a) === 96) score += 3;
+                    if (parseFloat(a1b) === 100) score += 3;
+                    if (a2t.length > 20) score += 4;
+                    const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
+
+                    if (window.submitMathLesson) {
+                        window.submitMathLesson(report, status, "btn-submit-117");
+                    }
+                    alert("🎉 Tuyệt vời! Bài làm của bé đã được gửi tới Thầy E!");
+                    btn.disabled = false;
+                    btn.innerHTML = '<span class="tracking-widest uppercase">Đã Nộp Bài</span>';
                 };
 
                 window.startVoiceInput = function(targetId) {
