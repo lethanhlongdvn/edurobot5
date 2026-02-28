@@ -400,3 +400,29 @@ body {
     text-orientation: mixed;
     transform: rotate(180deg);
 }
+
+/* No-scrollbar utility (for horizontal scroll areas) */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Sidebar active state */
+.sidebar-active {
+    background-color: #2563eb;
+    color: white;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+/* Touch feedback for mobile */
+.touch-feedback {
+    transition: transform 0.15s ease;
+}
+
+.touch-feedback:active {
+    transform: scale(0.98);
+}
