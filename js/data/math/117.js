@@ -142,9 +142,9 @@ export const lesson117 = {
                             </p>
                         </div>
                         <div class="space-y-6">
-                            <div class="bg-white p-6 md:p-8 rounded-[32px] shadow-xl border-2 border-gray-50">
-                                <p class="text-sm md:text-base font-black text-gray-400 uppercase mb-4 tracking-widest text-center">Đáp án (dm²)</p>
-                                <input type="number" id="ans-117-1a" class="w-full text-5xl md:text-7xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 placeholder-gray-100 text-center" placeholder="?">
+                            <div class="bg-white p-6 md:p-8 rounded-[32px] shadow-xl border-2 border-gray-50 flex items-center justify-center gap-4">
+                                <input type="number" id="ans-117-1a" class="w-full text-5xl md:text-7xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 placeholder-gray-100 text-right" placeholder="?">
+                                <span class="text-3xl md:text-5xl font-black text-gray-300">dm²</span>
                             </div>
                         </div>
                     </div>
@@ -158,9 +158,9 @@ export const lesson117 = {
                             </p>
                         </div>
                         <div class="space-y-6">
-                            <div class="bg-white p-6 md:p-8 rounded-[32px] shadow-xl border-2 border-gray-50">
-                                <p class="text-sm md:text-base font-black text-gray-400 uppercase mb-4 tracking-widest text-center">Đáp án (cm²)</p>
-                                <input type="number" id="ans-117-1b" class="w-full text-5xl md:text-7xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 placeholder-gray-100 text-center" placeholder="?">
+                            <div class="bg-white p-6 md:p-8 rounded-[32px] shadow-xl border-2 border-gray-50 flex items-center justify-center gap-4">
+                                <input type="number" id="ans-117-1b" class="w-full text-5xl md:text-7xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 placeholder-gray-100 text-right" placeholder="?">
+                                <span class="text-3xl md:text-5xl font-black text-gray-300">cm²</span>
                             </div>
                         </div>
                     </div>
@@ -208,9 +208,9 @@ export const lesson117 = {
                         </div>
                         
                         <div class="flex flex-col xl:flex-row items-stretch gap-8">
-                            <div class="flex-1 bg-white p-8 md:p-10 rounded-[40px] shadow-xl border-4 border-gray-50 flex items-center justify-between gap-6">
-                                <span class="text-emerald-600 font-black text-2xl md:text-3xl whitespace-nowrap">Đáp số (m²):</span>
+                            <div class="flex-1 bg-white p-8 md:p-10 rounded-[40px] shadow-xl border-4 border-gray-50 flex items-center justify-center gap-6">
                                 <input type="number" id="ans-117-2-num" class="w-full text-4xl md:text-6xl font-black text-emerald-600 bg-transparent border-none focus:ring-0 text-right" placeholder="?">
+                                <span class="text-3xl md:text-5xl font-black text-emerald-600/30">m²</span>
                             </div>
                             
                             <button id="btn-submit-117" onclick="submit117()" class="xl:w-[350px] bg-emerald-600 hover:bg-emerald-700 text-white p-8 md:p-10 rounded-[40px] font-black text-3xl md:text-4xl shadow-2xl shadow-emerald-200 active:scale-95 transition-all flex justify-center items-center gap-6 group">
