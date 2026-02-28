@@ -251,9 +251,9 @@ export const lesson117 = {
                     const btn = document.getElementById('btn-check-117-ai');
                     const originalContent = btn.innerHTML;
                     btn.disabled = true;
-                    btn.innerHTML = `< span class= "animate-pulse" > THẦY E ĐANG ĐỌC...</span> `;
+                    btn.innerHTML = '<span class="animate-pulse">THẦY E ĐANG ĐỌC...</span>';
 
-                    let report = "Bài toán bể bơi: \\n" + a2t;
+                    let report = "Bài toán bể bơi: \n" + a2t;
                     
                     if (window.checkAIExplanation) {
                         const aiResult = await window.checkAIExplanation(
@@ -266,7 +266,7 @@ export const lesson117 = {
                             window.submitMathLesson(report, status, "btn-check-117-ai");
                         }
                         
-                        alert((aiResult.isCorrect ? "⭐ GIỎI QUÁ! \\n" : "⚠️ CỐ GẮNG LÊN! \\n") + aiResult.comment);
+                        alert((aiResult.isCorrect ? "⭐ GIỎI QUÁ! \n" : "⚠️ CỐ GẮNG LÊN! \n") + aiResult.comment);
                     } else {
                         alert("Thầy E đang bận một xíu, bé hãy nộp lại sau nhé!");
                     }
@@ -294,39 +294,39 @@ export const lesson117 = {
             </script>
         </div>
     `,
-"quizPool": [
-    {
-        "question": "Công thức tính diện tích xung quanh của hình hộp chữ nhật là:",
-        "options": [
-            "S = (a + b) × 2 × h",
-            "S = a × b × h",
-            "S = (a + b) × h",
-            "S = a × b × 2"
-        ],
-        "answer": 0,
-        "level": 1
-    },
-    {
-        "question": "Một hình hộp chữ nhật có chu vi đáy là 20cm, chiều cao 5cm. Diện tích xung quanh là:",
-        "options": [
-            "50 cm²",
-            "100 cm²",
-            "100 cm",
-            "25 cm²"
-        ],
-        "answer": 1,
-        "level": 1
-    },
-    {
-        "question": "Diện tích xung quanh là tổng diện tích của mấy mặt bên?",
-        "options": [
-            "2 mặt",
-            "4 mặt",
-            "6 mặt",
-            "5 mặt"
-        ],
-        "answer": 1,
-        "level": 1
-    }
-]
+    "quizPool": [
+        {
+            "question": "Công thức tính diện tích xung quanh của hình hộp chữ nhật là:",
+            "options": [
+                "S = (a + b) × 2 × h",
+                "S = a × b × h",
+                "S = (a + b) × h",
+                "S = a × b × 2"
+            ],
+            "answer": 0,
+            "level": 1
+        },
+        {
+            "question": "Một hình hộp chữ nhật có chu vi đáy là 20cm, chiều cao 5cm. Diện tích xung quanh là:",
+            "options": [
+                "50 cm²",
+                "100 cm²",
+                "100 cm",
+                "25 cm²"
+            ],
+            "answer": 1,
+            "level": 1
+        },
+        {
+            "question": "Diện tích xung quanh là tổng diện tích của mấy mặt bên?",
+            "options": [
+                "2 mặt",
+                "4 mặt",
+                "6 mặt",
+                "5 mặt"
+            ],
+            "answer": 1,
+            "level": 1
+        }
+    ]
 };
