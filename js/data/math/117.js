@@ -163,9 +163,8 @@ export const lesson117 = {
                 <div class="bg-emerald-600 p-10 md:p-14 rounded-[56px] text-white shadow-2xl relative overflow-hidden mb-12">
                     <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
                     <div class="flex flex-col items-center gap-8 mb-12">
-                        <img src="hinh_anh/toan/toan_tap_2/117-b2.png" alt="Bài toán bể bơi" class="w-full max-w-4xl h-auto rounded-[48px] shadow-2xl border-4 border-white/50">
-                        <p class="text-2xl md:text-3xl leading-relaxed font-bold italic text-center text-cyan-50">
-                            (Một bể bơi có chiều dài 10m, chiều rộng 4m và sâu 1,5m)
+                        <p class="text-2xl md:text-4xl leading-relaxed font-bold text-center text-white">
+                            Một bể bơi dạng hình hộp chữ nhật có chiều dài 10 m, chiều rộng 4 m và sâu 1,5 m. Người ta muốn ốp gạch men xung quanh thành bể bơi. Tính phần diện tích được ốp gạch men (diện tích mạch vữa không đáng kể).
                         </p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
