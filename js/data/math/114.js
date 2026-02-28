@@ -30,32 +30,32 @@ export const lesson114 = {
     "practice": `        <div class="space-y-12">
                 <div class="space-y-8">
                     <!-- Bài 1: Khối lượng xếp lớn nhất -->
-                    <div class="p-6 md:p-8 bg-white rounded-[32px] shadow-sm border border-gray-100">
-                        <p class="font-black text-lg md:text-xl mb-4 text-emerald-700 flex items-center gap-3">
-                            <span class="w-10 h-10 bg-emerald-50 border-2 border-emerald-200 rounded-xl flex items-center justify-center font-black text-emerald-800 shrink-0">1</span>
+                    <div class="p-6 md:p-10 bg-white rounded-[32px] shadow-sm border border-gray-100">
+                        <p class="font-black text-xl md:text-2xl mb-6 text-emerald-700 flex items-center gap-3">
+                            <span class="w-12 h-12 bg-emerald-50 border-2 border-emerald-200 rounded-xl flex items-center justify-center font-black text-emerald-800 text-xl shrink-0">1</span>
                             Chọn câu trả lời đúng.
                         </p>
-                        <p class="text-xl font-medium text-gray-800 mb-8 border-l-4 border-emerald-300 pl-4">Mỗi hình dưới đây được xếp từ các hình lập phương <strong class="text-pink-600">1 cm³</strong>. Hỏi hình nào dưới đây có thể tích lớn nhất?</p>
+                        <p class="text-2xl md:text-3xl font-medium text-gray-800 mb-8 border-l-4 border-emerald-300 pl-6">Mỗi hình dưới đây được xếp từ các hình lập phương <strong class="text-pink-600">1 cm³</strong>. Hỏi hình nào dưới đây có thể tích lớn nhất?</p>
 
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-center font-sans tracking-wide">
                             <button onclick="checkB114B1(this, 'A')" class="b114-1-opt bg-white border-2 border-gray-200 p-4 rounded-3xl hover:border-emerald-400 hover:shadow-lg transition-all group pt-6">
-                                <img src="hinh_anh/toan/114-b1-A.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình A">
+                                <img src="hinh_anh/toan/114-b1-A.png" class="h-36 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình A">
                                 <span class="font-black text-3xl text-gray-300 group-hover:text-emerald-400 transition-colors">A</span>
                             </button>
                             <button onclick="checkB114B1(this, 'B')" class="b114-1-opt bg-white border-2 border-gray-200 p-4 rounded-3xl hover:border-emerald-400 hover:shadow-lg transition-all group pt-6">
-                                <img src="hinh_anh/toan/114-b1-B.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình B">
+                                <img src="hinh_anh/toan/114-b1-B.png" class="h-36 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình B">
                                 <span class="font-black text-3xl text-gray-300 group-hover:text-emerald-400 transition-colors">B</span>
                             </button>
                             <button onclick="checkB114B1(this, 'C')" class="b114-1-opt bg-white border-2 border-gray-200 p-4 rounded-3xl hover:border-emerald-400 hover:shadow-lg transition-all group pt-6">
-                                <img src="hinh_anh/toan/114-b1-C.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình C">
+                                <img src="hinh_anh/toan/114-b1-C.png" class="h-36 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình C">
                                 <span class="font-black text-3xl text-gray-300 group-hover:text-emerald-400 transition-colors">C</span>
                             </button>
                             <button onclick="checkB114B1(this, 'D')" class="b114-1-opt bg-white border-2 border-gray-200 p-4 rounded-3xl hover:border-emerald-400 hover:shadow-lg transition-all group pt-6">
-                                <img src="hinh_anh/toan/114-b1-D.png" class="h-28 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình D">
+                                <img src="hinh_anh/toan/114-b1-D.png" class="h-36 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform" alt="Hình D">
                                 <span class="font-black text-3xl text-gray-300 group-hover:text-emerald-400 transition-colors">D</span>
                             </button>
                         </div>
-                        <div id="fb-b114-1" class="hidden text-center text-lg font-bold px-6 py-4 rounded-2xl animate-fade-in border-2"></div>
+                        <div id="fb-b114-1" class="hidden text-center text-2xl font-bold px-6 py-5 rounded-2xl animate-fade-in border-2"></div>
 
                         <script>
                             window.checkB114B1 = function(btn, ans) {
@@ -83,27 +83,27 @@ export const lesson114 = {
                     </div>
 
                     <!-- Bài 2: Tính trung bình nước (Giải toán có lời văn + AI chấm) -->
-                    <div class="p-6 md:p-8 bg-white rounded-[32px] shadow-sm border border-gray-100">
-                        <p class="font-black text-lg md:text-xl mb-6 text-emerald-700 flex items-center gap-3">
-                            <span class="w-10 h-10 bg-emerald-50 border-2 border-emerald-200 rounded-xl flex items-center justify-center font-black text-emerald-800 shrink-0">2</span>
+                    <div class="p-6 md:p-10 bg-white rounded-[32px] shadow-sm border border-gray-100">
+                        <p class="font-black text-xl md:text-2xl mb-6 text-emerald-700 flex items-center gap-3">
+                            <span class="w-12 h-12 bg-emerald-50 border-2 border-emerald-200 rounded-xl flex items-center justify-center font-black text-emerald-800 text-xl shrink-0">2</span>
                             Giải toán có lời văn
                         </p>
                         
-                        <div class="text-lg md:text-xl leading-relaxed text-gray-800 font-semibold mb-8 text-justify">
+                        <div class="text-2xl md:text-3xl leading-relaxed text-gray-800 font-semibold mb-8 text-justify">
                             <p>
-                                Trong cả năm 2022, nhà Nam đã sử dụng <strong class="text-blue-700 bg-blue-50 px-2 py-0.5 rounded shadow-sm">174 m³</strong> nước sinh hoạt. Vậy trung bình mỗi tháng, nhà Nam dùng hết bao nhiêu m³ nước sinh hoạt?
+                                Trong cả năm 2022, nhà Nam đã sử dụng <strong class="text-blue-700 bg-blue-50 px-3 py-1 rounded shadow-sm text-3xl">174 m³</strong> nước sinh hoạt. Vậy trung bình mỗi tháng, nhà Nam dùng hết bao nhiêu m³ nước sinh hoạt?
                             </p>
                         </div>
 
                         <!-- Vùng giải Toán AI -->
                         <div class="border-2 border-gray-100 bg-gray-50/50 p-6 md:p-8 rounded-[32px]">
-                            <h4 class="font-black text-gray-800 text-lg mb-6 flex items-center gap-3">
-                                <span class="text-xl">✍️</span> Bài giải của em:
+                            <h4 class="font-black text-gray-800 text-2xl mb-6 flex items-center gap-3">
+                                <span class="text-2xl">✍️</span> Bài giải của em:
                             </h4>
                             
                             <div class="relative group mt-2">
                                 <textarea id="ans-b114-2-text" rows="5" 
-                                    class="w-full bg-white border-2 border-blue-100 rounded-[24px] p-6 pr-14 text-base font-bold text-gray-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none transition-all placeholder:text-gray-300 shadow-inner resize-none leading-relaxed" 
+                                    class="w-full bg-white border-2 border-blue-100 rounded-[24px] p-6 pr-14 text-xl font-bold text-gray-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none transition-all placeholder:text-gray-300 shadow-inner resize-none leading-relaxed" 
                                     placeholder="Ví dụ:
 Một năm có 12 tháng.
 Trung bình mỗi tháng nhà Nam dùng: ...
@@ -222,12 +222,12 @@ Trung bình mỗi tháng nhà Nam dùng: ...
                     </div>
 
                     <!-- Bài 3: Hộp màu xanh đỏ vàng -->
-                    <div class="p-6 md:p-8 bg-white rounded-[32px] shadow-sm border border-gray-100">
-                        <p class="font-black text-lg md:text-xl mb-4 text-emerald-700 flex items-center gap-3">
-                            <span class="w-10 h-10 bg-emerald-50 border-2 border-emerald-200 rounded-xl flex items-center justify-center font-black text-emerald-800 shrink-0">3</span>
+                    <div class="p-6 md:p-10 bg-white rounded-[32px] shadow-sm border border-gray-100">
+                        <p class="font-black text-xl md:text-2xl mb-6 text-emerald-700 flex items-center gap-3">
+                            <span class="w-12 h-12 bg-emerald-50 border-2 border-emerald-200 rounded-xl flex items-center justify-center font-black text-emerald-800 text-xl shrink-0">3</span>
                             So sánh thể tích.
                         </p>
-                        <p class="text-lg md:text-xl leading-relaxed text-gray-800 mb-6 bg-yellow-50/50 p-6 rounded-2xl border border-yellow-100">
+                        <p class="text-2xl md:text-3xl leading-relaxed text-gray-800 mb-8 bg-yellow-50/50 p-6 rounded-2xl border border-yellow-100">
                             Rô-bốt có 3 hộp màu xanh, đỏ và vàng. Thể tích của các hộp là: <strong>25 cm³</strong>; <strong>24,5 cm³</strong>; <strong>25,75 dm³</strong>. Biết hộp màu <b>vàng</b> có thể tích <i>lớn nhất</i> và hộp màu <b>xanh</b> có thể tích <i>lớn hơn</i> hộp màu <b>đỏ</b>. Hãy cho biết thể tích của mỗi chiếc hộp.
                         </p>
                         
@@ -235,8 +235,8 @@ Trung bình mỗi tháng nhà Nam dùng: ...
                             <!-- Đỏ -->
                             <div class="bg-red-50 border-2 border-red-200 rounded-[24px] p-6 text-center transform transition-all hover:scale-105 relative pt-12 mt-4">
                                 <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-red-500 rounded-2xl shadow-lg border-4 border-white transform rotate-12 flex items-center justify-center text-white text-2xl">🎁</div>
-                                <h3 class="font-black text-red-800 mb-4 uppercase tracking-widest text-sm">Hộp Đỏ</h3>
-                                <select id="b114-3-do" class="w-full p-3 rounded-xl border-2 border-red-300 text-red-900 font-bold bg-white focus:outline-none focus:ring-4 focus:ring-red-100 appearance-none text-center cursor-pointer shadow-sm">
+                                <h3 class="font-black text-red-800 mb-4 uppercase tracking-widest text-lg">Hộp Đỏ</h3>
+                                <select id="b114-3-do" class="w-full p-4 rounded-xl border-2 border-red-300 text-red-900 font-bold bg-white focus:outline-none focus:ring-4 focus:ring-red-100 appearance-none text-center cursor-pointer shadow-sm text-xl">
                                     <option value="">-- Chọn thể tích --</option>
                                     <option value="25 cm3">25 cm³</option>
                                     <option value="24.5 cm3">24,5 cm³</option>
@@ -247,8 +247,8 @@ Trung bình mỗi tháng nhà Nam dùng: ...
                             <!-- Xanh -->
                             <div class="bg-blue-50 border-2 border-blue-200 rounded-[24px] p-6 text-center transform transition-all hover:scale-105 relative pt-12 mt-4">
                                 <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-blue-500 rounded-2xl shadow-lg border-4 border-white transform -rotate-6 flex items-center justify-center text-white text-2xl">🎁</div>
-                                <h3 class="font-black text-blue-800 mb-4 uppercase tracking-widest text-sm">Hộp Xanh</h3>
-                                <select id="b114-3-xanh" class="w-full p-3 rounded-xl border-2 border-blue-300 text-blue-900 font-bold bg-white focus:outline-none focus:ring-4 focus:ring-blue-100 appearance-none text-center cursor-pointer shadow-sm">
+                                <h3 class="font-black text-blue-800 mb-4 uppercase tracking-widest text-lg">Hộp Xanh</h3>
+                                <select id="b114-3-xanh" class="w-full p-4 rounded-xl border-2 border-blue-300 text-blue-900 font-bold bg-white focus:outline-none focus:ring-4 focus:ring-blue-100 appearance-none text-center cursor-pointer shadow-sm text-xl">
                                     <option value="">-- Chọn thể tích --</option>
                                     <option value="25 cm3">25 cm³</option>
                                     <option value="24.5 cm3">24,5 cm³</option>
@@ -259,8 +259,8 @@ Trung bình mỗi tháng nhà Nam dùng: ...
                             <!-- Vàng -->
                             <div class="bg-yellow-50 border-2 border-yellow-200 rounded-[24px] p-6 text-center transform transition-all hover:scale-105 relative pt-12 mt-4">
                                 <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-yellow-400 rounded-2xl shadow-lg border-4 border-white transform rotate-6 flex items-center justify-center text-white text-2xl">🎁</div>
-                                <h3 class="font-black text-yellow-800 mb-4 uppercase tracking-widest text-sm">Hộp Vàng</h3>
-                                <select id="b114-3-vang" class="w-full p-3 rounded-xl border-2 border-yellow-400 text-yellow-900 font-bold bg-white focus:outline-none focus:ring-4 focus:ring-yellow-100 appearance-none text-center cursor-pointer shadow-sm">
+                                <h3 class="font-black text-yellow-800 mb-4 uppercase tracking-widest text-lg">Hộp Vàng</h3>
+                                <select id="b114-3-vang" class="w-full p-4 rounded-xl border-2 border-yellow-400 text-yellow-900 font-bold bg-white focus:outline-none focus:ring-4 focus:ring-yellow-100 appearance-none text-center cursor-pointer shadow-sm text-xl">
                                     <option value="">-- Chọn thể tích --</option>
                                     <option value="25 cm3">25 cm³</option>
                                     <option value="24.5 cm3">24,5 cm³</option>
@@ -270,10 +270,10 @@ Trung bình mỗi tháng nhà Nam dùng: ...
                         </div>
 
                         <div class="mt-8 flex justify-center flex-col items-center">
-                            <button onclick="checkB114B3(this)" class="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 rounded-full font-black text-sm uppercase shadow-lg shadow-emerald-200 transition-all active:scale-95 tracking-wide">
+                            <button onclick="checkB114B3(this)" class="bg-emerald-600 hover:bg-emerald-700 text-white px-12 py-5 rounded-full font-black text-lg uppercase shadow-lg shadow-emerald-200 transition-all active:scale-95 tracking-wide">
                                 So sánh & Xác nhận
                             </button>
-                            <div id="fb-b114-3" class="hidden font-bold mt-4 px-6 py-3 rounded-2xl border-2"></div>
+                            <div id="fb-b114-3" class="hidden font-bold text-xl mt-4 px-6 py-4 rounded-2xl border-2"></div>
                         </div>
 
                         <script>
@@ -306,27 +306,27 @@ Trung bình mỗi tháng nhà Nam dùng: ...
                     </div>
 
                     <!-- Bài 4: Giải Toán % (AI chấm) -->
-                    <div class="p-6 md:p-8 bg-white rounded-[32px] shadow-sm border border-gray-100">
-                        <p class="font-black text-lg md:text-xl mb-6 text-emerald-700 flex items-center gap-3">
-                            <span class="w-10 h-10 bg-emerald-50 border-2 border-emerald-200 rounded-xl flex items-center justify-center font-black text-emerald-800 shrink-0">4</span>
+                    <div class="p-6 md:p-10 bg-white rounded-[32px] shadow-sm border border-gray-100">
+                        <p class="font-black text-xl md:text-2xl mb-6 text-emerald-700 flex items-center gap-3">
+                            <span class="w-12 h-12 bg-emerald-50 border-2 border-emerald-200 rounded-xl flex items-center justify-center font-black text-emerald-800 text-xl shrink-0">4</span>
                             Giải toán có lời văn
                         </p>
                         
-                        <div class="text-lg md:text-xl leading-relaxed text-gray-800 font-semibold mb-8 text-justify">
+                        <div class="text-2xl md:text-3xl leading-relaxed text-gray-800 font-semibold mb-8 text-justify">
                             <p>
-                                Bể nước ngầm của một toà nhà có <strong>240 m³</strong> nước. Người ta đang hút toàn bộ nước từ bể ra ngoài. Sau một thời gian kể từ khi bắt đầu hút, lượng nước trong bể giảm đi <strong>15%</strong>. Hỏi trong bể còn lại bao nhiêu mét khối nước?
+                                Bể nước ngầm của một toà nhà có <strong class="text-blue-700 text-3xl">240 m³</strong> nước. Người ta đang hút toàn bộ nước từ bể ra ngoài. Sau một thời gian kể từ khi bắt đầu hút, lượng nước trong bể giảm đi <strong class="text-red-600 text-3xl">15%</strong>. Hỏi trong bể còn lại bao nhiêu mét khối nước?
                             </p>
                         </div>
 
                         <!-- Vùng giải Toán AI -->
                         <div class="border-2 border-gray-100 bg-gray-50/50 p-6 md:p-8 rounded-[32px]">
-                            <h4 class="font-black text-gray-800 text-lg mb-6 flex items-center gap-3">
-                                <span class="text-xl">✍️</span> Bài giải của em:
+                            <h4 class="font-black text-gray-800 text-2xl mb-6 flex items-center gap-3">
+                                <span class="text-2xl">✍️</span> Bài giải của em:
                             </h4>
                             
                             <div class="relative group mt-2">
                                 <textarea id="ans-b114-4-text" rows="5" 
-                                    class="w-full bg-white border-2 border-blue-100 rounded-[24px] p-6 pr-14 text-base font-bold text-gray-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none transition-all placeholder:text-gray-300 shadow-inner resize-none leading-relaxed" 
+                                    class="w-full bg-white border-2 border-blue-100 rounded-[24px] p-6 pr-14 text-xl font-bold text-gray-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none transition-all placeholder:text-gray-300 shadow-inner resize-none leading-relaxed" 
                                     placeholder="Ví dụ:
 Lượng nước đã hút ra là: ...
 Số nước còn lại trong bể là: ...
