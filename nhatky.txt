@@ -225,7 +225,7 @@ Trạng thái hiện tại: Dự án đã được dọn dẹp sạch sẽ. Cấ
   + Bài 3: Chọn hình khai triển hình trụ (A/B/C/D, đáp án C).
   + Bài 4: Gấp tấm bìa thành hình nào (A/B/C/D, đáp án D).
 - Thiết kế responsive 2 cột (ảnh SGK bên phải, đáp án bên trái) trên desktop, 1 cột trên mobile.
-- Font 3xl cho tiêu đề, 2xl-3xl cho nội dung — rõ ràng trên TV.
+- Font 3xl cho tiêu đề, 2xl-mmm3xl cho nội dung — rõ ràng trên TV.
 - Hệ thống Đ/S feedback + nút làm lại cho từng bài.
 - Chừa khung placeholder ảnh SGK với tên file rõ ràng (115_b1.png, 115_b2A-D.png, 115_b3A-D.png, 115_b4A-D.png...).
 
