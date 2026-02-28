@@ -7,6 +7,7 @@ import { lesson116 } from './116.js';
 import { lesson117 } from './117.js';
 import { lesson118 } from './118.js';
 import { lesson119 } from './119.js';
+import { lesson120 } from './120.js';
 import { lessonTemplate } from './template.js';
 import { placeholderLessons } from './placeholders.js';
 
@@ -20,6 +21,7 @@ export const mathData = [
     lesson117,
     lesson118,
     lesson119,
+    lesson120,
     ...placeholderLessons,
     lessonTemplate
 ].sort((a, b) => {
