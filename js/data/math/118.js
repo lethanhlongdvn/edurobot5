@@ -44,51 +44,9 @@ export const lesson118 = {
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch mt-12">
-                        <!-- Hình hộp chữ nhật 3D -->
-                        <div class="p-10 md:p-14 bg-blue-50/50 rounded-[56px] border-4 border-blue-100 relative shadow-xl flex flex-col items-center justify-center">
-                            <p class="text-blue-800 font-black text-xl md:text-2xl mb-10 tracking-widest uppercase opacity-60">Hình hộp chữ nhật</p>
-                            <div class="flex justify-center w-full">
-                                <svg viewBox="0 0 300 250" class="w-full max-w-sm h-auto drop-shadow-2xl">
-                                    <!-- Hidden edges (Dashed) -->
-                                    <path d="M60 80 L110 50 M110 50 L210 50 M110 50 L110 150" stroke="#0369a1" stroke-width="2" stroke-dasharray="8,5" opacity="0.3" />
-                                    <!-- Front face -->
-                                    <rect x="60" y="80" width="100" height="120" fill="#0ea5e9" stroke="#0369a1" stroke-width="3" />
-                                    <!-- Side face -->
-                                    <path d="M160 80 L210 50 L210 170 L160 200 Z" fill="#0284c7" stroke="#0369a1" stroke-width="3" />
-                                    <!-- Top face -->
-                                    <path d="M60 80 L110 50 L210 50 L160 80 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="3" />
-                                    
-                                    <!-- Labels -->
-                                    <text x="110" y="230" text-anchor="middle" class="text-[18px] font-black fill-blue-900">25 cm</text>
-                                    <text x="210" y="215" text-anchor="middle" class="text-[16px] font-black fill-blue-900">20 cm</text>
-                                    <text x="50" y="145" text-anchor="end" class="text-[18px] font-black fill-blue-900">30 cm</text>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <!-- Sơ đồ khai triển (Net) -->
-                        <div class="p-10 md:p-14 bg-amber-50 rounded-[56px] border-4 border-amber-200 relative shadow-xl flex flex-col items-center justify-center">
-                            <p class="text-amber-800 font-black text-xl md:text-2xl mb-10 tracking-widest uppercase opacity-60">Sơ đồ khai triển</p>
-                            <div class="flex justify-center w-full">
-                                <svg viewBox="0 0 400 300" class="w-full h-auto drop-shadow-xl">
-                                    <!-- Top base -->
-                                    <rect x="130" y="20" width="100" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
-                                    <!-- Lateral faces -->
-                                    <rect x="50" y="80" width="80" height="120" fill="#bae6fd" stroke="#0284c7" stroke-width="2.5" />
-                                    <rect x="130" y="80" width="100" height="120" fill="#bae6fd" stroke="#0284c7" stroke-width="2.5" />
-                                    <rect x="230" y="80" width="80" height="120" fill="#bae6fd" stroke="#0284c7" stroke-width="2.5" />
-                                    <rect x="310" y="80" width="100" height="120" fill="#bae6fd" stroke="#0284c7" stroke-width="2.5" />
-                                    <!-- Bottom base -->
-                                    <rect x="130" y="200" width="100" height="60" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" />
-                                    
-                                    <!-- Labels - To và rõ cho TV -->
-                                    <text x="180" y="145" text-anchor="middle" class="text-[20px] font-black fill-blue-800">30 cm</text>
-                                    <text x="180" y="240" text-anchor="middle" class="text-[18px] font-black fill-amber-800">25 cm</text>
-                                    <text x="270" y="195" text-anchor="middle" class="text-[16px] font-black fill-amber-800">20 cm</text>
-                                </svg>
-                            </div>
-                        </div>
+                    <div class="flex flex-col items-center gap-12 mt-12 bg-white/10 p-10 rounded-[64px] border-4 border-white/20 shadow-3xl">
+                        <p class="text-white font-black text-2xl md:text-3xl tracking-[0.3em] uppercase opacity-80 decoration-yellow-400 decoration-4 underline-offset-8 underline text-center">HÌNH MINH HỌA & SƠ ĐỒ</p>
+                        <img src="hinh_anh/toan_tap_2/118-khampha-illus.png" alt="Khám phá tiết 118" class="w-full max-w-5xl h-auto rounded-[48px] shadow-2xl border-8 border-white/10">
                     </div>
 
                     <div class="bg-indigo-900 p-12 md:p-16 rounded-[64px] text-white shadow-3xl relative overflow-hidden border-4 border-indigo-400/20 mt-12">
@@ -143,63 +101,31 @@ export const lesson118 = {
                     Tính diện tích toàn phần của mỗi hình hộp chữ nhật:
                 </p>
 
-                <div class="grid grid-cols-1 gap-12">
-                    <!-- Hình a -->
-                    <div class="bg-gray-50 p-10 md:p-14 rounded-[56px] border-4 border-transparent hover:border-orange-300 transition-all group shadow-inner flex flex-col items-center">
-                        <div class="bg-white p-10 rounded-[48px] shadow-xl mb-12 w-full max-w-xl flex justify-center border-4 border-gray-50">
-                            <svg viewBox="0 0 200 150" class="w-full h-auto opacity-100 transform group-hover:scale-110 transition-transform duration-500">
-                                <path d="M40 100 L120 100 L160 70 L80 70 Z" fill="#fdba74" stroke="#c2410c" stroke-width="2.5" />
-                                <path d="M40 100 L40 40 L120 40 L120 100 Z" fill="#fb923c" stroke="#c2410c" stroke-width="2.5" />
-                                <path d="M120 100 L120 40 L160 10 L160 70 Z" fill="#f97316" stroke="#c2410c" stroke-width="2.5" />
-                                <text x="80" y="120" text-anchor="middle" class="text-[12px] font-black fill-orange-950">30 cm</text>
-                                <text x="145" y="95" text-anchor="middle" class="text-[12px] font-black fill-orange-950">20 cm</text>
-                                <text x="35" y="70" text-anchor="end" class="text-[12px] font-black fill-orange-950">40 cm</text>
-                            </svg>
-                        </div>
-                        <div class="w-full max-w-xl space-y-8">
-                            <div class="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl border-4 border-orange-100 flex items-center justify-center gap-8 relative">
-                                <input type="number" id="ans-118-1a" class="w-full text-5xl md:text-8xl font-black text-orange-600 bg-transparent border-none focus:ring-0 text-right" placeholder="?">
-                                <span class="text-4xl md:text-6xl font-black text-orange-600/30">cm²</span>
+                <div class="bg-gray-50 p-10 md:p-16 rounded-[64px] border-4 border-dashed border-blue-200 shadow-inner flex flex-col items-center gap-12">
+                    <img src="hinh_anh/toan_tap_2/118-b1-images.png" alt="Các hình khối bài 1" class="w-full max-w-5xl h-auto rounded-[48px] shadow-2xl">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
+                        <!-- Đáp án A -->
+                        <div class="space-y-4">
+                            <p class="text-2xl font-black text-center text-orange-600 uppercase">Hình a</p>
+                            <div class="bg-white p-8 rounded-[40px] shadow-2xl border-4 border-orange-100 flex items-center justify-center gap-6">
+                                <input type="number" id="ans-118-1a" class="w-full text-5xl md:text-7xl font-black text-orange-600 bg-transparent border-none focus:ring-0 text-right" placeholder="?">
+                                <span class="text-3xl md:text-5xl font-black text-orange-600/30">cm²</span>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Hình b -->
-                    <div class="bg-gray-50 p-10 md:p-14 rounded-[56px] border-4 border-transparent hover:border-cyan-300 transition-all group shadow-inner flex flex-col items-center">
-                        <div class="bg-white p-10 rounded-[48px] shadow-xl mb-12 w-full max-w-xl flex justify-center border-4 border-gray-50">
-                            <svg viewBox="0 0 200 150" class="w-full h-auto opacity-100 transform group-hover:scale-110 transition-transform duration-500">
-                                <path d="M20 90 L140 90 L170 60 L50 60 Z" fill="#67e8f9" stroke="#0e7490" stroke-width="2.5" />
-                                <path d="M20 90 L20 50 L140 50 L140 90 Z" fill="#22d3ee" stroke="#0e7490" stroke-width="2.5" />
-                                <path d="M140 90 L140 50 L170 20 L170 60 Z" fill="#06b6d4" stroke="#0e7490" stroke-width="2.5" />
-                                <text x="80" y="110" text-anchor="middle" class="text-[12px] font-black fill-cyan-950">50 cm</text>
-                                <text x="160" y="85" text-anchor="middle" class="text-[12px] font-black fill-cyan-950">25 cm</text>
-                                <text x="15" y="70" text-anchor="end" class="text-[12px] font-black fill-cyan-950">25 cm</text>
-                            </svg>
-                        </div>
-                        <div class="w-full max-w-xl space-y-8">
-                            <div class="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl border-4 border-cyan-100 flex items-center justify-center gap-8 relative">
-                                <input type="number" id="ans-118-1b" class="w-full text-5xl md:text-8xl font-black text-cyan-600 bg-transparent border-none focus:ring-0 text-right" placeholder="?">
-                                <span class="text-4xl md:text-6xl font-black text-cyan-600/30">cm²</span>
+                        <!-- Đáp án B -->
+                        <div class="space-y-4">
+                            <p class="text-2xl font-black text-center text-cyan-600 uppercase">Hình b</p>
+                            <div class="bg-white p-8 rounded-[40px] shadow-2xl border-4 border-cyan-100 flex items-center justify-center gap-6">
+                                <input type="number" id="ans-118-1b" class="w-full text-5xl md:text-7xl font-black text-cyan-600 bg-transparent border-none focus:ring-0 text-right" placeholder="?">
+                                <span class="text-3xl md:text-5xl font-black text-cyan-600/30">cm²</span>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Hình c -->
-                    <div class="bg-gray-50 p-10 md:p-14 rounded-[56px] border-4 border-transparent hover:border-emerald-300 transition-all group shadow-inner flex flex-col items-center">
-                        <div class="bg-white p-10 rounded-[48px] shadow-xl mb-12 w-full max-w-xl flex justify-center border-4 border-gray-50">
-                            <svg viewBox="0 0 200 150" class="w-full h-auto opacity-100 transform group-hover:scale-110 transition-transform duration-500">
-                                <path d="M40 90 L120 90 L150 60 L70 60 Z" fill="#6ee7b7" stroke="#059669" stroke-width="2.5" />
-                                <path d="M40 90 L40 40 L120 40 L120 90 Z" fill="#34d399" stroke="#059669" stroke-width="2.5" />
-                                <path d="M120 90 L120 40 L150 10 L150 60 Z" fill="#10b981" stroke="#059669" stroke-width="2.5" />
-                                <text x="80" y="110" text-anchor="middle" class="text-[12px] font-black fill-emerald-950">35 cm</text>
-                                <text x="140" y="85" text-anchor="middle" class="text-[12px] font-black fill-emerald-950">30 cm</text>
-                                <text x="35" y="65" text-anchor="end" class="text-[12px] font-black fill-emerald-950">25 cm</text>
-                            </svg>
-                        </div>
-                        <div class="w-full max-w-xl space-y-8">
-                            <div class="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl border-4 border-emerald-100 flex items-center justify-center gap-8 relative">
-                                <input type="number" id="ans-118-1c" class="w-full text-5xl md:text-8xl font-black text-emerald-600 bg-transparent border-none focus:ring-0 text-right" placeholder="?">
-                                <span class="text-4xl md:text-6xl font-black text-emerald-600/30">cm²</span>
+                        <!-- Đáp án C -->
+                        <div class="space-y-4">
+                            <p class="text-2xl font-black text-center text-emerald-600 uppercase">Hình c</p>
+                            <div class="bg-white p-8 rounded-[40px] shadow-2xl border-4 border-emerald-100 flex items-center justify-center gap-6">
+                                <input type="number" id="ans-118-1c" class="w-full text-5xl md:text-7xl font-black text-emerald-600 bg-transparent border-none focus:ring-0 text-right" placeholder="?">
+                                <span class="text-3xl md:text-5xl font-black text-emerald-600/30">cm²</span>
                             </div>
                         </div>
                     </div>
@@ -215,6 +141,10 @@ export const lesson118 = {
                     Chọn hộp có diện tích toàn phần lớn nhất?
                 </p>
 
+                <div class="flex flex-col items-center gap-12 mb-16 px-10">
+                    <img src="hinh_anh/toan_tap_2/118-b2-boxes.png" alt="So sánh các hộp bài 2" class="w-full max-w-6xl h-auto rounded-[64px] shadow-3xl border-8 border-white/5">
+                </div>
+                
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-20">
                     <!-- Hộp A -->
                     <button onclick="selectBox('A')" id="btn-box-A" class="bg-white/5 border-4 border-white/10 p-10 rounded-[56px] hover:bg-white/10 hover:border-yellow-400 transition-all group relative perspective-1000">
