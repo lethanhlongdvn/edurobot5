@@ -203,11 +203,8 @@ export const lesson117 = {
                         </div>
                         
                         <div class="flex justify-center">
-                            <button id="btn-check-117-ai" onclick="submit117B2()" class="w-full md:w-auto min-w-[200px] bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white p-4 md:p-6 rounded-[24px] font-black text-xl md:text-2xl shadow-xl shadow-emerald-100 active:scale-95 transition-all flex justify-center items-center gap-4 group">
-                                <span class="tracking-widest capitalize">Thầy E chấm</span>
-                                <div class="bg-white/20 p-2 rounded-xl group-hover:rotate-12 transition-transform">
-                                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-                                </div>
+                            <button id="btn-check-117-ai" onclick="submit117B2()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl font-black text-lg shadow-lg active:scale-95 transition-all flex items-center gap-2">
+                                <span>Thầy E Chấm</span>
                             </button>
                         </div>
                     </div>
@@ -216,11 +213,8 @@ export const lesson117 = {
 
             <!-- Nút Nộp Bài Tổng Kết -->
             <div class="flex justify-center mt-2">
-                <button id="btn-submit-117" onclick="submitFinal117()" class="w-full md:w-auto min-w-[300px] bg-indigo-600 hover:bg-indigo-700 text-white p-6 md:p-8 rounded-[40px] font-black text-2xl md:text-4xl shadow-2xl shadow-indigo-100 active:scale-95 transition-all flex justify-center items-center gap-6 group">
-                    <span class="tracking-widest uppercase">Nộp Bài</span>
-                    <div class="bg-white/20 p-2 rounded-2xl group-hover:translate-x-3 transition-transform">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
+                <button id="btn-submit-117" onclick="submitFinal117()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
+                    NỘP BÀI
                 </button>
             </div>
 
