@@ -352,6 +352,16 @@ export const router = {
                 </div>
             `;
         } else if (tabId === 'quiz') {
+            // Compatibility: Convert TiengViet5 'quiz' format to EduRobot5 Math 'quizPool' format
+            const tvQuiz = lesson.tabs?.quiz?.questions || lesson.quiz?.questions;
+            if (!lesson.quizPool && tvQuiz && Array.isArray(tvQuiz)) {
+                lesson.quizPool = tvQuiz.map(item => ({
+                    question: item.q,
+                    options: item.a,
+                    answer: item.c,
+                    level: item.level || 1
+                }));
+            }
             html = UI.renderQuizContainer(lesson);
         }
 
