@@ -1,204 +1,154 @@
 export const lesson116 = {
-    "topic": "Hình học và Đo lường",
-    "week": "24",
-    "period": "116",
-    "title": "LUYỆN TẬP",
-    "desc": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ (Tiết 116 - Luyện tập - Trang 42-43).",
-    "content": `
-        <div class="space-y-2">
-            <div class="bg-gradient-to-r from-cyan-600 to-blue-700 p-4 md:p-6 rounded-[32px] shadow-xl flex items-center gap-4 text-white">
-                <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md border-2 border-white/30 shrink-0">
-                    <span class="text-3xl">📦</span>
-                </div>
-                <div>
-                    <h3 class="text-xl md:text-2xl font-black italic">Hình khai triển</h3>
-                    <p class="text-sm md:text-lg font-bold opacity-80">Nhận diện và cắt ghép các hình khối kỳ diệu.</p>
-                </div>
-            </div>
-        </div>
-    `,
-    "practice": `
-        <div class="space-y-2">
-            <!-- Bài 1 -->
-            <div id="box-116-1" class="p-4 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden flex flex-col gap-4">
-                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                    <p class="font-black text-xl md:text-2xl text-blue-700 flex items-center gap-2">
-                        <span class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black shrink-0">1</span>
-                        Đây là khai triển của hình nào?
-                    </p>
-                    <button onclick="check116B1()" class="shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-xl font-bold text-lg shadow-md transition-all active:scale-95 flex items-center gap-2">
-                        <span class="font-black">✓</span> Kiểm tra
-                    </button>
-                </div>
-                <div class="bg-blue-50 p-2 md:p-4 rounded-[32px]">
-                    <div class="bg-white rounded-2xl p-4 mb-2 flex justify-center border border-blue-100">
-                        <img src="hinh_anh/toan_tap_2/116_b1_de.png" class="w-full h-auto max-w-sm object-contain drop-shadow-sm mix-blend-multiply" />
-                    </div>
-                    <div class="grid grid-cols-3 gap-2">
-                        <button onclick="select116B1('A')" id="btn-116b1-a" class="b116-opt bg-white p-2 md:p-4 rounded-2xl border-2 border-transparent hover:border-blue-200 flex flex-col items-center justify-end gap-2 group min-h-[160px] [&.selected]:border-blue-500 [&.selected]:bg-blue-100">
-                             <img src="hinh_anh/toan_tap_2/116_b1_a.png" class="h-28 md:h-36 object-contain drop-shadow-sm mix-blend-multiply" />
-                            <span class="font-black text-2xl md:text-3xl text-gray-400 group-hover:text-blue-600">A</span>
-                        </button>
-                        <button onclick="select116B1('B')" id="btn-116b1-b" class="b116-opt bg-white p-2 md:p-4 rounded-2xl border-2 border-transparent hover:border-blue-200 flex flex-col items-center justify-end gap-2 group min-h-[160px] [&.selected]:border-blue-500 [&.selected]:bg-blue-100">
-                             <img src="hinh_anh/toan_tap_2/116_b1_b.png" class="h-28 md:h-36 object-contain drop-shadow-sm mix-blend-multiply" />
-                            <span class="font-black text-2xl md:text-3xl text-gray-400 group-hover:text-blue-600">B</span>
-                        </button>
-                        <button onclick="select116B1('C')" id="btn-116b1-c" class="b116-opt bg-white p-2 md:p-4 rounded-2xl border-2 border-transparent hover:border-blue-200 flex flex-col items-center justify-end gap-2 group min-h-[160px] [&.selected]:border-blue-500 [&.selected]:bg-blue-100">
-                             <img src="hinh_anh/toan_tap_2/116_b1_c.png" class="h-16 md:h-20 object-contain drop-shadow-sm mix-blend-multiply" />
-                            <span class="font-black text-2xl md:text-3xl text-gray-400 group-hover:text-blue-600">C</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Bài 2 -->
-            <div id="box-116-2" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <div class="flex items-center justify-between mb-2">
-                    <p class="font-black text-xl md:text-2xl text-emerald-700 flex items-center gap-2">
-                        <span class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">2</span>
-                        Thực hành gấp hình lập phương
-                    </p>
-                </div>
-                <div class="bg-emerald-50 p-4 rounded-[32px] space-y-4">
-                    <p class="text-emerald-900 font-bold text-lg md:text-xl text-center">Em hãy chọn một trong các hình khai triển dưới đây và làm theo bước để gấp thành hình lập phương nhé!</p>
-                    <div class="flex justify-center bg-white p-2 md:p-4 rounded-3xl shadow-inner border border-emerald-100">
-                        <img src="hinh_anh/toan_tap_2/116_b2_shapes.png" alt="Shapes" class="w-full max-w-2xl h-auto object-contain mix-blend-multiply drop-shadow-sm" />
-                    </div>
-                    <div class="flex justify-center bg-white p-2 md:p-4 rounded-3xl shadow-inner border border-emerald-100">
-                        <img src="hinh_anh/toan_tap_2/116_b2_robot.png" alt="Robot folding" class="w-full max-w-2xl h-auto object-contain mix-blend-multiply drop-shadow-sm" />
-                    </div>
-                </div>
-            </div>
+    id: "116",
+    period: "116",
+    title: "Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+    subject: "math",
+    week: "23",
+    objective: "Mô tả được hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ.",
 
-            <!-- Bài 3 -->
-            <div id="box-116-3" class="p-4 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden flex flex-col gap-4">
-                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                    <p class="font-black text-xl md:text-2xl text-indigo-700 flex items-center gap-2">
-                        <span class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black shrink-0">3</span>
-                        Chọn khai triển của hình lập phương:
-                    </p>
-                    <button onclick="check116B3()" class="shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-xl font-bold text-lg shadow-md transition-all active:scale-95 flex items-center gap-2">
-                        <span class="font-black">✓</span> Kiểm tra
-                    </button>
-                </div>
-                <div class="bg-indigo-50 p-2 md:p-4 rounded-[32px] grid grid-cols-3 gap-2">
-                    <button onclick="this.classList.toggle('selected');" id="116-3a" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col justify-end items-center gap-2 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
-                        <img src="hinh_anh/toan_tap_2/116_b3_a.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[260px]" />
-                        <span class="font-black text-xl md:text-3xl text-gray-400">A</span>
-                    </button>
-                    <button onclick="this.classList.toggle('selected');" id="116-3b" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col justify-end items-center gap-2 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
-                        <img src="hinh_anh/toan_tap_2/116_b3_b.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[260px]" />
-                        <span class="font-black text-xl md:text-3xl text-gray-400">B</span>
-                    </button>
-                    <button onclick="this.classList.toggle('selected');" id="116-3c" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col justify-end items-center gap-2 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
-                        <img src="hinh_anh/toan_tap_2/116_b3_c.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[260px]" />
-                        <span class="font-black text-xl md:text-3xl text-gray-400">C</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Bài 4 -->
-            <div id="box-116-4" class="p-4 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden flex flex-col gap-4">
-                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                    <p class="font-black text-xl md:text-2xl text-orange-700 flex items-center gap-2">
-                        <span class="w-10 h-10 bg-orange-600 text-white rounded-xl flex items-center justify-center font-black shrink-0">4</span>
-                        Cắt 1 hình chữ nhật để phần còn lại gấp được một hình hộp chữ nhật:
-                    </p>
-                    <button onclick="check116B4()" class="shrink-0 bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-xl font-bold text-lg shadow-md transition-all active:scale-95 flex items-center gap-2">
-                        <span class="font-black">✓</span> Kiểm tra
-                    </button>
-                </div>
-                <div class="bg-slate-50 p-6 md:p-12 rounded-[32px] flex justify-center items-center overflow-x-auto">
-                    <div class="flex items-center">
-                        <div id="cut-green" onclick="toggleCut116('green')" class="w-12 h-24 md:w-20 md:h-40 bg-[#22c55e] border-2 border-[#15803d] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl md:text-5xl font-black">✕</div></div>
-                        <div class="flex flex-col">
-                            <div id="cut-purple" onclick="toggleCut116('purple')" class="w-24 h-12 md:w-40 md:h-20 bg-[#a855f7] border-2 border-[#7e22ce] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl md:text-5xl font-black">✕</div></div>
-                            <div id="cut-blue" onclick="toggleCut116('blue')" class="w-24 h-24 md:w-40 md:h-40 bg-[#3b82f6] border-2 border-[#1d4ed8] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-4xl md:text-6xl font-black">✕</div></div>
-                            <div id="cut-white" onclick="toggleCut116('white')" class="w-24 h-12 md:w-40 md:h-20 bg-white border-2 border-gray-400 relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl md:text-5xl font-black">✕</div></div>
+    sections: [
+        {
+            title: "1. Khám phá",
+            type: "discovery",
+            content: `
+                <div class="space-y-6">
+                    <div class="glass-card p-6 bg-blue-50 border-l-8 border-blue-500 rounded-r-3xl">
+                        <h4 class="text-xl font-black text-blue-800 mb-4">A. Hình khai triển của hình lập phương</h4>
+                        <p class="text-lg leading-relaxed mb-4 font-medium">
+                            Khi ta cắt theo một số cạnh của một hình lập phương và trải các mặt ra trên một mặt phẳng, ta được <b>hình khai triển</b> của nó.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-6">
+                            <div class="bg-white p-4 rounded-2xl shadow-sm border-2 border-blue-100 flex flex-col items-center">
+                                <span class="text-xs font-black uppercase text-blue-400 mb-2">Mô hình 3D</span>
+                                <div class="w-full h-48 flex items-center justify-center bg-gray-50 rounded-xl">
+                                    [[CUBE3D|Hình lập phương]]
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-2xl shadow-sm border-2 border-blue-100 flex flex-col items-center">
+                                <span class="text-xs font-black uppercase text-blue-400 mb-2">Hình khai triển (Dạng chữ T)</span>
+                                <svg width="200" height="150" viewBox="0 0 200 150" class="drop-shadow-md">
+                                    <rect x="70" y="10" width="30" height="30" fill="#3B82F6" stroke="white" stroke-width="1"/>
+                                    <rect x="40" y="40" width="30" height="30" fill="#3B82F6" stroke="white" stroke-width="1"/>
+                                    <rect x="70" y="40" width="30" height="30" fill="#1D4ED8" stroke="white" stroke-width="1"/>
+                                    <rect x="100" y="40" width="30" height="30" fill="#3B82F6" stroke="white" stroke-width="1"/>
+                                    <rect x="70" y="70" width="30" height="30" fill="#3B82F6" stroke="white" stroke-width="1"/>
+                                    <rect x="70" y="100" width="30" height="30" fill="#3B82F6" stroke="white" stroke-width="1"/>
+                                </svg>
+                                <p class="text-xs text-gray-500 mt-2 italic">Gồm 6 hình vuông bằng nhau</p>
+                            </div>
                         </div>
-                        <div id="cut-red" onclick="toggleCut116('red')" class="w-12 h-24 md:w-20 md:h-40 bg-[#ef4444] border-2 border-[#b91c1c] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl md:text-5xl font-black">✕</div></div>
-                        <div id="cut-orange" onclick="toggleCut116('orange')" class="w-24 h-24 md:w-40 md:h-40 bg-[#f97316] border-2 border-[#c2410c] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-4xl md:text-6xl font-black">✕</div></div>
-                        <div id="cut-yellow" onclick="toggleCut116('yellow')" class="w-12 h-24 md:w-20 md:h-40 bg-[#fde047] border-2 border-[#a16207] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl md:text-5xl font-black">✕</div></div>
+                    </div>
+
+                    <div class="glass-card p-6 bg-emerald-50 border-l-8 border-emerald-500 rounded-r-3xl">
+                        <h4 class="text-xl font-black text-emerald-800 mb-4">B. Hình khai triển của hình trụ</h4>
+                        <p class="text-lg leading-relaxed mb-4 font-medium">
+                            Hình khai triển của hình trụ gồm mặt bên là <b>hình chữ nhật</b> và hai đáy là <b>hình tròn</b>.
+                        </p>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-2 border-emerald-100 mt-4">
+                             <div class="flex flex-col md:flex-row justify-around items-center gap-8">
+                                <div class="text-center">
+                                    <div class="w-24 h-32 bg-emerald-200 border-4 border-emerald-500 rounded-full relative mx-auto overflow-hidden">
+                                        <div class="absolute top-0 w-full h-8 bg-emerald-400/50 border-b-2 border-emerald-500"></div>
+                                        <div class="absolute bottom-0 w-full h-8 bg-emerald-400/50 border-t-2 border-emerald-500"></div>
+                                    </div>
+                                    <p class="text-sm font-black text-emerald-600 mt-3">Hình trụ</p>
+                                </div>
+                                <div class="text-blue-400 animate-pulse text-2xl">➜</div>
+                                <div class="text-center">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-12 h-12 rounded-full bg-emerald-300 border-2 border-emerald-500 mb-2"></div>
+                                        <div class="w-40 h-20 bg-emerald-400 border-2 border-emerald-600 rounded-md"></div>
+                                        <div class="w-12 h-12 rounded-full bg-emerald-300 border-2 border-emerald-500 mt-2"></div>
+                                    </div>
+                                    <p class="text-sm font-black text-emerald-600 mt-3">Hình khai triển</p>
+                                </div>
+                             </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            `
+        },
+        {
+            title: "2. Thực hành",
+            type: "practice",
+            content: `
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-[32px] shadow-xl border-4 border-blue-100 animate-fade-in relative overflow-hidden" style="min-height: 400px;">
+                        <h4 class="text-3xl font-black text-blue-800 mb-8 border-b-4 border-blue-500 pb-4 flex items-center gap-4">
+                            <span class="bg-blue-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-200">1</span>
+                            Nhận diện hình khối
+                        </h4>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-10 rounded-3xl border-2 border-blue-200 flex justify-center items-center">
+                                <svg width="250" height="200" viewBox="0 0 250 200">
+                                    <rect x="100" y="20" width="50" height="50" fill="#60A5FA" stroke="#1E40AF" stroke-width="2"/>
+                                    <rect x="50" y="70" width="150" height="50" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
+                                    <line x1="100" x2="100" y1="70" y2="120" stroke="#1E40AF" stroke-width="2"/>
+                                    <line x1="150" x2="150" y1="70" y2="120" stroke="#1E40AF" stroke-width="2"/>
+                                    <rect x="100" y="120" width="50" height="50" fill="#60A5FA" stroke="#1E40AF" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="space-y-6">
+                                <p class="text-2xl font-bold text-gray-700 leading-relaxed italic">
+                                    "Hình khai triển bên khi gấp lại sẽ tạo thành hình khối nào?"
+                                </p>
+                                [[MATH_EX|p1|options|label|Hình khai triển này khi gấp lại sẽ cho ta: |A. Hình hộp chữ nhật, B. Hình lập phương, C. Hình trụ|B]]
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Nộp bài -->
-            <div class="flex justify-center mt-2">
-                <button id="btn-submit-116" onclick="submit116()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
-                    NỘP BÀI
-                </button>
-            </div>
+                    <div class="bg-white p-8 rounded-[32px] shadow-xl border-4 border-pink-100 animate-fade-in relative overflow-hidden" style="min-height: 400px;">
+                        <h4 class="text-3xl font-black text-pink-800 mb-8 border-b-4 border-pink-500 pb-4 flex items-center gap-4">
+                            <span class="bg-pink-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg shadow-pink-200">2</span>
+                            Đặc điểm hình khai triển
+                        </h4>
+                        <div class="bg-pink-50 p-8 rounded-3xl border-2 border-pink-200 mb-8">
+                            <p class="text-2xl font-bold text-pink-900 leading-relaxed">
+                                Bạn hãy quan sát hình trụ và dự đoán: Khi "mở" mặt bên của nó ra, ta được một hình gì?
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            [[MATH_EX|p2|options|label|A. Hình vuông, B. Hình tròn, C. Hình chữ nhật|C]]
+                        </div>
+                    </div>
 
-            <script>
-                window.select116B1 = function(choice) {
-                    window.ans116B1 = choice;
-                    document.querySelectorAll('.b116-opt').forEach(btn => btn.classList.remove('selected'));
-                    document.getElementById('btn-116b1-' + choice.toLowerCase()).classList.add('selected');
-                };
+                    <div class="bg-white p-8 rounded-[32px] shadow-xl border-4 border-orange-100 animate-fade-in relative" style="min-height: 450px;">
+                        <h4 class="text-3xl font-black text-orange-800 mb-8 border-b-4 border-orange-500 pb-4 flex items-center gap-4">
+                            <span class="bg-orange-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-200">3</span>
+                            Đếm số mặt
+                        </h4>
+                        <div class="flex flex-col md:flex-row gap-10 items-center">
+                            <div class="flex-1 space-y-6">
+                                <p class="text-2xl font-bold text-gray-700 leading-relaxed">
+                                    Một hình khai triển của hình lập phương có tất cả bao nhiêu mặt là hình vuông?
+                                </p>
+                                [[MATH_EX|p3|input|label|Nhập số mặt: |6|ans]]
+                            </div>
+                            <div class="w-full md:w-64 h-64 bg-orange-50 rounded-full flex items-center justify-center border-4 border-dashed border-orange-200 animate-pulse-slow">
+                                <span class="text-8xl">📦</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
+    ],
 
-                window.check116B1 = function() {
-                    const choice = window.ans116B1;
-                    if (!choice) return;
-                    const box = document.getElementById('box-116-1');
-                    box.classList.add('border-2');
-                    if (choice === 'B') {
-                        box.classList.add('border-emerald-400', 'bg-emerald-50');
-                    } else {
-                        box.classList.add('border-red-400', 'bg-red-50');
-                    }
-                };
-
-                window.check116B3 = function() {
-                    const a = document.getElementById('116-3a').classList.contains('selected');
-                    const b = document.getElementById('116-3b').classList.contains('selected');
-                    const c = document.getElementById('116-3c').classList.contains('selected');
-                    const box = document.getElementById('box-116-3');
-                    box.classList.add('border-2');
-                    if (!a && !b && c) {
-                        box.classList.add('border-emerald-400', 'bg-emerald-50');
-                    } else {
-                        box.classList.add('border-red-400', 'bg-red-50');
-                    }
-                };
-
-                window.toggleCut116 = function(id) {
-                    const marks = document.querySelectorAll('#box-116-4 .x-mark');
-                    marks.forEach(m => m.classList.add('hidden'));
-                    document.querySelector('#cut-' + id + ' .x-mark').classList.remove('hidden');
-                    window.lastCut116 = id;
-                };
-
-                window.check116B4 = function() {
-                    const box = document.getElementById('box-116-4');
-                    box.classList.add('border-2');
-                    if (window.lastCut116 === 'green' || window.lastCut116 === 'yellow') {
-                        box.classList.add('border-emerald-400', 'bg-emerald-50');
-                    } else {
-                        box.classList.add('border-red-400', 'bg-red-50');
-                    }
-                };
-
-                window.submit116 = function() {
-                    let score = 0;
-                    if (window.ans116B1 === 'B') score += 3.5;
-                    const a3 = document.getElementById('116-3a').classList.contains('selected');
-                    const b3 = document.getElementById('116-3b').classList.contains('selected');
-                    const c3 = document.getElementById('116-3c').classList.contains('selected');
-                    if (!a3 && !b3 && c3) score += 3.5;
-                    if (window.lastCut116 === 'green' || window.lastCut116 === 'yellow') score += 3;
-
-                    const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
-                    if (window.submitMathLesson) {
-                        window.submitMathLesson("Score: " + score, status, "btn-submit-116");
-                    }
-                    alert("Điểm của bé: " + Math.round(score*10)/10 + "/10. 🌟");
-                };
-            </script>
-        </div>
-    `,
-    "quizPool": [
-        { "question": "Hình khai triển của hình trụ gồm mặt bên là hình gì?", "options": ["Hình vuông", "Hình tròn", "Hình chữ nhật", "Hình tam giác"], "answer": 2, "level": 1 },
-        { "question": "Có bao nhiêu hình khai triển cơ bản của hình lập phương?", "options": ["6 hình", "8 hình", "11 hình", "12 hình"], "answer": 2, "level": 2 },
-        { "question": "Một hình khai triển của hình lập phương có mấy mặt?", "options": ["4 mặt", "6 mặt", "8 mặt", "4 mặt bên và 1 mặt đáy"], "answer": 1, "level": 1 }
+    quizPool: [
+        { level: 1, question: "Hình khai triển của hình trụ gồm mặt bên là hình gì?", options: ["Hình vuông", "Hình tròn", "Hình chữ nhật", "Hình tam giác"], answer: 2 },
+        { level: 1, question: "Có bao nhiêu hình khai triển cơ bản của hình lập phương?", options: ["6 hình", "8 hình", "11 hình", "12 hình"], answer: 2 },
+        { level: 1, question: "Một hình khai triển của hình lập phương có mấy mặt?", options: ["4 mặt", "6 mặt", "8 mặt", "5 mặt"], answer: 1 },
+        { level: 2, question: "Khi khai triển hình hộp chữ nhật, ta thu được bao nhiêu hình chữ nhật?", options: ["4 hình", "6 hình", "8 hình", "12 hình"], answer: 1 },
+        { level: 1, question: "Hình khai triển của hình trụ gồm mấy hình tròn đáy?", options: ["1 hình", "2 hình", "3 hình", "Không có hình nào"], answer: 1 },
+        { level: 1, question: "Để gấp được một hình lập phương, các mặt trong hình khai triển phải là hình gì?", options: ["Hình chữ nhật", "Hình thoi", "Hình vuông", "Hình tam giác"], answer: 2 },
+        { level: 2, question: "Hình khai triển của hình trụ có phần mặt bên là hình chữ nhật. Chiều dài hình chữ nhật đó bằng gì?", options: ["Chiều cao hình trụ", "Chu vi đáy hình trụ", "Đường kính đáy", "Bán kính đáy"], answer: 1 },
+        { level: 2, question: "Nếu một hình khai triển chỉ có 5 hình vuông bằng nhau, ta có thể gấp thành hình lập phương không?", options: ["Có", "Không", "Tùy vào cách sắp xếp", "Chỉ gấp được một nửa"], answer: 1 },
+        { level: 1, question: "Hình hộp chữ nhật là trường hợp đặc biệt của hình lập phương, đúng hay sai?", options: ["Đúng", "Sai", "Cả hai đều đúng", "Không xác định"], answer: 1 },
+        { level: 2, question: "Trong hình khai triển của hình hộp chữ nhật, có mấy cặp mặt đối diện bằng nhau?", options: ["2 cặp", "3 cặp", "4 cặp", "6 cặp"], answer: 1 },
+        { level: 3, question: "Diện tích toàn phần của hình lập phương bằng diện tích một mặt nhân với mấy?", options: ["Nhân 4", "Nhân 5", "Nhân 6", "Nhân 8"], answer: 2 },
+        { level: 2, question: "Một hình khai triển gồm 6 hình vuông xếp thành hàng ngang liên tiếp có gấp được hình lập phương không?", options: ["Có", "Không", "Gấp được nếu cắt bớt", "Chỉ gấp được hình chữ nhật"], answer: 1 },
+        { level: 3, question: "Hình khai triển của hình hộp chữ nhật có thể gồm các mặt là hình vuông không?", options: ["Không bao giờ", "Luôn luôn", "Có thể nếu là trường hợp đặc biệt", "Chỉ khi hình đó là hình trụ"], answer: 2 },
+        { level: 2, question: "Khi gấp hình khai triển thành hình khối, các cạnh trùng nhau phải có độ dài như thế nào?", options: ["Khác nhau", "Bằng nhau", "Cạnh này gấp đôi cạnh kia", "Không quan trọng"], answer: 1 },
+        { level: 3, question: "Hình nào sau đây KHÔNG PHẢI là hình khối cơ bản đã học?", options: ["Hình lập phương", "Hình hộp chữ nhật", "Hình cầu", "Hình trụ"], answer: 2 }
     ]
 };
