@@ -677,15 +677,15 @@ function toggleAccordion(btn) {
     }
 }
 
-// UI Helpers (Missing Restored)
-function switchTab(id) {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-    const btn = document.getElementById('btn-' + id);
-    const tab = document.getElementById('tab-' + id);
-    if (btn) btn.classList.add('active');
-    if (tab) tab.classList.add('active');
-}
+// UI Helpers (Missing Restored - DISABLED DUE TO CONFLICT WITH EUROBOT5 UI.js)
+// function switchTab(id) {
+//     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+//     document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+//     const btn = document.getElementById('btn-' + id);
+//     const tab = document.getElementById('tab-' + id);
+//     if (btn) btn.classList.add('active');
+//     if (tab) tab.classList.add('active');
+// }
 
 function toggleAudio() {
     const audio = document.getElementById('lessonAudio');
@@ -714,5 +714,5 @@ function toggleAudio() {
     }
 }
 
-// Initialize on Load
-window.addEventListener('DOMContentLoaded', initLesson);
+// Initialize on Load (DISABLED FOR EUROBOT5 INTEGRATION)
+// window.addEventListener('DOMContentLoaded', initLesson);
