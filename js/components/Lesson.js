@@ -10,12 +10,12 @@ export const Lesson = {
             <div class="max-w-7xl mx-auto pb-24 px-4 pt-1">
                 <!-- Slim Lesson Title: Centered & Blue -->
                 <div class="text-center mb-3 animate-slide-down">
-                    <h1 class="text-2xl md:text-3xl font-black text-blue-900 leading-tight tracking-tight uppercase">${lesson.title}</h1>
+                    <h1 class="text-2xl md:text-3xl font-black text-blue-900 dark:text-blue-400 leading-tight tracking-tight uppercase">${lesson.title}</h1>
                 </div>
 
                 <!-- Tabs Navigation: Mảnh & Rộng (Khớp Navbar) -->
                 <div class="flex justify-center mb-10 overflow-x-auto px-4 sticky top-16 z-40">
-                    <div class="bg-white/95 backdrop-blur-2xl p-1 rounded-full border border-gray-100 shadow-xl shadow-blue-900/5 flex gap-1 w-full max-w-7xl px-8">
+                    <div class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl p-1 rounded-full border border-gray-100 dark:border-slate-800 shadow-xl shadow-blue-900/5 dark:shadow-slate-950/40 flex gap-1 w-full max-w-7xl px-8">
                         <button id="tab-study" onclick="router.switchTab('study')" class="tab-btn active flex-1 py-3 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95">
                             <span class="text-base">📖</span> Tìm hiểu bài
                         </button>
@@ -40,7 +40,7 @@ export const Lesson = {
                 </button>
 
                 <!-- AI Chat Window -->
-                <div id="ai-chat-window" class="fixed inset-4 md:inset-auto md:bottom-32 md:right-8 md:w-[420px] md:h-[600px] bg-white rounded-[28px] md:rounded-[40px] shadow-2xl border border-gray-100 hidden flex-col z-[70] animate-scale-up overflow-hidden">
+                <div id="ai-chat-window" class="fixed inset-4 md:inset-auto md:bottom-32 md:right-8 md:w-[420px] md:h-[600px] bg-white dark:bg-slate-900 rounded-[28px] md:rounded-[40px] shadow-2xl border border-gray-100 dark:border-slate-800 hidden flex-col z-[70] animate-scale-up overflow-hidden">
                     <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-5 md:p-6 text-white flex justify-between items-center shrink-0">
                         <div class="flex items-center gap-3">
                             <div class="w-11 h-11 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-2xl font-black">E</div>
