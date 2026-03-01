@@ -302,3 +302,15 @@ Ngày 01/03/2026:
 [17:36] Cập nhật Nguồn tham chiếu Dữ liệu (Source of Truth):
 - Ứng dụng thống nhất tham khảo nội dung sách giáo khoa (Kết nối tri thức), hình ảnh, các bài tập thực hành và đáp án giải chi tiết từ https://vietjack.com.
 - Đã bổ sung đường dẫn Vietjack vào file README.md để lưu giữ lâu dài làm tài liệu tham chiếu khi khởi tạo các unit bài giảng mới.
+
+[17:50] Hoàn thiện Tiết 116 (Luyện tập - trang 42 SGK):
+- Định cấu trúc lại toàn bộ file 116.js theo nội dung bài luyện tập:
+  + Bài 1: Chọn khai triển của hình trụ.
+  + Bài 2: Thực hành gấp hình lập phương.
+  + Bài 3: Kiểm tra hình khai triển hình lập phương.
+  + Bài 4: Chữa bài chọn mảnh cắt màu vàng của hình hộp chữ nhật.
+- Đã chừa sẵn danh sách các placeholder hình ảnh cần cắt từ SGK bổ sung sau:
+  + hinh_anh/toan_tap_2/116_b1.png
+  + hinh_anh/toan_tap_2/116_b2.png
+  + hinh_anh/toan_tap_2/116_b3.png
+  + hinh_anh/toan_tap_2/116_b4.png
