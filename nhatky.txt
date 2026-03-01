@@ -302,3 +302,13 @@ Ngày 01/03/2026:
 [17:36] Cập nhật Nguồn tham chiếu Dữ liệu (Source of Truth):
 - Ứng dụng thống nhất tham khảo nội dung sách giáo khoa (Kết nối tri thức), hình ảnh, các bài tập thực hành và đáp án giải chi tiết từ https://vietjack.com.
 - Đã bổ sung đường dẫn Vietjack vào file README.md để lưu giữ lâu dài làm tài liệu tham chiếu khi khởi tạo các unit bài giảng mới.
+
+[21:24] Nâng cấp Hệ thống Củng cố v3.0 (Dynamic Loader):
+- Triển khai cơ chế tải câu hỏi động từ file text tại `js/components/Quiz.js`.
+- Quy trình mới: Hệ thống tự động tìm và nạp file `js/data/math/cungco/cungco{period}.txt` khi vào tab Củng cố.
+- Lợi ích: Người dùng chỉ cần cập nhật file .txt để đổi câu hỏi mà không cần sửa code JS.
+- Đã áp dụng mẫu cho Bài 116 (Sử dụng ngân hàng câu hỏi cungco116.txt).
+
+[21:29] Cập nhật Bài 117 & Ngân hàng câu hỏi:
+- Tạo file `js/data/math/cungco/cungco117.txt` với 15 câu hỏi về Diện tích xung quanh HHCN.
+- Cập nhật `117.js`: Chuyển xưng hô từ "bé" sang "bạn" và kích hoạt hệ thống củng cố động.
