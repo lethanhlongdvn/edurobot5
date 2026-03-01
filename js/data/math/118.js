@@ -69,7 +69,7 @@ export const lesson118 = {
                     </div>
                 </div>
             </div>
-            [[TUTOR|math-50-tp|Các bé nhớ nhé: Muốn tính diện tích toàn phần, ta lấy diện tích xung quanh cộng với diện tích hai mặt đáy!]]
+            [[TUTOR|math-50-tp|Bạn nhớ nhé: Muốn tính diện tích toàn phần, ta lấy diện tích xung quanh cộng với diện tích hai mặt đáy!]]
         </div>
     `,
     "practice": `
@@ -183,7 +183,7 @@ export const lesson118 = {
 
                 window.check118B2 = function() {
                     const sp = document.getElementById('r-118-2');
-                    if (!selectedBox118) { alert("Bé chọn một hộp nhé!"); return; }
+                    if (!selectedBox118) { alert("Bạn chọn một hộp nhé!"); return; }
                     if (selectedBox118 === 'B') { sp.textContent = "Chính xác! 🌟"; }
                     else { sp.textContent = "Chưa đúng rồi! 👉"; }
                 };
@@ -195,7 +195,7 @@ export const lesson118 = {
                     const a1c = document.getElementById('ans-118-1c').value;
 
                     if (!a1a || !a1b || !a1c || !selectedBox118) {
-                        alert("Thầy E nhắc bé: Hãy hoàn thành cả Bài 1 và Bài 2 trước nhé! ✨");
+                        alert("Thầy E nhắc bạn: Hãy hoàn thành cả Bài 1 và Bài 2 trước nhé! ✨");
                         return;
                     }
 
@@ -211,45 +211,11 @@ export const lesson118 = {
                     if (window.submitMathLesson) {
                         window.submitMathLesson(report, status, "btn-submit-118-final");
                     }
-                    alert("🎉 Tuyệt vời! Bài làm của bé đã được gửi tới Thầy E!");
+                    alert("🎉 Tuyệt vời! Bài làm của bạn đã được gửi tới Thầy E!");
                 };
             </script>
         </div>
     `,
 
-    "quizPool": [
-        {
-            "question": "Tính diện tích toàn phần hình hộp chữ nhật ta lấy diện tích xung quanh cộng với:",
-            "options": [
-                "Diện tích một mặt đáy",
-                "Diện tích hai mặt đáy",
-                "Chu vi mặt đáy",
-                "Chiều cao"
-            ],
-            "answer": 1,
-            "level": 1
-        },
-        {
-            "question": "Một hình hộp chữ nhật có Sxq = 100cm², diện tích một mặt đáy là 20cm². Diện tích toàn phần là:",
-            "options": [
-                "120 cm²",
-                "140 cm²",
-                "240 cm²",
-                "80 cm²"
-            ],
-            "answer": 1,
-            "level": 2
-        },
-        {
-            "question": "Diện tích toàn phần là tổng diện tích của tất cả mấy mặt?",
-            "options": [
-                "4 mặt",
-                "2 mặt",
-                "6 mặt",
-                "5 mặt"
-            ],
-            "answer": 2,
-            "level": 1
-        }
-    ]
+    "quizPool": []
 };
