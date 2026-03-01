@@ -281,3 +281,20 @@ Ngày 28/02/2026:
 - Giữ nguyên điểm mạnh: Glass nav, gradient background, slogan animations, font Be Vietnam Pro.
 
 Trạng thái hiện tại: Giao diện trang chủ đã được cải tiến toàn diện theo thiết kế Stitch. Hỗ trợ responsive desktop/mobile và Dark Mode. Đã push 2 commits lên Github (9e6745f, 46493ff).
+
+Ngày 01/03/2026:
+----------------
+[13:45] Khắc phục triệt để lỗi Quiz (v8.1):
+- Sửa lỗi mất đồng bộ trạng thái giữa UI và Logic bằng cơ chế ép buộc `window.Quiz` global.
+- Giải quyết vấn đề kẹt trạng thái xử lý (`isProcessing`) khiến các nút đáp án bị "đóng băng".
+- Tối ưu z-index và pointer-events cho các nút đáp án để tương thích tốt với Smart TV.
+
+[14:05] Triển khai Ngân hàng câu hỏi biệt lập (v8.2):
+- Tạo thư mục quản lý tập trung: `js/data/math/cungco/`.
+- Xuất bản file ngân hàng câu hỏi `cungco116.txt` (15 câu) giúp người dùng dễ dàng chỉnh sửa nội dung văn bản.
+- Cập nhật Bài 116: Nâng cấp từ 3 câu lên ngân hàng 15 câu, bốc ngẫu nhiên 10 câu mỗi lượt làm bài.
+- Chuẩn hóa hệ thống tính điểm trắc nghiệm (10 câu x 10 điểm = 100 điểm).
+
+[14:15] Đồng bộ GitHub:
+- Đã đẩy (push) toàn bộ bản vá Quiz và ngân hàng câu hỏi Bài 116 lên hệ thống.
+- Cập nhật Nhật ký công việc (nhatky.txt).
