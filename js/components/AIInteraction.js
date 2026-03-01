@@ -65,9 +65,9 @@ export const AIInteraction = {
 
             chatMessages.innerHTML += `
                 <div class="flex mb-4 animate-slide-up">
-                    <div class="bg-white border border-blue-100 p-4 rounded-2xl rounded-tl-none max-w-[85%] text-sm text-gray-700 font-medium shadow-sm leading-relaxed">
+                    <div class="bg-white dark:bg-slate-800 border border-blue-100 dark:border-slate-700 p-4 rounded-2xl rounded-tl-none max-w-[85%] text-sm text-gray-700 dark:text-slate-200 font-medium shadow-sm leading-relaxed">
                         <div class="flex items-center gap-2 mb-1">
-                            <span class="text-[10px] font-black uppercase text-blue-600 tracking-widest">AI E</span>
+                            <span class="text-[10px] font-black uppercase text-blue-600 dark:text-blue-400 tracking-widest">AI E</span>
                         </div>
                         ${response}
                     </div>
@@ -91,9 +91,9 @@ export const AIInteraction = {
                         <div class="flex-grow text-center md:text-left">
                             <h4 class="text-2xl font-black text-blue-900 mb-4 tracking-tight">EduRobot đang đợi bài của bạn!</h4>
                             <p class="text-blue-700/70 font-bold uppercase text-[10px] tracking-[0.2em] mb-8">${requirement}</p>
-                            <div class="flex flex-col md:flex-row gap-5">
+                             <div class="flex flex-col md:flex-row gap-5">
                                 <textarea id="tutor-input-${id}" placeholder="${placeholder}" 
-                                    class="flex-grow bg-white/80 border-none rounded-[32px] px-8 py-6 text-sm font-bold min-h-[150px] shadow-inner focus:ring-4 focus:ring-blue-500/10 transition-all placeholder:text-blue-200"></textarea>
+                                    class="flex-grow bg-white/80 dark:bg-slate-800/80 border-none rounded-[32px] px-8 py-6 text-sm font-bold text-gray-800 dark:text-slate-100 min-h-[150px] shadow-inner focus:ring-4 focus:ring-blue-500/10 transition-all placeholder:text-blue-200"></textarea>
                                 <button onclick="AIInteraction.submitTutor('${id}', '${requirement.replace(/'/g, "\\'")}')" 
                                     class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 rounded-[32px] font-black text-xs uppercase tracking-[0.2em] shadow-2xl shadow-blue-500/20 transition-all active:scale-95 shrink-0 h-fit self-end group">
                                     NỘP BÀI CHO EDUROBOT <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
@@ -141,12 +141,12 @@ export const AIInteraction = {
             const feedback = await AI.tutor(studentWork, lessonTitle, requirement, lessonContent);
 
             responseBox.innerHTML = `
-                <div class="bg-white border-2 border-blue-500 p-6 rounded-[28px] shadow-lg shadow-blue-100 animate-slide-up relative">
+                <div class="bg-white dark:bg-slate-800 border-2 border-blue-500 p-6 rounded-[28px] shadow-lg shadow-blue-100 dark:shadow-blue-900/20 animate-slide-up relative">
                     <div class="absolute -top-3 left-6 px-3 py-1 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full">Nhận xét từ EduRobot</div>
-                    <div class="text-sm font-medium text-gray-700 leading-relaxed pt-2">${feedback.replace(/\n/g, '<br>')}</div>
+                    <div class="text-sm font-medium text-gray-700 dark:text-slate-200 leading-relaxed pt-2">${feedback.replace(/\n/g, '<br>')}</div>
                     <button 
                         onclick="this.parentElement.parentElement.classList.add('hidden')"
-                        class="mt-4 text-[10px] font-black text-gray-400 hover:text-blue-600 uppercase tracking-widest transition-colors"
+                        class="mt-4 text-[10px] font-black text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 uppercase tracking-widest transition-colors"
                     >Đóng nhận xét</button>
                 </div>
             `;
@@ -168,7 +168,7 @@ export const AIInteraction = {
         }
 
         modal.innerHTML = `
-            <div class="bg-white w-full max-w-2xl rounded-[40px] shadow-2xl overflow-hidden animate-scale-up border border-white/20">
+            <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-[40px] shadow-2xl overflow-hidden animate-scale-up border border-white/20 dark:border-slate-800">
                 <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-8 flex justify-between items-center text-white">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-2xl font-black text-white">E</div>
@@ -182,9 +182,9 @@ export const AIInteraction = {
                     </button>
                 </div>
                 <div class="p-8 md:p-12 max-h-[60vh] overflow-y-auto">
-                    <div class="text-lg font-medium text-gray-700 leading-relaxed">${content}</div>
+                    <div class="text-lg font-medium text-gray-700 dark:text-slate-200 leading-relaxed">${content}</div>
                 </div>
-                <div class="p-6 bg-gray-50 border-t border-gray-100 flex justify-end">
+                <div class="p-6 bg-gray-50 dark:bg-slate-800 border-t border-gray-100 dark:border-slate-700 flex justify-end">
                     <button onclick="AIInteraction.closeAiModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all active:scale-95 shadow-lg shadow-blue-200">Đã hiểu bài!</button>
                 </div>
             </div>
