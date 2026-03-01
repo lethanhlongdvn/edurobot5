@@ -183,7 +183,7 @@ export const lesson116 = {
                         res.className = "font-bold text-2xl h-8 text-orange-500";
                         return;
                     }
-                    if (ans === 'C') { 
+                    if (ans === 'B') { 
                         res.textContent = "Chính xác! Bạn giỏi quá! ✨";
                         res.className = "font-black text-2xl h-8 text-emerald-600 animate-bounce";
                     } else {
