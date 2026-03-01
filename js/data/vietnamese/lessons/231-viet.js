@@ -1,17 +1,15 @@
 export const lesson_231_viet = {
-    "title": "Viết: Tìm hiểu cách viết đoạn văn thể hiện tình cảm, cảm xúc về một sự việc",
-    "week": 23,
+    "topic": "Tiếng Việt 5",
+    "week": "23",
+    "period": "157",
+    "title": "VIẾT: TÌM HIỂU CÁCH VIẾT ĐOẠN VĂN THỂ HIỆN TÌNH CẢM, CẢM XÚC VỀ MỘT SỰ VIỆC",
+    "desc": "Viết: Tìm hiểu cách viết đoạn văn thể hiện tình cảm, cảm xúc về một sự việc",
     "subject": "Viết",
     "theme": "Hương sắc trăm miền",
-    "tabs": {
-        "lesson": {
-            "title": "Bài học",
-            "blocks": [
-                { "type": "header", "text": "Tìm hiểu cách viết đoạn văn thể hiện tình cảm, cảm xúc về một sự việc" },
-                {
-                    "type": "html",
-                    "id": "block-231-v1",
-                    "content": `<div class="space-y-8 animate-in fade-in duration-700">
+    "audio": "",
+    "content": `
+
+<div class="space-y-8 animate-in fade-in duration-700">
                         <!-- 1. KHÁM PHÁ -->
                         <section class="w-full">
                             <div class="glass-card rounded-[40px] p-6 md:p-10 shadow-2xl relative overflow-hidden ring-1 ring-blue-100">
@@ -297,166 +295,176 @@ export const lesson_231_viet = {
                                 </div>
                             </div>
                         </section>
-                    </div>`
-                }
-            ]
-        },
-        "quiz": {
-            "title": "Trắc nghiệm",
-            "settings": { "pick": 10 },
-            "questions": [
-                {
-                    "q": "Mục đích chính của đoạn văn thể hiện tình cảm, cảm xúc về một sự việc là gì?",
-                    "a": ["Bộc lộ những suy nghĩ, thái độ và tình cảm của người viết đối với sự việc đó.", "Liệt kê đầy đủ các nhân vật tham gia sự việc.", "Hướng dẫn các bước thực hiện một công việc cụ thể.", "Cung cấp số liệu thống kê chính xác về sự việc."],
-                    "c": 0
-                },
-                {
-                    "q": "Đoạn văn thể hiện tình cảm, cảm xúc thường gồm những phần nào?",
-                    "a": ["Mở đoạn, Thân đoạn, Kết đoạn.", "Mở bài, Thân bài, Kết bài.", "Giới thiệu, Nội dung, Kết luận.", "Nguyên nhân, Diễn biến, Kết quả."],
-                    "c": 0
-                },
-                {
-                    "q": "Nhiệm vụ chính của phần Mở đoạn là gì?",
-                    "a": ["Nêu tên sự việc và cảm xúc chung của người viết về sự việc đó.", "Kể lại chi tiết diễn biến của sự việc từ đầu đến cuối.", "Rút ra bài học kinh nghiệm cho bản thân.", "Tả lại ngoại cảnh nơi sự việc diễn ra."],
-                    "c": 0
-                },
-                {
-                    "q": "Trong phần Thân đoạn, người viết cần làm gì để làm rõ tình cảm của mình?",
-                    "a": ["Chọn lọc những chi tiết ấn tượng và kết hợp dùng từ ngữ chỉ cảm xúc.", "Chỉ kể lại sự việc một cách khách quan như một bản tin.", "Viết càng dài càng tốt để gây ấn tượng với người đọc.", "Chỉ tập trung tả người khác mà không nói về mình."],
-                    "c": 0
-                },
-                {
-                    "q": "Phần Kết đoạn của đoạn văn biểu cảm thường chứa đựng nội dung gì?",
-                    "a": ["Khẳng định lại tình cảm hoặc nêu mong ước, bài học sau sự việc.", "Tóm tắt lại toàn bộ các hành động đã kể ở thân đoạn.", "Hẹn gặp lại người học trong những sự việc sau.", "Giới thiệu một sự việc hoàn toàn mới khác."],
-                    "c": 0
-                },
-                {
-                    "q": "Dòng nào dưới đây gồm toàn các từ ngữ chỉ cảm xúc?",
-                    "a": ["Xúc động, tự hào, háo hức, luyến tiếc.", "Chạy bộ, nhảy múa, ca hát.", "Xanh tươi, rực rỡ, cao lớn.", "Cây cối, con đường, ngày hội."],
-                    "c": 0
-                },
-                {
-                    "q": "Tại sao cần sử dụng các biện pháp tu từ (so sánh, nhân hóa...) trong đoạn văn biểu cảm?",
-                    "a": ["Làm cho hình ảnh sinh động và cảm xúc trở nên sâu sắc, truyền cảm hơn.", "Để đoạn văn đủ số câu theo yêu cầu của giáo viên.", "Để thể hiện mình là người có vốn từ vựng phong phú.", "Vì đây là quy định bắt buộc của mọi đoạn văn."],
-                    "c": 0
-                },
-                {
-                    "q": "Khi viết về một ngày hội, chi tiết nào sau đây mang tính biểu cảm cao nhất?",
-                    "a": ["Tim tôi đập rộn ràng vì sung sướng khi tiếng trống khai hội vang lên.", "Ngày hội bắt đầu lúc 8 giờ sáng tại sân trường.", "Có rất nhiều học sinh mặc đồng phục tham gia.", "Sau ngày hội, chúng em cùng nhau thu dọn rác sạch sẽ."],
-                    "c": 0
-                },
-                {
-                    "q": "Lỗi phổ biến nhất khi viết đoạn văn biểu cảm về sự việc là gì?",
-                    "a": ["Sa vào kể lể chi tiết sự việc mà quên mất bộc lộ cảm xúc.", "Dùng quá nhiều từ chỉ cảm xúc.", "Viết sai tên sự việc.", "Sử dụng quá nhiều dấu câu."],
-                    "c": 0
-                },
-                {
-                    "q": "Ngôi kể nào thường được sử dụng nhất trong đoạn văn thể hiện tình cảm cá nhân?",
-                    "a": ["Ngôi thứ nhất (xưng \"tôi\", \"em\", \"mình\").", "Ngôi thứ ba (gọi tên nhân vật).", "Không cần sử dụng ngôi kể nào.", "Ngôi kể linh hoạt thay đổi liên tục."],
-                    "c": 0
-                },
-                {
-                    "q": "Để đoạn văn biểu cảm có sức thuyết phục, người viết nên chọn sự việc như thế nào?",
-                    "a": ["Sự việc có thật và để lại ấn tượng sâu sắc cho bản thân.", "Sự việc nghe từ người khác kể lại dù mình không thích.", "Sự việc càng xa lạ, khó hiểu càng tốt.", "Sự việc diễn ra hàng ngày, không có gì đặc biệt."],
-                    "c": 0
-                },
-                {
-                    "q": "Việc sử dụng từ láy trong đoạn văn biểu cảm có tác dụng gì?",
-                    "a": ["Tăng tính nhạc và gợi tả tinh tế các trạng thái cảm xúc.", "Làm cho đoạn văn trở nên khó hiểu hơn.", "Giảm bớt số lượng từ ngữ cần dùng.", "Thay thế hoàn toàn cho các biện pháp tu từ khác."],
-                    "c": 0
-                },
-                {
-                    "q": "Khi nêu \"mong ước\" ở phần Kết đoạn, người viết đang thể hiện điều gì?",
-                    "a": ["Sự hy vọng và thái độ tích cực đối với sự việc đó trong tương lai.", "Sự nuối tiếc về những gì đã qua.", "Sự mệt mỏi sau khi tham gia sự việc.", "Sự không hài lòng với thực tế."],
-                    "c": 0
-                },
-                {
-                    "q": "Câu văn \"Tôi say sưa thưởng thức điệu múa xòe uyển chuyển của những cô gái Thái...\" thể hiện điều gì?",
-                    "a": ["Sự tập trung cao độ và niềm yêu thích nét đẹp văn hóa.", "Sự quan sát hời hợt.", "Sự phê bình lối biểu diễn văn nghệ.", "Sự thiếu tập trung của người viết."],
-                    "c": 0
-                },
-                {
-                    "q": "Tính thống nhất của đoạn văn biểu cảm được thể hiện rõ nhất qua:",
-                    "a": ["Sự tập trung vào một sự việc và một mạch cảm xúc xuyên suốt.", "Việc chỉ sử dụng một loại dấu câu duy nhất.", "Việc các câu văn đều có độ dài bằng nhau.", "Việc bôi đậm tất cả các từ ngữ chỉ cảm xúc."],
-                    "c": 0
-                }
-            ]
-        }
+                    </div>
+`,
+    "practice": `
+
+`,
+    "quizPool": [
+    {
+        "question": "Mục đích chính của đoạn văn thể hiện tình cảm, cảm xúc về một sự việc là gì?",
+        "options": [
+            "Bộc lộ những suy nghĩ, thái độ và tình cảm của người viết đối với sự việc đó.",
+            "Liệt kê đầy đủ các nhân vật tham gia sự việc.",
+            "Hướng dẫn các bước thực hiện một công việc cụ thể.",
+            "Cung cấp số liệu thống kê chính xác về sự việc."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Đoạn văn thể hiện tình cảm, cảm xúc thường gồm những phần nào?",
+        "options": [
+            "Mở đoạn, Thân đoạn, Kết đoạn.",
+            "Mở bài, Thân bài, Kết bài.",
+            "Giới thiệu, Nội dung, Kết luận.",
+            "Nguyên nhân, Diễn biến, Kết quả."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Nhiệm vụ chính của phần Mở đoạn là gì?",
+        "options": [
+            "Nêu tên sự việc và cảm xúc chung của người viết về sự việc đó.",
+            "Kể lại chi tiết diễn biến của sự việc từ đầu đến cuối.",
+            "Rút ra bài học kinh nghiệm cho bản thân.",
+            "Tả lại ngoại cảnh nơi sự việc diễn ra."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Trong phần Thân đoạn, người viết cần làm gì để làm rõ tình cảm của mình?",
+        "options": [
+            "Chọn lọc những chi tiết ấn tượng và kết hợp dùng từ ngữ chỉ cảm xúc.",
+            "Chỉ kể lại sự việc một cách khách quan như một bản tin.",
+            "Viết càng dài càng tốt để gây ấn tượng với người đọc.",
+            "Chỉ tập trung tả người khác mà không nói về mình."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Phần Kết đoạn của đoạn văn biểu cảm thường chứa đựng nội dung gì?",
+        "options": [
+            "Khẳng định lại tình cảm hoặc nêu mong ước, bài học sau sự việc.",
+            "Tóm tắt lại toàn bộ các hành động đã kể ở thân đoạn.",
+            "Hẹn gặp lại người học trong những sự việc sau.",
+            "Giới thiệu một sự việc hoàn toàn mới khác."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Dòng nào dưới đây gồm toàn các từ ngữ chỉ cảm xúc?",
+        "options": [
+            "Xúc động, tự hào, háo hức, luyến tiếc.",
+            "Chạy bộ, nhảy múa, ca hát.",
+            "Xanh tươi, rực rỡ, cao lớn.",
+            "Cây cối, con đường, ngày hội."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Tại sao cần sử dụng các biện pháp tu từ (so sánh, nhân hóa...) trong đoạn văn biểu cảm?",
+        "options": [
+            "Làm cho hình ảnh sinh động và cảm xúc trở nên sâu sắc, truyền cảm hơn.",
+            "Để đoạn văn đủ số câu theo yêu cầu của giáo viên.",
+            "Để thể hiện mình là người có vốn từ vựng phong phú.",
+            "Vì đây là quy định bắt buộc của mọi đoạn văn."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Khi viết về một ngày hội, chi tiết nào sau đây mang tính biểu cảm cao nhất?",
+        "options": [
+            "Tim tôi đập rộn ràng vì sung sướng khi tiếng trống khai hội vang lên.",
+            "Ngày hội bắt đầu lúc 8 giờ sáng tại sân trường.",
+            "Có rất nhiều học sinh mặc đồng phục tham gia.",
+            "Sau ngày hội, chúng em cùng nhau thu dọn rác sạch sẽ."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Lỗi phổ biến nhất khi viết đoạn văn biểu cảm về sự việc là gì?",
+        "options": [
+            "Sa vào kể lể chi tiết sự việc mà quên mất bộc lộ cảm xúc.",
+            "Dùng quá nhiều từ chỉ cảm xúc.",
+            "Viết sai tên sự việc.",
+            "Sử dụng quá nhiều dấu câu."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Ngôi kể nào thường được sử dụng nhất trong đoạn văn thể hiện tình cảm cá nhân?",
+        "options": [
+            "Ngôi thứ nhất (xưng \"tôi\", \"em\", \"mình\").",
+            "Ngôi thứ ba (gọi tên nhân vật).",
+            "Không cần sử dụng ngôi kể nào.",
+            "Ngôi kể linh hoạt thay đổi liên tục."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Để đoạn văn biểu cảm có sức thuyết phục, người viết nên chọn sự việc như thế nào?",
+        "options": [
+            "Sự việc có thật và để lại ấn tượng sâu sắc cho bản thân.",
+            "Sự việc nghe từ người khác kể lại dù mình không thích.",
+            "Sự việc càng xa lạ, khó hiểu càng tốt.",
+            "Sự việc diễn ra hàng ngày, không có gì đặc biệt."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Việc sử dụng từ láy trong đoạn văn biểu cảm có tác dụng gì?",
+        "options": [
+            "Tăng tính nhạc và gợi tả tinh tế các trạng thái cảm xúc.",
+            "Làm cho đoạn văn trở nên khó hiểu hơn.",
+            "Giảm bớt số lượng từ ngữ cần dùng.",
+            "Thay thế hoàn toàn cho các biện pháp tu từ khác."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Khi nêu \"mong ước\" ở phần Kết đoạn, người viết đang thể hiện điều gì?",
+        "options": [
+            "Sự hy vọng và thái độ tích cực đối với sự việc đó trong tương lai.",
+            "Sự nuối tiếc về những gì đã qua.",
+            "Sự mệt mỏi sau khi tham gia sự việc.",
+            "Sự không hài lòng với thực tế."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Câu văn \"Tôi say sưa thưởng thức điệu múa xòe uyển chuyển của những cô gái Thái...\" thể hiện điều gì?",
+        "options": [
+            "Sự tập trung cao độ và niềm yêu thích nét đẹp văn hóa.",
+            "Sự quan sát hời hợt.",
+            "Sự phê bình lối biểu diễn văn nghệ.",
+            "Sự thiếu tập trung của người viết."
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Tính thống nhất của đoạn văn biểu cảm được thể hiện rõ nhất qua:",
+        "options": [
+            "Sự tập trung vào một sự việc và một mạch cảm xúc xuyên suốt.",
+            "Việc chỉ sử dụng một loại dấu câu duy nhất.",
+            "Việc các câu văn đều có độ dài bằng nhau.",
+            "Việc bôi đậm tất cả các từ ngữ chỉ cảm xúc."
+        ],
+        "answer": 0,
+        "level": 1
     }
+]
 };
-
-// --- Logic Hệ thống ---
-window.check231Viet_1b = function () {
-    const m = document.getElementById('v231-1b-m').value;
-    const t = document.getElementById('v231-1b-t').value;
-    const k = document.getElementById('v231-1b-k').value;
-    const fb = document.getElementById('fb-v231-1b');
-    fb.classList.remove('hidden');
-    if (m === '2' && t === '3' && k === '1') {
-        fb.innerHTML = "✅ CHUẨN XÁC! Em đã nắm vững cấu trúc đoạn văn (30/30 điểm).";
-        fb.className = "text-green-600 font-bold mt-2 italic text-left";
-        if (typeof celebrate === 'function') celebrate();
-    } else {
-        fb.innerHTML = "❌ CHƯA ĐÚNG! Em hãy xem lại sơ đồ Ghi nhớ phía dưới nhé.";
-        fb.className = "text-red-500 font-bold mt-2 italic text-left";
-    }
-};
-
-window.check231Viet_Ex2 = function () {
-    const v1 = document.getElementById('v231-ex2-1').value.trim();
-    const v2 = document.getElementById('v231-ex2-2').value.trim();
-    const v3 = document.getElementById('v231-ex2-3').value.trim();
-    const v4 = document.getElementById('v231-ex2-4').value.trim();
-    const fb = document.getElementById('fb-v231-ex2');
-    fb.classList.remove('hidden');
-
-    if (v1 && v2 && v3 && v4) {
-        fb.innerHTML = "✅ TỐT LẮM! Em đã trao đổi đầy đủ 4 ý của bài (40/40 điểm).";
-        fb.className = "text-green-600 font-bold mt-2 italic text-left";
-        if (typeof celebrate === 'function') celebrate();
-    } else {
-        fb.innerHTML = "Em hãy điền đầy đủ cả 4 ý trao đổi nhé!";
-        fb.className = "text-amber-500 font-bold mt-2 italic text-left";
-    }
-};
-
-window.check231Viet_LT2 = function () {
-    const input = document.getElementById('v231-lt2-book').value.trim();
-    const fb = document.getElementById('fb-v231-lt2');
-    fb.classList.remove('hidden');
-    if (input.length > 2) {
-        fb.innerHTML = "✅ Tuyệt quá! Em hãy cố gắng đọc cuốn sách này nhé (10/10 điểm).";
-        fb.className = "text-green-700 font-bold mt-2 italic text-left bg-green-50 p-3 rounded-lg";
-    } else {
-        fb.innerHTML = "Em hãy ghi tên cuốn sách mình định đọc nhé!";
-        fb.className = "text-amber-600 font-bold mt-2 italic text-left bg-amber-50 p-3 rounded-lg";
-    }
-};
-
-window.checkParagraphAI = async function (id) {
-    const fbTable = { 'v231-1a': 'fb-v231-1a', 'v231-1c': 'fb-v231-1c', 'v231-1d': 'fb-v231-1d', 'v231-lt1': 'fb-v231-lt1' };
-    const fb = document.getElementById(fbTable[id]);
-    fb.classList.remove('hidden');
-    fb.innerHTML = "Hệ thống đang chấm điểm...";
-    if (typeof askAI === 'function') {
-        let prefix = "";
-        if (id === 'v231-1a') prefix = "Câu 1a: Sự việc (Ngày hội văn hoá...) và ấn tượng chung (rực rỡ, háo hức). Nhận xét: ";
-        else if (id === 'v231-1c') prefix = "Câu 1c: Chi tiết ấn tượng (tiếng trống, ném còn, múa...). Nhận xét: ";
-        else if (id === 'v231-1d') prefix = "Câu 1d: Từ ngữ bộc lộ cảm xúc (hứng thú, thán phục, say sưa...). Nhận xét: ";
-        else if (id === 'v231-lt1') prefix = "Luyện tập: Việc đã làm + cảm xúc. Nhận xét: ";
-        await askAI(id, prefix, 'single', 'ltvc', 23);
-    } else { fb.innerHTML = "Lỗi: AI không sẵn sàng."; }
-};
-
-window.submit231VietFinal = function () {
-    // Gọi hệ thống nộp bài chung (form thu thập thông tin sẽ hiện lên)
-    if (typeof submitLTVCUnified === 'function') {
-        submitLTVCUnified('final-score-231v');
-    } else {
-        alert("Hệ thống nộp bài đang bận, vui lòng thử lại sau!");
-    }
-};
-
-if (!lesson_231_viet.period) lesson_231_viet.period = '157';
-if (!lesson_231_viet.id) lesson_231_viet.id = "231-viet";
-

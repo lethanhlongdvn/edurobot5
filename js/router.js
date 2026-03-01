@@ -367,36 +367,6 @@ export const router = {
 
         container.innerHTML = html;
 
-        // NEW LOGIC FOR TIENG VIET 5 BLOCKS
-        // Nếu bài học có .blocks (từ json Tiếng Việt 5), ta sẽ ưu tiên parse ra DOM nodes
-        if (typeof window.createBlock === 'function') {
-            if (tabId === 'study') {
-                const blocks = lesson.tabs?.lesson?.blocks || lesson.tabs?.study?.blocks || lesson.blocks;
-                if (blocks && Array.isArray(blocks) && blocks.length > 0) {
-                    const studyContainer = document.getElementById('lesson-study-container');
-                    if (studyContainer) {
-                        studyContainer.innerHTML = ''; // Xóa HTML fallback
-                        blocks.forEach(block => {
-                            const blockEl = window.createBlock(block);
-                            if (blockEl) studyContainer.appendChild(blockEl);
-                        });
-                    }
-                }
-            } else if (tabId === 'practice') {
-                const blocks = lesson.tabs?.practice?.blocks;
-                if (blocks && Array.isArray(blocks) && blocks.length > 0) {
-                    const practiceContainer = document.getElementById('lesson-practice-container');
-                    if (practiceContainer) {
-                        practiceContainer.innerHTML = '';
-                        blocks.forEach(block => {
-                            const blockEl = window.createBlock(block);
-                            if (blockEl) practiceContainer.appendChild(blockEl);
-                        });
-                    }
-                }
-            }
-        }
-
         // Execute scripts embedded in the loaded HTML (since innerHTML doesn't execute them)
         const scripts = container.querySelectorAll('script');
         scripts.forEach(oldScript => {

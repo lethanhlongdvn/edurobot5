@@ -1,19 +1,15 @@
 export const lesson_252_dmr = {
-    "title": "Đọc mở rộng: Ca dao về di tích, lễ hội, sản vật",
-    "week": 25,
+    "topic": "Tiếng Việt 5",
+    "week": "25",
+    "period": "252",
+    "title": "ĐỌC MỞ RỘNG: CA DAO VỀ DI TÍCH, LỄ HỘI, SẢN VẬT",
+    "desc": "Đọc mở rộng: Ca dao về di tích, lễ hội, sản vật",
     "subject": "Đọc mở rộng",
     "theme": "Hương sắc trăm miền",
-    "tabs": {
-        "lesson": {
-            "title": "Bài học",
-            "blocks": [
-                {
-                    "type": "header",
-                    "text": "Đọc mở rộng: Ca dao về di tích, lễ hội, sản vật"
-                },
-                {
-                    "type": "html",
-                    "content": `
+    "audio": "",
+    "content": `
+
+
                         <div class="space-y-12 animate-in fade-in slide-in-from-bottom duration-700">
                             <!-- 1. ĐỌC CA DAO -->
                             <section class="w-full">
@@ -199,72 +195,66 @@ export const lesson_252_dmr = {
                                 </div>
                             </section>
                         </div>
-                    `
-                }
-            ]
-        },
-        "quiz": {
-            "settings": { "pick": 5 },
-            "questions": [
-                { "q": "Địa danh nào được nhắc tới trong bài ca dao là 'ngàn năm văn vật'?", "a": ["Sài Gòn", "Huế", "Thăng Long - Hà Nội", "Đà Nẵng"], "c": 2 },
-                { "q": "Đặc sản nào của Bình Định được nhắc tới trong câu 'Dừng chân uống bát...'?", "a": ["Rượu Bàu Đá", "Nước dừa Tam Quan", "Bún chả cá", "Nem chợ Huyện"], "c": 1 },
-                { "q": "Hội Gióng được nhắc tới diễn ra vào mồng mấy?", "a": ["Mồng Bảy", "Mồng Tám", "Mồng Chín", "Mồng Mười"], "c": 2 },
-                { "q": "Việc ghi chép vào phiếu đọc sách giúp ích gì cho học sinh?", "a": ["Ghi nhớ thông tin và cảm xúc về bài đã đọc", "Làm cho sách đẹp hơn", "Để không phải đọc lại bài đó nữa", "Để nộp cho đủ bài"], "c": 0 },
-                { "q": "Ca dao về di tích, sản vật địa phương thể hiện tình cảm gì của người dân?", "a": ["Sự tự hào và tình yêu quê hương đất nước", "Sự lo lắng về thiên tai", "Chỉ là những câu hát vui chơi", "Sự chê bai địa phương khác"], "c": 0 }
-            ]
-        }
+                    
+`,
+    "practice": `
+
+`,
+    "quizPool": [
+    {
+        "question": "Địa danh nào được nhắc tới trong bài ca dao là 'ngàn năm văn vật'?",
+        "options": [
+            "Sài Gòn",
+            "Huế",
+            "Thăng Long - Hà Nội",
+            "Đà Nẵng"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Đặc sản nào của Bình Định được nhắc tới trong câu 'Dừng chân uống bát...'?",
+        "options": [
+            "Rượu Bàu Đá",
+            "Nước dừa Tam Quan",
+            "Bún chả cá",
+            "Nem chợ Huyện"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Hội Gióng được nhắc tới diễn ra vào mồng mấy?",
+        "options": [
+            "Mồng Bảy",
+            "Mồng Tám",
+            "Mồng Chín",
+            "Mồng Mười"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Việc ghi chép vào phiếu đọc sách giúp ích gì cho học sinh?",
+        "options": [
+            "Ghi nhớ thông tin và cảm xúc về bài đã đọc",
+            "Làm cho sách đẹp hơn",
+            "Để không phải đọc lại bài đó nữa",
+            "Để nộp cho đủ bài"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Ca dao về di tích, sản vật địa phương thể hiện tình cảm gì của người dân?",
+        "options": [
+            "Sự tự hào và tình yêu quê hương đất nước",
+            "Sự lo lắng về thiên tai",
+            "Chỉ là những câu hát vui chơi",
+            "Sự chê bai địa phương khác"
+        ],
+        "answer": 0,
+        "level": 1
     }
+]
 };
-
-// --- Logic functions for Lesson 252-DMR ---
-let currentRating252 = 0;
-window.setRating = function (n) {
-    currentRating252 = n;
-    const stars = document.querySelectorAll('.star-btn');
-    stars.forEach((s, idx) => {
-        if (idx < n) {
-            s.innerText = '★';
-            s.classList.add('text-yellow-400');
-            s.classList.remove('text-gray-300');
-        } else {
-            s.innerText = '☆';
-            s.classList.remove('text-yellow-400');
-            s.classList.add('text-gray-300');
-        }
-    });
-};
-
-window.check252DMRAI = async function () {
-    const obj = document.getElementById('dmr-252-obj').value.trim();
-    const unique = document.getElementById('dmr-252-unique').value.trim();
-    const feel = document.getElementById('dmr-252-feel').value.trim();
-
-    if (!obj || !unique || !feel) {
-        alert('Em hãy điền đầy đủ thông tin vào phiếu đọc sách trước nhé!');
-        return;
-    }
-
-    const fb = document.getElementById('fb-252-dmr');
-    fb.classList.remove('hidden');
-    fb.innerHTML = '<div class="p-10 bg-white border-4 border-teal-100 rounded-[40px] shadow-xl italic text-2xl md:text-5xl text-teal-900 animate-pulse text-center">EduRobot đang xem qua phiếu đọc sách của bạn...</div>';
-
-    const val = `Sự vật: ${obj}\nNét độc đáo: ${unique}\nCảm xúc: ${feel}\nMức độ yêu thích: ${currentRating252} sao`;
-    const prompt = `Em hãy nhận xét phiếu đọc sách của học sinh về các bài ca dao địa phương: "${val}".\nTiêu chí:\n1. Nhận diện đúng địa danh/sản vật/lễ hội.\n2. Nêu được nét độc đáo.\n3. Cảm xúc chân thành.\nKhuyên học sinh sưu tầm thêm nhiều ca dao hay. Xưng hô "bạn".`;
-
-    if (typeof askAI === 'function') {
-        await askAI('252-dmr', prompt, 'single', 'tlv', 25, prompt);
-    } else {
-        fb.innerHTML = `✅ Tuyệt vời! Bạn đã hoàn thành phiếu đọc sách rất tốt cho bài ca dao về ${obj}.`;
-        fb.className = "mt-8 p-10 bg-teal-50 border-4 border-teal-200 rounded-[40px] text-2xl md:text-4xl text-teal-900 italic font-bold";
-    }
-};
-
-window.save252DMR = function () {
-    const obj = document.getElementById('dmr-252-obj').value.trim();
-    if (!obj) { alert('Bạn hãy nhập nội dung trước khi nộp nhé!'); return; }
-    alert('Tuyệt vời! Phiếu đọc sách của bạn đã được lưu lại thành công.');
-};
-
-if (!lesson_252_dmr.period) lesson_252_dmr.period = "252";
-if (!lesson_252_dmr.id) lesson_252_dmr.id = "252-dmr";
-

@@ -1,17 +1,15 @@
 export const lesson_261_ltvc = {
-    "title": "LTVC: Luyện tập về liên kết câu trong đoạn văn",
-    "week": 26,
+    "topic": "Tiếng Việt 5",
+    "week": "26",
+    "period": "261",
+    "title": "LTVC: LUYỆN TẬP VỀ LIÊN KẾT CÂU TRONG ĐOẠN VĂN",
+    "desc": "LTVC: Luyện tập về liên kết câu trong đoạn văn",
     "subject": "LTVC",
     "theme": "Hương sắc trăm miền",
-    "tabs": {
-        "lesson": {
-            "title": "Bài học",
-            "blocks": [
-                { "type": "header", "text": "Luyện tập về liên kết câu trong đoạn văn" },
-                {
-                    "type": "html",
-                    "id": "block-261-ltvc",
-                    "content": `<div class="space-y-8 animate-in fade-in duration-700">
+    "audio": "",
+    "content": `
+
+<div class="space-y-8 animate-in fade-in duration-700">
                         <section class="w-full">
                             <div class="glass-card rounded-[40px] p-6 md:p-10 shadow-2xl relative overflow-hidden ring-1 ring-blue-100">
                                 
@@ -185,112 +183,176 @@ export const lesson_261_ltvc = {
 
                             </div>
                         </section>
-                    </div>`
-                }
-            ]
-        },
-        "quiz": {
-            "settings": { "pick": 10 },
-            "questions": [
-                { "q": "Trong đoạn văn a (bài tập 1), câu (2) liên kết với câu (1) bằng cách nào?", "a": ["Lặp từ ngữ", "Dùng từ ngữ nối ('Thế mà hôm nay')", "Dùng từ ngữ thay thế ('đất đỏ' thay cho 'cỏ')", "Dùng đại từ ('tôi')"], "c": 1 },
-                { "q": "Trong đoạn văn b (bài tập 1), từ 'sư tử', 'đười ươi', 'khỉ' lặp lại nhiều lần thể hiện cách liên kết nào?", "a": ["Dùng từ ngữ nối", "Dùng từ ngữ thay thế", "Lặp từ ngữ", "So sánh"], "c": 2 },
-                { "q": "Từ 'con thú dữ' trong câu 4 đoạn văn b thay thế cho từ nào ở các câu trước?", "a": ["sư tử", "đười ươi", "khỉ", "miếng võ"], "c": 0 },
-                { "q": "Đoạn văn c (bài tập 1) đã sử dụng bao nhiêu cách liên kết câu đã học?", "a": ["1 cách", "2 cách", "3 cách (lặp từ, thay thế, từ nối)", "Không dùng cách nào"], "c": 2 },
-                { "q": "Trong câu '(4) Vì vậy, nhà rông đối với tuổi trẻ...', từ 'Vì vậy' đóng vai trò gì?", "a": ["Từ ngữ thay thế", "Từ ngữ nối", "Lặp từ ngữ", "Tính từ"], "c": 1 },
-                { "q": "Trong truyện Cây khế, từ thích hợp điền vào vị trí bông hoa số (2) '... chăm lo làm lụng nên trong nhà cũng đủ ăn' là gì?", "a": ["người anh", "hai anh em", "hai vợ chồng người em", "nhưng"], "c": 1 },
-                { "q": "Điền từ vào vị trí (3): '... từ khi có vợ, người anh sinh ra lười biếng'", "a": ["người anh", "Hai anh em", "Nhưng", "Hai vợ chồng"], "c": 2 },
-                { "q": "Điền từ vào vị trí (4): '... thức khuya, dậy sớm, cố gắng làm lụng.'", "a": ["Nhưng", "Hai anh em", "Hai vợ chồng người em", "người anh"], "c": 2 },
-                { "q": "Điền từ vào vị trí (5): 'Thấy thế, ... sợ em tranh công'", "a": ["hai anh em", "người anh", "hai vợ chồng người em", "nhưng"], "c": 1 },
-                { "q": "Đâu là một ví dụ về từ ngữ nối thường dùng để liên kết câu?", "a": ["Tuy nhiên, Vì vậy, Mặc dù vậy", "Bàn, ghế, bảng", "Đẹp, xấu, tốt", "Chạy, nhảy, múa"], "c": 0 },
-                { "q": "Việc sử dụng từ ngữ nối trong đoạn văn giúp ích gì?", "a": ["Sửa lỗi chính tả", "Thể hiện rõ mối quan hệ ý nghĩa giữa các câu", "Làm đoạn văn khó đọc hơn", "Để không phải viết danh từ"], "c": 1 },
-                { "q": "Đoạn văn 4 – 5 câu tả phương tiện đi lại vùng sông nước, có thể chọn phương tiện nào?", "a": ["Xe máy", "Tàu hoả", "Máy bay", "Xuồng, ghe, vỏ lãi, đò"], "c": 3 },
-                { "q": "Câu: 'Chiếc xuồng lướt êm trên mặt nước. Tuy nhiên, khi gặp dòng nước xiết, nó chòng chành dữ dội.' Từ nối ở đây là gì?", "a": ["Tuy nhiên,", "Chiếc xuồng", "mặt nước", "dữ dội"], "c": 0 },
-                { "q": "Nếu dùng đại từ 'Nó' để bắt đầu một câu, đó là cách liên kết nào?", "a": ["Dùng từ nối", "Lặp từ ngữ", "Dùng từ ngữ thay thế", "Dấu câu kép"], "c": 2 },
-                { "q": "'Hàng ngày, cha chèo xuồng đi bủa lưới. Chiếc xuồng ấy là tài sản lớn nhất của gia đình'. Cách liên kết là:", "a": ["Lặp từ 'xuồng'", "Từ nối 'Hàng ngày'", "Thay thế 'cha' bằng 'Chiếc xuồng'", "Không liên kết"], "c": 0 }
-            ]
-        }
+                    </div>
+`,
+    "practice": `
+
+`,
+    "quizPool": [
+    {
+        "question": "Trong đoạn văn a (bài tập 1), câu (2) liên kết với câu (1) bằng cách nào?",
+        "options": [
+            "Lặp từ ngữ",
+            "Dùng từ ngữ nối ('Thế mà hôm nay')",
+            "Dùng từ ngữ thay thế ('đất đỏ' thay cho 'cỏ')",
+            "Dùng đại từ ('tôi')"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Trong đoạn văn b (bài tập 1), từ 'sư tử', 'đười ươi', 'khỉ' lặp lại nhiều lần thể hiện cách liên kết nào?",
+        "options": [
+            "Dùng từ ngữ nối",
+            "Dùng từ ngữ thay thế",
+            "Lặp từ ngữ",
+            "So sánh"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Từ 'con thú dữ' trong câu 4 đoạn văn b thay thế cho từ nào ở các câu trước?",
+        "options": [
+            "sư tử",
+            "đười ươi",
+            "khỉ",
+            "miếng võ"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Đoạn văn c (bài tập 1) đã sử dụng bao nhiêu cách liên kết câu đã học?",
+        "options": [
+            "1 cách",
+            "2 cách",
+            "3 cách (lặp từ, thay thế, từ nối)",
+            "Không dùng cách nào"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Trong câu '(4) Vì vậy, nhà rông đối với tuổi trẻ...', từ 'Vì vậy' đóng vai trò gì?",
+        "options": [
+            "Từ ngữ thay thế",
+            "Từ ngữ nối",
+            "Lặp từ ngữ",
+            "Tính từ"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Trong truyện Cây khế, từ thích hợp điền vào vị trí bông hoa số (2) '... chăm lo làm lụng nên trong nhà cũng đủ ăn' là gì?",
+        "options": [
+            "người anh",
+            "hai anh em",
+            "hai vợ chồng người em",
+            "nhưng"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Điền từ vào vị trí (3): '... từ khi có vợ, người anh sinh ra lười biếng'",
+        "options": [
+            "người anh",
+            "Hai anh em",
+            "Nhưng",
+            "Hai vợ chồng"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Điền từ vào vị trí (4): '... thức khuya, dậy sớm, cố gắng làm lụng.'",
+        "options": [
+            "Nhưng",
+            "Hai anh em",
+            "Hai vợ chồng người em",
+            "người anh"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Điền từ vào vị trí (5): 'Thấy thế, ... sợ em tranh công'",
+        "options": [
+            "hai anh em",
+            "người anh",
+            "hai vợ chồng người em",
+            "nhưng"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Đâu là một ví dụ về từ ngữ nối thường dùng để liên kết câu?",
+        "options": [
+            "Tuy nhiên, Vì vậy, Mặc dù vậy",
+            "Bàn, ghế, bảng",
+            "Đẹp, xấu, tốt",
+            "Chạy, nhảy, múa"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Việc sử dụng từ ngữ nối trong đoạn văn giúp ích gì?",
+        "options": [
+            "Sửa lỗi chính tả",
+            "Thể hiện rõ mối quan hệ ý nghĩa giữa các câu",
+            "Làm đoạn văn khó đọc hơn",
+            "Để không phải viết danh từ"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Đoạn văn 4 – 5 câu tả phương tiện đi lại vùng sông nước, có thể chọn phương tiện nào?",
+        "options": [
+            "Xe máy",
+            "Tàu hoả",
+            "Máy bay",
+            "Xuồng, ghe, vỏ lãi, đò"
+        ],
+        "answer": 3,
+        "level": 1
+    },
+    {
+        "question": "Câu: 'Chiếc xuồng lướt êm trên mặt nước. Tuy nhiên, khi gặp dòng nước xiết, nó chòng chành dữ dội.' Từ nối ở đây là gì?",
+        "options": [
+            "Tuy nhiên,",
+            "Chiếc xuồng",
+            "mặt nước",
+            "dữ dội"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Nếu dùng đại từ 'Nó' để bắt đầu một câu, đó là cách liên kết nào?",
+        "options": [
+            "Dùng từ nối",
+            "Lặp từ ngữ",
+            "Dùng từ ngữ thay thế",
+            "Dấu câu kép"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "'Hàng ngày, cha chèo xuồng đi bủa lưới. Chiếc xuồng ấy là tài sản lớn nhất của gia đình'. Cách liên kết là:",
+        "options": [
+            "Lặp từ 'xuồng'",
+            "Từ nối 'Hàng ngày'",
+            "Thay thế 'cha' bằng 'Chiếc xuồng'",
+            "Không liên kết"
+        ],
+        "answer": 0,
+        "level": 1
     }
+]
 };
-
-// --- Logic functions implementation ---
-window.checkEx261_1 = function () {
-    const a = document.getElementById('ex261-1a').value;
-    const b1 = document.getElementById('ex261-1b1').value;
-    const b2 = document.getElementById('ex261-1b2').value;
-
-    // Checkbox array
-    const c1 = document.getElementById('ex261-1c-ck1').checked;
-    const c2 = document.getElementById('ex261-1c-ck2').checked;
-    const c3 = document.getElementById('ex261-1c-ck3').checked;
-
-    const fb = document.getElementById('fb-261-ltvc-ex1');
-    fb.classList.remove('hidden');
-
-    const isACorrect = a === 'Dùng từ ngữ nối';
-    const isBCorrect = b1.startsWith('Lặp từ ngữ') && b2.startsWith('Dùng từ ngữ thay thế');
-    const isCCorrect = c1 && c2 && c3;
-
-    if (isACorrect && isBCorrect && isCCorrect) {
-        fb.innerHTML = "🎉 Tuyệt vời! Bạn đã xác định chính xác các cách liên kết trong cả 3 đoạn văn.";
-        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
-        if (typeof celebrate === 'function') celebrate();
-    } else {
-        fb.innerHTML = "❌ Có chỗ chưa đúng. Đoạn (a) là 'từ ngữ nối' (Thế mà hôm nay); đoạn (b) kết hợp 'lặp từ' và 'thay thế'; đoạn (c) dùng cả 3 cách. Bạn kiểm tra lại nhé!";
-        fb.className = "text-red-500 font-bold mt-4";
-    }
-};
-
-window.resetEx261_1 = function () {
-    document.getElementById('ex261-1a').value = '';
-    document.getElementById('ex261-1b1').value = '';
-    document.getElementById('ex261-1b2').value = '';
-    document.getElementById('ex261-1c-ck1').checked = false;
-    document.getElementById('ex261-1c-ck2').checked = false;
-    document.getElementById('ex261-1c-ck3').checked = false;
-    document.getElementById('fb-261-ltvc-ex1').classList.add('hidden');
-};
-
-window.checkEx261_2 = function () {
-    const v1 = document.getElementById('ex261-2-1').value.toLowerCase();
-    const v2 = document.getElementById('ex261-2-2').value.toLowerCase();
-    const v3 = document.getElementById('ex261-2-3').value.toLowerCase();
-    const v4 = document.getElementById('ex261-2-4').value.toLowerCase();
-    const fb = document.getElementById('fb-261-ltvc-ex2');
-    fb.classList.remove('hidden');
-
-    if (v1 === 'hai anh em' && v2 === 'nhưng' && v3 === 'hai vợ chồng người em' && v4 === 'người anh') {
-        fb.innerHTML = "✅ Giỏi quá! Bạn đã điền chính xác các từ thay thế và từ nối vào đoạn Truyện Cây Khế.";
-        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
-        if (typeof celebrate === 'function') celebrate();
-    } else {
-        fb.innerHTML = "❌ Bạn điền chưa đúng hết. Gọi ý: Câu 2 nói chung (hai anh em); Câu 3 chuyển ý (Nhưng); Câu 4 nói về em (Hai vợ chồng...); Câu 5 nói về anh (người anh).";
-        fb.className = "text-red-500 font-bold mt-4";
-    }
-};
-
-window.resetEx261_2 = function () {
-    ['ex261-2-1', 'ex261-2-2', 'ex261-2-3', 'ex261-2-4'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('fb-261-ltvc-ex2').classList.add('hidden');
-};
-
-window.check261LTVCEx3AI = async function () {
-    const val = document.getElementById('ai-261-ltvc-ex3').value.trim();
-    if (!val) { alert('Bạn hãy nhập đoạn văn của mình vào ô trống nhé!'); return; }
-
-    const fb = document.getElementById('fb-261-ltvc-ex3');
-    fb.classList.remove('hidden');
-    fb.innerHTML = `<div class="flex items-center gap-2 text-indigo-600 animate-pulse"><div class="w-6 h-6 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div> <span>EduRobot đang đọc đoạn văn của bạn...</span></div>`;
-
-    if (typeof askAI === 'function') {
-        const prompt = `Viết đoạn văn (4 – 5 câu) giới thiệu về một phương tiện đi lại vùng sông nước (ví dụ: xuồng, ghe, vỏ lãi) có dùng từ nối.
-        Đoạn văn của học sinh: "${val}"
-        Đánh giá: 1. Có phải phương tiện sông nước không? 2. Đủ 4-5 câu không? 3. CÓ SỬ DỤNG TỪ NỐI (Ví dụ: Vì vậy, Tuy nhiên, Bên cạnh đó, Do đó...) không? Chỉ ra từ nối học sinh dùng. Nhận xét nhẹ nhàng, xưng hô 'em'.`;
-        await askAI('261-ltvc-ex3', prompt, 'single', 'ltvc', 26);
-    } else {
-        fb.innerHTML = "✅ Đoạn văn của bạn rất sống động. Lưu ý kiểm tra xem mình đã sử dụng các từ nối (như: Tuy nhiên, Vì vậy, Nhờ đó,...) để liên kết các câu chưa nhé!";
-    }
-};
-
-if (!lesson_261_ltvc.period) lesson_261_ltvc.period = "261";
-if (!lesson_261_ltvc.id) lesson_261_ltvc.id = "261-ltvc";
-

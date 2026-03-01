@@ -1,21 +1,15 @@
 export const lesson_231_ltvc = {
-    "title": "LTVC: Liên kết câu bằng cách lặp từ ngữ",
-    "week": 23,
+    "topic": "Tiếng Việt 5",
+    "week": "23",
+    "period": "156",
+    "title": "LTVC: LIÊN KẾT CÂU BẰNG CÁCH LẶP TỪ NGỮ",
+    "desc": "LTVC: Liên kết câu bằng cách lặp từ ngữ",
     "subject": "LTVC",
     "theme": "Hương sắc trăm miền",
-    "tabs": {
-        "lesson": {
-            "title": "Bài học",
-            "blocks": [
-                { "type": "header", "text": "Liên kết câu bằng cách lặp từ ngữ" },
-                {
-                    "type": "html",
-                    "id": "block-231-ex1",
-                    "feedback": {
-                        "correct": "Từ được lặp lại nhiều lần là: choắt, tôi.",
-                        "wrong": "Bạn chọn sai từ rồi, cần chọn đúng và chọn tất cả các từ."
-                    },
-                    "content": `<div class="space-y-8 animate-in fade-in duration-700">
+    "audio": "",
+    "content": `
+
+<div class="space-y-8 animate-in fade-in duration-700">
                         <!-- 1. KHÁM PHÁ -->
                         <section class="w-full">
                             <div class="glass-card rounded-[40px] p-6 md:p-10 shadow-2xl relative overflow-hidden ring-1 ring-blue-100">
@@ -231,89 +225,66 @@ export const lesson_231_ltvc = {
                                 </div>
                             </div>
                         </section>
-                    </div>`
-                }
-            ]
-        },
-        "quiz": {
-            "settings": { "pick": 10 },
-            "questions": [
-                {
-                    "q": "Các câu trong một đoạn văn có thể liên kết with nhau bằng cách nào dưới đây?",
-                    "a": ["Lặp lại từ ngữ ở câu trước", "Dùng từ ngữ có nghĩa trái ngược", "Thay đổi chủ đề hoàn toàn", "Dùng câu thật dài"],
-                    "c": 0
-                },
-                {
-                    "q": "Trong đoạn văn về Dế Choắt, tác giả lặp lại tên nhân vật nhằm mục đích gì?",
-                    "a": ["Để bài dài hơn", "Để tạo sự liên kết giữa các câu", "Để nhấn mạnh sự yếu đuối", "Để khoe tên nhân vật"],
-                    "c": 1
-                },
-                {
-                    "q": "Điền từ vào chỗ trống: 'Hoa giấy đẹp một cách giản dị. Mỗi cánh ... giống hệt một chiếc lá.'",
-                    "a": ["lá", "nhụy", "hoa", "cành"],
-                    "c": 2
-                },
-                {
-                    "q": "Câu 'Một hôm, Thạch Sanh ngồi trong ngục tối... Tiếng đàn vang lên...' sử dụng cách liên kết nào?",
-                    "a": ["Dùng từ nối", "Lặp từ ngữ", "Thay thế từ ngữ", "Không có liên kết"],
-                    "c": 1
-                },
-                {
-                    "q": "Phép lặp từ ngữ giúp đoạn văn:",
-                    "a": ["Rời rạc hơn", "Khó hiểu hơn", "Chặt chẽ và thống nhất về nội dung", "Dài dòng vô ích"],
-                    "c": 2
-                }
-            ]
-        }
+                    </div>
+`,
+    "practice": `
+
+`,
+    "quizPool": [
+    {
+        "question": "Các câu trong một đoạn văn có thể liên kết with nhau bằng cách nào dưới đây?",
+        "options": [
+            "Lặp lại từ ngữ ở câu trước",
+            "Dùng từ ngữ có nghĩa trái ngược",
+            "Thay đổi chủ đề hoàn toàn",
+            "Dùng câu thật dài"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Trong đoạn văn về Dế Choắt, tác giả lặp lại tên nhân vật nhằm mục đích gì?",
+        "options": [
+            "Để bài dài hơn",
+            "Để tạo sự liên kết giữa các câu",
+            "Để nhấn mạnh sự yếu đuối",
+            "Để khoe tên nhân vật"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Điền từ vào chỗ trống: 'Hoa giấy đẹp một cách giản dị. Mỗi cánh ... giống hệt một chiếc lá.'",
+        "options": [
+            "lá",
+            "nhụy",
+            "hoa",
+            "cành"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Câu 'Một hôm, Thạch Sanh ngồi trong ngục tối... Tiếng đàn vang lên...' sử dụng cách liên kết nào?",
+        "options": [
+            "Dùng từ nối",
+            "Lặp từ ngữ",
+            "Thay thế từ ngữ",
+            "Không có liên kết"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Phép lặp từ ngữ giúp đoạn văn:",
+        "options": [
+            "Rời rạc hơn",
+            "Khó hiểu hơn",
+            "Chặt chẽ và thống nhất về nội dung",
+            "Dài dòng vô ích"
+        ],
+        "answer": 2,
+        "level": 1
     }
+]
 };
-
-// --- Helper functions for Lesson 231 LTVC ---
-window.checkEx1bAI = async function () {
-    const input = document.getElementById('ai-231-ex1b');
-    if (!input || !input.value.trim()) { alert("Em hãy nhập câu trả lời cho mục b nhé!"); return; }
-    const fb = document.getElementById('fb-231-ex1b');
-    fb.classList.remove('hidden');
-    fb.innerHTML = "Hệ thống đang xem câu trả lời của em...";
-
-    if (typeof askAI === 'function') {
-        const prefix = "Em hãy nhận xét câu trả lời của học sinh về tác dụng của việc lặp lại từ ngữ (tôi, Dế Choắt) trong đoạn văn của Tô Hoài. Tác dụng chính là để liên kết các câu văn với nhau. Hãy khen nếu học sinh nêu được ý liên kết, hoặc gợi ý thêm nếu chưa rõ: ";
-        await askAI('231-ex1b', prefix, 'single', 'ltvc', 23);
-    } else {
-        fb.innerHTML = "Lỗi: Hệ thống chấm điểm chưa sẵn sàng.";
-    }
-};
-
-window.checkLTVC231_Q4 = async function () {
-    const input = document.getElementById('ai-231-q4');
-    if (!input || !input.value.trim()) { alert("Em hãy viết vài câu về lễ hội nhé!"); return; }
-    const fb = document.getElementById('fb-231-q4');
-    fb.classList.remove('hidden');
-    fb.innerHTML = "Hệ thống đang đọc bài của em...";
-
-    if (typeof askAI === 'function') {
-        const prefix = "Hãy nhận xét đoạn văn ngắn (2-3 câu) của học sinh về một lễ hội, yêu cầu có sử dụng phép lặp để liên kết câu: ";
-        await askAI('231-q4', prefix, 'single', 'ltvc', 23);
-    } else {
-        fb.innerHTML = "Lỗi: Hệ thống chấm điểm AI chưa sẵn sàng.";
-    }
-};
-
-window.checkEx231_2 = function () {
-    const v1 = document.getElementById('ex231-2-1').value;
-    const v2 = document.getElementById('ex231-2-2').value;
-    const fb = document.getElementById('fb-231-ex2');
-    fb.classList.remove('hidden');
-    if (v1 === 'hoa' && v2 === 'hoa') {
-        fb.innerHTML = "✅ Chính xác! Từ 'hoa' được lặp lại để liên kết câu.";
-        fb.className = "text-green-600 font-bold ml-4";
-        if (typeof celebrate === 'function') celebrate();
-    } else {
-        fb.innerHTML = "❌ Chưa đúng rồi, em hãy chọn lại từ để liên kết với 'Hoa giấy' ở câu 1 nhé!";
-        fb.className = "text-red-500 font-bold ml-4";
-    }
-};
-
-if (!lesson_231_ltvc.period) lesson_231_ltvc.period = '156';
-if (!lesson_231_ltvc.id) lesson_231_ltvc.id = "231-ltvc";
-

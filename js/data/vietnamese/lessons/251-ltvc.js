@@ -1,17 +1,15 @@
 export const lesson_251_ltvc = {
-    "title": "LTVC: Liên kết câu bằng từ ngữ thay thế",
-    "week": 25,
+    "topic": "Tiếng Việt 5",
+    "week": "25",
+    "period": "251",
+    "title": "LTVC: LIÊN KẾT CÂU BẰNG TỪ NGỮ THAY THẾ",
+    "desc": "LTVC: Liên kết câu bằng từ ngữ thay thế",
     "subject": "LTVC",
     "theme": "Hương sắc trăm miền",
-    "tabs": {
-        "lesson": {
-            "title": "Bài học",
-            "blocks": [
-                { "type": "header", "text": "Liên kết câu bằng từ ngữ thay thế" },
-                {
-                    "type": "html",
-                    "id": "block-251-ltvc-explore",
-                    "content": `<div class="space-y-8 animate-in fade-in duration-700">
+    "audio": "",
+    "content": `
+
+<div class="space-y-8 animate-in fade-in duration-700">
                         <!-- I. KHÁM PHÁ -->
                         <section class="w-full">
                             <div class="glass-card rounded-[40px] p-6 md:p-10 shadow-2xl relative overflow-hidden ring-1 ring-blue-100">
@@ -224,119 +222,176 @@ export const lesson_251_ltvc = {
                                 </div>
                             </div>
                         </section>
-                    </div>`
-                }
-            ]
-        },
-        "quiz": {
-            "settings": { "pick": 10 },
-            "questions": [
-                { "q": "Liên kết câu bằng từ ngữ thay thế là việc sử dụng từ ngữ nào ở câu sau để thay cho từ ở câu trước?", "a": ["Danh từ, tính từ", "Đại từ, danh từ", "Động từ, trạng từ", "Số từ, lương từ"], "c": 1 },
-                { "q": "Tác dụng quan trọng nhất của việc dùng từ ngữ thay thế là gì?", "a": ["Làm câu dài ra", "Tránh lặp từ đơn điệu và liên kết câu", "Làm câu khó hiểu hơn", "Để khoe vốn từ vựng"], "c": 1 },
-                { "q": "Trong đoạn văn về các hồ nước, từ 'Đó' thay thế cho từ ngữ nào?", "a": ["Cánh đồng cỏ", "Mùa mưa", "Nhiều hồ nước", "Mùa khô"], "c": 2 },
-                { "q": "Trong đoạn văn về các hồ nước, từ 'chúng' thay thế cho từ ngữ nào?", "a": ["Cánh đồng cỏ", "Những vạt đất trũng", "Những chiếc gương", "Đắk Lắk"], "c": 1 },
-                { "q": "Cụm từ 'nhà soạn nhạc thiên tài' thay thế cho tên riêng nào?", "a": ["Mô-da", "Bét-tô-ven", "Sô-panh", "Bách"], "c": 1 },
-                { "q": "Từ 'họ' thường được dùng để thay thế cho đối tượng nào?", "a": ["Một người duy nhất", "Nhóm người (số nhiều)", "Sự vật, hiện tượng", "Địa điểm, nơi chốn"], "c": 1 },
-                { "q": "Từ 'nhà du hành' trong bài tập 3 được dùng để gọi tên con vật nào một cách sáng tạo?", "a": ["Con chim", "Con dơi", "Con báo", "Con hươu"], "c": 1 },
-                { "q": "Biệt danh 'nhạc sĩ giang hồ' thay thế cho loài chim nào?", "a": ["Chim sẻ", "Chim họa mi", "Chim bồ câu", "Chim đại bàng"], "c": 1 },
-                { "q": "Để thay thế cho từ 'Đà Lạt', ta có thể dùng cụm từ nào?", "a": ["Thành phố cảng", "Thành phố ngàn hoa", "Thành phố mang tên Bác", "Thủ đô văn hiến"], "c": 1 },
-                { "q": "Việc dùng đại từ 'Nó' để thay cho 'Cây bút' là phép liên kết gì?", "a": ["Phép lặp", "Phép thế", "Phép nối", "Phép liên tưởng"], "c": 1 },
-                { "q": "Liên kết câu bằng từ ngữ thay thế giúp bài văn như thế nào?", "a": ["Rời rạc", "Lặp lại nhàm chán", "Mạch lạc và phong phú", "Khó đọc"], "c": 2 },
-                { "q": "Trong câu 'Em rất thích chú mèo này. Nó rất ngoan.', từ 'Nó' đóng vai trò gì?", "a": ["Tính từ", "Từ ngữ thay thế (Đại từ)", "Danh từ riêng", "Động từ"], "c": 1 },
-                { "q": "Để thay thế cho 'Bác Hồ', ta có thể dùng cụm từ nào?", "a": ["Người", "Vị lãnh tụ kính yêu", "Bác", "Tất cả các đáp án trên"], "c": 3 },
-                { "q": "Sử dụng từ ngữ thay thế giúp tránh lỗi gì trong hành văn?", "a": ["Lỗi chính tả", "Lỗi lặp từ", "Lỗi thiếu dấu câu", "Lỗi viết hoa"], "c": 1 },
-                { "q": "Cụm từ 'Thiên đường du lịch' trong đoạn văn về Đà Lạt dùng để làm gì?", "a": ["Quảng cáo", "Liên kết câu bằng cách thay thế cho từ 'Đà Lạt'", "Miêu tả khí hậu", "Kể tên các địa danh"], "c": 1 }
-            ]
-        }
+                    </div>
+`,
+    "practice": `
+
+`,
+    "quizPool": [
+    {
+        "question": "Liên kết câu bằng từ ngữ thay thế là việc sử dụng từ ngữ nào ở câu sau để thay cho từ ở câu trước?",
+        "options": [
+            "Danh từ, tính từ",
+            "Đại từ, danh từ",
+            "Động từ, trạng từ",
+            "Số từ, lương từ"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Tác dụng quan trọng nhất của việc dùng từ ngữ thay thế là gì?",
+        "options": [
+            "Làm câu dài ra",
+            "Tránh lặp từ đơn điệu và liên kết câu",
+            "Làm câu khó hiểu hơn",
+            "Để khoe vốn từ vựng"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Trong đoạn văn về các hồ nước, từ 'Đó' thay thế cho từ ngữ nào?",
+        "options": [
+            "Cánh đồng cỏ",
+            "Mùa mưa",
+            "Nhiều hồ nước",
+            "Mùa khô"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Trong đoạn văn về các hồ nước, từ 'chúng' thay thế cho từ ngữ nào?",
+        "options": [
+            "Cánh đồng cỏ",
+            "Những vạt đất trũng",
+            "Những chiếc gương",
+            "Đắk Lắk"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Cụm từ 'nhà soạn nhạc thiên tài' thay thế cho tên riêng nào?",
+        "options": [
+            "Mô-da",
+            "Bét-tô-ven",
+            "Sô-panh",
+            "Bách"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Từ 'họ' thường được dùng để thay thế cho đối tượng nào?",
+        "options": [
+            "Một người duy nhất",
+            "Nhóm người (số nhiều)",
+            "Sự vật, hiện tượng",
+            "Địa điểm, nơi chốn"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Từ 'nhà du hành' trong bài tập 3 được dùng để gọi tên con vật nào một cách sáng tạo?",
+        "options": [
+            "Con chim",
+            "Con dơi",
+            "Con báo",
+            "Con hươu"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Biệt danh 'nhạc sĩ giang hồ' thay thế cho loài chim nào?",
+        "options": [
+            "Chim sẻ",
+            "Chim họa mi",
+            "Chim bồ câu",
+            "Chim đại bàng"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Để thay thế cho từ 'Đà Lạt', ta có thể dùng cụm từ nào?",
+        "options": [
+            "Thành phố cảng",
+            "Thành phố ngàn hoa",
+            "Thành phố mang tên Bác",
+            "Thủ đô văn hiến"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Việc dùng đại từ 'Nó' để thay cho 'Cây bút' là phép liên kết gì?",
+        "options": [
+            "Phép lặp",
+            "Phép thế",
+            "Phép nối",
+            "Phép liên tưởng"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Liên kết câu bằng từ ngữ thay thế giúp bài văn như thế nào?",
+        "options": [
+            "Rời rạc",
+            "Lặp lại nhàm chán",
+            "Mạch lạc và phong phú",
+            "Khó đọc"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Trong câu 'Em rất thích chú mèo này. Nó rất ngoan.', từ 'Nó' đóng vai trò gì?",
+        "options": [
+            "Tính từ",
+            "Từ ngữ thay thế (Đại từ)",
+            "Danh từ riêng",
+            "Động từ"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Để thay thế cho 'Bác Hồ', ta có thể dùng cụm từ nào?",
+        "options": [
+            "Người",
+            "Vị lãnh tụ kính yêu",
+            "Bác",
+            "Tất cả các đáp án trên"
+        ],
+        "answer": 3,
+        "level": 1
+    },
+    {
+        "question": "Sử dụng từ ngữ thay thế giúp tránh lỗi gì trong hành văn?",
+        "options": [
+            "Lỗi chính tả",
+            "Lỗi lặp từ",
+            "Lỗi thiếu dấu câu",
+            "Lỗi viết hoa"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Cụm từ 'Thiên đường du lịch' trong đoạn văn về Đà Lạt dùng để làm gì?",
+        "options": [
+            "Quảng cáo",
+            "Liên kết câu bằng cách thay thế cho từ 'Đà Lạt'",
+            "Miêu tả khí hậu",
+            "Kể tên các địa danh"
+        ],
+        "answer": 1,
+        "level": 1
     }
+]
 };
-
-// --- Logic functions implementation ---
-window.check251LTVCEx1AI = async function () {
-    const val = document.getElementById('ai-251-ltvc-ex1').value.trim();
-    if (!val) { alert('Bạn hãy nhập câu trả lời nhé!'); return; }
-
-    const fb = document.getElementById('fb-251-ltvc-ex1');
-    fb.classList.remove('hidden');
-    fb.innerHTML = `<div class="flex items-center gap-2 text-indigo-600 animate-pulse"><div class="w-6 h-6 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div> <span>EduRobot đang đọc bài của bạn...</span></div>`;
-
-    if (typeof askAI === 'function') {
-        const prompt = `Đoạn văn về hồ nước ở Gia Lai. 
-        Yêu cầu: "Đó" thay cho "nhiều hồ nước", "chúng" thay cho "những vạt đất trũng". Tác dụng: liên kết câu, tránh lặp từ.
-        Câu trả lời của bạn: "${val}"
-        Hãy đánh giá và nhận xét khích lệ. Nhấn mạnh nếu thiếu ý nào. Xưng hô với người làm bài là 'bạn'.`;
-        await askAI('251-ltvc-ex1', prompt, 'single', 'ltvc', 25);
-    } else {
-        fb.innerHTML = "✅ Tốt lắm! 'Đó' thay cho 'nhiều hồ nước', 'chúng' thay cho 'những vạt đất trũng'. Việc thay thế giúp đoạn văn mạch lạc hơn.";
-    }
-};
-
-window.check251LTVCEx2AI = async function () {
-    const val = document.getElementById('ai-251-ltvc-ex2').value.trim();
-    if (!val) { alert('Bạn hãy nhập câu trả lời nhé!'); return; }
-
-    const fb = document.getElementById('fb-251-ltvc-ex2');
-    fb.classList.remove('hidden');
-    fb.innerHTML = `<div class="flex items-center gap-2 text-indigo-600 animate-pulse"><div class="w-6 h-6 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div> <span>EduRobot đang phân tích câu trả lời...</span></div>`;
-
-    if (typeof askAI === 'function') {
-        const prompt = `Đoạn văn về Beethoven chơi đàn.
-        Yêu cầu: Các từ in đậm đều nói về Bét-tô-ven. Tác dụng: liên kết câu, tránh lặp lại tên riêng, làm cách diễn đạt phong phú (nhà soạn nhạc thiên tài).
-        Câu trả lời của bạn: "${val}"
-        Hãy đánh giá: Nếu nói đúng là về Bét-tô-ven và có tác dụng liên kết/tránh lặp là đạt. Nhận xét nhẹ nhàng, xưng hô là 'bạn'.`;
-        await askAI('251-ltvc-ex2', prompt, 'single', 'ltvc', 25);
-    } else {
-        fb.innerHTML = "✅ Chính xác! Các từ này đều chỉ Bét-tô-ven, giúp tránh lặp từ và tôn vinh tài năng của ông.";
-    }
-};
-
-window.checkEx251_3 = function () {
-    const a = document.getElementById('ex251-3-a').value;
-    const b = document.getElementById('ex251-3-b').value;
-    const c = document.getElementById('ex251-3-c').value;
-    const fb = document.getElementById('fb-251-ltvc-ex3');
-    fb.classList.remove('hidden');
-
-    if (a === 'những nghệ nhân người Mông' && b === 'con dơi' && c === 'con chim hoạ mi') {
-        fb.innerHTML = "🎉 Tuyệt vời! Bạn đã xác định đúng tất cả các từ ngữ được thay thế.";
-        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
-        if (typeof celebrate === 'function') celebrate();
-    } else {
-        fb.innerHTML = "❌ Có chỗ chưa đúng, em hãy đọc kỹ lại đoạn văn nhé!";
-        fb.className = "text-red-500 font-bold mt-4";
-    }
-};
-
-window.resetEx251_3 = function () {
-    ['ex251-3-a', 'ex251-3-b', 'ex251-3-c'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('fb-251-ltvc-ex3').classList.add('hidden');
-};
-
-window.checkEx251_4 = function () {
-    const v1 = document.getElementById('ex251-4-1').value;
-    const v2 = document.getElementById('ex251-4-2').value;
-    const v3 = document.getElementById('ex251-4-3').value;
-    const fb = document.getElementById('fb-251-ltvc-ex4');
-    fb.classList.remove('hidden');
-
-    // Các lựa chọn hợp lý nhất theo phong cách văn học
-    const isCorrect = (v1 !== "" && v2 !== "" && v3 !== "") && (v1 !== v2 && v2 !== v3 && v1 !== v3);
-
-    if (isCorrect) {
-        fb.innerHTML = "✅ Giỏi quá! Bạn đã sử dụng các từ thay thế rất linh hoạt để đoạn văn về Đà Lạt hay hơn hẳn.";
-        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
-        if (typeof celebrate === 'function') celebrate();
-    } else {
-        fb.innerHTML = "❌ Bạn hãy chọn các cụm từ khác nhau và điền vào đủ 3 chỗ trống nhé!";
-        fb.className = "text-red-500 font-bold mt-4";
-    }
-};
-
-window.resetEx251_4 = function () {
-    ['ex251-4-1', 'ex251-4-2', 'ex251-4-3'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('fb-251-ltvc-ex4').classList.add('hidden');
-};
-
-if (!lesson_251_ltvc.period) lesson_251_ltvc.period = "251";
-if (!lesson_251_ltvc.id) lesson_251_ltvc.id = "251-ltvc";
-

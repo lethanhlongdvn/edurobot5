@@ -1,17 +1,15 @@
 export const lesson_232_dmr = {
-    "title": "Đọc mở rộng: Đọc cuốn sách viết về một miền đất",
-    "week": 23,
+    "topic": "Tiếng Việt 5",
+    "week": "23",
+    "period": "161",
+    "title": "ĐỌC MỞ RỘNG: ĐỌC CUỐN SÁCH VIẾT VỀ MỘT MIỀN ĐẤT",
+    "desc": "Đọc mở rộng: Đọc cuốn sách viết về một miền đất",
     "subject": "Đọc mở rộng",
     "theme": "Hương sắc trăm miền",
-    "tabs": {
-        "lesson": {
-            "title": "Bài học",
-            "blocks": [
-                { "type": "header", "text": "ĐỌC MỞ RỘNG" },
-                {
-                    "type": "html",
-                    "id": "block-232-dmr-1",
-                    "content": `<div class="space-y-12 animate-in fade-in duration-700 max-w-5xl mx-auto">
+    "audio": "",
+    "content": `
+
+<div class="space-y-12 animate-in fade-in duration-700 max-w-5xl mx-auto">
                         <!-- SECTION 1: PHIẾU ĐỌC SÁCH MẪU -->
                         <section class="w-full">
                             <div class="flex items-center space-x-4 mb-6">
@@ -179,89 +177,66 @@ export const lesson_232_dmr = {
                                 </div>
                             </div>
                         </section>
-                    </div>`
-                }
-            ]
-        },
-        "quiz": {
-            "settings": { "pick": 5 },
-            "questions": [
-                { "q": "Tác giả của cuốn 'Đất rừng phương Nam' là ai?", "a": ["Đoàn Giỏi", "Võ Quảng", "Tô Hoài", "Vũ Hùng"], "c": 0 },
-                { "q": "Cuốn sách 'Đất rừng phương Nam' viết về miền đất nào?", "a": ["Nam Bộ", "Tây Bắc", "Miền Trung", "Tây Nguyên"], "c": 0 },
-                { "q": "Cậu bé An trong truyện có tính cách như thế nào theo Lâm Phong?", "a": ["Trí dũng, một lòng theo kháng chiến", "Nhút nhát, sợ hãi", "Hay quên, ham chơi", "Khó tính, khó gần"], "c": 0 },
-                { "q": "Điều tiếc nuối nhất của Lâm Phong sau khi đọc truyện là gì?", "a": ["An chưa gặp được bố mẹ", "Truyện quá ngắn", "Kết thúc buồn", "Không có hình tranh minh họa"], "c": 0 },
-                { "q": "Mức độ yêu thích của Lâm Phong đối với cuốn sách là gì?", "a": ["Rất hay", "Khá hay", "Bình thường", "Không hấp dẫn"], "c": 0 }
-            ]
-        }
+                    </div>
+`,
+    "practice": `
+
+`,
+    "quizPool": [
+    {
+        "question": "Tác giả của cuốn 'Đất rừng phương Nam' là ai?",
+        "options": [
+            "Đoàn Giỏi",
+            "Võ Quảng",
+            "Tô Hoài",
+            "Vũ Hùng"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Cuốn sách 'Đất rừng phương Nam' viết về miền đất nào?",
+        "options": [
+            "Nam Bộ",
+            "Tây Bắc",
+            "Miền Trung",
+            "Tây Nguyên"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Cậu bé An trong truyện có tính cách như thế nào theo Lâm Phong?",
+        "options": [
+            "Trí dũng, một lòng theo kháng chiến",
+            "Nhút nhát, sợ hãi",
+            "Hay quên, ham chơi",
+            "Khó tính, khó gần"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Điều tiếc nuối nhất của Lâm Phong sau khi đọc truyện là gì?",
+        "options": [
+            "An chưa gặp được bố mẹ",
+            "Truyện quá ngắn",
+            "Kết thúc buồn",
+            "Không có hình tranh minh họa"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Mức độ yêu thích của Lâm Phong đối với cuốn sách là gì?",
+        "options": [
+            "Rất hay",
+            "Khá hay",
+            "Bình thường",
+            "Không hấp dẫn"
+        ],
+        "answer": 0,
+        "level": 1
     }
+]
 };
-
-// --- LOGIC ---
-window.selectedFavorite = 0;
-window.setFavorite = function (n) {
-    window.selectedFavorite = n;
-    const stars = document.querySelectorAll('.fav-star');
-    stars.forEach((star, i) => {
-        if (i < n) {
-            star.classList.replace('text-gray-300', 'text-amber-400');
-        } else {
-            star.classList.replace('text-amber-400', 'text-gray-300');
-        }
-    });
-};
-
-window.check232DMR = async function () {
-    const name = document.getElementById('dmr-name').value.trim();
-    const author = document.getElementById('dmr-author').value.trim();
-    const content = document.getElementById('dmr-content').value.trim();
-    const imp = document.getElementById('dmr-imp').value.trim();
-    const feel = document.getElementById('dmr-feel').value.trim();
-
-    if (!name || !content || !imp || !feel) {
-        alert("Em hãy điền đầy đủ các thông tin trong Phiếu đọc sách nhé!");
-        return;
-    }
-
-    const fb = document.getElementById('fb-232-dmr');
-    fb.classList.remove('hidden');
-    fb.innerHTML = `<div class="flex items-center gap-4"><div class="animate-spin rounded-full h-8 w-8 border-4 border-indigo-600 border-t-transparent"></div><p class="text-xl font-bold italic text-indigo-900">Hệ thống đang xem qua phiếu của em...</p></div>`;
-
-    if (typeof askAI === 'function') {
-        const prompt = `Em hãy nhận xét phiếu đọc sách của học sinh. 
-        Thông tin phiếu:
-        - Tên truyện: ${name}
-        - Tác giả: ${author}
-        - Nội dung: ${content}
-        - Ấn tượng: ${imp}
-        - Cảm nhận: ${feel}
-        - Yêu thích: ${window.selectedFavorite}/5 sao
-        
-        Yêu cầu nhận xét:
-        1. Khen ngợi nếu học sinh tóm tắt rõ ràng và có cảm xúc.
-        2. Gợi ý thêm cách diễn đạt để phần "Ấn tượng" hoặc "Cảm nhận" sâu sắc hơn.
-        3. Khuyến khích học sinh tiếp tục đọc thêm các cuốn sách khác về quê hương.`;
-
-        const studentWork = `Tên sách: ${name}\nNội dung: ${content}\nẤn tượng: ${imp}\nCảm nhận: ${feel}`;
-        await askAI('232-dmr', prompt, 'single', 'writing', 23, studentWork);
-    } else {
-        fb.innerHTML = "Lỗi: Hệ hệ thống AI chưa sẵn sàng.";
-    }
-};
-
-window.reset232DMR = function () {
-    ['dmr-name', 'dmr-author', 'dmr-type', 'dmr-content', 'dmr-imp', 'dmr-feel'].forEach(id => {
-        document.getElementById(id).value = '';
-    });
-    window.setFavorite(0);
-    document.getElementById('fb-232-dmr').classList.add('hidden');
-};
-
-window.submitV232DMR = function () {
-    if (typeof submitLTVCUnified === 'function') {
-        submitLTVCUnified('232-dmr');
-    } else { alert("Hệ thống nộp bài đang bận!"); }
-};
-
-if (!lesson_232_dmr.period) lesson_232_dmr.period = '161';
-if (!lesson_232_dmr.id) lesson_232_dmr.id = "232-dmr";
-

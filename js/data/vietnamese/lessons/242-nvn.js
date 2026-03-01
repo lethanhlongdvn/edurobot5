@@ -1,15 +1,14 @@
 export const lesson_242_nvn = {
-    "title": "Nói và nghe: Địa điểm tham quan, du lịch",
-    "week": 24,
+    "topic": "Tiếng Việt 5",
+    "week": "24",
+    "period": "242",
+    "title": "NÓI VÀ NGHE: ĐỊA ĐIỂM THAM QUAN, DU LỊCH",
+    "desc": "Nói và nghe: Địa điểm tham quan, du lịch",
     "subject": "Nói và nghe",
     "theme": "Hương sắc trăm miền",
-    "tabs": {
-        "lesson": {
-            "title": "Chuẩn bị & Nói",
-            "blocks": [
-                {
-                    "type": "html",
-                    "content": `<style>
+    "audio": "",
+    "content": `
+<style>
                         .nvn-card { background: white; border-radius: 24px; padding: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 8px; border: 1px solid #f1f5f9; }
                         .step-badge { background: #3b82f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; }
                         .nvn-title { font-size: 1.25rem; font-weight: 900; color: #1e3a8a; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
@@ -32,7 +31,7 @@ export const lesson_242_nvn = {
                         <!-- Yêu cầu -->
                         <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 p-4 rounded-2xl mb-4 text-center shadow-sm">
                             <p class="text-lg font-bold text-amber-900 italic">
-                                \"Giới thiệu về một địa điểm tham quan, du lịch mà em biết.\"
+                                "Giới thiệu về một địa điểm tham quan, du lịch mà em biết."
                             </p>
                         </div>
 
@@ -153,67 +152,121 @@ export const lesson_242_nvn = {
                                 <span>NỘP BÀI CHO THẦY</span>
                             </button>
                         </div>
-                    </div>`
-                }
-            ]
-        },
-        "quiz": {
-            "settings": { "pick": 10, "pointPerQuestion": 10 },
-            "questions": [
-                { "q": "Khi giới thiệu về một địa điểm du lịch, em nên nhấn mạnh điều gì nhất?", "a": ["Tên của người lái xe", "Đặc điểm gây ấn tượng và vẻ đẹp riêng", "Giá vé vào cổng chi tiết đến từng đồng", "Danh sách tất cả các cây xanh ở đó"], "c": 1 },
-                { "q": "Sử dụng vật dụng nào sau đây giúp bài nói sinh động hơn?", "a": ["Sách giáo khoa Toán", "Tranh ảnh, video, bản đồ địa điểm đó", "Một chiếc bút chì", "Cái thước kẻ"], "c": 1 },
-                { "q": "Thái độ khi trình bày bài nói nên như thế nào?", "a": ["Nhìn xuống đất và đọc thật nhanh", "Tự tin, mắt nhìn khán giả, giọng nói truyền cảm", "Hét thật to", "Nói lí nhí trong miệng"], "c": 1 },
-                { "q": "Tại sao cần ghi chép khi nghe bạn nói?", "a": ["Để biết lỗi sai của bạn và cười", "Để nắm được thông tin mới và học hỏi cái hay", "Để làm bài tập khác", "Để vẽ bậy vào vở"], "c": 1 },
-                { "q": "Tiêu chí 'Phương tiện hỗ trợ' trong đánh giá bài nói nghĩa là gì?", "a": ["Bạn có đi xe đạp đến lớp không", "Việc sử dụng tranh ảnh, bản đồ, mô hình... kèm theo", "Bạn nói có to không", "Bài nói có dài không"], "c": 1 },
-                { "q": "Khi nêu địa chỉ của địa điểm tham quan, em cần cung cấp thông tin gì?", "a": ["Màu sắc của biển số nhà", "Tên xã/phường, quận/huyện, tỉnh/thành phố", "Số điện thoại của bác bảo vệ", "Tên của tất cả người dân xung quanh"], "c": 1 },
-                { "q": "Sử dụng từ ngữ gợi tả khi miêu tả phong cảnh giúp ích gì cho bài nói?", "a": ["Làm bài nói dài hơn để câu giờ", "Giúp người nghe dễ dàng hình dung ra vẻ đẹp của địa điểm", "Giúp em nhớ bài tốt hơn", "Làm cho giọng nói to hơn"], "c": 1 },
-                { "q": "Nếu bạn đặt câu hỏi sau khi em kết thúc bài nói, em nên làm gì?", "a": ["Lờ đi và về chỗ ngay lập tức", "Lắng nghe kỹ và trả lời một cách lịch sự, tự tin", "Nói rằng bạn hỏi khó quá không trả lời", "Yêu cầu bạn không được hỏi"], "c": 1 },
-                { "q": "Cách tốt nhất để ghi nhớ các ý chính khi nghe bạn giới thiệu là gì?", "a": ["Cố gắng ghi lại từng chữ bạn nói", "Chỉ ghi lại các từ khóa quan trọng và thông tin mới", "Vừa nghe vừa nói chuyện với bạn bên cạnh", "Không cần ghi gì cả vì sẽ tự nhớ"], "c": 1 },
-                { "q": "Lời chào và lời kết trong bài nói có tác dụng gì?", "a": ["Để đủ số lượng chữ quy định", "Thể hiện sự tôn trọng người nghe và sự chuyên nghiệp", "Làm cho bài nói trở nên hài hước hơn", "Cảnh báo người nghe là bài nói sắp hết"], "c": 1 }
-            ]
-        }
+                    </div>
+`,
+    "practice": `
+
+`,
+    "quizPool": [
+    {
+        "question": "Khi giới thiệu về một địa điểm du lịch, em nên nhấn mạnh điều gì nhất?",
+        "options": [
+            "Tên của người lái xe",
+            "Đặc điểm gây ấn tượng và vẻ đẹp riêng",
+            "Giá vé vào cổng chi tiết đến từng đồng",
+            "Danh sách tất cả các cây xanh ở đó"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Sử dụng vật dụng nào sau đây giúp bài nói sinh động hơn?",
+        "options": [
+            "Sách giáo khoa Toán",
+            "Tranh ảnh, video, bản đồ địa điểm đó",
+            "Một chiếc bút chì",
+            "Cái thước kẻ"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Thái độ khi trình bày bài nói nên như thế nào?",
+        "options": [
+            "Nhìn xuống đất và đọc thật nhanh",
+            "Tự tin, mắt nhìn khán giả, giọng nói truyền cảm",
+            "Hét thật to",
+            "Nói lí nhí trong miệng"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Tại sao cần ghi chép khi nghe bạn nói?",
+        "options": [
+            "Để biết lỗi sai của bạn và cười",
+            "Để nắm được thông tin mới và học hỏi cái hay",
+            "Để làm bài tập khác",
+            "Để vẽ bậy vào vở"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Tiêu chí 'Phương tiện hỗ trợ' trong đánh giá bài nói nghĩa là gì?",
+        "options": [
+            "Bạn có đi xe đạp đến lớp không",
+            "Việc sử dụng tranh ảnh, bản đồ, mô hình... kèm theo",
+            "Bạn nói có to không",
+            "Bài nói có dài không"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Khi nêu địa chỉ của địa điểm tham quan, em cần cung cấp thông tin gì?",
+        "options": [
+            "Màu sắc của biển số nhà",
+            "Tên xã/phường, quận/huyện, tỉnh/thành phố",
+            "Số điện thoại của bác bảo vệ",
+            "Tên của tất cả người dân xung quanh"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Sử dụng từ ngữ gợi tả khi miêu tả phong cảnh giúp ích gì cho bài nói?",
+        "options": [
+            "Làm bài nói dài hơn để câu giờ",
+            "Giúp người nghe dễ dàng hình dung ra vẻ đẹp của địa điểm",
+            "Giúp em nhớ bài tốt hơn",
+            "Làm cho giọng nói to hơn"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Nếu bạn đặt câu hỏi sau khi em kết thúc bài nói, em nên làm gì?",
+        "options": [
+            "Lờ đi và về chỗ ngay lập tức",
+            "Lắng nghe kỹ và trả lời một cách lịch sự, tự tin",
+            "Nói rằng bạn hỏi khó quá không trả lời",
+            "Yêu cầu bạn không được hỏi"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Cách tốt nhất để ghi nhớ các ý chính khi nghe bạn giới thiệu là gì?",
+        "options": [
+            "Cố gắng ghi lại từng chữ bạn nói",
+            "Chỉ ghi lại các từ khóa quan trọng và thông tin mới",
+            "Vừa nghe vừa nói chuyện với bạn bên cạnh",
+            "Không cần ghi gì cả vì sẽ tự nhớ"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Lời chào và lời kết trong bài nói có tác dụng gì?",
+        "options": [
+            "Để đủ số lượng chữ quy định",
+            "Thể hiện sự tôn trọng người nghe và sự chuyên nghiệp",
+            "Làm cho bài nói trở nên hài hước hơn",
+            "Cảnh báo người nghe là bài nói sắp hết"
+        ],
+        "answer": 1,
+        "level": 1
     }
+]
 };
-
-// --- LOGIC ---
-window.checkNVN242AI = async function () {
-    const input = document.getElementById('ai-nvn242-speech-plan');
-    if (!input || !input.value.trim()) {
-        alert("Em hãy viết nội dung bài nói trước khi nhấn chấm bài nhé!");
-        return;
-    }
-
-    const fb = document.getElementById('fb-nvn242-speech-plan');
-    fb.classList.remove('hidden');
-    fb.innerHTML = `
-        <div class="flex items-center gap-3 text-green-700 animate-pulse">
-            <div class="w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div>
-            <span class="font-bold italic">Thầy EduRobot đang lắng nghe và đọc bài nói của em...</span>
-        </div>`;
-
-    if (typeof askAI === 'function') {
-        const prompt = `Em hãy đóng vai thầy giáo EduRobot để nhận xét bài nói của học sinh lớp 5.
-        Đề bài: "Giới thiệu về một địa điểm tham quan, du lịch mà em biết."
-        Yêu cầu bài nói:
-        1. Giới thiệu được tên, địa chỉ của địa điểm.
-        2. Nêu được các đặc điểm nổi bật, hấp dẫn (phong cảnh, hoạt động, sản vật...).
-        3. Thái độ tự tin, có lời chào và lời kết.
-
-        Nội dung bài viết của học sinh:
-        "${input.value.trim()}"
-
-        Hãy nhận xét:
-        - Khen ngợi những ý hay, cảm xúc chân thực.
-        - Góp ý nếu thiếu thông tin về địa chỉ hoặc đặc điểm nổi bật.
-        - Khuyến khích học sinh trình bày tự tin trước lớp.
-        Sử dụng ngôn ngữ thân thiện, khích lệ.`;
-
-        await askAI('nvn242-speech-plan', prompt, 'single', 'tlv', 24);
-    } else {
-        fb.innerHTML = "✅ Bài nói của em chuẩn bị rất tốt! Hãy tự tin trình bày trước lớp nhé.";
-    }
-};
-
-if (!lesson_242_nvn.period) lesson_242_nvn.period = "242";
-if (!lesson_242_nvn.id) lesson_242_nvn.id = "242-nvn";
-

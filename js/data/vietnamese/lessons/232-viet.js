@@ -1,17 +1,15 @@
 export const lesson_232_viet = {
-    "title": "Viết: Tìm ý cho đoạn văn thể hiện tình cảm, cảm xúc về một sự việc",
-    "week": 23,
+    "topic": "Tiếng Việt 5",
+    "week": "23",
+    "period": "160",
+    "title": "VIẾT: TÌM Ý CHO ĐOẠN VĂN THỂ HIỆN TÌNH CẢM, CẢM XÚC VỀ MỘT SỰ VIỆC",
+    "desc": "Viết: Tìm ý cho đoạn văn thể hiện tình cảm, cảm xúc về một sự việc",
     "subject": "Viết",
     "theme": "Hương sắc trăm miền",
-    "tabs": {
-        "lesson": {
-            "title": "Bài học",
-            "blocks": [
-                { "type": "header", "text": "TÌM Ý CHO ĐOẠN VĂN THỂ HIỆN TÌNH CẢM, CẢM XÚC VỀ MỘT SỰ VIỆC" },
-                {
-                    "type": "html",
-                    "id": "block-232-v1",
-                    "content": `<style>
+    "audio": "",
+    "content": `
+
+<style>
                                 .label-viet { color: #ef4444; font-weight: 800; border: 2px solid #ef4444; padding: 2px 16px; display: inline-block; border-top-right-radius: 20px; border-bottom-right-radius: 20px; margin-bottom: 24px; letter-spacing: 0.05em; background: rgba(254, 226, 226, 0.3); }
                                 .side-label { writing-mode: vertical-rl; transform: rotate(180deg); display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 16px; padding: 12px; width: 60px; min-height: 120px; flex-shrink: 0; }
                                 .writing-block { display: flex; gap: 16px; margin-bottom: 20px; align-items: stretch; transition: transform 0.3s; }
@@ -157,106 +155,66 @@ export const lesson_232_viet = {
                                 </div>
                             </div>
                         </section>
-                    </div>`
-                }
-            ]
-        },
-        "quiz": {
-            "settings": { "pick": 5 },
-            "questions": [
-                { "q": "Khi viết đoạn văn thể hiện tình cảm, cảm xúc, em nên dùng ngôi kể nào?", "a": ["Ngôi thứ nhất (tôi, em)", "Ngôi thứ ba (gọi tên)", "Không cần xưng hô", "Ngôi thứ hai (bạn)"], "c": 0 },
-                { "q": "Từ ngữ nào dưới đây chỉ tình cảm, cảm xúc?", "a": ["Vui sướng", "Đi lại", "Học tập", "Cái bàn"], "c": 0 },
-                { "q": "Phần mở đầu của đoạn văn biểu cảm cần giới thiệu điều gì?", "a": ["Sự việc và ấn tượng chung", "Kết quả của sự việc", "Tất cả các nhân vật", "Lịch sử vùng đất"], "c": 0 },
-                { "q": "Nên kết hợp các biện pháp tu từ nào để đoạn văn thêm sinh động?", "a": ["So sánh, nhân hóa", "Con số thống kê", "Thuật ngữ khoa học", "Câu hỏi tu từ"], "c": 0 },
-                { "q": "Phần kết thúc đoạn văn thường dùng để làm gì?", "a": ["Khẳng định tình cảm và nêu ý nghĩa", "Bắt đầu kể một sự việc mới", "Tả lại ngoại hình", "Cảm ơn người đọc"], "c": 2 }
-            ]
-        }
-    }
-};
-
-// --- LOGIC ---
-window.checkAI_232Viet = async function () {
-    const mb = document.getElementById('v232-mb').value.trim();
-    const tb = document.getElementById('v232-tb').value.trim();
-    const kb = document.getElementById('v232-kb').value.trim();
-
-    if (!mb || !tb || !kb) {
-        alert("Em hãy điền đủ ý cho cả 3 phần Mở bài, Thân bài và Kết bài nhé!");
-        return;
-    }
-
-    const fb = document.getElementById('fb-232-viet');
-    fb.classList.remove('hidden');
-    fb.innerHTML = `<div class="flex items-center gap-4"><div class="animate-spin rounded-full h-8 w-8 border-4 border-white border-t-transparent"></div><p class="text-xl font-bold italic">Hệ thống đang xem qua các ý của em...</p></div>`;
-
-    if (typeof askAI === 'function') {
-        const prompt = `Em hãy nhận xét các ý tưởng cho đoạn văn của học sinh. 
-        Đề bài liên quan đến 1 trong 3 chủ đề: Lễ hội, Ngoại khóa, hoặc Gói bánh chưng/tét.
-        Các ý của học sinh:
-        - Mở bài: ${mb}
-        - Thân bài: ${tb}
-        - Kết bài: ${kb}
-        
-        Yêu cầu nhận xét:
-        1. Các ý đã đủ để viết thành đoạn văn chưa?
-        2. Cảm xúc có được thể hiện rõ nét qua các chi tiết nổi bật không?
-        3. Gợi ý thêm một số từ ngữ hoặc hình ảnh so sánh để đoạn văn hay hơn.
-        4. Viết một đoạn văn mẫu ngắn dựa trên các ý này để em tham khảo.
-        Cuối cùng, hãy CHẤM ĐIỂM các ý tưởng này trên thang điểm 10 theo định dạng: "Điểm dự kiến: X/10".`;
-
-        const studentWork = `Mở bài: ${mb}\nThân bài: ${tb}\nKết bài: ${kb}`;
-
-        try {
-            const res = await fetch(window.AI_API_URL, {
-                method: 'POST',
-                body: JSON.stringify({
-                    sentence: prompt,
-                    mode: 'chat',
-                    persona: 'tlv'
-                })
-            });
-            const data = await res.json();
-            const reply = typeof data === 'string' ? data : (data.response || data.content || "Thầy chưa nghĩ ra nhận xét nào.");
-
-            // Extract score
-            const scoreMatch = reply.match(/Điểm dự kiến:.*?(\d+\.?\d*)\/10/i) || reply.match(/(\d+\.?\d*)\/10/);
-            const score = scoreMatch ? scoreMatch[1] : null;
-            window.v232_aiGrade = score;
-
-            if (fb) {
-                fb.innerHTML = `
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between border-b border-indigo-400 pb-2 mb-2">
-                            <div class="flex items-center gap-2 text-white font-black">
-                                <span class="text-2xl">✍️</span> GÓP Ý TỪ EDUROBOT
-                            </div>
-                            ${score ? `<div class="bg-amber-400 text-indigo-900 px-4 py-1 rounded-full font-black text-xl shadow-lg animate-bounce">ĐIỂM: ${score}/10</div>` : ''}
-                        </div>
-                        <div class="text-white leading-relaxed text-lg">${reply.replace(/\n/g, '<br>').replace(/\*\*/g, '<b>')}</div>
                     </div>
-                `;
-            }
-        } catch (e) { fb.innerHTML = "Lỗi kết nối EduRobot. Thử lại sau em nhé!"; }
-    } else {
-        fb.innerHTML = "Lỗi: Hệ thống AI chưa sẵn sàng.";
+`,
+    "practice": `
+
+`,
+    "quizPool": [
+    {
+        "question": "Khi viết đoạn văn thể hiện tình cảm, cảm xúc, em nên dùng ngôi kể nào?",
+        "options": [
+            "Ngôi thứ nhất (tôi, em)",
+            "Ngôi thứ ba (gọi tên)",
+            "Không cần xưng hô",
+            "Ngôi thứ hai (bạn)"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Từ ngữ nào dưới đây chỉ tình cảm, cảm xúc?",
+        "options": [
+            "Vui sướng",
+            "Đi lại",
+            "Học tập",
+            "Cái bàn"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Phần mở đầu của đoạn văn biểu cảm cần giới thiệu điều gì?",
+        "options": [
+            "Sự việc và ấn tượng chung",
+            "Kết quả của sự việc",
+            "Tất cả các nhân vật",
+            "Lịch sử vùng đất"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Nên kết hợp các biện pháp tu từ nào để đoạn văn thêm sinh động?",
+        "options": [
+            "So sánh, nhân hóa",
+            "Con số thống kê",
+            "Thuật ngữ khoa học",
+            "Câu hỏi tu từ"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Phần kết thúc đoạn văn thường dùng để làm gì?",
+        "options": [
+            "Khẳng định tình cảm và nêu ý nghĩa",
+            "Bắt đầu kể một sự việc mới",
+            "Tả lại ngoại hình",
+            "Cảm ơn người đọc"
+        ],
+        "answer": 2,
+        "level": 1
     }
+]
 };
-
-window.reset232Viet = function () {
-    document.getElementById('v232-mb').value = '';
-    document.getElementById('v232-tb').value = '';
-    document.getElementById('v232-kb').value = '';
-    document.getElementById('fb-232-viet').classList.add('hidden');
-    const inputs = document.querySelectorAll('input[type="checkbox"]');
-    inputs.forEach(i => i.checked = false);
-};
-
-window.submitV232 = function () {
-    if (typeof submitLTVCUnified === 'function') {
-        submitLTVCUnified('232-viet');
-    } else { alert("Hệ thống nộp bài đang bận!"); }
-};
-
-if (!lesson_232_viet.period) lesson_232_viet.period = '160';
-if (!lesson_232_viet.id) lesson_232_viet.id = "232-viet";
-

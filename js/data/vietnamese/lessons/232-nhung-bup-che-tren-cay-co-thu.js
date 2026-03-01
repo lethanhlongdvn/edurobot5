@@ -1,17 +1,15 @@
 export const lesson_232_nhung_bup_che_tren_cay_co_thu = {
-    "title": "Đọc: Những búp chè trên cây cổ thụ",
-    "week": 23,
+    "topic": "Tiếng Việt 5",
+    "week": "23",
+    "period": "158-159",
+    "title": "ĐỌC: NHỮNG BÚP CHÈ TRÊN CÂY CỔ THỤ",
+    "desc": "Đọc: Những búp chè trên cây cổ thụ",
     "subject": "Đọc",
     "theme": "Hương sắc trăm miền",
     "audio": "am_thanh/tiengviet/nhungbupche.wav",
-    "tabs": {
-        "lesson": {
-            "title": "Bài học",
-            "blocks": [
-                { "type": "header", "text": "Những búp chè trên cây cổ thụ" },
-                {
-                    "type": "html",
-                    "content": `<div class="space-y-8 animate-in fade-in duration-700">
+    "content": `
+
+<div class="space-y-8 animate-in fade-in duration-700">
                                 <!-- 1. READING CONTENT + IMAGE -->
                                 <section class="w-full">
                                     <div class="glass-card rounded-[40px] p-6 md:p-10 shadow-2xl relative overflow-hidden">
@@ -218,73 +216,176 @@ export const lesson_232_nhung_bup_che_tren_cay_co_thu = {
                                         </div>
                                     </div>
                                 </section>
-                            </div>`
-                }
-            ]
-        },
-        "quiz": {
-            "settings": { "pick": 10 },
-            "questions": [
-                { "q": "Nhân vật Thào A Sùng trong bài là người dân tộc nào?", "a": ["Dân tộc Thái", "Dân tộc Mông", "Dân tộc Dao", "Dân tộc Mường"], "c": 1 },
-                { "q": "Quê hương của Thào A Sùng ở đâu?", "a": ["Mộc Châu, Sơn La", "Bản Tà Xùa, huyện Bắc Yên", "Sa Pa, Lào Cai", "Đồng Văn, Hà Giang"], "c": 1 },
-                { "q": "Thái độ của Sùng khi kể về những cây chè cổ thụ quê mình là gì?", "a": ["Buồn bã", "Lo lắng", "Tự hào", "Ngại ngùng"], "c": 2 },
-                { "q": "Điều gì khiến Sùng luôn cảm thấy trăn trở về đặc sản quê hương?", "a": ["Vì chè bị sâu bệnh", "Vì còn ít người biết đến chè Tà Xùa", "Vì giá chè quá rẻ", "Vì không ai biết trồng chè"], "c": 1 },
-                { "q": "Cuộc thi mà các bạn học sinh tham gia có tên là gì?", "a": ["Bảy sắc cầu vồng", "Rung chuông vàng", "Đường lên đỉnh Olympia", "Em yêu Tiếng Việt"], "c": 0 },
-                { "q": "Câu hỏi quyết định trong cuộc thi hỏi về sản vật nào?", "a": ["Một loại bánh đặc sản", "Một loài hoa quý", "Một loại chè rất ngon của quê hương Bắc Yên", "Một loại gạo nếp nương"], "c": 2 },
-                { "q": "Búp chè Tà Xùa được miêu tả có đặc điểm gì đặc biệt?", "a": ["Búp nhỏ, màu tím ngắt", "Búp to, dưới lá có lớp lông tơ mịn, trắng như tuyết", "Búp dài, nhọn và không có lông", "Búp màu đỏ tía, lá dày"], "c": 1 },
-                { "q": "Cây chè ở Tà Xùa có hình dáng như thế nào?", "a": ["Là những bụi cây thấp ngang lưng người", "Là những cây cổ thụ cao lớn", "Là những dây leo trên giàn", "Là những cây thân cỏ mọc sát đất"], "c": 1 },
-                { "q": "Nước chè Tà Xùa khi pha ra có màu sắc và hương thơm như thế nào?", a: ["Màu đỏ đậm, không mùi", "Màu vàng ánh xanh, thơm ngan ngát", "Màu nâu nhạt, mùi hắc", "Màu xanh ngắt, thơm mùi hoa nhài"], c: 1 },
-                { "q": "Vị của chè Tà Xùa được Sùng miêu tả ra sao?", "a": ["Ngọt lịm ngay từ đầu", "Ban đầu hơi chát, sau đó đọng lại là vị ngọt", "Rất đắng, khó uống", "Chua thanh và mát"], "c": 1 },
-                { "q": "Ước mơ nghề nghiệp trong tương lai của Thào A Sùng là gì?", "a": ["Trở thành hướng dẫn viên du lịch", "Trở thành thầy giáo", "Trở thành kĩ sư nông nghiệp", "Trở thành nhà kinh doanh"], "c": 2 },
-                { "q": "Mục đích chính trong ước mơ của Sùng là gì?", "a": ["Để làm giàu cho bản thân", "Giúp bản trồng nhiều chè hơn và mang chè đi khắp thế giới", "Để được đi du lịch nhiều nơi", "Để chiến thắng trong cuộc thi"], "c": 1 },
-                { "q": "Phản ứng của mọi người trong hội trường sau câu trả lời của Sùng là gì?", "a": ["Im lặng lắng nghe", "Cười chê ước mơ của Sùng", "Vỗ tay rộ lên, quên mất cuộc thi và xôn xao hỏi về cây chè", "Yêu cầu ban giám khảo chấm điểm ngay"], "c": 2 },
-                { "q": "Mẹ của nhân vật \"tôi\" đã quyết định làm gì sau khi nghe chuyện?", "a": ["Mời Sùng đến nhà ăn cơm", "Đặt mua chè qua mạng", "Ngày mai sẽ đến Tà Xùa ngay để mua chè", "Đi học cách pha chè"], "c": 2 },
-                { "q": "Nội dung chính của bài đọc muốn ca ngợi điều gì?", "a": ["Ca ngợi tài năng hùng biện của bạn Sùng", "Ca ngợi vẻ đẹp của chè Tà Xùa và tình yêu, khát vọng lan tỏa sản vật quê hương của bạn nhỏ", "Ca ngợi cảnh đẹp hùng vĩ của núi rừng Tây Bắc", "Ca ngợi sự kịch tính của cuộc thi kiến thức"], "c": 1 }
-            ]
-        }
+                            </div>
+`,
+    "practice": `
+
+`,
+    "quizPool": [
+    {
+        "question": "Nhân vật Thào A Sùng trong bài là người dân tộc nào?",
+        "options": [
+            "Dân tộc Thái",
+            "Dân tộc Mông",
+            "Dân tộc Dao",
+            "Dân tộc Mường"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Quê hương của Thào A Sùng ở đâu?",
+        "options": [
+            "Mộc Châu, Sơn La",
+            "Bản Tà Xùa, huyện Bắc Yên",
+            "Sa Pa, Lào Cai",
+            "Đồng Văn, Hà Giang"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Thái độ của Sùng khi kể về những cây chè cổ thụ quê mình là gì?",
+        "options": [
+            "Buồn bã",
+            "Lo lắng",
+            "Tự hào",
+            "Ngại ngùng"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Điều gì khiến Sùng luôn cảm thấy trăn trở về đặc sản quê hương?",
+        "options": [
+            "Vì chè bị sâu bệnh",
+            "Vì còn ít người biết đến chè Tà Xùa",
+            "Vì giá chè quá rẻ",
+            "Vì không ai biết trồng chè"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Cuộc thi mà các bạn học sinh tham gia có tên là gì?",
+        "options": [
+            "Bảy sắc cầu vồng",
+            "Rung chuông vàng",
+            "Đường lên đỉnh Olympia",
+            "Em yêu Tiếng Việt"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Câu hỏi quyết định trong cuộc thi hỏi về sản vật nào?",
+        "options": [
+            "Một loại bánh đặc sản",
+            "Một loài hoa quý",
+            "Một loại chè rất ngon của quê hương Bắc Yên",
+            "Một loại gạo nếp nương"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Búp chè Tà Xùa được miêu tả có đặc điểm gì đặc biệt?",
+        "options": [
+            "Búp nhỏ, màu tím ngắt",
+            "Búp to, dưới lá có lớp lông tơ mịn, trắng như tuyết",
+            "Búp dài, nhọn và không có lông",
+            "Búp màu đỏ tía, lá dày"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Cây chè ở Tà Xùa có hình dáng như thế nào?",
+        "options": [
+            "Là những bụi cây thấp ngang lưng người",
+            "Là những cây cổ thụ cao lớn",
+            "Là những dây leo trên giàn",
+            "Là những cây thân cỏ mọc sát đất"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Nước chè Tà Xùa khi pha ra có màu sắc và hương thơm như thế nào?",
+        "options": [
+            "Màu đỏ đậm, không mùi",
+            "Màu vàng ánh xanh, thơm ngan ngát",
+            "Màu nâu nhạt, mùi hắc",
+            "Màu xanh ngắt, thơm mùi hoa nhài"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Vị của chè Tà Xùa được Sùng miêu tả ra sao?",
+        "options": [
+            "Ngọt lịm ngay từ đầu",
+            "Ban đầu hơi chát, sau đó đọng lại là vị ngọt",
+            "Rất đắng, khó uống",
+            "Chua thanh và mát"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Ước mơ nghề nghiệp trong tương lai của Thào A Sùng là gì?",
+        "options": [
+            "Trở thành hướng dẫn viên du lịch",
+            "Trở thành thầy giáo",
+            "Trở thành kĩ sư nông nghiệp",
+            "Trở thành nhà kinh doanh"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Mục đích chính trong ước mơ của Sùng là gì?",
+        "options": [
+            "Để làm giàu cho bản thân",
+            "Giúp bản trồng nhiều chè hơn và mang chè đi khắp thế giới",
+            "Để được đi du lịch nhiều nơi",
+            "Để chiến thắng trong cuộc thi"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Phản ứng của mọi người trong hội trường sau câu trả lời của Sùng là gì?",
+        "options": [
+            "Im lặng lắng nghe",
+            "Cười chê ước mơ của Sùng",
+            "Vỗ tay rộ lên, quên mất cuộc thi và xôn xao hỏi về cây chè",
+            "Yêu cầu ban giám khảo chấm điểm ngay"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Mẹ của nhân vật \"tôi\" đã quyết định làm gì sau khi nghe chuyện?",
+        "options": [
+            "Mời Sùng đến nhà ăn cơm",
+            "Đặt mua chè qua mạng",
+            "Ngày mai sẽ đến Tà Xùa ngay để mua chè",
+            "Đi học cách pha chè"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Nội dung chính của bài đọc muốn ca ngợi điều gì?",
+        "options": [
+            "Ca ngợi tài năng hùng biện của bạn Sùng",
+            "Ca ngợi vẻ đẹp của chè Tà Xùa và tình yêu, khát vọng lan tỏa sản vật quê hương của bạn nhỏ",
+            "Ca ngợi cảnh đẹp hùng vĩ của núi rừng Tây Bắc",
+            "Ca ngợi sự kịch tính của cuộc thi kiến thức"
+        ],
+        "answer": 1,
+        "level": 1
     }
+]
 };
-
-// --- Helper Functions for Lesson 232 Reading Practice ---
-window.checkCauGhep232 = async function () {
-    const input = document.getElementById('ai-232-lt2');
-    if (!input || !input.value.trim()) { alert("Em hãy đặt câu ghép về sản vật địa phương nhé!"); return; }
-
-    // Get words from Ex 1 to pass to AI context
-    const sv1 = document.getElementById('lt-232-1-sv').value.trim();
-    const dp1 = document.getElementById('lt-232-1-dp').value.trim();
-    const dd1 = document.getElementById('lt-232-1-dd').value.trim();
-
-    const contextWords = [sv1, dp1, dd1].filter(w => w).join(', ');
-
-    const fb = document.getElementById('fb-ai-232-lt2');
-    fb.classList.remove('hidden');
-    fb.innerHTML = `
-        <div class="flex items-center gap-4 mb-4">
-            <div class="animate-spin rounded-full h-8 w-8 border-4 border-white border-t-transparent"></div>
-            <p class="text-xl font-bold italic">Hệ thống đang phân tích vế câu và cấu trúc câu ghép của em...</p>
-        </div>
-    `;
-
-    if (typeof askAI === 'function') {
-        const prompt = `Em hãy nhận xét câu của học sinh. 
-        Yêu cầu:
-        1. Kiểm tra xem có đúng là CÂU GHÉP (có ít nhất 2 vế câu, mỗi vế đủ chủ ngữ - vị ngữ) hay chưa. Báo "Đúng là câu ghép" hoặc "Chưa phải câu ghép".
-        2. Phân tích chi tiết:
-           - Vế 1: (Xác định vế 1 và chủ ngữ/vị ngữ của vế 1)
-           - Vế 2: (Xác định vế 2 và chủ ngữ/vị ngữ của vế 2)
-           - Kết nối: (Dùng từ nối gì? Dấu phẩy?)
-        3. Kiểm tra xem có chứa từ ngữ liên quan đến sản vật đã tìm: ${contextWords || 'sản vật địa phương'} hay không.
-        4. Ghi nhận xét chung và cổ vũ học sinh.
-        
-        Câu của học sinh: ${input.value}`;
-
-        await askAI('232-lt2', prompt, 'single', 'reading', 232);
-    } else {
-        fb.innerHTML = "Lỗi: Hệ thống AI chưa sẵn sàng.";
-    }
-};
-
-if (!lesson_232_nhung_bup_che_tren_cay_co_thu.period) lesson_232_nhung_bup_che_tren_cay_co_thu.period = '158-159';
-if (!lesson_232_nhung_bup_che_tren_cay_co_thu.id) lesson_232_nhung_bup_che_tren_cay_co_thu.id = "232-nhung-bup-che-tren-cay-co-thu";
-

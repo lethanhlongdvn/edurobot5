@@ -1,17 +1,15 @@
 export const lesson_241_ltvc = {
-    "title": "LTVC: Liên kết câu bằng từ ngữ nối",
-    "week": 24,
+    "topic": "Tiếng Việt 5",
+    "week": "24",
+    "period": "241",
+    "title": "LTVC: LIÊN KẾT CÂU BẰNG TỪ NGỮ NỐI",
+    "desc": "LTVC: Liên kết câu bằng từ ngữ nối",
     "subject": "LTVC",
     "theme": "Hương sắc trăm miền",
-    "tabs": {
-        "lesson": {
-            "title": "Bài học",
-            "blocks": [
-                { "type": "header", "text": "Liên kết câu bằng từ ngữ nối" },
-                {
-                    "type": "html",
-                    "id": "block-241-ltvc-explore",
-                    "content": `<div class="space-y-8 animate-in fade-in duration-700">
+    "audio": "",
+    "content": `
+
+<div class="space-y-8 animate-in fade-in duration-700">
                         <!-- I. KHÁM PHÁ -->
                         <section class="w-full">
                             <div class="glass-card rounded-[40px] p-6 md:p-10 shadow-2xl relative overflow-hidden ring-1 ring-blue-100">
@@ -205,123 +203,176 @@ export const lesson_241_ltvc = {
                                 </div>
                             </div>
                         </section>
-                    </div>`
-                }
-            ]
-        },
-        "quiz": {
-            "settings": { "pick": 10 },
-            "questions": [
-                { "q": "Từ ngữ nối thường đứng ở vị trí nào trong câu?", "a": ["Đầu câu", "Giữa câu", "Cuối câu", "Bất kỳ đâu"], "c": 0 },
-                { "q": "Từ nào sau đây là từ ngữ nối?", "a": ["Mèo", "Nhưng", "Chạy", "Xinh tươi"], "c": 1 },
-                { "q": "Tác dụng của từ ngữ nối là gì?", "a": ["Để câu dài hơn", "Để tạo sự liên kết giữa các câu", "Để làm câu khó hiểu hơn", "Để trang trí cho câu"], "c": 1 },
-                { "q": "Trong quy trình làm cốm, từ nào phù hợp cho bước cuối?", "a": ["Đầu tiên", "Sau đó", "Bên cạnh đó", "Cuối cùng"], "c": 3 },
-                { "q": "Để nối hai nội dung đối lập, ta dùng từ nối nào?", "a": ["Vì thế", "Do đó", "Trái lại", "Đồng thời"], "c": 2 },
-                { "q": "Từ nối 'Vì thế' dùng để chỉ quan hệ gì?", "a": ["Quan hệ thời gian", "Quan hệ nguyên nhân - kết quả", "Quan hệ đối lập", "Quan hệ tăng tiến"], "c": 1 },
-                { "q": "Từ nào dùng để chỉ quan hệ thứ tự trong danh sách liệt kê?", "a": ["Nhưng", "Thứ nhất", "Vì vậy", "Trái lại"], "c": 1 },
-                { "q": "Câu '🌼 ở miền Nam, Tết đến hoa mai khoe sắc.' điền từ nào hợp lý nhất?", "a": ["Nhưng", "Do vậy", "Cuối cùng", "Vì thế"], "c": 0 },
-                { "q": "Từ ngữ nối gọi chung các từ có tác dụng gì?", "a": ["Tác dụng lặp", "Tác dụng nối", "Tác dụng thay thế", "Tác dụng ẩn dụ"], "c": 1 },
-                { "q": "Để thêm một ý mới vào sau ý đã nói, ta dùng từ nối nào?", "a": ["Bên cạnh đó", "Mặc dù", "Song", "Vì"], "c": 0 },
-                { "q": "Từ 'đầu tiên' thường dùng ở câu thứ mấy trong đoạn văn miêu tả quy trình?", "a": ["Câu 1", "Câu 2", "Câu cuối", "Câu bất kỳ"], "c": 1 },
-                { "q": "Phép nối giúp đoạn văn có đặc điểm gì?", "a": ["Mạch lạc và chặt chẽ", "Rời rạc", "Lặp đi lặp lại", "Thiếu ý nghĩa"], "c": 0 },
-                { "q": "Từ 'Nhưng' là từ ngữ nối thuộc nhóm nào?", "a": ["Kết từ", "Danh từ", "Động từ", "Tính từ"], "c": 0 },
-                { "q": "Trong đoạn văn về Hồ Gươm, từ 'Vì thế' nối câu mấy với câu mấy?", "a": ["Câu 1 với câu 2", "Câu 3 với câu 4", "Câu 4 với câu 5", "Câu 2 với câu 3"], "c": 1 },
-                { "q": "Câu văn nào sau đây sử dụng từ ngữ nối đúng?", "a": ["Trời mưa. Nhưng tôi ở nhà.", "Tôi đi học. Nhưng con mèo ngủ.", "Em thích đọc sách. Ngoài ra, em còn thích nghe nhạc.", "Cốm rất ngon. Cuối cùng, nó màu xanh."], "c": 2 }
-            ]
-        }
+                    </div>
+`,
+    "practice": `
+
+`,
+    "quizPool": [
+    {
+        "question": "Từ ngữ nối thường đứng ở vị trí nào trong câu?",
+        "options": [
+            "Đầu câu",
+            "Giữa câu",
+            "Cuối câu",
+            "Bất kỳ đâu"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Từ nào sau đây là từ ngữ nối?",
+        "options": [
+            "Mèo",
+            "Nhưng",
+            "Chạy",
+            "Xinh tươi"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Tác dụng của từ ngữ nối là gì?",
+        "options": [
+            "Để câu dài hơn",
+            "Để tạo sự liên kết giữa các câu",
+            "Để làm câu khó hiểu hơn",
+            "Để trang trí cho câu"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Trong quy trình làm cốm, từ nào phù hợp cho bước cuối?",
+        "options": [
+            "Đầu tiên",
+            "Sau đó",
+            "Bên cạnh đó",
+            "Cuối cùng"
+        ],
+        "answer": 3,
+        "level": 1
+    },
+    {
+        "question": "Để nối hai nội dung đối lập, ta dùng từ nối nào?",
+        "options": [
+            "Vì thế",
+            "Do đó",
+            "Trái lại",
+            "Đồng thời"
+        ],
+        "answer": 2,
+        "level": 1
+    },
+    {
+        "question": "Từ nối 'Vì thế' dùng để chỉ quan hệ gì?",
+        "options": [
+            "Quan hệ thời gian",
+            "Quan hệ nguyên nhân - kết quả",
+            "Quan hệ đối lập",
+            "Quan hệ tăng tiến"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Từ nào dùng để chỉ quan hệ thứ tự trong danh sách liệt kê?",
+        "options": [
+            "Nhưng",
+            "Thứ nhất",
+            "Vì vậy",
+            "Trái lại"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Câu '🌼 ở miền Nam, Tết đến hoa mai khoe sắc.' điền từ nào hợp lý nhất?",
+        "options": [
+            "Nhưng",
+            "Do vậy",
+            "Cuối cùng",
+            "Vì thế"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Từ ngữ nối gọi chung các từ có tác dụng gì?",
+        "options": [
+            "Tác dụng lặp",
+            "Tác dụng nối",
+            "Tác dụng thay thế",
+            "Tác dụng ẩn dụ"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Để thêm một ý mới vào sau ý đã nói, ta dùng từ nối nào?",
+        "options": [
+            "Bên cạnh đó",
+            "Mặc dù",
+            "Song",
+            "Vì"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Từ 'đầu tiên' thường dùng ở câu thứ mấy trong đoạn văn miêu tả quy trình?",
+        "options": [
+            "Câu 1",
+            "Câu 2",
+            "Câu cuối",
+            "Câu bất kỳ"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Phép nối giúp đoạn văn có đặc điểm gì?",
+        "options": [
+            "Mạch lạc và chặt chẽ",
+            "Rời rạc",
+            "Lặp đi lặp lại",
+            "Thiếu ý nghĩa"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Từ 'Nhưng' là từ ngữ nối thuộc nhóm nào?",
+        "options": [
+            "Kết từ",
+            "Danh từ",
+            "Động từ",
+            "Tính từ"
+        ],
+        "answer": 0,
+        "level": 1
+    },
+    {
+        "question": "Trong đoạn văn về Hồ Gươm, từ 'Vì thế' nối câu mấy với câu mấy?",
+        "options": [
+            "Câu 1 với câu 2",
+            "Câu 3 với câu 4",
+            "Câu 4 với câu 5",
+            "Câu 2 với câu 3"
+        ],
+        "answer": 1,
+        "level": 1
+    },
+    {
+        "question": "Câu văn nào sau đây sử dụng từ ngữ nối đúng?",
+        "options": [
+            "Trời mưa. Nhưng tôi ở nhà.",
+            "Tôi đi học. Nhưng con mèo ngủ.",
+            "Em thích đọc sách. Ngoài ra, em còn thích nghe nhạc.",
+            "Cốm rất ngon. Cuối cùng, nó màu xanh."
+        ],
+        "answer": 2,
+        "level": 1
     }
+]
 };
-
-// --- Logic functions implementation ---
-window.check241LTVCEx1 = async function () {
-    const a = document.getElementById('ai-241-ltvc-1a').value.trim();
-    const b = document.getElementById('ai-241-ltvc-1b').value.trim();
-    if (!a || !b) { alert('Học sinh hãy điền đủ ý a và b nhé!'); return; }
-
-    const fb = document.getElementById('fb-241-ltvc-ex1');
-    fb.classList.remove('hidden');
-    fb.innerHTML = `<div class="flex items-center gap-2 text-indigo-600 animate-pulse"><div class="w-6 h-6 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div> <span>Đang kiểm tra...</span></div>`;
-
-    if (typeof askAI === 'function') {
-        const prompt = `Học sinh nhận xét về đoạn văn: "Trên con đường...". Từ nối: Nhưng, Vì thế, Rồi. 
-        Câu a học sinh trả lời: "${a}"
-        Câu b học sinh trả lời: "${b}"
-        Hãy đánh giá: a đúng nếu nói đứng ở đầu câu/đầu đoạn; b đúng nếu nói dùng để nối/liên kết câu. Nhận xét ngắn gọn, khích lệ.`;
-        await askAI('241-ltvc-ex1', prompt, 'single', 'ltvc', 24);
-    } else {
-        fb.innerHTML = "✅ Tốt lắm! Các từ ngữ đó đều đứng ở đầu câu và giúp liên kết các câu văn với nhau một cách mạch lạc.";
-    }
-};
-
-window.checkEx241_2 = function () {
-    const v = [
-        document.getElementById('ex241-2-1').value.trim(),
-        document.getElementById('ex241-2-2').value.trim(),
-        document.getElementById('ex241-2-3').value.trim(),
-        document.getElementById('ex241-2-4').value.trim()
-    ];
-    const fb = document.getElementById('fb-241-ltvc-ex2');
-    fb.classList.remove('hidden');
-
-    const isCorrect = v[0].toLowerCase() === 'đầu tiên' &&
-        ((v[1].toLowerCase() === 'sau đó' && v[2].toLowerCase() === 'tiếp theo') ||
-            (v[1].toLowerCase() === 'tiếp theo' && v[2].toLowerCase() === 'sau đó')) &&
-        v[3].toLowerCase() === 'cuối cùng';
-
-    if (isCorrect) {
-        fb.innerHTML = "🎉 Tuyệt vời! Em đã sắp xếp quy trình làm cốm rất chính xác.";
-        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
-        if (typeof celebrate === 'function') celebrate();
-    } else {
-        fb.innerHTML = "❌ Chưa đúng rồi, em hãy chú ý thứ tự các bước trong quy trình nhé!";
-        fb.className = "text-red-500 font-bold mt-4";
-    }
-};
-
-window.resetEx241_2 = function () {
-    ['ex241-2-1', 'ex241-2-2', 'ex241-2-3', 'ex241-2-4'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('fb-241-ltvc-ex2').classList.add('hidden');
-};
-
-window.checkEx241_3 = function () {
-    const a = document.getElementById('ex241-3-a').value.trim().toLowerCase();
-    const b = document.getElementById('ex241-3-b').value.trim().toLowerCase();
-    const c = document.getElementById('ex241-3-c').value.trim().toLowerCase();
-    const d = document.getElementById('ex241-3-d').value.trim().toLowerCase();
-    const fb = document.getElementById('fb-241-ltvc-ex3');
-    fb.classList.remove('hidden');
-
-    if (a === 'nhưng' && b === 'ngoài ra' && c === 'thứ hai' && d === 'hơn nữa') {
-        fb.innerHTML = "✅ Chính xác! Em đã sử dụng từ ngữ nối rất linh hoạt.";
-        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
-        if (typeof celebrate === 'function') celebrate();
-    } else {
-        fb.innerHTML = "❌ Có chỗ chưa hợp lý, em hãy suy nghĩ kỹ về mối quan hệ giữa các câu nhé!";
-        fb.className = "text-red-500 font-bold mt-4";
-    }
-};
-
-window.resetEx241_3 = function () {
-    ['ex241-3-a', 'ex241-3-b', 'ex241-3-c', 'ex241-3-d'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('fb-241-ltvc-ex3').classList.add('hidden');
-};
-
-window.check241LTVCQ4AI = async function () {
-    const input = document.getElementById('ai-241-ltvc-q4');
-    if (!input || !input.value.trim()) { alert("Học sinh hãy viết đoạn văn nhé!"); return; }
-
-    const fb = document.getElementById('fb-241-ltvc-q4');
-    fb.classList.remove('hidden');
-    fb.innerHTML = `<div class="flex items-center gap-2 text-rose-600 animate-pulse"><div class="w-6 h-6 bg-rose-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div> <span>Đang đọc bài của em...</span></div>`;
-
-    if (typeof askAI === 'function') {
-        const prefix = "Em hãy nhận xét đoạn văn (3-5 câu) về địa điểm du lịch của học sinh, yêu cầu phải sử dụng từ ngữ nối (như: đầu tiên, tiếp theo, cuối cùng, bên cạnh đó, mặt khác...). Hãy chỉ ra học sinh dùng từ nối nào và nhận xét độ hay của đoạn văn: ";
-        await askAI('241-ltvc-q4', prefix, 'single', 'ltvc', 24);
-    } else {
-        fb.innerHTML = "✅ Đoạn văn của em rất tốt, đã biết sử dụng các từ nối để làm mạch văn rõ ràng hơn.";
-    }
-};
-
-if (!lesson_241_ltvc.period) lesson_241_ltvc.period = "241";
-if (!lesson_241_ltvc.id) lesson_241_ltvc.id = "241-ltvc";
-
