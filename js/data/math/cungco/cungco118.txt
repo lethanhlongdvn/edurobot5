@@ -1,0 +1,15 @@
+Diện tích toàn phần của hình hộp chữ nhật là: | Tổng diện tích 4 mặt bên, Tổng diện tích 6 mặt, Diện tích hai mặt đáy, Tổng diện tích 4 mặt đáy | 2
+Công thức tính diện tích toàn phần (Stp) là: | Stp = Sxq + Sđáy, Stp = Sxq + Sđáy x 2, Stp = Sxq x 2, Stp = Sđáy x 6 | 2
+Diện tích toàn phần (Stp) của hình hộp chữ nhật bao gồm bao nhiêu mặt? | 4 mặt, 5 mặt, 6 mặt, 8 mặt | 3
+Nếu một hình hộp chữ nhật có diện tích xung quanh là 2700 cm2 và diện tích toàn phần là 3700 cm2, thì diện tích của hai mặt đáy là bao nhiêu? | 1000 cm2, 500 cm2, 2700 cm2, 3700 cm2 | 1
+Tính Stp của hình hộp chữ nhật có Sxq = 100 cm2 và diện tích một mặt đáy là 20 cm2? | 120 cm2, 140 cm2, 200 cm2, 80 cm2 | 2
+Một hình hộp chữ nhật có chiều dài 25cm, chiều rộng 20cm và chiều cao 30cm. Diện tích hai mặt đáy là: | 500 cm2, 1000 cm2, 250 cm2, 600 cm2 | 2
+Muốn tính Stp của hình hộp chữ nhật, ta lấy diện tích xung quanh cộng với diện tích của mấy mặt đáy? | 1 mặt đáy, 2 mặt đáy, 3 mặt đáy, 4 mặt đáy | 2
+Một hình hộp chữ nhật có chiều dài 8cm, chiều rộng 6cm, chiểu cao 5cm. Diện tích toàn phần là: | 140 cm2, 236 cm2, 96 cm2, 200 cm2 | 2
+Một chiếc hộp hình hộp chữ nhật KHÔNG CÓ NẮP. Khi tính diện tích toàn phần ta cộng diện tích xung quanh với mấy mặt đáy? | 1 mặt đáy, 2 mặt đáy, 3 mặt đóy, Không cộng mặt nào | 1
+Một hình hộp chữ nhật có diện tích toàn phần 6250 cm2, diện tích hai đáy là 2500 cm2. Hỏi diện tích xung quanh là bao nhiêu? | 3750 cm2, 8750 cm2, 1250 cm2, 5000 cm2 | 1
+Diện tích toàn phần của một hình hộp chữ nhật có kích thước a = 5cm, b = 4cm, c = 3cm là: | 94 cm2, 54 cm2, 60 cm2, 47 cm2 | 1
+Đơn vị đo diện tích thường dùng là: | cm, cm2, cm3, kg | 2
+Nếu gấp tất cả các kích thước của hình hộp chữ nhật lên 2 lần thì diện tích toàn phần sẽ thay đổi như thế nào? | Tăng 2 lần, Tăng 4 lần, Tăng 6 lần, Tăng 8 lần | 2
+Diện tích toàn phần của hình hộp chữ nhật khi a = 2m, b = 1m, c = 1m: | 10 m2, 8 m2, 6 m2, 12 m2 | 1
+Khi tính Stp, điều kiện tiên quyết là: | Kích thước phải cùng một đơn vị đo, Chỉ cần chiều cao cùng đơn vị, Không cần cùng đơn vị, Chỉ cần diện tích cùng đơn vị | 1
