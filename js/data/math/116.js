@@ -27,32 +27,19 @@ export const lesson116 = {
                 </p>
                 <div class="bg-blue-50 p-1 rounded-[32px]">
                     <div class="bg-white rounded-2xl p-2 mb-1 flex justify-center border border-blue-100">
-                        <svg viewBox="0 0 400 200" class="w-full h-auto max-w-[250px]">
-                            <rect x="50" y="60" width="280" height="80" fill="#bae6fd" stroke="#0284c7" stroke-width="3" />
-                            <circle cx="330" cy="30" r="30" fill="#fca5a5" stroke="#ef4444" stroke-width="3" />
-                            <circle cx="330" cy="170" r="30" fill="#fca5a5" stroke="#ef4444" stroke-width="3" />
-                        </svg>
+                        <img src="hinh_anh/toan_tap_2/116_b1_de.png" class="w-full h-auto max-w-[250px] object-contain drop-shadow-sm mix-blend-multiply" />
                     </div>
                     <div class="grid grid-cols-3 gap-1">
                         <button onclick="check116B1('A')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center gap-1 group">
-                             <svg viewBox="0 0 100 200" class="w-8 h-16">
-                                <ellipse cx="50" cy="30" rx="25" ry="8" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
-                                <rect x="25" y="30" width="50" height="140" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
-                            </svg>
+                             <img src="hinh_anh/toan_tap_2/116_b1_a.png" class="h-20 object-contain drop-shadow-sm mix-blend-multiply" />
                             <span class="font-black text-2xl text-gray-400 group-hover:text-blue-600">A</span>
                         </button>
                         <button onclick="check116B1('B')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center gap-1 group">
-                             <svg viewBox="0 0 100 150" class="w-12 h-12">
-                                <ellipse cx="50" cy="60" rx="45" ry="15" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
-                                <rect x="5" y="60" width="90" height="40" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
-                            </svg>
+                             <img src="hinh_anh/toan_tap_2/116_b1_b.png" class="h-20 object-contain drop-shadow-sm mix-blend-multiply" />
                             <span class="font-black text-2xl text-gray-400 group-hover:text-blue-600">B</span>
                         </button>
                         <button onclick="check116B1('C')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center gap-1 group">
-                             <svg viewBox="0 0 220 100" class="w-16 h-10">
-                                <ellipse cx="30" cy="50" rx="10" ry="30" fill="#fca5a5" stroke="#ef4444" stroke-width="2" />
-                                <rect x="30" y="20" width="160" height="60" fill="#bae6fd" stroke="#0284c7" stroke-width="2" />
-                            </svg>
+                             <img src="hinh_anh/toan_tap_2/116_b1_c.png" class="h-10 md:h-12 object-contain drop-shadow-sm mix-blend-multiply" />
                             <span class="font-black text-2xl text-gray-400 group-hover:text-blue-600">C</span>
                         </button>
                     </div>
@@ -70,36 +57,15 @@ export const lesson116 = {
                 </div>
                 <div class="bg-indigo-50 p-1 rounded-[32px] grid grid-cols-3 gap-1">
                     <button onclick="this.classList.toggle('selected');" id="116-3a" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col items-center gap-1 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
-                        <svg viewBox="0 0 100 80" class="w-full h-auto max-w-[80px]">
-                            <rect x="30" y="10" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
-                            <rect x="10" y="30" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
-                            <rect x="30" y="30" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
-                            <rect x="50" y="30" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
-                            <rect x="70" y="30" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
-                            <rect x="50" y="50" width="20" height="20" fill="#fde047" stroke="#ca8a04" />
-                        </svg>
+                        <img src="hinh_anh/toan_tap_2/116_b3_a.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[140px]" />
                         <span class="font-black text-lg text-gray-400">A</span>
                     </button>
                     <button onclick="this.classList.toggle('selected');" id="116-3b" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col items-center gap-1 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
-                        <svg viewBox="0 0 100 80" class="w-full h-auto max-w-[80px]">
-                            <rect x="40" y="10" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
-                            <rect x="60" y="10" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
-                            <rect x="20" y="30" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
-                            <rect x="40" y="30" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
-                            <rect x="60" y="30" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
-                            <rect x="80" y="30" width="20" height="20" fill="#7dd3fc" stroke="#0ea5e9" />
-                        </svg>
+                        <img src="hinh_anh/toan_tap_2/116_b3_b.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[140px]" />
                         <span class="font-black text-lg text-gray-400">B</span>
                     </button>
                     <button onclick="this.classList.toggle('selected');" id="116-3c" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col items-center gap-1 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
-                        <svg viewBox="0 0 100 80" class="w-full h-auto max-w-[80px]">
-                            <rect x="10" y="10" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
-                            <rect x="30" y="10" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
-                            <rect x="30" y="30" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
-                            <rect x="50" y="30" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
-                            <rect x="50" y="50" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
-                            <rect x="70" y="50" width="20" height="20" fill="#f9a8d4" stroke="#db2777" />
-                        </svg>
+                        <img src="hinh_anh/toan_tap_2/116_b3_c.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[140px]" />
                         <span class="font-black text-lg text-gray-400">C</span>
                     </button>
                 </div>
