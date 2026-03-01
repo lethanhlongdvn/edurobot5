@@ -17,9 +17,6 @@ export const lesson116 = {
                 </ul>
             </div>
             
-            <div class="flex justify-center p-6 bg-white rounded-3xl shadow">
-                <p class="text-gray-500 italic text-xl font-bold">[Chỗ chèn ảnh phần Khám Phá - nếu có]</p>
-            </div>
         </div>
     `,
     "practice": `
@@ -27,35 +24,36 @@ export const lesson116 = {
             <!-- Bài 1 -->
             <div class="p-6 md:p-10 bg-white rounded-[48px] border border-gray-100 shadow-2xl relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full opacity-50 -mr-8 -mt-8"></div>
-                <p class="font-black text-2xl md:text-3xl mb-6 text-blue-700 flex items-center gap-3">
-                    <span class="w-14 h-14 bg-blue-600 text-white rounded-[20px] flex items-center justify-center font-black shadow-lg">1</span>
-                    Chọn câu trả lời đúng. Hình bên là khai triển của hình nào dưới đây?
-                </p>
-                
-                <div class="flex justify-center my-8 bg-blue-50/50 p-6 md:p-10 rounded-[32px] border-2 border-dashed border-blue-200">
-                    <div class="text-center w-full max-w-2xl">
-                        <span class="text-5xl mb-4 block">🖼️</span>
-                        <p class="text-blue-800 font-black text-xl md:text-2xl">[Chỗ chèn ảnh BÀI 1]</p>
-                        <p class="text-blue-600 font-medium mt-2">Tên file ảnh: <code class="bg-blue-100 px-2 py-1 rounded">anh_bai1_116.png</code></p>
-                        <p class="text-base text-gray-500 mt-2 italic">(Hình một trục lăn / khối trụ và các đáp án A, B, C)</p>
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-1">
+                        <p class="font-black text-2xl md:text-3xl mb-6 text-blue-700 flex items-center gap-3">
+                            <span class="w-14 h-14 bg-blue-600 text-white rounded-[20px] flex items-center justify-center font-black shadow-lg shrink-0">1</span>
+                            Chọn câu trả lời đúng. Hình bên là khai triển của hình nào dưới đây?
+                        </p>
+                    </div>
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="hinh_anh/toan/toan_tap_2/116_b1_de.png" alt="Đề bài" class="h-40 md:h-56 object-contain drop-shadow-md">
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <button class="ans-btn-1 flex flex-col items-center justify-center p-6 bg-gray-50 border-4 border-gray-100 rounded-3xl text-3xl font-black text-gray-500 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 hover:scale-[1.02] transition-all shadow-sm" onclick="selectBai1('A', this)">
-                        <span class="text-5xl mb-2 block text-blue-500">A</span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <button class="ans-btn-1 flex flex-col items-center justify-between p-6 bg-gray-50 border-4 border-gray-100 rounded-3xl hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 hover:scale-[1.02] transition-all shadow-sm group min-h-[220px]" onclick="selectBai1('A', this)">
+                        <span class="text-4xl mb-4 font-black text-blue-500">A</span>
+                        <img src="hinh_anh/toan/toan_tap_2/116_b1_a.png" class="h-32 object-contain group-hover:scale-110 transition-transform">
                     </button>
-                    <button class="ans-btn-1 flex flex-col items-center justify-center p-6 bg-gray-50 border-4 border-gray-100 rounded-3xl text-3xl font-black text-gray-500 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 hover:scale-[1.02] transition-all shadow-sm" onclick="selectBai1('B', this)">
-                        <span class="text-5xl mb-2 block text-blue-500">B</span>
+                    <button class="ans-btn-1 flex flex-col items-center justify-between p-6 bg-gray-50 border-4 border-gray-100 rounded-3xl hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 hover:scale-[1.02] transition-all shadow-sm group min-h-[220px]" onclick="selectBai1('B', this)">
+                        <span class="text-4xl mb-4 font-black text-blue-500">B</span>
+                        <img src="hinh_anh/toan/toan_tap_2/116_b1_b.png" class="h-24 object-contain group-hover:scale-110 transition-transform mt-auto mb-auto">
                     </button>
-                    <button class="ans-btn-1 flex flex-col items-center justify-center p-6 bg-gray-50 border-4 border-gray-100 rounded-3xl text-3xl font-black text-gray-500 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 hover:scale-[1.02] transition-all shadow-sm" onclick="selectBai1('C', this)">
-                        <span class="text-5xl mb-2 block text-blue-500">C</span>
+                    <button class="ans-btn-1 flex flex-col items-center justify-between p-6 bg-gray-50 border-4 border-gray-100 rounded-3xl hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 hover:scale-[1.02] transition-all shadow-sm group min-h-[220px]" onclick="selectBai1('C', this)">
+                        <span class="text-4xl mb-4 font-black text-blue-500">C</span>
+                        <img src="hinh_anh/toan/toan_tap_2/116_b1_c.png" class="h-16 object-contain group-hover:scale-110 transition-transform mt-auto mb-auto">
                     </button>
                 </div>
                 <input type="hidden" id="ans-116-1" value="">
                 
-                <div class="mt-8 flex items-center gap-4 justify-center">
-                    <button onclick="checkBai1()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-[24px] font-black text-xl shadow-xl active:scale-95 transition-all">Kiểm tra Bài 1</button>
+                <div class="mt-8 flex flex-col items-center gap-4 justify-center">
+                    <button onclick="checkBai1()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-[24px] font-black text-xl shadow-xl active:scale-95 transition-all w-full md:w-auto">Kiểm tra Bài 1</button>
                     <p id="res-116-1" class="font-bold text-2xl h-8 text-blue-600"></p>
                 </div>
             </div>
@@ -67,19 +65,20 @@ export const lesson116 = {
                     <span>Dưới đây là một số hình khai triển của hình lập phương. Em hãy chọn một hình khai triển và làm theo từng bước dưới đây để gấp được một hình lập phương.</span>
                 </p>
                 
-                <div class="flex justify-center my-8 bg-emerald-50/50 p-6 md:p-10 rounded-[32px] border-2 border-dashed border-emerald-200">
-                    <div class="text-center w-full max-w-2xl">
-                        <span class="text-5xl mb-4 block">🖼️</span>
-                        <p class="text-emerald-800 font-black text-xl md:text-2xl">[Chỗ chèn ảnh BÀI 2]</p>
-                        <p class="text-emerald-600 font-medium mt-2">Tên file ảnh: <code class="bg-emerald-100 px-2 py-1 rounded">anh_bai2_116.png</code></p>
-                        <p class="text-base text-gray-500 mt-2 italic">(Hình các dạng khai triển và Rô-bốt đang cắt / gấp hình)</p>
+                <div class="flex flex-col items-center gap-12 my-12 relative">
+                    <img src="hinh_anh/toan/toan_tap_2/116_b2_shapes.png" alt="Các hình khai triển" class="w-full max-w-2xl h-auto object-contain drop-shadow-md">
+                    
+                    <div class="w-full max-w-2xl border-t-4 border-dashed border-emerald-200 mt-4 relative">
+                        <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 text-emerald-400 font-black text-lg uppercase tracking-widest">Thực hành cùng Rô-bốt</span>
                     </div>
+
+                    <img src="hinh_anh/toan/toan_tap_2/116_b2_robot.png" alt="Rô-bốt thực hành" class="w-full max-w-3xl h-auto object-contain drop-shadow-xl rounded-3xl">
                 </div>
 
-                <div class="flex flex-col items-center gap-4 bg-emerald-50 p-8 rounded-[32px]">
+                <div class="flex flex-col items-center gap-4 bg-emerald-50 p-8 rounded-[32px] border-2 border-emerald-100">
                     <p class="text-xl md:text-2xl font-bold text-emerald-800 text-center">Bé hãy lấy giấy, kéo và hồ dán ra thực hành cùng Rô-bốt nhé!</p>
                     <button onclick="checkBai2()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-5 rounded-[28px] text-2xl font-black shadow-xl shadow-emerald-200 active:scale-95 transition-transform flex items-center gap-3 mt-4">
-                        <span>✂️</span> Đã thực hành xong!
+                        <span>✂️</span> Thực hành xong!
                     </button>
                     <p id="res-116-2" class="text-center font-black text-2xl mt-2 h-8 text-emerald-600"></p>
                 </div>
@@ -91,32 +90,43 @@ export const lesson116 = {
                     <span class="w-14 h-14 shrink-0 bg-purple-600 text-white rounded-[20px] flex items-center justify-center font-black shadow-lg">3</span>
                     <span>Bằng cách thực hành như bài tập trên, em hãy kiểm tra trong những hình dưới đây, hình nào là hình khai triển của hình lập phương.</span>
                 </p>
-                
-                <div class="flex justify-center my-8 bg-purple-50/50 p-6 md:p-10 rounded-[32px] border-2 border-dashed border-purple-200">
-                    <div class="text-center w-full max-w-2xl">
-                        <span class="text-5xl mb-4 block">🖼️</span>
-                        <p class="text-purple-800 font-black text-xl md:text-2xl">[Chỗ chèn ảnh BÀI 3]</p>
-                        <p class="text-purple-600 font-medium mt-2">Tên file ảnh: <code class="bg-purple-100 px-2 py-1 rounded">anh_bai3_116.png</code></p>
-                        <p class="text-base text-gray-500 mt-2 italic">(Hình 3 bạn nhỏ cầm 3 tấm bảng có vẽ hình khai triển)</p>
+
+                <div class="bg-purple-50 p-8 rounded-[32px] border-4 border-purple-100 mt-8 shadow-inner">
+                    <p class="text-lg md:text-xl font-black text-purple-600 mb-8 uppercase tracking-widest text-center">Tích chọn vào bạn cầm hình khai triển ĐÚNG:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Hình Mai (a) -->
+                        <div class="flex flex-col items-center gap-4 group">
+                            <img src="hinh_anh/toan/toan_tap_2/116_b3_a.png" class="h-64 object-contain">
+                            <label class="flex flex-col items-center gap-4 p-4 w-full bg-white rounded-3xl border-4 border-gray-100 cursor-pointer hover:border-purple-300 hover:bg-purple-50 transition-all shadow-sm group-hover:-translate-y-2">
+                                <span class="text-3xl font-black text-purple-700">Mai</span>
+                                <input type="checkbox" class="w-10 h-10 text-purple-600 rounded-xl" id="ans-116-3-mai">
+                            </label>
+                        </div>
+                        
+                        <!-- Hình Nam (b) -->
+                        <div class="flex flex-col items-center gap-4 group">
+                            <img src="hinh_anh/toan/toan_tap_2/116_b3_b.png" class="h-64 object-contain -mt-8"> <!-- Ảnh bạn giữa cầm giơ cao nên dùng -mt-8 cho cân -->
+                            <label class="flex flex-col items-center gap-4 p-4 w-full bg-white rounded-3xl border-4 border-gray-100 cursor-pointer hover:border-purple-300 hover:bg-purple-50 transition-all shadow-sm group-hover:-translate-y-2">
+                                <span class="text-3xl font-black text-purple-700">Nam</span>
+                                <input type="checkbox" class="w-10 h-10 text-purple-600 rounded-xl" id="ans-116-3-nam">
+                            </label>
+                        </div>
+
+                        <!-- Hình Việt (c) -->
+                        <div class="flex flex-col items-center gap-4 group">
+                            <img src="hinh_anh/toan/toan_tap_2/116_b3_c.png" class="h-64 object-contain">
+                            <label class="flex flex-col items-center gap-4 p-4 w-full bg-white rounded-3xl border-4 border-gray-100 cursor-pointer hover:border-purple-300 hover:bg-purple-50 transition-all shadow-sm group-hover:-translate-y-2">
+                                <span class="text-3xl font-black text-purple-700">Việt</span>
+                                <input type="checkbox" class="w-10 h-10 text-purple-600 rounded-xl" id="ans-116-3-viet">
+                            </label>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 p-8 rounded-[32px] border-2 border-gray-100">
-                    <p class="text-lg md:text-xl font-bold text-gray-600 mb-6 uppercase tracking-widest text-center">Tích chọn vào hình ĐÚNG là hình khai triển:</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <label class="flex flex-col items-center gap-4 p-6 bg-white rounded-3xl border-4 border-gray-100 cursor-pointer hover:border-purple-300 hover:bg-purple-50 transition-all shadow-sm group">
-                            <input type="checkbox" class="w-10 h-10 text-purple-600 rounded-xl" id="ans-116-3-h1">
-                            <span class="text-2xl font-black text-gray-700 group-hover:text-purple-700">Hình bạn Nữ (Trái)</span>
-                        </label>
-                        <label class="flex flex-col items-center gap-4 p-6 bg-white rounded-3xl border-4 border-gray-100 cursor-pointer hover:border-purple-300 hover:bg-purple-50 transition-all shadow-sm group">
-                            <input type="checkbox" class="w-10 h-10 text-purple-600 rounded-xl" id="ans-116-3-h2">
-                            <span class="text-2xl font-black text-gray-700 group-hover:text-purple-700">Hình bạn Nam (Giữa)</span>
-                        </label>
-                        <label class="flex flex-col items-center gap-4 p-6 bg-white rounded-3xl border-4 border-gray-100 cursor-pointer hover:border-purple-300 hover:bg-purple-50 transition-all shadow-sm group">
-                            <input type="checkbox" class="w-10 h-10 text-purple-600 rounded-xl" id="ans-116-3-h3">
-                            <span class="text-2xl font-black text-gray-700 group-hover:text-purple-700">Hình bạn Nam (Phải)</span>
-                        </label>
-                    </div>
+                <!-- Validation -->
+                <div class="mt-8 flex flex-col items-center gap-4">
+                    <button onclick="checkBai3()" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-[24px] font-black text-xl shadow-xl active:scale-95 transition-all w-full md:w-auto">Kiểm tra Bài 3</button>
+                    <p id="res-116-3" class="font-bold text-xl md:text-2xl h-8 text-center text-purple-600"></p>
                 </div>
             </div>
 
@@ -124,28 +134,30 @@ export const lesson116 = {
             <div class="p-6 md:p-10 bg-white rounded-[48px] border border-gray-100 shadow-2xl relative overflow-hidden">
                 <p class="font-black text-2xl md:text-3xl mb-6 text-orange-700 flex items-start gap-4">
                     <span class="w-14 h-14 shrink-0 bg-orange-600 text-white rounded-[20px] flex items-center justify-center font-black shadow-lg">4</span>
-                    <span>Rô-bốt cần cắt đi hình chữ nhật nào trong hình dưới đây để phần còn lại là hình khai triển của một hình hộp chữ nhật?</span>
+                    <span>Rô-bốt cần cắt đi <span class="text-orange-600 underline decoration-4 underline-offset-4">01 hình chữ nhật</span> nào trong hình dưới đây để phần còn lại là hình khai triển của một hình hộp chữ nhật?</span>
                 </p>
+                <p class="text-gray-500 font-bold text-xl italic mb-6 text-center animate-pulse">(Bé hãy bấm vào hình chữ nhật bé muốn cắt nhé 👇)</p>
                 
-                <div class="flex justify-center my-8 bg-orange-50/50 p-6 md:p-10 rounded-[32px] border-2 border-dashed border-orange-200">
-                    <div class="text-center w-full max-w-2xl">
-                        <span class="text-5xl mb-4 block">🖼️</span>
-                        <p class="text-orange-800 font-black text-xl md:text-2xl">[Chỗ chèn ảnh BÀI 4]</p>
-                        <p class="text-orange-600 font-medium mt-2">Tên file ảnh: <code class="bg-orange-100 px-2 py-1 rounded">anh_bai4_116.png</code></p>
-                        <p class="text-base text-gray-500 mt-2 italic">(Hình Rô-bốt cầm kéo chuẩn bị cắt hình chữ nhật có nhiều màu)</p>
+                <div class="w-full max-w-4xl overflow-x-auto mx-auto pb-8">
+                    <div class="w-[600px] sm:w-[700px] md:w-[800px] grid grid-cols-9 gap-[2px] mx-auto p-8 border-4 border-orange-100 bg-slate-900 shadow-xl rounded-3xl" id="b4-grid" style="grid-template-rows: 90px 180px 90px;">
+                        <!-- Row 1 -->
+                        <div class="col-start-2 col-span-3 border-[6px] border-black bg-[#9A51A1] cursor-pointer hover:border-white focus:outline-none transition-all duration-300 transform origin-center b4-rect" onclick="toggleB4(this, 'màu tím')"></div>
+                        
+                        <!-- Row 2 -->
+                        <div class="col-start-1 col-span-1 border-[6px] border-black bg-[#4EAF4B] cursor-pointer hover:border-white focus:outline-none transition-all duration-300 transform origin-center b4-rect" onclick="toggleB4(this, 'màu xanh lá')"></div>
+                        <div class="col-start-2 col-span-3 border-[6px] border-black bg-[#3770B8] cursor-pointer hover:border-white focus:outline-none transition-all duration-300 transform origin-center b4-rect" onclick="toggleB4(this, 'màu xanh dương')"></div>
+                        <div class="col-start-5 col-span-1 border-[6px] border-black bg-[#E83539] cursor-pointer hover:border-white focus:outline-none transition-all duration-300 transform origin-center b4-rect" onclick="toggleB4(this, 'màu đỏ')"></div>
+                        <div class="col-start-6 col-span-3 border-[6px] border-black bg-[#F18821] cursor-pointer hover:border-white focus:outline-none transition-all duration-300 transform origin-center b4-rect" onclick="toggleB4(this, 'màu cam')"></div>
+                        <div class="col-start-9 col-span-1 border-[6px] border-black bg-[#FCEDB3] cursor-pointer hover:border-white focus:outline-none transition-all duration-300 transform origin-center b4-rect" onclick="toggleB4(this, 'màu vàng nhạt')"></div>
+
+                        <!-- Row 3 -->
+                        <div class="col-start-2 col-span-3 border-[6px] border-black bg-white cursor-pointer hover:border-white focus:outline-none transition-all duration-300 transform origin-center b4-rect" onclick="toggleB4(this, 'màu trắng')"></div>
                     </div>
                 </div>
 
-                <div class="p-8 bg-gray-50 rounded-[32px] border-2 border-gray-100 shadow-inner">
-                    <p class="font-black text-gray-400 mb-4 uppercase text-lg tracking-widest">Câu trả lời của em:</p>
-                    <div class="relative group">
-                        <textarea id="ans-116-4" rows="3" class="w-full p-6 pb-16 rounded-[24px] border-2 border-gray-200 text-2xl font-bold text-orange-800 placeholder-gray-300 focus:border-orange-500 focus:ring-0 outline-none resize-none shadow-sm transition-all" placeholder="Ví dụ: Rô-bốt cần cắt đi hình chữ nhật màu..."></textarea>
-                        
-                        <!-- Nút mic -->
-                        <button onclick="startVoiceInput('ans-116-4')" class="absolute bottom-6 right-6 p-4 bg-orange-100 text-orange-600 rounded-2xl hover:bg-orange-600 hover:text-white transition-all shadow-md active:scale-90 group-hover:flex">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
-                        </button>
-                    </div>
+                <div class="mt-8 flex flex-col items-center gap-4">
+                    <button onclick="checkBai4()" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-[24px] font-black text-xl shadow-xl active:scale-95 transition-all w-full md:w-auto">Kiểm tra Bài 4</button>
+                    <p id="res-116-4" class="font-bold text-center"></p>
                 </div>
             </div>
 
@@ -157,16 +169,16 @@ export const lesson116 = {
             </div>
 
             <script>
-                // Xử lý Bài 1
+                // Bài 1
                 window.selectBai1 = function(answer, btn) {
                     document.getElementById('ans-116-1').value = answer;
                     const btns = document.querySelectorAll('.ans-btn-1');
                     btns.forEach(b => {
-                        b.classList.remove('border-blue-500', 'bg-blue-100', 'text-blue-800');
-                        b.classList.add('border-gray-100', 'bg-gray-50', 'text-gray-500');
+                        b.classList.remove('border-blue-500', 'bg-blue-100');
+                        b.classList.add('border-gray-100', 'bg-gray-50');
                     });
-                    btn.classList.remove('border-gray-100', 'bg-gray-50', 'text-gray-500');
-                    btn.classList.add('border-blue-500', 'bg-blue-100', 'text-blue-800');
+                    btn.classList.remove('border-gray-100', 'bg-gray-50');
+                    btn.classList.add('border-blue-500', 'bg-blue-100');
                 };
 
                 window.checkBai1 = function() {
@@ -177,7 +189,7 @@ export const lesson116 = {
                         res.className = "font-bold text-2xl h-8 text-orange-500";
                         return;
                     }
-                    if (ans === 'A') { // Tùy chỉnh đáp án đúng tùy theo ảnh
+                    if (ans === 'C') { 
                         res.textContent = "Chính xác! Bé giỏi quá! ✨";
                         res.className = "font-black text-2xl h-8 text-emerald-600 animate-bounce";
                     } else {
@@ -186,34 +198,80 @@ export const lesson116 = {
                     }
                 };
 
-                // Xử lý Bài 2
+                // Bài 2
                 window.checkBai2 = function() {
                     document.getElementById('res-116-2').textContent = 'Tuyệt vời! Bé rất khéo tay! 🎉';
                 };
 
-                // Nhập giọng nói
-                window.startVoiceInput = function(targetId) {
-                    if (window.eduRobotVoice) {
-                        window.eduRobotVoice(targetId);
-                    } else {
-                        const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-                        if (Recognition) {
-                            const recognition = new Recognition();
-                            recognition.lang = 'vi-VN';
-                            recognition.onresult = (event) => {
-                                document.getElementById(targetId).value = event.results[0][0].transcript;
-                            };
-                            recognition.start();
-                        } else {
-                            alert("Bé hãy gõ bằng bàn phím nhé! ⌨️");
-                        }
+                // Bài 3
+                window.checkBai3 = function() {
+                    const mai = document.getElementById('ans-116-3-mai').checked;
+                    const nam = document.getElementById('ans-116-3-nam').checked;
+                    const viet = document.getElementById('ans-116-3-viet').checked;
+                    const res = document.getElementById('res-116-3');
+                    
+                    if (!mai && !nam && !viet) {
+                        res.textContent = "Bé chưa tích chọn bạn nào cả!";
+                        res.className = "font-bold text-2xl h-8 text-orange-500";
+                        return;
                     }
-                };
+
+                    // Khai triển của Mai (a) - Đúng
+                    // Khai triển của Nam (b) - Sai
+                    // Khai triển của Việt (c) - Đúng
+                    if (mai && viet && !nam) {
+                        res.textContent = "Chính xác! Bạn Mai và bạn Việt đã gấp đúng! 🎉";
+                        res.className = "font-black text-2xl text-emerald-600 animate-bounce";
+                    } else if (!mai || !viet) {
+                        res.textContent = "Vẫn còn bạn gấp đúng mà bé nhầm rồi. Khai triển có 4 ô thẳng hàng thường rất dễ gấp đấy! 🤔";
+                        res.className = "font-bold text-2xl text-red-500";
+                    } else {
+                        res.textContent = "Chưa chính xác! Có 1 bạn gấp chưa đúng đâu! 🤔";
+                        res.className = "font-bold text-2xl text-red-500";
+                    }
+                }
+
+                // Bài 4
+                let selectedB4 = [];
+                window.toggleB4 = function(el, color) {
+                    if (el.classList.contains('opacity-0')) {
+                        el.classList.remove('opacity-0', 'scale-50');
+                        selectedB4 = selectedB4.filter(c => c !== color);
+                    } else {
+                        el.classList.add('opacity-0', 'scale-50');
+                        selectedB4.push(color);
+                    }
+                }
+
+                window.checkBai4 = function() {
+                    const res = document.getElementById('res-116-4');
+                    // Reset class
+                    res.className = "font-bold text-2xl mt-4 max-w-2xl text-center mx-auto";
+
+                    if (selectedB4.length === 0) {
+                        res.textContent = "Bé hãy bấm vào một hình để cắt đi nhé!";
+                        res.classList.add("text-orange-500");
+                        return;
+                    }
+                    if (selectedB4.length > 1) {
+                        res.textContent = "Bé cắt hơi nhiều rồi! Rô-bốt chỉ muốn cắt đi 1 hình chữ nhật thôi.";
+                        res.classList.add("text-orange-500");
+                        return;
+                    }
+                    const color = selectedB4[0];
+                    if (color === 'màu xanh lá' || color === 'màu vàng nhạt') {
+                        res.innerHTML = "Chính xác! Bé đã cắt đúng hình <b>" + color + "</b> để khối còn lại có thể gấp thành hình hộp chữ nhật! ✨";
+                        res.className = "font-black text-2xl mt-4 max-w-2xl text-center mx-auto text-emerald-600 animate-bounce";
+                    } else {
+                        res.innerHTML = "Nếu cắt hình <b>" + color + "</b> thì mình không ráp được thành hình hộp đâu. Bé nhấp lại vào ô trống để phục hồi và cắt lại thử nhé! 🤔";
+                        res.classList.add("text-red-500");
+                    }
+                }
 
                 // Nộp bài chung
                 window.submitFinal116 = function() {
                     const ans1 = document.getElementById('ans-116-1').value;
-                    const ans4 = document.getElementById('ans-116-4').value;
+                    const res4 = document.getElementById('res-116-4').textContent;
                     
                     if (!ans1) {
                         alert("Thầy E nhắc bé: Hãy hoàn thành Bài 1 trước nhé! ✨");
@@ -224,7 +282,7 @@ export const lesson116 = {
                     btn.disabled = true;
                     btn.innerHTML = '<span class="animate-pulse">ĐANG GỬI BÀI...</span>';
 
-                    let report = "Bài 1 đã làm (Chọn " + ans1 + ")\\nBài 3 đã thực hành đánh dấu.\\nBài 4 trả lời: " + ans4;
+                    let report = "Bài 1 đã làm (Chọn " + ans1 + ")\\nBài 3 đã thực hành đánh dấu.\\nBài 4: " + (selectedB4.join(', ') || 'Chưa cắt');
                     
                     if (window.submitMathLesson) {
                         window.submitMathLesson(report, "Đ", "btn-submit-116");
