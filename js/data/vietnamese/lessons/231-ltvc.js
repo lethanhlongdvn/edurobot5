@@ -314,6 +314,6 @@ window.checkEx231_2 = function () {
     }
 };
 
-if (!lesson_231_ltvc.period) lesson_231_ltvc.period = "231";
+if (!lesson_231_ltvc.period) lesson_231_ltvc.period = '156';
 if (!lesson_231_ltvc.id) lesson_231_ltvc.id = "231-ltvc";
 

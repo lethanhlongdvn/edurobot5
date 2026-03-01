@@ -457,6 +457,6 @@ window.submit231VietFinal = function () {
     }
 };
 
-if (!lesson_231_viet.period) lesson_231_viet.period = "231";
+if (!lesson_231_viet.period) lesson_231_viet.period = '157';
 if (!lesson_231_viet.id) lesson_231_viet.id = "231-viet";
 

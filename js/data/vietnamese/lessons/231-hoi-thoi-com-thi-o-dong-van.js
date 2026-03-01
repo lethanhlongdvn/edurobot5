@@ -147,6 +147,6 @@ export const lesson_231_hoi_thoi_com_thi_o_dong_van = {
     }
 };
 
-if (!lesson_231_hoi_thoi_com_thi_o_dong_van.period) lesson_231_hoi_thoi_com_thi_o_dong_van.period = "231";
+if (!lesson_231_hoi_thoi_com_thi_o_dong_van.period) lesson_231_hoi_thoi_com_thi_o_dong_van.period = '155';
 if (!lesson_231_hoi_thoi_com_thi_o_dong_van.id) lesson_231_hoi_thoi_com_thi_o_dong_van.id = "231-hoi-thoi-com-thi-o-dong-van";
 

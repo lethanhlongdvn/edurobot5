@@ -262,6 +262,6 @@ window.submitV232DMR = function () {
     } else { alert("Hệ thống nộp bài đang bận!"); }
 };
 
-if (!lesson_232_dmr.period) lesson_232_dmr.period = "232";
+if (!lesson_232_dmr.period) lesson_232_dmr.period = '161';
 if (!lesson_232_dmr.id) lesson_232_dmr.id = "232-dmr";
 

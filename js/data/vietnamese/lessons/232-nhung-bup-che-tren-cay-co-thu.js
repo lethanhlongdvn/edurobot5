@@ -285,6 +285,6 @@ window.checkCauGhep232 = async function () {
     }
 };
 
-if (!lesson_232_nhung_bup_che_tren_cay_co_thu.period) lesson_232_nhung_bup_che_tren_cay_co_thu.period = "232";
+if (!lesson_232_nhung_bup_che_tren_cay_co_thu.period) lesson_232_nhung_bup_che_tren_cay_co_thu.period = '158-159';
 if (!lesson_232_nhung_bup_che_tren_cay_co_thu.id) lesson_232_nhung_bup_che_tren_cay_co_thu.id = "232-nhung-bup-che-tren-cay-co-thu";
 

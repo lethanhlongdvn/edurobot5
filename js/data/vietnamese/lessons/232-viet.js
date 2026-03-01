@@ -257,6 +257,6 @@ window.submitV232 = function () {
     } else { alert("Hệ thống nộp bài đang bận!"); }
 };
 
-if (!lesson_232_viet.period) lesson_232_viet.period = "232";
+if (!lesson_232_viet.period) lesson_232_viet.period = '160';
 if (!lesson_232_viet.id) lesson_232_viet.id = "232-viet";
 
