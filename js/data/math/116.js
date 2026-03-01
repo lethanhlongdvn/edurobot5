@@ -20,25 +20,30 @@ export const lesson116 = {
     "practice": `
         <div class="space-y-2">
             <!-- Bài 1 -->
-            <div id="box-116-1" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <p class="font-black text-xl md:text-2xl mb-1 text-blue-700 flex items-center gap-2">
-                    <span class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black">1</span>
-                    Đây là khai triển của hình nào?
-                </p>
-                <div class="bg-blue-50 p-1 rounded-[32px]">
+            <div id="box-116-1" class="p-4 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                    <p class="font-black text-xl md:text-2xl text-blue-700 flex items-center gap-2">
+                        <span class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black shrink-0">1</span>
+                        Đây là khai triển của hình nào?
+                    </p>
+                    <button onclick="check116B1()" class="shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-xl font-bold text-lg shadow-md transition-all active:scale-95 flex items-center gap-2">
+                        <span class="font-black">✓</span> Kiểm tra
+                    </button>
+                </div>
+                <div class="bg-blue-50 p-2 md:p-4 rounded-[32px]">
                     <div class="bg-white rounded-2xl p-4 mb-2 flex justify-center border border-blue-100">
                         <img src="hinh_anh/toan_tap_2/116_b1_de.png" class="w-full h-auto max-w-sm object-contain drop-shadow-sm mix-blend-multiply" />
                     </div>
                     <div class="grid grid-cols-3 gap-2">
-                        <button onclick="check116B1('A')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center justify-end gap-2 group min-h-[160px]">
+                        <button onclick="select116B1('A')" id="btn-116b1-a" class="b116-opt bg-white p-2 md:p-4 rounded-2xl border-2 border-transparent hover:border-blue-200 flex flex-col items-center justify-end gap-2 group min-h-[160px] [&.selected]:border-blue-500 [&.selected]:bg-blue-100">
                              <img src="hinh_anh/toan_tap_2/116_b1_a.png" class="h-28 md:h-36 object-contain drop-shadow-sm mix-blend-multiply" />
                             <span class="font-black text-2xl md:text-3xl text-gray-400 group-hover:text-blue-600">A</span>
                         </button>
-                        <button onclick="check116B1('B')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center justify-end gap-2 group min-h-[160px]">
+                        <button onclick="select116B1('B')" id="btn-116b1-b" class="b116-opt bg-white p-2 md:p-4 rounded-2xl border-2 border-transparent hover:border-blue-200 flex flex-col items-center justify-end gap-2 group min-h-[160px] [&.selected]:border-blue-500 [&.selected]:bg-blue-100">
                              <img src="hinh_anh/toan_tap_2/116_b1_b.png" class="h-28 md:h-36 object-contain drop-shadow-sm mix-blend-multiply" />
                             <span class="font-black text-2xl md:text-3xl text-gray-400 group-hover:text-blue-600">B</span>
                         </button>
-                        <button onclick="check116B1('C')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center justify-end gap-2 group min-h-[160px]">
+                        <button onclick="select116B1('C')" id="btn-116b1-c" class="b116-opt bg-white p-2 md:p-4 rounded-2xl border-2 border-transparent hover:border-blue-200 flex flex-col items-center justify-end gap-2 group min-h-[160px] [&.selected]:border-blue-500 [&.selected]:bg-blue-100">
                              <img src="hinh_anh/toan_tap_2/116_b1_c.png" class="h-16 md:h-20 object-contain drop-shadow-sm mix-blend-multiply" />
                             <span class="font-black text-2xl md:text-3xl text-gray-400 group-hover:text-blue-600">C</span>
                         </button>
@@ -65,13 +70,15 @@ export const lesson116 = {
             </div>
 
             <!-- Bài 3 -->
-            <div id="box-116-3" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <div class="flex items-center justify-between mb-1">
+            <div id="box-116-3" class="p-4 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                     <p class="font-black text-xl md:text-2xl text-indigo-700 flex items-center gap-2">
-                        <span class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black">3</span>
+                        <span class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black shrink-0">3</span>
                         Chọn khai triển của hình lập phương:
                     </p>
-                    <button onclick="check116B3()" class="bg-indigo-600 text-white px-4 py-1 rounded-lg font-bold text-xs">Kiểm tra</button>
+                    <button onclick="check116B3()" class="shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-xl font-bold text-lg shadow-md transition-all active:scale-95 flex items-center gap-2">
+                        <span class="font-black">✓</span> Kiểm tra
+                    </button>
                 </div>
                 <div class="bg-indigo-50 p-2 md:p-4 rounded-[32px] grid grid-cols-3 gap-2">
                     <button onclick="this.classList.toggle('selected');" id="116-3a" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col justify-end items-center gap-2 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
@@ -90,25 +97,27 @@ export const lesson116 = {
             </div>
 
             <!-- Bài 4 -->
-            <div id="box-116-4" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <div class="flex items-center justify-between mb-1">
+            <div id="box-116-4" class="p-4 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                     <p class="font-black text-xl md:text-2xl text-orange-700 flex items-center gap-2">
-                        <span class="w-10 h-10 bg-orange-600 text-white rounded-xl flex items-center justify-center font-black">4</span>
-                        Cắt 1 hình để thành HHCN:
+                        <span class="w-10 h-10 bg-orange-600 text-white rounded-xl flex items-center justify-center font-black shrink-0">4</span>
+                        Cắt 1 hình chữ nhật để phần còn lại gấp được một hình hộp chữ nhật:
                     </p>
-                    <button onclick="check116B4()" class="bg-orange-600 text-white px-4 py-1 rounded-lg font-bold text-xs">Kiểm tra</button>
+                    <button onclick="check116B4()" class="shrink-0 bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-xl font-bold text-lg shadow-md transition-all active:scale-95 flex items-center gap-2">
+                        <span class="font-black">✓</span> Kiểm tra
+                    </button>
                 </div>
-                <div class="bg-slate-50 p-2 py-8 md:py-16 rounded-[32px] flex justify-center items-center scale-100 md:scale-[1.25] origin-center">
+                <div class="bg-slate-50 p-6 md:p-12 rounded-[32px] flex justify-center items-center overflow-x-auto">
                     <div class="flex items-center">
-                        <div id="cut-green" onclick="toggleCut116('green')" class="w-12 h-24 bg-[#22c55e] border-2 border-[#15803d] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl font-black">✕</div></div>
+                        <div id="cut-green" onclick="toggleCut116('green')" class="w-12 h-24 md:w-20 md:h-40 bg-[#22c55e] border-2 border-[#15803d] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl md:text-5xl font-black">✕</div></div>
                         <div class="flex flex-col">
-                            <div id="cut-purple" onclick="toggleCut116('purple')" class="w-24 h-12 bg-[#a855f7] border-2 border-[#7e22ce] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl font-black">✕</div></div>
-                            <div id="cut-blue" onclick="toggleCut116('blue')" class="w-24 h-24 bg-[#3b82f6] border-2 border-[#1d4ed8] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-4xl font-black">✕</div></div>
-                            <div id="cut-white" onclick="toggleCut116('white')" class="w-24 h-12 bg-white border-2 border-gray-400 relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl font-black">✕</div></div>
+                            <div id="cut-purple" onclick="toggleCut116('purple')" class="w-24 h-12 md:w-40 md:h-20 bg-[#a855f7] border-2 border-[#7e22ce] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl md:text-5xl font-black">✕</div></div>
+                            <div id="cut-blue" onclick="toggleCut116('blue')" class="w-24 h-24 md:w-40 md:h-40 bg-[#3b82f6] border-2 border-[#1d4ed8] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-4xl md:text-6xl font-black">✕</div></div>
+                            <div id="cut-white" onclick="toggleCut116('white')" class="w-24 h-12 md:w-40 md:h-20 bg-white border-2 border-gray-400 relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl md:text-5xl font-black">✕</div></div>
                         </div>
-                        <div id="cut-red" onclick="toggleCut116('red')" class="w-12 h-24 bg-[#ef4444] border-2 border-[#b91c1c] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl font-black">✕</div></div>
-                        <div id="cut-orange" onclick="toggleCut116('orange')" class="w-24 h-24 bg-[#f97316] border-2 border-[#c2410c] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-4xl font-black">✕</div></div>
-                        <div id="cut-yellow" onclick="toggleCut116('yellow')" class="w-12 h-24 bg-[#fde047] border-2 border-[#a16207] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl font-black">✕</div></div>
+                        <div id="cut-red" onclick="toggleCut116('red')" class="w-12 h-24 md:w-20 md:h-40 bg-[#ef4444] border-2 border-[#b91c1c] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl md:text-5xl font-black">✕</div></div>
+                        <div id="cut-orange" onclick="toggleCut116('orange')" class="w-24 h-24 md:w-40 md:h-40 bg-[#f97316] border-2 border-[#c2410c] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-4xl md:text-6xl font-black">✕</div></div>
+                        <div id="cut-yellow" onclick="toggleCut116('yellow')" class="w-12 h-24 md:w-20 md:h-40 bg-[#fde047] border-2 border-[#a16207] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl md:text-5xl font-black">✕</div></div>
                     </div>
                 </div>
             </div>
@@ -121,8 +130,15 @@ export const lesson116 = {
             </div>
 
             <script>
-                window.check116B1 = function(choice) {
+                window.select116B1 = function(choice) {
                     window.ans116B1 = choice;
+                    document.querySelectorAll('.b116-opt').forEach(btn => btn.classList.remove('selected'));
+                    document.getElementById('btn-116b1-' + choice.toLowerCase()).classList.add('selected');
+                };
+
+                window.check116B1 = function() {
+                    const choice = window.ans116B1;
+                    if (!choice) return;
                     const box = document.getElementById('box-116-1');
                     box.classList.add('border-2');
                     if (choice === 'B') {
