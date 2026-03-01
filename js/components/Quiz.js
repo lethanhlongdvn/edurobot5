@@ -46,9 +46,23 @@ export const Quiz = {
     score: 0,
     isProcessing: false,
 
-    initQuiz(lesson) {
+    async initQuiz(lesson) {
         console.log('Quiz: Khởi tạo quiz với lesson:', lesson.title);
-        const pool = lesson.quizPool || [];
+        let pool = lesson.quizPool || [];
+
+        // Cố gắng tải từ file .txt nếu có (ưu tiên để người dùng dễ cập nhật)
+        if (lesson.period) {
+            try {
+                const fetchedPool = await this.loadQuizFromFile(lesson.period);
+                if (fetchedPool && fetchedPool.length > 0) {
+                    pool = fetchedPool;
+                    console.log(`Quiz: Đã tải động ${pool.length} câu hỏi từ cungco${lesson.period}.txt`);
+                }
+            } catch (e) {
+                console.warn('Quiz: Không tìm thấy file củng cố riêng hoặc lỗi tải file. Dùng pool mặc định.', e);
+            }
+        }
+
         if (pool.length === 0) {
             document.getElementById('quiz-content').innerHTML = `
                 <div class="text-center py-20 bg-gray-50 rounded-[32px] border-2 border-dashed border-gray-200">
@@ -85,6 +99,31 @@ export const Quiz = {
 
         console.log('Quiz: Đã nạp ' + finalPool.length + ' câu hỏi.');
         Quiz.renderCurrentQuestion();
+    },
+
+    async loadQuizFromFile(period) {
+        try {
+            const url = `js/data/math/cungco/cungco${period}.txt`;
+            const response = await fetch(url);
+            if (!response.ok) return null;
+
+            const text = await response.text();
+            const lines = text.split('\n').filter(l => l.trim().includes('|'));
+
+            return lines.map(line => {
+                const parts = line.split('|').map(p => p.trim());
+                if (parts.length < 3) return null;
+
+                return {
+                    question: parts[0],
+                    options: parts[1].split(',').map(o => o.trim()),
+                    answer: parseInt(parts[2]) - 1, // Chuyển từ 1-based sang 0-based
+                    level: 1 // Mặc định level 1 nếu tải từ text
+                };
+            }).filter(q => q !== null);
+        } catch (e) {
+            return null;
+        }
     },
 
     renderCurrentQuestion() {
