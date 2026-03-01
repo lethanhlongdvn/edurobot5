@@ -270,3 +270,45 @@ export const lesson_242_nvn = {
     }
 ]
 };
+
+// --- LOGIC ---
+window.checkNVN242AI = async function () {
+    const input = document.getElementById('ai-nvn242-speech-plan');
+    if (!input || !input.value.trim()) {
+        alert("Em hãy viết nội dung bài nói trước khi nhấn chấm bài nhé!");
+        return;
+    }
+
+    const fb = document.getElementById('fb-nvn242-speech-plan');
+    fb.classList.remove('hidden');
+    fb.innerHTML = `
+        <div class="flex items-center gap-3 text-green-700 animate-pulse">
+            <div class="w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div>
+            <span class="font-bold italic">Thầy EduRobot đang lắng nghe và đọc bài nói của em...</span>
+        </div>`;
+
+    if (typeof askAI === 'function') {
+        const prompt = `Em hãy đóng vai thầy giáo EduRobot để nhận xét bài nói của học sinh lớp 5.
+        Đề bài: "Giới thiệu về một địa điểm tham quan, du lịch mà em biết."
+        Yêu cầu bài nói:
+        1. Giới thiệu được tên, địa chỉ của địa điểm.
+        2. Nêu được các đặc điểm nổi bật, hấp dẫn (phong cảnh, hoạt động, sản vật...).
+        3. Thái độ tự tin, có lời chào và lời kết.
+
+        Nội dung bài viết của học sinh:
+        "${input.value.trim()}"
+
+        Hãy nhận xét:
+        - Khen ngợi những ý hay, cảm xúc chân thực.
+        - Góp ý nếu thiếu thông tin về địa chỉ hoặc đặc điểm nổi bật.
+        - Khuyến khích học sinh trình bày tự tin trước lớp.
+        Sử dụng ngôn ngữ thân thiện, khích lệ.`;
+
+        await askAI('nvn242-speech-plan', prompt, 'single', 'tlv', 24);
+    } else {
+        fb.innerHTML = "✅ Bài nói của em chuẩn bị rất tốt! Hãy tự tin trình bày trước lớp nhé.";
+    }
+};
+
+if (!lesson_242_nvn.period) lesson_242_nvn.period = "242";
+if (!lesson_242_nvn.id) lesson_242_nvn.id = "242-nvn";

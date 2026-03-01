@@ -356,3 +356,85 @@ export const lesson_261_ltvc = {
     }
 ]
 };
+
+// --- Logic functions implementation ---
+window.checkEx261_1 = function () {
+    const a = document.getElementById('ex261-1a').value;
+    const b1 = document.getElementById('ex261-1b1').value;
+    const b2 = document.getElementById('ex261-1b2').value;
+
+    // Checkbox array
+    const c1 = document.getElementById('ex261-1c-ck1').checked;
+    const c2 = document.getElementById('ex261-1c-ck2').checked;
+    const c3 = document.getElementById('ex261-1c-ck3').checked;
+
+    const fb = document.getElementById('fb-261-ltvc-ex1');
+    fb.classList.remove('hidden');
+
+    const isACorrect = a === 'Dùng từ ngữ nối';
+    const isBCorrect = b1.startsWith('Lặp từ ngữ') && b2.startsWith('Dùng từ ngữ thay thế');
+    const isCCorrect = c1 && c2 && c3;
+
+    if (isACorrect && isBCorrect && isCCorrect) {
+        fb.innerHTML = "🎉 Tuyệt vời! Bạn đã xác định chính xác các cách liên kết trong cả 3 đoạn văn.";
+        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
+        if (typeof celebrate === 'function') celebrate();
+    } else {
+        fb.innerHTML = "❌ Có chỗ chưa đúng. Đoạn (a) là 'từ ngữ nối' (Thế mà hôm nay); đoạn (b) kết hợp 'lặp từ' và 'thay thế'; đoạn (c) dùng cả 3 cách. Bạn kiểm tra lại nhé!";
+        fb.className = "text-red-500 font-bold mt-4";
+    }
+};
+
+window.resetEx261_1 = function () {
+    document.getElementById('ex261-1a').value = '';
+    document.getElementById('ex261-1b1').value = '';
+    document.getElementById('ex261-1b2').value = '';
+    document.getElementById('ex261-1c-ck1').checked = false;
+    document.getElementById('ex261-1c-ck2').checked = false;
+    document.getElementById('ex261-1c-ck3').checked = false;
+    document.getElementById('fb-261-ltvc-ex1').classList.add('hidden');
+};
+
+window.checkEx261_2 = function () {
+    const v1 = document.getElementById('ex261-2-1').value.toLowerCase();
+    const v2 = document.getElementById('ex261-2-2').value.toLowerCase();
+    const v3 = document.getElementById('ex261-2-3').value.toLowerCase();
+    const v4 = document.getElementById('ex261-2-4').value.toLowerCase();
+    const fb = document.getElementById('fb-261-ltvc-ex2');
+    fb.classList.remove('hidden');
+
+    if (v1 === 'hai anh em' && v2 === 'nhưng' && v3 === 'hai vợ chồng người em' && v4 === 'người anh') {
+        fb.innerHTML = "✅ Giỏi quá! Bạn đã điền chính xác các từ thay thế và từ nối vào đoạn Truyện Cây Khế.";
+        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
+        if (typeof celebrate === 'function') celebrate();
+    } else {
+        fb.innerHTML = "❌ Bạn điền chưa đúng hết. Gọi ý: Câu 2 nói chung (hai anh em); Câu 3 chuyển ý (Nhưng); Câu 4 nói về em (Hai vợ chồng...); Câu 5 nói về anh (người anh).";
+        fb.className = "text-red-500 font-bold mt-4";
+    }
+};
+
+window.resetEx261_2 = function () {
+    ['ex261-2-1', 'ex261-2-2', 'ex261-2-3', 'ex261-2-4'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('fb-261-ltvc-ex2').classList.add('hidden');
+};
+
+window.check261LTVCEx3AI = async function () {
+    const val = document.getElementById('ai-261-ltvc-ex3').value.trim();
+    if (!val) { alert('Bạn hãy nhập đoạn văn của mình vào ô trống nhé!'); return; }
+
+    const fb = document.getElementById('fb-261-ltvc-ex3');
+    fb.classList.remove('hidden');
+    fb.innerHTML = `<div class="flex items-center gap-2 text-indigo-600 animate-pulse"><div class="w-6 h-6 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div> <span>EduRobot đang đọc đoạn văn của bạn...</span></div>`;
+
+    if (typeof askAI === 'function') {
+        const prompt = `Viết đoạn văn (4 – 5 câu) giới thiệu về một phương tiện đi lại vùng sông nước (ví dụ: xuồng, ghe, vỏ lãi) có dùng từ nối.
+        Đoạn văn của học sinh: "${val}"
+        Đánh giá: 1. Có phải phương tiện sông nước không? 2. Đủ 4-5 câu không? 3. CÓ SỬ DỤNG TỪ NỐI (Ví dụ: Vì vậy, Tuy nhiên, Bên cạnh đó, Do đó...) không? Chỉ ra từ nối học sinh dùng. Nhận xét nhẹ nhàng, xưng hô 'em'.`;
+        await askAI('261-ltvc-ex3', prompt, 'single', 'ltvc', 26);
+    } else {
+        fb.innerHTML = "✅ Đoạn văn của bạn rất sống động. Lưu ý kiểm tra xem mình đã sử dụng các từ nối (như: Tuy nhiên, Vì vậy, Nhờ đó,...) để liên kết các câu chưa nhé!";
+    }
+};
+
+if (!lesson_261_ltvc.period) lesson_261_ltvc.period = "261";
+if (!lesson_261_ltvc.id) lesson_261_ltvc.id = "261-ltvc";

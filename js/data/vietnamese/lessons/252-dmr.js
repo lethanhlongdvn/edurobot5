@@ -258,3 +258,55 @@ export const lesson_252_dmr = {
     }
 ]
 };
+
+// --- Logic functions for Lesson 252-DMR ---
+let currentRating252 = 0;
+window.setRating = function (n) {
+    currentRating252 = n;
+    const stars = document.querySelectorAll('.star-btn');
+    stars.forEach((s, idx) => {
+        if (idx < n) {
+            s.innerText = '★';
+            s.classList.add('text-yellow-400');
+            s.classList.remove('text-gray-300');
+        } else {
+            s.innerText = '☆';
+            s.classList.remove('text-yellow-400');
+            s.classList.add('text-gray-300');
+        }
+    });
+};
+
+window.check252DMRAI = async function () {
+    const obj = document.getElementById('dmr-252-obj').value.trim();
+    const unique = document.getElementById('dmr-252-unique').value.trim();
+    const feel = document.getElementById('dmr-252-feel').value.trim();
+
+    if (!obj || !unique || !feel) {
+        alert('Em hãy điền đầy đủ thông tin vào phiếu đọc sách trước nhé!');
+        return;
+    }
+
+    const fb = document.getElementById('fb-252-dmr');
+    fb.classList.remove('hidden');
+    fb.innerHTML = '<div class="p-10 bg-white border-4 border-teal-100 rounded-[40px] shadow-xl italic text-2xl md:text-5xl text-teal-900 animate-pulse text-center">EduRobot đang xem qua phiếu đọc sách của bạn...</div>';
+
+    const val = `Sự vật: ${obj}\nNét độc đáo: ${unique}\nCảm xúc: ${feel}\nMức độ yêu thích: ${currentRating252} sao`;
+    const prompt = `Em hãy nhận xét phiếu đọc sách của học sinh về các bài ca dao địa phương: "${val}".\nTiêu chí:\n1. Nhận diện đúng địa danh/sản vật/lễ hội.\n2. Nêu được nét độc đáo.\n3. Cảm xúc chân thành.\nKhuyên học sinh sưu tầm thêm nhiều ca dao hay. Xưng hô "bạn".`;
+
+    if (typeof askAI === 'function') {
+        await askAI('252-dmr', prompt, 'single', 'tlv', 25, prompt);
+    } else {
+        fb.innerHTML = `✅ Tuyệt vời! Bạn đã hoàn thành phiếu đọc sách rất tốt cho bài ca dao về ${obj}.`;
+        fb.className = "mt-8 p-10 bg-teal-50 border-4 border-teal-200 rounded-[40px] text-2xl md:text-4xl text-teal-900 italic font-bold";
+    }
+};
+
+window.save252DMR = function () {
+    const obj = document.getElementById('dmr-252-obj').value.trim();
+    if (!obj) { alert('Bạn hãy nhập nội dung trước khi nộp nhé!'); return; }
+    alert('Tuyệt vời! Phiếu đọc sách của bạn đã được lưu lại thành công.');
+};
+
+if (!lesson_252_dmr.period) lesson_252_dmr.period = "252";
+if (!lesson_252_dmr.id) lesson_252_dmr.id = "252-dmr";

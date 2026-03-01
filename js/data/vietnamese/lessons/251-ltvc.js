@@ -395,3 +395,92 @@ export const lesson_251_ltvc = {
     }
 ]
 };
+
+// --- Logic functions implementation ---
+window.check251LTVCEx1AI = async function () {
+    const val = document.getElementById('ai-251-ltvc-ex1').value.trim();
+    if (!val) { alert('Bạn hãy nhập câu trả lời nhé!'); return; }
+
+    const fb = document.getElementById('fb-251-ltvc-ex1');
+    fb.classList.remove('hidden');
+    fb.innerHTML = `<div class="flex items-center gap-2 text-indigo-600 animate-pulse"><div class="w-6 h-6 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div> <span>EduRobot đang đọc bài của bạn...</span></div>`;
+
+    if (typeof askAI === 'function') {
+        const prompt = `Đoạn văn về hồ nước ở Gia Lai. 
+        Yêu cầu: "Đó" thay cho "nhiều hồ nước", "chúng" thay cho "những vạt đất trũng". Tác dụng: liên kết câu, tránh lặp từ.
+        Câu trả lời của bạn: "${val}"
+        Hãy đánh giá và nhận xét khích lệ. Nhấn mạnh nếu thiếu ý nào. Xưng hô với người làm bài là 'bạn'.`;
+        await askAI('251-ltvc-ex1', prompt, 'single', 'ltvc', 25);
+    } else {
+        fb.innerHTML = "✅ Tốt lắm! 'Đó' thay cho 'nhiều hồ nước', 'chúng' thay cho 'những vạt đất trũng'. Việc thay thế giúp đoạn văn mạch lạc hơn.";
+    }
+};
+
+window.check251LTVCEx2AI = async function () {
+    const val = document.getElementById('ai-251-ltvc-ex2').value.trim();
+    if (!val) { alert('Bạn hãy nhập câu trả lời nhé!'); return; }
+
+    const fb = document.getElementById('fb-251-ltvc-ex2');
+    fb.classList.remove('hidden');
+    fb.innerHTML = `<div class="flex items-center gap-2 text-indigo-600 animate-pulse"><div class="w-6 h-6 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div> <span>EduRobot đang phân tích câu trả lời...</span></div>`;
+
+    if (typeof askAI === 'function') {
+        const prompt = `Đoạn văn về Beethoven chơi đàn.
+        Yêu cầu: Các từ in đậm đều nói về Bét-tô-ven. Tác dụng: liên kết câu, tránh lặp lại tên riêng, làm cách diễn đạt phong phú (nhà soạn nhạc thiên tài).
+        Câu trả lời của bạn: "${val}"
+        Hãy đánh giá: Nếu nói đúng là về Bét-tô-ven và có tác dụng liên kết/tránh lặp là đạt. Nhận xét nhẹ nhàng, xưng hô là 'bạn'.`;
+        await askAI('251-ltvc-ex2', prompt, 'single', 'ltvc', 25);
+    } else {
+        fb.innerHTML = "✅ Chính xác! Các từ này đều chỉ Bét-tô-ven, giúp tránh lặp từ và tôn vinh tài năng của ông.";
+    }
+};
+
+window.checkEx251_3 = function () {
+    const a = document.getElementById('ex251-3-a').value;
+    const b = document.getElementById('ex251-3-b').value;
+    const c = document.getElementById('ex251-3-c').value;
+    const fb = document.getElementById('fb-251-ltvc-ex3');
+    fb.classList.remove('hidden');
+
+    if (a === 'những nghệ nhân người Mông' && b === 'con dơi' && c === 'con chim hoạ mi') {
+        fb.innerHTML = "🎉 Tuyệt vời! Bạn đã xác định đúng tất cả các từ ngữ được thay thế.";
+        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
+        if (typeof celebrate === 'function') celebrate();
+    } else {
+        fb.innerHTML = "❌ Có chỗ chưa đúng, em hãy đọc kỹ lại đoạn văn nhé!";
+        fb.className = "text-red-500 font-bold mt-4";
+    }
+};
+
+window.resetEx251_3 = function () {
+    ['ex251-3-a', 'ex251-3-b', 'ex251-3-c'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('fb-251-ltvc-ex3').classList.add('hidden');
+};
+
+window.checkEx251_4 = function () {
+    const v1 = document.getElementById('ex251-4-1').value;
+    const v2 = document.getElementById('ex251-4-2').value;
+    const v3 = document.getElementById('ex251-4-3').value;
+    const fb = document.getElementById('fb-251-ltvc-ex4');
+    fb.classList.remove('hidden');
+
+    // Các lựa chọn hợp lý nhất theo phong cách văn học
+    const isCorrect = (v1 !== "" && v2 !== "" && v3 !== "") && (v1 !== v2 && v2 !== v3 && v1 !== v3);
+
+    if (isCorrect) {
+        fb.innerHTML = "✅ Giỏi quá! Bạn đã sử dụng các từ thay thế rất linh hoạt để đoạn văn về Đà Lạt hay hơn hẳn.";
+        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
+        if (typeof celebrate === 'function') celebrate();
+    } else {
+        fb.innerHTML = "❌ Bạn hãy chọn các cụm từ khác nhau và điền vào đủ 3 chỗ trống nhé!";
+        fb.className = "text-red-500 font-bold mt-4";
+    }
+};
+
+window.resetEx251_4 = function () {
+    ['ex251-4-1', 'ex251-4-2', 'ex251-4-3'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('fb-251-ltvc-ex4').classList.add('hidden');
+};
+
+if (!lesson_251_ltvc.period) lesson_251_ltvc.period = "251";
+if (!lesson_251_ltvc.id) lesson_251_ltvc.id = "251-ltvc";

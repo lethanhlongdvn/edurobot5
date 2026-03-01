@@ -218,3 +218,89 @@ export const lesson_232_viet = {
     }
 ]
 };
+
+// --- LOGIC ---
+window.checkAI_232Viet = async function () {
+    const mb = document.getElementById('v232-mb').value.trim();
+    const tb = document.getElementById('v232-tb').value.trim();
+    const kb = document.getElementById('v232-kb').value.trim();
+
+    if (!mb || !tb || !kb) {
+        alert("Em hãy điền đủ ý cho cả 3 phần Mở bài, Thân bài và Kết bài nhé!");
+        return;
+    }
+
+    const fb = document.getElementById('fb-232-viet');
+    fb.classList.remove('hidden');
+    fb.innerHTML = `<div class="flex items-center gap-4"><div class="animate-spin rounded-full h-8 w-8 border-4 border-white border-t-transparent"></div><p class="text-xl font-bold italic">Hệ thống đang xem qua các ý của em...</p></div>`;
+
+    if (typeof askAI === 'function') {
+        const prompt = `Em hãy nhận xét các ý tưởng cho đoạn văn của học sinh. 
+        Đề bài liên quan đến 1 trong 3 chủ đề: Lễ hội, Ngoại khóa, hoặc Gói bánh chưng/tét.
+        Các ý của học sinh:
+        - Mở bài: ${mb}
+        - Thân bài: ${tb}
+        - Kết bài: ${kb}
+        
+        Yêu cầu nhận xét:
+        1. Các ý đã đủ để viết thành đoạn văn chưa?
+        2. Cảm xúc có được thể hiện rõ nét qua các chi tiết nổi bật không?
+        3. Gợi ý thêm một số từ ngữ hoặc hình ảnh so sánh để đoạn văn hay hơn.
+        4. Viết một đoạn văn mẫu ngắn dựa trên các ý này để em tham khảo.
+        Cuối cùng, hãy CHẤM ĐIỂM các ý tưởng này trên thang điểm 10 theo định dạng: "Điểm dự kiến: X/10".`;
+
+        const studentWork = `Mở bài: ${mb}\nThân bài: ${tb}\nKết bài: ${kb}`;
+
+        try {
+            const res = await fetch(window.AI_API_URL, {
+                method: 'POST',
+                body: JSON.stringify({
+                    sentence: prompt,
+                    mode: 'chat',
+                    persona: 'tlv'
+                })
+            });
+            const data = await res.json();
+            const reply = typeof data === 'string' ? data : (data.response || data.content || "Thầy chưa nghĩ ra nhận xét nào.");
+
+            // Extract score
+            const scoreMatch = reply.match(/Điểm dự kiến:.*?(\d+\.?\d*)\/10/i) || reply.match(/(\d+\.?\d*)\/10/);
+            const score = scoreMatch ? scoreMatch[1] : null;
+            window.v232_aiGrade = score;
+
+            if (fb) {
+                fb.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-indigo-400 pb-2 mb-2">
+                            <div class="flex items-center gap-2 text-white font-black">
+                                <span class="text-2xl">✍️</span> GÓP Ý TỪ EDUROBOT
+                            </div>
+                            ${score ? `<div class="bg-amber-400 text-indigo-900 px-4 py-1 rounded-full font-black text-xl shadow-lg animate-bounce">ĐIỂM: ${score}/10</div>` : ''}
+                        </div>
+                        <div class="text-white leading-relaxed text-lg">${reply.replace(/\n/g, '<br>').replace(/\*\*/g, '<b>')}</div>
+                    </div>
+                `;
+            }
+        } catch (e) { fb.innerHTML = "Lỗi kết nối EduRobot. Thử lại sau em nhé!"; }
+    } else {
+        fb.innerHTML = "Lỗi: Hệ thống AI chưa sẵn sàng.";
+    }
+};
+
+window.reset232Viet = function () {
+    document.getElementById('v232-mb').value = '';
+    document.getElementById('v232-tb').value = '';
+    document.getElementById('v232-kb').value = '';
+    document.getElementById('fb-232-viet').classList.add('hidden');
+    const inputs = document.querySelectorAll('input[type="checkbox"]');
+    inputs.forEach(i => i.checked = false);
+};
+
+window.submitV232 = function () {
+    if (typeof submitLTVCUnified === 'function') {
+        submitLTVCUnified('232-viet');
+    } else { alert("Hệ thống nộp bài đang bận!"); }
+};
+
+if (!lesson_232_viet.period) lesson_232_viet.period = '160';
+if (!lesson_232_viet.id) lesson_232_viet.id = "232-viet";

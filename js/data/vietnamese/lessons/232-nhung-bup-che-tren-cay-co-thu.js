@@ -389,3 +389,46 @@ export const lesson_232_nhung_bup_che_tren_cay_co_thu = {
     }
 ]
 };
+
+// --- Helper Functions for Lesson 232 Reading Practice ---
+window.checkCauGhep232 = async function () {
+    const input = document.getElementById('ai-232-lt2');
+    if (!input || !input.value.trim()) { alert("Em hãy đặt câu ghép về sản vật địa phương nhé!"); return; }
+
+    // Get words from Ex 1 to pass to AI context
+    const sv1 = document.getElementById('lt-232-1-sv').value.trim();
+    const dp1 = document.getElementById('lt-232-1-dp').value.trim();
+    const dd1 = document.getElementById('lt-232-1-dd').value.trim();
+
+    const contextWords = [sv1, dp1, dd1].filter(w => w).join(', ');
+
+    const fb = document.getElementById('fb-ai-232-lt2');
+    fb.classList.remove('hidden');
+    fb.innerHTML = `
+        <div class="flex items-center gap-4 mb-4">
+            <div class="animate-spin rounded-full h-8 w-8 border-4 border-white border-t-transparent"></div>
+            <p class="text-xl font-bold italic">Hệ thống đang phân tích vế câu và cấu trúc câu ghép của em...</p>
+        </div>
+    `;
+
+    if (typeof askAI === 'function') {
+        const prompt = `Em hãy nhận xét câu của học sinh. 
+        Yêu cầu:
+        1. Kiểm tra xem có đúng là CÂU GHÉP (có ít nhất 2 vế câu, mỗi vế đủ chủ ngữ - vị ngữ) hay chưa. Báo "Đúng là câu ghép" hoặc "Chưa phải câu ghép".
+        2. Phân tích chi tiết:
+           - Vế 1: (Xác định vế 1 và chủ ngữ/vị ngữ của vế 1)
+           - Vế 2: (Xác định vế 2 và chủ ngữ/vị ngữ của vế 2)
+           - Kết nối: (Dùng từ nối gì? Dấu phẩy?)
+        3. Kiểm tra xem có chứa từ ngữ liên quan đến sản vật đã tìm: ${contextWords || 'sản vật địa phương'} hay không.
+        4. Ghi nhận xét chung và cổ vũ học sinh.
+        
+        Câu của học sinh: ${input.value}`;
+
+        await askAI('232-lt2', prompt, 'single', 'reading', 232);
+    } else {
+        fb.innerHTML = "Lỗi: Hệ thống AI chưa sẵn sàng.";
+    }
+};
+
+if (!lesson_232_nhung_bup_che_tren_cay_co_thu.period) lesson_232_nhung_bup_che_tren_cay_co_thu.period = '158-159';
+if (!lesson_232_nhung_bup_che_tren_cay_co_thu.id) lesson_232_nhung_bup_che_tren_cay_co_thu.id = "232-nhung-bup-che-tren-cay-co-thu";

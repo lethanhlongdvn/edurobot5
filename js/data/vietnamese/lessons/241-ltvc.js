@@ -376,3 +376,96 @@ export const lesson_241_ltvc = {
     }
 ]
 };
+
+// --- Logic functions implementation ---
+window.check241LTVCEx1 = async function () {
+    const a = document.getElementById('ai-241-ltvc-1a').value.trim();
+    const b = document.getElementById('ai-241-ltvc-1b').value.trim();
+    if (!a || !b) { alert('Học sinh hãy điền đủ ý a và b nhé!'); return; }
+
+    const fb = document.getElementById('fb-241-ltvc-ex1');
+    fb.classList.remove('hidden');
+    fb.innerHTML = `<div class="flex items-center gap-2 text-indigo-600 animate-pulse"><div class="w-6 h-6 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div> <span>Đang kiểm tra...</span></div>`;
+
+    if (typeof askAI === 'function') {
+        const prompt = `Học sinh nhận xét về đoạn văn: "Trên con đường...". Từ nối: Nhưng, Vì thế, Rồi. 
+        Câu a học sinh trả lời: "${a}"
+        Câu b học sinh trả lời: "${b}"
+        Hãy đánh giá: a đúng nếu nói đứng ở đầu câu/đầu đoạn; b đúng nếu nói dùng để nối/liên kết câu. Nhận xét ngắn gọn, khích lệ.`;
+        await askAI('241-ltvc-ex1', prompt, 'single', 'ltvc', 24);
+    } else {
+        fb.innerHTML = "✅ Tốt lắm! Các từ ngữ đó đều đứng ở đầu câu và giúp liên kết các câu văn với nhau một cách mạch lạc.";
+    }
+};
+
+window.checkEx241_2 = function () {
+    const v = [
+        document.getElementById('ex241-2-1').value.trim(),
+        document.getElementById('ex241-2-2').value.trim(),
+        document.getElementById('ex241-2-3').value.trim(),
+        document.getElementById('ex241-2-4').value.trim()
+    ];
+    const fb = document.getElementById('fb-241-ltvc-ex2');
+    fb.classList.remove('hidden');
+
+    const isCorrect = v[0].toLowerCase() === 'đầu tiên' &&
+        ((v[1].toLowerCase() === 'sau đó' && v[2].toLowerCase() === 'tiếp theo') ||
+            (v[1].toLowerCase() === 'tiếp theo' && v[2].toLowerCase() === 'sau đó')) &&
+        v[3].toLowerCase() === 'cuối cùng';
+
+    if (isCorrect) {
+        fb.innerHTML = "🎉 Tuyệt vời! Em đã sắp xếp quy trình làm cốm rất chính xác.";
+        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
+        if (typeof celebrate === 'function') celebrate();
+    } else {
+        fb.innerHTML = "❌ Chưa đúng rồi, em hãy chú ý thứ tự các bước trong quy trình nhé!";
+        fb.className = "text-red-500 font-bold mt-4";
+    }
+};
+
+window.resetEx241_2 = function () {
+    ['ex241-2-1', 'ex241-2-2', 'ex241-2-3', 'ex241-2-4'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('fb-241-ltvc-ex2').classList.add('hidden');
+};
+
+window.checkEx241_3 = function () {
+    const a = document.getElementById('ex241-3-a').value.trim().toLowerCase();
+    const b = document.getElementById('ex241-3-b').value.trim().toLowerCase();
+    const c = document.getElementById('ex241-3-c').value.trim().toLowerCase();
+    const d = document.getElementById('ex241-3-d').value.trim().toLowerCase();
+    const fb = document.getElementById('fb-241-ltvc-ex3');
+    fb.classList.remove('hidden');
+
+    if (a === 'nhưng' && b === 'ngoài ra' && c === 'thứ hai' && d === 'hơn nữa') {
+        fb.innerHTML = "✅ Chính xác! Em đã sử dụng từ ngữ nối rất linh hoạt.";
+        fb.className = "text-green-600 font-bold mt-4 animate-bounce";
+        if (typeof celebrate === 'function') celebrate();
+    } else {
+        fb.innerHTML = "❌ Có chỗ chưa hợp lý, em hãy suy nghĩ kỹ về mối quan hệ giữa các câu nhé!";
+        fb.className = "text-red-500 font-bold mt-4";
+    }
+};
+
+window.resetEx241_3 = function () {
+    ['ex241-3-a', 'ex241-3-b', 'ex241-3-c', 'ex241-3-d'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('fb-241-ltvc-ex3').classList.add('hidden');
+};
+
+window.check241LTVCQ4AI = async function () {
+    const input = document.getElementById('ai-241-ltvc-q4');
+    if (!input || !input.value.trim()) { alert("Học sinh hãy viết đoạn văn nhé!"); return; }
+
+    const fb = document.getElementById('fb-241-ltvc-q4');
+    fb.classList.remove('hidden');
+    fb.innerHTML = `<div class="flex items-center gap-2 text-rose-600 animate-pulse"><div class="w-6 h-6 bg-rose-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm">E</div> <span>Đang đọc bài của em...</span></div>`;
+
+    if (typeof askAI === 'function') {
+        const prefix = "Em hãy nhận xét đoạn văn (3-5 câu) về địa điểm du lịch của học sinh, yêu cầu phải sử dụng từ ngữ nối (như: đầu tiên, tiếp theo, cuối cùng, bên cạnh đó, mặt khác...). Hãy chỉ ra học sinh dùng từ nối nào và nhận xét độ hay của đoạn văn: ";
+        await askAI('241-ltvc-q4', prefix, 'single', 'ltvc', 24);
+    } else {
+        fb.innerHTML = "✅ Đoạn văn của em rất tốt, đã biết sử dụng các từ nối để làm mạch văn rõ ràng hơn.";
+    }
+};
+
+if (!lesson_241_ltvc.period) lesson_241_ltvc.period = "241";
+if (!lesson_241_ltvc.id) lesson_241_ltvc.id = "241-ltvc";

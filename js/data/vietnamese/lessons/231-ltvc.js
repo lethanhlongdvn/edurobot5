@@ -288,3 +288,52 @@ export const lesson_231_ltvc = {
     }
 ]
 };
+
+// --- Helper functions for Lesson 231 LTVC ---
+window.checkEx1bAI = async function () {
+    const input = document.getElementById('ai-231-ex1b');
+    if (!input || !input.value.trim()) { alert("Em hãy nhập câu trả lời cho mục b nhé!"); return; }
+    const fb = document.getElementById('fb-231-ex1b');
+    fb.classList.remove('hidden');
+    fb.innerHTML = "Hệ thống đang xem câu trả lời của em...";
+
+    if (typeof askAI === 'function') {
+        const prefix = "Em hãy nhận xét câu trả lời của học sinh về tác dụng của việc lặp lại từ ngữ (tôi, Dế Choắt) trong đoạn văn của Tô Hoài. Tác dụng chính là để liên kết các câu văn với nhau. Hãy khen nếu học sinh nêu được ý liên kết, hoặc gợi ý thêm nếu chưa rõ: ";
+        await askAI('231-ex1b', prefix, 'single', 'ltvc', 23);
+    } else {
+        fb.innerHTML = "Lỗi: Hệ thống chấm điểm chưa sẵn sàng.";
+    }
+};
+
+window.checkLTVC231_Q4 = async function () {
+    const input = document.getElementById('ai-231-q4');
+    if (!input || !input.value.trim()) { alert("Em hãy viết vài câu về lễ hội nhé!"); return; }
+    const fb = document.getElementById('fb-231-q4');
+    fb.classList.remove('hidden');
+    fb.innerHTML = "Hệ thống đang đọc bài của em...";
+
+    if (typeof askAI === 'function') {
+        const prefix = "Hãy nhận xét đoạn văn ngắn (2-3 câu) của học sinh về một lễ hội, yêu cầu có sử dụng phép lặp để liên kết câu: ";
+        await askAI('231-q4', prefix, 'single', 'ltvc', 23);
+    } else {
+        fb.innerHTML = "Lỗi: Hệ thống chấm điểm AI chưa sẵn sàng.";
+    }
+};
+
+window.checkEx231_2 = function () {
+    const v1 = document.getElementById('ex231-2-1').value;
+    const v2 = document.getElementById('ex231-2-2').value;
+    const fb = document.getElementById('fb-231-ex2');
+    fb.classList.remove('hidden');
+    if (v1 === 'hoa' && v2 === 'hoa') {
+        fb.innerHTML = "✅ Chính xác! Từ 'hoa' được lặp lại để liên kết câu.";
+        fb.className = "text-green-600 font-bold ml-4";
+        if (typeof celebrate === 'function') celebrate();
+    } else {
+        fb.innerHTML = "❌ Chưa đúng rồi, em hãy chọn lại từ để liên kết với 'Hoa giấy' ở câu 1 nhé!";
+        fb.className = "text-red-500 font-bold ml-4";
+    }
+};
+
+if (!lesson_231_ltvc.period) lesson_231_ltvc.period = '156';
+if (!lesson_231_ltvc.id) lesson_231_ltvc.id = "231-ltvc";

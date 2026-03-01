@@ -468,3 +468,78 @@ export const lesson_231_viet = {
     }
 ]
 };
+
+// --- Logic Hệ thống ---
+window.check231Viet_1b = function () {
+    const m = document.getElementById('v231-1b-m').value;
+    const t = document.getElementById('v231-1b-t').value;
+    const k = document.getElementById('v231-1b-k').value;
+    const fb = document.getElementById('fb-v231-1b');
+    fb.classList.remove('hidden');
+    if (m === '2' && t === '3' && k === '1') {
+        fb.innerHTML = "✅ CHUẨN XÁC! Em đã nắm vững cấu trúc đoạn văn (30/30 điểm).";
+        fb.className = "text-green-600 font-bold mt-2 italic text-left";
+        if (typeof celebrate === 'function') celebrate();
+    } else {
+        fb.innerHTML = "❌ CHƯA ĐÚNG! Em hãy xem lại sơ đồ Ghi nhớ phía dưới nhé.";
+        fb.className = "text-red-500 font-bold mt-2 italic text-left";
+    }
+};
+
+window.check231Viet_Ex2 = function () {
+    const v1 = document.getElementById('v231-ex2-1').value.trim();
+    const v2 = document.getElementById('v231-ex2-2').value.trim();
+    const v3 = document.getElementById('v231-ex2-3').value.trim();
+    const v4 = document.getElementById('v231-ex2-4').value.trim();
+    const fb = document.getElementById('fb-v231-ex2');
+    fb.classList.remove('hidden');
+
+    if (v1 && v2 && v3 && v4) {
+        fb.innerHTML = "✅ TỐT LẮM! Em đã trao đổi đầy đủ 4 ý của bài (40/40 điểm).";
+        fb.className = "text-green-600 font-bold mt-2 italic text-left";
+        if (typeof celebrate === 'function') celebrate();
+    } else {
+        fb.innerHTML = "Em hãy điền đầy đủ cả 4 ý trao đổi nhé!";
+        fb.className = "text-amber-500 font-bold mt-2 italic text-left";
+    }
+};
+
+window.check231Viet_LT2 = function () {
+    const input = document.getElementById('v231-lt2-book').value.trim();
+    const fb = document.getElementById('fb-v231-lt2');
+    fb.classList.remove('hidden');
+    if (input.length > 2) {
+        fb.innerHTML = "✅ Tuyệt quá! Em hãy cố gắng đọc cuốn sách này nhé (10/10 điểm).";
+        fb.className = "text-green-700 font-bold mt-2 italic text-left bg-green-50 p-3 rounded-lg";
+    } else {
+        fb.innerHTML = "Em hãy ghi tên cuốn sách mình định đọc nhé!";
+        fb.className = "text-amber-600 font-bold mt-2 italic text-left bg-amber-50 p-3 rounded-lg";
+    }
+};
+
+window.checkParagraphAI = async function (id) {
+    const fbTable = { 'v231-1a': 'fb-v231-1a', 'v231-1c': 'fb-v231-1c', 'v231-1d': 'fb-v231-1d', 'v231-lt1': 'fb-v231-lt1' };
+    const fb = document.getElementById(fbTable[id]);
+    fb.classList.remove('hidden');
+    fb.innerHTML = "Hệ thống đang chấm điểm...";
+    if (typeof askAI === 'function') {
+        let prefix = "";
+        if (id === 'v231-1a') prefix = "Câu 1a: Sự việc (Ngày hội văn hoá...) và ấn tượng chung (rực rỡ, háo hức). Nhận xét: ";
+        else if (id === 'v231-1c') prefix = "Câu 1c: Chi tiết ấn tượng (tiếng trống, ném còn, múa...). Nhận xét: ";
+        else if (id === 'v231-1d') prefix = "Câu 1d: Từ ngữ bộc lộ cảm xúc (hứng thú, thán phục, say sưa...). Nhận xét: ";
+        else if (id === 'v231-lt1') prefix = "Luyện tập: Việc đã làm + cảm xúc. Nhận xét: ";
+        await askAI(id, prefix, 'single', 'ltvc', 23);
+    } else { fb.innerHTML = "Lỗi: AI không sẵn sàng."; }
+};
+
+window.submit231VietFinal = function () {
+    // Gọi hệ thống nộp bài chung (form thu thập thông tin sẽ hiện lên)
+    if (typeof submitLTVCUnified === 'function') {
+        submitLTVCUnified('final-score-231v');
+    } else {
+        alert("Hệ thống nộp bài đang bận, vui lòng thử lại sau!");
+    }
+};
+
+if (!lesson_231_viet.period) lesson_231_viet.period = '157';
+if (!lesson_231_viet.id) lesson_231_viet.id = "231-viet";

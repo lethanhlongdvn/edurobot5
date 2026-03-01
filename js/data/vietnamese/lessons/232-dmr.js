@@ -240,3 +240,72 @@ export const lesson_232_dmr = {
     }
 ]
 };
+
+// --- LOGIC ---
+window.selectedFavorite = 0;
+window.setFavorite = function (n) {
+    window.selectedFavorite = n;
+    const stars = document.querySelectorAll('.fav-star');
+    stars.forEach((star, i) => {
+        if (i < n) {
+            star.classList.replace('text-gray-300', 'text-amber-400');
+        } else {
+            star.classList.replace('text-amber-400', 'text-gray-300');
+        }
+    });
+};
+
+window.check232DMR = async function () {
+    const name = document.getElementById('dmr-name').value.trim();
+    const author = document.getElementById('dmr-author').value.trim();
+    const content = document.getElementById('dmr-content').value.trim();
+    const imp = document.getElementById('dmr-imp').value.trim();
+    const feel = document.getElementById('dmr-feel').value.trim();
+
+    if (!name || !content || !imp || !feel) {
+        alert("Em hãy điền đầy đủ các thông tin trong Phiếu đọc sách nhé!");
+        return;
+    }
+
+    const fb = document.getElementById('fb-232-dmr');
+    fb.classList.remove('hidden');
+    fb.innerHTML = `<div class="flex items-center gap-4"><div class="animate-spin rounded-full h-8 w-8 border-4 border-indigo-600 border-t-transparent"></div><p class="text-xl font-bold italic text-indigo-900">Hệ thống đang xem qua phiếu của em...</p></div>`;
+
+    if (typeof askAI === 'function') {
+        const prompt = `Em hãy nhận xét phiếu đọc sách của học sinh. 
+        Thông tin phiếu:
+        - Tên truyện: ${name}
+        - Tác giả: ${author}
+        - Nội dung: ${content}
+        - Ấn tượng: ${imp}
+        - Cảm nhận: ${feel}
+        - Yêu thích: ${window.selectedFavorite}/5 sao
+        
+        Yêu cầu nhận xét:
+        1. Khen ngợi nếu học sinh tóm tắt rõ ràng và có cảm xúc.
+        2. Gợi ý thêm cách diễn đạt để phần "Ấn tượng" hoặc "Cảm nhận" sâu sắc hơn.
+        3. Khuyến khích học sinh tiếp tục đọc thêm các cuốn sách khác về quê hương.`;
+
+        const studentWork = `Tên sách: ${name}\nNội dung: ${content}\nẤn tượng: ${imp}\nCảm nhận: ${feel}`;
+        await askAI('232-dmr', prompt, 'single', 'writing', 23, studentWork);
+    } else {
+        fb.innerHTML = "Lỗi: Hệ hệ thống AI chưa sẵn sàng.";
+    }
+};
+
+window.reset232DMR = function () {
+    ['dmr-name', 'dmr-author', 'dmr-type', 'dmr-content', 'dmr-imp', 'dmr-feel'].forEach(id => {
+        document.getElementById(id).value = '';
+    });
+    window.setFavorite(0);
+    document.getElementById('fb-232-dmr').classList.add('hidden');
+};
+
+window.submitV232DMR = function () {
+    if (typeof submitLTVCUnified === 'function') {
+        submitLTVCUnified('232-dmr');
+    } else { alert("Hệ thống nộp bài đang bận!"); }
+};
+
+if (!lesson_232_dmr.period) lesson_232_dmr.period = '161';
+if (!lesson_232_dmr.id) lesson_232_dmr.id = "232-dmr";
