@@ -12,7 +12,10 @@ export const UI = {
     ...Lesson,
     ...AIInteraction,
     ...Visuals,
-    ...Quiz,
+
+    // Quiz redirects to ensure single state management
+    renderQuizContainer(lesson) { return Quiz.renderQuizContainer(lesson); },
+    initQuiz(lesson) { Quiz.initQuiz(lesson); },
 
     renderNavbarSubjectSwitcher(currentSubject, allSubjects) {
         return `
