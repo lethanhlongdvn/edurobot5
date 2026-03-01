@@ -11,7 +11,7 @@ export const vietnameseData = [
     lesson201,
     lesson202,
     ...convertedVietnameseData,
-    ...placeholderLessons
+    // ...placeholderLessons // Disabled to show only mapped content
 ].sort((a, b) => {
     const pA = parseInt(a.period);
     const pB = parseInt(b.period);
