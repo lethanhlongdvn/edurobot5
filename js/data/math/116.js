@@ -26,22 +26,40 @@ export const lesson116 = {
                     Đây là khai triển của hình nào?
                 </p>
                 <div class="bg-blue-50 p-1 rounded-[32px]">
-                    <div class="bg-white rounded-2xl p-2 mb-1 flex justify-center border border-blue-100">
-                        <img src="hinh_anh/toan_tap_2/116_b1_de.png" class="w-full h-auto max-w-[250px] object-contain drop-shadow-sm mix-blend-multiply" />
+                    <div class="bg-white rounded-2xl p-4 mb-2 flex justify-center border border-blue-100">
+                        <img src="hinh_anh/toan_tap_2/116_b1_de.png" class="w-full h-auto max-w-sm object-contain drop-shadow-sm mix-blend-multiply" />
                     </div>
-                    <div class="grid grid-cols-3 gap-1">
-                        <button onclick="check116B1('A')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center gap-1 group">
-                             <img src="hinh_anh/toan_tap_2/116_b1_a.png" class="h-20 object-contain drop-shadow-sm mix-blend-multiply" />
-                            <span class="font-black text-2xl text-gray-400 group-hover:text-blue-600">A</span>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="check116B1('A')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center justify-end gap-2 group min-h-[160px]">
+                             <img src="hinh_anh/toan_tap_2/116_b1_a.png" class="h-28 md:h-36 object-contain drop-shadow-sm mix-blend-multiply" />
+                            <span class="font-black text-2xl md:text-3xl text-gray-400 group-hover:text-blue-600">A</span>
                         </button>
-                        <button onclick="check116B1('B')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center gap-1 group">
-                             <img src="hinh_anh/toan_tap_2/116_b1_b.png" class="h-20 object-contain drop-shadow-sm mix-blend-multiply" />
-                            <span class="font-black text-2xl text-gray-400 group-hover:text-blue-600">B</span>
+                        <button onclick="check116B1('B')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center justify-end gap-2 group min-h-[160px]">
+                             <img src="hinh_anh/toan_tap_2/116_b1_b.png" class="h-28 md:h-36 object-contain drop-shadow-sm mix-blend-multiply" />
+                            <span class="font-black text-2xl md:text-3xl text-gray-400 group-hover:text-blue-600">B</span>
                         </button>
-                        <button onclick="check116B1('C')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center gap-1 group">
-                             <img src="hinh_anh/toan_tap_2/116_b1_c.png" class="h-10 md:h-12 object-contain drop-shadow-sm mix-blend-multiply" />
-                            <span class="font-black text-2xl text-gray-400 group-hover:text-blue-600">C</span>
+                        <button onclick="check116B1('C')" class="b116-opt bg-white p-2 rounded-xl border-2 border-gray-100 flex flex-col items-center justify-end gap-2 group min-h-[160px]">
+                             <img src="hinh_anh/toan_tap_2/116_b1_c.png" class="h-16 md:h-20 object-contain drop-shadow-sm mix-blend-multiply" />
+                            <span class="font-black text-2xl md:text-3xl text-gray-400 group-hover:text-blue-600">C</span>
                         </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Bài 2 -->
+            <div id="box-116-2" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
+                <div class="flex items-center justify-between mb-2">
+                    <p class="font-black text-xl md:text-2xl text-emerald-700 flex items-center gap-2">
+                        <span class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">2</span>
+                        Thực hành gấp hình lập phương
+                    </p>
+                </div>
+                <div class="bg-emerald-50 p-4 rounded-[32px] space-y-4">
+                    <p class="text-emerald-900 font-bold text-lg md:text-xl text-center">Em hãy chọn một trong các hình khai triển dưới đây và làm theo bước để gấp thành hình lập phương nhé!</p>
+                    <div class="flex justify-center bg-white p-2 md:p-4 rounded-3xl shadow-inner border border-emerald-100">
+                        <img src="hinh_anh/toan_tap_2/116_b2_shapes.png" alt="Shapes" class="w-full max-w-2xl h-auto object-contain mix-blend-multiply drop-shadow-sm" />
+                    </div>
+                    <div class="flex justify-center bg-white p-2 md:p-4 rounded-3xl shadow-inner border border-emerald-100">
+                        <img src="hinh_anh/toan_tap_2/116_b2_robot.png" alt="Robot folding" class="w-full max-w-2xl h-auto object-contain mix-blend-multiply drop-shadow-sm" />
                     </div>
                 </div>
             </div>
@@ -55,18 +73,18 @@ export const lesson116 = {
                     </p>
                     <button onclick="check116B3()" class="bg-indigo-600 text-white px-4 py-1 rounded-lg font-bold text-xs">Kiểm tra</button>
                 </div>
-                <div class="bg-indigo-50 p-1 rounded-[32px] grid grid-cols-3 gap-1">
-                    <button onclick="this.classList.toggle('selected');" id="116-3a" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col items-center gap-1 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
-                        <img src="hinh_anh/toan_tap_2/116_b3_a.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[140px]" />
-                        <span class="font-black text-lg text-gray-400">A</span>
+                <div class="bg-indigo-50 p-2 md:p-4 rounded-[32px] grid grid-cols-3 gap-2">
+                    <button onclick="this.classList.toggle('selected');" id="116-3a" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col justify-end items-center gap-2 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
+                        <img src="hinh_anh/toan_tap_2/116_b3_a.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[260px]" />
+                        <span class="font-black text-xl md:text-3xl text-gray-400">A</span>
                     </button>
-                    <button onclick="this.classList.toggle('selected');" id="116-3b" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col items-center gap-1 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
-                        <img src="hinh_anh/toan_tap_2/116_b3_b.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[140px]" />
-                        <span class="font-black text-lg text-gray-400">B</span>
+                    <button onclick="this.classList.toggle('selected');" id="116-3b" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col justify-end items-center gap-2 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
+                        <img src="hinh_anh/toan_tap_2/116_b3_b.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[260px]" />
+                        <span class="font-black text-xl md:text-3xl text-gray-400">B</span>
                     </button>
-                    <button onclick="this.classList.toggle('selected');" id="116-3c" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col items-center gap-1 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
-                        <img src="hinh_anh/toan_tap_2/116_b3_c.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[140px]" />
-                        <span class="font-black text-lg text-gray-400">C</span>
+                    <button onclick="this.classList.toggle('selected');" id="116-3c" class="b116-3-btn bg-white p-2 rounded-2xl flex flex-col justify-end items-center gap-2 border-2 border-transparent [&.selected]:border-indigo-500 [&.selected]:bg-indigo-100">
+                        <img src="hinh_anh/toan_tap_2/116_b3_c.png" class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm max-h-[260px]" />
+                        <span class="font-black text-xl md:text-3xl text-gray-400">C</span>
                     </button>
                 </div>
             </div>
@@ -80,7 +98,7 @@ export const lesson116 = {
                     </p>
                     <button onclick="check116B4()" class="bg-orange-600 text-white px-4 py-1 rounded-lg font-bold text-xs">Kiểm tra</button>
                 </div>
-                <div class="bg-slate-50 p-2 rounded-[32px] flex justify-center items-center scale-75 md:scale-100 origin-center">
+                <div class="bg-slate-50 p-2 py-8 md:py-16 rounded-[32px] flex justify-center items-center scale-100 md:scale-[1.25] origin-center">
                     <div class="flex items-center">
                         <div id="cut-green" onclick="toggleCut116('green')" class="w-12 h-24 bg-[#22c55e] border-2 border-[#15803d] relative cursor-pointer"><div class="x-mark hidden absolute inset-0 flex items-center justify-center text-red-600 text-3xl font-black">✕</div></div>
                         <div class="flex flex-col">
