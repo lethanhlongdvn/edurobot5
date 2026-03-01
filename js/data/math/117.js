@@ -196,7 +196,7 @@ export const lesson117 = {
                     <p class="text-gray-400 font-black text-[10px] md:text-xs uppercase mb-2 tracking-widest text-center md:text-left">Lời giải của em</p>
                     <div class="space-y-4">
                         <div class="relative group">
-                            <textarea id="ans-117-2-text" rows="5" class="w-full p-4 md:p-6 text-xl md:text-2xl font-bold text-indigo-800 bg-white rounded-[24px] border-2 border-gray-100 shadow-lg focus:border-emerald-500 focus:ring-0 transition-all resize-none leading-tight" placeholder="Bé hãy viết lời giải và phép tính vào đây nhé..."></textarea>
+                            <textarea id="ans-117-2-text" rows="5" class="w-full p-4 md:p-6 text-xl md:text-2xl font-bold text-indigo-800 bg-white rounded-[24px] border-2 border-gray-100 shadow-lg focus:border-emerald-500 focus:ring-0 transition-all resize-none leading-tight" placeholder="Bạn hãy viết lời giải và phép tính vào đây nhé..."></textarea>
                             <button onclick="startVoiceInput('ans-117-2-text')" class="absolute bottom-6 right-6 p-4 bg-emerald-100 text-emerald-600 rounded-2xl hover:bg-emerald-600 hover:text-white transition-all shadow-lg active:scale-90 group-hover:block sm:hidden md:block">
                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                             </button>
@@ -239,7 +239,7 @@ export const lesson117 = {
                     if (correctA && correctB) {
                         sp.textContent = "Xuất sắc! ✨"; sp.className = "font-black text-4xl italic text-emerald-600 animate-bounce";
                     } else {
-                        sp.textContent = "Bé xem lại nhé! 👉"; sp.className = "font-black text-4xl italic text-red-500";
+                        sp.textContent = "Bạn xem lại nhé! 👉"; sp.className = "font-black text-4xl italic text-red-500";
                     }
                 };
 
@@ -247,7 +247,7 @@ export const lesson117 = {
                 window.submit117B2 = async function() {
                     const a2t = document.getElementById('ans-117-2-text').value;
                     if (!a2t || a2t.length < 10) {
-                        alert("Thầy E nhắc bé: Hãy viết lời giải chi tiết vào ô trống trước khi nhờ thầy chấm nhé! ✨");
+                        alert("Thầy E nhắc bạn: Hãy viết lời giải chi tiết vào ô trống trước khi nhờ thầy chấm nhé! ✨");
                         return;
                     }
                     const btn = document.getElementById('btn-check-117-ai');
@@ -262,7 +262,7 @@ export const lesson117 = {
                         );
                         alert((aiResult.isCorrect ? "⭐ GIỎI QUÁ! \n" : "⚠️ CỐ GẮNG LÊN! \n") + aiResult.comment);
                     } else {
-                        alert("Thầy E đang bận một xíu, bé hãy thử lại sau nhé!");
+                        alert("Thầy E đang bận một xíu, bạn hãy thử lại sau nhé!");
                     }
                     btn.disabled = false;
                     btn.innerHTML = originalContent;
@@ -274,7 +274,7 @@ export const lesson117 = {
                     const a1b = document.getElementById('ans-117-1b').value;
                     const a2t = document.getElementById('ans-117-2-text').value;
                     if (!a1a || !a1b || !a2t) {
-                        alert("Thầy E nhắc bé: Hãy hoàn thành cả Bài 1 và Bài 2 trước khi nộp bài tổng kết nhé! ✨");
+                        alert("Thầy E nhắc bạn: Hãy hoàn thành cả Bài 1 và Bài 2 trước khi nộp bài tổng kết nhé! ✨");
                         return;
                     }
                     const btn = document.getElementById('btn-submit-117');
@@ -292,7 +292,7 @@ export const lesson117 = {
                     if (window.submitMathLesson) {
                         window.submitMathLesson(report, status, "btn-submit-117");
                     }
-                    alert("🎉 Tuyệt vời! Bài làm của bé đã được gửi tới Thầy E!");
+                    alert("🎉 Tuyệt vời! Bài làm của bạn đã được gửi tới Thầy E!");
                     btn.disabled = false;
                     btn.innerHTML = '<span class="tracking-widest uppercase">Đã Nộp Bài</span>';
                 };
@@ -301,7 +301,7 @@ export const lesson117 = {
                     if (window.eduRobotVoice) {
                         window.eduRobotVoice(targetId);
                     } else {
-                        alert("Tính năng Microphone đang được khởi động... Bé hãy nhấn lại sau nhé! 🎤");
+                        alert("Tính năng Microphone đang được khởi động... Bạn hãy nhấn lại sau nhé! 🎤");
                         const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
                         if (Recognition) {
                             const recognition = new Recognition();
@@ -316,39 +316,5 @@ export const lesson117 = {
             </script>
         </div>
     `,
-    "quizPool": [
-        {
-            "question": "Công thức tính diện tích xung quanh của hình hộp chữ nhật là:",
-            "options": [
-                "S = (a + b) × 2 × h",
-                "S = a × b × h",
-                "S = (a + b) × h",
-                "S = a × b × 2"
-            ],
-            "answer": 0,
-            "level": 1
-        },
-        {
-            "question": "Một hình hộp chữ nhật có chu vi đáy là 20cm, chiều cao 5cm. Diện tích xung quanh là:",
-            "options": [
-                "50 cm²",
-                "100 cm²",
-                "100 cm",
-                "25 cm²"
-            ],
-            "answer": 1,
-            "level": 1
-        },
-        {
-            "question": "Diện tích xung quanh là tổng diện tích của mấy mặt bên?",
-            "options": [
-                "2 mặt",
-                "4 mặt",
-                "6 mặt",
-                "5 mặt"
-            ],
-            "answer": 1,
-            "level": 1
-        }
-    ]
+    "quizPool": []
 };
