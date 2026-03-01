@@ -69,7 +69,7 @@ export const lesson116 = {
                 <div class="flex items-center justify-between mb-1">
                     <p class="font-black text-xl md:text-2xl text-indigo-700 flex items-center gap-2">
                         <span class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black">3</span>
-                        Chọn hình lập phương (A, C):
+                        Chọn khai triển của hình lập phương:
                     </p>
                     <button onclick="check116B3()" class="bg-indigo-600 text-white px-4 py-1 rounded-lg font-bold text-xs">Kiểm tra</button>
                 </div>
@@ -138,7 +138,7 @@ export const lesson116 = {
                     const c = document.getElementById('116-3c').classList.contains('selected');
                     const box = document.getElementById('box-116-3');
                     box.classList.add('border-2');
-                    if (a && !b && c) {
+                    if (!a && !b && c) {
                         box.classList.add('border-emerald-400', 'bg-emerald-50');
                     } else {
                         box.classList.add('border-red-400', 'bg-red-50');
@@ -168,7 +168,7 @@ export const lesson116 = {
                     const a3 = document.getElementById('116-3a').classList.contains('selected');
                     const b3 = document.getElementById('116-3b').classList.contains('selected');
                     const c3 = document.getElementById('116-3c').classList.contains('selected');
-                    if (a3 && !b3 && c3) score += 3.5;
+                    if (!a3 && !b3 && c3) score += 3.5;
                     if (window.lastCut116 === 'green' || window.lastCut116 === 'yellow') score += 3;
 
                     const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
