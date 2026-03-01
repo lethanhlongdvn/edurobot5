@@ -5,7 +5,7 @@ import { lesson_202_hop_qua_mau_thien_thanh } from './lessons/202-hop-qua-mau-th
 import { lesson_211_gio_hoa_thang_nam } from './lessons/211-gio-hoa-thang-nam.js';
 import { lesson_211_ltvc_gio_hoa_thang_nam } from './lessons/211-ltvc-gio-hoa-thang-nam.js';
 import { lesson_212_thu_cua_bo } from './lessons/212-thu-cua-bo.js';
-import { lesson_221_viet } from './lessons/221-viet.js';
+
 import { lesson_221_doan_thuyen_danh_ca } from './lessons/221-doan-thuyen-danh-ca.js';
 import { lesson_221_ltvc } from './lessons/221-ltvc.js';
 import { lesson_221_viet } from './lessons/221-viet.js';
@@ -56,7 +56,7 @@ export const convertedVietnameseData = [
   lesson_211_gio_hoa_thang_nam,
   lesson_211_ltvc_gio_hoa_thang_nam,
   lesson_212_thu_cua_bo,
-  lesson_221_viet,
+
   lesson_221_doan_thuyen_danh_ca,
   lesson_221_ltvc,
   lesson_221_viet,

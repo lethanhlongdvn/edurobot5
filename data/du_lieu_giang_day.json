@@ -1,0 +1,101 @@
+{
+    "Học kỳ 1": {
+        "Tuần 1": {
+            "Tên bài": "Thanh âm của gió",
+            "Nội dung": "Luyện tập về danh từ, động từ, tính từ",
+            "Kiến thức": "Phân loại từ chỉ sự vật, hoạt động, đặc điểm. Ví dụ: gió (danh từ), thổi (động từ), trong vắt (tính từ)."
+        },
+        "Tuần 2": {
+            "Tên bài": "Tuổi Ngựa",
+            "Nội dung": "Đại từ",
+            "Kiến thức": "Từ dùng để thay thế (thế, vậy, đó...) hoặc để hỏi (ai, gì, đâu...). Tác dụng tránh lặp từ."
+        },
+        "Tuần 3 & 4": {
+            "Tên bài": "Tiếng hạt nảy mầm / Bộ sưu tập độc đáo",
+            "Nội dung": "Luyện tập về đại từ",
+            "Kiến thức": "Sử dụng đại từ xưng hô (tôi, anh, chúng ta) và đại từ thay thế (nó, ấy, này) theo ngữ cảnh."
+        },
+        "Tuần 5 & 6": {
+            "Tên bài": "Trước cổng trời / Hang Sơn Đoòng",
+            "Nội dung": "Từ đồng nghĩa",
+            "Kiến thức": "Đồng nghĩa hoàn toàn (bố/ba) và không hoàn toàn (ăn/xơi/chén - khác sắc thái tình cảm)."
+        },
+        "Tuần 7 & 8": {
+            "Tên bài": "Mầm non / Bài ca về mặt trời",
+            "Nội dung": "Từ đa nghĩa",
+            "Kiến thức": "Phân biệt nghĩa gốc (bộ phận cơ thể) và nghĩa chuyển (mắt na, mắt lưới) dựa trên sự tương đồng."
+        },
+        "Tuần 10 & 11": {
+            "Tên bài": "Thư gửi các học sinh / Trải nghiệm để sáng tạo",
+            "Nội dung": "Sử dụng từ điển",
+            "Kiến thức": "Quy trình tra mục từ, hiểu kí hiệu (đt, tt) và tra nghĩa thành ngữ."
+        },
+        "Tuần 12 & 13": {
+            "Tên bài": "Thế giới trong trang sách / Dế Mèn phiêu lưu ký",
+            "Nội dung": "Dấu gạch ngang",
+            "Kiến thức": "Đánh dấu lời đối thoại, liệt kê, chú thích và nối các từ trong liên danh (Hà Nội - Hải Phòng)."
+        },
+        "Tuần 14 & 15": {
+            "Tên bài": "Tiếng đàn ba-la-lai-ca / Tranh làng Hồ",
+            "Nội dung": "Điệp từ, điệp ngữ",
+            "Kiến thức": "Lặp lại từ/ngữ để nhấn mạnh nội dung hoặc tạo nhịp điệu cảm xúc."
+        },
+        "Tuần 16 & 17": {
+            "Tên bài": "Chú ốc sên bay / Một ngôi chùa độc đáo",
+            "Nội dung": "Kết từ",
+            "Kiến thức": "Từ nối (và, vì, nhưng) và cặp kết từ (vì... nên, mặc dù... nhưng) để thể hiện quan hệ ý nghĩa."
+        }
+    },
+    "Học kỳ 2": {
+        "Tuần 19": {
+            "Tên bài": "Tiếng hát của người đá",
+            "Nội dung": "Câu đơn và câu ghép",
+            "Kiến thức": "Câu đơn (1 cụm C-V), Câu ghép (nhiều cụm C-V/vế câu ghép lại)."
+        },
+        "Tuần 20 & 21": {
+            "Tên bài": "Hạt gạo làng ta / Giỏ hoa tháng Năm",
+            "Nội dung": "Cách nối các vế câu ghép",
+            "Kiến thức": "Nối trực tiếp (dùng dấu câu) hoặc dùng kết từ/cặp từ hô ứng (vừa... đã, bao nhiêu... bấy nhiêu)."
+        },
+        "Tuần 22": {
+            "Tên bài": "Đoàn thuyền đánh cá",
+            "Nội dung": "Luyện tập câu ghép",
+            "Kiến thức": "Nhận diện cách nối vế câu và viết đoạn văn sử dụng câu ghép."
+        },
+        "Tuần 23, 24, 25": {
+            "Tên bài": "Hội thổi cơm thi / Hương cốm / Đàn t’rưng",
+            "Nội dung": "Liên kết câu",
+            "Kiến thức": "Phép lặp (lặp từ), Phép nối (nhưng, tuy nhiên), Phép thế (dùng đại từ/từ đồng nghĩa thay thế)."
+        },
+        "Tuần 26": {
+            "Tên bài": "Xuồng ba lá quê tôi",
+            "Nội dung": "Luyện tập liên kết câu",
+            "Kiến thức": "Vận dụng tổng hợp các phép lặp, nối, thế trong một đoạn văn."
+        },
+        "Tuần 28, 29, 30": {
+            "Tên bài": "Nghìn năm văn hiến / Tuệ Tĩnh / Trần Đại Nghĩa",
+            "Nội dung": "Ôn tập tổng hợp",
+            "Kiến thức": "Củng cố đại từ, kết từ, từ đa nghĩa và thực hành tạo lập câu ghép."
+        },
+        "Tuần 31": {
+            "Tên bài": "Về ngôi nhà đang xây",
+            "Nội dung": "Viết hoa tu từ",
+            "Kiến thức": "Viết hoa danh từ chung (như: Người) để thể hiện sự tôn trọng đặc biệt."
+        },
+        "Tuần 32": {
+            "Tên bài": "Bài ca trái đất",
+            "Nội dung": "Viết tên riêng nước ngoài",
+            "Kiến thức": "Viết hoa chữ cái đầu bộ phận, có gạch nối giữa các tiếng (Hi-ma-lay-a), ngoại trừ âm Hán Việt."
+        },
+        "Tuần 33": {
+            "Tên bài": "Một người hùng thầm lặng",
+            "Nội dung": "Ôn tập dấu gạch ngang",
+            "Kiến thức": "Phân biệt dấu gạch ngang (chú thích, đối thoại) và dấu gạch nối (trong tên phiên âm)."
+        },
+        "Tuần 34": {
+            "Tên bài": "Điện thoại di động",
+            "Nội dung": "Luyện tập liên kết câu",
+            "Kiến thức": "Thực hành thêm từ ngữ nối và viết đoạn văn có tính liên kết chặt chẽ."
+        }
+    }
+}

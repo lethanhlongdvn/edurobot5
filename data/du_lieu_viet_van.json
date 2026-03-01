@@ -1,0 +1,83 @@
+{
+    "Phan_mon": "Viết văn lớp 5 (Bộ sách Kết nối tri thức)",
+    "Quy_trinh_giang_day": "Tìm hiểu cách viết -> Tìm ý/Lập dàn ý -> Viết đoạn/bài -> Đánh giá và chỉnh sửa",
+    "Học_ky_1": {
+        "Tuần 1-3": {
+            "Thể_loại": "Bài văn kể chuyện sáng tạo",
+            "Hình_thức": "Đóng vai nhân vật (xưng tôi), thay đổi kết thúc hoặc thêm chi tiết sáng tạo",
+            "Trọng_tâm": "Sử dụng trí tưởng tượng để làm câu chuyện sinh động và mới mẻ"
+        },
+        "Tuần 3-4": {
+            "Thể_loại": "Báo cáo công việc",
+            "Đối_tượng": "Hoạt động của tổ, lớp hoặc chi đội",
+            "Cấu_trúc_bắt_buộc": [
+                "Quốc hiệu, tiêu ngữ",
+                "Địa điểm, ngày tháng",
+                "Tên báo cáo",
+                "Nội dung (Số liệu, ưu điểm, hạn chế, phương hướng)",
+                "Người báo cáo"
+            ]
+        },
+        "Tuần 5-8": {
+            "Thể_loại": "Bài văn tả phong cảnh",
+            "Đối_tượng": "Ao hồ, sông suối, rừng, biển đảo...",
+            "Kỹ_thuật": "Quan sát chi tiết tiêu biểu, dùng so sánh và nhân hóa",
+            "Bố_cục": "3 phần: Mở bài (trực tiếp/gián tiếp), Thân bài (theo trình tự thời gian/không gian), Kết bài (tự nhiên/mở rộng)"
+        },
+        "Tuần 10-11": {
+            "Thể_loại": "Đoạn văn giới thiệu nhân vật",
+            "Đối_tượng": "Nhân vật văn học trong sách",
+            "Yêu_cầu": "Nêu đặc điểm ngoại hình, tính cách, hành động và cảm nhận cá nhân"
+        },
+        "Tuần 12-15": {
+            "Thể_loại": "Đoạn văn thể hiện tình cảm, cảm xúc",
+            "Đối_tượng": "Về một sự việc hoặc một bài thơ",
+            "Trọng_tâm": "Diễn tả cảm xúc chân thực, lý do yêu thích"
+        }
+    },
+    "Học_ky_2": {
+        "Tuần 19-22": {
+            "Thể_loại": "Bài văn tả người",
+            "Đối_tượng": "Người thân, thầy cô, bạn bè hoặc người vừa mới gặp",
+            "Trọng_tâm": "Tả ngoại hình kết hợp tính cách và hoạt động tiêu biểu"
+        },
+        "Tuần 23-24": {
+            "Thể_loại": "Viết chương trình hoạt động",
+            "Mục_đích": "Lập kế hoạch cho các hoạt động tập thể (văn nghệ, cắm trại, làm sạch môi trường)",
+            "Cấu_trúc": "Mục đích, Chuẩn bị, Nội dung chi tiết"
+        },
+        "Tuần 25-28": {
+            "Thể_loại": "Bài văn tả đồ vật",
+            "Đối_tượng": "Đồ vật gắn với kỷ niệm hoặc đồ vật thông minh trong tương lai",
+            "Yêu_cầu": "Tả bao quát, chi tiết từng bộ phận và công dụng/kỷ niệm gắn liền"
+        },
+        "Tuần 30-32": {
+            "Thể_loại": "Viết đoạn văn/bài văn về một vấn đề xã hội",
+            "Hình_thức": "Nêu ý kiến phản đối hoặc tán thành về một hiện tượng (vứt rác, tiết kiệm điện...)",
+            "Kỹ_năng": "Lập luận chặt chẽ, đưa ra dẫn chứng thuyết phục"
+        },
+        "Tuần 33-34": {
+            "Thể_loại": "Viết thư",
+            "Hình_thức": "Thư gửi người thân, bạn bè hoặc thư trao đổi công việc",
+            "Yêu_cầu": "Đúng quy thức trình bày thư (địa điểm, thời gian, lời xưng hô, nội dung, lời chúc, chữ ký)"
+        }
+    },
+    "Tiêu_chí_chấm_điểm": {
+        "Đúng_thể_loại": {
+            "Điểm_tối_đa": 4,
+            "Mô_tả": "Bài viết có đúng yêu cầu (Tả cảnh, Kể chuyện hay Báo cáo) không?"
+        },
+        "Cảm_xúc_và_Hình_ảnh": {
+            "Điểm_tối_đa": 3,
+            "Mô_tả": "Có sử dụng biện pháp tu từ (so sánh, nhân hóa) không?"
+        },
+        "Cấu_trúc": {
+            "Điểm_tối_đa": 2,
+            "Mô_tả": "Có đủ Mở - Thân - Kết bài không?"
+        },
+        "Sáng_tạo": {
+            "Điểm_tối_đa": 1,
+            "Mô_tả": "Có chi tiết mới lạ hoặc cách diễn đạt độc đáo không?"
+        }
+    }
+}
