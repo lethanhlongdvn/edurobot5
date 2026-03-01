@@ -4,15 +4,15 @@ import { AIInteraction } from './AIInteraction.js';
 export const Quiz = {
     renderQuizContainer(lesson) {
         return `
-            <div class="glass-card rounded-[40px] p-6 md:p-12 bg-white min-h-[500px] animate-fade-in relative overflow-hidden">
+            <div class="glass-card rounded-[40px] p-6 md:p-12 bg-white dark:bg-slate-900 min-h-[500px] animate-fade-in relative overflow-hidden">
                 <!-- Background Decoration -->
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-orange-50 rounded-full blur-3xl opacity-50 border-orange-200"></div>
-                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-50 rounded-full blur-3xl opacity-50 border-blue-200"></div>
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-orange-50 dark:bg-orange-900/10 rounded-full blur-3xl opacity-50 border-orange-200 dark:border-orange-800/30"></div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-50 dark:bg-blue-900/10 rounded-full blur-3xl opacity-50 border-blue-200 dark:border-blue-800/30"></div>
                 
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8 md:mb-12 relative z-10">
                     <div class="flex items-center gap-4">
                         <div class="w-2 h-10 md:h-12 bg-orange-500 rounded-full"></div>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 m-0 tracking-tight">Thử thách Củng cố</h2>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white m-0 tracking-tight">Thử thách Củng cố</h2>
                     </div>
                     
                     <div class="flex gap-4">
@@ -30,7 +30,7 @@ export const Quiz = {
                     </div>
                 </div>
 
-                <div id="quiz-progress-bar" class="w-full h-2 md:h-3 bg-gray-100 rounded-full mb-8 overflow-hidden relative z-10">
+                <div id="quiz-progress-bar" class="w-full h-2 md:h-3 bg-gray-100 dark:bg-slate-800 rounded-full mb-8 overflow-hidden relative z-10">
                     <div id="quiz-progress-fill" class="h-full bg-orange-500 rounded-full transition-all duration-500 w-[10%]"></div>
                 </div>
 
@@ -149,15 +149,15 @@ export const Quiz = {
 
         container.innerHTML = `
             <div class="animate-slide-in-right relative z-30">
-                <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 md:mb-12 leading-relaxed text-center sm:text-left drop-shadow-sm">
+                <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-slate-100 mb-8 md:mb-12 leading-relaxed text-center sm:text-left drop-shadow-sm">
                     <span class="text-orange-500 font-black mr-2">Q${quiz.currentIndex + 1}.</span> ${q.question}
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 relative z-50" id="opts-container">
                     ${q.options.map((opt, optIdx) => `
-                         <button onclick="Quiz.selectAnswer(${optIdx})" class="quiz-opt-btn relative w-full text-left p-6 md:p-8 rounded-[24px] md:rounded-[32px] border-4 border-gray-100 bg-gray-50 hover:bg-orange-50 hover:border-orange-200 hover:shadow-lg hover:-translate-y-1 transition-all group overflow-hidden cursor-pointer">
+                         <button onclick="Quiz.selectAnswer(${optIdx})" class="quiz-opt-btn relative w-full text-left p-6 md:p-8 rounded-[24px] md:rounded-[32px] border-4 border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-slate-800/50 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:border-orange-200 dark:hover:border-orange-800 hover:shadow-lg hover:-translate-y-1 transition-all group overflow-hidden cursor-pointer text-gray-700 dark:text-slate-200">
                             <div class="flex items-center pointer-events-none">
-                                <div class="w-8 h-8 md:w-10 md:h-10 border-4 border-gray-200 rounded-full flex-shrink-0 mr-4 md:mr-6 group-hover:border-orange-400 transition-colors flex items-center justify-center opt-indicator"></div>
-                                <span class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 group-hover:text-orange-900 transition-colors leading-tight">${opt}</span>
+                                <div class="w-8 h-8 md:w-10 md:h-10 border-4 border-gray-200 dark:border-slate-700 rounded-full flex-shrink-0 mr-4 md:mr-6 group-hover:border-orange-400 transition-colors flex items-center justify-center opt-indicator"></div>
+                                <span class="text-xl md:text-2xl lg:text-3xl font-bold group-hover:text-orange-900 dark:group-hover:text-orange-300 transition-colors leading-tight">${opt}</span>
                             </div>
                         </button>
                     `).join('')}
@@ -254,8 +254,8 @@ export const Quiz = {
         container.innerHTML = `
             <div class="text-center animate-fade-in py-8">
                 <div class="text-6xl md:text-8xl mb-6">${quiz.score >= 80 ? '🏆' : (quiz.score >= 50 ? '🌟' : '💪')}</div>
-                <h3 class="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">Hoàn thành xuất sắc!</h3>
-                <p class="text-xl md:text-3xl font-bold text-gray-500 mb-12">Điểm của bạn: <span class="${quiz.score >= 80 ? 'text-emerald-600' : 'text-orange-600'} text-4xl md:text-6xl font-black bg-white px-4 py-2 rounded-2xl shadow-sm border-2 border-gray-100">${quiz.score} / 100</span></p>
+                <h3 class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">Hoàn thành xuất sắc!</h3>
+                <p class="text-xl md:text-3xl font-bold text-gray-500 dark:text-slate-400 mb-12">Điểm của bạn: <span class="${quiz.score >= 80 ? 'text-emerald-600' : 'text-orange-600'} text-4xl md:text-6xl font-black bg-white dark:bg-slate-800 px-4 py-2 rounded-2xl shadow-sm border-2 border-gray-100 dark:border-slate-700">${quiz.score} / 100</span></p>
                 
                 <div class="flex justify-center">
                     <button id="btn-submit-final-score" onclick="Quiz.submitToFirebase()" class="bg-blue-600 hover:bg-blue-700 text-white px-10 md:px-16 py-5 md:py-6 rounded-[32px] font-black text-xl md:text-2xl uppercase tracking-widest shadow-2xl shadow-blue-300 transition-all transform hover:-translate-y-2 active:scale-95 flex items-center gap-4">
