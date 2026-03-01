@@ -14,19 +14,26 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-}
-window.db = firebase.firestore();
-window.storage = null;
 try {
-    if (firebase.storage) {
-        window.storage = firebase.storage();
+    if (typeof firebase !== 'undefined' && !firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
+    if (typeof firebase !== 'undefined') {
+        window.db = firebase.firestore();
+        if (firebase.storage) {
+            window.storage = firebase.storage();
+        } else {
+            console.warn("Firebase Storage SDK not loaded.");
+        }
     } else {
-        console.warn("Firebase Storage SDK not loaded.");
+        window.db = null;
+        window.storage = null;
+        console.warn("Firebase is not defined. Running offline/local mode.");
     }
 } catch (e) {
-    console.warn("Storage init skipped:", e);
+    console.warn("Firebase init skipped/failed:", e);
+    window.db = null;
+    window.storage = null;
 }
 
 /**
