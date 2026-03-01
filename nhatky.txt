@@ -312,3 +312,9 @@ Ngày 01/03/2026:
 [21:29] Cập nhật Bài 117 & Ngân hàng câu hỏi:
 - Tạo file `js/data/math/cungco/cungco117.txt` với 15 câu hỏi về Diện tích xung quanh HHCN.
 - Cập nhật `117.js`: Chuyển xưng hô từ "bé" sang "bạn" và kích hoạt hệ thống củng cố động.
+
+[21:45] Cập nhật Bài 118 & Ngân hàng câu hỏi:
+- Tạo file `js/data/math/cungco/cungco118.txt` với 15 câu hỏi về Diện tích toàn phần HHCN.
+- Cập nhật `118.js`: Thay đổi xưng hô "bé" thành "bạn" đồng nhất toàn hệ thống.
+- Làm trống `quizPool` để ép hệ thống nạp câu hỏi từ file văn bản (Ngân hàng câu hỏi động).
+- Tối ưu hóa giao diện Dark Mode cho các thành phần UI (AI Interaction, Quiz, Dashboard).
