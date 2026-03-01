@@ -298,3 +298,7 @@ Ngày 01/03/2026:
 [14:15] Đồng bộ GitHub:
 - Đã đẩy (push) toàn bộ bản vá Quiz và ngân hàng câu hỏi Bài 116 lên hệ thống.
 - Cập nhật Nhật ký công việc (nhatky.txt).
+
+[17:36] Cập nhật Nguồn tham chiếu Dữ liệu (Source of Truth):
+- Ứng dụng thống nhất tham khảo nội dung sách giáo khoa (Kết nối tri thức), hình ảnh, các bài tập thực hành và đáp án giải chi tiết từ https://vietjack.com.
+- Đã bổ sung đường dẫn Vietjack vào file README.md để lưu giữ lâu dài làm tài liệu tham chiếu khi khởi tạo các unit bài giảng mới.
