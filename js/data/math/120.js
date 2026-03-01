@@ -35,8 +35,9 @@ export const lesson120 = {
                             <p class="text-2xl md:text-4xl font-black text-center">S<sub>tp</sub> = (a × a) × 6</p>
                         </div>
                     </div>
-                    <div class="flex justify-center items-center bg-gray-50 rounded-[32px] p-2">
-                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-xq.png" alt="Khám phá" class="w-full max-w-sm h-auto rounded-xl shadow-md">
+                    <div class="flex flex-col gap-3 justify-center items-center bg-gray-50 rounded-[32px] p-2">
+                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-xq.png" alt="Sxq" class="w-full max-w-sm h-auto rounded-xl shadow-md mix-blend-multiply border border-indigo-100">
+                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-tp.png" alt="Stp" class="w-full max-w-sm h-auto rounded-xl shadow-md mix-blend-multiply border border-indigo-100">
                     </div>
                 </div>
             </div>
@@ -98,7 +99,7 @@ export const lesson120 = {
             <div id="box-120-2" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl relative overflow-hidden">
                 <p class="font-black text-xl md:text-2xl mb-1 text-amber-700 flex items-center gap-2">
                     <span class="w-10 h-10 bg-amber-600 text-white rounded-xl flex items-center justify-center font-black">2</span>
-                    Quấn túi bóng chiếc bánh (cạnh 9 cm)?
+                    Cuốn dải túi bóng bọc quanh chiếc bánh (hình lập phương cạnh 9 cm). Tính diện tích dải túi bóng?
                 </p>
                 <div class="flex flex-col md:grid md:grid-cols-2 gap-2 items-center bg-amber-50 rounded-[32px] p-1">
                     <div class="bg-white p-4 rounded-3xl shadow-inner w-full flex items-center gap-4">
