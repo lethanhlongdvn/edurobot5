@@ -1,0 +1,15 @@
+Diện tích xung quanh của hình hộp chữ nhật là gì? | Tổng diện tích 6 mặt, Tổng diện tích 4 mặt bên, Diện tích mặt đáy, Tổng diện tích 2 mặt đáy | 2
+Công thức tính diện tích xung quanh của hình hộp chữ nhật là gì? | (a+b) x 2 x h, a x b x h, (a+b) x h, a x b x 2 | 1
+Một hình hộp chữ nhật có chu vi đáy là 20 cm, chiều cao là 5 cm. Diện tích xung quanh là: | 100 cm2, 50 cm2, 20 cm2, 25 cm2 | 1
+Bước đầu tiên để tính diện tích xung quanh khi biết chiều dài, chiều rộng và chiều cao là gì? | Tính diện tích đáy, Tính chu vi đáy, Nhân 3 kích thước với nhau, Trừ các kích thước | 2
+Hình hộp chữ nhật có bao nhiêu mặt bên? | 2 mặt, 4 mặt, 6 mặt, 8 mặt | 2
+Nếu đơn vị đo của các cạnh không giống nhau, ta phải làm gì trước khi tính diện tích? | Tính bình thường, Đổi về cùng một đơn vị đo, Chỉ tính các cạnh cùng đơn vị, Bỏ qua bài toán | 2
+Một hình hộp chữ nhật có chiều dài 5cm, chiều rộng 3cm, chiều cao 2cm. Chu vi đáy là bao nhiêu? | 8 cm, 16 cm, 15 cm, 10 cm | 2
+Với hình hộp chữ nhật có chu vi đáy P và chiều cao h, diện tích xung quanh Sxq được tính bằng: | Sxq = P x h, Sxq = P + h, Sxq = P / h, Sxq = P x 2 + h | 1
+Diện tích xung quanh của hình hộp chữ nhật có chiều dài 8m, chiều rộng 6m và chiều cao 5m là: | 140 m2, 70 m2, 240 m2, 480 m2 | 1
+Một cái hòm tôn không có nắp dạng hình hộp chữ nhật. Khi tính diện tích tôn để làm hòm, ta cần tính diện tích nào? | Diện tích xung quanh, Diện tích toàn phần, Diện tích xung quanh cộng với diện tích 1 mặt đáy, Chỉ tính diện tích 2 mặt đáy | 3
+Diện tích xung quanh của hình hộp chữ nhật có chiều dài 1.2m, chiều rộng 0.8m, chiều cao 0.5m là: | 2 m2, 1 m2, 0.5 m2, 1.5 m2 | 2
+Khi tăng chiều cao của hình hộp chữ nhật lên 2 lần và giữ nguyên chu vi đáy thì diện tích xung quanh thay đổi thế nào? | Không đổi, Tăng 2 lần, Tăng 4 lần, Giảm 2 lần | 2
+Một hình hộp chữ nhật có diện tích xung quanh là 60 cm2, chu vi đáy là 12 cm. Chiều cao của hình đó là: | 5 cm, 10 cm, 6 cm, 720 cm | 1
+Muốn tính diện tích xung quanh của HHCN, ta lấy chu vi mặt đáy nhân với chiều cao (cùng một đơn vị đo). Đúng hay sai? | Đúng, Sai, Thiếu điều kiện, Cả A và B đều sai | 1
+Diện tích xung quanh của hình hộp chữ nhật có chiều dài 4/5 m, chiều rộng 2/5 m, chiều cao 1/3 m là: | 4/5 m2, 2/5 m2, 12/15 m2, 0.8 m2 | 1
