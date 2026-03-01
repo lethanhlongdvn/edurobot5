@@ -197,7 +197,7 @@ export const router = {
                         id="lesson-search" 
                         oninput="router.handleSearch(this.value)"
                         placeholder="Tìm theo tuần (vd: Tuần 23), tiết (vd: 111) hoặc tên bài học..." 
-                        class="w-full bg-white border-none rounded-[28px] pl-16 pr-8 py-6 text-sm shadow-xl shadow-gray-100/50 focus:ring-2 focus:ring-blue-600 transition-all font-bold placeholder:text-gray-300"
+                        class="w-full bg-white dark:bg-slate-900 border-none rounded-[28px] pl-16 pr-8 py-6 text-sm shadow-xl shadow-gray-100/50 dark:shadow-slate-900/50 focus:ring-2 focus:ring-blue-600 transition-all font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300"
                     >
                 </div>
 
@@ -335,13 +335,13 @@ export const router = {
                 UI.renderEmptyContent();
 
             html = `
-                <div class="glass-card rounded-[40px] p-8 md:p-12 bg-white min-h-[500px] animate-fade-in text-gray-700">
+                <div class="glass-card rounded-[40px] p-8 md:p-12 bg-white dark:bg-slate-900 min-h-[500px] animate-fade-in text-gray-700 dark:text-slate-200">
                     <div class="lesson-body">${UI.parseTutor(studyContent)}</div>
                 </div>
             `;
         } else if (tabId === 'practice') {
             html = `
-                <div class="glass-card rounded-[40px] p-8 md:p-12 bg-white min-h-[500px] animate-fade-in text-gray-700">
+                <div class="glass-card rounded-[40px] p-8 md:p-12 bg-white dark:bg-slate-900 min-h-[500px] animate-fade-in text-gray-700 dark:text-slate-200">
                     <div class="space-y-6">
                         ${UI.parseTutor(lesson.practice || UI.renderEmptyPractice())}
                     </div>
