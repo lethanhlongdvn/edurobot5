@@ -1,167 +1,100 @@
 export const lesson116 = {
     id: "116",
     period: "116",
-    title: "Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+    title: "Luyện tập: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
     subject: "math",
     week: "23",
-    objective: "Mô tả được hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ.",
+    objective: "Luyện tập nhận diện và thực hành gấp hình khai triển của hình hộp chữ nhật, hình lập phương và hình trụ.",
 
     content: `
         <div class="space-y-6">
-            <div class="glass-card p-6 bg-yellow-50 border-l-8 border-yellow-500 rounded-r-3xl mb-6">
-                <h4 class="text-xl font-black text-yellow-800 mb-4 flex items-center gap-2">
-                    <span class="text-3xl">🔍</span> Khám phá: Hình khai triển
+            <div class="glass-card p-8 bg-blue-50 border-l-8 border-blue-500 rounded-r-3xl text-center shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob"></div>
+                <div class="absolute top-0 left-0 w-32 h-32 bg-indigo-200 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob" style="animation-delay: 2s"></div>
+                <h4 class="text-4xl font-black text-blue-800 mb-6 relative z-10 flex items-center justify-center gap-4">
+                    <span class="text-5xl">🎯</span> Tiết Luyện Tập
                 </h4>
-                <p class="text-2xl leading-relaxed mb-4 font-bold text-gray-800 bg-yellow-100 p-4 rounded-xl border border-yellow-200 shadow-sm">
-                    "Khi 'trải' các mặt của một hình hộp chữ nhật, hình lập phương hay hình trụ lên một mặt phẳng, ta được <span class="text-yellow-700">hình khai triển</span> của hình đó."
+                <p class="text-2xl leading-relaxed font-bold text-gray-700 relative z-10">
+                    Hôm nay chúng ta sẽ cùng nhau luyện tập và thực hành để nhận diện phần <span class="text-blue-600">hình khai triển</span> của các hình khối đã học nhé!
                 </p>
-            </div>
-
-            <div class="glass-card p-6 bg-green-50 border-l-8 border-green-500 rounded-r-3xl">
-                <h4 class="text-2xl font-black text-green-800 mb-4">A. Hình khai triển của hình hộp chữ nhật</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-6">
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border-2 border-green-100 flex flex-col items-center">
-                        <span class="text-sm font-black uppercase text-green-400 mb-2">Mô hình 3D</span>
-                        <div class="w-full h-48 flex items-center justify-center bg-gray-50 rounded-xl">
-                            [[CUBOID3D|Hình hộp chữ nhật]]
-                        </div>
-                    </div>
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border-2 border-green-100 flex flex-col items-center justify-center h-full">
-                        <span class="text-sm font-black uppercase text-green-400 mb-2">Hình khai triển</span>
-                        <p class="text-2xl text-green-700 font-bold text-center mt-6">Gồm 6 hình chữ nhật</p>
-                        <p class="text-lg text-gray-500 text-center mt-2">(4 mặt bên và 2 mặt đáy)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-card p-6 bg-blue-50 border-l-8 border-blue-500 rounded-r-3xl">
-                <h4 class="text-2xl font-black text-blue-800 mb-4">B. Hình khai triển của hình lập phương</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-6">
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border-2 border-blue-100 flex flex-col items-center">
-                        <span class="text-sm font-black uppercase text-blue-400 mb-2">Mô hình 3D</span>
-                        <div class="w-full h-48 flex items-center justify-center bg-gray-50 rounded-xl">
-                            [[CUBE3D|Hình lập phương]]
-                        </div>
-                    </div>
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border-2 border-blue-100 flex flex-col items-center justify-center h-full">
-                        <span class="text-sm font-black uppercase text-blue-400 mb-2">Hình khai triển</span>
-                        <svg width="200" height="150" viewBox="0 0 200 150" class="drop-shadow-md mt-2">
-                            <rect x="70" y="10" width="30" height="30" fill="#3B82F6" stroke="white" stroke-width="1"/>
-                            <rect x="40" y="40" width="30" height="30" fill="#3B82F6" stroke="white" stroke-width="1"/>
-                            <rect x="70" y="40" width="30" height="30" fill="#1D4ED8" stroke="white" stroke-width="1"/>
-                            <rect x="100" y="40" width="30" height="30" fill="#3B82F6" stroke="white" stroke-width="1"/>
-                            <rect x="70" y="70" width="30" height="30" fill="#3B82F6" stroke="white" stroke-width="1"/>
-                            <rect x="70" y="100" width="30" height="30" fill="#3B82F6" stroke="white" stroke-width="1"/>
-                        </svg>
-                        <p class="text-xl text-blue-700 font-bold mt-4">Gồm 6 hình vuông bằng nhau</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-card p-6 bg-emerald-50 border-l-8 border-emerald-500 rounded-r-3xl">
-                <h4 class="text-2xl font-black text-emerald-800 mb-4">C. Hình khai triển của hình trụ</h4>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border-2 border-emerald-100 mt-4">
-                     <div class="flex flex-col md:flex-row justify-around items-center gap-8">
-                        <div class="text-center">
-                            <div class="w-24 h-32 bg-emerald-200 border-4 border-emerald-500 rounded-full relative mx-auto overflow-hidden">
-                                <div class="absolute top-0 w-full h-8 bg-emerald-400/50 border-b-2 border-emerald-500"></div>
-                                <div class="absolute bottom-0 w-full h-8 bg-emerald-400/50 border-t-2 border-emerald-500"></div>
-                            </div>
-                            <p class="text-lg font-black text-emerald-600 mt-3">Hình trụ</p>
-                        </div>
-                        <div class="text-blue-400 animate-pulse text-4xl">➜</div>
-                        <div class="text-center">
-                            <div class="flex flex-col items-center">
-                                <div class="w-12 h-12 rounded-full bg-emerald-300 border-2 border-emerald-500 mb-2"></div>
-                                <div class="w-40 h-20 bg-emerald-400 border-2 border-emerald-600 rounded-md"></div>
-                                <div class="w-12 h-12 rounded-full bg-emerald-300 border-2 border-emerald-500 mt-2"></div>
-                            </div>
-                            <div class="mt-4 space-y-1">
-                                <p class="text-lg text-emerald-800">Mặt bên là <b>hình chữ nhật</b></p>
-                                <p class="text-lg text-emerald-800">Hai mặt đáy là <b>hình tròn</b></p>
-                            </div>
-                        </div>
-                     </div>
-                </div>
             </div>
         </div>
     `,
 
     practice: `
         <div class="space-y-8">
+            <!-- Bài 1 -->
             <div class="bg-white p-6 md:p-10 rounded-[32px] shadow-xl border-4 border-blue-100 animate-fade-in relative overflow-hidden">
                 <h4 class="text-3xl font-black text-blue-800 mb-6 flex items-center gap-4 border-b-4 border-blue-200 pb-4">
                     <span class="bg-blue-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-300 text-2xl">1</span>
-                    Tìm miếng bìa thích hợp
+                    Chọn câu trả lời đúng
                 </h4>
                 <div class="space-y-6">
-                    <p class="text-2xl font-bold text-gray-800 leading-relaxed bg-blue-50 p-4 rounded-xl border border-blue-200 shadow-sm">
-                        Tìm miếng bìa và hình khai triển thích hợp với mỗi chiếc đèn lồng:
+                    <p class="text-2xl font-bold text-gray-800 leading-relaxed bg-blue-50 p-6 rounded-2xl border border-blue-200 shadow-sm">
+                        Hình bên là khai triển của hình nào dưới đây?
                     </p>
-                    <div class="flex justify-center mb-6">
-                        <img src="hinh_anh/toan_tap_2/116_b1_de.png" class="max-w-full rounded-2xl shadow-md border-2 border-gray-100" alt="Các đèn lồng">
+                    <div class="flex justify-center my-8">
+                        <img src="hinh_anh/toan_tap_2/116_b1.png" class="max-w-full lg:max-w-2xl rounded-3xl shadow-md border-2 border-gray-100 object-contain p-2" alt="Khai triển hình trụ">
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-8">
-                        <div class="flex flex-col items-center bg-green-50 p-6 rounded-2xl border-2 border-green-200 shadow-sm">
-                            <span class="font-black text-green-700 mb-4 text-xl bg-green-200 px-4 py-1 rounded-full">Miếng bìa A</span>
-                            <img src="hinh_anh/toan_tap_2/116_b1_a.png" class="w-full max-w-[200px] object-contain rounded my-auto">
-                        </div>
-                        <div class="flex flex-col items-center bg-yellow-50 p-6 rounded-2xl border-2 border-yellow-200 shadow-sm">
-                            <span class="font-black text-yellow-700 mb-4 text-xl bg-yellow-200 px-4 py-1 rounded-full">Miếng bìa B</span>
-                            <img src="hinh_anh/toan_tap_2/116_b1_b.png" class="w-full max-w-[200px] object-contain rounded my-auto">
-                        </div>
-                        <div class="flex flex-col items-center bg-blue-50 p-6 rounded-2xl border-2 border-blue-200 shadow-sm">
-                            <span class="font-black text-blue-700 mb-4 text-xl bg-blue-200 px-4 py-1 rounded-full">Miếng bìa C</span>
-                            <img src="hinh_anh/toan_tap_2/116_b1_c.png" class="w-full max-w-[200px] object-contain rounded my-auto">
-                        </div>
-                    </div>
-                    <div class="space-y-4 bg-gray-50 p-6 rounded-2xl border-2 border-gray-200 text-xl font-semibold">
-                        [[MATH_EX|p1a|options|label|Đèn lồng hình hộp chữ nhật (xanh lá) ghép với: |Miếng bìa A, Miếng bìa B, Miếng bìa C|Miếng bìa A]]
-                        [[MATH_EX|p1b|options|label|Đèn lồng hình lập phương (vàng) ghép với: |Miếng bìa A, Miếng bìa B, Miếng bìa C|Miếng bìa B]]
-                        [[MATH_EX|p1c|options|label|Đèn lồng hình trụ (xanh dương) ghép với: |Miếng bìa A, Miếng bìa B, Miếng bìa C|Miếng bìa C]]
+                    <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-200 text-2xl font-semibold text-blue-900 mt-6 md:w-2/3 mx-auto">
+                        [[MATH_EX|p1|options|label|Chọn đáp án (A, B, C): |A, B, C|C]]
                     </div>
                 </div>
             </div>
 
+            <!-- Bài 2 -->
+            <div class="bg-white p-6 md:p-10 rounded-[32px] shadow-xl border-4 border-emerald-100 animate-fade-in relative overflow-hidden">
+                <h4 class="text-3xl font-black text-emerald-800 mb-6 flex items-center gap-4 border-b-4 border-emerald-200 pb-4">
+                    <span class="bg-emerald-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-300 text-2xl">2</span>
+                    Thực hành gấp hình lập phương
+                </h4>
+                <div class="space-y-6">
+                    <p class="text-2xl font-bold text-gray-800 leading-relaxed bg-emerald-50 p-6 rounded-2xl border border-emerald-200 shadow-sm">
+                        Dưới đây là một số hình khai triển của hình lập phương. Em hãy chọn một hình khai triển và làm theo từng bước dưới đây để gấp được một hình lập phương.
+                    </p>
+                    <div class="flex justify-center my-8">
+                        <img src="hinh_anh/toan_tap_2/116_b2.png" class="max-w-full lg:max-w-4xl rounded-3xl shadow-md border-2 border-gray-100 object-contain p-4 bg-gray-50" alt="Các bước thực hành gấp giấy">
+                    </div>
+                    <div class="bg-emerald-50 p-6 rounded-2xl border-2 border-emerald-200 text-2xl font-semibold text-emerald-900 text-center">
+                        <span class="text-emerald-700 italic">"Em hãy thử lấy giấy ra cắt và gấp theo Rô-bốt nhé!"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bài 3 -->
             <div class="bg-white p-6 md:p-10 rounded-[32px] shadow-xl border-4 border-pink-100 animate-fade-in relative overflow-hidden">
                 <h4 class="text-3xl font-black text-pink-800 mb-6 flex items-center gap-4 border-b-4 border-pink-200 pb-4">
-                    <span class="bg-pink-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shadow-pink-300 text-2xl">2</span>
-                    Hình khai triển của đèn lồng cá
+                    <span class="bg-pink-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shadow-pink-300 text-2xl">3</span>
+                    Kiểm tra hình khai triển
                 </h4>
                 <div class="space-y-6">
-                    <div class="flex flex-col lg:flex-row gap-8 items-center">
-                        <div class="lg:w-1/3 text-2xl font-bold text-gray-800 leading-relaxed bg-pink-50 p-6 rounded-2xl border border-pink-200 shadow-sm">
-                            "Rô-bốt muốn làm một chiếc đèn lồng hình con cá như hình bên. Hỏi Rô-bốt cần dùng miếng bìa nào dưới đây?"
-                        </div>
-                        <div class="lg:w-2/3 flex flex-col gap-4">
-                            <img src="hinh_anh/toan_tap_2/116_b2_robot.png" class="w-full max-w-lg mx-auto rounded-2xl shadow-md border-2 border-pink-100" alt="Rô-bốt và lồng đèn cá">
-                        </div>
+                    <p class="text-2xl font-bold text-gray-800 leading-relaxed bg-pink-50 p-6 rounded-2xl border border-pink-200 shadow-sm">
+                        Bằng cách thực hành như bài tập trên, em hãy kiểm tra trong những hình dưới đây, hình nào là hình khai triển của hình lập phương?
+                    </p>
+                    <div class="flex justify-center my-8">
+                        <img src="hinh_anh/toan_tap_2/116_b3.png" class="max-w-full lg:max-w-3xl rounded-3xl shadow-md border-2 border-gray-100 object-contain p-2" alt="Các bạn học sinh cầm 3 hình khai triển">
                     </div>
-                    <div class="mt-8 flex justify-center">
-                        <img src="hinh_anh/toan_tap_2/116_b2_shapes.png" class="w-full max-w-4xl rounded-3xl shadow-md border-2 border-gray-200 bg-gray-50 object-contain p-4" alt="Các miếng bìa A, B, C, D">
-                    </div>
-                    <div class="bg-pink-50 p-6 rounded-2xl border-2 border-pink-200 text-xl font-semibold text-pink-900 mt-6 flex flex-col md:flex-row items-center gap-4">
-                        [[MATH_EX|p2|options|label|Chọn miếng bìa Rô-bốt cần dùng (A, B, C, D): |A, B, C, D|C]]
+                    <div class="bg-pink-50 p-6 rounded-2xl border-2 border-pink-200 text-2xl font-semibold text-pink-900 mt-6 md:w-5/6 mx-auto">
+                        [[MATH_EX|p3|options|label|Hình khai triển đúng là: |Hình của bạn nữ, Hình của bạn nam ở giữa, Hình của bạn nam bên phải, Hình của bạn nữ và bạn nam bên phải|Hình của bạn nữ và bạn nam bên phải]]
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white p-6 md:p-10 rounded-[32px] shadow-xl border-4 border-orange-100 animate-fade-in relative">
+            <!-- Bài 4 -->
+            <div class="bg-white p-6 md:p-10 rounded-[32px] shadow-xl border-4 border-orange-100 animate-fade-in relative overflow-hidden">
                 <h4 class="text-3xl font-black text-orange-800 mb-6 flex items-center gap-4 border-b-4 border-orange-200 pb-4">
-                    <span class="bg-orange-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-300 text-2xl">3</span>
-                    Hình khai triển của hình trụ
+                    <span class="bg-orange-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-300 text-2xl">4</span>
+                    Thử tài phán đoán
                 </h4>
                 <div class="space-y-6">
-                    <p class="text-2xl font-bold text-gray-800 leading-relaxed bg-orange-50 p-6 rounded-2xl border border-orange-200 shadow-sm">
-                        Hình nào dưới đây là hình khai triển của hình trụ?
+                    <p class="text-2xl font-bold text-gray-800 leading-relaxed bg-orange-50 p-6 rounded-2xl border border-orange-200 shadow-sm flex gap-4 items-center">
+                        Rô-bốt cần cắt đi hình chữ nhật nào trong hình dưới đây để phần còn lại là hình khai triển của một hình hộp chữ nhật?
                     </p>
-                    <div class="flex justify-center gap-4 md:gap-8 flex-wrap py-4 bg-gray-50 rounded-3xl border-2 border-gray-100 shadow-inner">
-                        <img src="hinh_anh/toan_tap_2/116_b3_a.png" class="max-h-[300px] object-contain shadow-sm border border-gray-200 bg-white p-3 rounded-2xl">
-                        <img src="hinh_anh/toan_tap_2/116_b3_b.png" class="max-h-[300px] object-contain shadow-sm border border-gray-200 bg-white p-3 rounded-2xl">
-                        <img src="hinh_anh/toan_tap_2/116_b3_c.png" class="max-h-[300px] object-contain shadow-sm border border-gray-200 bg-white p-3 rounded-2xl">
+                    <div class="flex justify-center my-8">
+                        <img src="hinh_anh/toan_tap_2/116_b4.png" class="max-w-full lg:max-w-3xl rounded-3xl shadow-md border-2 border-gray-100 object-contain p-4 bg-gray-50" alt="Rô-bốt cắt bìa">
                     </div>
-                    <div class="bg-orange-50 p-6 rounded-2xl border-2 border-orange-200 text-xl font-semibold text-orange-900 mt-6 flex flex-col md:flex-row items-center gap-4">
-                        [[MATH_EX|p3|options|label|Chọn đáp án đúng (tương ứng với hình A, B, C, D trong SGK): |A, B, C, D|C]]
+                    <div class="bg-orange-50 p-6 rounded-2xl border-2 border-orange-200 text-2xl font-semibold text-orange-900 mt-6 md:w-2/3 mx-auto">
+                        [[MATH_EX|p4|options|label|Hình cần cắt đi là hình có màu: |Màu tím, Màu vàng, Màu xanh lá, Màu trắng|Màu vàng]]
                     </div>
                 </div>
             </div>
