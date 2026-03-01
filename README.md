@@ -69,6 +69,11 @@ edurobot5/
 
 **Lê Thành Long** - Phát triển bởi tình yêu giáo dục 💙
 
+## 📚 Nguồn Dữ Liệu Tham Khảo (Source of Truth)
+
+Toàn bộ nội dung sách, hình ảnh, bài tập và đáp án của các bài giảng môn Toán (và các môn học khác) trong hệ thống EduRobot 5 được tham chiếu chuẩn xác từ:
+- **[Vietjack](https://vietjack.com)** - Kênh tham khảo chính thức để phát triển nội dung bài học, đảm bảo bám sát sách giáo khoa "Kết nối tri thức".
+
 ---
 
 © 2026 EduRobot - Hệ thống học tập thông minh
