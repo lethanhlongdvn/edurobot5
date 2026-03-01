@@ -295,7 +295,17 @@ export const router = {
 
             container.innerHTML = UI.renderLessonPage(subject, lesson, subjects);
             window.scrollTo(0, 0);
-            this.switchTab('study');
+
+            const hasStudy = !!(lesson.content?.trim());
+            const hasPractice = !!(lesson.practice?.trim());
+            const hasQuiz = !!(lesson.quizPool && lesson.quizPool.length > 0);
+
+            let defaultTab = 'study';
+            if (hasStudy) defaultTab = 'study';
+            else if (hasPractice) defaultTab = 'practice';
+            else if (hasQuiz) defaultTab = 'quiz';
+
+            this.switchTab(defaultTab);
         }
     },
 

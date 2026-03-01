@@ -6,6 +6,10 @@ export const Lesson = {
     renderLessonPage(subject, lesson, allSubjects = []) {
         const color = common.getColorClasses(subject.color);
 
+        const hasStudy = !!(lesson.content?.trim());
+        const hasPractice = !!(lesson.practice?.trim());
+        const hasQuiz = !!(lesson.quizPool && lesson.quizPool.length > 0);
+
         return `
             <div class="max-w-7xl mx-auto pb-24 px-4 pt-1">
                 <!-- Slim Lesson Title: Centered & Blue -->
@@ -16,15 +20,20 @@ export const Lesson = {
                 <!-- Tabs Navigation: Mảnh & Rộng (Khớp Navbar) -->
                 <div class="flex justify-center mb-10 overflow-x-auto px-4 sticky top-16 z-40">
                     <div class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl p-1 rounded-full border border-gray-100 dark:border-slate-800 shadow-xl shadow-blue-900/5 dark:shadow-slate-950/40 flex gap-1 w-full max-w-7xl px-8">
+                        ${hasStudy ? `
                         <button id="tab-study" onclick="router.switchTab('study')" class="tab-btn active flex-1 py-3 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95">
                             <span class="text-base">📖</span> Tìm hiểu bài
-                        </button>
+                        </button>` : ''}
+                        
+                        ${hasPractice ? `
                         <button id="tab-practice" onclick="router.switchTab('practice')" class="tab-btn flex-1 py-3 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-gray-400">
                             <span class="text-base">✍️</span> Luyện tập
-                        </button>
+                        </button>` : ''}
+                        
+                        ${hasQuiz ? `
                         <button id="tab-quiz" onclick="router.switchTab('quiz')" class="tab-btn flex-1 py-3 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-gray-400">
                             <span class="text-base">🏆</span> Củng cố
-                        </button>
+                        </button>` : ''}
                     </div>
                 </div>
 
