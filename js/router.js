@@ -336,14 +336,18 @@ export const router = {
 
             html = `
                 <div class="glass-card rounded-[40px] p-8 md:p-12 bg-white dark:bg-slate-900 min-h-[500px] animate-fade-in text-gray-700 dark:text-slate-200">
-                    <div class="lesson-body">${UI.parseTutor(studyContent)}</div>
+                    <div id="lesson-study-container" class="lesson-body">${UI.parseTutor(studyContent)}</div>
                 </div>
             `;
         } else if (tabId === 'practice') {
+            const practiceContent = lesson.practice ||
+                (lesson.tabs?.practice?.blocks?.find(b => b.type === 'html')?.content) ||
+                UI.renderEmptyPractice();
+
             html = `
                 <div class="glass-card rounded-[40px] p-8 md:p-12 bg-white dark:bg-slate-900 min-h-[500px] animate-fade-in text-gray-700 dark:text-slate-200">
-                    <div class="space-y-6">
-                        ${UI.parseTutor(lesson.practice || UI.renderEmptyPractice())}
+                    <div id="lesson-practice-container" class="space-y-6">
+                        ${UI.parseTutor(practiceContent)}
                     </div>
                 </div>
             `;
@@ -352,6 +356,36 @@ export const router = {
         }
 
         container.innerHTML = html;
+
+        // NEW LOGIC FOR TIENG VIET 5 BLOCKS
+        // Nếu bài học có .blocks (từ json Tiếng Việt 5), ta sẽ ưu tiên parse ra DOM nodes
+        if (typeof window.createBlock === 'function') {
+            if (tabId === 'study') {
+                const blocks = lesson.tabs?.lesson?.blocks || lesson.tabs?.study?.blocks || lesson.blocks;
+                if (blocks && Array.isArray(blocks) && blocks.length > 0) {
+                    const studyContainer = document.getElementById('lesson-study-container');
+                    if (studyContainer) {
+                        studyContainer.innerHTML = ''; // Xóa HTML fallback
+                        blocks.forEach(block => {
+                            const blockEl = window.createBlock(block);
+                            if (blockEl) studyContainer.appendChild(blockEl);
+                        });
+                    }
+                }
+            } else if (tabId === 'practice') {
+                const blocks = lesson.tabs?.practice?.blocks;
+                if (blocks && Array.isArray(blocks) && blocks.length > 0) {
+                    const practiceContainer = document.getElementById('lesson-practice-container');
+                    if (practiceContainer) {
+                        practiceContainer.innerHTML = '';
+                        blocks.forEach(block => {
+                            const blockEl = window.createBlock(block);
+                            if (blockEl) practiceContainer.appendChild(blockEl);
+                        });
+                    }
+                }
+            }
+        }
 
         // Execute scripts embedded in the loaded HTML (since innerHTML doesn't execute them)
         const scripts = container.querySelectorAll('script');
