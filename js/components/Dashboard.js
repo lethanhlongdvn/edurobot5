@@ -4,9 +4,9 @@ export const Dashboard = {
     renderHero(title, subtitle, tag) {
         return `
             <section class="max-w-4xl mx-auto text-center mb-20 animate-fade-in px-4">
-                ${tag ? `<span class="inline-block bg-blue-50 text-blue-600 text-[10px] font-black px-6 py-2 rounded-full uppercase tracking-[0.2em] mb-8 border border-blue-100/50 shadow-sm">${tag}</span>` : ''}
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-8 tracking-tight leading-[1.1]">${title}</h2>
-                <p class="text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">${subtitle}</p>
+                ${tag ? `<span class="inline-block bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-[10px] font-black px-6 py-2 rounded-full uppercase tracking-[0.2em] mb-8 border border-blue-100/50 dark:border-blue-800/50 shadow-sm">${tag}</span>` : ''}
+                <h2 class="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tight leading-[1.1]">${title}</h2>
+                <p class="text-xl text-gray-400 dark:text-slate-400 font-medium leading-relaxed max-w-2xl mx-auto">${subtitle}</p>
             </section>
         `;
     },
@@ -14,12 +14,12 @@ export const Dashboard = {
     renderSubjectCard(sub) {
         const color = common.getColorClasses(sub.color);
         return `
-            <div class="subject-card group rounded-[48px] bg-white p-12 border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col items-center text-center cursor-pointer relative overflow-hidden" 
+            <div class="subject-card group rounded-[48px] bg-white dark:bg-slate-900 p-12 border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:shadow-blue-500/5 dark:hover:shadow-blue-900/20 transition-all duration-500 flex flex-col items-center text-center cursor-pointer relative overflow-hidden" 
                  onclick="router.navigateSubject('${sub.id}')">
                 <div class="absolute top-0 left-0 w-full h-2.5 ${color.bg} opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div class="w-24 h-24 ${color.light} ${color.text} rounded-[36px] flex items-center justify-center text-5xl mb-10 shadow-inner group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">${sub.icon}</div>
-                <h3 class="text-3xl font-black text-gray-800 mb-4 tracking-tighter">${sub.name}</h3>
-                <p class="text-gray-400 font-black uppercase text-[11px] tracking-widest mb-10">${sub.shortName}</p>
+                <div class="w-24 h-24 ${color.light} dark:bg-slate-800 ${color.text} rounded-[36px] flex items-center justify-center text-5xl mb-10 shadow-inner group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">${sub.icon}</div>
+                <h3 class="text-3xl font-black text-gray-800 dark:text-white mb-4 tracking-tighter">${sub.name}</h3>
+                <p class="text-gray-400 dark:text-slate-500 font-black uppercase text-[11px] tracking-widest mb-10">${sub.shortName}</p>
                 <button class="mt-auto w-full py-5 rounded-[24px] ${color.bg} text-white font-black text-xs uppercase tracking-[0.2em] shadow-xl ${color.shadow} transition-all active:scale-95 group-hover:translate-y-[-4px]">Bắt đầu học ngay</button>
             </div>
         `;
