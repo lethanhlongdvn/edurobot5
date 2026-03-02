@@ -32,7 +32,7 @@ export const lesson120 = {
                             Bạn Việt dán giấy màu cho 4 mặt <span class="text-amber-600 font-black">xung quanh</span> của thùng gỗ cạnh 30 cm.
                         </p>
                         <div class="bg-amber-50 p-6 rounded-2xl border-l-8 border-amber-400">
-                            <p class="font-black text-amber-900 text-xl italic">"Sxq = Diện tích một mặt × 4"</p>
+                            <p class="font-black text-amber-900 text-lg leading-snug italic">"Diện tích xung quanh của hình lập phương bằng diện tích một mặt nhân với 4."</p>
                         </div>
                         <div class="bg-indigo-600 p-8 rounded-[32px] text-white shadow-2xl text-center transform hover:scale-105 transition-transform cursor-pointer">
                             <p class="text-indigo-200 font-black text-sm uppercase mb-3 tracking-widest">Công thức Tính Sxq</p>
@@ -61,7 +61,7 @@ export const lesson120 = {
                             Cô thợ may tính diện tích vải để may <span class="text-purple-600 font-black">tất cả 6 mặt</span> của gối cạnh 30 cm.
                         </p>
                         <div class="bg-purple-50 p-6 rounded-2xl border-l-8 border-purple-400">
-                            <p class="font-black text-purple-900 text-xl italic">"Stp = Diện tích một mặt × 6"</p>
+                            <p class="font-black text-purple-900 text-lg leading-snug italic">"Diện tích toàn phần của hình lập phương bằng diện tích một mặt nhân với 6."</p>
                         </div>
                         <div class="bg-purple-600 p-8 rounded-[32px] text-white shadow-2xl text-center transform hover:scale-105 transition-transform cursor-pointer">
                             <p class="text-purple-200 font-black text-sm uppercase mb-3 tracking-widest">Công thức Tính Stp</p>
@@ -243,5 +243,21 @@ export const lesson120 = {
             </script>
         </div>
     `,
-    "quizPool": []
+    "quizPool": [
+        { "question": "Muốn tính diện tích xung quanh của hình lập phương, ta lấy diện tích một mặt nhân với mấy?", "options": ["4", "6", "2", "8"], "answer": 0, "level": 1 },
+        { "question": "Tính diện tích xung quanh của hình lập phương có cạnh 5 cm.", "options": ["25 cm²", "100 cm²", "150 cm²", "50 cm²"], "answer": 1, "level": 1 },
+        { "question": "Hình lập phương có cạnh 2 dm. Diện tích toàn phần của nó là bao nhiêu?", "options": ["16 dm²", "24 dm²", "8 dm²", "4 dm²"], "answer": 1, "level": 1 },
+        { "question": "Diện tích một mặt của hình lập phương là 9 cm². Diện tích toàn phần của nó là:", "options": ["36 cm²", "54 cm²", "81 cm²", "45 cm²"], "answer": 1, "level": 1 },
+        { "question": "Diện tích xung quanh của hình lập phương là 64 cm². Diện tích một mặt của nó là:", "options": ["16 cm²", "8 cm²", "4 cm²", "32 cm²"], "answer": 0, "level": 1 },
+        { "question": "Nếu cạnh của hình lập phương gấp lên 2 lần thì diện tích xung quanh gấp lên mấy lần?", "options": ["2 lần", "4 lần", "6 lần", "8 lần"], "answer": 1, "level": 2 },
+        { "question": "Nếu cạnh của hình lập phương gấp lên 3 lần thì diện tích toàn phần gấp lên mấy lần?", "options": ["3 lần", "6 lần", "9 lần", "27 lần"], "answer": 2, "level": 2 },
+        { "question": "Một cái hộp không nắp hình lập phương cạnh 10 cm. Diện tích giấy cần để dán bên ngoài hộp là:", "options": ["400 cm²", "600 cm²", "500 cm²", "1000 cm²"], "answer": 2, "level": 2 },
+        { "question": "Hình lập phương có cạnh 0,5 m. Tính diện tích xung quanh.", "options": ["1 m²", "1,5 m²", "0,25 m²", "2 m²"], "answer": 0, "level": 1 },
+        { "question": "Tính diện tích toàn phần của hình lập phương có cạnh 1,2 dm.", "options": ["5,76 dm²", "8,64 dm²", "1,44 dm²", "7,2 dm²"], "answer": 1, "level": 1 },
+        { "question": "Chiều dài các cạnh của hình lập phương bằng nhau đúng hay sai?", "options": ["Đúng", "Sai"], "answer": 0, "level": 1 },
+        { "question": "Công thức tính diện tích toàn phần hình lập phương cạnh a là:", "options": ["S = a × a × 4", "S = a × a × 6", "S = a × 4", "S = a × 6"], "answer": 1, "level": 1 },
+        { "question": "Diện tích toàn phần của hình lập phương cạnh 1 cm là bao nhiêu?", "options": ["4 cm²", "1 cm²", "6 cm²", "10 cm²"], "answer": 2, "level": 1 },
+        { "question": "Một hình lập phương có diện tích toàn phần là 96 cm². Cạnh của nó là:", "options": ["4 cm", "16 cm", "6 cm", "8 cm"], "answer": 0, "level": 3 },
+        { "question": "Tổng độ dài các cạnh của một hình lập phương là 36 cm. Diện tích xung quanh của nó là:", "options": ["36 cm²", "54 cm²", "9 cm²", "81 cm²"], "answer": 0, "level": 3 }
+    ]
 };
