@@ -347,3 +347,9 @@ Ngày 02/03/2026:
 - Đồng bộ dữ liệu Realtime (onSnapshot): tự động kết hợp (`join`) 2 luồng dữ liệu độc lập từ bộ sưu tập `essays_v2` (Luyện tập - Tự luận/AI chấm) và `diem_tieng_viet_lop5` (Củng cố - Trắc nghiệm) dựa trên chuỗi định danh học sinh.
 - Cập nhật chức năng Xuất Excel (SheetJS): Xuất file đầy đủ các cột mới, hỗ trợ giáo viên báo cáo phụ huynh một cách trực quan nhất.
 
+[21:12] Sửa lỗi Hệ thống Drag & Drop (Bài 127 Demo):
+- Khắc phục lỗi không nhận diện drop zone: Đã bổ sung đầy đủ các listener (`ondragover`, `ondragleave`, `ondrop`, `onclick`) trực tiếp vào các `.drop-slot` sinh ra từ `Lesson.js`.
+- Cải tiến Trải nghiệm người dùng cực mạnh: 
+  + Bấm vào slot đã điền (click) sẽ Gỡ chữ đó (clearSlot) ra khỏi slot và hoàn trả lại vào ngân hàng đáp án ban đầu.
+  + Thả một đáp án đè lên một slot đã có chữ thì chữ cũ tự động bật ngược về ngân hàng đáp án.
+- Code đảm bảo sạch sẽ và áp dụng mượt mà không lỗi.

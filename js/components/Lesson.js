@@ -275,7 +275,22 @@ export const Lesson = {
         const sourceId = ev.dataTransfer.getData("sourceId");
 
         // Tránh thả sai chỗ 
-        if (ev.currentTarget.classList.contains('drop-slot')) {
+        if (ev.currentTarget.classList.contains('drop-slot') && data) {
+            const oldVal = ev.currentTarget.dataset.value;
+            if (oldVal) {
+                // Return old item to source
+                const sourceContainer = document.getElementById(`drag-source-${exId}`);
+                if (sourceContainer) {
+                    const hiddenItems = sourceContainer.querySelectorAll('div');
+                    for (let item of hiddenItems) {
+                        if (item.innerText.trim() === oldVal && item.style.display === 'none') {
+                            item.style.display = 'block';
+                            break;
+                        }
+                    }
+                }
+            }
+
             // Thay thế text trong slot
             ev.currentTarget.innerText = data;
             ev.currentTarget.dataset.value = data;
@@ -286,6 +301,29 @@ export const Lesson = {
             if (sourceId) {
                 const srcEl = document.getElementById(sourceId);
                 if (srcEl) srcEl.style.display = 'none';
+            }
+        }
+    },
+
+    clearSlot(ev, exId) {
+        const slot = ev.currentTarget;
+        const val = slot.dataset.value;
+        if (val) {
+            slot.innerText = '?';
+            slot.dataset.value = '';
+            slot.classList.remove('border-blue-500', 'bg-white', 'text-blue-700');
+            slot.classList.add('border-dashed', 'bg-transparent');
+
+            // Hiện lại block đã ẩn trong source
+            const sourceContainer = document.getElementById(`drag-source-${exId}`);
+            if (sourceContainer) {
+                const hiddenItems = sourceContainer.querySelectorAll('div');
+                for (let item of hiddenItems) {
+                    if (item.innerText.trim() === val && item.style.display === 'none') {
+                        item.style.display = 'block';
+                        break;
+                    }
+                }
             }
         }
     },
