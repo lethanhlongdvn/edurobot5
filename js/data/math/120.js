@@ -5,136 +5,131 @@ export const lesson120 = {
     "title": "DIỆN TÍCH XUNG QUANH VÀ TOÀN PHẦN HÌNH LẬP PHƯƠNG",
     "desc": "Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương (Tiết 1 - Trang 48-49).",
     "content": `
-        <div class="space-y-6 text-indigo-900 animate-fade-in">
+        <div class="space-y-2 text-indigo-900 animate-fade-in">
             <!-- 🎯 Mục tiêu bài học -->
-            <div class="bg-gradient-to-br from-indigo-600 to-blue-700 p-8 rounded-[32px] text-white shadow-xl flex items-center gap-8">
-                <div class="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md border-2 border-white/30 shrink-0 text-5xl">🎯</div>
+            <div class="bg-gradient-to-br from-indigo-600 to-blue-700 p-4 rounded-2xl text-white shadow-xl flex items-center gap-4">
+                <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md border-2 border-white/30 shrink-0 text-3xl">🎯</div>
                 <div>
-                    <h3 class="text-3xl font-black uppercase tracking-tight mb-2">Mục tiêu bài học</h3>
-                    <ul class="list-disc list-inside font-bold text-2xl opacity-95 space-y-2">
+                    <h3 class="text-xl font-black uppercase tracking-tight mb-1">Mục tiêu bài học</h3>
+                    <ul class="list-disc list-inside font-bold text-lg opacity-95 space-y-1">
                         <li>Tính Diện tích xung quanh (Sxq) hình lập phương.</li>
                         <li>Tính Diện tích toàn phần (Stp) hình lập phương.</li>
-                        <li>Giải bài toán vận dụng thực tế thú vị.</li>
                     </ul>
                 </div>
             </div>
 
             <!-- 📖 Khám phá a: Thùng gỗ -->
-            <div class="bg-white p-6 md:p-10 rounded-[40px] border border-indigo-100 shadow-xl overflow-hidden relative">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-amber-100 rounded-bl-[100px] -z-0 opacity-50"></div>
-                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-3">
-                            <span class="bg-amber-500 text-white w-10 h-10 rounded-xl flex items-center justify-center font-black text-xl">a</span>
-                            <h4 class="text-2xl font-black text-amber-700 uppercase">Dán giấy cho thùng gỗ</h4>
+            <div class="bg-white p-3 rounded-2xl border border-indigo-100 shadow-xl overflow-hidden relative">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-amber-100 rounded-bl-full -z-0 opacity-50"></div>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-500 text-white w-8 h-8 rounded-lg flex items-center justify-center font-black text-lg">a</span>
+                            <h4 class="text-xl font-black text-amber-700 uppercase">Dán giấy cho thùng gỗ</h4>
                         </div>
-                        <p class="text-2xl font-bold leading-snug text-gray-700">
-                            Bạn Việt dán giấy màu cho 4 mặt <span class="text-amber-600 font-black">xung quanh</span> của thùng gỗ cạnh 30 cm.
+                        <p class="text-xl font-bold leading-snug text-gray-700">
+                            Việt dán giấy màu cho 4 mặt <span class="text-amber-600 font-black">xung quanh</span> của thùng gỗ cạnh 30 cm.
                         </p>
-                        <div class="bg-amber-50 p-6 rounded-2xl border-l-8 border-amber-400">
-                            <p class="font-black text-amber-900 text-lg leading-snug italic">"Diện tích xung quanh của hình lập phương bằng diện tích một mặt nhân với 4."</p>
+                        <div class="bg-amber-50 p-3 rounded-xl border-l-4 border-amber-400">
+                            <p class="font-black text-amber-900 text-base leading-snug italic">"Sxq hình lập phương bằng diện tích một mặt nhân với 4."</p>
                         </div>
-                        <div class="bg-indigo-600 p-8 rounded-[32px] text-white shadow-2xl text-center transform hover:scale-105 transition-transform cursor-pointer">
-                            <p class="text-indigo-200 font-black text-sm uppercase mb-3 tracking-widest">Công thức Tính Sxq</p>
-                            <p class="text-4xl md:text-5xl font-black tracking-normal">S<sub>xq</sub> = (a × a) × 4</p>
+                        <div class="bg-indigo-600 p-4 rounded-2xl text-white shadow-lg text-center">
+                            <p class="text-4xl font-black">S<sub>xq</sub> = (a × a) × 4</p>
                         </div>
                     </div>
                     <div class="flex justify-center">
-                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-xq.png" alt="Sxq" class="w-full max-w-sm h-auto rounded-[40px] shadow-2xl border-8 border-white rotate-1">
+                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-xq.png" alt="Sxq" class="w-full max-w-[240px] h-auto rounded-2xl shadow-lg border-4 border-white">
                     </div>
                 </div>
             </div>
 
             <!-- 📖 Khám phá b: Chiếc gối -->
-            <div class="bg-white p-6 md:p-10 rounded-[40px] border border-purple-100 shadow-xl overflow-hidden relative">
-                <div class="absolute top-0 left-0 w-32 h-32 bg-purple-100 rounded-br-[100px] -z-0 opacity-50"></div>
-                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="bg-white p-3 rounded-2xl border border-purple-100 shadow-xl overflow-hidden relative">
+                <div class="absolute top-0 left-0 w-24 h-24 bg-purple-100 rounded-br-full -z-0 opacity-50"></div>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
                     <div class="flex justify-center order-2 lg:order-1">
-                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-tp.png" alt="Stp" class="w-full max-w-sm h-auto rounded-[40px] shadow-2xl border-8 border-white -rotate-1">
+                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-tp.png" alt="Stp" class="w-full max-w-[240px] h-auto rounded-2xl shadow-lg border-4 border-white">
                     </div>
-                    <div class="space-y-6 order-1 lg:order-2">
-                        <div class="flex items-center gap-3">
-                            <span class="bg-purple-500 text-white w-10 h-10 rounded-xl flex items-center justify-center font-black text-xl">b</span>
-                            <h4 class="text-2xl font-black text-purple-700 uppercase">May vỏ gối hình lập phương</h4>
+                    <div class="space-y-3 order-1 lg:order-2">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-purple-500 text-white w-8 h-8 rounded-lg flex items-center justify-center font-black text-lg">b</span>
+                            <h4 class="text-xl font-black text-purple-700 uppercase">Vỏ gối hình lập phương</h4>
                         </div>
-                        <p class="text-2xl font-bold leading-snug text-gray-700">
-                            Cô thợ may tính diện tích vải để may <span class="text-purple-600 font-black">tất cả 6 mặt</span> của gối cạnh 30 cm.
+                        <p class="text-xl font-bold leading-snug text-gray-700">
+                            Diện tích vải để may <span class="text-purple-600 font-black">tất cả 6 mặt</span> của gối cạnh 30 cm.
                         </p>
-                        <div class="bg-purple-50 p-6 rounded-2xl border-l-8 border-purple-400">
-                            <p class="font-black text-purple-900 text-lg leading-snug italic">"Diện tích toàn phần của hình lập phương bằng diện tích một mặt nhân với 6."</p>
+                        <div class="bg-purple-50 p-3 rounded-xl border-l-4 border-purple-400">
+                            <p class="font-black text-purple-900 text-base leading-snug italic">"Stp hình lập phương bằng diện tích một mặt nhân với 6."</p>
                         </div>
-                        <div class="bg-purple-600 p-8 rounded-[32px] text-white shadow-2xl text-center transform hover:scale-105 transition-transform cursor-pointer">
-                            <p class="text-purple-200 font-black text-sm uppercase mb-3 tracking-widest">Công thức Tính Stp</p>
-                            <p class="text-4xl md:text-5xl font-black tracking-normal">S<sub>tp</sub> = (a × a) × 6</p>
+                        <div class="bg-purple-600 p-4 rounded-2xl text-white shadow-lg text-center">
+                            <p class="text-4xl font-black">S<sub>tp</sub> = (a × a) × 6</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- 💡 Ghi nhớ -->
-            <div class="bg-emerald-50 p-8 rounded-[40px] border-4 border-emerald-100 shadow-inner flex flex-col md:flex-row items-center gap-8">
-                <div class="text-6xl animate-bounce">💡</div>
-                <div class="text-2xl font-black text-emerald-900 leading-tight">
+            <div class="bg-emerald-50 p-4 rounded-2xl border-2 border-emerald-100 shadow-inner flex items-center gap-4">
+                <div class="text-4xl">💡</div>
+                <div class="text-xl font-black text-emerald-900 leading-tight">
                     Hình lập phương có 6 mặt là các hình vuông <span class="text-emerald-600 underline">bằng nhau</span>.
                 </div>
             </div>
         </div>
     `,
     "practice": `
-        <div class="space-y-8 animate-fade-in">
+        <div class="space-y-4 animate-fade-in">
             <!-- Bài tập 1 -->
-            <div id="box-120-1" class="bg-white p-6 md:p-12 rounded-[48px] border border-gray-100 shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-40 h-40 bg-indigo-50 rounded-bl-full -z-0 opacity-40"></div>
+            <div id="box-120-1" class="bg-white p-3 rounded-2xl border border-gray-100 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-indigo-50 rounded-bl-full -z-0 opacity-40"></div>
                 <div class="relative z-10">
-                    <p class="font-black text-3xl md:text-4xl mb-10 text-indigo-700 flex items-center gap-5">
-                        <span class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center font-black shadow-lg shadow-indigo-200">1</span>
+                    <p class="font-black text-2xl mb-4 text-indigo-700 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-indigo-600 text-white rounded-lg flex items-center justify-center font-black shadow-lg shadow-indigo-200">1</span>
                         Tính diện tích xung quanh và toàn phần:
                     </p>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <!-- a) 12 cm -->
-                        <div id="box-120-1a" class="bg-gray-50 p-8 rounded-[40px] border-4 border-transparent transition-all">
-                            <h4 class="text-3xl font-black text-indigo-800 mb-8 flex items-center gap-4">
-                                <span>a) Cạnh a =</span>
-                                <span class="bg-white px-5 py-2 rounded-2xl shadow-sm text-indigo-600">12 cm</span>
+                        <div id="box-120-1a" class="bg-gray-50 p-3 rounded-2xl border-2 border-transparent transition-all">
+                            <h4 class="text-xl font-black text-indigo-800 mb-4 flex items-center gap-2">
+                                <span>a) Cạnh a = 12 cm</span>
                             </h4>
-                            <div class="grid grid-cols-1 gap-6">
-                                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                                    <label class="block text-gray-400 font-black text-xs uppercase tracking-widest mb-3">Diện tích xung quanh</label>
-                                    <div class="flex items-center gap-3">
-                                        <input type="number" id="ans-120-1a-xq" class="w-full text-5xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
-                                        <span class="text-2xl font-black text-gray-300">cm²</span>
+                            <div class="grid grid-cols-1 gap-3">
+                                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                                    <label class="block text-gray-400 font-black text-[10px] uppercase tracking-widest mb-1">Diện tích xung quanh</label>
+                                    <div class="flex items-center gap-2">
+                                        <input type="number" id="ans-120-1a-xq" class="w-full text-3xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
+                                        <span class="text-xl font-black text-gray-300">cm²</span>
                                     </div>
                                 </div>
-                                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                                    <label class="block text-gray-400 font-black text-xs uppercase tracking-widest mb-3">Diện tích toàn phần</label>
-                                    <div class="flex items-center gap-3">
-                                        <input type="number" id="ans-120-1a-tp" class="w-full text-5xl font-black text-purple-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
-                                        <span class="text-2xl font-black text-gray-300">cm²</span>
+                                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                                    <label class="block text-gray-400 font-black text-[10px] uppercase tracking-widest mb-1">Diện tích toàn phần</label>
+                                    <div class="flex items-center gap-2">
+                                        <input type="number" id="ans-120-1a-tp" class="w-full text-3xl font-black text-purple-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
+                                        <span class="text-xl font-black text-gray-300">cm²</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- b) 1.5 m -->
-                        <div id="box-120-1b" class="bg-gray-50 p-8 rounded-[40px] border-4 border-transparent transition-all">
-                            <h4 class="text-3xl font-black text-emerald-800 mb-8 flex items-center gap-4">
-                                <span>b) Cạnh a =</span>
-                                <span class="bg-white px-5 py-2 rounded-2xl shadow-sm text-emerald-600">1,5 m</span>
+                        <div id="box-120-1b" class="bg-gray-50 p-3 rounded-2xl border-2 border-transparent transition-all">
+                            <h4 class="text-xl font-black text-emerald-800 mb-4 flex items-center gap-2">
+                                <span>b) Cạnh a = 1,5 m</span>
                             </h4>
-                            <div class="grid grid-cols-1 gap-6">
-                                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                                    <label class="block text-gray-400 font-black text-xs uppercase tracking-widest mb-3">Diện tích xung quanh</label>
-                                    <div class="flex items-center gap-3">
-                                        <input type="number" step="0.01" id="ans-120-1b-xq" class="w-full text-5xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
-                                        <span class="text-2xl font-black text-gray-300">m²</span>
+                            <div class="grid grid-cols-1 gap-3">
+                                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                                    <label class="block text-gray-400 font-black text-[10px] uppercase tracking-widest mb-1">Diện tích xung quanh</label>
+                                    <div class="flex items-center gap-2">
+                                        <input type="number" step="0.01" id="ans-120-1b-xq" class="w-full text-3xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
+                                        <span class="text-xl font-black text-gray-300">m²</span>
                                     </div>
                                 </div>
-                                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                                    <label class="block text-gray-400 font-black text-xs uppercase tracking-widest mb-3">Diện tích toàn phần</label>
-                                    <div class="flex items-center gap-3">
-                                        <input type="number" step="0.01" id="ans-120-1b-tp" class="w-full text-5xl font-black text-purple-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
-                                        <span class="text-2xl font-black text-gray-300">m²</span>
+                                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                                    <label class="block text-gray-400 font-black text-[10px] uppercase tracking-widest mb-1">Diện tích toàn phần</label>
+                                    <div class="flex items-center gap-2">
+                                        <input type="number" step="0.01" id="ans-120-1b-tp" class="w-full text-3xl font-black text-purple-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
+                                        <span class="text-xl font-black text-gray-300">m²</span>
                                     </div>
                                 </div>
                             </div>
@@ -144,70 +139,61 @@ export const lesson120 = {
             </div>
 
             <!-- Bài tập 2 -->
-            <div id="box-120-2" class="bg-white p-6 md:p-12 rounded-[48px] border border-gray-100 shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-40 h-40 bg-amber-50 rounded-br-full -z-0 opacity-40"></div>
+            <div id="box-120-2" class="bg-white p-3 rounded-2xl border border-gray-100 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-24 h-24 bg-amber-50 rounded-br-full -z-0 opacity-40"></div>
                 <div class="relative z-10">
-                    <p class="font-black text-3xl md:text-4xl mb-10 text-amber-700 flex items-center gap-5">
-                        <span class="w-16 h-16 bg-amber-600 text-white rounded-2xl flex items-center justify-center font-black shadow-lg shadow-amber-200">2</span>
+                    <p class="font-black text-2xl mb-4 text-amber-700 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-amber-600 text-white rounded-lg flex items-center justify-center font-black shadow-lg shadow-amber-200">2</span>
                         Giải bài toán:
                     </p>
-                    <div class="bg-amber-50/50 p-8 rounded-[48px] border-2 border-amber-100 mb-8">
-                        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
-                            <div class="lg:col-span-3 space-y-6">
-                                <p class="text-2xl font-bold text-amber-900 leading-snug">
-                                    Cửa hàng bảo quản chiếc bánh bằng cách cuốn một lớp túi bóng <span class="text-amber-600 font-black decoration-double underline decoration-amber-300">vừa đủ quanh chiếc bánh</span>.
-                                </p>
-                                <p class="text-2xl font-bold text-amber-900 leading-snug">
-                                    Chiếc bánh hình lập phương cạnh <span class="bg-white px-4 py-1 rounded-xl shadow-sm text-3xl font-black text-amber-600">9 cm</span>. Tính diện tích phần túi bóng cần dùng.
+                    <div class="bg-amber-50/50 p-4 rounded-2xl border-2 border-amber-100 mb-4">
+                        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 items-center">
+                            <div class="lg:col-span-3 space-y-2">
+                                <p class="text-xl font-bold text-amber-900 leading-snug">
+                                    Cửa hàng bảo quản bằng cách cuốn túi bóng <span class="text-amber-600 font-black">vừa đủ quanh chiếc bánh</span> hình lập phương cạnh <span class="text-amber-600 font-black underline">9 cm</span>. Tính diện tích túi bóng cần dùng.
                                 </p>
                             </div>
-                            <div class="lg:col-span-2 flex justify-center text-center">
-                                <img src="hinh_anh/toan/toan_tap_2/120-b2-cake.png" alt="Bánh" class="w-full max-w-[280px] h-auto rounded-[60px] shadow-2xl border-8 border-white mb-2">
-                                <p class="text-xs font-bold text-amber-400 italic">Hình minh họa gợi ý (cuốn quanh 4 mặt)</p>
+                            <div class="lg:col-span-2 flex justify-center">
+                                <img src="hinh_anh/toan/toan_tap_2/120-b2-cake.png" alt="Bánh" class="w-full max-w-[180px] h-auto rounded-3xl shadow-lg border-4 border-white mb-2">
                             </div>
                         </div>
                     </div>
 
                     <!-- Khu vực giải toán có lời văn -->
-                    <div class="max-w-4xl mx-auto space-y-6 bg-white p-8 rounded-[40px] shadow-xl border border-amber-100">
+                    <div class="max-w-4xl mx-auto space-y-3 bg-white p-4 rounded-3xl shadow-lg border border-amber-100">
                         <!-- Bước 1: Lời giải -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-amber-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-1">1</div>
+                        <div class="flex items-start gap-2">
+                            <div class="w-8 h-8 bg-amber-500 text-white rounded-lg flex items-center justify-center text-base font-black shrink-0 mt-1">1</div>
                             <div class="flex-grow">
-                                <label class="text-xs font-black text-amber-600 uppercase tracking-widest mb-2 block">Lời giải (Bài giải)</label>
-                                <textarea id="wp-solution-120-2" rows="2" 
-                                    class="w-full p-4 rounded-2xl border-2 border-amber-200 outline-none focus:border-amber-500 text-xl font-bold placeholder:text-gray-200 shadow-inner transition-all resize-none" 
-                                    placeholder="Lời giải của bạn là..."></textarea>
+                                <textarea id="wp-solution-120-2" rows="1" 
+                                    class="w-full p-2 rounded-xl border border-amber-200 outline-none focus:border-amber-500 text-lg font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" 
+                                    placeholder="Lời giải..."></textarea>
                             </div>
                         </div>
                         
                         <!-- Bước 2: Phép tính -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-orange-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-1">2</div>
+                        <div class="flex items-start gap-2">
+                            <div class="w-8 h-8 bg-orange-500 text-white rounded-lg flex items-center justify-center text-base font-black shrink-0 mt-1">2</div>
                             <div class="flex-grow">
-                                <label class="text-xs font-black text-orange-600 uppercase tracking-widest mb-2 block">Phép tính</label>
-                                <textarea id="wp-calc-120-2" rows="2" 
-                                    class="w-full p-4 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-2xl font-black text-blue-800 placeholder:text-gray-200 shadow-inner transition-all resize-none" 
-                                    placeholder="Ví dụ: 9 x 9 x 4 = ..."></textarea>
+                                <textarea id="wp-calc-120-2" rows="1" 
+                                    class="w-full p-2 rounded-xl border border-orange-200 outline-none focus:border-orange-500 text-xl font-black text-blue-800 placeholder:text-gray-200 transition-all resize-none shadow-sm" 
+                                    placeholder="Phép tính..."></textarea>
                             </div>
                         </div>
                         
                         <!-- Bước 3: Đáp số -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-rose-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-1">3</div>
-                            <div class="flex-grow">
-                                <label class="text-xs font-black text-rose-600 uppercase tracking-widest mb-2 block">Đáp số</label>
-                                <div class="flex items-center gap-4">
-                                    <input type="number" id="ans-120-2" 
-                                        class="w-full max-w-[300px] p-4 rounded-2xl border-2 border-rose-200 outline-none focus:border-rose-500 text-4xl font-black text-rose-600 shadow-inner transition-all" 
-                                        placeholder="?">
-                                    <span class="text-2xl font-black text-gray-300">cm²</span>
-                                </div>
+                        <div class="flex items-start gap-2">
+                            <div class="w-8 h-8 bg-rose-500 text-white rounded-lg flex items-center justify-center text-base font-black shrink-0 mt-1">3</div>
+                            <div class="flex-grow flex items-center gap-2">
+                                <input type="number" id="ans-120-2" 
+                                    class="w-full max-w-[200px] p-2 rounded-xl border border-rose-200 outline-none focus:border-rose-500 text-2xl font-black text-rose-600 shadow-sm transition-all" 
+                                    placeholder="?">
+                                <span class="text-lg font-black text-gray-300">cm²</span>
                             </div>
                         </div>
 
-                        <div class="mt-8 flex justify-center">
-                            <button onclick="Lesson.submitWordProblemAI('120-2')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl font-black text-base transition-all active:scale-95 shadow-lg shadow-blue-100 flex items-center gap-2">
+                        <div class="mt-4 flex justify-center">
+                            <button onclick="Lesson.submitWordProblemAI('120-2')" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl font-black text-sm transition-all shadow-md">
                                 Thầy E chấm bài
                             </button>
                         </div>
@@ -216,8 +202,8 @@ export const lesson120 = {
             </div>
 
             <!-- Nộp bài -->
-            <div class="flex flex-col items-center gap-4 pt-10 border-t-2 border-dashed border-gray-100 mt-12">
-                <button id="btn-submit-120" onclick="submit120()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-4 rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
+            <div class="flex flex-col items-center pt-4 border-t border-dashed border-gray-100 mt-4">
+                <button id="btn-submit-120" onclick="submit120()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-xl font-black text-lg shadow-lg active:scale-95 transition-all">
                     Nộp bài
                 </button>
             </div>

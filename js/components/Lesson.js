@@ -11,27 +11,27 @@ export const Lesson = {
         const hasQuiz = !!(lesson.quizPool && lesson.quizPool.length > 0);
 
         return `
-            <div class="max-w-7xl mx-auto pb-24 px-4 pt-1">
+            <div class="max-w-full mx-auto pb-10 px-1 pt-1">
                 <!-- Slim Lesson Title: Centered & Blue -->
-                <div class="text-center mb-3 animate-slide-down">
+                <div class="text-center mb-2 animate-slide-down">
                     <h1 class="text-2xl md:text-3xl font-black text-blue-900 dark:text-blue-400 leading-tight tracking-tight uppercase">${lesson.title}</h1>
                 </div>
 
                 <!-- Tabs Navigation: Mảnh & Rộng (Khớp Navbar) -->
-                <div class="flex justify-center mb-10 overflow-x-auto px-4 sticky top-16 z-40">
-                    <div class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl p-1 rounded-full border border-gray-100 dark:border-slate-800 shadow-xl shadow-blue-900/5 dark:shadow-slate-950/40 flex gap-1 w-full max-w-7xl px-8 items-center">
+                <div class="flex justify-center mb-4 overflow-x-auto px-1 sticky top-16 z-40">
+                    <div class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl p-1 rounded-full border border-gray-100 dark:border-slate-800 shadow-xl shadow-blue-900/5 dark:shadow-slate-950/40 flex gap-1 w-full max-w-full px-2 items-center">
                         ${hasStudy ? `
-                        <button id="tab-study" onclick="router.switchTab('study')" class="tab-btn active flex-1 py-3 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95">
+                        <button id="tab-study" onclick="router.switchTab('study')" class="tab-btn active flex-1 py-2 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95">
                             <span class="text-base">📖</span> Tìm hiểu bài
                         </button>` : ''}
                         
                         ${hasPractice ? `
-                        <button id="tab-practice" onclick="router.switchTab('practice')" class="tab-btn flex-1 py-3 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-gray-400">
+                        <button id="tab-practice" onclick="router.switchTab('practice')" class="tab-btn flex-1 py-2 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-gray-400">
                             <span class="text-base">✍️</span> Luyện tập
                         </button>` : ''}
                         
                         ${hasQuiz ? `
-                        <button id="tab-quiz" onclick="router.switchTab('quiz')" class="tab-btn flex-1 py-3 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-gray-400">
+                        <button id="tab-quiz" onclick="router.switchTab('quiz')" class="tab-btn flex-1 py-2 rounded-full text-[14px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-gray-400">
                             <span class="text-base">🏆</span> Củng cố
                         </button>` : ''}
 
@@ -46,7 +46,7 @@ export const Lesson = {
                 </div>
 
                 <!-- Tab Content: Dynamic & Spacious -->
-                <div id="tab-content" class="lesson-content min-h-[600px] animate-fade-in px-4">
+                <div id="tab-content" class="lesson-content min-h-[600px] animate-fade-in px-1">
                     <!-- Loaded dynamically -->
                 </div>
 
