@@ -353,3 +353,21 @@ Ngày 02/03/2026:
   + Bấm vào slot đã điền (click) sẽ Gỡ chữ đó (clearSlot) ra khỏi slot và hoàn trả lại vào ngân hàng đáp án ban đầu.
   + Thả một đáp án đè lên một slot đã có chữ thì chữ cũ tự động bật ngược về ngân hàng đáp án.
 - Code đảm bảo sạch sẽ và áp dụng mượt mà không lỗi.
+
+[21:57] Xây dựng 3 Module Tương tác Mới (Phase 2 - Hoàn thiện hệ thống cơ sở):
+- Phân tích SGK Toán 5 Tập 1 (143 trang) + Tập 2 (139 trang): Xác định 8 dạng bài tập cốt lõi, trong đó EduRobot đã đáp ứng 5/8 (70%). Cần bổ sung 3 module còn thiếu.
+- Module 5: renderVerticalCalculation (Đặt tính rồi tính):
+  + Giao diện ô ly dọc giống vở HS, mỗi số nằm trong 1 ô vuông riêng biệt.
+  + Ô kết quả cho nhập từng chữ số (Click-to-fill), tự nhảy sang ô kế tiếp.
+  + Backspace tự quay về ô trước. Chấm điểm tức thì.
+  + Hỗ trợ: Cộng, Trừ, Nhân, Chia (số thập phân có dấu phẩy).
+- Module 6: renderFractionInput (Bàn phím Phân số nổi):
+  + Giao diện nhập tử số / mẫu số dạng trực quan với gạch ngang ở giữa.
+  + Trông giống phân số thật sự, không cần gõ ký tự "/" trên bàn phím.
+  + Chấm điểm so khớp tử/mẫu.
+- Module 7: renderWordProblem (Giải toán có lời văn - 3 bước):
+  + HS nhập theo quy trình 3 bước chuẩn: Bài giải → Phép tính → Đáp số.
+  + Có 2 nút: "Kiểm tra Đáp Số" (chấm nhanh) và "Gửi AI Chấm Bài" (gửi toàn bộ bài làm vào cửa sổ Chat AI để chấm logic/trình bày).
+  + Hỗ trợ Gợi ý (hint) có thể mở rộng (<details>).
+- Tổng kết: EduRobot5 giờ đây có 7 Module Tương tác (DragDrop, GeometryLab, Matching, RealWorld, VerticalCalc, Fraction, WordProblem) + Quiz (Trắc nghiệm Gamification) = 8 cỗ máy bao phủ 100% các dạng bài Toán 5.
+- Cập nhật Bài 127 Demo: Tích hợp đầy đủ 7 module + 10 câu trắc nghiệm vào 3 tab (Tìm hiểu, Luyện tập, Củng cố) để kiểm thử toàn diện.

@@ -746,6 +746,297 @@ export const Lesson = {
         };
 
         recognition.start();
+    },
+
+    // ========================================================================
+    // MODULE MỚI 1: ĐẶT TÍNH RỒI TÍNH (Vertical Calculation Grid)
+    // Giao diện ô ly dọc giống vở học sinh, hỗ trợ Cộng/Trừ/Nhân/Chia
+    // ========================================================================
+    renderVerticalCalculation(id, num1, operator, num2, answer, decimalPlaces = 0) {
+        // Tách từng chữ số để render grid
+        const maxLen = Math.max(
+            num1.toString().replace('.', '').length,
+            num2.toString().replace('.', '').length,
+            answer.toString().replace('.', '').length
+        ) + 1; // +1 cho nhớ
+
+        const opSymbol = { '+': '+', '-': '−', '*': '×', 'x': '×', '/': '÷' }[operator] || operator;
+
+        // Tách answer thành mảng chữ số (bao gồm dấu phẩy nếu có)
+        const answerStr = answer.toString();
+        const answerChars = answerStr.split('');
+        const safeAnswer = answerStr.replace(/'/g, "\\'");
+
+        // Pad num1, num2 để căn phải
+        const padRight = (str, len) => str.padStart(len, ' ');
+        const num1Str = padRight(num1.toString(), maxLen);
+        const num2Str = padRight(num2.toString(), maxLen);
+
+        // Render hàng số 1 (chỉ hiển thị, không nhập)
+        const renderDisplayRow = (numStr, prefix = '') => {
+            let cells = '';
+            for (let i = 0; i < maxLen; i++) {
+                const ch = numStr[i] || '';
+                const display = ch === ' ' ? '' : ch;
+                cells += `<div class="w-10 h-10 md:w-12 md:h-12 border border-blue-200 bg-white flex items-center justify-center text-lg md:text-xl font-black text-blue-900">${display}</div>`;
+            }
+            return `
+                <div class="flex items-center gap-0">
+                    <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-xl font-black text-gray-400">${prefix}</div>
+                    ${cells}
+                </div>
+            `;
+        };
+
+        // Render hàng kết quả (cho nhập từng ô)
+        let answerCells = '';
+        for (let i = 0; i < maxLen; i++) {
+            answerCells += `<input type="text" maxlength="1" id="vc-cell-${id}-${i}" 
+                class="w-10 h-10 md:w-12 md:h-12 border-2 border-dashed border-orange-300 bg-orange-50 text-center text-lg md:text-xl font-black text-orange-700 outline-none focus:border-orange-500 focus:bg-white transition-all rounded-sm"
+                oninput="this.value=this.value.slice(-1); const next=document.getElementById('vc-cell-${id}-${i + 1}'); if(next && this.value) next.focus();"
+                onkeydown="if(event.key==='Backspace' && !this.value){ const prev=document.getElementById('vc-cell-${id}-${i - 1}'); if(prev) prev.focus(); }">`;
+        }
+
+        return `
+            <div class="vc-exercise p-6 md:p-8 bg-white dark:bg-slate-800 rounded-[32px] shadow-sm border border-gray-100 dark:border-slate-700 mt-6 animate-fade-in" id="vc-ex-${id}">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-black shrink-0 text-xl">📝</div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">Đặt tính rồi tính</h3>
+                </div>
+                
+                <div class="inline-flex flex-col items-end gap-0 p-4 bg-gray-50 dark:bg-slate-900 rounded-2xl border border-gray-200 mx-auto">
+                    ${renderDisplayRow(num1Str, '')}
+                    ${renderDisplayRow(num2Str, opSymbol)}
+                    <div class="flex items-center gap-0 my-1">
+                        <div class="w-10 h-10 md:w-12 md:h-12"></div>
+                        <div class="border-t-[3px] border-blue-900" style="width: ${maxLen * 48}px;"></div>
+                    </div>
+                    <div class="flex items-center gap-0">
+                        <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-xl font-black text-emerald-500">=</div>
+                        ${answerCells}
+                    </div>
+                </div>
+
+                <div class="mt-6 flex items-center gap-4">
+                    <button onclick="Lesson.checkVerticalCalc('${id}', '${safeAnswer}', ${maxLen})" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95">Kiểm Tra</button>
+                    <span id="vc-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
+                </div>
+            </div>
+        `;
+    },
+
+    checkVerticalCalc(id, answer, maxLen) {
+        let userAnswer = '';
+        for (let i = 0; i < maxLen; i++) {
+            const cell = document.getElementById(`vc-cell-${id}-${i}`);
+            if (cell) userAnswer += cell.value || '';
+        }
+        userAnswer = userAnswer.trim();
+        const cleanAnswer = answer.replace(/\s/g, '').trim();
+
+        const feedback = document.getElementById(`vc-feedback-${id}`);
+        feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-orange-500');
+
+        if (userAnswer === cleanAnswer) {
+            feedback.innerText = "Chính xác! 🎉";
+            feedback.classList.add('text-emerald-500');
+            // Đổi viền ô thành xanh
+            for (let i = 0; i < maxLen; i++) {
+                const cell = document.getElementById(`vc-cell-${id}-${i}`);
+                if (cell) { cell.classList.remove('border-orange-300', 'bg-orange-50'); cell.classList.add('border-emerald-400', 'bg-emerald-50'); cell.readOnly = true; }
+            }
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            feedback.innerText = "Sai mất rồi. Thử lại nhé!";
+            feedback.classList.add('text-orange-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    // ========================================================================
+    // MODULE MỚI 2: PHÂN SỐ (Fraction Input)
+    // Giao diện nhập tử số / mẫu số dạng trực quan có gạch ngang
+    // ========================================================================
+    renderFractionInput(id, questionText, answerNumerator, answerDenominator) {
+        const safeNum = answerNumerator.toString().replace(/'/g, "\\'");
+        const safeDen = answerDenominator.toString().replace(/'/g, "\\'");
+
+        return `
+            <div class="fraction-exercise p-6 md:p-8 bg-white dark:bg-slate-800 rounded-[32px] shadow-sm border border-gray-100 dark:border-slate-700 mt-6 animate-fade-in" id="frac-ex-${id}">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-black shrink-0 text-xl">⅗</div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">${questionText}</h3>
+                </div>
+                
+                <div class="flex items-center justify-center gap-4 p-6 bg-purple-50 dark:bg-slate-900 rounded-2xl">
+                    <span class="text-xl font-bold text-gray-600">Kết quả =</span>
+                    <div class="inline-flex flex-col items-center gap-0">
+                        <input type="text" id="frac-num-${id}" placeholder="Tử số" 
+                            class="w-20 md:w-24 h-10 text-center text-lg font-black text-purple-800 bg-white border-2 border-purple-200 rounded-t-xl outline-none focus:border-purple-500 transition-all placeholder:text-gray-300 placeholder:text-sm placeholder:font-normal">
+                        <div class="w-20 md:w-24 h-[3px] bg-purple-800"></div>
+                        <input type="text" id="frac-den-${id}" placeholder="Mẫu số" 
+                            class="w-20 md:w-24 h-10 text-center text-lg font-black text-purple-800 bg-white border-2 border-purple-200 rounded-b-xl outline-none focus:border-purple-500 transition-all placeholder:text-gray-300 placeholder:text-sm placeholder:font-normal">
+                    </div>
+                </div>
+
+                <div class="mt-6 flex items-center gap-4">
+                    <button onclick="Lesson.checkFraction('${id}', '${safeNum}', '${safeDen}')" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95">Kiểm Tra</button>
+                    <span id="frac-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
+                </div>
+            </div>
+        `;
+    },
+
+    checkFraction(id, correctNum, correctDen) {
+        const userNum = (document.getElementById(`frac-num-${id}`)?.value || '').trim();
+        const userDen = (document.getElementById(`frac-den-${id}`)?.value || '').trim();
+        const feedback = document.getElementById(`frac-feedback-${id}`);
+
+        feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-orange-500');
+
+        if (userNum === correctNum && userDen === correctDen) {
+            feedback.innerText = "Xuất sắc! Phân số chính xác! 🎉";
+            feedback.classList.add('text-emerald-500');
+            document.getElementById(`frac-num-${id}`).classList.add('border-emerald-400', 'bg-emerald-50');
+            document.getElementById(`frac-den-${id}`).classList.add('border-emerald-400', 'bg-emerald-50');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            feedback.innerText = "Chưa đúng. Kiểm tra lại tử số và mẫu số nhé!";
+            feedback.classList.add('text-orange-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    // ========================================================================
+    // MODULE MỚI 3: GIẢI TOÁN CÓ LỜI VĂN (Word Problem Solving - 3 Steps)
+    // Cho HS nhập: Lời giải → Phép tính → Đáp số, rồi chấm bằng AI hoặc key
+    // ========================================================================
+    renderWordProblem(id, problemText, hintSteps = [], expectedAnswer = null) {
+        const safeExpected = expectedAnswer ? expectedAnswer.toString().replace(/'/g, "\\'") : '';
+
+        return `
+            <div class="word-problem p-6 md:p-8 bg-white dark:bg-slate-800 rounded-[32px] shadow-sm border border-gray-100 dark:border-slate-700 mt-6 animate-fade-in" id="wp-ex-${id}">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center font-black shrink-0 text-xl">📖</div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">Giải bài toán</h3>
+                </div>
+
+                <!-- Đề bài -->
+                <div class="p-5 bg-amber-50 dark:bg-slate-900 rounded-2xl border-2 border-amber-200 dark:border-amber-800/30 mb-6">
+                    <p class="text-lg md:text-xl font-bold text-gray-800 dark:text-slate-100 leading-relaxed">${problemText}</p>
+                </div>
+
+                <!-- 3 Bước giải bài -->
+                <div class="space-y-4">
+                    <!-- Bước 1: Lời giải -->
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center text-sm font-black shrink-0 mt-1">1</div>
+                        <div class="flex-grow">
+                            <label class="text-xs font-black text-blue-600 uppercase tracking-widest mb-1 block">Lời giải (Bài giải)</label>
+                            <textarea id="wp-solution-${id}" rows="2" 
+                                class="w-full p-3 rounded-xl border-2 border-blue-200 outline-none focus:border-blue-500 text-sm font-bold placeholder:text-gray-300 shadow-inner transition-all resize-none" 
+                                placeholder="Ví dụ: Quãng đường ô tô đi được là:"></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Bước 2: Phép tính -->
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 bg-indigo-500 text-white rounded-lg flex items-center justify-center text-sm font-black shrink-0 mt-1">2</div>
+                        <div class="flex-grow">
+                            <label class="text-xs font-black text-indigo-600 uppercase tracking-widest mb-1 block">Phép tính</label>
+                            <textarea id="wp-calc-${id}" rows="2" 
+                                class="w-full p-3 rounded-xl border-2 border-indigo-200 outline-none focus:border-indigo-500 text-sm font-bold font-mono placeholder:text-gray-300 shadow-inner transition-all resize-none" 
+                                placeholder="Ví dụ: 45 × 2.5 = 112.5 (km)"></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Bước 3: Đáp số -->
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 bg-emerald-500 text-white rounded-lg flex items-center justify-center text-sm font-black shrink-0 mt-1">3</div>
+                        <div class="flex-grow">
+                            <label class="text-xs font-black text-emerald-600 uppercase tracking-widest mb-1 block">Đáp số</label>
+                            <input type="text" id="wp-answer-${id}" 
+                                class="w-full p-3 rounded-xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-sm font-bold placeholder:text-gray-300 shadow-inner transition-all" 
+                                placeholder="Ví dụ: 112.5 km">
+                        </div>
+                    </div>
+                </div>
+
+                ${hintSteps.length > 0 ? `
+                    <details class="mt-4">
+                        <summary class="text-xs font-black text-gray-400 uppercase tracking-widest cursor-pointer hover:text-blue-500 transition-colors">💡 Gợi ý các bước</summary>
+                        <ul class="mt-2 pl-4 space-y-1 text-sm text-gray-500">
+                            ${hintSteps.map(h => `<li class="list-disc">${h}</li>`).join('')}
+                        </ul>
+                    </details>
+                ` : ''}
+
+                <div class="mt-6 flex items-center gap-4 flex-wrap">
+                    ${expectedAnswer ? `
+                        <button onclick="Lesson.submitWordProblem('${id}', '${safeExpected}')" class="px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95">Kiểm Tra Đáp Số</button>
+                    ` : ''}
+                    <button onclick="Lesson.submitWordProblemAI('${id}')" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95 flex items-center gap-2">
+                        <span>Gửi AI Chấm Bài</span> <span class="text-lg">🤖</span>
+                    </button>
+                    <span id="wp-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
+                </div>
+            </div>
+        `;
+    },
+
+    submitWordProblem(id, expectedAnswer) {
+        const userAnswer = (document.getElementById(`wp-answer-${id}`)?.value || '').trim().replace(/\s/g, '');
+        const cleanExpected = expectedAnswer.replace(/\s/g, '');
+        const feedback = document.getElementById(`wp-feedback-${id}`);
+
+        feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-orange-500');
+
+        if (userAnswer === cleanExpected) {
+            feedback.innerText = "Đáp số chính xác! 🎉";
+            feedback.classList.add('text-emerald-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            feedback.innerText = "Đáp số chưa đúng. Xem lại phép tính nhé!";
+            feedback.classList.add('text-orange-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    submitWordProblemAI(id) {
+        const solution = document.getElementById(`wp-solution-${id}`)?.value || '';
+        const calc = document.getElementById(`wp-calc-${id}`)?.value || '';
+        const answer = document.getElementById(`wp-answer-${id}`)?.value || '';
+
+        if (!solution.trim() && !calc.trim() && !answer.trim()) {
+            alert("Em chưa điền gì cả. Hãy viết lời giải, phép tính và đáp số nhé!");
+            return;
+        }
+
+        const fullText = `Bài giải:\n${solution}\nPhép tính:\n${calc}\nĐáp số: ${answer}`;
+
+        // Gửi qua AIInteraction nếu có
+        if (window.AIInteraction && typeof window.AIInteraction.sendDirectMessage === 'function') {
+            window.AIInteraction.sendDirectMessage(`Chấm bài Toán lời văn của em. Nội dung bài làm:\n${fullText}\n\nHãy nhận xét: Lời giải đúng/sai, Phép tính đúng/sai, Đáp số đúng/sai. Cho điểm thang 10.`);
+        } else {
+            // Fallback: mở chat window
+            const chatInput = document.getElementById('ai-chat-input');
+            if (chatInput) {
+                chatInput.value = `Em giải bài Toán:\n${fullText}\n\nThầy/cô chấm giúp em với ạ!`;
+                const chatWindow = document.getElementById('ai-chat-window');
+                if (chatWindow && chatWindow.classList.contains('hidden')) {
+                    chatWindow.classList.remove('hidden');
+                    chatWindow.classList.add('flex');
+                }
+                chatInput.focus();
+            }
+        }
+
+        const feedback = document.getElementById(`wp-feedback-${id}`);
+        if (feedback) {
+            feedback.classList.remove('opacity-0');
+            feedback.innerText = "Đã gửi bài cho AI chấm! Xem cửa sổ chat.";
+            feedback.classList.add('text-blue-500');
+        }
     }
 };
 
