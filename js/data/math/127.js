@@ -36,12 +36,19 @@ export const lesson127 = {
         { ordered: true, answer: ['a', '×', 'h', '÷', '2'] }
     )}
 
-            <!-- ★ MODULE 2: PHÒNG LAB HÌNH HỌC (Geometry Lab) -->
-            ${Lesson.renderDynamicGeometryLab(
-        '127-geo-1',
-        'rectangle_area',
-        { a: 5, b: 3 }
-    )}
+            <!-- ★ MODULE 2: PHÒNG LAB HÌNH HỌC (Geometry Lab - Chốt Hình So Sánh) -->
+            <div class="bg-white p-2 rounded-[40px] shadow-xl border border-indigo-50 dark:bg-slate-800">
+                <div class="p-6 bg-indigo-50 dark:bg-slate-900 rounded-[32px]">
+                    <h4 class="text-2xl md:text-4xl font-black text-indigo-900 dark:text-indigo-400 mb-6 flex items-center gap-3">
+                        <span class="w-12 h-12 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-lg">🚀</span>
+                        Demo: So sánh Thể tích khi tăng cạnh
+                    </h4>
+                    <p class="text-xl md:text-3xl font-bold text-indigo-700/80 mb-8 leading-tight italic">
+                        Thử nghiệm: Chốt kích thước ban đầu, sau đó kéo cạnh tăng gấp 2, gấp 3 lần để xem Thể tích bùng nổ như thế nào!
+                    </p>
+                    ${Lesson.renderDynamicGeometryLab('127-geo-demo', 'cube_volume', { a: 5 })}
+                </div>
+            </div>
 
             <!-- ★ MODULE 5 (MỚI): ĐẶT TÍNH RỒI TÍNH (Vertical Calculation Grid) -->
             ${Lesson.renderVerticalCalculation('127-vc-1', '36.5', '+', '14.8', '51.3')}
