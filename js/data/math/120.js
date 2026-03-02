@@ -38,7 +38,7 @@ export const lesson120 = {
                         </div>
                     </div>
                     <div class="flex justify-center">
-                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-xq.png" alt="Sxq" class="w-full max-w-[320px] h-auto rounded-3xl shadow-2xl border-8 border-white">
+                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-xq.png" alt="Sxq" class="w-full max-w-[600px] h-auto rounded-3xl shadow-2xl border-8 border-white">
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@ export const lesson120 = {
                 <div class="absolute top-0 left-0 w-24 h-24 bg-purple-100 rounded-br-full -z-0 opacity-50"></div>
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
                     <div class="flex justify-center order-2 lg:order-1">
-                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-tp.png" alt="Stp" class="w-full max-w-[320px] h-auto rounded-3xl shadow-2xl border-8 border-white">
+                        <img src="hinh_anh/toan/toan_tap_2/120-khampha-tp.png" alt="Stp" class="w-full max-w-[600px] h-auto rounded-3xl shadow-2xl border-8 border-white">
                     </div>
                     <div class="space-y-4 order-1 lg:order-2">
                         <div class="flex items-center gap-3">
@@ -154,7 +154,7 @@ export const lesson120 = {
                                 </p>
                             </div>
                             <div class="lg:col-span-2 flex justify-center">
-                                <img src="hinh_anh/toan/toan_tap_2/120-b2-cake.png" alt="Bánh" class="w-full max-w-[200px] h-auto rounded-[32px] shadow-2xl border-4 border-white mb-2">
+                                <img src="hinh_anh/toan/toan_tap_2/120-b2-cake.png" alt="Bánh" class="w-full max-w-[500px] h-auto rounded-[32px] shadow-2xl border-4 border-white mb-2">
                             </div>
                         </div>
                     </div>

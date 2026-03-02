@@ -75,7 +75,7 @@ export const lesson121 = {
                                 Tính diện tích các mảnh nhựa màu (4 mặt xung quanh) dán cho chiếc đèn hình lập phương:
                             </p>
                             <div class="md:col-span-2 flex justify-center">
-                                <img src="hinh_anh/toan/toan_tap_2/121-b1-lamps.png" alt="Đèn" class="w-full max-w-[300px] h-auto rounded-3xl shadow-2xl border-8 border-white">
+                                <img src="hinh_anh/toan/toan_tap_2/121-b1-lamps.png" alt="Đèn" class="w-full max-w-[600px] h-auto rounded-3xl shadow-2xl border-8 border-white">
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@ export const lesson121 = {
                                 Mai tính phủ kẹo 5 mặt (4 mặt XQ + 1 mặt trên) của bánh hình lập phương cạnh <span class="text-emerald-600 underline font-black">10 cm</span>. Tính diện tích cần phủ kẹo.
                             </p>
                             <div class="md:col-span-2 flex justify-center">
-                                <img src="hinh_anh/toan/toan_tap_2/121-b2-mai-cake.png" alt="Mai Cake" class="w-full max-w-[280px] h-auto rounded-[40px] shadow-2xl border-8 border-white mx-auto">
+                                <img src="hinh_anh/toan/toan_tap_2/121-b2-mai-cake.png" alt="Mai Cake" class="w-full max-w-[500px] h-auto rounded-[40px] shadow-2xl border-8 border-white mx-auto">
                             </div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ export const lesson121 = {
                                 Trang trí 4 mặt xung quanh chậu cây hình lập phương cạnh <span class="text-orange-600 font-black">20 cm</span>. Giá dịch vụ: <span class="text-orange-600 underline">25 đồng</span>/cm². Tính số tiền phải trả.
                             </p>
                             <div class="md:col-span-2 flex justify-center">
-                                <img src="hinh_anh/toan/toan_tap_2/121-b3-robot-pot.png" alt="Robot Pot" class="w-full max-w-[280px] h-auto rounded-[40px] shadow-2xl border-8 border-white mx-auto">
+                                <img src="hinh_anh/toan/toan_tap_2/121-b3-robot-pot.png" alt="Robot Pot" class="w-full max-w-[500px] h-auto rounded-[40px] shadow-2xl border-8 border-white mx-auto">
                             </div>
                         </div>
                     </div>
@@ -200,7 +200,7 @@ export const lesson121 = {
                     </p>
                     <div class="bg-rose-50/50 p-6 rounded-3xl border-2 border-rose-100 mb-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                            <img src="hinh_anh/toan/toan_tap_2/121-b4-kids-cubes.png" alt="Logic" class="w-full max-w-[320px] h-auto rounded-3xl shadow-2xl border-8 border-white mx-auto">
+                            <img src="hinh_anh/toan/toan_tap_2/121-b4-kids-cubes.png" alt="Logic" class="w-full max-w-[500px] h-auto rounded-3xl shadow-2xl border-8 border-white mx-auto">
                             <div class="space-y-4">
                                 <p class="text-2xl md:text-4xl font-bold text-rose-900 leading-tight">
                                     Ghép 2 lập phương cạnh 4 cm thành 1 hộp chữ nhật. Mai nói: "S<sub>tp</sub> hộp chữ nhật mới bằng 2 lần S<sub>tp</sub> của 1 hình lập phương ban đầu."
