@@ -149,26 +149,67 @@ export const lesson120 = {
                 <div class="relative z-10">
                     <p class="font-black text-3xl md:text-4xl mb-10 text-amber-700 flex items-center gap-5">
                         <span class="w-16 h-16 bg-amber-600 text-white rounded-2xl flex items-center justify-center font-black shadow-lg shadow-amber-200">2</span>
-                        Vận dụng thực tế:
+                        Giải bài toán:
                     </p>
-                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center bg-amber-50/50 p-8 rounded-[48px] border-2 border-amber-100">
-                        <div class="lg:col-span-3 space-y-6">
-                            <p class="text-2xl font-bold text-amber-900 leading-snug">
-                                Cửa hàng bảo quản chiếc bánh bằng cách cuốn một lớp túi bóng <span class="text-amber-600 font-black decoration-double underline decoration-amber-300">vừa đủ quanh chiếc bánh</span>.
-                            </p>
-                            <p class="text-2xl font-bold text-amber-900 leading-snug">
-                                Chiếc bánh hình lập phương cạnh <span class="bg-white px-4 py-1 rounded-xl shadow-sm text-3xl font-black text-amber-600">9 cm</span>. Tính diện tích phần túi bóng cần dùng.
-                            </p>
-                            <div class="bg-white p-8 rounded-[40px] shadow-xl border-2 border-amber-200 flex flex-col items-center justify-center gap-4">
-                                <label class="block text-gray-400 font-black text-sm uppercase tracking-widest">Đáp số của bạn</label>
-                                <div class="flex items-center justify-center gap-4">
-                                    <input type="number" id="ans-120-2" class="w-64 text-6xl font-black text-amber-600 bg-transparent border-none focus:ring-0 text-center placeholder:text-gray-100" placeholder="?">
-                                    <span class="text-3xl font-black text-gray-300">cm²</span>
+                    <div class="bg-amber-50/50 p-8 rounded-[48px] border-2 border-amber-100 mb-8">
+                        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+                            <div class="lg:col-span-3 space-y-6">
+                                <p class="text-2xl font-bold text-amber-900 leading-snug">
+                                    Cửa hàng bảo quản chiếc bánh bằng cách cuốn một lớp túi bóng <span class="text-amber-600 font-black decoration-double underline decoration-amber-300">vừa đủ quanh chiếc bánh</span>.
+                                </p>
+                                <p class="text-2xl font-bold text-amber-900 leading-snug">
+                                    Chiếc bánh hình lập phương cạnh <span class="bg-white px-4 py-1 rounded-xl shadow-sm text-3xl font-black text-amber-600">9 cm</span>. Tính diện tích phần túi bóng cần dùng.
+                                </p>
+                            </div>
+                            <div class="lg:col-span-2 flex justify-center text-center">
+                                <img src="hinh_anh/toan/toan_tap_2/120-b2-cake.png" alt="Bánh" class="w-full max-w-[280px] h-auto rounded-[60px] shadow-2xl border-8 border-white mb-2">
+                                <p class="text-xs font-bold text-amber-400 italic">Hình minh họa gợi ý (cuốn quanh 4 mặt)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khu vực giải toán có lời văn -->
+                    <div class="max-w-4xl mx-auto space-y-6 bg-white p-8 rounded-[40px] shadow-xl border border-amber-100">
+                        <!-- Bước 1: Lời giải -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-amber-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-1">1</div>
+                            <div class="flex-grow">
+                                <label class="text-xs font-black text-amber-600 uppercase tracking-widest mb-2 block">Lời giải (Bài giải)</label>
+                                <textarea id="wp-solution-120-2" rows="2" 
+                                    class="w-full p-4 rounded-2xl border-2 border-amber-200 outline-none focus:border-amber-500 text-xl font-bold placeholder:text-gray-200 shadow-inner transition-all resize-none" 
+                                    placeholder="Lời giải của bạn là..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Bước 2: Phép tính -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-orange-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-1">2</div>
+                            <div class="flex-grow">
+                                <label class="text-xs font-black text-orange-600 uppercase tracking-widest mb-2 block">Phép tính</label>
+                                <textarea id="wp-calc-120-2" rows="2" 
+                                    class="w-full p-4 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-2xl font-black text-blue-800 placeholder:text-gray-200 shadow-inner transition-all resize-none" 
+                                    placeholder="Ví dụ: 9 x 9 x 4 = ..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Bước 3: Đáp số -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-rose-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-1">3</div>
+                            <div class="flex-grow">
+                                <label class="text-xs font-black text-rose-600 uppercase tracking-widest mb-2 block">Đáp số</label>
+                                <div class="flex items-center gap-4">
+                                    <input type="number" id="ans-120-2" 
+                                        class="w-full max-w-[300px] p-4 rounded-2xl border-2 border-rose-200 outline-none focus:border-rose-500 text-4xl font-black text-rose-600 shadow-inner transition-all" 
+                                        placeholder="?">
+                                    <span class="text-2xl font-black text-gray-300">cm²</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="lg:col-span-2 flex justify-center">
-                            <img src="hinh_anh/toan/toan_tap_2/120-b2-cake.png" alt="Bánh" class="w-full max-w-[320px] h-auto rounded-[60px] shadow-2xl border-8 border-white">
+
+                        <div class="mt-8 flex justify-center">
+                            <button onclick="Lesson.submitWordProblemAI('120-2')" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-[24px] font-black text-lg transition-all active:scale-95 shadow-lg shadow-blue-200 flex items-center gap-3">
+                                <span>THẦY E CHẤM BÀI GIẢI</span> <span class="text-2xl">🤖</span>
+                            </button>
                         </div>
                     </div>
                 </div>
