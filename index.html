@@ -315,8 +315,14 @@
         window.verifyTeacherPassword = function () {
             const pwd = document.getElementById('teacherPassword').value;
             // Password hardcoded - simple security based on user request
-            if (pwd === "gv123" || pwd === "admin") {
-                window.location.href = "teacher.html";
+            if (pwd === "gv123" || pwd === "admin" || pwd === "123456") {
+                // Determine destination based on current subject
+                const subject = window.router && window.router.currentSubject ? window.router.currentSubject : 'vietnamese';
+                if (subject === 'math') {
+                    window.location.href = "teacher-toan.html";
+                } else {
+                    window.location.href = "teacher.html";
+                }
             } else {
                 alert("Mật khẩu không đúng. Vui lòng thử lại!");
             }
