@@ -198,22 +198,435 @@ export const Lesson = {
         feedback.classList.remove('hidden');
         if (cleanValue === cleanAnswer) {
             feedback.innerHTML = `
-                <div class="flex items-center gap-1 text-emerald-600 font-bold ml-1">
+                <div class="flex items-center gap-1 text-emerald-600 font-bold ml-1 animate-pop-in">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                    <span>Tuyệt vời! Bạn tính đúng rồi.</span>
+                    <span>Tuyệt vời! Bạn đã trả lời đúng.</span>
                 </div>
             `;
             input.classList.add('border-emerald-500', 'text-emerald-600', 'bg-transparent');
             input.classList.remove('border-blue-400', 'text-emerald-700');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
         } else {
             feedback.innerHTML = `
-                <div class="flex items-center gap-1 text-orange-500 font-bold ml-1">
+                <div class="flex items-center gap-1 text-orange-500 font-bold ml-1 animate-pop-in">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg>
                     <span>Sai mất rồi. Thử lại nhé!</span>
                 </div>
             `;
             input.classList.add('border-orange-500', 'text-orange-600', 'bg-transparent');
             input.classList.remove('border-blue-400', 'text-emerald-700');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    // --- BỘ CÔNG CỤ TƯƠNG TÁC CAO CẤP (NEW INFO) ---
+
+    // 1. Module Công thức Kéo-Thả (Drag & Drop)
+    renderDragDropFormula(id, questionText, draggables, slotsHtml, answerLogicParams) {
+        // Tạm lưu answer vào data attribute để handle sau
+        const safeParams = JSON.stringify(answerLogicParams).replace(/"/g, '&quot;');
+
+        return `
+            <div class="drag-drop-exercise p-6 md:p-8 bg-white dark:bg-slate-800 rounded-[32px] shadow-sm border border-gray-100 dark:border-slate-700 mt-6 animate-fade-in" id="dd-ex-${id}">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-black shrink-0">👆</div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">${questionText}</h3>
+                </div>
+                
+                <div class="flex flex-wrap gap-3 mb-8 p-4 bg-gray-50 dark:bg-slate-900 rounded-2xl min-h-[80px] border-2 border-dashed border-gray-200" id="drag-source-${id}" ondragover="event.preventDefault()" ondrop="Lesson.drop(event, '${id}')">
+                    ${draggables.map((item, idx) => `
+                        <div draggable="true" ondragstart="Lesson.dragStart(event, '${item}')" id="drag-${id}-${idx}" 
+                            class="px-4 py-2 bg-white border-2 border-blue-200 text-blue-700 font-bold rounded-xl cursor-grab active:cursor-grabbing shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+                            ${item}
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="formula-area flex flex-wrap items-center justify-center gap-3 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl border border-blue-100">
+                    ${slotsHtml}
+                </div>
+
+                <div class="mt-6 flex justify-end items-center gap-4">
+                    <span id="dd-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
+                    <button onclick="Lesson.checkDragDrop('${id}', '${safeParams}')" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95">Kiểm Tra</button>
+                </div>
+            </div>
+        `;
+    },
+
+    dragStart(ev, value) {
+        ev.dataTransfer.setData("text", value);
+        ev.dataTransfer.setData("sourceId", ev.target.id);
+    },
+
+    allowDrop(ev) {
+        ev.preventDefault();
+        ev.currentTarget.classList.add('bg-blue-100');
+    },
+
+    dragleave(ev) {
+        ev.currentTarget.classList.remove('bg-blue-100');
+    },
+
+    drop(ev, exId) {
+        ev.preventDefault();
+        ev.currentTarget.classList.remove('bg-blue-100');
+        const data = ev.dataTransfer.getData("text");
+        const sourceId = ev.dataTransfer.getData("sourceId");
+
+        // Tránh thả sai chỗ 
+        if (ev.currentTarget.classList.contains('drop-slot')) {
+            // Thay thế text trong slot
+            ev.currentTarget.innerText = data;
+            ev.currentTarget.dataset.value = data;
+            ev.currentTarget.classList.add('border-blue-500', 'bg-white', 'text-blue-700');
+            ev.currentTarget.classList.remove('border-dashed', 'bg-transparent');
+
+            // Ẩn element gốc đi
+            if (sourceId) {
+                const srcEl = document.getElementById(sourceId);
+                if (srcEl) srcEl.style.display = 'none';
+            }
+        }
+    },
+
+    checkDragDrop(id, paramsStr) {
+        const params = JSON.parse(paramsStr.replace(/&quot;/g, '"'));
+        const container = document.getElementById(`dd-ex-${id}`);
+        const slots = container.querySelectorAll('.drop-slot');
+        const feedback = document.getElementById(`dd-feedback-${id}`);
+
+        // Thu thập values
+        const userVals = Array.from(slots).map(s => s.dataset.value || "");
+
+        let isCorrect = true;
+        if (params.ordered) {
+            // Check theo đúng thứ tự mảng answer
+            isCorrect = userVals.every((val, i) => val === params.answer[i]);
+        } else {
+            // Check không cần thứ tự (cho phép đảo vị trí phép nhân/cộng)
+            let answerCopy = [...params.answer];
+            for (let val of userVals) {
+                const idx = answerCopy.indexOf(val);
+                if (idx > -1) answerCopy.splice(idx, 1);
+                else isCorrect = false;
+            }
+            if (answerCopy.length > 0) isCorrect = false;
+        }
+
+        feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-orange-500');
+        if (isCorrect) {
+            feedback.innerText = "Chính xác! 🎉";
+            feedback.classList.add('text-emerald-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            feedback.innerText = "Chưa đúng. Thử lại nhé!";
+            feedback.classList.add('text-orange-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    // 2. Phòng thí nghiệm hình học động (Dynamic Geometry Lab)
+    // Sẽ gọi update function để vẽ Canvas / chỉnh CSS scale
+    renderDynamicGeometryLab(id, shapeType, initialState) {
+        return `
+            <div class="geometry-lab p-6 md:p-8 bg-blue-50 dark:bg-slate-900 rounded-[32px] border-2 border-blue-100 mb-8 mt-6">
+                 <div class="flex items-center gap-3 mb-6">
+                    <span class="text-3xl">🧮</span>
+                    <h3 class="text-xl md:text-2xl font-black text-blue-900 dark:text-blue-400">Phòng Thí Nghiệm Hình Học</h3>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Trực quan hóa (Visualization) -->
+                    <div class="flex-1 min-h-[250px] bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center p-6 border-2 border-dashed border-blue-300 relative overflow-hidden">
+                        <div id="geo-visual-${id}" class="transition-all duration-300 origin-bottom flex items-center justify-center">
+                            <!-- SVG vẽ hình sẽ được gắn vào đây -->
+                            <div class="text-gray-400 text-sm font-bold">Hình ảnh sẽ cập nhật trực tiếp...</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bảng điều khiển (Control Panel) -->
+                    <div class="flex-1 space-y-6">
+                        <div id="geo-controls-${id}">
+                            <!-- Controls nạp động dựa vào shapeType -->
+                        </div>
+                        
+                        <div class="p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="text-[10px] font-black tracking-widest text-gray-400 uppercase mb-2">Kết quả tính toán thời gian thực</div>
+                            <div id="geo-result-${id}" class="text-2xl font-black text-indigo-600 dark:text-indigo-400 font-mono"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Auto Init Script trigger inline -->
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="Lesson.initGeometryLab('${id}', '${shapeType}', ${JSON.stringify(initialState).replace(/"/g, "'")})" class="hidden">
+        `;
+    },
+
+    initGeometryLab(id, type, stateStr) {
+        // Safe parse
+        let state = typeof stateStr === 'string' ? JSON.parse(stateStr.replace(/'/g, '"')) : stateStr;
+        const ctrls = document.getElementById(`geo-controls-${id}`);
+        if (!ctrls) return;
+
+        let html = '';
+        if (type === 'rectangle_area') {
+            html = `
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm font-bold text-gray-700 mb-1">
+                            <span>Chiều dài (a)</span>
+                            <span id="geo-val-a-${id}">${state.a} cm</span>
+                        </div>
+                        <input type="range" class="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600" min="1" max="20" value="${state.a}" oninput="Lesson.updateGeometry('${id}', 'rectangle_area', 'a', this.value)">
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-bold text-gray-700 mb-1">
+                            <span>Chiều rộng (b)</span>
+                            <span id="geo-val-b-${id}">${state.b} cm</span>
+                        </div>
+                        <input type="range" class="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600" min="1" max="20" value="${state.b}" oninput="Lesson.updateGeometry('${id}', 'rectangle_area', 'b', this.value)">
+                    </div>
+                </div>
+            `;
+        }
+        // Thêm các hình khác (circle, triangle) tương tự...
+
+        ctrls.innerHTML = html;
+        window[`geoState_${id}`] = state;
+        Lesson.updateGeometry(id, type, null, null);
+    },
+
+    updateGeometry(id, type, key, val) {
+        const state = window[`geoState_${id}`];
+        if (key) {
+            state[key] = parseFloat(val);
+            document.getElementById(`geo-val-${key}-${id}`).innerText = val + " cm";
+        }
+
+        const visual = document.getElementById(`geo-visual-${id}`);
+        const result = document.getElementById(`geo-result-${id}`);
+
+        if (type === 'rectangle_area') {
+            const area = state.a * state.b;
+            result.innerHTML = `S = a &times; b = <span class="text-3xl text-blue-600">${area}</span> cm²`;
+
+            // Vẽ trực tiếp bằng Tailwind styles và inline CSS
+            // Tỷ lệ max cho 20cm là 200px
+            const scaleFactor = 10;
+            visual.innerHTML = `
+                <div class="bg-blue-400 border-2 border-blue-600 transition-all duration-300 relative" 
+                     style="width: ${state.a * scaleFactor}px; height: ${state.b * scaleFactor}px; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.2) 0, rgba(255,255,255,0.2) 2px, transparent 2px, transparent 10px);">
+                    <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 font-bold text-xs">a = ${state.a}</div>
+                    <div class="absolute -right-10 top-1/2 -translate-y-1/2 font-bold text-xs whitespace-nowrap">b = ${state.b}</div>
+                </div>
+            `;
+        }
+    },
+
+    // 3. Dạng bài nối đặc sắc (Matching Exercise)
+    renderMatchingExercise(id, title, leftItems, rightItems, correctPairs) {
+        // Pairs data format: [{leftIdx: 0, rightIdx: 1}, ...]
+        const safeParams = JSON.stringify(correctPairs).replace(/"/g, '&quot;');
+
+        let leftHtml = leftItems.map((item, idx) => `
+            <button id="match-l-${id}-${idx}" onclick="Lesson.selectMatch('${id}', 'left', ${idx})" class="match-btn w-full p-4 mb-3 bg-white border-2 border-indigo-100 dark:border-slate-700 text-indigo-900 dark:text-slate-200 font-bold rounded-2xl shadow-sm text-center transition-all hover:-translate-y-1 hover:border-indigo-300 relative z-20">
+                ${item}
+            </button>
+        `).join('');
+
+        let rightHtml = rightItems.map((item, idx) => `
+            <button id="match-r-${id}-${idx}" onclick="Lesson.selectMatch('${id}', 'right', ${idx})" class="match-btn w-full p-4 mb-3 bg-white border-2 border-fuchsia-100 dark:border-slate-700 text-fuchsia-900 dark:text-slate-200 font-bold rounded-2xl shadow-sm text-center transition-all hover:-translate-y-1 hover:border-fuchsia-300 relative z-20">
+                ${item}
+            </button>
+        `).join('');
+
+        return `
+            <div class="matching-exercise p-6 md:p-8 bg-gradient-to-br from-indigo-50 to-fuchsia-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] mt-6 relative animate-fade-in" id="match-ex-${id}">
+                <div class="flex items-center gap-3 mb-6 relative z-10">
+                    <span class="text-3xl">🔗</span>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">${title}</h3>
+                </div>
+                
+                <div class="flex gap-4 md:gap-12 relative z-10" id="match-container-${id}">
+                    <div class="flex-1" id="match-col-left-${id}">${leftHtml}</div>
+                    <div class="flex-1" id="match-col-right-${id}">${rightHtml}</div>
+                </div>
+                
+                <!-- SVG layer cho đường nối -->
+                <svg id="match-canvas-${id}" class="absolute inset-0 w-full h-full pointer-events-none z-10 opacity-70"></svg>
+                
+                <div class="mt-6 flex justify-end items-center gap-4 relative z-20">
+                    <span id="match-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
+                    <button onclick="Lesson.checkMatching('${id}', '${safeParams}')" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95">Kiểm Tra</button>
+                </div>
+            </div>
+            <!-- Auto Init State -->
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window['matchState_${id}'] = { left: null, right: null, lines: [] }" class="hidden">
+        `;
+    },
+
+    selectMatch(id, side, idx) {
+        const state = window[`matchState_${id}`];
+        if (!state) return;
+
+        // Bỏ chọn cũ
+        if (state[side] !== null) {
+            const oldBtn = document.getElementById(`match-${side.charAt(0)}-${id}-${state[side]}`);
+            if (oldBtn) oldBtn.classList.remove('ring-4', side === 'left' ? 'ring-indigo-300' : 'ring-fuchsia-300', 'scale-[1.02]');
+        }
+
+        // Chọn mới
+        state[side] = idx;
+        const newBtn = document.getElementById(`match-${side.charAt(0)}-${id}-${idx}`);
+        if (newBtn) {
+            newBtn.classList.add('ring-4', side === 'left' ? 'ring-indigo-300' : 'ring-fuchsia-300', 'scale-[1.02]');
+        }
+
+        // Nếu đã chọn đủ 2 bên => tạo đường nối
+        if (state.left !== null && state.right !== null) {
+            Lesson.createMatchLine(id, state.left, state.right);
+            // Reset state selection
+            document.getElementById(`match-l-${id}-${state.left}`).classList.remove('ring-4', 'ring-indigo-300', 'scale-[1.02]');
+            document.getElementById(`match-r-${id}-${state.right}`).classList.remove('ring-4', 'ring-fuchsia-300', 'scale-[1.02]');
+            state.left = null;
+            state.right = null;
+        }
+    },
+
+    createMatchLine(id, lIdx, rIdx) {
+        const state = window[`matchState_${id}`];
+        // Xóa nối cũ nếu trùng bên
+        state.lines = state.lines.filter(l => l.l !== lIdx && l.r !== rIdx);
+        state.lines.push({ l: lIdx, r: rIdx });
+        Lesson.drawMatchLines(id);
+    },
+
+    drawMatchLines(id) {
+        const canvas = document.getElementById(`match-canvas-${id}`);
+        const state = window[`matchState_${id}`];
+        if (!canvas || !state) return;
+
+        // Cần reference với element cha có CSS position:relative
+        const container = document.getElementById(`match-ex-${id}`);
+        if (!container) return;
+
+        const containerRect = container.getBoundingClientRect();
+
+        let svgHtml = '';
+        state.lines.forEach(line => {
+            const lBtn = document.getElementById(`match-l-${id}-${line.l}`);
+            const rBtn = document.getElementById(`match-r-${id}-${line.r}`);
+
+            if (lBtn && rBtn) {
+                const lr = lBtn.getBoundingClientRect();
+                const rr = rBtn.getBoundingClientRect();
+
+                // Tọa độ gắn với mép phải box trái và mép trái box phải
+                const startX = lr.right - containerRect.left;
+                const startY = lr.top + lr.height / 2 - containerRect.top;
+                const endX = rr.left - containerRect.left;
+                const endY = rr.top + rr.height / 2 - containerRect.top;
+
+                svgHtml += `<path d="M ${startX} ${startY} C ${(startX + endX) / 2} ${startY}, ${(startX + endX) / 2} ${endY}, ${endX} ${endY}" 
+                    fill="transparent" stroke="#6366f1" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 8" class="animate-fade-in" />`;
+            }
+        });
+        canvas.innerHTML = svgHtml;
+    },
+
+    checkMatching(id, paramsStr) {
+        const correctPairs = JSON.parse(paramsStr.replace(/&quot;/g, '"'));
+        const state = window[`matchState_${id}`];
+        const feedback = document.getElementById(`match-feedback-${id}`);
+
+        if (!state || state.lines.length < correctPairs.length) {
+            feedback.innerText = "Em nối chưa đủ các cặp nhé!";
+            feedback.classList.remove('opacity-0', 'text-emerald-500');
+            feedback.classList.add('text-orange-500');
+            return;
+        }
+
+        let isCorrect = true;
+        for (let cp of correctPairs) {
+            const found = state.lines.find(l => l.l === cp.leftIdx && l.r === cp.rightIdx);
+            if (!found) {
+                isCorrect = false;
+                break;
+            }
+        }
+
+        feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-orange-500');
+        if (isCorrect) {
+            feedback.innerText = "Hoàn thành xuất sắc! 🎉";
+            feedback.classList.add('text-emerald-500', 'animate-pop-in');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            feedback.innerText = "Có lỗi rồi. Thử lại nhé!";
+            feedback.classList.add('text-orange-500', 'animate-pop-in');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    // 4. Vận Dụng Thực Tế (Real World Measurement/Upload)
+    renderRealWorldMeasurement(id, title, description) {
+        return `
+            <div class="real-world-exercise p-6 md:p-8 bg-emerald-50 dark:bg-slate-900 rounded-[32px] border-2 border-emerald-100 mb-8 mt-6">
+                 <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">📸</span>
+                    <h3 class="text-xl md:text-2xl font-black text-emerald-900 dark:text-emerald-400">${title}</h3>
+                </div>
+                <p class="text-emerald-700 dark:text-emerald-300 font-bold mb-6">${description}</p>
+                
+                <div class="flex flex-col md:flex-row gap-6">
+                    <!-- Khu vực upload ảnh -->
+                    <div class="flex-1">
+                        <label for="rw-upload-${id}" class="flex flex-col items-center justify-center w-full h-48 border-4 border-dashed border-emerald-300 bg-white dark:bg-slate-800 rounded-2xl cursor-pointer hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors relative overflow-hidden group">
+                            <div class="flex flex-col items-center justify-center pt-5 pb-6 text-emerald-500 group-hover:scale-110 transition-transform z-10" id="rw-placeholder-${id}">
+                                <svg class="w-10 h-10 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <p class="text-sm font-bold uppercase tracking-wide">Nhấn để tải ảnh lên</p>
+                            </div>
+                            <img id="rw-preview-${id}" class="absolute inset-0 w-full h-full object-cover hidden z-0 opacity-80" />
+                            <input id="rw-upload-${id}" type="file" class="hidden" accept="image/*" onchange="Lesson.handleImageUpload(event, '${id}')" />
+                        </label>
+                    </div>
+                    
+                    <!-- Khu vực phép tính / Báo cáo -->
+                    <div class="flex-1 flex flex-col justify-center space-y-4">
+                        <textarea id="rw-calc-${id}" class="w-full h-24 p-4 rounded-xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-sm font-bold placeholder:text-gray-300 shadow-inner" placeholder="Ghi chép các số đo và phép tính đo đạc thực tế của em ở đây..."></textarea>
+                        
+                        <button onclick="Lesson.saveRealWorld('${id}')" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95 flex justify-center items-center gap-2">
+                            <span>Lưu Kết Quả</span>
+                            <span class="text-xl">💾</span>
+                        </button>
+                        <div id="rw-feedback-${id}" class="text-sm font-bold text-emerald-600 text-center opacity-0 transition-opacity">Đã lưu ảnh và phép tính!</div>
+                    </div>
+                </div>
+            </div>
+        `;
+    },
+
+    handleImageUpload(event, id) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const preview = document.getElementById(`rw-preview-${id}`);
+            const placeholder = document.getElementById(`rw-placeholder-${id}`);
+            if (preview) {
+                preview.src = e.target.result;
+                preview.classList.remove('hidden');
+            }
+        };
+        reader.readAsDataURL(file);
+    },
+
+    saveRealWorld(id) {
+        const feedback = document.getElementById(`rw-feedback-${id}`);
+        if (feedback) {
+            feedback.classList.remove('opacity-0');
+            setTimeout(() => feedback.classList.add('opacity-0'), 3000);
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
         }
     },
 

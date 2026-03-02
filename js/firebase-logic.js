@@ -148,7 +148,8 @@ window.saveStudentInfo = function () {
         window.submitMathLesson(
             pendingSubmission.content,
             pendingSubmission.score,
-            pendingSubmission.btnId
+            pendingSubmission.btnId,
+            pendingSubmission.timeTaken
         );
         pendingSubmission = null;
     } else {
@@ -290,12 +291,12 @@ async function submitEssay(event) {
 /**
  * Submit Math Lesson to Firestore (reuses essays_v2)
  */
-window.submitMathLesson = async function (content, score, btnId) {
+window.submitMathLesson = async function (content, score, btnId, timeTaken = 0) {
     const { name, cls, school } = getStudentInfo();
 
     // If info is missing, prompt user
     if (!name || !cls || !school) {
-        pendingSubmission = { content, score, btnId };
+        pendingSubmission = { content, score, btnId, timeTaken };
         window.openStudentModal();
         return;
     }
@@ -303,7 +304,7 @@ window.submitMathLesson = async function (content, score, btnId) {
     // Verify name
     const check = window.isValidStudentName(name);
     if (!check.valid) {
-        pendingSubmission = { content, score, btnId };
+        pendingSubmission = { content, score, btnId, timeTaken };
         alert(check.msg);
         window.openStudentModal();
         return;
@@ -327,6 +328,9 @@ window.submitMathLesson = async function (content, score, btnId) {
         const lessonTitle = document.title.replace(" - EduRobot", "");
         const docId = window.getSlug(`${name}_${cls}_${school}_${lessonTitle}_${Date.now()}`);
 
+        const week = window.currentLessonData ? window.currentLessonData.week : "N/A";
+        const period = window.currentLessonData ? window.currentLessonData.period : "N/A";
+
         // Lưu vào diem_tieng_viet_lop5 cho Trắc nghiệm (đồng bộ với Teacher.html)
         if (typeof content === 'string' && content.includes("Trắc nghiệm tổng:")) {
             await db.collection("diem_tieng_viet_lop5").doc(docId).set({
@@ -338,6 +342,10 @@ window.submitMathLesson = async function (content, score, btnId) {
                 totalQuestions: 10,
                 correctCount: (parseInt(score) || 0) / 10,
                 lessonTitle: lessonTitle,
+                week: week,
+                period: period,
+                timeTaken: timeTaken,
+                type: "Luyện tập - Củng cố",
                 deviceId: window.getDeviceId(),
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                 subject: "Toán học"
@@ -351,6 +359,10 @@ window.submitMathLesson = async function (content, score, btnId) {
                 content: content,
                 lessonTitle: lessonTitle,
                 aiScore: score, // Store parsed score
+                week: week,
+                period: period,
+                timeTaken: timeTaken,
+                type: "Tự luận - Giới thiệu",
                 deviceId: window.getDeviceId(),
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                 status: "Chưa chấm",

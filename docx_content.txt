@@ -1,0 +1,216 @@
+ỦY BAN NHÂN DÂN XÃ CÀNG LONGTRƯỜNG TIỂU HỌC ĐỖ VĂN NẠI
+
+
+
+CHUYÊN ĐỀỨNG DỤNG CÔNG NGHỆ THÔNG TIN TRONG DẠY TOÁN LỚP 5 THEO HƯỚNG TƯƠNG TÁC
+
+
+
+
+
+
+Đơn vị: Trường Tiểu học Đỗ Văn NạiThời gian thực hiện: Tháng 4 năm 2026
+
+I. SỰ CẦN THIẾT CỦA CHUYÊN ĐỀ         1. Giới thiệu chung về môn Toán tiểu học          Môn Toán ở tiểu học giữ vai trò đặc biệt quan trọng trong việc hình thành và phát triển tư duy logic, khả năng suy luận, phán đoán, sáng tạo cho học sinh. Thông qua việc học Toán, học sinh không chỉ nắm được các kiến thức cơ bản về số học, hình học, đo lường, mà còn biết vận dụng linh hoạt trong đời sống thực tế. Toán học còn góp phần rèn luyện cho học sinh tính cẩn thận, kiên trì, trung thực, và khả năng giải quyết vấn đề.         2. Nhận thức tầm quan trọng của môn Toán           Toán học là nền tảng cho nhiều môn học khác, đặc biệt là các môn khoa học tự nhiên. Ở bậc tiểu học, Toán giúp học sinh hình thành các năng lực cốt lõi như: năng lực tư duy, năng lực giải quyết vấn đề, năng lực giao tiếp toán học, và năng lực sử dụng công cụ, phương tiện học tập. Do đó, giáo viên cần không ngừng đổi mới phương pháp giảng dạy nhằm phát huy tính tích cực, chủ động, sáng tạo của học sinh; tạo hứng thú trong học tập, đặc biệt là trong bối cảnh công nghệ thông tin phát triển mạnh mẽ như hiện nay.         3. Lý do chọn chuyên đềTrong thực tế giảng dạy môn Toán ở tiểu học, nhất là lớp 5 – lớp cuối cấp,
+học sinh thường gặp nhiều khó khăn trong việc tiếp thu các kiến thức trừu tượng, khái niệm mới, và vận dụng vào thực tiễn. Vì vậy, việc ứng dụng công nghệ thông tin (CNTT) vào dạy học theo hướng tương tác sẽ giúp các em học tập dễ hiểu, sinh động hơn, khắc phục tình trạng học thụ động, nhàm chán.
+ Thực tế, nhiều giáo viên đã sử dụng máy chiếu, PowerPoint, nhưng chưa khai thác sâu yếu tố “tương tác” – học sinh vẫn thụ động. Vì vậy, việc triển khai chuyên đề này là cần thiết và có ý nghĩa thực tiễn cao.
+Xuất phát từ thực tế đó, tôi chọn chuyên đề: “Ứng dụng công nghệ thông tin trong dạy Toán lớp 5 theo hướng tương tác.” để làm chuyên đề sinh hoạt chuyên môn Cụm trường Tiểu học số 7.
+Chuyên đề là bước tiến quan trọng trong lộ trình “Chuyển đổi số – Đưa giáo dục kỹ năng công dân số vào nhà trường”, khẳng định sự đầu tư của nhà trường vào đội ngũ giáo viên để kiến tạo một môi trường học tập hiện đại, thân thiện và hiệu quả cho học sinh. Với tinh thần học hỏi không ngừng, tập thể giáo viên trường Tiểu học Đỗ Văn Nại sẵn sàng “đón sóng AI”, trở thành những người lái đò xuất sắc trong kỷ nguyên số.
+         4/ Mục tiêu          - Hiểu rõ vai trò của CNTT trong dạy học tương tác theo định hướng phát triển năng lực.          - Biết thiết kế, sử dụng các công cụ CNTT trong dạy Toán lớp 5 (GeoGebra, Quizizz, Jamboard, Google Classroom…).          - Áp dụng được tối thiểu 4 biện pháp thực tiễn vào bài dạy Toán .          - Nâng cao chất lượng giờ học, khơi gợi hứng thú học tập và phát triển năng lực số cho học sinh.II. THỰC TRẠNG        1. Thuận lợi            Trường có phòng học bộ môn, máy tính, máy chiếu, và đường truyền Internet tương đối ổn định, đáp ứng yêu cầu dạy học hiện đại.
++ Về giáo viên: 
+- Có được Sự quan tâm chỉ đạo của Phòng văn hóa xã hội xã Càng Long và Ban Giám hiệu nhà trường trong việc đổi mới phương pháp dạy học.
+- Đội ngũ giáo viên có tinh thần trách nhiệm cao, tích cực ứng dụng CNTT trong giảng dạy. Có kỹ năng cơ bản về sử dụng máy tính, PowerPoint, trình chiếu.           - Đội ngũ giáo viên thường xuyên trao đổi, chia sẻ kinh nghiệm, hỗ trợ lẫn nhau trong giảng dạy.         + Về học sinh: 
+- Học sinh lớp 5 nhanh nhạy với công nghệ, thích các hoạt động có tính mới lạ, trực quan.
+- Đa số các em đã được làm quen với điện thoại thông minh, máy tính bảng.
+- Hứng thú cao khi tham gia trò chơi, trả lời tương tác trực tuyến.
+- Nhiều học sinh chủ động tìm kiếm tài liệu, video học tập trên Internet.
+- Phụ huynh có xu hướng ủng hộ con em tiếp cận công nghệ trong học tập.2. Khó khăn trong dạy học Toán 5         Về giáo viên: 
+- Một số giáo viên còn hạn chế trong việc sử dụng phần mềm, thiết bị CNTT, dẫn đến việc khai thác công nghệ trong dạy học chưa thật hiệu quả.         - Việc thiết kế bài giảng tương tác đòi hỏi nhiều thời gian, công sức, khiến giáo viên còn e ngại.         - Nhiều giáo viên chưa quen với hình thức dạy học kết hợp (blended learning) hay đánh giá trực tuyến.
+          - Một vài giáo viên còn tâm lý e ngại khi ứng dụng công nghệ mới, sợ sai kỹ thuật. Trình độ CNTT không đồng đều giữa các giáo viên trong khối/nhà trường.
+Về học sinh:  
+- Học sinh vẫn còn tư duy trực quan, khả năng trừu tượng hóa chưa cao, nên khi học các bài toán về tỉ lệ, hình học, đo lường còn lúng túng.          - Một số học sinh thiếu thiết bị học tập (điện thoại, máy tính bàn, laptop) nên khó tham gia các hoạt động học trực tuyến.         - Kỹ năng sử dụng công nghệ của học sinh chưa đồng đều; nhiều em chưa biết thao tác với phần mềm học tập.         - Một số lớp học chưa được trang bị đầy đủ thiết bị dạy học hiện đại, đường truyền mạng chưa ổn định, ảnh hưởng đến tiết dạy.
+III. NỘI DUNG VÀ CÁC BIỆN PHÁP THỰC HIỆN          1. Vai trò của Công nghệ thông tin (CNTT) trong dạy học:
+- Hỗ trợ quản lý và tổ chức lớp học: CNTT giúp giáo viên quản lý thông tin học sinh, điểm số, lịch học và các tài liệu dạy học một cách hiệu quả. Hệ thống quản lý học tập (LMS) như Google Classroom, Microsoft Teams giúp tổ chức lớp học trực tuyến, giao bài tập và đánh giá học sinh một cách dễ dàng.
+- Tăng cường tính tương tác trong học tập: CNTT cho phép giáo viên sử dụng các công cụ tương tác như bảng điện tử, phần mềm mô phỏng, và các trò chơi giáo dục để khuyến khích sự tham gia của học sinh. Học sinh có thể làm việc nhóm, thảo luận và chia sẻ ý kiến trực tuyến, giúp tăng cường sự hiểu biết và khả năng làm việc hợp tác.
+- Đa dạng hóa phương pháp dạy học: CNTT cung cấp nhiều công cụ khác nhau như video, bài giảng trực tuyến, các phần mềm thí nghiệm ảo... giúp giáo viên linh hoạt trong việc lựa chọn phương pháp dạy học phù hợp với từng nội dung bài học.
+- Học tập mọi lúc, mọi nơi: Học sinh có thể truy cập tài liệu học tập từ xa, tham gia các khóa học trực tuyến, tự học qua các nền tảng học trực tuyến mà không bị giới hạn bởi thời gian và địa điểm.
+2. Các biện pháp thực hiện:Biện pháp 1: Xây dựng bài giảng điện tử sinh động, hấp dẫn
+Mục tiêu: Giúp bài học trở nên trực quan, tạo hứng thú và khơi dậy tính tích cực học tập của học sinh.          Cách thực hiện: Sử dụng phần mềm PowerPoint, Canva, ClassPoint, Nearpod để thiết kế bài giảng có hình ảnh, âm thanh, hiệu ứng sinh động. Chèn câu hỏi trắc nghiệm tương tác ngay trong bài giảng để học sinh trả lời trực tiếp.           Ví dụ: Khi dạy bài “Tỉ số phần trăm”, giáo viên tạo trò chơi “Đúng hay Sai” bằng ClassPoint giúp học sinh phản hồi ngay trên màn hình.         Ví dụ: Khi dạy bài 'Tỉ số phần trăm', giáo viên tạo trò chơi 'Đúng hay Sai' bằng ClassPoint giúp học sinh phản hồi ngay trên màn hình.Kết quả mong đợi: Học sinh chủ động tham gia, hiểu bài nhanh, không khí lớp học sôi nổi
+Phần này học sinh tương tác với GV bằng cách trả lời, hay bằng cánh ghi câu trả lời trên bảng con ( để khi đóng góp người ta hỏi mình trả lời)            Biện pháp 2: Ứng dụng các phần mềm dạy học Toán trực tuyến
+  Mục tiêu: Đổi mới hình thức luyện tập, tăng tính tương tác và cạnh tranh lành mạnh.
+         Cách thực hiện: Sử dụng Quizizz, Kahoot, Blooket, Liveworksheets để học sinh làm bài tập, thi đua giữa các nhóm. Dùng GeoGebra để mô phỏng hình học trực quan, giúp học sinh dễ hiểu bài về chu vi, diện tích các hình.
+         Ví dụ: Khi học “Diện tích hình thang”, học sinh dùng GeoGebra để thao tác kéo – thả, quan sát sự thay đổi diện tích.
+          Ví dụ: Khi học 'Diện tích hình thang', học sinh dùng GeoGebra để kéo – thả, quan sát sự thay đổi diện tích.
+          Kết quả mong đợi: Học sinh nắm vững kiến thức hình học và yêu thích môn 
+Toán hơn
+Phần này học sinh thao tác bằng cách nào sử dụng trên máy của GV hay trên dụng cụ học tập.
+        Biện pháp 3: Kết hợp dạy học trực tiếp và trực tuyến (Blended Learning)
+          Mục tiêu: Tăng khả năng tự học, củng cố kiến thức ngoài giờ học chính khóa.       Cách thực hiện: Tạo lớp học trực tuyến trên Google Classroom hoặc Zalo nhóm để đăng tài liệu, video hướng dẫn, bài tập. Giáo viên giao bài và nhận phản hồi, chấm điểm trực tuyến, giúp học sinh ôn tập mọi lúc, mọi nơi.
+        Ví dụ: Sau mỗi bài học, giáo viên giao nhiệm vụ củng cố trên Quizizz hoặc Google Form.       Kết quả mong đợi: Học sinh chủ động học mọi lúc, rèn luyện kỹ năng sử dụng công nghệ.
+Phải có một đoạn vedo VD: Giáo viên giao bài và nhận phản hồi, chấm điểm trực tuyến, giúp học sinh ôn tập mọi lúc, mọi nơi. Mới thực tế        Biện pháp 4: Tăng cường hoạt động học tập nhóm có yếu tố tương tác
+Mục tiêu: Rèn kỹ năng hợp tác, giao tiếp toán học và trình bày vấn đề.          Cách thực hiện: Trong mỗi tiết Toán, giáo viên tổ chức hoạt động nhóm nhỏ, cho học sinh cùng giải bài toán và trình bày kết quả bằng slide, bảng nhóm điện tử. Sử dụng trò chơi tương tác như “Ô cửa bí mật”, “Ai nhanh hơn”, “Giải mã công thức” để củng cố kiến thức.         Ví dụ: Khi dạy bài 'Tìm hai số khi biết tổng và tỉ số', mỗi nhóm trình bày cách giải bằng slide thiết kế sẵn.Kết quả mong đợi: Học sinh mạnh dạn, tự tin, kỹ năng trình bày được nâng cao.
+Phần này quan trọng trong biện pháp: Học sinh trình bày bằng trình bày kết quả bằng slide, bảng nhóm điện tử ( Phần này phải chuẩn bị bày kết quả bằng slide,bảng nhóm điện tử.) Bảng nhóm điện tử mình chuẩn bị sau đây.
+Biện pháp 5: Phát triển kỹ năng số cho học sinh
+Mục tiêu: Giúp học sinh biết sử dụng an toàn và hiệu quả các thiết bị công nghệ trong học tập.
+           Cách thực hiện: Hướng dẫn học sinh thao tác cơ bản với máy tính, máy chiếu, điện thoại thông minh khi tham gia các hoạt động học tập. Dạy học sinh cách bảo mật thông tin, sử dụng Internet an toàn, hiệu quả và đạo đức số.           Ví dụ: Tổ chức buổi trải nghiệm “Em học Toán cùng máy tính” tại phòng Tin học.        Kết quả mong đợi: Học sinh biết tìm kiếm, khai thác thông tin học tập đúng cách.
+Biện pháp 6: Sử dụng công nghệ trong kiểm tra – đánh giá
+Mục tiêu: Đảm bảo đánh giá khách quan, nhanh chóng và chính xác.
+Cách thực hiện: Tạo bài kiểm tra ngắn bằng Google Form, Quizizz giúp học sinh phản hồi tức thì. Phân tích kết quả bằng biểu đồ, giúp giáo viên nhận biết mức độ nắm vững kiến thức của từng học sinh để điều chỉnh dạy học phù hợp.
+Ví dụ: Kiểm tra 15 phút bằng Google Form có hiển thị kết quả ngay.
+Kết quả mong đợi: Học sinh thích thú hơn khi làm bài, giáo viên tiết kiệm thời gian chấm điểm.
+Ví dụ: Kiểm tra 15 phút bằng Google Form có hiển thị kết quả ngay. Có vedo minh họa thì rất hayBiện pháp 7: Khai thác nguồn học liệu số phong phú
+Mục tiêu: Tận dụng tài nguyên mở, làm phong phú tiết dạy và kết nối Toán học với thực tiễn.
+         Cách thực hiện: Tận dụng các kho học liệu của Bộ GD&ĐT, ViettelStudy, Hành trang số, YouTube giáo dục, Kết nối tri thức. Giáo viên chọn lọc video, hình ảnh minh họa, bài toán thực tế giúp học sinh học Toán gắn với đời sống.           
+        Ví dụ: Khi dạy 'Tính diện tích thực tế', giáo viên cho học sinh xem video đo đạc công trình thật.
+Kết quả mong đợi: Học sinh hứng thú, hiểu rõ ứng dụng của Toán trong đời sống.
+3. Các bước thực hiện áp dụng biện pháp vào bài dạy
+Bước 1. Chuẩn bị bài dạy và thiết bị công nghệ
+1. Chuẩn bị nội dung kiến thức
+Xác định mục tiêu bài học theo định hướng phát triển năng lực (nhận biết – hiểu – vận dụng – vận dụng cao).
+Lựa chọn những phần nội dung phù hợp để ứng dụng CNTT như: mô phỏng, hình ảnh trực quan, bài tập tương tác, trò chơi, đánh giá nhanh.
+2. Chuẩn bị thiết bị
+Kiểm tra máy chiếu, máy tính, bảng tương tác (nếu có), loa, đường truyền Internet.
+Kiểm tra sẵn sàng các phần mềm: PowerPoint, ClassPoint, GeoGebra, Quizizz, Google Form…
+Chuẩn bị phương án dự phòng nếu mất điện hoặc Internet (phiếu học tập, bảng nhóm).
+3. Chuẩn bị học liệu số
+Thiết kế slide bài giảng có hình ảnh minh hoạ, mô phỏng trực quan.
+Tạo các trò chơi hoặc bài kiểm tra tương tác: Quizizz, Kahoot, Blooket, Google Form.
+Chuẩn bị video, hình ảnh, mô hình động phù hợp với nội dung bài học.
+Bước 2. Tổ chức các hoạt động dạy học có ứng dụng CNTT
+Tùy từng biện pháp, giáo viên tổ chức các hoạt động sau trong tiến trình bài dạy:
+Hoạt động 1: Khởi động (ứng dụng trò chơi tương tác)
+Sử dụng ClassPoint/Kahoot để tạo trò chơi ngắn: “Ô chữ bí mật”, “Đúng – Sai”, “Ai nhanh hơn”.
+Học sinh trả lời trực tiếp trên màn hình → tạo không khí sôi nổi, tiếp cận bài học tự nhiên.
+Ví dụ:
+           Khởi động bài Diện tích hình thang bằng trò chơi Quizizz gồm 5 câu hỏi đơn giản về diện tích hình tam giác, hình bình hành.
+Hoạt động 2: Hình thành kiến thức mới (ứng dụng mô phỏng, video, hình ảnh)
+Dùng PowerPoint và GeoGebra để mô phỏng hình học, thao tác kéo – thả, thay đổi kích thước, màu sắc.
+Chiếu video minh họa từ học liệu số để học sinh quan sát hiện tượng thực tế.
+Tổ chức cho học sinh thảo luận nhóm nhỏ qua bảng tương tác hoặc Jamboard.
+Ví dụ:
+Trong bài Tỉ số phần trăm, giáo viên cho học sinh xem video minh hoạ việc tính phần trăm giảm giá trong siêu thị.( Dụng cụ học sinh thực hành bằng phương tiện gì đặc biệt cho cả lớp thực hiện hết mới hiệu quả)
+Hoạt động 3: Luyện tập – củng cố (ứng dụng Quizizz, Liveworksheets, ClassPoint)
+Cho học sinh làm bài tập ngay trên thiết bị hoặc trực tiếp trên màn chiếu.
+Sử dụng bảng xếp hạng của Quizizz để tạo tinh thần thi đua nhóm.
+Dùng ClassPoint để học sinh nộp bài, gửi đáp án trực tiếp trên slide.
+Ví dụ:        Liveworksheets: học sinh kéo – thả các số vào vị trí đúng trong biểu thức tính diện tích.
+ Hoạt động 4: Vận dụng – thực hành (ứng dụng học liệu thực tế, sản phẩm số)
+Cho học sinh chụp hình thực tế (cổng trường, sân bóng, vườn cây…) và tính toán các đại lượng liên quan.
+Học sinh dùng PowerPoint/Canva tạo slide trình bày lời giải.
+Tổ chức “phòng trưng bày sản phẩm số” với Padlet hoặc Google Classroom.
+Ví dụ:         Học sinh đo chiều dài – chiều rộng bồn hoa của trường và tính diện tích, trình bày bằng slide.( Cần có VD minh họa)
+Bước 3. Đánh giá kết quả học tập bằng công nghệ
+- Tạo phiếu đánh giá nhanh qua Google Form, hiển thị biểu đồ trực tiếp.
+- Sử dụng Quizizz để đo mức độ nắm bài của từng học sinh.
+- ClassPoint thu bài và chấm điểm tự động.
+- Lưu kết quả trên Google Classroom để giáo viên dễ theo dõi.
+Kết quả mong đợi:
+Giáo viên đánh giá nhanh – chính xác.
+Học sinh hứng thú, không áp lực.
+Bước 4. Rút kinh nghiệm và chia sẻ chuyên môn
+- Giáo viên tự đánh giá hiệu quả bài học: phần nào tốt, phần nào cần cải tiến.
+- Họp tổ chuyên môn để chia sẻ tài nguyên, file bài giảng, trò chơi đã thiết kế.
+- Điều chỉnh lại nội dung, kỹ thuật ứng dụng CNTT cho các tiết dạy sau.
+- Gửi tài liệu lên kho học liệu số của trường hoặc Google Drive nhóm.
+IV. HIỆU QUẢ CỦA CHUYÊN ĐỀ           Trước khi áp dụng (dạy theo các bước thông thường)
+- Học sinh tiếp thu bài còn chậm; khả năng ghi nhớ và khắc sâu kiến thức chưa cao, dễ quên sau khi học.
+- Học sinh thụ động chỉ làm theo yêu cầu của giáo viên, chưa tích cực tham gia vào các hoạt động.
+- Khả năng tư duy còn hạn chế do phương thức tiếp nhận kiến thức chủ yếu theo một chiều.
+Kết quả khảo sát cụ thể như sau:
+Tổng số HS
+Thời gian
+Hoàn thành tốt
+Hoàn thành
+Chưa 
+hoàn thành
+119
+Giữa HK I
+(2025-2026)
+21/119  
+đạt 17,6%
+79/119  
+đạt 66,4%
+19/119
+ đạt 16,0%
+Sau khi áp dụng  
+- Học sinh tiếp thu bài nhanh hơn; hiểu sâu và nhớ lâu hơn kiến thức được học.
+- Học sinh tập trung quan sát, chủ động tương tác; được trải nghiệm nên hứng thú và tích cực tham gia các hoạt động học tập.
+- Khả năng tư duy được cải thiện rõ rệt; học sinh mạnh dạn đặt câu hỏi, thảo luận và giải quyết vấn đề hiệu quả hơn.
+Kết quả khảo sát cụ thể như sau:
+Tổng số HS
+Thời gian
+Hoàn thành tốt
+Hoàn thành
+Chưa
+hoàn thành
+119
+Giũa HK II
+(2025-2026)
+34/119
+đạt 28,6%
+85/119
+đạt 71,4%
+/
+
+Đối chiếu kết quả trước khi áp dụng và sau khi áp dụng, chúng tôi nhận thấy khi sử dụng chuyên đề “ứng dụng công nghệ thông tin trong dạy toán lớp 5 theo hướng tương tác” Sau khi áp dụng các biện pháp trên trong giảng dạy Toán lớp 5: Học sinh hứng thú hơn trong học tập, mạnh dạn, tự tin khi tham gia các hoạt động tương tác. Khả năng tiếp thu kiến thức, ghi nhớ và vận dụng của học sinh được cải thiện rõ rệt. Tỉ lệ học sinh hoàn thành tốt môn Toán tăng lên; số học sinh chưa hoàn thành giảm đáng kể. Giáo viên nâng cao năng lực ứng dụng CNTT, thiết kế bài giảng hiện đại, sáng tạo hơn.
+
+
+V. KẾT LUẬN
+        Việc ứng dụng công nghệ thông tin trong dạy học Toán lớp 5 theo hướng tương tác là xu thế tất yếu, phù hợp với định hướng đổi mới giáo dục hiện nay. Nó không chỉ giúp học sinh hứng thú, chủ động trong học tập mà còn góp phần nâng cao chất lượng, hiệu quả giảng dạy. Tuy nhiên, để chuyên đề đạt hiệu quả bền vững, cần: bồi dưỡng thường xuyên cho giáo viên kỹ năng CNTT; tăng cường đầu tư thiết bị dạy học hiện đại; phối hợp chặt chẽ giữa nhà trường, phụ huynh và các tổ chức xã hội trong việc hỗ trợ học sinh tiếp cận công nghệ học tập.
+        Chuyên đề này hy vọng góp phần nhỏ vào công cuộc đổi mới dạy học môn Toán ở tiểu học, hướng tới mục tiêu: “Mỗi giờ học Toán là một giờ học tích cực, sáng tạo và đầy hứng thú.”
+
+VI. KIẾN NGHỊ
+1. Đối với giáo viên
+– Tích cực tự học CNTT, cập nhật công cụ mới.
+– Tham gia đầy đủ các lớp tập huấn.
+– Mạnh dạn chia sẻ bài dạy mẫu trong tổ chuyên môn.
+2. Đối với nhà trường
+– Đầu tư thêm máy chiếu, bảng tương tác, phòng học thông minh.
+– Tăng cường tổ chức chuyên đề và sinh hoạt chuyên môn theo hướng ứng dụng CNTT.
+– Khuyến khích giáo viên đổi mới, có chế độ khen thưởng kịp thời.
+3. Đối với Sở Giáo dục
+– Tập huấn kỹ năng ứng dụng CNTT; tăng cường hỗ trợ kỹ thuật và thiết bị cho giáo viên. 
+– Tổ chức chuyên đề chia sẻ bài giảng mẫu về ứng dụng CNTT.
+– Xây dựng kho học liệu số dùng chung.
+Trên đây là chuyên đề “ứng dụng công nghệ thông tin trong dạy toán lớp 5 theo hướng tương tác” của nhóm Cụm trường Tiểu học xã Càng Long thực hiện theo kế hoạch sinh hoạt chuyên môn Cụm trường Tiểu học số 7. Rất mong được trao đổi của quý thầy cô, anh chị đồng nghiệp để chúng tôi ngày càng có thêm nhiều kinh nghiệm bổ ích. Vận dụng những kinh nghiệm quý báu để giảng dạy học sinh ngày càng tiến bộ. Xin cảm ơn!
+
+ Sau đây là một số ý đóng góp chia sẻ. Xin chúc cho chuyên đề mình thực hiện thành công mỹ mãng.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Đặc điểm tình hình nhà trườngTrường Tiểu học Đỗ Văn Nại thuộc xã Càng Long, có 3 điểm học: điểm chính ở ấp Dừa Đỏ 2 và hai điểm phụ tại ấp Dừa Đỏ 3 và ấp Hiệp Phú. Điều kiện giao thông thuận lợi, cơ sở vật chất tương đối đầy đủ, có hệ thống điện, Internet, máy chiếu, bảng tương tác phục vụ dạy học.Tổng số CBGV-NV: 37 người (Ban Giám hiệu: 2, Tổng phụ trách: 1, Giáo viên dạy lớp: 32 (22 GV chủ nhiệm, 6 GV chuyên: 2 Tiếng Anh, 1 Âm nhạc, 1 Mĩ thuật, 1 GDTC, 1 Tin học), nhân viên hợp đồng: 2). Toàn trường có 20 lớp với 566 học sinh (287 nữ, 14 HS dân tộc, 3 HS khuyết tật hòa nhập).
+Tổng số HS
+Thời gian
+Hoàn thành tốt
+Hoàn thành
+Chưa
+hoàn thành
+119
+Giũa HK II
+(2025-2026)
+34/119
+đạt 28,6%
+85/119
+đạt 71,4%
+/
+

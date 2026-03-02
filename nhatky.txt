@@ -318,3 +318,23 @@ Ngày 01/03/2026:
 - Cập nhật `118.js`: Thay đổi xưng hô "bé" thành "bạn" đồng nhất toàn hệ thống.
 - Làm trống `quizPool` để ép hệ thống nạp câu hỏi từ file văn bản (Ngân hàng câu hỏi động).
 - Tối ưu hóa giao diện Dark Mode cho các thành phần UI (AI Interaction, Quiz, Dashboard).
+
+Ngày 02/03/2026:
+----------------
+[15:15] Chuẩn bị cơ sở nâng cấp theo Kế hoạch "Interactive Next-Gen Platform":
+- Nâng cấp linh hồn (Gamification): 
+  + Tích hợp WebAudio API phát âm thanh (SFX) trực tiếp cho các câu trả lời đúng/sai và hiệu ứng Combo.
+  + Thêm thư viện Lottie-player vào index.html, hiển thị Robot động chúc mừng khi trả lời đúng trong Quiz.js.
+  + Tích hợp bộ đếm Streak (chuỗi câu đúng), tặng điểm thưởng khi đạt combo.
+  + Thêm Bảng Vàng Xuất Sắc (Leaderboard) lấy dữ liệu thời gian thực từ phần thi Trắc nghiệm trên Firebase.
+- Bộ công cụ tương tác chuyên nghiệp:
+  + Cập nhật js/components/Lesson.js với các module render mới: `renderDragDropFormula` (Kéo thả công thức), `renderDynamicGeometryLab` (Phòng thí nghiệm hình học động), `renderMatchingExercise` (Nối điểm/Ghép đôi trực quan với SVG).
+  + Thêm module `renderRealWorldMeasurement` hỗ trợ tải ảnh và ghi chép số đo/vận dụng thực tế.
+- Trạng thái hiện tại: Đã xây dựng xong "bộ khung" (foundation) vững chắc. Sẵn sàng để chuyển đổi nội dung từng tiết học vào hệ thống tương tác mới.
+
+[17:34] Hoàn thiện Trang Quản Lý Môn Toán (Real-time Dashboard):
+- Xây dựng bảng biểu `teacher-toan.html` hiện đại dành riêng cho Giáo viên kiểm tra quá trình học Toán.
+- Nâng cấp `Quiz.js` & `firebase-logic.js`: Tự động đo thời gian học sinh hoàn thành bài và gán nhãn Tuần/Tiết ngay khi đẩy dữ liệu lên Firebase.
+- Thuật toán Xếp hạng Thông minh: Lọc lấy điểm cao nhất đối với mỗi học sinh. Trường hợp bằng điểm, người có thời gian làm bài ngắn nhất sẽ xếp trên. Đồng thời thống kê "Số lần làm bài".
+- Tích hợp công nghệ Real-time (Firebase onSnapshot): Bảng xếp hạng và thống kê tự động nhảy số liệu tức thì ngay khi học sinh nộp bài, cực kỳ phù hợp để chiếu trực tiếp trên Tivi/Máy chiếu.
+- Liên kết hệ sinh thái: Thêm nút nhảy nhanh qua lại giữa Bảng điểm Tiếng Việt và Toán. Trang xuất Excel cũng được cập nhật dữ liệu đầy đủ (Thời gian, Số lần bài).

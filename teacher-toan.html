@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng điều khiển Giáo viên Toán - EduRobot</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- SheetJS for Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="p-4 md:p-8">
+    <div id="login-screen"
+        class="fixed inset-0 bg-slate-900/40 backdrop-blur-md z-[100] flex items-center justify-center p-4">
+        <div class="bg-white rounded-[32px] p-10 max-w-md w-full shadow-2xl text-center">
+            <div class="w-20 h-20 bg-orange-100 rounded-3xl flex items-center justify-center text-4xl mx-auto mb-6">🧮
+            </div>
+            <h2 class="text-3xl font-black text-gray-800 mb-2">Giáo viên Toán</h2>
+            <p class="text-gray-500 mb-8 font-bold text-sm uppercase tracking-widest">Đăng nhập để xem kết quả Toán</p>
+            <div class="space-y-4">
+                <input type="password" id="teacher-password" placeholder="Nhập mật khẩu truy cập..."
+                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-100 focus:border-orange-500 transition-all outline-none font-bold text-center text-xl tracking-widest">
+                <button onclick="checkLogin()"
+                    class="w-full bg-orange-600 hover:bg-orange-700 text-white font-black py-4 rounded-2xl shadow-xl shadow-orange-200 transition-all transform active:scale-95 uppercase tracking-widest">Vào
+                    hệ thống</button>
+            </div>
+            <a href="index.html"
+                class="inline-block mt-8 text-sm font-bold text-gray-400 hover:text-orange-600 transition-colors uppercase tracking-widest">Quay
+                lại trang chủ</a>
+        </div>
+    </div>
+
+    <div id="dashboard" class="hidden container mx-auto space-y-8">
+        <header id="teacher-header"></header>
+
+        <script src="js/components.js"></script>
+        <script>
+            const teacherButtons = `
+                <div class="flex gap-3">
+                    <a href="teacher.html" class="bg-blue-600 hover:bg-blue-700 text-white font-black px-6 py-4 rounded-2xl shadow-xl shadow-blue-200 flex items-center gap-3 transition-all transform hover:-translate-y-1 active:scale-95 text-xs uppercase tracking-widest">
+                        Qua trang Tiếng Việt
+                    </a>
+                    <button onclick="exportToExcel()" class="bg-green-600 hover:bg-green-700 text-white font-black px-8 py-4 rounded-2xl shadow-xl shadow-green-200 flex items-center gap-3 transition-all transform hover:-translate-y-1 active:scale-95 text-xs uppercase tracking-widest">
+                        Tải file Excel (Toán)
+                    </button>
+                    <button onclick="logout()" class="p-4 bg-white text-gray-400 hover:text-red-500 rounded-2xl shadow-sm transition-all border border-gray-100">
+                        Đăng xuất
+                    </button>
+                </div>`;
+            document.addEventListener('DOMContentLoaded', () => {
+                if (window.UI && window.UI.renderNavbar) {
+                    window.UI.renderNavbar({ type: 'teacher', target: '#teacher-header', customButtons: teacherButtons });
+                }
+            });
+        </script>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card p-8 rounded-[32px] border-l-8 border-orange-500">
+                <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Tổng lượt nộp (đã lọc)
+                </p>
+                <h3 id="stat-total" class="text-4xl font-black text-gray-800">--</h3>
+            </div>
+            <div class="glass-card p-8 rounded-[32px] border-l-8 border-green-500">
+                <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Điểm trung bình (lần tốt
+                    nhất)</p>
+                <h3 id="stat-avg" class="text-4xl font-black text-gray-800">--</h3>
+            </div>
+            <div class="glass-card p-8 rounded-[32px] border-l-8 border-blue-500">
+                <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Số học sinh đã làm</p>
+                <h3 id="stat-students" class="text-4xl font-black text-gray-800">--</h3>
+            </div>
+        </div>
+
+        <div class="glass-card rounded-[40px] overflow-hidden">
+            <div class="p-8 border-b border-gray-100 bg-white/50 flex flex-col justify-between items-start gap-4">
+                <div class="flex items-center gap-4">
+                    <h3 id="stats-title" class="text-xl font-black text-gray-800 uppercase tracking-tight mb-2">BẢNG
+                        ĐIỂM TOÁN HỌC</h3>
+                    <div
+                        class="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-black animate-pulse">
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                        Cập nhật tức thì (Real-time)
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 items-center w-full">
+                    <select id="week-filter" onchange="renderStats()"
+                        class="pl-4 pr-10 py-2 rounded-xl border-2 border-orange-100 focus:border-orange-500 outline-none font-bold text-gray-600 bg-white cursor-pointer transition-all text-sm min-w-[150px]">
+                        <option value="">-- Tất cả Tuần --</option>
+                    </select>
+
+                    <select id="period-filter" onchange="renderStats()"
+                        class="pl-4 pr-10 py-2 rounded-xl border-2 border-orange-100 focus:border-orange-500 outline-none font-bold text-gray-600 bg-white cursor-pointer transition-all text-sm min-w-[150px]">
+                        <option value="">-- Tất cả Tiết --</option>
+                    </select>
+
+                    <select id="type-filter" onchange="renderStats()"
+                        class="pl-4 pr-10 py-2 rounded-xl border-2 border-orange-100 focus:border-orange-500 outline-none font-bold text-gray-600 bg-white cursor-pointer transition-all text-sm min-w-[200px]">
+                        <option value="Luyện tập - Củng cố">Luyện tập - Củng cố</option>
+                        <option value="">Tất cả Thể loại</option>
+                    </select>
+
+                    <!-- Lọc không cần nút Làm mới nữa vì đã có Realtime và onchange, nhưng giữ lại cho người dùng click nếu thích -->
+                    <button onclick="renderStats()"
+                        class="bg-orange-100 text-orange-600 font-bold px-4 py-2 rounded-xl hover:bg-orange-200 transition-colors text-sm">Làm
+                        mới hiển thị</button>
+                    <span id="loading-indicator" class="text-sm font-bold text-orange-500 italic hidden">Đang
+                        tải...</span>
+                </div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="bg-gray-50/50">
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest">TT</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest">Họ và tên</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">Lớp
+                            </th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">
+                                Trường</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">Điểm
+                            </th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">Thời
+                                gian</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">Số
+                                lần</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-table" class="divide-y divide-gray-50"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/firebase-logic.js"></script>
+    <script>
+        let allQuizData = [];
+        let rawDocs = [];
+        let unsubscribeMath = null;
+
+        function checkLogin() {
+            const pass = document.getElementById('teacher-password').value;
+            if (pass === "123456" || pass === "gv123" || pass === "admin") {
+                document.getElementById('login-screen').classList.add('hidden');
+                document.getElementById('dashboard').classList.remove('hidden');
+                populateFilters();
+                initRealtime(); // Kích hoạt chạy realtime tải dữ liệu
+            } else { alert("Mật khẩu không đúng! Thầy/Cô vui lòng thử lại."); }
+        }
+        function logout() { window.location.reload(); }
+
+        function formatTimeTaken(seconds) {
+            if (!seconds && seconds !== 0) return "--:--";
+            let m = Math.floor(seconds / 60);
+            let s = seconds % 60;
+            return (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+        }
+
+        async function populateFilters() {
+            // Fill weeks 1 to 35
+            const weekSelect = document.getElementById('week-filter');
+            for (let i = 1; i <= 35; i++) {
+                let opt = document.createElement('option');
+                opt.value = i.toString();
+                opt.innerText = "Tuần " + i;
+                weekSelect.appendChild(opt);
+            }
+
+            // Period filter
+            const periodSelect = document.getElementById('period-filter');
+            for (let i = 1; i <= 200; i++) {
+                let opt = document.createElement('option');
+                opt.value = i.toString();
+                opt.innerText = "Tiết " + i;
+                periodSelect.appendChild(opt);
+            }
+        }
+
+        // Lắng nghe realtime từ firebase
+        function initRealtime() {
+            const table = document.getElementById('results-table');
+            const ind = document.getElementById('loading-indicator');
+            table.innerHTML = `<tr><td colspan="7" class="p-10 text-center text-gray-400 font-bold italic animate-pulse">Đang kết nối luồng dữ liệu tức thì...</td></tr>`;
+            ind.classList.remove('hidden');
+
+            if (unsubscribeMath) {
+                unsubscribeMath();
+            }
+
+            unsubscribeMath = db.collection("diem_tieng_viet_lop5")
+                .where("subject", "==", "Toán học")
+                .onSnapshot(snapshot => {
+                    let allDocs = [];
+                    snapshot.forEach(doc => allDocs.push(doc.data()));
+                    rawDocs = allDocs; // Lưu lại vào raw data
+                    renderStats(); // Render lại giao diện
+                }, error => {
+                    console.error("Lỗi Realtime Firebase:", error);
+                    table.innerHTML = `<tr><td colspan="7" class="p-10 text-center text-red-500 font-black">Lỗi kết nối dữ liệu: ${error.message}</td></tr>`;
+                    ind.classList.add('hidden');
+                });
+        }
+
+        // Chỉ lo việc lọc và vẽ HTML dựa trên dữ liệu đã lưu ở rawDocs
+        function renderStats() {
+            const table = document.getElementById('results-table');
+            const ind = document.getElementById('loading-indicator');
+            ind.classList.remove('hidden');
+
+            try {
+                const weekF = document.getElementById('week-filter').value;
+                const periodF = document.getElementById('period-filter').value;
+                const typeF = document.getElementById('type-filter').value;
+
+                let filtered = rawDocs.filter(d => {
+                    if (weekF && d.week != weekF) return false;
+                    if (periodF && d.period != periodF) return false;
+                    if (typeF && d.type != typeF) return false;
+                    return true;
+                });
+
+                // Group by student taking MAX score (and MIN time if tie)
+                const bestAttempts = {};
+                filtered.forEach((data) => {
+                    const key = `${data.studentName}_${data.studentClass}_${data.studentSchool || data.school || ''}`;
+                    if (!bestAttempts[key]) {
+                        bestAttempts[key] = { ...data, attemptsCount: 1 };
+                    } else {
+                        bestAttempts[key].attemptsCount++;
+                        const currentMax = bestAttempts[key].score || 0;
+                        const newScore = data.score || 0;
+
+                        if (newScore > currentMax) {
+                            const c = bestAttempts[key].attemptsCount;
+                            bestAttempts[key] = { ...data, attemptsCount: c };
+                        } else if (newScore === currentMax) {
+                            const cTime = bestAttempts[key].timeTaken || 999999;
+                            const nTime = data.timeTaken || 999999;
+                            if (nTime < cTime) {
+                                const c = bestAttempts[key].attemptsCount;
+                                bestAttempts[key] = { ...data, attemptsCount: c };
+                            } else if (nTime === cTime && data.timestamp > bestAttempts[key].timestamp) {
+                                const c = bestAttempts[key].attemptsCount;
+                                bestAttempts[key] = { ...data, attemptsCount: c };
+                            }
+                        }
+                    }
+                });
+
+                let uniqueData = Object.values(bestAttempts);
+
+                // SORTING: Top score first, then lowest time
+                uniqueData.sort((a, b) => {
+                    const sA = a.score || 0; const sB = b.score || 0;
+                    if (sA !== sB) return sB - sA;
+                    const tA = a.timeTaken || 999999; const tB = b.timeTaken || 999999;
+                    if (tA !== tB) return tA - tB;
+                    const timeA = a.timestamp ? a.timestamp.seconds : 0;
+                    const timeB = b.timestamp ? b.timestamp.seconds : 0;
+                    return timeB - timeA;
+                });
+
+                allQuizData = uniqueData;
+
+                let totalScore = 0;
+                uniqueData.forEach(d => totalScore += (d.score || 0));
+
+                let rows = "";
+                uniqueData.forEach((data, index) => {
+                    const scoreClass = data.score >= 80 ? 'text-green-600' : (data.score >= 50 ? 'text-orange-600' : 'text-red-600');
+                    const rankIcon = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : (index + 1);
+
+                    rows += `
+                        <tr class="hover:bg-orange-50/30 transition-colors">
+                            <td class="p-6 text-gray-500 font-black text-lg">${rankIcon}</td>
+                            <td class="p-6">
+                                <span class="font-black text-gray-800 block text-lg">${data.studentName || "N/A"}</span>
+                            </td>
+                            <td class="p-6 text-center">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg font-black text-sm">${data.studentClass || "-"}</span>
+                            </td>
+                            <td class="p-6 font-bold text-center text-gray-600 text-xs">${data.school || data.studentSchool || "N/A"}</td>
+                            <td class="p-6 text-center">
+                                <span class="text-2xl font-black ${scoreClass}">${data.score || 0}</span>
+                            </td>
+                            <td class="p-6 text-center font-black text-gray-600">${formatTimeTaken(data.timeTaken)}</td>
+                            <td class="p-6 text-center">
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded text-xs font-black">${data.attemptsCount} lần</span>
+                            </td>
+                        </tr>
+                    `;
+                });
+
+                table.innerHTML = rows || `<tr><td colspan="7" class="p-10 text-center text-gray-400">Chưa có kết quả nộp bài nào phù hợp.</td></tr>`;
+
+                document.getElementById('stat-total').innerText = filtered.length;
+                document.getElementById('stat-avg').innerText = uniqueData.length > 0 ? (totalScore / uniqueData.length).toFixed(1) : "0";
+                document.getElementById('stat-students').innerText = uniqueData.length;
+
+            } catch (error) {
+                console.error("Error formatting UI:", error);
+                table.innerHTML = `<tr><td colspan="7" class="p-10 text-center text-red-500 font-black">Lỗi xử lý dữ liệu: ${error.message}</td></tr>`;
+            } finally {
+                ind.classList.add('hidden');
+            }
+        }
+
+        async function exportToExcel() {
+            try {
+                if (allQuizData.length === 0) { alert("Chưa có dữ liệu!"); return; }
+                const dataToExport = allQuizData.map((d, index) => ({
+                    "TT": index + 1,
+                    "Họ và Tên": d.studentName,
+                    "Lớp": "'" + (d.studentClass || "N/A"),
+                    "Trường": d.studentSchool || d.school || "N/A",
+                    "Điểm": d.score,
+                    "Thời gian làm (giây)": d.timeTaken || 0,
+                    "Số lần làm": d.attemptsCount || 1,
+                    "Nộp lúc (Lần tốt nhất)": d.timestamp ? d.timestamp.toDate().toLocaleString('vi-VN') : ""
+                }));
+
+                const worksheet = XLSX.utils.json_to_sheet(dataToExport);
+                const workbook = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(workbook, worksheet, "Bảng điểm Toán");
+                XLSX.writeFile(workbook, "Bang_Diem_Toan.xlsx");
+            } catch (e) {
+                console.error(e);
+                alert("Lỗi xuất Excel!");
+            }
+        }
+    </script>
+</body>
+
+</html>

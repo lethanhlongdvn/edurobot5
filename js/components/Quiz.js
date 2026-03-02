@@ -15,12 +15,16 @@ export const Quiz = {
                         <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white m-0 tracking-tight">Thử thách Củng cố</h2>
                     </div>
                     
-                    <div class="flex gap-4">
-                        <div class="flex flex-col items-center px-4 py-2 bg-blue-50 rounded-2xl border-2 border-blue-100 min-w-[100px]">
+                    <div class="flex gap-4 flex-wrap justify-end">
+                        <div id="streak-container" class="hidden flex-col items-center px-4 py-2 bg-rose-50 rounded-2xl border-2 border-rose-100 min-w-[90px] animate-pop-in">
+                            <span class="text-[10px] md:text-xs font-black text-rose-400 uppercase tracking-widest leading-none mb-1">Combo</span>
+                            <span id="quiz-streak-display" class="text-xl md:text-3xl font-black text-rose-600 leading-none">0🔥</span>
+                        </div>
+                        <div class="flex flex-col items-center px-4 py-2 bg-blue-50 rounded-2xl border-2 border-blue-100 min-w-[90px]">
                             <span class="text-[10px] md:text-xs font-black text-blue-400 uppercase tracking-widest leading-none mb-1">Điểm số</span>
                             <span id="quiz-score-display" class="text-xl md:text-3xl font-black text-blue-600 leading-none">0</span>
                         </div>
-                        <div class="flex flex-col items-center px-4 py-2 bg-orange-50 rounded-2xl border-2 border-orange-100 min-w-[100px]">
+                        <div class="flex flex-col items-center px-4 py-2 bg-orange-50 rounded-2xl border-2 border-orange-100 min-w-[90px]">
                             <span class="text-[10px] md:text-xs font-black text-orange-400 uppercase tracking-widest leading-none mb-1">Tiến độ</span>
                             <div class="flex items-baseline gap-1">
                                 <span id="quiz-progress-current" class="text-xl md:text-3xl font-black text-orange-600 leading-none">1</span>
@@ -37,6 +41,26 @@ export const Quiz = {
                 <div id="quiz-content" class="relative z-10 min-h-[300px] flex flex-col justify-center">
                     <!-- Câu hỏi sẽ được nạp tại đây -->
                 </div>
+                
+                <!-- Gamification Visual Feedback Layer -->
+                <div id="quiz-gamification-layer" class="absolute inset-0 pointer-events-none z-[100] flex items-center justify-center"></div>
+            </div>
+
+            <!-- Gamification Leaderboard: Bảng Vàng Xếp Hạng -->
+            <div class="mt-8 max-w-4xl mx-auto">
+                <div class="glass-card rounded-[32px] p-6 bg-white/80 dark:bg-slate-900/80 shadow-lg">
+                    <div class="flex items-center gap-4 mb-6 relative">
+                        <div class="w-12 h-12 bg-gradient-to-br from-yellow-300 to-amber-500 rounded-2xl flex items-center justify-center text-2xl shadow-lg shadow-amber-200">🏆</div>
+                        <h3 class="text-2xl md:text-3xl font-black text-amber-600 uppercase tracking-tight">Bảng Vàng Xuất Sắc</h3>
+                        <div class="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2 text-xs font-bold text-gray-400 bg-white px-3 py-1 rounded-full shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Trực tiếp (10 Top)
+                        </div>
+                    </div>
+                    <div id="quiz-leaderboard-list" class="flex flex-col gap-3">
+                        <div class="text-center py-6 text-gray-400 text-sm font-bold uppercase tracking-widest animate-pulse">Đang tải danh sách cao thủ...</div>
+                    </div>
+                </div>
             </div>
         `;
     },
@@ -44,7 +68,75 @@ export const Quiz = {
     currentQuiz: [],
     currentIndex: 0,
     score: 0,
+    streak: 0,
     isProcessing: false,
+    audioCtx: null,
+
+    playSFX(type) {
+        try {
+            if (!this.audioCtx) this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+
+            const o = this.audioCtx.createOscillator();
+            const g = this.audioCtx.createGain();
+            o.connect(g);
+            g.connect(this.audioCtx.destination);
+
+            const now = this.audioCtx.currentTime;
+
+            if (type === 'correct') {
+                o.type = 'sine';
+                o.frequency.setValueAtTime(600, now);
+                o.frequency.exponentialRampToValueAtTime(1200, now + 0.1);
+                g.gain.setValueAtTime(0.3, now);
+                g.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+                o.start(now); o.stop(now + 0.3);
+            } else if (type === 'wrong') {
+                o.type = 'sawtooth';
+                o.frequency.setValueAtTime(300, now);
+                o.frequency.exponentialRampToValueAtTime(150, now + 0.3);
+                g.gain.setValueAtTime(0.3, now);
+                g.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+                o.start(now); o.stop(now + 0.4);
+            } else if (type === 'streak') {
+                o.type = 'square';
+                o.frequency.setValueAtTime(400, now);
+                o.frequency.setValueAtTime(600, now + 0.1);
+                o.frequency.setValueAtTime(1200, now + 0.2);
+                g.gain.setValueAtTime(0.2, now);
+                g.gain.linearRampToValueAtTime(0.01, now + 0.4);
+                o.start(now); o.stop(now + 0.4);
+            }
+        } catch (e) { console.log('WebAudio API not responding:', e); }
+    },
+
+    showLottieFeedback(isCorrect) {
+        const layer = document.getElementById('quiz-gamification-layer');
+        if (!layer) return;
+
+        layer.innerHTML = ''; // clear past
+        const animControl = document.createElement('div');
+        animControl.className = 'animate-pop-in duration-300 flex flex-col items-center';
+
+        if (isCorrect) {
+            animControl.innerHTML = `
+                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_xsnsvpbs.json" background="transparent" speed="1.5" style="width: 250px; height: 250px;" autoplay></lottie-player>
+                <div class="text-3xl md:text-5xl font-black text-emerald-500 uppercase tracking-widest drop-shadow-xl -mt-8 bg-white/80 px-6 py-2 rounded-full border-4 border-emerald-400">Chính xác</div>
+            `;
+        } else {
+            animControl.innerHTML = `
+                <div class="text-[100px] mb-4">🥲</div>
+                <div class="text-2xl md:text-4xl font-black text-orange-500 uppercase tracking-widest drop-shadow-xl bg-white/90 px-6 py-2 rounded-full border-4 border-orange-400">Sai rồi, làm lại nhé!</div>
+            `;
+        }
+
+        layer.appendChild(animControl);
+        setTimeout(() => {
+            animControl.classList.remove('animate-pop-in');
+            animControl.classList.add('animate-slide-out-up', 'opacity-0');
+            setTimeout(() => layer.innerHTML = '', 400);
+        }, 1500);
+    },
 
     async initQuiz(lesson) {
         console.log('Quiz: Khởi tạo quiz với lesson:', lesson.title);
@@ -90,15 +182,64 @@ export const Quiz = {
         Quiz.currentQuiz = finalPool;
         Quiz.currentIndex = 0;
         Quiz.score = 0;
+        Quiz.streak = 0;
         Quiz.isProcessing = false;
 
         window.Quiz.currentQuiz = finalPool;
         window.Quiz.currentIndex = 0;
         window.Quiz.score = 0;
+        window.Quiz.streak = 0;
         window.Quiz.isProcessing = false;
+        window.Quiz.startTime = Date.now(); // Track start time
 
         console.log('Quiz: Đã nạp ' + finalPool.length + ' câu hỏi.');
         Quiz.renderCurrentQuestion();
+
+        if (window.db) {
+            Quiz.loadLeaderboard(lesson.title);
+        }
+    },
+
+    loadLeaderboard(lessonTitle) {
+        if (!window.db) return;
+        const listDiv = document.getElementById('quiz-leaderboard-list');
+        if (!listDiv) return;
+
+        window.db.collection("diem_tieng_viet_lop5")
+            .where("lessonTitle", "==", lessonTitle)
+            .orderBy("score", "desc")
+            .limit(10)
+            .onSnapshot((snapshot) => {
+                if (snapshot.empty) {
+                    listDiv.innerHTML = '<div class="text-center py-6 text-gray-400 text-sm font-bold italic">Chưa có ai hoàn thành bài thử thách này. Hãy là người đầu tiên!</div>';
+                    return;
+                }
+
+                let html = '';
+                let rank = 1;
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    let rankIcon = rank === 1 ? '🥇' : (rank === 2 ? '🥈' : (rank === 3 ? '🥉' : `<span class="bg-gray-100 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center text-xs font-black shadow-inner">${rank}</span>`));
+                    let rowClass = rank === 1 ? 'bg-amber-50 border-amber-200' : (rank <= 3 ? 'bg-blue-50 border-blue-100' : 'bg-gray-50 border-gray-100');
+
+                    html += `
+                        <div class="flex items-center justify-between p-3 md:p-4 rounded-2xl border-2 ${rowClass} hover:scale-[1.01] transition-transform">
+                            <div class="flex items-center gap-3 md:gap-4">
+                                <div class="text-2xl">${rankIcon}</div>
+                                <div>
+                                    <div class="text-sm md:text-base font-black text-gray-800">${data.studentName}</div>
+                                    <div class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wider">${data.studentClass || 'Lớp 5'}</div>
+                                </div>
+                            </div>
+                            <div class="text-lg md:text-xl font-black text-amber-500 bg-white px-3 py-1 rounded-xl shadow-sm border border-amber-100">
+                                ${data.score}
+                            </div>
+                        </div>
+                    `;
+                    rank++;
+                });
+                listDiv.innerHTML = html;
+            });
     },
 
     async loadQuizFromFile(period) {
@@ -133,14 +274,26 @@ export const Quiz = {
             return;
         }
 
-        // Update progress UI
+        // Update progress UI & streak
         const qCurrent = document.getElementById('quiz-progress-current');
         const sDisplay = document.getElementById('quiz-score-display');
         const pFill = document.getElementById('quiz-progress-fill');
+        const strContainer = document.getElementById('streak-container');
+        const strDisplay = document.getElementById('quiz-streak-display');
 
         if (qCurrent) qCurrent.innerText = quiz.currentIndex + 1;
         if (sDisplay) sDisplay.innerText = quiz.score;
         if (pFill) pFill.style.width = `${((quiz.currentIndex) / quiz.currentQuiz.length) * 100}%`;
+
+        if (strContainer && strDisplay) {
+            if (quiz.streak > 1) {
+                strContainer.classList.remove('hidden', 'flex-col'); // fallback tailwind flex issue
+                strContainer.classList.add('flex', 'flex-col');
+                strDisplay.innerText = `${quiz.streak}🔥`;
+            } else {
+                strContainer.classList.add('hidden');
+            }
+        }
 
         const q = quiz.currentQuiz[quiz.currentIndex];
         const container = document.getElementById('quiz-content');
@@ -184,14 +337,50 @@ export const Quiz = {
         const isCorrect = (selectedIndex === q.answer);
 
         if (isCorrect) {
-            quiz.score += 10;
+            quiz.streak++;
+            let earnedPoints = 10;
+            let comboMulti = false;
+
+            // Streak Bonus
+            if (quiz.streak >= 3) {
+                earnedPoints += 5; // combo bonus x3
+                quiz.playSFX('streak');
+                comboMulti = 3;
+            } else if (quiz.streak >= 5) {
+                earnedPoints += 10; // combo bonus x5
+                quiz.playSFX('streak');
+                comboMulti = 5;
+            } else {
+                quiz.playSFX('correct');
+            }
+
+            quiz.score += earnedPoints;
             const sDisplay = document.getElementById('quiz-score-display');
             if (sDisplay) {
                 sDisplay.innerText = quiz.score;
-                sDisplay.classList.add('animate-bounce-subtle');
-                setTimeout(() => sDisplay.classList.remove('animate-bounce-subtle'), 500);
+                sDisplay.classList.add('animate-bounce-subtle', 'text-emerald-500');
+                setTimeout(() => sDisplay.classList.remove('animate-bounce-subtle', 'text-emerald-500'), 500);
             }
+
+            quiz.showLottieFeedback(true);
+            if (comboMulti) {
+                // Flash combo message
+                const layer = document.getElementById('quiz-gamification-layer');
+                if (layer) {
+                    const combo = document.createElement('div');
+                    combo.className = 'absolute bottom-10 animate-bounce text-2xl font-black text-rose-500 bg-white/90 px-4 py-1 rounded-full border-2 border-rose-300 drop-shadow-lg z-50';
+                    combo.innerText = `COMBO X${quiz.streak}! +${earnedPoints} Điểm`;
+                    layer.appendChild(combo);
+                }
+            }
+
             if (typeof confetti === 'function') confetti({ particleCount: 50, spread: 60, origin: { y: 0.8 } });
+        } else {
+            quiz.playSFX('wrong');
+            quiz.showLottieFeedback(false);
+            quiz.streak = 0;
+            const strContainer = document.getElementById('streak-container');
+            if (strContainer) strContainer.classList.add('hidden');
         }
 
         const buttons = document.querySelectorAll('.quiz-opt-btn');
@@ -245,6 +434,8 @@ export const Quiz = {
     finishQuiz() {
         console.log('Quiz: Hoàn thành trắc nghiệm.');
         const quiz = window.Quiz;
+        quiz.timeTaken = Math.round((Date.now() - (quiz.startTime || Date.now())) / 1000); // Time in seconds
+        quiz.playSFX('correct'); // Fanfare on completion
         const pFill = document.getElementById('quiz-progress-fill');
         if (pFill) pFill.style.width = '100%';
 
@@ -274,9 +465,10 @@ export const Quiz = {
         const quiz = window.Quiz;
         const fullContent = `Trắc nghiệm tổng: ${quiz.score} điểm (${quiz.score / 10}/10 câu đúng).`;
         const score = quiz.score;
+        const timeTaken = quiz.timeTaken || 0;
 
         if (window.submitMathLesson) {
-            window.submitMathLesson(fullContent, score, "btn-submit-final-score");
+            window.submitMathLesson(fullContent, score, "btn-submit-final-score", timeTaken);
         } else {
             alert("Bạn hãy tải lại trang để nộp điểm nhé! (Hệ thống nộp bài đang bận)");
         }
