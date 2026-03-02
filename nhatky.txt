@@ -371,3 +371,37 @@ Ngày 02/03/2026:
   + Hỗ trợ Gợi ý (hint) có thể mở rộng (<details>).
 - Tổng kết: EduRobot5 giờ đây có 7 Module Tương tác (DragDrop, GeometryLab, Matching, RealWorld, VerticalCalc, Fraction, WordProblem) + Quiz (Trắc nghiệm Gamification) = 8 cỗ máy bao phủ 100% các dạng bài Toán 5.
 - Cập nhật Bài 127 Demo: Tích hợp đầy đủ 7 module + 10 câu trắc nghiệm vào 3 tab (Tìm hiểu, Luyện tập, Củng cố) để kiểm thử toàn diện.
+
+Ngày 03/03/2026:
+----------------
+[05:05] Hoàn thành soạn liệu Tiết 120 (Bài 51): Diện tích xung quanh và toàn phần hình lập phương.
+- Nội dung: Tái hiện câu chuyện Khám phá (Thùng gỗ & Chiếc gối) từ SGK với hình ảnh trực quan.
+- Luyện tập: Thiết kế 2 bài tập tương tác cao (Bài 1: Tính toán Sxq/Stp; Bài 2: Vận dụng thực tế chiếc bánh).
+- Củng cố: Tạo ngân hàng 15 câu hỏi trắc nghiệm tại `cungco120.txt` và tích hợp bộ nạp động.
+- Trải nghiệm: Giao diện premium-shadow, responsive 2 cột và hỗ trợ chấm điểm/feedback tức thì.
+- Branding: Đồng bộ xưng hô "bạn" và hệ thống logo chữ E.
+
+================================================================================
+BẢNG TRA CỨU NHANH: 10 DẠNG BÀI TẬP TƯƠNG TÁC EDUROBOT5
+(File: js/components/Lesson.js + js/components/Quiz.js)
+================================================================================
+
+ #  | TÊN GỌI TẮT    | HÀM KỸ THUẬT                    | DÙNG CHO DẠNG BÀI
+----|-----------------|----------------------------------|------------------------------------------
+ 1  | Kéo thả         | renderDragDropFormula             | Điền dấu, lập công thức, sắp xếp thứ tự
+ 2  | Phòng lab       | renderDynamicGeometryLab          | Thay đổi kích thước hình, xem diện tích biến thiên
+ 3  | Nối ghép        | renderMatchingExercise            | Nối khái niệm <-> công thức, hình <-> tên gọi
+ 4  | Tải ảnh         | renderRealWorldMeasurement        | Chụp ảnh vật thật, ghi số đo thực tế
+ 5  | Đặt tính        | renderVerticalCalculation         | Đặt tính rồi tính (cộng/trừ/nhân/chia dọc, ô ly)
+ 6  | Phân số         | renderFractionInput               | Nhập tử số / mẫu số trực quan (có gạch ngang)
+ 7  | Giải toán       | renderWordProblem                 | Bài toán có lời văn (3 bước: Lời giải->Phép tính->Đáp số + AI chấm)
+ 8  | Trắc nghiệm    | Quiz.js (quizPool)                | Chọn 1/4 đáp án, có SFX + Lottie + Streak + Leaderboard
+ 9  | Điền số         | renderMathExercise                | Nhập kết quả 1 dòng (có hỗ trợ nhận diện giọng nói)
+10  | Đổi đơn vị      | renderUnitConversionExercise      | Đổi m->cm, kg->g, km²->m²... (dạng gọn, inline)
+
+VÍ DỤ CÁCH YÊU CẦU:
+"Bài 130, tab Tìm hiểu: 2 bài Đặt tính (36.5+14.8 và 125×4), 1 bài Phân số (rút gọn 15/25).
+ Tab Luyện tập: 1 bài Giải toán (tính quãng đường), 1 bài Nối ghép.
+ Tab Củng cố: 10 câu Trắc nghiệm."
+=> AI sẽ hiểu 100% và code ngay!
+================================================================================
