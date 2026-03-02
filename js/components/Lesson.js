@@ -365,7 +365,19 @@ export const Lesson = {
     },
 
     // 2. Phòng thí nghiệm hình học động (Dynamic Geometry Lab)
-    // Sẽ gọi update function để vẽ Canvas / chỉnh CSS scale
+    toggleGeoLock(id, type) {
+        const checkbox = document.getElementById(`geo-lock-${id}`);
+        const state = window[`geoState_${id}`];
+        if (checkbox.checked) {
+            state.isLocked = true;
+            state.baseA = state.a;
+            state.baseB = state.b;
+        } else {
+            state.isLocked = false;
+        }
+        this.updateGeometry(id, type, null, null);
+    },
+
     renderDynamicGeometryLab(id, shapeType, initialState) {
         return `
             <div class="geometry-lab p-6 md:p-8 bg-blue-50 dark:bg-slate-900 rounded-[32px] border-2 border-blue-100 mb-8 mt-6">
@@ -376,8 +388,8 @@ export const Lesson = {
                 
                 <div class="flex flex-col md:flex-row gap-8">
                     <!-- Trực quan hóa (Visualization) -->
-                    <div class="flex-1 min-h-[250px] bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center p-6 border-2 border-dashed border-blue-300 relative overflow-hidden">
-                        <div id="geo-visual-${id}" class="transition-all duration-300 origin-bottom flex items-center justify-center">
+                    <div class="flex-1 min-h-[300px] bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center p-6 border-2 border-dashed border-blue-300 relative overflow-hidden">
+                        <div id="geo-visual-${id}" class="w-full h-full transition-all duration-300 flex items-center justify-center relative">
                             <!-- SVG vẽ hình sẽ được gắn vào đây -->
                             <div class="text-gray-400 text-sm font-bold">Hình ảnh sẽ cập nhật trực tiếp...</div>
                         </div>
@@ -389,9 +401,9 @@ export const Lesson = {
                             <!-- Controls nạp động dựa vào shapeType -->
                         </div>
                         
-                        <div class="p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-gray-100 min-h-[120px] flex flex-col justify-center">
                             <div class="text-[10px] font-black tracking-widest text-gray-400 uppercase mb-2">Kết quả tính toán thời gian thực</div>
-                            <div id="geo-result-${id}" class="text-2xl font-black text-indigo-600 dark:text-indigo-400 font-mono"></div>
+                            <div id="geo-result-${id}" class="text-2xl font-black text-indigo-600 dark:text-indigo-400 font-mono leading-tight"></div>
                         </div>
                     </div>
                 </div>
@@ -408,22 +420,37 @@ export const Lesson = {
         if (!ctrls) return;
 
         let html = '';
-        if (type === 'rectangle_area') {
+        if (type === 'rectangle_area' || type === 'cube_volume') {
+            const labelA = type === 'cube_volume' ? 'Cạnh (a)' : 'Chiều dài (a)';
             html = `
                 <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between text-sm font-bold text-gray-700 mb-1">
-                            <span>Chiều dài (a)</span>
-                            <span id="geo-val-a-${id}">${state.a} cm</span>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm">
+                        <div class="flex justify-between text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
+                            <span>${labelA}</span>
+                            <span id="geo-val-a-${id}" class="text-blue-600">${state.a} cm</span>
                         </div>
-                        <input type="range" class="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600" min="1" max="20" value="${state.a}" oninput="Lesson.updateGeometry('${id}', 'rectangle_area', 'a', this.value)">
+                        <input type="range" class="w-full h-2 bg-blue-100 rounded-lg appearance-none cursor-pointer accent-blue-600" min="1" max="25" value="${state.a}" oninput="Lesson.updateGeometry('${id}', '${type}', 'a', this.value)">
                     </div>
-                    <div>
-                        <div class="flex justify-between text-sm font-bold text-gray-700 mb-1">
+            `;
+
+            if (type === 'rectangle_area') {
+                html += `
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm">
+                        <div class="flex justify-between text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
                             <span>Chiều rộng (b)</span>
-                            <span id="geo-val-b-${id}">${state.b} cm</span>
+                            <span id="geo-val-b-${id}" class="text-indigo-600">${state.b} cm</span>
                         </div>
-                        <input type="range" class="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600" min="1" max="20" value="${state.b}" oninput="Lesson.updateGeometry('${id}', 'rectangle_area', 'b', this.value)">
+                        <input type="range" class="w-full h-2 bg-indigo-100 rounded-lg appearance-none cursor-pointer accent-indigo-600" min="1" max="25" value="${state.b}" oninput="Lesson.updateGeometry('${id}', 'rectangle_area', 'b', this.value)">
+                    </div>
+                `;
+            }
+
+            html += `
+                    <div class="mt-4 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border-2 border-amber-200 dark:border-amber-700 animate-pulse-subtle">
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input type="checkbox" id="geo-lock-${id}" class="w-8 h-8 rounded-lg accent-amber-600" onchange="Lesson.toggleGeoLock('${id}', '${type}')">
+                            <span class="font-black text-amber-900 dark:text-amber-200 text-lg">Chốt hình so sánh</span>
+                        </label>
                     </div>
                 </div>
             `;
@@ -439,27 +466,78 @@ export const Lesson = {
         const state = window[`geoState_${id}`];
         if (key) {
             state[key] = parseFloat(val);
-            document.getElementById(`geo-val-${key}-${id}`).innerText = val + " cm";
+            const valLabel = document.getElementById(`geo-val-${key}-${id}`);
+            if (valLabel) valLabel.innerText = val + " cm";
         }
 
         const visual = document.getElementById(`geo-visual-${id}`);
         const result = document.getElementById(`geo-result-${id}`);
+        const scaleFactor = 10;
+        let visualHtml = '';
+        let resultHtml = '';
 
         if (type === 'rectangle_area') {
-            const area = state.a * state.b;
-            result.innerHTML = `S = a &times; b = <span class="text-3xl text-blue-600">${area}</span> cm²`;
+            const area = (state.a * state.b).toFixed(1);
+            resultHtml = `S = a &times; b = <span class="text-4xl text-blue-600 font-black">${area}</span> cm²`;
 
-            // Vẽ trực tiếp bằng Tailwind styles và inline CSS
-            // Tỷ lệ max cho 20cm là 200px
-            const scaleFactor = 10;
-            visual.innerHTML = `
-                <div class="bg-blue-400 border-2 border-blue-600 transition-all duration-300 relative" 
-                     style="width: ${state.a * scaleFactor}px; height: ${state.b * scaleFactor}px; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.2) 0, rgba(255,255,255,0.2) 2px, transparent 2px, transparent 10px);">
-                    <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 font-bold text-xs">a = ${state.a}</div>
-                    <div class="absolute -right-10 top-1/2 -translate-y-1/2 font-bold text-xs whitespace-nowrap">b = ${state.b}</div>
+            if (state.isLocked) {
+                const baseArea = (state.baseA * state.baseB).toFixed(1);
+                const ratio = (area / baseArea).toFixed(1);
+                resultHtml += `<div class="mt-2 text-lg font-bold text-amber-600 bg-amber-50 p-2 rounded-lg border border-amber-200 block">So sánh: Gấp <span class="text-2xl font-black">${ratio}</span> lần (${baseArea} cm²)</div>`;
+
+                // Vẽ hình gốc (Shadow)
+                visualHtml += `
+                    <div class="absolute border-4 border-dashed border-gray-300 rounded-sm opacity-40 z-0" 
+                         style="width: ${state.baseA * scaleFactor}px; height: ${state.baseB * scaleFactor}px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+                         <div class="absolute -top-6 left-0 text-[10px] font-bold text-gray-400">Hình gốc</div>
+                    </div>
+                `;
+            }
+
+            // Vẽ hình hiện tại
+            visualHtml += `
+                <div class="bg-blue-400 border-2 border-blue-600 shadow-2xl transition-all duration-300 relative z-10 flex items-center justify-center rounded-sm" 
+                     style="width: ${state.a * scaleFactor}px; height: ${state.b * scaleFactor}px; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 2px, transparent 2px, transparent 10px);">
+                    <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 font-black text-lg text-blue-900 bg-white/80 px-2 rounded-md shadow-sm">a = ${state.a}</div>
+                    <div class="absolute -right-14 top-1/2 -translate-y-1/2 font-black text-lg text-blue-900 bg-white/80 px-2 rounded-md shadow-sm rotate-90 origin-center whitespace-nowrap">b = ${state.b}</div>
+                </div>
+            `;
+        } else if (type === 'cube_volume') {
+            const volume = Math.pow(state.a, 3).toFixed(1);
+            resultHtml = `V = a &times; a &times; a = <span class="text-4xl text-indigo-600 font-black">${volume}</span> cm³`;
+
+            if (state.isLocked) {
+                const baseVol = Math.pow(state.baseA, 3).toFixed(1);
+                const ratio = (volume / baseVol).toFixed(1);
+                resultHtml += `<div class="mt-2 text-lg font-bold text-amber-600 bg-amber-50 p-2 rounded-lg border border-amber-200 block">So sánh: Gấp <span class="text-2xl font-black">${ratio}</span> lần (${baseVol} cm³)</div>`;
+
+                // Vẽ hình khối gốc (Isometric 2D projection)
+                const bS = state.baseA * 5;
+                visualHtml += `
+                    <div class="absolute opacity-20 z-0" style="width: ${bS * 2}px; height: ${bS * 2}px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+                        <div class="border-2 border-indigo-200 border-dashed w-full h-full relative" style="transform: skewY(-20deg);"></div>
+                    </div>
+                `;
+            }
+
+            // Vẽ hình khối hiện tại (Projected 2D)
+            const s = state.a * 6; // Scale cho Cube
+            visualHtml += `
+                <div class="relative z-10 transition-all duration-300" style="width: ${s}px; height: ${s}px;">
+                    <!-- Mặt trước -->
+                    <div class="absolute inset-0 bg-indigo-500 border-2 border-indigo-700 shadow-lg flex items-center justify-center">
+                        <span class="text-white font-black text-xl">${state.a}</span>
+                    </div>
+                    <!-- Mặt trên -->
+                    <div class="absolute top-0 left-0 w-full h-[30%] bg-indigo-400 border-2 border-indigo-700 origin-bottom" style="transform: translateY(-100%) skewX(45deg);"></div>
+                    <!-- Mặt phải -->
+                    <div class="absolute top-0 right-0 h-full w-[30%] bg-indigo-600 border-2 border-indigo-700 origin-left" style="transform: translateX(100%) skewY(45deg);"></div>
                 </div>
             `;
         }
+
+        visual.innerHTML = visualHtml;
+        result.innerHTML = resultHtml;
     },
 
     // 3. Dạng bài nối đặc sắc (Matching Exercise)

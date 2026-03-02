@@ -416,3 +416,13 @@ VÍ DỤ CÁCH YÊU CẦU:
  Tab Củng cố: 10 câu Trắc nghiệm."
 => AI sẽ hiểu 100% và code ngay!
 ================================================================================
+
+[06:00] THIẾT LẬP TIÊU CHUẨN THIẾT KẾ EDUROBOT TV-FIRST (v9.0):
+1. GHI NHỚ & LƯU Ý: Phải nổi bật nhất. Sử dụng font `text-4xl`, viền `border-4`, màu tương phản mạnh và hiệu ứng `animate-pulse-subtle` để gây chú ý.
+2. HÌNH ẢNH MINH HỌA: Phải bung rộng tối đa không gian cho phép (Sử dụng `max-w-[500px]` đến `max-w-[600px]`). Ưu tiên hiển thị trực quan cho TV.
+3. CÔNG THỨC & TOÁN HỌC: Giữ kích cỡ vừa phải (`text-4xl` hoặc `text-5xl`) để tránh lỗi tràn khung (overflow) trên các màn hình tỉ lệ 16:9 của TV.
+4. BỐ CỤC (LAYOUT): Sử dụng lề (`padding`, `margin`) nhỏ nhất có thể để dành diện tích cho nội dung bài học. 
+5. NÚT BẤM (UI): Nút "Nộp bài", "Thầy E chấm bài" thiết kế nhỏ gọn, tinh tế, bỏ bớt icon thừa để tập trung vào tính năng. "Chữ to - Ảnh rộng - Bố cục gọn" là 3 từ khóa cốt lõi.
+
+ĐÃ ÁP DỤNG ĐỂ SỬA ĐỔI: Tiết 120, Tiết 121 và các bài học tương lai.
+================================================================================

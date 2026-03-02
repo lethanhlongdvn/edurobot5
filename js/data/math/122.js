@@ -5,31 +5,42 @@ export const lesson122 = {
     "title": "BÀI 52. THỂ TÍCH CỦA HÌNH HỘP CHỮ NHẬT (TIẾT 1)",
     "desc": "Bài 52: Cách tính thể tích hình hộp chữ nhật bằng công thức V = a × b × c (Trang 51-52).",
     "content": `
-        <div class="space-y-2 text-indigo-900">
-            <!-- 🎯 Khám phá -->
-            <div class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <h3 class="font-black text-2xl md:text-3xl mb-1 flex items-center gap-2">
-                    <span class="p-2 bg-indigo-600 rounded-xl shadow-lg">💡</span>
-                    Khám phá
-                </h3>
-                <div class="flex flex-col md:grid md:grid-cols-2 gap-2 p-1 bg-blue-50 rounded-[32px]">
-                    <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full h-auto rounded-xl shadow-md border-2 border-white">
-                    <div class="bg-white p-4 rounded-3xl flex flex-col justify-center">
-                        <p class="text-xl md:text-2xl font-bold text-blue-900">
-                            Thể tích = 6 × 5 × 4 = <span class="text-indigo-600 font-black">120 dm³</span>
-                        </p>
-                    </div>
+        <div class="space-y-4 text-indigo-900 animate-fade-in">
+            <!-- 🎯 Mục tiêu & Khám phá -->
+            <div class="bg-gradient-to-br from-indigo-600 to-blue-700 p-6 rounded-[40px] text-white shadow-2xl flex flex-col md:flex-row items-center gap-6">
+                <div class="w-24 h-24 bg-white/20 rounded-3xl flex items-center justify-center backdrop-blur-md border-2 border-white/30 shrink-0 text-5xl shadow-lg">🧊</div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight mb-2">Tính Thể Tích Hình Hộp Chữ Nhật</h3>
+                    <p class="text-xl md:text-2xl font-bold opacity-90 leading-tight">
+                        Muốn tính thể tích hình hộp chữ nhật, ta lấy chiều dài nhân với chiều rộng rồi nhân với chiều cao (cùng một đơn vị đo).
+                    </p>
                 </div>
             </div>
 
-            <!-- 🖍️ Công thức -->
-            <div class="bg-pink-600 p-2 md:p-4 rounded-[40px] text-white shadow-xl relative overflow-hidden">
-                <div class="flex flex-col md:flex-row items-center gap-4">
-                   <img src="hinh_anh/toan/toan_tap_2/122-formula.png" alt="Công thức" class="w-full max-w-[200px] h-auto rounded-xl border border-pink-400">
-                   <div class="text-center md:text-left">
-                        <p class="text-xs font-black uppercase opacity-60">Ghi nhớ</p>
-                        <p class="text-4xl md:text-6xl font-black">V = a × b × c</p>
-                        <p class="text-sm italic opacity-80">(Cùng đơn vị đo kích thước)</p>
+            <!-- 🧪 Phòng Thí Nghiệm (Tương tác) -->
+            <div class="bg-white p-2 rounded-[40px] shadow-xl border border-indigo-50">
+                <div class="p-4 bg-indigo-50 rounded-[32px] mb-2">
+                    <p class="text-indigo-900 font-black text-xl md:text-2xl mb-4 flex items-center gap-2">
+                        <span class="animate-bounce">👉</span> Thí nghiệm: Thay đổi cạnh để xem Thể tích biến thiên
+                    </p>
+                    \${Lesson.renderDynamicGeometryLab('lab-122', 'cube_volume', {a: 5})}
+                </div>
+            </div>
+
+            <!-- 🖍️ Công thức Ghi nhớ -->
+            <div class="bg-rose-500 p-8 rounded-[40px] text-white shadow-2xl relative overflow-hidden group">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-3xl transition-all group-hover:scale-150"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-around gap-8">
+                   <div class="text-center md:text-left space-y-2">
+                        <p class="text-lg font-black uppercase tracking-[0.2em] text-rose-200">Công thức tổng quát</p>
+                        <p class="text-6xl md:text-8xl font-black drop-shadow-lg italic">V = a &times; b &times; c</p>
+                        <p class="text-xl font-bold opacity-80 mt-4 bg-black/10 p-3 rounded-2xl inline-block">V: Thể tích | a, b, c: Ba kích thước</p>
+                   </div>
+                   <div class="w-full max-w-[300px] bg-white/20 p-6 rounded-[32px] backdrop-blur-md border border-white/30 shadow-inner">
+                        <p class="text-2xl font-black leading-tight text-center">
+                            Nếu là Hình lập phương:<br>
+                            <span class="text-4xl md:text-5xl block mt-2 underline decoration-4 underline-offset-8">V = a &times; a &times; a</span>
+                        </p>
                    </div>
                 </div>
             </div>
