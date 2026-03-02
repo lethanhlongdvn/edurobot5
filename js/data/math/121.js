@@ -161,8 +161,8 @@ export const lesson121 = {
                             </div>
                         </div>
                         <div class="pt-6 flex justify-center">
-                            <button onclick="Lesson.submitWordProblemAI('121-2')" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-[28px] font-black text-2xl transition-all active:scale-95 shadow-xl shadow-blue-200 flex items-center gap-4 border-b-8 border-blue-800">
-                                <span>THẦY E KIỂM TRA</span> <span class="text-3xl">🤖</span>
+                            <button onclick="Lesson.submitWordProblemAI('121-2')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl font-black text-base transition-all active:scale-95 shadow-lg shadow-blue-100 border-b-4 border-blue-800">
+                                Thầy E chấm bài
                             </button>
                         </div>
                     </div>
@@ -208,8 +208,8 @@ export const lesson121 = {
                             <span class="text-2xl font-black text-gray-400">đồng</span>
                         </div>
                         <div class="pt-6 flex justify-center">
-                            <button onclick="Lesson.submitWordProblemAI('121-3')" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-[28px] font-black text-2xl transition-all active:scale-95 shadow-xl shadow-blue-200 flex items-center gap-4 border-b-8 border-blue-800">
-                                <span>AI CHẤM BÀI</span> <span class="text-3xl">🤖</span>
+                            <button onclick="Lesson.submitWordProblemAI('121-3')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl font-black text-base transition-all active:scale-95 shadow-lg shadow-blue-100 border-b-4 border-blue-800">
+                                Thầy E chấm bài
                             </button>
                         </div>
                     </div>
@@ -248,10 +248,8 @@ export const lesson121 = {
 
             <!-- Nộp bài toàn diện -->
             <div class="flex flex-col items-center gap-6 pt-12 border-t-4 border-dashed border-gray-100">
-                <p class="text-xl font-black text-gray-400 uppercase tracking-[0.2em] mb-4 italic text-center">Hoàn thành bài tập để nhận huy chương Rô-bốt</p>
-                <button id="btn-submit-121" onclick="submit121()" class="group relative px-20 py-8 bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-800 text-white rounded-[40px] font-black text-4xl shadow-[0_20px_50px_rgba(37,99,235,0.4)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.6)] transition-all hover:-translate-y-2 active:scale-95 overflow-hidden">
-                    <span class="relative z-10">🌟 NỘP BÀI TẬP 🌟</span>
-                    <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                <button id="btn-submit-121" onclick="submit121()" class="px-10 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
+                    Nộp bài
                 </button>
             </div>
 

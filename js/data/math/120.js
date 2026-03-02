@@ -207,8 +207,8 @@ export const lesson120 = {
                         </div>
 
                         <div class="mt-8 flex justify-center">
-                            <button onclick="Lesson.submitWordProblemAI('120-2')" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-[24px] font-black text-lg transition-all active:scale-95 shadow-lg shadow-blue-200 flex items-center gap-3">
-                                <span>THẦY E CHẤM BÀI GIẢI</span> <span class="text-2xl">🤖</span>
+                            <button onclick="Lesson.submitWordProblemAI('120-2')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl font-black text-base transition-all active:scale-95 shadow-lg shadow-blue-100 flex items-center gap-2">
+                                Thầy E chấm bài
                             </button>
                         </div>
                     </div>
@@ -216,14 +216,10 @@ export const lesson120 = {
             </div>
 
             <!-- Nộp bài -->
-            <div class="flex flex-col items-center gap-4 pt-10">
-                <button id="btn-submit-120" onclick="submit120()" class="group relative bg-indigo-600 hover:bg-indigo-700 text-white px-12 py-5 rounded-[24px] font-black text-2xl shadow-2xl shadow-indigo-200 active:scale-95 transition-all overflow-hidden">
-                    <span class="relative z-10 flex items-center gap-3">
-                        NỘP BÀI TẬP <span class="text-3xl">🚀</span>
-                    </span>
-                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
+            <div class="flex flex-col items-center gap-4 pt-10 border-t-2 border-dashed border-gray-100 mt-12">
+                <button id="btn-submit-120" onclick="submit120()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-4 rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
+                    Nộp bài
                 </button>
-                <p class="text-gray-400 font-bold uppercase text-[10px] tracking-[0.3em]">Hệ thống sẽ tự động chấm điểm và gửi thầy cô</p>
             </div>
 
             <script>
