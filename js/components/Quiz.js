@@ -167,14 +167,14 @@ export const Quiz = {
             return;
         }
 
-        // Chọn tối đa 10 câu
-        const lv1 = pool.filter(q => q.level === 1).sort(() => 0.5 - Math.random()).slice(0, 5);
-        const lv2 = pool.filter(q => q.level === 2).sort(() => 0.5 - Math.random()).slice(0, 4);
-        const lv3 = pool.filter(q => q.level === 3).sort(() => 0.5 - Math.random()).slice(0, 1);
+        // Chọn tối đa 15 câu (Tăng từ 10 lên 15 theo yêu cầu)
+        const lv1 = pool.filter(q => q.level === 1).sort(() => 0.5 - Math.random()).slice(0, 8);
+        const lv2 = pool.filter(q => q.level === 2).sort(() => 0.5 - Math.random()).slice(0, 5);
+        const lv3 = pool.filter(q => q.level === 3).sort(() => 0.5 - Math.random()).slice(0, 2);
 
         let finalPool = [...lv1, ...lv2, ...lv3];
-        if (finalPool.length < 10) {
-            finalPool = pool.sort(() => 0.5 - Math.random()).slice(0, 10);
+        if (finalPool.length < 15) {
+            finalPool = pool.sort(() => 0.5 - Math.random()).slice(0, 15);
         }
         finalPool.sort(() => 0.5 - Math.random());
 
@@ -255,11 +255,14 @@ export const Quiz = {
                 const parts = line.split('|').map(p => p.trim());
                 if (parts.length < 3) return null;
 
+                // Loại bỏ số thứ tự ở đầu câu hỏi (ví dụ: "1. ", "11: ", "11. ")
+                let questionText = parts[0].replace(/^\d+[\.\:]\s*/, '').trim();
+
                 return {
-                    question: parts[0],
+                    question: questionText,
                     options: parts[1].split(',').map(o => o.trim()),
                     answer: parseInt(parts[2]) - 1, // Chuyển từ 1-based sang 0-based
-                    level: 1 // Mặc định level 1 nếu tải từ text
+                    level: parts.length > 3 ? parseInt(parts[3]) || 1 : 1
                 };
             }).filter(q => q !== null);
         } catch (e) {
@@ -302,15 +305,15 @@ export const Quiz = {
 
         container.innerHTML = `
             <div class="animate-slide-in-right relative z-30">
-                <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-slate-100 mb-8 md:mb-12 leading-relaxed text-center sm:text-left drop-shadow-sm">
+                <h3 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-slate-100 mb-8 md:mb-12 leading-relaxed text-center sm:text-left drop-shadow-sm">
                     <span class="text-orange-500 font-black mr-2">Q${quiz.currentIndex + 1}.</span> ${q.question}
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 relative z-50" id="opts-container">
                     ${q.options.map((opt, optIdx) => `
-                         <button onclick="Quiz.selectAnswer(${optIdx})" class="quiz-opt-btn relative w-full text-left p-6 md:p-8 rounded-[24px] md:rounded-[32px] border-4 border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-slate-800/50 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:border-orange-200 dark:hover:border-orange-800 hover:shadow-lg hover:-translate-y-1 transition-all group overflow-hidden cursor-pointer text-gray-700 dark:text-slate-200">
+                         <button onclick="Quiz.selectAnswer(${optIdx})" class="quiz-opt-btn relative w-full text-left p-8 md:p-10 rounded-[24px] md:rounded-[40px] border-4 border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-slate-800/50 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:border-orange-200 dark:hover:border-orange-800 hover:shadow-lg hover:-translate-y-1 transition-all group overflow-hidden cursor-pointer text-gray-700 dark:text-slate-200">
                             <div class="flex items-center pointer-events-none">
-                                <div class="w-8 h-8 md:w-10 md:h-10 border-4 border-gray-200 dark:border-slate-700 rounded-full flex-shrink-0 mr-4 md:mr-6 group-hover:border-orange-400 transition-colors flex items-center justify-center opt-indicator"></div>
-                                <span class="text-xl md:text-2xl lg:text-3xl font-bold group-hover:text-orange-900 dark:group-hover:text-orange-300 transition-colors leading-tight">${opt}</span>
+                                <div class="w-10 h-10 md:w-12 md:h-12 border-4 border-gray-200 dark:border-slate-700 rounded-full flex-shrink-0 mr-4 md:mr-8 group-hover:border-orange-400 transition-colors flex items-center justify-center opt-indicator"></div>
+                                <span class="text-2xl md:text-4xl lg:text-5xl font-bold group-hover:text-orange-900 dark:group-hover:text-orange-300 transition-colors leading-tight">${opt}</span>
                             </div>
                         </button>
                     `).join('')}

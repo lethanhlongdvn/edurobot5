@@ -375,11 +375,22 @@ Ngày 02/03/2026:
 Ngày 03/03/2026:
 ----------------
 [05:05] Hoàn thành soạn liệu Tiết 120 (Bài 51): Diện tích xung quanh và toàn phần hình lập phương.
-- Nội dung: Tái hiện câu chuyện Khám phá (Thùng gỗ & Chiếc gối) từ SGK với hình ảnh trực quan.
+- Nội dung: Tái hiện câu chuyện Khám phá (Thùng gỗ & Chiếc gối) từ SGK với hình ảnh thực tế.
 - Luyện tập: Thiết kế 2 bài tập tương tác cao (Bài 1: Tính toán Sxq/Stp; Bài 2: Vận dụng thực tế chiếc bánh).
 - Củng cố: Tạo ngân hàng 15 câu hỏi trắc nghiệm tại `cungco120.txt` và tích hợp bộ nạp động.
-- Trải nghiệm: Giao diện premium-shadow, responsive 2 cột và hỗ trợ chấm điểm/feedback tức thì.
 - Branding: Đồng bộ xưng hô "bạn" và hệ thống logo chữ E.
+
+[05:45] Phục hồi & Tối ưu Giao diện TV-Friendly (v8.5):
+- Khôi phục Kích thước chữ lớn: Toàn bộ tiêu đề bài học (3xl -> 5xl), nội dung (lg -> 2xl/3xl), các nút bấm (xl -> 3xl) đã được tăng kích cỡ để hiển thị rõ nét trên Smart TV lớp học.
+- Nâng cấp Quiz.js: 
+  + Sửa lỗi câu hỏi bị lặp số thứ tự (1. 11. ...) khi nạp từ file .txt bằng Regex lọc thông minh.
+  + Tăng số lượng câu hỏi củng cố hiển thị từ 10 lên tối đa 15 câu (nếu ngân hàng đủ).
+  + Khôi phục font chữ "siêu to khổng lồ" cho phần trắc nghiệm (Q1. Font 6xl, Đáp án 5xl).
+- Hoàn thiện Tiết 120 & 121: 
+  + Cập nhật layout rộng rãi, margins tối thiểu để tối ưu không gian dạy học trên TV.
+  + Sửa lỗi mất câu hỏi củng cố tại Tiết 120.
+  + Đồng bộ hóa nút "Thầy E chấm bài" và "Nộp bài" với kích thước lớn, dễ thao tác.
+- GitHub: Đã đẩy toàn bộ bản vá giao diện và nội dung Tiết 120, 121 lên main branch.
 
 ================================================================================
 BẢNG TRA CỨU NHANH: 10 DẠNG BÀI TẬP TƯƠNG TÁC EDUROBOT5
