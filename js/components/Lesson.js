@@ -506,34 +506,52 @@ export const Lesson = {
             const volume = Math.pow(state.a, 3).toFixed(1);
             resultHtml = `V = a &times; a &times; a = <span class="text-4xl text-indigo-600 font-black">${volume}</span> cm³`;
 
+            const s = state.a * 7;
+            const d = s * 0.4;
+            const viewSize = 240; // Fixed viewbox size
+
+            let svgContent = '';
+
             if (state.isLocked) {
                 const baseVol = Math.pow(state.baseA, 3).toFixed(1);
                 const ratio = (volume / baseVol).toFixed(1);
-                resultHtml += `<div class="mt-2 text-lg font-bold text-amber-600 bg-amber-50 p-2 rounded-lg border border-amber-200 block">So sánh: Gấp <span class="text-2xl font-black">${ratio}</span> lần (${baseVol} cm³)</div>`;
+                resultHtml += `<div class="mt-2 text-lg font-bold text-amber-600 bg-amber-50 p-3 rounded-xl border-2 border-amber-200 block shadow-inner">So sánh: Cạnh gấp ${(state.a / state.baseA).toFixed(1)} lần \u279E V gấp <span class="text-3xl font-black">${ratio}</span> lần.</div>`;
 
-                // Vẽ hình khối gốc (Isometric 2D projection)
-                const bS = state.baseA * 5;
-                visualHtml += `
-                    <div class="absolute opacity-20 z-0" style="width: ${bS * 2}px; height: ${bS * 2}px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-                        <div class="border-2 border-indigo-200 border-dashed w-full h-full relative" style="transform: skewY(-20deg);"></div>
-                    </div>
+                // Shadow cube (Cabinet Projection)
+                const sB = state.baseA * 7;
+                const dB = sB * 0.4;
+                const oxB = viewSize / 2 - sB / 2 - dB / 2;
+                const oyB = viewSize / 2 + sB / 2 + dB / 2;
+
+                svgContent += `
+                    <g opacity="0.4">
+                        <path d="M ${oxB} ${oyB} L ${oxB + sB} ${oyB} L ${oxB + sB + dB} ${oyB - dB} L ${oxB + dB} ${oyB - dB} Z" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4" />
+                        <path d="M ${oxB + sB} ${oyB} L ${oxB + sB} ${oyB - sB} L ${oxB + sB + dB} ${oyB - sB - dB} L ${oxB + sB + dB} ${oyB - dB} Z" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4" />
+                        <path d="M ${oxB} ${oyB - sB} L ${oxB + sB} ${oyB - sB} L ${oxB + sB + dB} ${oyB - sB - dB} L ${oxB + dB} ${oyB - sB - dB} Z" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4" />
+                        <rect x="${oxB}" y="${oyB - sB}" width="${sB}" height="${sB}" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4" />
+                    </g>
                 `;
             }
 
-            // Vẽ hình khối hiện tại (Projected 2D)
-            const s = state.a * 6; // Scale cho Cube
-            visualHtml += `
-                <div class="relative z-10 transition-all duration-300" style="width: ${s}px; height: ${s}px;">
-                    <!-- Mặt trước -->
-                    <div class="absolute inset-0 bg-indigo-500 border-2 border-indigo-700 shadow-lg flex items-center justify-center">
-                        <span class="text-white font-black text-xl">${state.a}</span>
-                    </div>
-                    <!-- Mặt trên -->
-                    <div class="absolute top-0 left-0 w-full h-[30%] bg-indigo-400 border-2 border-indigo-700 origin-bottom" style="transform: translateY(-100%) skewX(45deg);"></div>
-                    <!-- Mặt phải -->
-                    <div class="absolute top-0 right-0 h-full w-[30%] bg-indigo-600 border-2 border-indigo-700 origin-left" style="transform: translateX(100%) skewY(45deg);"></div>
-                </div>
+            // Current Cube (Cabinet Projection)
+            const ox = viewSize / 2 - s / 2 - d / 2;
+            const oy = viewSize / 2 + s / 2 + d / 2;
+
+            svgContent += `
+                <g class="transition-all duration-300">
+                    <!-- Bottom -->
+                    <path d="M ${ox} ${oy} L ${ox + s} ${oy} L ${ox + s + d} ${oy - d} L ${ox + d} ${oy - d} Z" fill="#6366f1" opacity="0.2" />
+                    <!-- Right Face -->
+                    <path d="M ${ox + s} ${oy} L ${ox + s} ${oy - s} L ${ox + s + d} ${oy - s - d} L ${ox + s + d} ${oy - d} Z" fill="#4338ca" stroke="#312e81" stroke-width="2" />
+                    <!-- Top Face -->
+                    <path d="M ${ox} ${oy - s} L ${ox + s} ${oy - s} L ${ox + s + d} ${oy - s - d} L ${ox + d} ${oy - s - d} Z" fill="#818cf8" stroke="#312e81" stroke-width="2" />
+                    <!-- Front Face -->
+                    <rect x="${ox}" y="${oy - s}" width="${s}" height="${s}" fill="#6366f1" stroke="#312e81" stroke-width="3" />
+                    <text x="${ox + s / 2}" y="${oy - s / 2 + 8}" fill="white" font-weight="900" text-anchor="middle" font-size="24">${state.a}</text>
+                </g>
             `;
+
+            visualHtml = `<svg viewBox="0 0 ${viewSize} ${viewSize}" class="w-full h-full max-w-[400px] drop-shadow-2xl overflow-visible">${svgContent}</svg>`;
         }
 
         visual.innerHTML = visualHtml;
