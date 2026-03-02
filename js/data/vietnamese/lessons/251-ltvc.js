@@ -70,7 +70,7 @@ export const lesson_251_ltvc = {
                                                 <p class="text-right text-base italic text-gray-500 mt-2">(Theo Tiếng Việt 4, tập một, NXB Giáo dục Việt Nam, 2022)</p>
                                             </div>
                                             <div class="w-full md:w-1/3">
-                                                <img src="hinh_anh/tiengviet/beethoven_piano_v2.png" alt="Beethoven" class="w-full h-auto rounded-3xl shadow-lg border-2 border-white">
+                                                <img src="hinh_anh/beethoven_piano_v2.png" alt="Beethoven" class="w-full h-auto rounded-3xl shadow-lg border-2 border-white">
                                             </div>
                                         </div>
                                     </div>

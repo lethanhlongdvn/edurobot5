@@ -55,7 +55,7 @@ export const lesson_292_cu_do_chieu = {
                     <div class="glass-card rounded-[40px] p-6 sticky top-28 shadow-xl border-amber-100/50">
                         <!-- Ảnh minh họa -->
                         <div class="mb-6 -mt-2">
-                            <img src="hinh_anh/tiengviet/292-dochieu-digital.png" alt="Cụ Đồ Chiểu" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
+                            <img src="hinh_anh/292-dochieu-digital.png" alt="Cụ Đồ Chiểu" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
                         </div>
 
                         <div class="flex items-center space-x-4 mb-8">

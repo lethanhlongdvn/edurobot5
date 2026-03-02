@@ -67,7 +67,7 @@ export const lesson_212_thu_cua_bo = {
                                 <aside class="w-full lg:w-[30%]">
                                     <div class="glass-card rounded-[40px] p-6 sticky top-28 shadow-xl border-amber-100/50">
                                         <div class="mb-6 -mt-2">
-                                            <img src="hinh_anh/tiengviet/thuguibo_minhhoa.png" alt="Minh họa" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
+                                            <img src="hinh_anh/thuguibo_minhhoa.png" alt="Minh họa" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
                                         </div>
 
                                         <div class="flex items-center space-x-4 mb-8">

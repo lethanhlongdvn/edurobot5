@@ -56,7 +56,7 @@ export const lesson_231_ltvc = {
                                         </div>
                                         <!-- Image on the Extreme Right -->
                                         <div class="w-24 md:w-32 flex-shrink-0 flex justify-end">
-                                            <img src="hinh_anh/tiengviet/dechoat_new.png" alt="Dế Choắt" class="w-full h-auto drop-shadow-xl rounded-xl transform translate-x-2 rotate-2">
+                                            <img src="hinh_anh/dechoat_new.png" alt="Dế Choắt" class="w-full h-auto drop-shadow-xl rounded-xl transform translate-x-2 rotate-2">
                                         </div>
                                     </div>
 
@@ -95,7 +95,7 @@ export const lesson_231_ltvc = {
                                             <p class="text-right text-sm italic text-gray-500 mt-2">(Theo Trần Hoài Dương)</p>
                                         </div>
                                         <div class="w-16 md:w-20 flex-shrink-0 flex justify-end">
-                                            <img src="hinh_anh/tiengviet/hoa_giay.jpg" alt="Hoa giấy" class="w-full h-auto rounded-xl shadow-md rotate-1">
+                                            <img src="hinh_anh/hoa_giay.jpg" alt="Hoa giấy" class="w-full h-auto rounded-xl shadow-md rotate-1">
                                         </div>
                                     </div>
                                     <div class="mt-3 flex items-center gap-3">

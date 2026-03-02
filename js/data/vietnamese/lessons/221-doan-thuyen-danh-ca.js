@@ -30,7 +30,7 @@ export const lesson_221_doan_thuyen_danh_ca = {
                                                     Trao đổi với bạn những điều em biết về cuộc sống, công việc của người dân miền biển.
                                                 </p>
                                                 <div class="glass-card rounded-xl p-2 shadow-sm bg-white">
-                                                    <img src="hinh_anh/tiengviet/intro_221.png" alt="Cuộc sống miền biển" class="w-full h-auto rounded-lg object-cover">
+                                                    <img src="hinh_anh/intro_221.png" alt="Cuộc sống miền biển" class="w-full h-auto rounded-lg object-cover">
                                                 </div>
                                             </div>
                                         </div>
@@ -51,7 +51,7 @@ export const lesson_221_doan_thuyen_danh_ca = {
                                         <div class="space-y-8">
                                             <!-- Image -->
                                             <div class="glass-card p-3 rounded-[24px] shadow-md rotate-1 hover:rotate-0 transition-transform duration-500">
-                                                <img src="hinh_anh/tiengviet/doanthuyendanhca.png" alt="Minh họa" class="w-full h-auto rounded-xl object-cover shadow-sm">
+                                                <img src="hinh_anh/doanthuyendanhca.png" alt="Minh họa" class="w-full h-auto rounded-xl object-cover shadow-sm">
                                             </div>
 
                                             <!-- Stanza 5 -->

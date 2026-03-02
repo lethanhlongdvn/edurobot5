@@ -34,19 +34,19 @@ export const lesson_232_viet = {
 
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                                     <div class="group relative overflow-hidden rounded-3xl shadow-lg border-4 border-white transition-all hover:scale-105">
-                                        <img src="hinh_anh/tiengviet/viet232_topic1.png" alt="Lễ hội" class="w-full h-48 object-cover">
+                                        <img src="hinh_anh/viet232_topic1.png" alt="Lễ hội" class="w-full h-48 object-cover">
                                         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                                             <p class="text-white font-black text-center">Lễ hội quê hương</p>
                                         </div>
                                     </div>
                                     <div class="group relative overflow-hidden rounded-3xl shadow-lg border-4 border-white transition-all hover:scale-105">
-                                        <img src="hinh_anh/tiengviet/viet232_topic2.png" alt="Ngoại khóa" class="w-full h-48 object-cover">
+                                        <img src="hinh_anh/viet232_topic2.png" alt="Ngoại khóa" class="w-full h-48 object-cover">
                                         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                                             <p class="text-white font-black text-center">Hoạt động ngoại khóa</p>
                                         </div>
                                     </div>
                                     <div class="group relative overflow-hidden rounded-3xl shadow-lg border-4 border-white transition-all hover:scale-105">
-                                        <img src="hinh_anh/tiengviet/viet232_topic3.png" alt="Gói bánh" class="w-full h-48 object-cover">
+                                        <img src="hinh_anh/viet232_topic3.png" alt="Gói bánh" class="w-full h-48 object-cover">
                                         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                                             <p class="text-white font-black text-center">Gói bánh ngày Tết</p>
                                         </div>

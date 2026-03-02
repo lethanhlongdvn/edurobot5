@@ -28,7 +28,7 @@ export const lesson_241_huong_com_mua_thu = {
                                                     </p>
                                                 </div>
                                                 <div class="w-full md:w-1/2 flex justify-center">
-                                                    <img src="hinh_anh/tiengviet/241k1.png" alt="Khổ 1" class="w-[70%] h-auto rounded-2xl shadow-lg object-cover">
+                                                    <img src="hinh_anh/241k1.png" alt="Khổ 1" class="w-[70%] h-auto rounded-2xl shadow-lg object-cover">
                                                 </div>
                                             </div>
 
@@ -43,7 +43,7 @@ export const lesson_241_huong_com_mua_thu = {
                                                     </p>
                                                 </div>
                                                 <div class="w-full md:w-1/2 flex justify-center">
-                                                    <img src="hinh_anh/tiengviet/241k2.png" alt="Khổ 2" class="w-[70%] h-auto rounded-2xl shadow-lg object-cover">
+                                                    <img src="hinh_anh/241k2.png" alt="Khổ 2" class="w-[70%] h-auto rounded-2xl shadow-lg object-cover">
                                                 </div>
                                             </div>
 
@@ -58,7 +58,7 @@ export const lesson_241_huong_com_mua_thu = {
                                                     </p>
                                                 </div>
                                                 <div class="w-full md:w-1/2 flex justify-center">
-                                                    <img src="hinh_anh/tiengviet/241k3.png" alt="Khổ 3" class="w-[70%] h-auto rounded-2xl shadow-lg object-cover">
+                                                    <img src="hinh_anh/241k3.png" alt="Khổ 3" class="w-[70%] h-auto rounded-2xl shadow-lg object-cover">
                                                 </div>
                                             </div>
 
@@ -73,7 +73,7 @@ export const lesson_241_huong_com_mua_thu = {
                                                     </p>
                                                 </div>
                                                 <div class="w-full md:w-1/2 flex justify-center">
-                                                    <img src="hinh_anh/tiengviet/241k4.png" alt="Khổ 4" class="w-[70%] h-auto rounded-2xl shadow-lg object-cover">
+                                                    <img src="hinh_anh/241k4.png" alt="Khổ 4" class="w-[70%] h-auto rounded-2xl shadow-lg object-cover">
                                                 </div>
                                             </div>
 
@@ -89,7 +89,7 @@ export const lesson_241_huong_com_mua_thu = {
                                                     <p class="text-right italic font-bold text-gray-600 mt-6">(Bảo Ngọc)</p>
                                                 </div>
                                                 <div class="w-full md:w-1/2 flex justify-center">
-                                                    <img src="hinh_anh/tiengviet/241k5.png" alt="Khổ 5" class="w-[70%] h-auto rounded-2xl shadow-lg object-cover">
+                                                    <img src="hinh_anh/241k5.png" alt="Khổ 5" class="w-[70%] h-auto rounded-2xl shadow-lg object-cover">
                                                 </div>
                                             </div>
                                         </div>

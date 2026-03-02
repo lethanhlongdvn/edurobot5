@@ -55,15 +55,15 @@ export const lesson_242_nvn = {
 
                             <div class="example-grid">
                                 <div class="example-item">
-                                    <img src="hinh_anh/tiengviet/thac_ban_gioc.png" class="example-img" alt="Thác Bản Giốc">
+                                    <img src="hinh_anh/thac_ban_gioc.png" class="example-img" alt="Thác Bản Giốc">
                                     <div class="example-caption">Thác Bản Giốc (Cao Bằng)</div>
                                 </div>
                                 <div class="example-item">
-                                    <img src="hinh_anh/tiengviet/cau_the_huc.png" class="example-img" alt="Cầu Thê Húc">
+                                    <img src="hinh_anh/cau_the_huc.png" class="example-img" alt="Cầu Thê Húc">
                                     <div class="example-caption">Cầu Thê Húc - đền Ngọc Sơn (Hà Nội)</div>
                                 </div>
                                 <div class="example-item">
-                                    <img src="hinh_anh/tiengviet/song_huong_hue.png" class="example-img" alt="Sông Hương">
+                                    <img src="hinh_anh/song_huong_hue.png" class="example-img" alt="Sông Hương">
                                     <div class="example-caption">Sông Hương (Huế)</div>
                                 </div>
                             </div>

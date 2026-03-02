@@ -114,7 +114,7 @@ export const lesson_261_ltvc = {
                                     <div class="bg-white/90 rounded-[40px] p-8 md:p-12 border-2 border-green-200 shadow-xl relative overflow-hidden">
                                         <!-- Image embedded -->
                                         <div class="absolute right-0 bottom-0 opacity-20 md:opacity-100 md:relative md:w-1/3 md:float-right md:ml-6 mb-4 z-0 pointer-events-none">
-                                            <img src="hinh_anh/tiengviet/caykhe.png" alt="Truyện Cây Khế" class="w-full h-auto drop-shadow-xl" onerror="this.style.display='none'">
+                                            <img src="hinh_anh/caykhe.png" alt="Truyện Cây Khế" class="w-full h-auto drop-shadow-xl" onerror="this.style.display='none'">
                                         </div>
 
                                         <div class="flex flex-wrap gap-3 mb-8 justify-center items-center relative z-10">

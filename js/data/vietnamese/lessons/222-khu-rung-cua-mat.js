@@ -20,7 +20,7 @@ export const lesson_222_khu_rung_cua_mat = {
                                         <div class="relative z-10">
                                             <!-- Image Floated Right (TV Optimized) -->
                                             <div class="float-none md:float-right w-full md:w-[35%] md:ml-8 mb-6 md:mb-2 text-center md:text-right">
-                                                <img src="hinh_anh/tiengviet/khurungcuamat.png" alt="Minh họa" class="inline-block w-auto max-h-[400px] rounded-3xl object-contain shadow-lg border-4 border-white/50 transform hover:scale-[1.02] transition-transform duration-500">
+                                                <img src="hinh_anh/khurungcuamat.png" alt="Minh họa" class="inline-block w-auto max-h-[400px] rounded-3xl object-contain shadow-lg border-4 border-white/50 transform hover:scale-[1.02] transition-transform duration-500">
                                             </div>
 
                                             <!-- Content -->

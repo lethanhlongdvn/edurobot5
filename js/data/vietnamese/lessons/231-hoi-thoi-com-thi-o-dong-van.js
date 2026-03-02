@@ -20,7 +20,7 @@ export const lesson_231_hoi_thoi_com_thi_o_dong_van = {
                                         <div class="relative z-10">
                                             <!-- Image Floated Right (TV Optimized) -->
                                             <div class="float-none md:float-right w-full md:w-[35%] md:ml-8 mb-6 md:mb-2 text-center md:text-right">
-                                                <img src="hinh_anh/tiengviet/hoithoicomthi.png" alt="Minh họa" class="inline-block w-auto max-h-[400px] rounded-3xl object-contain shadow-lg border-4 border-white/50 transform hover:scale-[1.02] transition-transform duration-500">
+                                                <img src="hinh_anh/hoithoicomthi.png" alt="Minh họa" class="inline-block w-auto max-h-[400px] rounded-3xl object-contain shadow-lg border-4 border-white/50 transform hover:scale-[1.02] transition-transform duration-500">
                                             </div>
 
                                             <!-- Content -->
@@ -124,172 +124,172 @@ export const lesson_231_hoi_thoi_com_thi_o_dong_van = {
 
 `,
     "quizPool": [
-    {
-        "question": "Hội thổi cơm thi ở làng Đồng Vân bắt nguồn từ sự kiện lịch sử nào?",
-        "options": [
-            "Lễ hội mừng lúa mới của người nông dân",
-            "Các cuộc trẩy quân đánh giặc của người Việt cổ bên bờ sông Đáy xưa",
-            "Cuộc thi kén rể của vua Hùng",
-            "Lễ hội cầu mưa thuận gió hòa"
-        ],
-        "answer": 1,
-        "level": 1
-    },
-    {
-        "question": "Thử thách đầu tiên để lấy lửa nấu cơm trong cuộc thi là gì?",
-        "options": [
-            "Chạy thi đi lấy lửa từ đình làng",
-            "Dùng đá đánh lửa",
-            "Leo lên cây chuối bôi mỡ bóng nhẫy để lấy nén hương",
-            "Giải câu đố để nhận đuốc"
-        ],
-        "answer": 2,
-        "level": 1
-    },
-    {
-        "question": "Hình ảnh \"nhanh như sóc, thoăn thoắt leo lên\" dùng để miêu tả hành động của ai?",
-        "options": [
-            "Những người đi xem hội",
-            "Ban giám khảo cuộc thi",
-            "Bốn thanh niên của bốn đội leo cây chuối lấy lửa",
-            "Những người đang vo gạo"
-        ],
-        "answer": 2,
-        "level": 1
-    },
-    {
-        "question": "Dụng cụ nấu cơm trong hội thi được thiết kế đặc biệt như thế nào?",
-        "options": [
-            "Nồi cơm được đặt trên kiềng ba chân cố định",
-            "Cần tre cắm vào dây lưng, uốn cong hình cánh cung, đầu treo cái nồi nhỏ",
-            "Nồi cơm được đội trên đầu người nấu",
-            "Nồi cơm được treo trên một cành cây cao"
-        ],
-        "answer": 1,
-        "level": 1
-    },
-    {
-        "question": "Trong quá trình nấu cơm, người dự thi di chuyển như thế nào?",
-        "options": [
-            "Đứng yên một chỗ để giữ lửa",
-            "Ngồi xổm để chắn gió",
-            "Vừa thổi cơm vừa đan xen nhau uốn lượn trên sân đình",
-            "Chạy vòng quanh sân đình"
-        ],
-        "answer": 2,
-        "level": 1
-    },
-    {
-        "question": "Ngoài việc lấy lửa và nấu cơm, các đội thi còn phải thực hiện những công việc nào khác xen kẽ?",
-        "options": [
-            "Múa hát và đánh trống",
-            "Vót tre thành đũa, giã thóc, giần sàng gạo, lấy nước",
-            "Đi chợ mua thức ăn và bày biện mâm cỗ",
-            "May quần áo và trang trí trại"
-        ],
-        "answer": 1,
-        "level": 1
-    },
-    {
-        "question": "Sự phối hợp giữa các thành viên trong đội thi được nhận xét như thế nào?",
-        "options": [
-            "Rời rạc, thiếu thống nhất",
-            "Căng thẳng, hay tranh cãi",
-            "Phối hợp với nhau nhịp nhàng, chủ động và rất khéo léo",
-            "Chậm chạp nhưng chắc chắn"
-        ],
-        "answer": 2,
-        "level": 1
-    },
-    {
-        "question": "Người nấu cơm giữ lửa bằng cách nào khi di chuyển?",
-        "options": [
-            "Nhờ người khác cầm hộ đuốc",
-            "Đặt đuốc xuống đất",
-            "Tay giữ cần, tay cầm đuốc đung đưa cho ánh lửa bập bùng",
-            "Dùng đèn dầu thay cho đuốc"
-        ],
-        "answer": 2,
-        "level": 1
-    },
-    {
-        "question": "Thời gian dành cho việc thổi cơm là bao lâu?",
-        "options": [
-            "Độ một giờ rưỡi",
-            "Nửa ngày",
-            "Ba mươi phút",
-            "Đến khi trời tối"
-        ],
-        "answer": 0,
-        "level": 1
-    },
-    {
-        "question": "Ban giám khảo chấm điểm nồi cơm dựa trên những tiêu chí nào?",
-        "options": [
-            "Cơm chín đều, có nhiều cháy giòn",
-            "Cơm có màu sắc đẹp mắt",
-            "Cơm trắng, dẻo và không có cháy",
-            "Cơm nấu được số lượng nhiều nhất"
-        ],
-        "answer": 2,
-        "level": 1
-    },
-    {
-        "question": "Để đảm bảo công bằng, các nồi cơm trước khi chấm được xử lý ra sao?",
-        "options": [
-            "Giấu tên đội thi",
-            "Đánh số để giữ bí mật",
-            "Đảo lộn vị trí các nồi",
-            "Cho tất cả cơm vào một nồi lớn"
-        ],
-        "answer": 1,
-        "level": 1
-    },
-    {
-        "question": "Việc giật giải trong cuộc thi có ý nghĩa gì đối với dân làng?",
-        "options": [
-            "Nhận được nhiều tiền thưởng",
-            "Được miễn làm việc đồng áng",
-            "Là niềm tự hào khó có gì sánh nổi",
-            "Được làm trưởng làng"
-        ],
-        "answer": 2,
-        "level": 1
-    },
-    {
-        "question": "Không khí của hội thi được miêu tả qua chi tiết nào?",
-        "options": [
-            "Mọi người im lặng theo dõi",
-            "Sự cổ vũ nồng nhiệt của người xem hội, tiếng trống hiệu",
-            "Tiếng cãi vã ồn òa",
-            "Mọi người lo lắng, hồi hộp không dám nhìn"
-        ],
-        "answer": 1,
-        "level": 1
-    },
-    {
-        "question": "Tác giả muốn ca ngợi điều gì qua bài đọc này?",
-        "options": [
-            "Ca ngợi sức khỏe phi thường của thanh niên trai tráng",
-            "Ca ngợi nét đẹp văn hóa cổ truyền và sự tài hoa, khéo léo của người dân",
-            "Ca ngợi sự giàu có của làng Đồng Vân",
-            "Ca ngợi kĩ thuật trồng lúa nước"
-        ],
-        "answer": 1,
-        "level": 1
-    },
-    {
-        "question": "Qua bài đọc, em hiểu ý nghĩa sâu xa của các lễ hội dân gian là gì?",
-        "options": [
-            "Chỉ để vui chơi giải trí",
-            "Để tụ tập ăn uống linh đình",
-            "Giúp kết nối quá khứ với hiện tại, giữ gìn và tôn vinh bản sắc dân tộc",
-            "Để thi thố xem ai giỏi nhất làng"
-        ],
-        "answer": 2,
-        "level": 1
-    }
-]
+        {
+            "question": "Hội thổi cơm thi ở làng Đồng Vân bắt nguồn từ sự kiện lịch sử nào?",
+            "options": [
+                "Lễ hội mừng lúa mới của người nông dân",
+                "Các cuộc trẩy quân đánh giặc của người Việt cổ bên bờ sông Đáy xưa",
+                "Cuộc thi kén rể của vua Hùng",
+                "Lễ hội cầu mưa thuận gió hòa"
+            ],
+            "answer": 1,
+            "level": 1
+        },
+        {
+            "question": "Thử thách đầu tiên để lấy lửa nấu cơm trong cuộc thi là gì?",
+            "options": [
+                "Chạy thi đi lấy lửa từ đình làng",
+                "Dùng đá đánh lửa",
+                "Leo lên cây chuối bôi mỡ bóng nhẫy để lấy nén hương",
+                "Giải câu đố để nhận đuốc"
+            ],
+            "answer": 2,
+            "level": 1
+        },
+        {
+            "question": "Hình ảnh \"nhanh như sóc, thoăn thoắt leo lên\" dùng để miêu tả hành động của ai?",
+            "options": [
+                "Những người đi xem hội",
+                "Ban giám khảo cuộc thi",
+                "Bốn thanh niên của bốn đội leo cây chuối lấy lửa",
+                "Những người đang vo gạo"
+            ],
+            "answer": 2,
+            "level": 1
+        },
+        {
+            "question": "Dụng cụ nấu cơm trong hội thi được thiết kế đặc biệt như thế nào?",
+            "options": [
+                "Nồi cơm được đặt trên kiềng ba chân cố định",
+                "Cần tre cắm vào dây lưng, uốn cong hình cánh cung, đầu treo cái nồi nhỏ",
+                "Nồi cơm được đội trên đầu người nấu",
+                "Nồi cơm được treo trên một cành cây cao"
+            ],
+            "answer": 1,
+            "level": 1
+        },
+        {
+            "question": "Trong quá trình nấu cơm, người dự thi di chuyển như thế nào?",
+            "options": [
+                "Đứng yên một chỗ để giữ lửa",
+                "Ngồi xổm để chắn gió",
+                "Vừa thổi cơm vừa đan xen nhau uốn lượn trên sân đình",
+                "Chạy vòng quanh sân đình"
+            ],
+            "answer": 2,
+            "level": 1
+        },
+        {
+            "question": "Ngoài việc lấy lửa và nấu cơm, các đội thi còn phải thực hiện những công việc nào khác xen kẽ?",
+            "options": [
+                "Múa hát và đánh trống",
+                "Vót tre thành đũa, giã thóc, giần sàng gạo, lấy nước",
+                "Đi chợ mua thức ăn và bày biện mâm cỗ",
+                "May quần áo và trang trí trại"
+            ],
+            "answer": 1,
+            "level": 1
+        },
+        {
+            "question": "Sự phối hợp giữa các thành viên trong đội thi được nhận xét như thế nào?",
+            "options": [
+                "Rời rạc, thiếu thống nhất",
+                "Căng thẳng, hay tranh cãi",
+                "Phối hợp với nhau nhịp nhàng, chủ động và rất khéo léo",
+                "Chậm chạp nhưng chắc chắn"
+            ],
+            "answer": 2,
+            "level": 1
+        },
+        {
+            "question": "Người nấu cơm giữ lửa bằng cách nào khi di chuyển?",
+            "options": [
+                "Nhờ người khác cầm hộ đuốc",
+                "Đặt đuốc xuống đất",
+                "Tay giữ cần, tay cầm đuốc đung đưa cho ánh lửa bập bùng",
+                "Dùng đèn dầu thay cho đuốc"
+            ],
+            "answer": 2,
+            "level": 1
+        },
+        {
+            "question": "Thời gian dành cho việc thổi cơm là bao lâu?",
+            "options": [
+                "Độ một giờ rưỡi",
+                "Nửa ngày",
+                "Ba mươi phút",
+                "Đến khi trời tối"
+            ],
+            "answer": 0,
+            "level": 1
+        },
+        {
+            "question": "Ban giám khảo chấm điểm nồi cơm dựa trên những tiêu chí nào?",
+            "options": [
+                "Cơm chín đều, có nhiều cháy giòn",
+                "Cơm có màu sắc đẹp mắt",
+                "Cơm trắng, dẻo và không có cháy",
+                "Cơm nấu được số lượng nhiều nhất"
+            ],
+            "answer": 2,
+            "level": 1
+        },
+        {
+            "question": "Để đảm bảo công bằng, các nồi cơm trước khi chấm được xử lý ra sao?",
+            "options": [
+                "Giấu tên đội thi",
+                "Đánh số để giữ bí mật",
+                "Đảo lộn vị trí các nồi",
+                "Cho tất cả cơm vào một nồi lớn"
+            ],
+            "answer": 1,
+            "level": 1
+        },
+        {
+            "question": "Việc giật giải trong cuộc thi có ý nghĩa gì đối với dân làng?",
+            "options": [
+                "Nhận được nhiều tiền thưởng",
+                "Được miễn làm việc đồng áng",
+                "Là niềm tự hào khó có gì sánh nổi",
+                "Được làm trưởng làng"
+            ],
+            "answer": 2,
+            "level": 1
+        },
+        {
+            "question": "Không khí của hội thi được miêu tả qua chi tiết nào?",
+            "options": [
+                "Mọi người im lặng theo dõi",
+                "Sự cổ vũ nồng nhiệt của người xem hội, tiếng trống hiệu",
+                "Tiếng cãi vã ồn òa",
+                "Mọi người lo lắng, hồi hộp không dám nhìn"
+            ],
+            "answer": 1,
+            "level": 1
+        },
+        {
+            "question": "Tác giả muốn ca ngợi điều gì qua bài đọc này?",
+            "options": [
+                "Ca ngợi sức khỏe phi thường của thanh niên trai tráng",
+                "Ca ngợi nét đẹp văn hóa cổ truyền và sự tài hoa, khéo léo của người dân",
+                "Ca ngợi sự giàu có của làng Đồng Vân",
+                "Ca ngợi kĩ thuật trồng lúa nước"
+            ],
+            "answer": 1,
+            "level": 1
+        },
+        {
+            "question": "Qua bài đọc, em hiểu ý nghĩa sâu xa của các lễ hội dân gian là gì?",
+            "options": [
+                "Chỉ để vui chơi giải trí",
+                "Để tụ tập ăn uống linh đình",
+                "Giúp kết nối quá khứ với hiện tại, giữ gìn và tôn vinh bản sắc dân tộc",
+                "Để thi thố xem ai giỏi nhất làng"
+            ],
+            "answer": 2,
+            "level": 1
+        }
+    ]
 };
 
 if (!lesson_231_hoi_thoi_com_thi_o_dong_van.period) lesson_231_hoi_thoi_com_thi_o_dong_van.period = '155';

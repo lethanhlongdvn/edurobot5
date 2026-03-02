@@ -51,7 +51,7 @@ export const lesson_331_mot_nguoi_hung_tham_lang = {
                 <aside class="w-full lg:w-[30%]">
                     <div class="glass-card rounded-[40px] p-6 sticky top-28 shadow-xl border-amber-100/50">
                         <div class="mb-6 -mt-2">
-                            <img src="hinh_anh/tiengviet/mot-nguoi-hung-tham-lang.png" alt="Một người hùng thầm lặng" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
+                            <img src="hinh_anh/mot-nguoi-hung-tham-lang.png" alt="Một người hùng thầm lặng" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
                         </div>
 
                         <div class="flex items-center space-x-4 mb-8">

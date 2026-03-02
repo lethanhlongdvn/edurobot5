@@ -54,7 +54,7 @@ export const lesson_341_dien_thoai_di_dong = {
                     <div class="glass-card rounded-[40px] p-6 sticky top-28 shadow-xl border-amber-100/50">
                         <!-- Ảnh minh họa -->
                         <div class="mb-6 -mt-2">
-                            <img src="hinh_anh/tiengviet/dien_thoai_di_dong.png" alt="Minh họa Điện thoại di động" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
+                            <img src="hinh_anh/dien_thoai_di_dong.png" alt="Minh họa Điện thoại di động" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
                         </div>
 
                         <div class="flex items-center space-x-4 mb-8">

@@ -46,7 +46,7 @@ export const lesson_262_ve_tham_dat_mui = {
                                 </section>
                                 <aside class="w-full lg:w-[25%]">
                                     <div class="glass-card rounded-[40px] p-6 sticky top-28 shadow-xl">
-                                        <div class="mb-6"><img src="hinh_anh/tiengviet/datmui.png" alt="Minh họa" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl"></div>
+                                        <div class="mb-6"><img src="hinh_anh/datmui.png" alt="Minh họa" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl"></div>
                                         <div class="flex items-center space-x-4 mb-8">
                                             <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-amber-200">
                                                 <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>

@@ -179,11 +179,11 @@ export const lesson_241_ltvc = {
                                     </div>
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                                         <div class="text-center">
-                                            <img src="hinh_anh/tiengviet/den_hung_phu_tho.png" alt="Đền Hùng" class="w-full h-48 object-cover rounded-2xl shadow-md mb-2">
+                                            <img src="hinh_anh/den_hung_phu_tho.png" alt="Đền Hùng" class="w-full h-48 object-cover rounded-2xl shadow-md mb-2">
                                             <p class="font-bold text-gray-700 serif-font text-xl">Đền Hùng (Phú Thọ)</p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="hinh_anh/tiengviet/da_lat_lam_dong.png" alt="Đà Lạt" class="w-full h-48 object-cover rounded-2xl shadow-md mb-2">
+                                            <img src="hinh_anh/da_lat_lam_dong.png" alt="Đà Lạt" class="w-full h-48 object-cover rounded-2xl shadow-md mb-2">
                                             <p class="font-bold text-gray-700 serif-font text-xl">Đà Lạt (Lâm Đồng)</p>
                                         </div>
                                     </div>

@@ -50,7 +50,7 @@ export const lesson_322_nhung_con_hac_giay = {
                 <aside class="w-full lg:w-[30%]">
                     <div class="glass-card rounded-[40px] p-6 sticky top-28 shadow-xl border-amber-100/50">
                         <div class="mb-6 -mt-2">
-                            <img src="hinh_anh/tiengviet/nhung-con-hac-giay.png" alt="Những con hạc giấy" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
+                            <img src="hinh_anh/nhung-con-hac-giay.png" alt="Những con hạc giấy" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
                         </div>
 
                         <div class="flex items-center space-x-4 mb-8">

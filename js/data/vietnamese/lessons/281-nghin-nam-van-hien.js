@@ -55,7 +55,7 @@ export const lesson_281_nghin_nam_van_hien = {
                                 <aside class="w-full lg:w-[30%]"> 
                                     <div class="glass-card rounded-[40px] p-6 sticky top-28 shadow-xl">
                                         <div class="mb-6">
-                                            <img src="hinh_anh/tiengviet/nghinnamvanhien.png" alt="Minh họa" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl">
+                                            <img src="hinh_anh/nghinnamvanhien.png" alt="Minh họa" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl">
                                         </div>
                                         <div class="flex items-center space-x-4 mb-8">
                                             <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-amber-200">

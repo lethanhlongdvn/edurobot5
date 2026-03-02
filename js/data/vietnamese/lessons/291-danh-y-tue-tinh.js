@@ -24,11 +24,11 @@ export const lesson_291_danh_y_tue_tinh = {
 
                             <div class="serif-font text-gray-800 text-lg leading-relaxed relative reading-content">
                                 <div class="mb-8">
-                                    <img src="hinh_anh/tiengviet/2911-danhytuetinh.jpg" alt="Danh y Tuệ Tĩnh và học trò" class="w-full h-auto rounded-3xl shadow-lg border-4 border-white">
+                                    <img src="hinh_anh/2911-danhytuetinh.jpg" alt="Danh y Tuệ Tĩnh và học trò" class="w-full h-auto rounded-3xl shadow-lg border-4 border-white">
                                 </div>
 
                                 <div class="mb-8">
-                                    <img src="hinh_anh/tiengviet/2912-danhytuetinh.jpg" alt="Vườn thuốc Nam" class="w-full h-auto rounded-3xl shadow-lg border-4 border-white">
+                                    <img src="hinh_anh/2912-danhytuetinh.jpg" alt="Vườn thuốc Nam" class="w-full h-auto rounded-3xl shadow-lg border-4 border-white">
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@ export const lesson_291_danh_y_tue_tinh = {
                     <div class="glass-card rounded-[40px] p-6 sticky top-28 shadow-xl border-amber-100/50">
                         <!-- Ảnh minh họa -->
                         <div class="mb-6 -mt-2">
-                            <img src="hinh_anh/tiengviet/291-tue-tinh-digital.png" alt="Danh y Tuệ Tĩnh" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
+                            <img src="hinh_anh/291-tue-tinh-digital.png" alt="Danh y Tuệ Tĩnh" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
                         </div>
 
                         <div class="flex items-center space-x-4 mb-8">

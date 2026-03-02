@@ -30,7 +30,7 @@ export const lesson_252_duong_que_dong_thap_muoi = {
                                                 <!-- CỘT 2: Ảnh + 1 khổ thơ cuối -->
                                                 <div class="space-y-10">
                                                     <div class="text-center">
-                                                        <img src="hinh_anh/tiengviet/dong-thap-muoi.png" alt="Minh họa" class="inline-block w-full rounded-3xl object-contain shadow-lg border-8 border-white transform hover:rotate-1 transition-transform duration-500">
+                                                        <img src="hinh_anh/dong-thap-muoi.png" alt="Minh họa" class="inline-block w-full rounded-3xl object-contain shadow-lg border-8 border-white transform hover:rotate-1 transition-transform duration-500">
                                                     </div>
                                                     <div class="serif-font text-gray-800 text-2xl md:text-3xl leading-relaxed space-y-10">
                                                         <p>Về xứ mười tầng tháp<br>Leo cầu trăm đốt tre<br>Ông đứng như bụt hiện<br>Chờ cháu cuối đường quê.</p>

@@ -48,7 +48,7 @@ export const lesson_342_thanh_pho_thong_minh_mat_xda = {
                 <aside class="w-full lg:w-[30%]">
                     <div class="glass-card rounded-[40px] p-6 sticky top-28 shadow-xl border-amber-100/50">
                         <div class="mb-6 -mt-2">
-                            <img src="hinh_anh/tiengviet/342-mat-xda.png" alt="Minh họa Mát-xđa" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
+                            <img src="hinh_anh/342-mat-xda.png" alt="Minh họa Mát-xđa" class="w-full h-auto rounded-3xl object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="flex items-center space-x-4 mb-8">
                             <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-amber-200">
