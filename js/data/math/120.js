@@ -10,8 +10,8 @@ export const lesson120 = {
             <div class="bg-gradient-to-br from-indigo-600 to-blue-700 p-6 rounded-3xl text-white shadow-xl flex items-center gap-6">
                 <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md border-2 border-white/30 shrink-0 text-4xl">🎯</div>
                 <div>
-                    <h3 class="text-2xl md:text-4xl font-black uppercase tracking-tight mb-2">Mục tiêu bài học</h3>
-                    <ul class="list-disc list-inside font-bold text-xl md:text-3xl opacity-95 space-y-2">
+                    <h3 class="text-xl md:text-2xl font-black uppercase tracking-tight mb-1">Mục tiêu bài học</h3>
+                    <ul class="list-disc list-inside font-bold text-lg md:text-2xl opacity-95 space-y-1">
                         <li>Tính Diện tích xung quanh (Sxq) hình lập phương.</li>
                         <li>Tính Diện tích toàn phần (Stp) hình lập phương.</li>
                     </ul>
@@ -27,14 +27,14 @@ export const lesson120 = {
                             <span class="bg-amber-500 text-white w-10 h-10 rounded-xl flex items-center justify-center font-black text-2xl">a</span>
                             <h4 class="text-2xl md:text-4xl font-black text-amber-700 uppercase">Dán giấy cho thùng gỗ</h4>
                         </div>
-                        <p class="text-2xl md:text-4xl font-bold leading-tight text-gray-700">
+                        <p class="text-xl md:text-2xl font-bold leading-tight text-gray-700">
                             Việt dán giấy màu cho 4 mặt <span class="text-amber-600 font-black">xung quanh</span> của thùng gỗ cạnh 30 cm.
                         </p>
                         <div class="bg-amber-50 p-4 rounded-2xl border-l-8 border-amber-400">
-                            <p class="font-black text-amber-900 text-xl md:text-3xl leading-snug italic">"Sxq hình lập phương bằng diện tích một mặt nhân với 4."</p>
+                            <p class="font-black text-amber-900 text-lg md:text-xl leading-snug italic">"Sxq hình lập phương bằng diện tích một mặt nhân với 4."</p>
                         </div>
-                        <div class="bg-indigo-600 p-6 rounded-3xl text-white shadow-lg text-center">
-                            <p class="text-5xl md:text-7xl font-black">S<sub>xq</sub> = (a × a) × 4</p>
+                        <div class="bg-indigo-600 p-4 rounded-2xl text-white shadow-lg text-center">
+                            <p class="text-3xl md:text-5xl font-black">S<sub>xq</sub> = (a × a) × 4</p>
                         </div>
                     </div>
                     <div class="flex justify-center">
@@ -55,24 +55,24 @@ export const lesson120 = {
                             <span class="bg-purple-500 text-white w-10 h-10 rounded-xl flex items-center justify-center font-black text-2xl">b</span>
                             <h4 class="text-2xl md:text-4xl font-black text-purple-700 uppercase">Vỏ gối hình lập phương</h4>
                         </div>
-                        <p class="text-2xl md:text-4xl font-bold leading-tight text-gray-700">
+                        <p class="text-xl md:text-2xl font-bold leading-tight text-gray-700">
                             Diện tích vải để may <span class="text-purple-600 font-black">tất cả 6 mặt</span> của gối cạnh 30 cm.
                         </p>
                         <div class="bg-purple-50 p-4 rounded-2xl border-l-8 border-purple-400">
-                            <p class="font-black text-purple-900 text-xl md:text-3xl leading-snug italic">"Stp hình lập phương bằng diện tích một mặt nhân với 6."</p>
+                            <p class="font-black text-purple-900 text-lg md:text-xl leading-snug italic">"Stp hình lập phương bằng diện tích một mặt nhân với 6."</p>
                         </div>
-                        <div class="bg-purple-600 p-6 rounded-3xl text-white shadow-lg text-center">
-                            <p class="text-5xl md:text-7xl font-black">S<sub>tp</sub> = (a × a) × 6</p>
+                        <div class="bg-purple-600 p-4 rounded-2xl text-white shadow-lg text-center">
+                            <p class="text-3xl md:text-5xl font-black">S<sub>tp</sub> = (a × a) × 6</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- 💡 Ghi nhớ -->
-            <div class="bg-emerald-50 p-4 rounded-2xl border-2 border-emerald-100 shadow-inner flex items-center gap-4">
-                <div class="text-4xl">💡</div>
-                <div class="text-xl font-black text-emerald-900 leading-tight">
-                    Hình lập phương có 6 mặt là các hình vuông <span class="text-emerald-600 underline">bằng nhau</span>.
+            <div class="bg-emerald-50 p-6 rounded-[32px] border-4 border-emerald-200 shadow-xl flex items-center gap-6 animate-pulse-subtle">
+                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-5xl shadow-inner shrink-0">💡</div>
+                <div class="text-2xl md:text-4xl font-black text-emerald-900 leading-tight">
+                    Hình lập phương có 6 mặt là các hình vuông <span class="text-emerald-600 underline decoration-4 underline-offset-8">bằng nhau</span>.
                 </div>
             </div>
         </div>
@@ -80,11 +80,11 @@ export const lesson120 = {
     "practice": `
         <div class="space-y-4 animate-fade-in">
             <!-- Bài tập 1 -->
-            <div id="box-120-1" class="bg-white p-6 rounded-3xl border border-gray-100 shadow-xl relative overflow-hidden">
+            <div id="box-120-1" class="bg-white p-4 rounded-2xl border border-gray-100 shadow-xl relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-indigo-50 rounded-bl-full -z-0 opacity-40"></div>
                 <div class="relative z-10">
-                    <p class="font-black text-3xl md:text-5xl mb-6 text-indigo-700 flex items-center gap-4">
-                        <span class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black shadow-lg shadow-indigo-200">1</span>
+                    <p class="font-black text-2xl md:text-3xl mb-4 text-indigo-700 flex items-center gap-4">
+                        <span class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black shadow-lg shadow-indigo-200">1</span>
                         Tính diện tích xung quanh và toàn phần:
                     </p>
 
@@ -139,22 +139,22 @@ export const lesson120 = {
             </div>
 
             <!-- Bài tập 2 -->
-            <div id="box-120-2" class="bg-white p-6 rounded-3xl border border-gray-100 shadow-xl relative overflow-hidden">
+            <div id="box-120-2" class="bg-white p-4 rounded-2xl border border-gray-100 shadow-xl relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-24 h-24 bg-amber-50 rounded-br-full -z-0 opacity-40"></div>
                 <div class="relative z-10">
-                    <p class="font-black text-3xl md:text-5xl mb-6 text-amber-700 flex items-center gap-4">
-                        <span class="w-12 h-12 bg-amber-600 text-white rounded-xl flex items-center justify-center font-black shadow-lg shadow-amber-200">2</span>
+                    <p class="font-black text-2xl md:text-3xl mb-4 text-amber-700 flex items-center gap-4">
+                        <span class="w-10 h-10 bg-amber-600 text-white rounded-xl flex items-center justify-center font-black shadow-lg shadow-amber-200">2</span>
                         Giải bài toán:
                     </p>
-                    <div class="bg-amber-50/50 p-6 rounded-3xl border-2 border-amber-100 mb-6">
+                    <div class="bg-amber-50/50 p-4 rounded-2xl border-2 border-amber-100 mb-4">
                         <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
                             <div class="lg:col-span-3 space-y-4">
-                                <p class="text-2xl md:text-4xl font-bold text-amber-900 leading-tight">
+                                <p class="text-xl md:text-2xl font-bold text-amber-900 leading-tight">
                                     Cửa hàng bảo quản bằng cách cuốn túi bóng <span class="text-amber-600 font-black">vừa đủ quanh chiếc bánh</span> hình lập phương cạnh <span class="text-amber-600 font-black underline">9 cm</span>. Tính diện tích túi bóng cần dùng.
                                 </p>
                             </div>
                             <div class="lg:col-span-2 flex justify-center">
-                                <img src="hinh_anh/toan/toan_tap_2/120-b2-cake.png" alt="Bánh" class="w-full max-w-[280px] h-auto rounded-[40px] shadow-2xl border-8 border-white mb-2">
+                                <img src="hinh_anh/toan/toan_tap_2/120-b2-cake.png" alt="Bánh" class="w-full max-w-[200px] h-auto rounded-[32px] shadow-2xl border-4 border-white mb-2">
                             </div>
                         </div>
                     </div>

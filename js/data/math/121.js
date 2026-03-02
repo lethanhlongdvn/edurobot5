@@ -9,43 +9,51 @@ export const lesson121 = {
             <!-- 🌟 Mục tiêu & Nhắc lại kiến thức -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Sxq -->
-                <div class="bg-gradient-to-br from-amber-400 to-orange-500 p-6 rounded-3xl shadow-xl">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-white/30 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-lg">
-                            <span class="text-3xl text-white font-black italic">S<sub>xq</sub></span>
+                <div class="bg-gradient-to-br from-amber-400 to-orange-500 p-4 rounded-2xl shadow-xl">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-12 h-12 bg-white/30 rounded-xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-lg">
+                            <span class="text-2xl text-white font-black italic">S<sub>xq</sub></span>
                         </div>
-                        <h3 class="text-2xl md:text-3xl font-black text-white italic tracking-tight">Diện tích xung quanh</h3>
+                        <h3 class="text-xl md:text-2xl font-black text-white italic tracking-tight">Diện tích xung quanh</h3>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-inner text-center">
-                        <p class="text-4xl md:text-6xl font-black text-orange-600">S<sub>xq</sub> = (a × a) × 4</p>
+                    <div class="bg-white p-4 rounded-xl shadow-inner text-center">
+                        <p class="text-3xl md:text-4xl font-black text-orange-600">S<sub>xq</sub> = (a × a) × 4</p>
                     </div>
                 </div>
 
                 <!-- Stp -->
-                <div class="bg-gradient-to-br from-purple-500 to-indigo-600 p-6 rounded-3xl shadow-xl">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-white/30 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-lg">
-                            <span class="text-3xl text-white font-black italic">S<sub>tp</sub></span>
+                <div class="bg-gradient-to-br from-purple-500 to-indigo-600 p-4 rounded-2xl shadow-xl">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-12 h-12 bg-white/30 rounded-xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-lg">
+                            <span class="text-2xl text-white font-black italic">S<sub>tp</sub></span>
                         </div>
-                        <h3 class="text-2xl md:text-3xl font-black text-white italic tracking-tight">Diện tích toàn phần</h3>
+                        <h3 class="text-xl md:text-2xl font-black text-white italic tracking-tight">Diện tích toàn phần</h3>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-inner text-center">
-                        <p class="text-4xl md:text-6xl font-black text-indigo-600">S<sub>tp</sub> = (a × a) × 6</p>
+                    <div class="bg-white p-4 rounded-xl shadow-inner text-center">
+                        <p class="text-3xl md:text-4xl font-black text-indigo-600">S<sub>tp</sub> = (a × a) × 6</p>
                     </div>
                 </div>
             </div>
 
+            <!-- 💡 Ghi nhớ nhanh -->
+            <div class="bg-emerald-50 p-4 rounded-3xl border-2 border-emerald-100 flex items-center gap-4">
+                <div class="text-3xl">💡</div>
+                <p class="text-xl md:text-3xl font-black text-emerald-900 leading-tight italic">
+                    Hình lập phương có 6 mặt là các hình vuông <span class="text-emerald-600 underline">bằng nhau</span>.
+                </p>
+            </div>
+
             <!-- 💡 Lưu ý quan trọng -->
-            <div class="bg-blue-50 p-6 rounded-3xl border-4 border-dashed border-blue-200">
-                <p class="text-blue-600 font-black text-xl uppercase mb-3 flex items-center gap-2">
+            <div class="bg-blue-50 p-6 rounded-[32px] border-4 border-dashed border-blue-200">
+                <p class="text-blue-600 font-black text-xl md:text-3xl uppercase mb-3 flex items-center gap-2">
                     <span>💡</span> LƯU Ý KHI GIẢI TOÁN
                 </p>
-                <ul class="space-y-3">
-                    <li class="flex items-start gap-3 text-2xl md:text-4xl font-bold text-blue-900 leading-tight">
-                        <span class="text-blue-500 text-3xl">•</span> Xác định đề bài yêu cầu tính bao nhiêu mặt.
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-4 text-2xl md:text-4xl font-bold text-blue-900 leading-snug">
+                        <span class="text-blue-500 text-4xl">•</span> Xác định đề bài yêu cầu tính bao nhiêu mặt (4 mặt, 5 mặt hay 6 mặt).
                     </li>
-                    <li class="flex items-start gap-3 text-2xl md:text-4xl font-bold text-blue-900 leading-tight">
-                        <span class="text-blue-500 text-3xl">•</span> VD: Hộp không nắp (5 mặt), Xung quanh (4 mặt).
+                    <li class="flex items-start gap-4 text-2xl md:text-4xl font-bold text-blue-900 leading-snug">
+                        <span class="text-blue-500 text-4xl">•</span> VD: Hộp không nắp (5 mặt), Diện tích xung quanh (4 mặt).
                     </li>
                 </ul>
             </div>
