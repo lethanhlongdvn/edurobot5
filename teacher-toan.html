@@ -116,11 +116,7 @@
                         <option value="">-- Tất cả Tiết --</option>
                     </select>
 
-                    <select id="type-filter" onchange="renderStats()"
-                        class="pl-4 pr-10 py-2 rounded-xl border-2 border-orange-100 focus:border-orange-500 outline-none font-bold text-gray-600 bg-white cursor-pointer transition-all text-sm min-w-[200px]">
-                        <option value="Luyện tập - Củng cố">Luyện tập - Củng cố</option>
-                        <option value="">Tất cả Thể loại</option>
-                    </select>
+
 
                     <!-- Lọc không cần nút Làm mới nữa vì đã có Realtime và onchange, nhưng giữ lại cho người dùng click nếu thích -->
                     <button onclick="renderStats()"
@@ -134,18 +130,18 @@
                 <table class="w-full text-left">
                     <thead>
                         <tr class="bg-gray-50/50">
-                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest">TT</th>
-                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest">Họ và tên</th>
-                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">Lớp
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">TT
                             </th>
-                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">
-                                Trường</th>
-                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">Điểm
-                            </th>
-                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">Thời
-                                gian</th>
-                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center">Số
-                                lần</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest cursor-pointer hover:text-orange-500"
+                                onclick="sortTableBy('studentName')">Học sinh ↕</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center cursor-pointer hover:text-orange-500"
+                                onclick="sortTableBy('luyenTapScore')">Luyện tập ↕</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center cursor-pointer hover:text-orange-500"
+                                onclick="sortTableBy('cungCoScore')">Củng cố ↕</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center cursor-pointer hover:text-orange-500"
+                                onclick="sortTableBy('avgScore')">Điểm TB ↕</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center cursor-pointer hover:text-orange-500"
+                                onclick="sortTableBy('totalTime')">Tổng t.gian ↕</th>
                         </tr>
                     </thead>
                     <tbody id="results-table" class="divide-y divide-gray-50"></tbody>
@@ -158,8 +154,10 @@
     <script src="js/firebase-logic.js"></script>
     <script>
         let allQuizData = [];
-        let rawDocs = [];
-        let unsubscribeMath = null;
+        let rawCungCo = [];
+        let rawLuyenTap = [];
+        let unsubscribeCungCo = null;
+        let unsubscribeLuyenTap = null;
 
         function checkLogin() {
             const pass = document.getElementById('teacher-password').value;
@@ -167,7 +165,7 @@
                 document.getElementById('login-screen').classList.add('hidden');
                 document.getElementById('dashboard').classList.remove('hidden');
                 populateFilters();
-                initRealtime(); // Kích hoạt chạy realtime tải dữ liệu
+                initRealtime();
             } else { alert("Mật khẩu không đúng! Thầy/Cô vui lòng thử lại."); }
         }
         function logout() { window.location.reload(); }
@@ -180,7 +178,6 @@
         }
 
         async function populateFilters() {
-            // Fill weeks 1 to 35
             const weekSelect = document.getElementById('week-filter');
             for (let i = 1; i <= 35; i++) {
                 let opt = document.createElement('option');
@@ -189,7 +186,6 @@
                 weekSelect.appendChild(opt);
             }
 
-            // Period filter
             const periodSelect = document.getElementById('period-filter');
             for (let i = 1; i <= 200; i++) {
                 let opt = document.createElement('option');
@@ -199,32 +195,47 @@
             }
         }
 
-        // Lắng nghe realtime từ firebase
         function initRealtime() {
             const table = document.getElementById('results-table');
             const ind = document.getElementById('loading-indicator');
-            table.innerHTML = `<tr><td colspan="7" class="p-10 text-center text-gray-400 font-bold italic animate-pulse">Đang kết nối luồng dữ liệu tức thì...</td></tr>`;
+            table.innerHTML = `<tr><td colspan="6" class="p-10 text-center text-gray-400 font-bold italic animate-pulse">Đang kết nối luồng dữ liệu...</td></tr>`;
             ind.classList.remove('hidden');
 
-            if (unsubscribeMath) {
-                unsubscribeMath();
-            }
+            if (unsubscribeCungCo) unsubscribeCungCo();
+            if (unsubscribeLuyenTap) unsubscribeLuyenTap();
 
-            unsubscribeMath = db.collection("diem_tieng_viet_lop5")
+            unsubscribeCungCo = db.collection("diem_tieng_viet_lop5")
                 .where("subject", "==", "Toán học")
                 .onSnapshot(snapshot => {
-                    let allDocs = [];
-                    snapshot.forEach(doc => allDocs.push(doc.data()));
-                    rawDocs = allDocs; // Lưu lại vào raw data
-                    renderStats(); // Render lại giao diện
-                }, error => {
-                    console.error("Lỗi Realtime Firebase:", error);
-                    table.innerHTML = `<tr><td colspan="7" class="p-10 text-center text-red-500 font-black">Lỗi kết nối dữ liệu: ${error.message}</td></tr>`;
-                    ind.classList.add('hidden');
-                });
+                    rawCungCo = [];
+                    snapshot.forEach(doc => rawCungCo.push({ ...doc.data(), sourceTab: 'Củng cố' }));
+                    renderStats();
+                }, error => console.error("Lỗi Realtime Củng cố:", error));
+
+            unsubscribeLuyenTap = db.collection("essays_v2")
+                .where("subject", "==", "Toán học")
+                .where("type", "==", "math_lesson")
+                .onSnapshot(snapshot => {
+                    rawLuyenTap = [];
+                    snapshot.forEach(doc => rawLuyenTap.push({ ...doc.data(), sourceTab: 'Luyện tập' }));
+                    renderStats();
+                }, error => console.error("Lỗi Realtime Luyện tập:", error));
         }
 
-        // Chỉ lo việc lọc và vẽ HTML dựa trên dữ liệu đã lưu ở rawDocs
+        function parseScoreTo10(rawScore) {
+            if (rawScore === undefined || rawScore === null) return 0;
+            if (typeof rawScore === 'string') {
+                const s = rawScore.trim().toUpperCase();
+                if (s === 'XS') return 10;
+                if (s === 'Đ') return 8;
+                if (s === 'CĐ') return 5;
+            }
+            let num = parseFloat(rawScore);
+            if (isNaN(num)) return 0;
+            if (num > 10) return Number((num / 10).toFixed(1));
+            return Number(num.toFixed(1));
+        }
+
         function renderStats() {
             const table = document.getElementById('results-table');
             const ind = document.getElementById('loading-indicator');
@@ -233,99 +244,181 @@
             try {
                 const weekF = document.getElementById('week-filter').value;
                 const periodF = document.getElementById('period-filter').value;
-                const typeF = document.getElementById('type-filter').value;
 
-                let filtered = rawDocs.filter(d => {
-                    if (weekF && d.week != weekF) return false;
-                    if (periodF && d.period != periodF) return false;
-                    if (typeF && d.type != typeF) return false;
+                let allRaw = [...rawCungCo, ...rawLuyenTap];
+                let filtered = allRaw.filter(d => {
+                    if (weekF && String(d.week) !== String(weekF)) return false;
+                    if (periodF && String(d.period) !== String(periodF)) return false;
                     return true;
                 });
 
-                // Group by student taking MAX score (and MIN time if tie)
-                const bestAttempts = {};
+                const studentData = {};
                 filtered.forEach((data) => {
                     const key = `${data.studentName}_${data.studentClass}_${data.studentSchool || data.school || ''}`;
-                    if (!bestAttempts[key]) {
-                        bestAttempts[key] = { ...data, attemptsCount: 1 };
-                    } else {
-                        bestAttempts[key].attemptsCount++;
-                        const currentMax = bestAttempts[key].score || 0;
-                        const newScore = data.score || 0;
+                    if (!studentData[key]) {
+                        studentData[key] = {
+                            studentName: data.studentName,
+                            studentClass: data.studentClass,
+                            school: data.school || data.studentSchool,
+                            luyenTapScore: null,
+                            luyenTapTime: null,
+                            cungCoScore: null,
+                            cungCoTime: null,
+                            attemptsCount: 0,
+                            lastTimestamp: 0
+                        };
+                    }
 
-                        if (newScore > currentMax) {
-                            const c = bestAttempts[key].attemptsCount;
-                            bestAttempts[key] = { ...data, attemptsCount: c };
-                        } else if (newScore === currentMax) {
-                            const cTime = bestAttempts[key].timeTaken || 999999;
-                            const nTime = data.timeTaken || 999999;
-                            if (nTime < cTime) {
-                                const c = bestAttempts[key].attemptsCount;
-                                bestAttempts[key] = { ...data, attemptsCount: c };
-                            } else if (nTime === cTime && data.timestamp > bestAttempts[key].timestamp) {
-                                const c = bestAttempts[key].attemptsCount;
-                                bestAttempts[key] = { ...data, attemptsCount: c };
-                            }
+                    const st = studentData[key];
+                    st.attemptsCount++;
+                    const timestamp = data.timestamp ? data.timestamp.seconds : 0;
+                    if (timestamp > st.lastTimestamp) st.lastTimestamp = timestamp;
+
+                    if (data.sourceTab === 'Luyện tập') {
+                        const s = parseScoreTo10(data.aiScore);
+                        if (st.luyenTapScore === null || s > st.luyenTapScore) {
+                            st.luyenTapScore = s;
+                            st.luyenTapTime = data.timeTaken || 0;
+                        } else if (s === st.luyenTapScore) {
+                            if ((data.timeTaken || 0) < (st.luyenTapTime || 999999)) st.luyenTapTime = data.timeTaken || 0;
+                        }
+                    } else if (data.sourceTab === 'Củng cố') {
+                        const s = parseScoreTo10(data.score);
+                        if (st.cungCoScore === null || s > st.cungCoScore) {
+                            st.cungCoScore = s;
+                            st.cungCoTime = data.timeTaken || 0;
+                        } else if (s === st.cungCoScore) {
+                            if ((data.timeTaken || 0) < (st.cungCoTime || 999999)) st.cungCoTime = data.timeTaken || 0;
                         }
                     }
                 });
 
-                let uniqueData = Object.values(bestAttempts);
+                let uniqueData = Object.values(studentData);
 
-                // SORTING: Top score first, then lowest time
+                uniqueData.forEach(d => {
+                    const s1 = d.luyenTapScore !== null ? d.luyenTapScore : 0;
+                    const s2 = d.cungCoScore !== null ? d.cungCoScore : 0;
+                    d.avgScore = Number(((s1 + s2) / 2).toFixed(1));
+
+                    const t1 = d.luyenTapTime !== null ? d.luyenTapTime : 0;
+                    const t2 = d.cungCoTime !== null ? d.cungCoTime : 0;
+                    d.totalTime = t1 + t2;
+                });
+
+                // Mặc định: TB > Củng cố > Luyện tập > Thời gian thấp
                 uniqueData.sort((a, b) => {
-                    const sA = a.score || 0; const sB = b.score || 0;
-                    if (sA !== sB) return sB - sA;
-                    const tA = a.timeTaken || 999999; const tB = b.timeTaken || 999999;
-                    if (tA !== tB) return tA - tB;
-                    const timeA = a.timestamp ? a.timestamp.seconds : 0;
-                    const timeB = b.timestamp ? b.timestamp.seconds : 0;
-                    return timeB - timeA;
+                    if (a.avgScore !== b.avgScore) return b.avgScore - a.avgScore;
+                    const cungCoA = a.cungCoScore || 0;
+                    const cungCoB = b.cungCoScore || 0;
+                    if (cungCoA !== cungCoB) return cungCoB - cungCoA;
+                    const luyenTapA = a.luyenTapScore || 0;
+                    const luyenTapB = b.luyenTapScore || 0;
+                    if (luyenTapA !== luyenTapB) return luyenTapB - luyenTapA;
+
+                    if (a.totalTime !== b.totalTime) return a.totalTime - b.totalTime;
+                    return b.lastTimestamp - a.lastTimestamp;
                 });
 
                 allQuizData = uniqueData;
-
-                let totalScore = 0;
-                uniqueData.forEach(d => totalScore += (d.score || 0));
+                let totalScoreSum = 0;
+                let studentCount = 0;
+                uniqueData.forEach(d => { totalScoreSum += d.avgScore; studentCount++; });
 
                 let rows = "";
                 uniqueData.forEach((data, index) => {
-                    const scoreClass = data.score >= 80 ? 'text-green-600' : (data.score >= 50 ? 'text-orange-600' : 'text-red-600');
+                    const avgClass = data.avgScore >= 8 ? 'text-green-600' : (data.avgScore >= 5 ? 'text-orange-600' : 'text-red-600');
                     const rankIcon = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : (index + 1);
 
                     rows += `
-                        <tr class="hover:bg-orange-50/30 transition-colors">
-                            <td class="p-6 text-gray-500 font-black text-lg">${rankIcon}</td>
-                            <td class="p-6">
-                                <span class="font-black text-gray-800 block text-lg">${data.studentName || "N/A"}</span>
+                        <tr class="hover:bg-orange-50/30 transition-colors border-b border-gray-100">
+                            <td class="p-4 text-gray-400 font-black text-xs text-center">${rankIcon}</td>
+                            <td class="p-4">
+                                <span class="font-black text-gray-800 block text-sm">${data.studentName || "N/A"}</span>
+                                <span class="text-[10px] text-gray-400 font-bold">${data.studentClass || "-"} | ${data.school || "-"}</span>
                             </td>
-                            <td class="p-6 text-center">
-                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg font-black text-sm">${data.studentClass || "-"}</span>
+                            <td class="p-4 text-center">
+                                <div class="font-black text-indigo-600 text-lg">${data.luyenTapScore !== null ? data.luyenTapScore : '-'}</div>
                             </td>
-                            <td class="p-6 font-bold text-center text-gray-600 text-xs">${data.school || data.studentSchool || "N/A"}</td>
-                            <td class="p-6 text-center">
-                                <span class="text-2xl font-black ${scoreClass}">${data.score || 0}</span>
+                            <td class="p-4 text-center">
+                                <div class="font-black text-blue-600 text-lg">${data.cungCoScore !== null ? data.cungCoScore : '-'}</div>
                             </td>
-                            <td class="p-6 text-center font-black text-gray-600">${formatTimeTaken(data.timeTaken)}</td>
-                            <td class="p-6 text-center">
-                                <span class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded text-xs font-black">${data.attemptsCount} lần</span>
+                            <td class="p-4 text-center bg-green-50/30">
+                                <span class="text-xl font-black ${avgClass}">${data.avgScore}</span>
+                            </td>
+                            <td class="p-4 text-center font-bold text-gray-500 text-xs">
+                                ${formatTimeTaken(data.totalTime)}
                             </td>
                         </tr>
                     `;
                 });
 
-                table.innerHTML = rows || `<tr><td colspan="7" class="p-10 text-center text-gray-400">Chưa có kết quả nộp bài nào phù hợp.</td></tr>`;
+                table.innerHTML = rows || `<tr><td colspan="6" class="p-10 text-center text-gray-400">Chưa có kết quả.</td></tr>`;
 
                 document.getElementById('stat-total').innerText = filtered.length;
-                document.getElementById('stat-avg').innerText = uniqueData.length > 0 ? (totalScore / uniqueData.length).toFixed(1) : "0";
-                document.getElementById('stat-students').innerText = uniqueData.length;
+                document.getElementById('stat-avg').innerText = studentCount > 0 ? (totalScoreSum / studentCount).toFixed(1) : "0";
+                document.getElementById('stat-students').innerText = studentCount;
 
             } catch (error) {
                 console.error("Error formatting UI:", error);
-                table.innerHTML = `<tr><td colspan="7" class="p-10 text-center text-red-500 font-black">Lỗi xử lý dữ liệu: ${error.message}</td></tr>`;
+                table.innerHTML = `<tr><td colspan="6" class="p-10 text-center text-red-500 font-black">Lỗi hiển thị: ${error.message}</td></tr>`;
             } finally {
                 ind.classList.add('hidden');
             }
+        }
+
+        function sortTableBy(key) {
+            if (!allQuizData || allQuizData.length === 0) return;
+
+            if (window.currentSortKey === key) {
+                window.currentSortOrder = (window.currentSortOrder === 'desc') ? 'asc' : 'desc';
+            } else {
+                window.currentSortKey = key;
+                window.currentSortOrder = 'desc';
+            }
+
+            allQuizData.sort((a, b) => {
+                let valA = a[key] !== null ? a[key] : -1;
+                let valB = b[key] !== null ? b[key] : -1;
+
+                if (key === 'avgScore' || key === 'luyenTapScore' || key === 'cungCoScore') {
+                    // if equal, use totalTime as tie-breaker
+                    if (valA === valB) {
+                        return (window.currentSortOrder === 'asc') ? b.totalTime - a.totalTime : a.totalTime - b.totalTime;
+                    }
+                }
+
+                return (window.currentSortOrder === 'asc') ? valA - valB : valB - valA;
+            });
+
+            const table = document.getElementById('results-table');
+            let rows = "";
+            allQuizData.forEach((data, index) => {
+                const avgClass = data.avgScore >= 8 ? 'text-green-600' : (data.avgScore >= 5 ? 'text-orange-600' : 'text-red-600');
+                const rankIcon = index + 1; // When custom sorting, exact rank might not be 1, 2, 3 medals initially
+
+                rows += `
+                    <tr class="hover:bg-orange-50/30 transition-colors border-b border-gray-100">
+                        <td class="p-4 text-gray-400 font-black text-xs text-center">${rankIcon}</td>
+                        <td class="p-4">
+                            <span class="font-black text-gray-800 block text-sm">${data.studentName || "N/A"}</span>
+                            <span class="text-[10px] text-gray-400 font-bold">${data.studentClass || "-"} | ${data.school || "-"}</span>
+                        </td>
+                        <td class="p-4 text-center">
+                            <div class="font-black text-indigo-600 text-lg">${data.luyenTapScore !== null ? data.luyenTapScore : '-'}</div>
+                        </td>
+                        <td class="p-4 text-center">
+                            <div class="font-black text-blue-600 text-lg">${data.cungCoScore !== null ? data.cungCoScore : '-'}</div>
+                        </td>
+                        <td class="p-4 text-center bg-green-50/30">
+                            <span class="text-xl font-black ${avgClass}">${data.avgScore}</span>
+                        </td>
+                        <td class="p-4 text-center font-bold text-gray-500 text-xs">
+                            ${formatTimeTaken(data.totalTime)}
+                        </td>
+                    </tr>
+                `;
+            });
+            table.innerHTML = rows;
         }
 
         async function exportToExcel() {
@@ -335,11 +428,11 @@
                     "TT": index + 1,
                     "Họ và Tên": d.studentName,
                     "Lớp": "'" + (d.studentClass || "N/A"),
-                    "Trường": d.studentSchool || d.school || "N/A",
-                    "Điểm": d.score,
-                    "Thời gian làm (giây)": d.timeTaken || 0,
-                    "Số lần làm": d.attemptsCount || 1,
-                    "Nộp lúc (Lần tốt nhất)": d.timestamp ? d.timestamp.toDate().toLocaleString('vi-VN') : ""
+                    "Trường": d.school || "N/A",
+                    "Điểm Luyện tập (10)": d.luyenTapScore !== null ? d.luyenTapScore : "Chưa làm",
+                    "Điểm Củng cố (10)": d.cungCoScore !== null ? d.cungCoScore : "Chưa làm",
+                    "Điểm Trung bình": d.avgScore,
+                    "Tổng thời gian (giây)": d.totalTime || 0
                 }));
 
                 const worksheet = XLSX.utils.json_to_sheet(dataToExport);

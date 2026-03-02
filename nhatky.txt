@@ -332,9 +332,18 @@ Ngày 02/03/2026:
   + Thêm module `renderRealWorldMeasurement` hỗ trợ tải ảnh và ghi chép số đo/vận dụng thực tế.
 - Trạng thái hiện tại: Đã xây dựng xong "bộ khung" (foundation) vững chắc. Sẵn sàng để chuyển đổi nội dung từng tiết học vào hệ thống tương tác mới.
 
-[17:34] Hoàn thiện Trang Quản Lý Môn Toán (Real-time Dashboard):
-- Xây dựng bảng biểu `teacher-toan.html` hiện đại dành riêng cho Giáo viên kiểm tra quá trình học Toán.
-- Nâng cấp `Quiz.js` & `firebase-logic.js`: Tự động đo thời gian học sinh hoàn thành bài và gán nhãn Tuần/Tiết ngay khi đẩy dữ liệu lên Firebase.
-- Thuật toán Xếp hạng Thông minh: Lọc lấy điểm cao nhất đối với mỗi học sinh. Trường hợp bằng điểm, người có thời gian làm bài ngắn nhất sẽ xếp trên. Đồng thời thống kê "Số lần làm bài".
-- Tích hợp công nghệ Real-time (Firebase onSnapshot): Bảng xếp hạng và thống kê tự động nhảy số liệu tức thì ngay khi học sinh nộp bài, cực kỳ phù hợp để chiếu trực tiếp trên Tivi/Máy chiếu.
-- Liên kết hệ sinh thái: Thêm nút nhảy nhanh qua lại giữa Bảng điểm Tiếng Việt và Toán. Trang xuất Excel cũng được cập nhật dữ liệu đầy đủ (Thời gian, Số lần bài).
+- Đồng bộ hóa logic hiển thị Header giữa Dashboard và Trang bài học.
+
+[20:37] Nâng cấp Giao diện Quản lý Toán học (teacher-toan.html v2.0):
+- Tái cấu trúc bảng hiển thị: Gộp chung kết quả của 2 phần Luyện tập và Củng cố vào 1 dòng duy nhất cho mỗi học sinh.
+- Hiển thị 3 cột điểm riêng biệt: Điểm Luyện tập, Điểm Củng cố và Điểm Trung bình (TB).
+- Thuật toán sắp xếp đa tiêu chí thông minh: 
+  + Ưu tiên 1: Điểm Trung bình cao nhất.
+  + Ưu tiên 2: Điểm Củng cố cao nhất (nếu TB bằng nhau).
+  + Ưu tiên 3: Điểm Luyện tập cao nhất (nếu Củng cố bằng nhau).
+  + Ưu tiên 4: Tổng thời gian làm bài ngắn nhất (nếu các điểm bằng nhau).
+  + Ưu tiên 5: Nộp bài sớm nhất (dựa trên timestamp).
+- Tích hợp tính năng tự do sắp xếp (Sort): Cho phép giáo viên bấm vào tiêu đề các cột (Học sinh, Luyện tập, Củng cố, Điểm TB, Tổng thời gian) để đảo chiều danh sách (Tăng/Giảm dần) linh hoạt.
+- Đồng bộ dữ liệu Realtime (onSnapshot): tự động kết hợp (`join`) 2 luồng dữ liệu độc lập từ bộ sưu tập `essays_v2` (Luyện tập - Tự luận/AI chấm) và `diem_tieng_viet_lop5` (Củng cố - Trắc nghiệm) dựa trên chuỗi định danh học sinh.
+- Cập nhật chức năng Xuất Excel (SheetJS): Xuất file đầy đủ các cột mới, hỗ trợ giáo viên báo cáo phụ huynh một cách trực quan nhất.
+

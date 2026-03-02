@@ -22,6 +22,7 @@ import { lesson123 } from './123.js';
 import { lesson124 } from './124.js';
 import { lesson125 } from './125.js';
 import { lesson126 } from './126.js';
+import { lesson127 } from './127.js';
 import { lessonTemplate } from './template.js';
 import { placeholderLessons } from './placeholders.js';
 
@@ -50,7 +51,8 @@ export const mathData = [
     lesson124,
     lesson125,
     lesson126,
-    ...placeholderLessons,
+    lesson127,
+    ...placeholderLessons.filter(p => p.id !== 'math_5_127'),
     lessonTemplate
 ].sort((a, b) => {
     // Attempt to sort by period (numerical value)
