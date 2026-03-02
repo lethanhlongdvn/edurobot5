@@ -482,12 +482,11 @@ export const Lesson = {
 
             // Vẽ hình hiện tại
             visualHtml = `
-                <div class="relative" style="width: ${Math.max(state.a, state.baseA || 0) * scaleFactor}px; height: ${Math.max(state.b, state.baseB || 0) * scaleFactor}px;">
-                    <div class="bg-blue-400 border-2 border-blue-600 shadow-xl transition-all duration-300 absolute left-0 bottom-0 z-10 flex items-center justify-center rounded-sm" 
-                         style="width: ${state.a * scaleFactor}px; height: ${state.b * scaleFactor}px; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 2px, transparent 2px, transparent 10px);">
-                        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 font-black text-lg text-blue-900 bg-white/80 px-2 rounded-md shadow-sm">a = ${state.a}</div>
-                        <div class="absolute -right-14 top-1/2 -translate-y-1/2 font-black text-lg text-blue-900 bg-white/80 px-2 rounded-md shadow-sm rotate-90 origin-center whitespace-nowrap">b = ${state.b}</div>
-                    </div>
+                <div class="flex flex-col items-center">
+                    <div class="relative mb-6" style="width: ${Math.max(state.a, state.baseA || 0) * scaleFactor}px; height: ${Math.max(state.b, state.baseB || 0) * scaleFactor}px;">
+                        <div class="bg-blue-400 border-2 border-blue-600 shadow-xl transition-all duration-300 absolute left-0 bottom-0 z-10 rounded-sm" 
+                             style="width: ${state.a * scaleFactor}px; height: ${state.b * scaleFactor}px; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 2px, transparent 2px, transparent 10px);">
+                        </div>
             `;
 
             if (state.isLocked) {
@@ -495,15 +494,31 @@ export const Lesson = {
                 const ratio = (area / baseArea).toFixed(1);
                 resultHtml += `<div class="mt-2 text-lg font-bold text-amber-600 bg-amber-50 p-2 rounded-lg border border-amber-200 block">So sánh: Gấp <span class="text-2xl font-black">${ratio}</span> lần (${baseArea} cm²)</div>`;
 
-                // Vẽ hình gốc (Ghost) LÊN TRÊN
+                // Vẽ hình gốc (Ghost) LÊN TRÊN - Nét mảnh hơn
                 visualHtml += `
-                    <div class="absolute left-0 bottom-0 border-4 border-dashed border-amber-500 rounded-sm z-20 pointer-events-none" 
+                    <div class="absolute left-0 bottom-0 border-2 border-dashed border-amber-500 rounded-sm z-20 pointer-events-none" 
                          style="width: ${state.baseA * scaleFactor}px; height: ${state.baseB * scaleFactor}px;">
-                         <div class="absolute -top-7 left-0 bg-amber-500 text-white px-2 py-0.5 rounded text-[10px] font-bold whitespace-nowrap shadow-sm">HÌNH GỐC (a=${state.baseA}, b=${state.baseB})</div>
                     </div>
                 `;
             }
-            visualHtml += `</div>`;
+
+            visualHtml += `
+                    </div>
+                    <!-- Chú thích legend bên dưới -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-8 bg-blue-50 dark:bg-slate-800/50 p-3 rounded-2xl border border-blue-100">
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 bg-blue-500 rounded shadow-sm"></div>
+                            <span class="font-black text-blue-900 dark:text-blue-200 text-sm">Hình hiện tại (a=${state.a}, b=${state.b})</span>
+                        </div>
+                        ${state.isLocked ? `
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 border-2 border-dashed border-amber-500 rounded"></div>
+                            <span class="font-black text-amber-600 text-sm">Hình chốt (a=${state.baseA}, b=${state.baseB})</span>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
         }
         else if (type === 'cube_volume') {
             const volume = Math.pow(state.a, 3).toFixed(1);
@@ -511,7 +526,7 @@ export const Lesson = {
 
             const s = state.a * 7;
             const d = s * 0.4;
-            const viewSize = 300;
+            const viewSize = 320;
             const ox = 30; // Anchor Bottom-Left
             const oy = viewSize - 60;
 
@@ -520,11 +535,15 @@ export const Lesson = {
             // 1. Vẽ Khối hiện tại
             svgContent += `
                 <g class="transition-all duration-300">
-                    <path d="M ${ox} ${oy} L ${ox + s} ${oy} L ${ox + s + d} ${oy - d} L ${ox + d} ${oy - d} Z" fill="#6366f1" opacity="0.1" />
+                    <!-- Cạnh khuất (Hidden Edges) -->
+                    <line x1="${ox + d}" y1="${oy - d}" x2="${ox}" y2="${oy}" stroke="#312e81" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.4" />
+                    <line x1="${ox + d}" y1="${oy - d}" x2="${ox + s + d}" y2="${oy - d}" stroke="#312e81" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.4" />
+                    <line x1="${ox + d}" y1="${oy - d}" x2="${ox + d}" y2="${oy - s - d}" stroke="#312e81" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.4" />
+
+                    <!-- Các mặt chính -->
                     <path d="M ${ox + s} ${oy} L ${ox + s} ${oy - s} L ${ox + s + d} ${oy - s - d} L ${ox + s + d} ${oy - d} Z" fill="#4338ca" stroke="#312e81" stroke-width="2" />
                     <path d="M ${ox} ${oy - s} L ${ox + s} ${oy - s} L ${ox + s + d} ${oy - s - d} L ${ox + d} ${oy - s - d} Z" fill="#818cf8" stroke="#312e81" stroke-width="2" />
-                    <rect x="${ox}" y="${oy - s}" width="${s}" height="${s}" fill="#6366f1" stroke="#312e81" stroke-width="3" />
-                    <text x="${ox + s / 2}" y="${oy - s / 2 + 8}" fill="white" font-weight="900" text-anchor="middle" font-size="${state.a < 10 ? 16 : 24}">${state.a}</text>
+                    <rect x="${ox}" y="${oy - s}" width="${s}" height="${s}" fill="#6366f1" stroke="#312e81" stroke-width="2.5" />
                 </g>
             `;
 
@@ -536,22 +555,35 @@ export const Lesson = {
                 const sB = state.baseA * 7;
                 const dB = sB * 0.4;
 
-                // 2. Vẽ Ghost Cube (Hình chốt) LÊN LỚP TRÊN - CHUNG GỐC (ox, oy)
+                // 2. Vẽ Ghost Cube (Hình chốt) LÊN LỚP TRÊN - Nét chốt mảnh lại
                 svgContent += `
                     <g class="pointer-events-none">
-                        <path d="M ${ox} ${oy} L ${ox + sB} ${oy} L ${ox + sB + dB} ${oy - dB} L ${ox + dB} ${oy - dB} Z" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" />
-                        <path d="M ${ox + sB} ${oy} L ${ox + sB} ${oy - sB} L ${ox + sB + dB} ${oy - sB - dB} L ${ox + sB + dB} ${oy - dB} Z" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" />
-                        <path d="M ${ox} ${oy - sB} L ${ox + sB} ${oy - sB} L ${ox + sB + dB} ${oy - sB - dB} L ${ox + dB} ${oy - sB - dB} Z" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" />
-                        <rect x="${ox}" y="${oy - sB}" width="${sB}" height="${sB}" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" />
-                        
-                        <rect x="${ox + sB - 40}" y="${oy - sB - 25}" width="80" height="20" rx="4" fill="#f59e0b" />
-                        <text x="${ox + sB}" y="${oy - sB - 10}" fill="white" font-size="10" font-weight="900" text-anchor="middle">HÌNH GỐC (a=${state.baseA})</text>
+                        <path d="M ${ox + sB} ${oy} L ${ox + sB} ${oy - sB} L ${ox + sB + dB} ${oy - sB - dB} L ${ox + sB + dB} ${oy - dB} Z" fill="none" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="4,2" />
+                        <path d="M ${ox} ${oy - sB} L ${ox + sB} ${oy - sB} L ${ox + sB + dB} ${oy - sB - dB} L ${ox + dB} ${oy - sB - dB} Z" fill="none" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="4,2" />
+                        <rect x="${ox}" y="${oy - sB}" width="${sB}" height="${sB}" fill="none" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="4,2" />
                     </g>
                 `;
             }
 
-            visualHtml = `<svg viewBox="0 0 ${viewSize} ${viewSize}" class="w-full h-full max-w-[500px] drop-shadow-2xl overflow-visible">${svgContent}</svg>`;
+            visualHtml = `
+                <div class="flex flex-col items-center">
+                    <svg viewBox="0 0 ${viewSize} ${viewSize}" class="w-full h-full max-w-[500px] drop-shadow-2xl overflow-visible">${svgContent}</svg>
+                    <div class="mt-4 flex flex-col md:flex-row gap-4 md:gap-8 bg-indigo-50 dark:bg-slate-800/50 p-3 rounded-2xl border border-indigo-100">
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 bg-indigo-500 rounded shadow-sm"></div>
+                            <span class="font-black text-indigo-900 dark:text-indigo-200 text-sm">Khối hiện tại (a = ${state.a} cm)</span>
+                        </div>
+                        ${state.isLocked ? `
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 border-2 border-dashed border-amber-500 rounded"></div>
+                            <span class="font-black text-amber-600 text-sm">Hình chốt (a = ${state.baseA} cm)</span>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
         }
+
         visual.innerHTML = visualHtml;
         result.innerHTML = resultHtml;
     },
@@ -562,19 +594,19 @@ export const Lesson = {
         const safeParams = JSON.stringify(correctPairs).replace(/"/g, '&quot;');
 
         let leftHtml = leftItems.map((item, idx) => `
-            <button id="match-l-${id}-${idx}" onclick="Lesson.selectMatch('${id}', 'left', ${idx})" class="match-btn w-full p-4 mb-3 bg-white border-2 border-indigo-100 dark:border-slate-700 text-indigo-900 dark:text-slate-200 font-bold rounded-2xl shadow-sm text-center transition-all hover:-translate-y-1 hover:border-indigo-300 relative z-20">
-                ${item}
-            </button>
-        `).join('');
+    < button id = "match-l-${id}-${idx}" onclick = "Lesson.selectMatch('${id}', 'left', ${idx})" class="match-btn w-full p-4 mb-3 bg-white border-2 border-indigo-100 dark:border-slate-700 text-indigo-900 dark:text-slate-200 font-bold rounded-2xl shadow-sm text-center transition-all hover:-translate-y-1 hover:border-indigo-300 relative z-20" >
+        ${item}
+            </button >
+    `).join('');
 
         let rightHtml = rightItems.map((item, idx) => `
-            <button id="match-r-${id}-${idx}" onclick="Lesson.selectMatch('${id}', 'right', ${idx})" class="match-btn w-full p-4 mb-3 bg-white border-2 border-fuchsia-100 dark:border-slate-700 text-fuchsia-900 dark:text-slate-200 font-bold rounded-2xl shadow-sm text-center transition-all hover:-translate-y-1 hover:border-fuchsia-300 relative z-20">
-                ${item}
-            </button>
-        `).join('');
+    < button id = "match-r-${id}-${idx}" onclick = "Lesson.selectMatch('${id}', 'right', ${idx})" class="match-btn w-full p-4 mb-3 bg-white border-2 border-fuchsia-100 dark:border-slate-700 text-fuchsia-900 dark:text-slate-200 font-bold rounded-2xl shadow-sm text-center transition-all hover:-translate-y-1 hover:border-fuchsia-300 relative z-20" >
+        ${item}
+            </button >
+    `).join('');
 
         return `
-            <div class="matching-exercise p-6 md:p-8 bg-gradient-to-br from-indigo-50 to-fuchsia-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] mt-6 relative animate-fade-in" id="match-ex-${id}">
+    < div class="matching-exercise p-6 md:p-8 bg-gradient-to-br from-indigo-50 to-fuchsia-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] mt-6 relative animate-fade-in" id = "match-ex-${id}" >
                 <div class="flex items-center gap-3 mb-6 relative z-10">
                     <span class="text-3xl">🔗</span>
                     <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">${title}</h3>
@@ -585,16 +617,16 @@ export const Lesson = {
                     <div class="flex-1" id="match-col-right-${id}">${rightHtml}</div>
                 </div>
                 
-                <!-- SVG layer cho đường nối -->
+                <!--SVG layer cho đường nối-- >
                 <svg id="match-canvas-${id}" class="absolute inset-0 w-full h-full pointer-events-none z-10 opacity-70"></svg>
                 
                 <div class="mt-6 flex justify-end items-center gap-4 relative z-20">
                     <span id="match-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
                     <button onclick="Lesson.checkMatching('${id}', '${safeParams}')" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95">Kiểm Tra</button>
                 </div>
-            </div>
-            <!-- Auto Init State -->
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window['matchState_${id}'] = { left: null, right: null, lines: [] }" class="hidden">
+            </div >
+            < !--Auto Init State-- >
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window['matchState_${id}'] = { left: null, right: null, lines: [] }" class="hidden">
         `;
     },
 
@@ -660,8 +692,8 @@ export const Lesson = {
                 const endX = rr.left - containerRect.left;
                 const endY = rr.top + rr.height / 2 - containerRect.top;
 
-                svgHtml += `<path d="M ${startX} ${startY} C ${(startX + endX) / 2} ${startY}, ${(startX + endX) / 2} ${endY}, ${endX} ${endY}" 
-                    fill="transparent" stroke="#6366f1" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 8" class="animate-fade-in" />`;
+                svgHtml += `<path d="M ${startX} ${startY} C ${(startX + endX) / 2} ${startY}, ${(startX + endX) / 2} ${endY}, ${endX} ${endY}"
+            fill="transparent" stroke="#6366f1" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 8" class="animate-fade-in" />`;
             }
         });
         canvas.innerHTML = svgHtml;
@@ -703,38 +735,38 @@ export const Lesson = {
     // 4. Vận Dụng Thực Tế (Real World Measurement/Upload)
     renderRealWorldMeasurement(id, title, description) {
         return `
-            <div class="real-world-exercise p-6 md:p-8 bg-emerald-50 dark:bg-slate-900 rounded-[32px] border-2 border-emerald-100 mb-8 mt-6">
-                 <div class="flex items-center gap-3 mb-4">
-                    <span class="text-3xl">📸</span>
-                    <h3 class="text-xl md:text-2xl font-black text-emerald-900 dark:text-emerald-400">${title}</h3>
+        <div class="real-world-exercise p-6 md:p-8 bg-emerald-50 dark:bg-slate-900 rounded-[32px] border-2 border-emerald-100 mb-8 mt-6">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">📸</span>
+                <h3 class="text-xl md:text-2xl font-black text-emerald-900 dark:text-emerald-400">${title}</h3>
+            </div>
+            <p class="text-emerald-700 dark:text-emerald-300 font-bold mb-6">${description}</p>
+
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- Khu vực upload ảnh -->
+                <div class="flex-1">
+                    <label for="rw-upload-${id}" class="flex flex-col items-center justify-center w-full h-48 border-4 border-dashed border-emerald-300 bg-white dark:bg-slate-800 rounded-2xl cursor-pointer hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors relative overflow-hidden group">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6 text-emerald-500 group-hover:scale-110 transition-transform z-10" id="rw-placeholder-${id}">
+                            <svg class="w-10 h-10 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <p class="text-sm font-bold uppercase tracking-wide">Nhấn để tải ảnh lên</p>
+                        </div>
+                        <img id="rw-preview-${id}" class="absolute inset-0 w-full h-full object-cover hidden z-0 opacity-80" />
+                        <input id="rw-upload-${id}" type="file" class="hidden" accept="image/*" onchange="Lesson.handleImageUpload(event, '${id}')" />
+                    </label>
                 </div>
-                <p class="text-emerald-700 dark:text-emerald-300 font-bold mb-6">${description}</p>
-                
-                <div class="flex flex-col md:flex-row gap-6">
-                    <!-- Khu vực upload ảnh -->
-                    <div class="flex-1">
-                        <label for="rw-upload-${id}" class="flex flex-col items-center justify-center w-full h-48 border-4 border-dashed border-emerald-300 bg-white dark:bg-slate-800 rounded-2xl cursor-pointer hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors relative overflow-hidden group">
-                            <div class="flex flex-col items-center justify-center pt-5 pb-6 text-emerald-500 group-hover:scale-110 transition-transform z-10" id="rw-placeholder-${id}">
-                                <svg class="w-10 h-10 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                                <p class="text-sm font-bold uppercase tracking-wide">Nhấn để tải ảnh lên</p>
-                            </div>
-                            <img id="rw-preview-${id}" class="absolute inset-0 w-full h-full object-cover hidden z-0 opacity-80" />
-                            <input id="rw-upload-${id}" type="file" class="hidden" accept="image/*" onchange="Lesson.handleImageUpload(event, '${id}')" />
-                        </label>
-                    </div>
-                    
-                    <!-- Khu vực phép tính / Báo cáo -->
-                    <div class="flex-1 flex flex-col justify-center space-y-4">
-                        <textarea id="rw-calc-${id}" class="w-full h-24 p-4 rounded-xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-sm font-bold placeholder:text-gray-300 shadow-inner" placeholder="Ghi chép các số đo và phép tính đo đạc thực tế của em ở đây..."></textarea>
-                        
-                        <button onclick="Lesson.saveRealWorld('${id}')" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95 flex justify-center items-center gap-2">
-                            <span>Lưu Kết Quả</span>
-                            <span class="text-xl">💾</span>
-                        </button>
-                        <div id="rw-feedback-${id}" class="text-sm font-bold text-emerald-600 text-center opacity-0 transition-opacity">Đã lưu ảnh và phép tính!</div>
-                    </div>
+
+                <!-- Khu vực phép tính / Báo cáo -->
+                <div class="flex-1 flex flex-col justify-center space-y-4">
+                    <textarea id="rw-calc-${id}" class="w-full h-24 p-4 rounded-xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-sm font-bold placeholder:text-gray-300 shadow-inner" placeholder="Ghi chép các số đo và phép tính đo đạc thực tế của em ở đây..."></textarea>
+
+                    <button onclick="Lesson.saveRealWorld('${id}')" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95 flex justify-center items-center gap-2">
+                        <span>Lưu Kết Quả</span>
+                        <span class="text-xl">💾</span>
+                    </button>
+                    <div id="rw-feedback-${id}" class="text-sm font-bold text-emerald-600 text-center opacity-0 transition-opacity">Đã lưu ảnh và phép tính!</div>
                 </div>
             </div>
+        </div>
         `;
     },
 
@@ -764,11 +796,11 @@ export const Lesson = {
 
     renderEmptyState() {
         return `
-            <div class="py-32 text-center animate-fade-in">
-                <div class="text-6xl mb-8 opacity-20">🏝️</div>
-                <h3 class="text-2xl font-black text-gray-300 mb-2">Vùng đất này chưa có bài học</h3>
-                <p class="text-gray-400 font-bold uppercase text-[10px] tracking-[0.3em]">EduRobot đang trên đường thám hiểm</p>
-            </div>
+        <div class="py-32 text-center animate-fade-in">
+            <div class="text-6xl mb-8 opacity-20">🏝️</div>
+            <h3 class="text-2xl font-black text-gray-300 mb-2">Vùng đất này chưa có bài học</h3>
+            <p class="text-gray-400 font-bold uppercase text-[10px] tracking-[0.3em]">EduRobot đang trên đường thám hiểm</p>
+        </div>
         `;
     },
 
@@ -875,11 +907,11 @@ export const Lesson = {
                 cells += `<div class="w-10 h-10 md:w-12 md:h-12 border border-blue-200 bg-white flex items-center justify-center text-lg md:text-xl font-black text-blue-900">${display}</div>`;
             }
             return `
-                <div class="flex items-center gap-0">
-                    <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-xl font-black text-gray-400">${prefix}</div>
-                    ${cells}
-                </div>
-            `;
+        <div class="flex items-center gap-0">
+            <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-xl font-black text-gray-400">${prefix}</div>
+            ${cells}
+        </div>
+        `;
         };
 
         // Render hàng kết quả (cho nhập từng ô)
@@ -892,30 +924,30 @@ export const Lesson = {
         }
 
         return `
-            <div class="vc-exercise p-6 md:p-8 bg-white dark:bg-slate-800 rounded-[32px] shadow-sm border border-gray-100 dark:border-slate-700 mt-6 animate-fade-in" id="vc-ex-${id}">
-                <div class="flex items-start gap-4 mb-6">
-                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-black shrink-0 text-xl">📝</div>
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">Đặt tính rồi tính</h3>
-                </div>
-                
-                <div class="inline-flex flex-col items-end gap-0 p-4 bg-gray-50 dark:bg-slate-900 rounded-2xl border border-gray-200 mx-auto">
-                    ${renderDisplayRow(num1Str, '')}
-                    ${renderDisplayRow(num2Str, opSymbol)}
-                    <div class="flex items-center gap-0 my-1">
-                        <div class="w-10 h-10 md:w-12 md:h-12"></div>
-                        <div class="border-t-[3px] border-blue-900" style="width: ${maxLen * 48}px;"></div>
-                    </div>
-                    <div class="flex items-center gap-0">
-                        <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-xl font-black text-emerald-500">=</div>
-                        ${answerCells}
-                    </div>
-                </div>
+        <div class="vc-exercise p-6 md:p-8 bg-white dark:bg-slate-800 rounded-[32px] shadow-sm border border-gray-100 dark:border-slate-700 mt-6 animate-fade-in" id="vc-ex-${id}">
+            <div class="flex items-start gap-4 mb-6">
+                <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-black shrink-0 text-xl">📝</div>
+                <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">Đặt tính rồi tính</h3>
+            </div>
 
-                <div class="mt-6 flex items-center gap-4">
-                    <button onclick="Lesson.checkVerticalCalc('${id}', '${safeAnswer}', ${maxLen})" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95">Kiểm Tra</button>
-                    <span id="vc-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
+            <div class="inline-flex flex-col items-end gap-0 p-4 bg-gray-50 dark:bg-slate-900 rounded-2xl border border-gray-200 mx-auto">
+                ${renderDisplayRow(num1Str, '')}
+                ${renderDisplayRow(num2Str, opSymbol)}
+                <div class="flex items-center gap-0 my-1">
+                    <div class="w-10 h-10 md:w-12 md:h-12"></div>
+                    <div class="border-t-[3px] border-blue-900" style="width: ${maxLen * 48}px;"></div>
+                </div>
+                <div class="flex items-center gap-0">
+                    <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-xl font-black text-emerald-500">=</div>
+                    ${answerCells}
                 </div>
             </div>
+
+            <div class="mt-6 flex items-center gap-4">
+                <button onclick="Lesson.checkVerticalCalc('${id}', '${safeAnswer}', ${maxLen})" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95">Kiểm Tra</button>
+                <span id="vc-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
+            </div>
+        </div>
         `;
     },
 
@@ -956,21 +988,21 @@ export const Lesson = {
         const safeDen = answerDenominator.toString().replace(/'/g, "\\'");
 
         return `
-            <div class="fraction-exercise p-6 md:p-8 bg-white dark:bg-slate-800 rounded-[32px] shadow-sm border border-gray-100 dark:border-slate-700 mt-6 animate-fade-in" id="frac-ex-${id}">
-                <div class="flex items-start gap-4 mb-6">
-                    <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-black shrink-0 text-xl">⅗</div>
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">${questionText}</h3>
-                </div>
-                
-                <div class="flex items-center justify-center gap-4 p-6 bg-purple-50 dark:bg-slate-900 rounded-2xl">
-                    <span class="text-xl font-bold text-gray-600">Kết quả =</span>
-                    <div class="inline-flex flex-col items-center gap-0">
-                        <input type="text" id="frac-num-${id}" placeholder="Tử số" 
-                            class="w-20 md:w-24 h-10 text-center text-lg font-black text-purple-800 bg-white border-2 border-purple-200 rounded-t-xl outline-none focus:border-purple-500 transition-all placeholder:text-gray-300 placeholder:text-sm placeholder:font-normal">
+        <div class="fraction-exercise p-6 md:p-8 bg-white dark:bg-slate-800 rounded-[32px] shadow-sm border border-gray-100 dark:border-slate-700 mt-6 animate-fade-in" id="frac-ex-${id}">
+            <div class="flex items-start gap-4 mb-6">
+                <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-black shrink-0 text-xl">⅗</div>
+                <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">${questionText}</h3>
+            </div>
+
+            <div class="flex items-center justify-center gap-4 p-6 bg-purple-50 dark:bg-slate-900 rounded-2xl">
+                <span class="text-xl font-bold text-gray-600">Kết quả =</span>
+                <div class="inline-flex flex-col items-center gap-0">
+                    <input type="text" id="frac-num-${id}" placeholder="Tử số"
+                        class="w-20 md:w-24 h-10 text-center text-lg font-black text-purple-800 bg-white border-2 border-purple-200 rounded-t-xl outline-none focus:border-purple-500 transition-all placeholder:text-gray-300 placeholder:text-sm placeholder:font-normal">
                         <div class="w-20 md:w-24 h-[3px] bg-purple-800"></div>
-                        <input type="text" id="frac-den-${id}" placeholder="Mẫu số" 
+                        <input type="text" id="frac-den-${id}" placeholder="Mẫu số"
                             class="w-20 md:w-24 h-10 text-center text-lg font-black text-purple-800 bg-white border-2 border-purple-200 rounded-b-xl outline-none focus:border-purple-500 transition-all placeholder:text-gray-300 placeholder:text-sm placeholder:font-normal">
-                    </div>
+                        </div>
                 </div>
 
                 <div class="mt-6 flex items-center gap-4">
@@ -978,7 +1010,7 @@ export const Lesson = {
                     <span id="frac-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
                 </div>
             </div>
-        `;
+            `;
     },
 
     checkFraction(id, correctNum, correctDen) {
@@ -1027,30 +1059,30 @@ export const Lesson = {
                         <div class="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center text-sm font-black shrink-0 mt-1">1</div>
                         <div class="flex-grow">
                             <label class="text-xs font-black text-blue-600 uppercase tracking-widest mb-1 block">Lời giải (Bài giải)</label>
-                            <textarea id="wp-solution-${id}" rows="2" 
-                                class="w-full p-3 rounded-xl border-2 border-blue-200 outline-none focus:border-blue-500 text-sm font-bold placeholder:text-gray-300 shadow-inner transition-all resize-none" 
+                            <textarea id="wp-solution-${id}" rows="2"
+                                class="w-full p-3 rounded-xl border-2 border-blue-200 outline-none focus:border-blue-500 text-sm font-bold placeholder:text-gray-300 shadow-inner transition-all resize-none"
                                 placeholder="Ví dụ: Quãng đường ô tô đi được là:"></textarea>
                         </div>
                     </div>
-                    
+
                     <!-- Bước 2: Phép tính -->
                     <div class="flex items-start gap-3">
                         <div class="w-8 h-8 bg-indigo-500 text-white rounded-lg flex items-center justify-center text-sm font-black shrink-0 mt-1">2</div>
                         <div class="flex-grow">
                             <label class="text-xs font-black text-indigo-600 uppercase tracking-widest mb-1 block">Phép tính</label>
-                            <textarea id="wp-calc-${id}" rows="2" 
-                                class="w-full p-3 rounded-xl border-2 border-indigo-200 outline-none focus:border-indigo-500 text-sm font-bold font-mono placeholder:text-gray-300 shadow-inner transition-all resize-none" 
+                            <textarea id="wp-calc-${id}" rows="2"
+                                class="w-full p-3 rounded-xl border-2 border-indigo-200 outline-none focus:border-indigo-500 text-sm font-bold font-mono placeholder:text-gray-300 shadow-inner transition-all resize-none"
                                 placeholder="Ví dụ: 45 × 2.5 = 112.5 (km)"></textarea>
                         </div>
                     </div>
-                    
+
                     <!-- Bước 3: Đáp số -->
                     <div class="flex items-start gap-3">
                         <div class="w-8 h-8 bg-emerald-500 text-white rounded-lg flex items-center justify-center text-sm font-black shrink-0 mt-1">3</div>
                         <div class="flex-grow">
                             <label class="text-xs font-black text-emerald-600 uppercase tracking-widest mb-1 block">Đáp số</label>
-                            <input type="text" id="wp-answer-${id}" 
-                                class="w-full p-3 rounded-xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-sm font-bold placeholder:text-gray-300 shadow-inner transition-all" 
+                            <input type="text" id="wp-answer-${id}"
+                                class="w-full p-3 rounded-xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-sm font-bold placeholder:text-gray-300 shadow-inner transition-all"
                                 placeholder="Ví dụ: 112.5 km">
                         </div>
                     </div>
@@ -1075,7 +1107,7 @@ export const Lesson = {
                     <span id="wp-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
                 </div>
             </div>
-        `;
+            `;
     },
 
     submitWordProblem(id, expectedAnswer) {
