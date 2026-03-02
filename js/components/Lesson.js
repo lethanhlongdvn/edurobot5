@@ -480,80 +480,78 @@ export const Lesson = {
             const area = (state.a * state.b).toFixed(1);
             resultHtml = `S = a &times; b = <span class="text-4xl text-blue-600 font-black">${area}</span> cm²`;
 
+            // Vẽ hình hiện tại
+            visualHtml = `
+                <div class="relative" style="width: ${Math.max(state.a, state.baseA || 0) * scaleFactor}px; height: ${Math.max(state.b, state.baseB || 0) * scaleFactor}px;">
+                    <div class="bg-blue-400 border-2 border-blue-600 shadow-xl transition-all duration-300 absolute left-0 bottom-0 z-10 flex items-center justify-center rounded-sm" 
+                         style="width: ${state.a * scaleFactor}px; height: ${state.b * scaleFactor}px; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 2px, transparent 2px, transparent 10px);">
+                        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 font-black text-lg text-blue-900 bg-white/80 px-2 rounded-md shadow-sm">a = ${state.a}</div>
+                        <div class="absolute -right-14 top-1/2 -translate-y-1/2 font-black text-lg text-blue-900 bg-white/80 px-2 rounded-md shadow-sm rotate-90 origin-center whitespace-nowrap">b = ${state.b}</div>
+                    </div>
+            `;
+
             if (state.isLocked) {
                 const baseArea = (state.baseA * state.baseB).toFixed(1);
                 const ratio = (area / baseArea).toFixed(1);
                 resultHtml += `<div class="mt-2 text-lg font-bold text-amber-600 bg-amber-50 p-2 rounded-lg border border-amber-200 block">So sánh: Gấp <span class="text-2xl font-black">${ratio}</span> lần (${baseArea} cm²)</div>`;
 
-                // Vẽ hình gốc (Shadow)
+                // Vẽ hình gốc (Ghost) LÊN TRÊN
                 visualHtml += `
-                    <div class="absolute border-4 border-dashed border-gray-300 rounded-sm opacity-40 z-0" 
-                         style="width: ${state.baseA * scaleFactor}px; height: ${state.baseB * scaleFactor}px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-                         <div class="absolute -top-6 left-0 text-[10px] font-bold text-gray-400">Hình gốc</div>
+                    <div class="absolute left-0 bottom-0 border-4 border-dashed border-amber-500 rounded-sm z-20 pointer-events-none" 
+                         style="width: ${state.baseA * scaleFactor}px; height: ${state.baseB * scaleFactor}px;">
+                         <div class="absolute -top-7 left-0 bg-amber-500 text-white px-2 py-0.5 rounded text-[10px] font-bold whitespace-nowrap shadow-sm">HÌNH GỐC (a=${state.baseA}, b=${state.baseB})</div>
                     </div>
                 `;
             }
-
-            // Vẽ hình hiện tại
-            visualHtml += `
-                <div class="bg-blue-400 border-2 border-blue-600 shadow-2xl transition-all duration-300 relative z-10 flex items-center justify-center rounded-sm" 
-                     style="width: ${state.a * scaleFactor}px; height: ${state.b * scaleFactor}px; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 2px, transparent 2px, transparent 10px);">
-                    <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 font-black text-lg text-blue-900 bg-white/80 px-2 rounded-md shadow-sm">a = ${state.a}</div>
-                    <div class="absolute -right-14 top-1/2 -translate-y-1/2 font-black text-lg text-blue-900 bg-white/80 px-2 rounded-md shadow-sm rotate-90 origin-center whitespace-nowrap">b = ${state.b}</div>
-                </div>
-            `;
-        } else if (type === 'cube_volume') {
+            visualHtml += `</div>`;
+        }
+        else if (type === 'cube_volume') {
             const volume = Math.pow(state.a, 3).toFixed(1);
             resultHtml = `V = a &times; a &times; a = <span class="text-4xl text-indigo-600 font-black">${volume}</span> cm³`;
 
             const s = state.a * 7;
             const d = s * 0.4;
-            const viewSize = 240; // Fixed viewbox size
+            const viewSize = 300;
+            const ox = 30; // Anchor Bottom-Left
+            const oy = viewSize - 60;
 
             let svgContent = '';
+
+            // 1. Vẽ Khối hiện tại
+            svgContent += `
+                <g class="transition-all duration-300">
+                    <path d="M ${ox} ${oy} L ${ox + s} ${oy} L ${ox + s + d} ${oy - d} L ${ox + d} ${oy - d} Z" fill="#6366f1" opacity="0.1" />
+                    <path d="M ${ox + s} ${oy} L ${ox + s} ${oy - s} L ${ox + s + d} ${oy - s - d} L ${ox + s + d} ${oy - d} Z" fill="#4338ca" stroke="#312e81" stroke-width="2" />
+                    <path d="M ${ox} ${oy - s} L ${ox + s} ${oy - s} L ${ox + s + d} ${oy - s - d} L ${ox + d} ${oy - s - d} Z" fill="#818cf8" stroke="#312e81" stroke-width="2" />
+                    <rect x="${ox}" y="${oy - s}" width="${s}" height="${s}" fill="#6366f1" stroke="#312e81" stroke-width="3" />
+                    <text x="${ox + s / 2}" y="${oy - s / 2 + 8}" fill="white" font-weight="900" text-anchor="middle" font-size="${state.a < 10 ? 16 : 24}">${state.a}</text>
+                </g>
+            `;
 
             if (state.isLocked) {
                 const baseVol = Math.pow(state.baseA, 3).toFixed(1);
                 const ratio = (volume / baseVol).toFixed(1);
                 resultHtml += `<div class="mt-2 text-lg font-bold text-amber-600 bg-amber-50 p-3 rounded-xl border-2 border-amber-200 block shadow-inner">So sánh: Cạnh gấp ${(state.a / state.baseA).toFixed(1)} lần \u279E V gấp <span class="text-3xl font-black">${ratio}</span> lần.</div>`;
 
-                // Shadow cube (Cabinet Projection)
                 const sB = state.baseA * 7;
                 const dB = sB * 0.4;
-                const oxB = viewSize / 2 - sB / 2 - dB / 2;
-                const oyB = viewSize / 2 + sB / 2 + dB / 2;
 
+                // 2. Vẽ Ghost Cube (Hình chốt) LÊN LỚP TRÊN - CHUNG GỐC (ox, oy)
                 svgContent += `
-                    <g opacity="0.4">
-                        <path d="M ${oxB} ${oyB} L ${oxB + sB} ${oyB} L ${oxB + sB + dB} ${oyB - dB} L ${oxB + dB} ${oyB - dB} Z" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4" />
-                        <path d="M ${oxB + sB} ${oyB} L ${oxB + sB} ${oyB - sB} L ${oxB + sB + dB} ${oyB - sB - dB} L ${oxB + sB + dB} ${oyB - dB} Z" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4" />
-                        <path d="M ${oxB} ${oyB - sB} L ${oxB + sB} ${oyB - sB} L ${oxB + sB + dB} ${oyB - sB - dB} L ${oxB + dB} ${oyB - sB - dB} Z" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4" />
-                        <rect x="${oxB}" y="${oyB - sB}" width="${sB}" height="${sB}" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4" />
+                    <g class="pointer-events-none">
+                        <path d="M ${ox} ${oy} L ${ox + sB} ${oy} L ${ox + sB + dB} ${oy - dB} L ${ox + dB} ${oy - dB} Z" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" />
+                        <path d="M ${ox + sB} ${oy} L ${ox + sB} ${oy - sB} L ${ox + sB + dB} ${oy - sB - dB} L ${ox + sB + dB} ${oy - dB} Z" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" />
+                        <path d="M ${ox} ${oy - sB} L ${ox + sB} ${oy - sB} L ${ox + sB + dB} ${oy - sB - dB} L ${ox + dB} ${oy - sB - dB} Z" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" />
+                        <rect x="${ox}" y="${oy - sB}" width="${sB}" height="${sB}" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" />
+                        
+                        <rect x="${ox + sB - 40}" y="${oy - sB - 25}" width="80" height="20" rx="4" fill="#f59e0b" />
+                        <text x="${ox + sB}" y="${oy - sB - 10}" fill="white" font-size="10" font-weight="900" text-anchor="middle">HÌNH GỐC (a=${state.baseA})</text>
                     </g>
                 `;
             }
 
-            // Current Cube (Cabinet Projection)
-            const ox = viewSize / 2 - s / 2 - d / 2;
-            const oy = viewSize / 2 + s / 2 + d / 2;
-
-            svgContent += `
-                <g class="transition-all duration-300">
-                    <!-- Bottom -->
-                    <path d="M ${ox} ${oy} L ${ox + s} ${oy} L ${ox + s + d} ${oy - d} L ${ox + d} ${oy - d} Z" fill="#6366f1" opacity="0.2" />
-                    <!-- Right Face -->
-                    <path d="M ${ox + s} ${oy} L ${ox + s} ${oy - s} L ${ox + s + d} ${oy - s - d} L ${ox + s + d} ${oy - d} Z" fill="#4338ca" stroke="#312e81" stroke-width="2" />
-                    <!-- Top Face -->
-                    <path d="M ${ox} ${oy - s} L ${ox + s} ${oy - s} L ${ox + s + d} ${oy - s - d} L ${ox + d} ${oy - s - d} Z" fill="#818cf8" stroke="#312e81" stroke-width="2" />
-                    <!-- Front Face -->
-                    <rect x="${ox}" y="${oy - s}" width="${s}" height="${s}" fill="#6366f1" stroke="#312e81" stroke-width="3" />
-                    <text x="${ox + s / 2}" y="${oy - s / 2 + 8}" fill="white" font-weight="900" text-anchor="middle" font-size="24">${state.a}</text>
-                </g>
-            `;
-
-            visualHtml = `<svg viewBox="0 0 ${viewSize} ${viewSize}" class="w-full h-full max-w-[400px] drop-shadow-2xl overflow-visible">${svgContent}</svg>`;
+            visualHtml = `<svg viewBox="0 0 ${viewSize} ${viewSize}" class="w-full h-full max-w-[500px] drop-shadow-2xl overflow-visible">${svgContent}</svg>`;
         }
-
         visual.innerHTML = visualHtml;
         result.innerHTML = resultHtml;
     },
