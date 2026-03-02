@@ -1,59 +1,108 @@
 export const lesson121 = {
     "topic": "Hình học và Đo lường",
-    "week": "25",
+    "week": "24",
     "period": "121",
-    "title": "LUYỆN TẬP: DIỆN TÍCH HÌNH LẬP PHƯƠNG",
-    "desc": "Bài 51: Luyện tập về diện tích xung quanh và diện tích toàn phần của hình lập phương (Trang 50).",
+    "title": "BÀI 49: LUYỆN TẬP",
+    "desc": "Luyện tập tính diện tích xung quanh và diện tích toàn phần của hình lập phương thông qua các bài toán vận dụng thực tế.",
     "content": `
-        <div class="space-y-2 text-indigo-900">
-            <!-- 🎯 Mục tiêu bài học -->
-            <div class="bg-emerald-50 p-4 md:p-6 rounded-[32px] border-l-[12px] border-emerald-600 shadow-sm font-bold text-xl md:text-2xl leading-tight">
-                Vận dụng linh hoạt công thức Sxq và Stp vào thực tế: dán đèn lồng, phủ kem bánh, chậu cây...
+        <div class="space-y-12">
+            <!-- 🌟 Mục tiêu & Nhắc lại kiến thức -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Sxq -->
+                <div class="bg-gradient-to-br from-amber-400 to-orange-500 p-8 rounded-[48px] shadow-2xl transform hover:-rotate-1 transition-all">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 bg-white/30 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20">
+                            <span class="text-4xl text-white font-black italic">Sxq</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white italic">Diện tích xung quanh</h3>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-3xl border border-white/10 mb-6">
+                        <p class="text-white text-lg font-bold leading-relaxed">
+                            "Diện tích xung quanh của hình lập phương bằng diện tích một mặt nhân với 4."
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-[32px] shadow-inner text-center">
+                        <p class="text-3xl font-black text-orange-600 tracking-wide uppercase">Sxq = (a × a) × 4</p>
+                    </div>
+                </div>
+
+                <!-- Stp -->
+                <div class="bg-gradient-to-br from-purple-500 to-indigo-600 p-8 rounded-[48px] shadow-2xl transform hover:rotate-1 transition-all">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 bg-white/30 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20">
+                            <span class="text-4xl text-white font-black italic">Stp</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white italic">Diện tích toàn phần</h3>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-3xl border border-white/10 mb-6">
+                        <p class="text-white text-lg font-bold leading-relaxed">
+                            "Diện tích toàn phần của hình lập phương bằng diện tích một mặt nhân với 6."
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-[32px] shadow-inner text-center">
+                        <p class="text-3xl font-black text-indigo-600 tracking-wide uppercase">Stp = (a × a) × 6</p>
+                    </div>
+                </div>
             </div>
 
-            <!-- 🖍️ Nhắc lại kiến thức -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                <div class="bg-indigo-600 p-4 rounded-[24px] text-white shadow-lg text-center">
-                    <p class="text-sm font-bold opacity-80 uppercase">S xung quanh (4 mặt)</p>
-                    <p class="text-2xl md:text-4xl font-black">S<sub>xq</sub> = (a × a) × 4</p>
-                </div>
-                <div class="bg-purple-600 p-4 rounded-[24px] text-white shadow-lg text-center">
-                    <p class="text-sm font-bold opacity-80 uppercase">S toàn phần (6 mặt)</p>
-                    <p class="text-2xl md:text-4xl font-black">S<sub>tp</sub> = (a × a) × 6</p>
-                </div>
+            <!-- 💡 Lưu ý quan trọng -->
+            <div class="bg-blue-50 p-10 rounded-[60px] border-4 border-dashed border-blue-200 relative">
+                <div class="absolute -top-8 left-10 bg-blue-600 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-lg">⚡ LƯU Ý</div>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4 text-2xl font-bold text-blue-900 leading-snug">
+                        <span class="text-blue-500 mt-1">●</span>
+                        Cần xác định bài toán yêu cầu tính diện tích bao nhiêu mặt của hình lập phương.
+                    </li>
+                    <li class="flex items-start gap-4 text-2xl font-bold text-blue-900 leading-snug">
+                        <span class="text-blue-500 mt-1">●</span>
+                        Ví dụ: Mở nắp (5 mặt), Trang trí xung quanh (4 mặt), Sơn cả trong và ngoài (2 x 6 mặt).
+                    </li>
+                </ul>
             </div>
         </div>
     `,
     "practice": `
-        <div class="space-y-2">
+        <div class="space-y-16">
             <!-- Bài tập 1 -->
-            <div id="box-121-1" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl">
-                <p class="font-black text-xl md:text-2xl mb-1 text-indigo-700 flex items-center gap-2">
-                    <span class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black">1</span>
-                    Diện tích các mảnh nhựa màu (6 mặt):
-                </p>
-                <div class="flex flex-col md:grid md:grid-cols-2 gap-2 items-center bg-gray-50 p-1 rounded-[32px]">
-                    <img src="hinh_anh/toan/toan_tap_2/121-b1-lamps.png" alt="Đèn" class="w-full max-w-[300px] h-auto rounded-xl">
-                    <div class="w-full space-y-1">
-                        <div class="bg-white p-2 rounded-2xl flex items-center justify-between border border-gray-200">
-                            <span class="font-black text-lg">25 cm:</span>
-                            <div class="flex items-center gap-1">
-                                <input type="number" id="ans-121-1a" class="w-24 text-2xl font-black text-indigo-600 text-right bg-transparent border-none focus:ring-0" placeholder="?">
-                                <span class="text-xs font-black text-gray-300">cm²</span>
+            <div id="box-121-1" class="bg-white p-6 md:p-12 rounded-[56px] border border-gray-100 shadow-2xl relative overflow-hidden group">
+                <div class="absolute -top-10 -right-10 w-60 h-60 bg-indigo-50 rounded-full group-hover:scale-110 transition-transform -z-0"></div>
+                <div class="relative z-10">
+                    <p class="font-black text-3xl md:text-4xl mb-12 text-indigo-700 flex items-center gap-6">
+                        <span class="w-16 h-16 bg-indigo-600 text-white rounded-[24px] flex items-center justify-center font-black shadow-xl shadow-indigo-200">1</span>
+                        Tính diện tích mảnh nhựa (Sxq):
+                    </p>
+                    <div class="bg-indigo-50/50 p-8 rounded-[48px] border-2 border-indigo-100 mb-10">
+                        <p class="text-2xl font-bold text-indigo-900 mb-8 leading-relaxed">
+                            Người ta cần dán các mảnh nhựa màu vừa đủ vào khung của những chiếc đèn hình lập phương như hình bên dưới. Hãy tính diện tích các mảnh nhựa màu cần dùng cho mỗi bóng đèn (4 mặt xung quanh).
+                        </p>
+                        <div class="flex justify-center mb-6">
+                            <img src="hinh_anh/toan/toan_tap_2/121-b1-lamps.png" alt="Đèn" class="w-full max-w-[500px] h-auto rounded-[32px] shadow-xl">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Đèn 25cm -->
+                        <div class="bg-white p-8 rounded-[40px] shadow-lg border border-indigo-50 text-center space-y-4">
+                            <p class="font-black text-indigo-400 uppercase tracking-widest text-sm italic">Đèn 1 (Cạnh 25cm)</p>
+                            <div class="flex items-center justify-center gap-2">
+                                <input type="number" id="ans-121-1a" class="w-full text-4xl font-black text-indigo-600 bg-indigo-50 rounded-2xl p-4 text-center border-none focus:ring-4 focus:ring-indigo-200" placeholder="?">
+                                <span class="text-xl font-bold text-gray-400">cm²</span>
                             </div>
                         </div>
-                        <div class="bg-white p-2 rounded-2xl flex items-center justify-between border border-gray-200">
-                            <span class="font-black text-lg">15 cm:</span>
-                            <div class="flex items-center gap-1">
-                                <input type="number" id="ans-121-1b" class="w-24 text-2xl font-black text-indigo-600 text-right bg-transparent border-none focus:ring-0" placeholder="?">
-                                <span class="text-xs font-black text-gray-300">cm²</span>
+                        <!-- Đèn 15cm -->
+                        <div class="bg-white p-8 rounded-[40px] shadow-lg border border-indigo-50 text-center space-y-4">
+                            <p class="font-black text-indigo-400 uppercase tracking-widest text-sm italic">Đèn 2 (Cạnh 15cm)</p>
+                            <div class="flex items-center justify-center gap-2">
+                                <input type="number" id="ans-121-1b" class="w-full text-4xl font-black text-indigo-600 bg-indigo-50 rounded-2xl p-4 text-center border-none focus:ring-4 focus:ring-indigo-200" placeholder="?">
+                                <span class="text-xl font-bold text-gray-400">cm²</span>
                             </div>
                         </div>
-                        <div class="bg-white p-2 rounded-2xl flex items-center justify-between border border-gray-200">
-                            <span class="font-black text-lg">30 cm:</span>
-                            <div class="flex items-center gap-1">
-                                <input type="number" id="ans-121-1c" class="w-24 text-2xl font-black text-indigo-600 text-right bg-transparent border-none focus:ring-0" placeholder="?">
-                                <span class="text-xs font-black text-gray-300">cm²</span>
+                        <!-- Đèn 30cm -->
+                        <div class="bg-white p-8 rounded-[40px] shadow-lg border border-indigo-50 text-center space-y-4">
+                            <p class="font-black text-indigo-400 uppercase tracking-widest text-sm italic">Đèn 3 (Cạnh 30cm)</p>
+                            <div class="flex items-center justify-center gap-2">
+                                <input type="number" id="ans-121-1c" class="w-full text-4xl font-black text-indigo-600 bg-indigo-50 rounded-2xl p-4 text-center border-none focus:ring-4 focus:ring-indigo-200" placeholder="?">
+                                <span class="text-xl font-bold text-gray-400">cm²</span>
                             </div>
                         </div>
                     </div>
@@ -61,116 +110,198 @@ export const lesson121 = {
             </div>
 
             <!-- Bài tập 2 -->
-            <div id="box-121-2" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <p class="font-black text-xl md:text-2xl mb-1 text-pink-700 flex items-center gap-2">
-                    <span class="w-10 h-10 bg-pink-600 text-white rounded-xl flex items-center justify-center font-black">2</span>
-                    Phủ kem 5 mặt (xung quanh + trên):
-                </p>
-                <div class="flex flex-col md:grid md:grid-cols-2 gap-2 items-center bg-pink-50 p-1 rounded-[32px]">
-                    <div class="bg-white p-4 rounded-3xl shadow-inner w-full flex items-center gap-2">
-                        <input type="number" id="ans-121-2" class="w-full text-5xl font-black text-pink-600 bg-transparent border-none focus:ring-0 text-right" placeholder="?">
-                        <span class="text-2xl font-black text-gray-300">cm²</span>
+            <div id="box-121-2" class="bg-white p-6 md:p-12 rounded-[56px] border border-gray-100 shadow-2xl relative overflow-hidden group">
+                <div class="absolute -top-10 -left-10 w-60 h-60 bg-emerald-50 rounded-full group-hover:scale-110 transition-transform -z-0"></div>
+                <div class="relative z-10">
+                    <p class="font-black text-3xl md:text-4xl mb-12 text-emerald-700 flex items-center gap-6">
+                        <span class="w-16 h-16 bg-emerald-600 text-white rounded-[24px] flex items-center justify-center font-black shadow-xl shadow-emerald-200">2</span>
+                        Giải bài toán:
+                    </p>
+                    <div class="bg-emerald-50/50 p-8 rounded-[48px] border-2 border-emerald-100 mb-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                            <div class="lg:col-span-3 space-y-6">
+                                <p class="text-2xl font-bold text-emerald-900 leading-relaxed">
+                                    Mai muốn phủ các mặt xung quanh và mặt trên cùng của một chiếc bánh có dạng hình lập phương cạnh <span class="bg-white px-3 py-1 rounded-xl shadow-sm text-3xl font-black text-emerald-600">10 cm</span> bằng một lớp kem.
+                                </p>
+                                <p class="text-2xl font-bold text-emerald-900 leading-relaxed">
+                                    Tính diện tích phần bánh cần phủ.
+                                </p>
+                            </div>
+                            <div class="lg:col-span-2 text-center">
+                                <img src="hinh_anh/toan/toan_tap_2/121-b2-mai-cake.png" alt="Mai Cake" class="w-full max-w-[320px] h-auto rounded-[48px] shadow-2xl border-8 border-white mx-auto">
+                                <p class="text-xs font-bold text-emerald-400 italic mt-3">Gợi ý: Tính 5 mặt (4 mặt XQ + 1 mặt trên)</p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="hinh_anh/toan/toan_tap_2/121-b2-mai-cake.png" alt="Bánh" class="w-full max-w-[200px] h-auto rounded-xl">
+
+                    <!-- 3 Bước giải bài -->
+                    <div class="max-w-4xl mx-auto space-y-8 bg-white p-10 rounded-[56px] shadow-2xl border border-emerald-50">
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-emerald-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">1</div>
+                            <div class="flex-grow">
+                                <label class="text-xs font-black text-emerald-600 uppercase tracking-widest mb-3 block">Lời giải (Bài giải)</label>
+                                <textarea id="wp-solution-121-2" rows="2" class="w-full p-5 rounded-3xl border-2 border-emerald-100 outline-none focus:border-emerald-500 text-2xl font-bold placeholder:text-gray-200 shadow-inner transition-all resize-none" placeholder="Lời giải của em..."></textarea>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-teal-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">2</div>
+                            <div class="flex-grow">
+                                <label class="text-xs font-black text-teal-600 uppercase tracking-widest mb-3 block">Phép tính</label>
+                                <textarea id="wp-calc-121-2" rows="2" class="w-full p-5 rounded-3xl border-2 border-teal-100 outline-none focus:border-teal-500 text-3xl font-black text-emerald-700 placeholder:text-gray-200 shadow-inner transition-all resize-none" placeholder="Ví dụ: 10 x 10 x 5 = ..."></textarea>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-cyan-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">3</div>
+                            <div class="flex-grow">
+                                <label class="text-xs font-black text-cyan-600 uppercase tracking-widest mb-3 block">Đáp số</label>
+                                <div class="flex items-center gap-6">
+                                    <input type="number" id="ans-121-2" class="w-64 p-5 rounded-3xl border-2 border-cyan-100 outline-none focus:border-cyan-500 text-5xl font-black text-cyan-600 shadow-inner transition-all" placeholder="?">
+                                    <span class="text-4xl font-black text-gray-300">cm²</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-6 flex justify-center">
+                            <button onclick="Lesson.submitWordProblemAI('121-2')" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-[28px] font-black text-2xl transition-all active:scale-95 shadow-xl shadow-blue-200 flex items-center gap-4 border-b-8 border-blue-800">
+                                <span>THẦY E KIỂM TRA</span> <span class="text-3xl">🤖</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Bài tập 3 -->
-            <div id="box-121-3" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl">
-                <p class="font-black text-xl md:text-2xl mb-1 text-amber-700 flex items-center gap-2">
-                    <span class="w-10 h-10 bg-amber-600 text-white rounded-xl flex items-center justify-center font-black">3</span>
-                    Trang trí chậu cây (Sxq × 25đ):
-                </p>
-                <div class="flex flex-col md:grid md:grid-cols-2 gap-2 items-center bg-amber-50 p-1 rounded-[32px]">
-                    <div class="w-full space-y-1">
-                        <div class="bg-white p-2 rounded-2xl border border-amber-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-gray-400">Sxq (cm²)</span>
-                            <input type="number" id="ans-121-3a" class="w-24 text-xl font-black text-gray-800 text-right bg-transparent border-none focus:ring-0" placeholder="?">
-                        </div>
-                        <div class="bg-amber-600 p-2 rounded-2xl flex items-center justify-between text-white">
-                            <span class="text-xs font-bold">Tiền (đ)</span>
-                            <input type="number" id="ans-121-3b" class="w-32 text-2xl font-black text-right bg-transparent border-none focus:ring-0 placeholder-white/50" placeholder="?">
+            <div id="box-121-3" class="bg-white p-6 md:p-12 rounded-[56px] border border-gray-100 shadow-2xl relative overflow-hidden group">
+                <div class="absolute -bottom-10 -right-10 w-80 h-80 bg-orange-50 rounded-full group-hover:scale-110 transition-transform -z-0"></div>
+                <div class="relative z-10">
+                    <p class="font-black text-3xl md:text-4xl mb-12 text-orange-700 flex items-center gap-6">
+                        <span class="w-16 h-16 bg-orange-600 text-white rounded-[24px] flex items-center justify-center font-black shadow-xl shadow-orange-200">3</span>
+                        Giải bài toán:
+                    </p>
+                    <div class="bg-orange-50/50 p-8 rounded-[48px] border-2 border-orange-100 mb-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                            <div class="lg:col-span-3 space-y-6">
+                                <p class="text-2xl font-bold text-orange-900 leading-relaxed italic">
+                                    Rô-bốt cung cấp dịch vụ trang trí chậu cây với giá <span class="text-orange-600 font-black">25 đồng</span> cho 1 cm². 
+                                </p>
+                                <p class="text-2xl font-bold text-orange-900 leading-relaxed">
+                                    Nam muốn trang trí các mặt xung quanh của chậu cây có dạng hình lập phương cạnh <span class="bg-white px-3 py-1 rounded-xl shadow-sm text-3xl font-black text-orange-600">20 cm</span>.
+                                </p>
+                                <p class="text-2xl font-black text-orange-700 underline underline-offset-8">
+                                    Hãy tính số tiền mà Nam cần trả cho Rô-bốt.
+                                </p>
+                            </div>
+                            <div class="lg:col-span-2 text-center">
+                                <img src="hinh_anh/toan/toan_tap_2/121-b3-robot-pot.png" alt="Robot Pot" class="w-full max-w-[320px] h-auto rounded-[48px] shadow-2xl border-8 border-white mx-auto">
+                            </div>
                         </div>
                     </div>
-                    <img src="hinh_anh/toan/toan_tap_2/121-b3-robot-pot.png" alt="Chậu" class="w-full max-w-[150px] h-auto rounded-xl">
+
+                    <!-- 3 Bước giải bài -->
+                    <div class="max-w-4xl mx-auto space-y-8 bg-white p-10 rounded-[56px] shadow-2xl border border-orange-50">
+                        <div class="space-y-4">
+                            <label class="text-xs font-black text-orange-600 uppercase tracking-widest mb-3 block">Lời giải của em:</label>
+                            <textarea id="wp-solution-121-3" rows="4" class="w-full p-6 rounded-[40px] border-2 border-orange-100 outline-none focus:border-orange-500 text-2xl font-bold placeholder:text-gray-200 shadow-inner transition-all resize-none" placeholder="Lời giải, phép tính và đáp số đầy đủ..."></textarea>
+                        </div>
+                        <div class="flex items-center gap-6 p-6 bg-orange-50/50 rounded-3xl">
+                            <span class="text-xl font-black text-orange-900 shrink-0">Số tiền cuối cùng:</span>
+                            <input type="number" id="ans-121-3" class="flex-grow p-4 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-4xl font-black text-orange-600" placeholder="?">
+                            <span class="text-2xl font-black text-gray-400">đồng</span>
+                        </div>
+                        <div class="pt-6 flex justify-center">
+                            <button onclick="Lesson.submitWordProblemAI('121-3')" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-[28px] font-black text-2xl transition-all active:scale-95 shadow-xl shadow-blue-200 flex items-center gap-4 border-b-8 border-blue-800">
+                                <span>AI CHẤM BÀI</span> <span class="text-3xl">🤖</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Bài tập 4 -->
-            <div id="box-121-4" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <p class="font-black text-xl md:text-2xl mb-1 text-blue-700 flex items-center gap-2">
-                    <span class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black">4</span>
-                    Ghép 2 khối 4cm. Mai nói Stp gấp 2?
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-1 bg-blue-50 rounded-[32px]">
-                    <img src="hinh_anh/toan/toan_tap_2/121-b4-kids-cubes.png" alt="Ghép" class="w-full h-auto rounded-xl">
-                    <div class="flex gap-2 items-center">
-                        <button id="btn-121-4-true" onclick="select4(true)" class="flex-1 py-4 rounded-2xl border-2 bg-white/50 text-emerald-700 font-black text-2xl hover:bg-emerald-600 hover:text-white transition-all">ĐÚNG</button>
-                        <button id="btn-121-4-false" onclick="select4(false)" class="flex-1 py-4 rounded-2xl border-2 bg-white/50 text-rose-700 font-black text-2xl hover:bg-rose-600 hover:text-white transition-all">SAI</button>
+            <div id="box-121-4" class="bg-white p-6 md:p-12 rounded-[56px] border border-gray-100 shadow-2xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-60 h-60 bg-rose-50 rounded-bl-full -z-0 opacity-60 group-hover:scale-110 transition-transform"></div>
+                <div class="relative z-10">
+                    <p class="font-black text-3xl md:text-4xl mb-12 text-rose-700 flex items-center gap-6">
+                        <span class="w-16 h-16 bg-rose-600 text-white rounded-[24px] flex items-center justify-center font-black shadow-xl shadow-rose-200">4</span>
+                        Câu hỏi tư duy:
+                    </p>
+                    <div class="bg-rose-50/50 p-10 rounded-[60px] border-2 border-rose-100 mb-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
+                            <img src="hinh_anh/toan/toan_tap_2/121-b4-kids-cubes.png" alt="Logic" class="w-full max-w-[420px] h-auto rounded-[48px] shadow-2xl border-8 border-white mx-auto">
+                            <div class="space-y-6">
+                                <p class="text-2xl font-bold text-rose-900 leading-relaxed">
+                                    Nam có hai hình lập phương cạnh 4 cm. Bạn ấy đặt hai hình cạnh nhau để tạo thành một hình hộp chữ nhật.
+                                </p>
+                                <p class="text-2xl font-black text-rose-700 italic border-l-8 border-rose-300 pl-6">
+                                    Mai nói rằng: "Diện tích toàn phần của hình hộp chữ nhật gấp 2 lần diện tích toàn phần của hình lập phương."
+                                </p>
+                                <p class="text-3xl font-black text-gray-900 uppercase tracking-tighter">Hỏi Mai nhận xét đúng hay sai?</p>
+                            </div>
+                        </div>
                     </div>
-                    <input type="hidden" id="ans-121-4">
+
+                    <div class="flex flex-col md:flex-row justify-center gap-8 max-w-2xl mx-auto">
+                        <button onclick="check121_4(true)" class="flex-1 py-10 bg-emerald-50 hover:bg-emerald-100 border-4 border-emerald-200 rounded-[48px] text-5xl font-black text-emerald-600 transition-all active:scale-95 shadow-xl shadow-emerald-100/50">ĐÚNG ✅</button>
+                        <button onclick="check121_4(false)" class="flex-1 py-10 bg-rose-50 hover:bg-rose-100 border-4 border-rose-200 rounded-[48px] text-5xl font-black text-rose-600 transition-all active:scale-95 shadow-xl shadow-rose-100/50">SAI ❌</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Nộp bài -->
-            <div class="flex justify-center mt-2">
-                <button id="btn-submit-121" onclick="submit121()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
-                    NỘP BÀI
+            <!-- Nộp bài toàn diện -->
+            <div class="flex flex-col items-center gap-6 pt-12 border-t-4 border-dashed border-gray-100">
+                <p class="text-xl font-black text-gray-400 uppercase tracking-[0.2em] mb-4 italic text-center">Hoàn thành bài tập để nhận huy chương Rô-bốt</p>
+                <button id="btn-submit-121" onclick="submit121()" class="group relative px-20 py-8 bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-800 text-white rounded-[40px] font-black text-4xl shadow-[0_20px_50px_rgba(37,99,235,0.4)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.6)] transition-all hover:-translate-y-2 active:scale-95 overflow-hidden">
+                    <span class="relative z-10">🌟 NỘP BÀI TẬP 🌟</span>
+                    <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                 </button>
             </div>
 
             <script>
-                window.select4 = function(val) {
-                    document.getElementById('ans-121-4').value = val ? "true" : "false";
-                    document.getElementById('btn-121-4-true').className = val ? "flex-1 py-4 rounded-2xl bg-emerald-600 border-2 border-transparent text-white font-black text-2xl" : "flex-1 py-4 rounded-2xl bg-white/50 border-2 border-emerald-200 text-emerald-700 font-black text-2xl";
-                    document.getElementById('btn-121-4-false').className = !val ? "flex-1 py-4 rounded-2xl bg-rose-600 border-2 border-transparent text-white font-black text-2xl" : "flex-1 py-4 rounded-2xl bg-white/50 border-2 border-rose-200 text-rose-700 font-black text-2xl";
-                };
+                window.check121_4 = function(isCorrect) {
+                   if(isCorrect) {
+                       alert("Chưa chính xác! Con hãy thử tính lại xem nhé. Khi ghép 2 hình thì có 2 mặt bị 'mất đi' do dán vào nhau đấy! 😉");
+                       if(window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+                   } else {
+                       alert("XUẤT SẮC! 🎉 Mai nhận xét SAI. Vì khi ghép 2 hình lại, phần diện tích tiếp xúc giữa 2 hình (2 mặt) sẽ không còn thuộc bề mặt ngoài nữa.");
+                       if(window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+                   }
+                }
 
                 window.submit121 = function() {
-                    const a1a = document.getElementById('ans-121-1a').value;
-                    const a1b = document.getElementById('ans-121-1b').value;
-                    const a1c = document.getElementById('ans-121-1c').value;
-                    const a2 = document.getElementById('ans-121-2').value;
-                    const a3a = document.getElementById('ans-121-3a').value;
-                    const a3b = document.getElementById('ans-121-3b').value;
-                    const a4 = document.getElementById('ans-121-4').value;
-
-                    if (!a1a || !a1b || !a1c || !a2 || !a3a || !a3b || !a4) {
-                        alert("Thầy E nhắc bé: Hãy hoàn thành hết bài nhé! 🚀");
-                        return;
-                    }
-
                     let score = 0;
                     
-                    // Reset feedback
-                    ['1', '2', '3', '4'].forEach(id => {
-                        const box = document.getElementById('box-121-' + id);
-                        box.className = box.className.replace(/border-emerald-400|bg-emerald-50|border-red-400|bg-red-50/g, '').trim();
-                        box.classList.add('border-2');
-                    });
+                    // Bài 1: 25*25*4=2500, 15*15*4=900, 30*30*4=3600
+                    const a1 = document.getElementById('ans-121-1a').value;
+                    const b1 = document.getElementById('ans-121-1b').value;
+                    const c1 = document.getElementById('ans-121-1c').value;
+                    if(a1 == '2500') score += 1;
+                    if(b1 == '900') score += 1;
+                    if(c1 == '3600') score += 1;
 
-                    let c1 = (parseInt(a1a) === 3750 && parseInt(a1b) === 1350 && parseInt(a1c) === 5400);
-                    let c2 = (parseInt(a2) === 500);
-                    let c3 = (parseInt(a3a) === 1600 && parseInt(a3b) === 40000);
-                    let c4 = (a4 === "false");
+                    // Bài 2: 10*10*5 = 500
+                    const a2 = document.getElementById('ans-121-2').value;
+                    if(a2 == '500') score += 2;
 
-                    if (c1) { score += 3; document.getElementById('box-121-1').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-121-1').classList.add('border-red-400', 'bg-red-50'); }
-                    if (c2) { score += 2; document.getElementById('box-121-2').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-121-2').classList.add('border-red-400', 'bg-red-50'); }
-                    if (c3) { score += 3; document.getElementById('box-121-3').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-121-3').classList.add('border-red-400', 'bg-red-50'); }
-                    if (c4) { score += 2; document.getElementById('box-121-4').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-121-4').classList.add('border-red-400', 'bg-red-50'); }
+                    // Bài 3: Sxq = 20*20*4 = 1600. Tiền = 1600 * 25 = 40000
+                    const a3 = document.getElementById('ans-121-3').value;
+                    if(a3 == '40000') score += 3;
+                    
+                    // Bài 4: (Có 2 câu logic)
+                    score += 2;
 
                     const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
                     if (window.submitMathLesson) {
-                        window.submitMathLesson("Score: " + score, status, "btn-submit-121");
+                        window.submitMathLesson("Tiết 121: " + score + "/10", status, "btn-submit-121");
                     }
-                    alert("Điểm của bé: " + score + "/10. 🌟");
-                };
+                    alert("Kết quả của em: " + score + "/10. Hãy tiếp tục cố gắng nhé! 🌈");
+                }
             </script>
         </div>
     `,
     "quizPool": [
-        { "question": "Một hộp không có nắp hình lập phương cạnh 10cm. Diện tích cần dán giấy là bao nhiêu mặt?", "options": ["4 mặt", "5 mặt", "6 mặt", "1 mặt"], "answer": 1, "level": 1 },
-        { "question": "Hai hình lập phương cạnh 1cm xếp cạnh nhau. Diện tích toàn phần khối mới là bao nhiêu?", "options": ["12 cm²", "10 cm²", "6 cm²", "8 cm²"], "answer": 1, "level": 2 },
-        { "question": "Diện tích một mặt hình lập phương là 9 cm². Diện tích toàn phần là:", "options": ["36 cm²", "54 cm²", "81 cm²", "45 cm²"], "answer": 1, "level": 1 }
+        { "question": "Tính diện tích xung quanh hình lập phương cạnh 10cm.", "options": ["400 cm²", "600 cm²", "100 cm²", "1000 cm²"], "answer": 0, "level": 1 },
+        { "question": "Một cái hộp không nắp cạnh 2dm. Diện tích toàn phần là bao nhiêu?", "options": ["16 dm²", "24 dm²", "20 dm²", "8 dm²"], "answer": 2, "level": 2 },
+        { "question": "Diện tích một mặt hình lập phương là 25cm². Diện tích toàn phần là:", "options": ["100 cm²", "150 cm²", "125 cm²", "250 cm²"], "answer": 1, "level": 1 },
+        { "question": "Cạnh hình lập phương gấp lên 2 lần thì Sxq gấp lên mấy lần?", "options": ["2 lần", "4 lần", "6 lần", "8 lần"], "answer": 1, "level": 2 },
+        { "question": "Nếu Sxq của hình lập phương là 36cm² thì cạnh của nó là:", "options": ["3 cm", "6 cm", "4 cm", "9 cm"], "answer": 0, "level": 3 }
     ]
 };

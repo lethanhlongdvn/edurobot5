@@ -1,0 +1,15 @@
+Cạnh hình lập phương là a. Công thức tính diện tích xung quanh là: a × a × 4.
+Cạnh hình lập phương là a. Công thức tính diện tích toàn phần là: a × a × 6.
+Một hình lập phương có cạnh 2cm. Diện tích xung quanh của nó là: 16cm².
+Một hình lập phương có cạnh 3dm. Diện tích toàn phần của nó là: 54dm².
+Diện tích một mặt của hình lập phương là 10cm². Diện tích toàn phần của nó là: 60cm².
+Hình lập phương có cạnh 1m. Diện tích xung quanh là: 4m².
+Nếu cạnh hình lập phương tăng gấp đôi thì diện tích xung quanh tăng gấp: 4 lần.
+Để dán giấy quanh một cái hộp không nắp cạnh 10cm, ta cần diện tích giấy là: 500cm².
+Hình lập phương có 6 mặt, các mặt đều là hình: Vuông.
+Muốn tính diện tích toàn phần, ta lấy diện tích một mặt nhân với: 6.
+Một chiếc đèn lồng hình lập phương cạnh 20cm, diện tích giấy dán 4 mặt xung quanh là: 1600cm².
+Diện tích toàn phần của hình lập phương cạnh 0,5m là: 1,5m².
+Nếu cạnh hình lập phương là 4cm, diện tích một mặt là: 16cm².
+Tổng diện tích 4 mặt bên gọi là diện tích: Xung quanh.
+Bên trong một chiếc hộp hình lập phương cạnh 1m có bao nhiêu dm² diện tích đáy? 100dm².
