@@ -344,44 +344,8 @@ export const router = {
                 (lesson.blocks?.find(b => b.type === 'html')?.content) ||
                 UI.renderEmptyContent();
 
-            // Nút Đọc mẫu cho bài đọc có audio
-            const audioBtn = lesson.audio ? `
-                <div class="mb-6 animate-fade-in">
-                    <div id="audio-player-bar" class="bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-500 rounded-2xl p-4 shadow-xl shadow-blue-200/50 dark:shadow-blue-900/30 flex items-center gap-4 relative overflow-hidden group">
-                        <!-- Decorative shimmer -->
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                        
-                        <!-- Play/Pause Button -->
-                        <button id="btn-audio-play" onclick="router.toggleAudio()" class="relative z-10 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-xl flex items-center justify-center transition-all active:scale-90 border border-white/20 shadow-lg shrink-0">
-                            <svg id="icon-audio-play" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                            <svg id="icon-audio-pause" class="w-6 h-6 text-white hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                        </button>
-
-                        <!-- Info + Progress -->
-                        <div class="flex-grow min-w-0 relative z-10">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-2">
-                                    <span class="text-white/90 text-xs font-black uppercase tracking-widest">🔊 Đọc mẫu</span>
-                                </div>
-                                <span id="audio-time" class="text-white/70 text-xs font-bold tabular-nums">0:00 / 0:00</span>
-                            </div>
-                            <div class="w-full bg-white/20 rounded-full h-1.5 cursor-pointer" onclick="router.seekAudio(event)">
-                                <div id="audio-progress" class="bg-white rounded-full h-1.5 transition-all duration-300" style="width: 0%"></div>
-                            </div>
-                        </div>
-
-                        <!-- Stop Button -->
-                        <button id="btn-audio-stop" onclick="router.stopAudio()" class="relative z-10 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center transition-all active:scale-90 border border-white/10 shrink-0 hidden">
-                            <svg class="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
-                        </button>
-                    </div>
-                    <audio id="lesson-audio" src="${lesson.audio}" preload="metadata"></audio>
-                </div>
-            ` : '';
-
             html = `
                 <div class="glass-card rounded-[40px] p-8 md:p-12 bg-white dark:bg-slate-900 min-h-[500px] animate-fade-in text-gray-700 dark:text-slate-200">
-                    ${audioBtn}
                     <div id="lesson-study-container" class="lesson-body">${UI.parseTutor(studyContent)}</div>
                 </div>
             `;
@@ -453,19 +417,15 @@ export const router = {
         const audio = document.getElementById('lesson-audio');
         if (!audio) return;
 
+        const btn = document.getElementById('btn-audio-play');
         const playIcon = document.getElementById('icon-audio-play');
         const pauseIcon = document.getElementById('icon-audio-pause');
-        const stopBtn = document.getElementById('btn-audio-stop');
 
         if (audio.paused) {
             audio.play();
             if (playIcon) playIcon.classList.add('hidden');
             if (pauseIcon) pauseIcon.classList.remove('hidden');
-            if (stopBtn) stopBtn.classList.remove('hidden');
-
-            // Cập nhật progress liên tục
-            if (this._audioInterval) clearInterval(this._audioInterval);
-            this._audioInterval = setInterval(() => this._updateAudioUI(), 250);
+            if (btn) btn.classList.add('animate-pulse', 'ring-2', 'ring-white/50');
 
             // Khi audio kết thúc
             audio.onended = () => {
@@ -475,7 +435,7 @@ export const router = {
             audio.pause();
             if (playIcon) playIcon.classList.remove('hidden');
             if (pauseIcon) pauseIcon.classList.add('hidden');
-            if (this._audioInterval) clearInterval(this._audioInterval);
+            if (btn) btn.classList.remove('animate-pulse', 'ring-2', 'ring-white/50');
         }
     },
 
@@ -486,18 +446,13 @@ export const router = {
         audio.pause();
         audio.currentTime = 0;
 
+        const btn = document.getElementById('btn-audio-play');
         const playIcon = document.getElementById('icon-audio-play');
         const pauseIcon = document.getElementById('icon-audio-pause');
-        const stopBtn = document.getElementById('btn-audio-stop');
-        const progress = document.getElementById('audio-progress');
 
         if (playIcon) playIcon.classList.remove('hidden');
         if (pauseIcon) pauseIcon.classList.add('hidden');
-        if (stopBtn) stopBtn.classList.add('hidden');
-        if (progress) progress.style.width = '0%';
-
-        if (this._audioInterval) clearInterval(this._audioInterval);
-        this._updateAudioUI();
+        if (btn) btn.classList.remove('animate-pulse', 'ring-2', 'ring-white/50');
     },
 
     seekAudio(event) {
