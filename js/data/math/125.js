@@ -1,163 +1,256 @@
 export const lesson125 = {
-    "topic": "Hình học và Đo lường",
-    "week": "25",
-    "period": "125",
-    "title": "BÀI 53. LUYỆN TẬP (TIẾT 2)",
-    "desc": "Bài 53: Luyện tập tính thể tích hình lập phương qua các bài tập ghép hình và giải toán thực tế (Trang 56-57).",
-    "content": `
-        <div class="space-y-2 text-emerald-900">
-            <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-4 md:p-6 rounded-[32px] border-2 border-green-100 flex items-center gap-4">
-                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg shrink-0">
-                    <span class="text-3xl">🚀</span>
-                </div>
-                <div>
-                    <h3 class="text-xl md:text-2xl font-black">Luyện tập thể tích</h3>
-                    <p class="text-sm md:text-lg font-bold opacity-80">Ghi nhớ: <span class="text-emerald-700">V = a × a × a</span></p>
+    topic: "Hình học và Đo lường",
+    week: "25",
+    period: "125",
+    title: "BÀI 53. LUYỆN TẬP (TIẾT 2)",
+    desc: "Bài 53: Luyện tập tính thể tích hình lập phương qua các bài tập ghép hình và giải toán thực tế (Trang 56-57).",
+    content: `
+        <div class="space-y-8 animate-fade-in pb-10">
+            <!-- Hero -->
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] md:rounded-[48px] p-8 md:p-12 border border-emerald-100 dark:border-slate-700 shadow-sm relative overflow-hidden">
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-20 h-20 md:w-28 md:h-28 bg-emerald-600 rounded-3xl flex items-center justify-center text-5xl md:text-8xl shadow-xl shadow-emerald-200 dark:shadow-emerald-900/40 shrink-0 transform rotate-6 text-white font-black italic">V</div>
+                    <p class="text-2xl md:text-4xl text-emerald-700 dark:text-emerald-400 font-bold italic leading-relaxed text-center md:text-left">Luyện tập tính thể tích hình lập phương qua bài tập trắc nghiệm, bảng tính, ghép khối và bài toán thực tế.</p>
                 </div>
             </div>
         </div>
     `,
-    "practice": `
-        <div class="space-y-2">
-            <!-- Bài 1 -->
-            <div id="box-125-1" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <p class="font-black text-xl md:text-2xl mb-1 text-blue-700 flex items-center gap-2">
-                    <span class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black">1</span>
-                    Ru-bích cạnh 6cm. Thể tích là:
-                </p>
-                <div class="bg-blue-50 p-2 rounded-[32px]">
-                    <select id="ans-125-1" class="w-full p-4 bg-white border-none rounded-2xl text-2xl font-black text-blue-900 focus:ring-0">
-                        <option value="">-- Chọn đáp án --</option>
-                        <option value="A">A. 36 cm²</option>
-                        <option value="B">B. 216 cm²</option>
-                        <option value="C">C. 36 cm³</option>
-                        <option value="D">D. 216 cm³</option>
-                    </select>
+    practice: `
+        <div class="space-y-12 animate-fade-in pb-10">
+            <!-- Bài tập 1: Chọn câu trả lời đúng -->
+            <div class="bg-white p-3 rounded-[48px] shadow-xl border border-blue-50 dark:bg-slate-800 dark:border-slate-700 overflow-hidden" id="ex-125-1">
+                <div class="p-8 md:p-12 bg-blue-50 dark:bg-slate-900 rounded-[40px]">
+                    <div class="flex items-start gap-5 mb-6">
+                        <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">1</div>
+                        <h3 class="text-3xl md:text-5xl font-black text-blue-900 dark:text-blue-100 leading-tight">Chọn câu trả lời đúng.</h3>
+                    </div>
+
+                    <p class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed mb-8 ml-2">
+                        Khối ru-bích của Việt có dạng hình lập phương cạnh <b class="text-blue-600">6 cm</b>. Thể tích của khối ru-bích đó là:
+                    </p>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <button onclick="lesson125.selectMCQ('125-1', 'A')" id="btn-125-1-A" class="mcq-btn p-5 bg-white border-2 border-blue-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-blue-400 transition-all">A. 36 cm²</button>
+                        <button onclick="lesson125.selectMCQ('125-1', 'B')" id="btn-125-1-B" class="mcq-btn p-5 bg-white border-2 border-blue-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-blue-400 transition-all">B. 216 cm²</button>
+                        <button onclick="lesson125.selectMCQ('125-1', 'C')" id="btn-125-1-C" class="mcq-btn p-5 bg-white border-2 border-blue-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-blue-400 transition-all">C. 36 cm³</button>
+                        <button onclick="lesson125.selectMCQ('125-1', 'D')" id="btn-125-1-D" class="mcq-btn p-5 bg-white border-2 border-blue-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-blue-400 transition-all">D. 216 cm³</button>
+                    </div>
+                    <div id="feedback-125-1" class="mt-6 text-center text-xl md:text-2xl font-black opacity-0 transition-opacity p-4 rounded-3xl"></div>
                 </div>
             </div>
 
-            <!-- Bài 2 -->
-            <div id="box-125-2" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl">
-                <p class="font-black text-xl md:text-2xl mb-1 text-teal-700 flex items-center gap-2">
-                    <span class="w-10 h-10 bg-teal-600 text-white rounded-xl flex items-center justify-center font-black">2</span>
-                    Tính thể tích vật dụng:
-                </p>
-                <div class="flex flex-col md:grid md:grid-cols-2 gap-2 items-center bg-teal-50 p-1 rounded-[32px]">
-                    <img src="hinh_anh/toan/toan_tap_2/125-b2-items.png" alt="Items" class="w-full max-w-[200px] h-auto rounded-xl">
-                    <div class="w-full space-y-1">
-                        <div class="bg-white p-2 rounded-2xl flex items-center justify-between border border-teal-100">
-                            <span class="text-xs font-bold text-gray-400">Xúc xắc (cm³)</span>
-                            <input type="number" id="ans-125-2a" class="w-24 text-2xl font-black text-teal-700 text-right bg-transparent border-none focus:ring-0" placeholder="?">
+            <!-- Bài tập 2: Hoàn thành bảng -->
+            <div class="bg-white p-3 rounded-[48px] shadow-xl border border-teal-50 dark:bg-slate-800 dark:border-slate-700 overflow-hidden" id="ex-125-2">
+                <div class="p-8 md:p-12 bg-teal-50 dark:bg-slate-900 rounded-[40px]">
+                    <div class="flex items-start gap-5 mb-8">
+                        <div class="w-14 h-14 bg-teal-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">2</div>
+                        <h3 class="text-3xl md:text-5xl font-black text-teal-900 dark:text-teal-100 leading-tight">Hoàn thành bảng sau.</h3>
+                    </div>
+
+                    <!-- Hình bên trái + Bảng bên phải -->
+                    <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                        <div class="w-full lg:w-1/2 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-teal-100 shadow-md flex items-center justify-center">
+                            <img src="hinh_anh/toan/toan_tap_2/125-b2-items.png" alt="Đồ vật" class="w-full h-auto rounded-2xl">
                         </div>
-                        <div class="bg-white p-2 rounded-2xl flex items-center justify-between border border-cyan-100">
-                            <span class="text-xs font-bold text-gray-400">Bể cá (dm³)</span>
-                            <input type="number" step="0.001" id="ans-125-2b" class="w-24 text-2xl font-black text-cyan-700 text-right bg-transparent border-none focus:ring-0" placeholder="?">
+                        <div class="w-full lg:w-1/2">
+                            <div class="overflow-hidden rounded-[32px] border-2 border-teal-200">
+                                <table class="w-full text-center">
+                                    <thead>
+                                        <tr>
+                                            <th class="p-6 bg-teal-600 text-white text-xl md:text-2xl font-black">Đồ vật dạng hình lập phương</th>
+                                            <th class="p-6 bg-teal-500 text-white text-xl md:text-2xl font-black border-l-2 border-teal-400">🎲 Xúc xắc<br><span class="text-lg font-bold opacity-80">(cạnh 3 cm)</span></th>
+                                            <th class="p-6 bg-cyan-500 text-white text-xl md:text-2xl font-black border-l-2 border-cyan-400">🐟 Bể cá<br><span class="text-lg font-bold opacity-80">(cạnh 1,5 dm)</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="p-6 bg-teal-50 text-xl md:text-2xl font-black text-teal-900">Thể tích của đồ vật</td>
+                                            <td class="p-4 bg-white border-l-2 border-teal-100">
+                                                <input type="number" id="ans-125-2a" class="w-full text-3xl md:text-4xl font-black text-teal-600 bg-transparent text-center outline-none" placeholder="?">
+                                                <p class="text-lg font-bold text-gray-400 mt-1">cm³</p>
+                                            </td>
+                                            <td class="p-4 bg-white border-l-2 border-cyan-100">
+                                                <input type="number" step="0.001" id="ans-125-2b" class="w-full text-3xl md:text-4xl font-black text-cyan-600 bg-transparent text-center outline-none" placeholder="?">
+                                                <p class="text-lg font-bold text-gray-400 mt-1">dm³</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="mt-4 flex items-center gap-4">
+                                <button onclick="lesson125.checkEx2()" class="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                                <span id="fb-125-2" class="text-xl font-black opacity-0 transition-opacity"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bài 3 -->
-            <div id="box-125-3" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <p class="font-black text-xl md:text-2xl mb-1 text-fuchsia-700 flex items-center gap-2">
-                    <span class="w-10 h-10 bg-fuchsia-600 text-white rounded-xl flex items-center justify-center font-black">3</span>
-                    Ghép khối lập phương lớn:
-                </p>
-                <div class="bg-fuchsia-50 p-1 rounded-[32px]">
-                    <img src="hinh_anh/toan/toan_tap_2/125-b3-blocks.png" alt="Blocks" class="w-full max-w-[250px] h-auto mx-auto rounded-xl mb-1">
-                    <div class="grid grid-cols-2 gap-1">
-                        <div class="bg-white p-2 rounded-2xl">
-                            <p class="text-[10px] font-bold text-fuchsia-900 leading-tight">a) Khối nào ghép được?</p>
-                            <select id="ans-125-3a" class="w-full bg-fuchsia-100 border-none rounded-lg text-fuchsia-700 font-bold text-xs p-1">
-                                <option value="">Chọn...</option>
-                                <option value="AB">A và B</option>
-                                <option value="AC">A và C</option>
-                                <option value="BC">B và C</option>
-                            </select>
+            <!-- Bài tập 3: Ghép khối lập phương -->
+            <div class="bg-white p-3 rounded-[48px] shadow-xl border border-purple-50 dark:bg-slate-800 dark:border-slate-700 overflow-hidden" id="ex-125-3">
+                <div class="p-8 md:p-12 bg-purple-50 dark:bg-slate-900 rounded-[40px]">
+                    <!-- Câu a -->
+                    <div class="flex items-start gap-5 mb-6">
+                        <div class="w-14 h-14 bg-purple-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">3</div>
+                        <div>
+                            <p class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
+                                <span class="text-purple-600 font-black">a)</span> Quan sát hình vẽ và cho biết 2 khối hình nào ghép được thành hình lập phương.
+                            </p>
                         </div>
-                        <div class="bg-white p-2 rounded-2xl">
-                            <p class="text-[10px] font-bold text-purple-900 leading-tight">b) Thể tích (cm³)?</p>
-                            <input type="number" id="ans-125-3b" class="w-full bg-purple-100 border-none rounded-lg text-purple-800 font-black text-right p-1" placeholder="?">
+                    </div>
+
+                    <!-- Hình minh họa -->
+                    <div class="flex justify-center mb-8">
+                        <div class="p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-purple-100 shadow-md inline-block">
+                            <img src="hinh_anh/toan/toan_tap_2/125-b3-blocks.png" alt="Khối A, B, C" class="w-full max-w-[600px] h-auto rounded-2xl">
+                        </div>
+                    </div>
+
+                    <!-- MCQ câu a -->
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] shadow-sm border border-purple-100 mb-8">
+                        <p class="text-xl md:text-3xl font-black text-purple-600 mb-6">Hai khối ghép được thành hình lập phương là:</p>
+                        <div class="grid grid-cols-3 gap-4">
+                            <button onclick="lesson125.selectMCQ('125-3a', 'AB')" id="btn-125-3a-AB" class="mcq-btn p-5 bg-purple-50 border-2 border-purple-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-purple-400 transition-all">A và B</button>
+                            <button onclick="lesson125.selectMCQ('125-3a', 'AC')" id="btn-125-3a-AC" class="mcq-btn p-5 bg-purple-50 border-2 border-purple-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-purple-400 transition-all">A và C</button>
+                            <button onclick="lesson125.selectMCQ('125-3a', 'BC')" id="btn-125-3a-BC" class="mcq-btn p-5 bg-purple-50 border-2 border-purple-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-purple-400 transition-all">B và C</button>
+                        </div>
+                    </div>
+
+                    <!-- Câu b -->
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] shadow-sm border border-purple-100">
+                        <p class="text-xl md:text-3xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed mb-6">
+                            <span class="text-purple-600 font-black">b)</span> Biết mỗi hình lập phương nhỏ trong hình trên có cạnh <b class="text-purple-600">2 cm</b>. Hãy tính thể tích của hình lập phương lớn ghép được ở câu a.
+                        </p>
+                        <textarea id="ans-125-3b" rows="4" class="w-full p-6 rounded-2xl border-2 border-purple-200 bg-purple-50/50 dark:bg-slate-900 outline-none focus:border-purple-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;Đáp số: ... cm³"></textarea>
+                        <div class="mt-4 flex items-center gap-4">
+                            <button onclick="Lesson.submitWordProblemAI('125-3b')" class="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bài 4 -->
-            <div id="box-125-4" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <p class="font-black text-xl md:text-2xl mb-1 text-amber-700 flex items-center gap-2">
-                    <span class="w-10 h-10 bg-amber-600 text-white rounded-xl flex items-center justify-center font-black">4</span>
-                    Tháp chất lỏng Rô-bốt:
-                </p>
-                <div class="flex flex-col md:grid md:grid-cols-2 gap-2 items-center bg-amber-50 p-1 rounded-[32px]">
-                    <img src="hinh_anh/toan/toan_tap_2/125-b4-tower.png" alt="Tower" class="w-full max-w-[150px] h-auto rounded-xl bg-white p-1">
-                    <div class="w-full space-y-1">
-                        <div class="bg-white p-2 rounded-2xl border border-amber-200">
-                            <p class="text-[10px] font-bold text-amber-800">Lớn nhất?</p>
-                            <select id="ans-125-4a" class="w-full bg-amber-50 border-none rounded-lg text-amber-900 font-bold text-xs p-1">
-                                <option value="">-- Chọn --</option>
-                                <option value="dauthucvat">Dầu thực vật</option>
-                                <option value="nuoc">Nước</option>
-                                <option value="nuocruabat">Nước rửa bát</option>
-                            </select>
+            <!-- Bài tập 4: Tháp chất lỏng -->
+            <div class="bg-white p-3 rounded-[48px] shadow-xl border border-amber-50 dark:bg-slate-800 dark:border-slate-700 overflow-hidden" id="ex-125-4">
+                <div class="p-8 md:p-12 bg-amber-50 dark:bg-slate-900 rounded-[40px]">
+                    <div class="flex items-start gap-5 mb-6">
+                        <div class="w-14 h-14 bg-amber-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">4</div>
+                        <div>
+                            <p class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
+                                Rô-bốt làm một tháp chất lỏng như hình dưới đây.
+                            </p>
+                            <p class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed mt-2">
+                                Hỏi phần chất lỏng nào có <b class="text-amber-600">thể tích lớn nhất</b> và thể tích đó bằng bao nhiêu?
+                            </p>
                         </div>
-                        <div class="bg-orange-600 p-2 rounded-2xl text-white">
-                            <p class="text-[10px] font-bold opacity-80">Thể tích (cm³)</p>
-                            <input type="number" id="ans-125-4b" class="w-full bg-orange-500 border-none rounded-lg text-2xl font-black text-right text-white p-1" placeholder="?">
+                    </div>
+
+                    <!-- Hình bên trái + Bài làm bên phải -->
+                    <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                        <div class="w-full lg:w-1/2 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-amber-100 shadow-md flex items-center justify-center">
+                            <img src="hinh_anh/toan/toan_tap_2/125-b4-tower.png" alt="Tháp chất lỏng" class="w-full h-auto rounded-2xl">
+                        </div>
+                        <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-amber-200 shadow-sm flex flex-col">
+                            <p class="text-lg md:text-2xl font-black text-amber-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
+                            <textarea id="ans-125-4" rows="6" class="w-full flex-grow p-6 rounded-2xl border-2 border-amber-200 bg-amber-50/50 dark:bg-slate-900 outline-none focus:border-amber-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;&#10;&#10;Đáp số: ..."></textarea>
+                            <div class="mt-4 flex items-center gap-4">
+                                <button onclick="Lesson.submitWordProblemAI('125-4')" class="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Nộp bài -->
-            <div class="flex justify-center mt-2">
-                <button id="btn-submit-125" onclick="submit125()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
-                    NỘP BÀI
+            <div class="pt-8 flex justify-center">
+                <button onclick="window.submitMathLesson('Hoàn thành Luyện tập Thể tích LP', 100)" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-4 rounded-2xl font-black text-xl uppercase tracking-widest shadow-xl transition-all active:scale-95 flex items-center gap-3">
+                    NỘP BÀI <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </button>
             </div>
-
-            <script>
-                window.submit125 = function() {
-                    const a1 = document.getElementById('ans-125-1').value;
-                    const a2a = document.getElementById('ans-125-2a').value;
-                    const a2b = document.getElementById('ans-125-2b').value;
-                    const a3a = document.getElementById('ans-125-3a').value;
-                    const a3b = document.getElementById('ans-125-3b').value;
-                    const a4a = document.getElementById('ans-125-4a').value;
-                    const a4b = document.getElementById('ans-125-4b').value;
-
-                    if (!a1 || !a2a || !a2b || !a3a || !a3b || !a4a || !a4b) {
-                        alert("Thầy E nhắc bé: Hãy hoàn thành hết bài nhé! 🚀");
-                        return;
-                    }
-
-                    let score = 0;
-                    
-                    // Feedback resets
-                    ['1', '2', '3', '4'].forEach(id => {
-                        const box = document.getElementById('box-125-' + id);
-                        box.className = box.className.replace(/border-emerald-400|bg-emerald-50|border-red-400|bg-red-50/g, '').trim();
-                        box.classList.add('border-2');
-                    });
-
-                    let c1 = (a1 === "D");
-                    let c2 = (parseInt(a2a) === 27 && parseFloat(a2b) === 3.375);
-                    let c3 = (a3a === "AC" && parseInt(a3b) === 512);
-                    let c4 = (a4a === "nuocruabat" && parseInt(a4b) === 3375);
-
-                    if (c1) { score += 2; document.getElementById('box-125-1').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-125-1').classList.add('border-red-400', 'bg-red-50'); }
-                    if (c2) { score += 3; document.getElementById('box-125-2').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-125-2').classList.add('border-red-400', 'bg-red-50'); }
-                    if (c3) { score += 3; document.getElementById('box-125-3').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-125-3').classList.add('border-red-400', 'bg-red-50'); }
-                    if (c4) { score += 2; document.getElementById('box-125-4').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-125-4').classList.add('border-red-400', 'bg-red-50'); }
-
-                    const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
-                    if (window.submitMathLesson) {
-                        window.submitMathLesson("Score: " + score, status, "btn-submit-125");
-                    }
-                    alert("Điểm của bé: " + Math.round(score*10)/10 + "/10. 🌟");
-                };
-            </script>
         </div>
     `,
-    "quizPool": []
+    quizPool: [
+        // Level 1 - Cơ bản
+        { "question": "Thể tích hình lập phương cạnh 4 cm là:", "options": ["16 cm³", "48 cm³", "64 cm³", "96 cm³"], "answer": 2, "level": 1 },
+        { "question": "Hình lập phương cạnh 6 cm có thể tích là:", "options": ["36 cm³", "216 cm³", "36 cm²", "216 cm²"], "answer": 1, "level": 1 },
+        { "question": "V = a × a × a là công thức tính:", "options": ["Diện tích hình vuông", "Diện tích toàn phần HLP", "Thể tích hình lập phương", "Chu vi hình vuông"], "answer": 2, "level": 1 },
+        { "question": "Thể tích hình lập phương cạnh 1 dm là:", "options": ["1 dm³", "6 dm³", "10 dm³", "100 dm³"], "answer": 0, "level": 1 },
+        { "question": "Xúc xắc hình lập phương cạnh 3 cm có thể tích:", "options": ["9 cm³", "18 cm³", "27 cm³", "54 cm³"], "answer": 2, "level": 1 },
+        // Level 2 - Nâng cao
+        { "question": "Bể cá hình lập phương cạnh 1,5 dm. Thể tích bể là:", "options": ["2,25 dm³", "3,375 dm³", "4,5 dm³", "13,5 dm³"], "answer": 1, "level": 2 },
+        { "question": "Hình lập phương có thể tích 125 cm³. Cạnh là:", "options": ["5 cm", "25 cm", "10 cm", "15 cm"], "answer": 0, "level": 2 },
+        { "question": "Khối LP cạnh 10 cm chứa LP cạnh 2 cm. Xếp được:", "options": ["25 khối", "50 khối", "100 khối", "125 khối"], "answer": 3, "level": 2 },
+        { "question": "Hai khối A và C ghép thành LP lớn (mỗi LP nhỏ cạnh 2 cm, LP lớn 8 khối). Thể tích LP lớn:", "options": ["64 cm³", "128 cm³", "256 cm³", "512 cm³"], "answer": 0, "level": 2 },
+        { "question": "1 dm³ = ? cm³", "options": ["10 cm³", "100 cm³", "1000 cm³", "10000 cm³"], "answer": 2, "level": 2 },
+        // Level 3 - Thử thách
+        { "question": "Tháp chất lỏng: tầng dưới LP cạnh 15 cm, tầng giữa HHCNhật 15×12×15, tầng trên LP cạnh 10 cm. Tầng nào lớn nhất?", "options": ["Tầng trên (dầu)", "Tầng giữa (nước)", "Tầng dưới (nước rửa bát)", "Bằng nhau"], "answer": 2, "level": 3 },
+        { "question": "Thể tích hình lập phương cạnh 15 cm là:", "options": ["225 cm³", "1350 cm³", "2250 cm³", "3375 cm³"], "answer": 3, "level": 3 },
+        { "question": "HLP cạnh a cm. Nếu a tăng gấp 3, thể tích tăng:", "options": ["Gấp 3", "Gấp 9", "Gấp 27", "Gấp 6"], "answer": 2, "level": 3 },
+        { "question": "So sánh: HLP cạnh 8 cm và HHCN 10×6×5 cm:", "options": ["V(LP) > V(HHCN)", "V(LP) < V(HHCN)", "V(LP) = V(HHCN)", "Không so sánh được"], "answer": 0, "level": 3 },
+        { "question": "Ghép 8 khối LP nhỏ cạnh 3 cm thành 1 LP lớn. Cạnh LP lớn là:", "options": ["6 cm", "9 cm", "12 cm", "24 cm"], "answer": 0, "level": 3 }
+    ],
+    // Logic MCQ
+    selectMCQ(exId, option) {
+        const allBtns = document.querySelectorAll(`[id^="btn-${exId}-"]`);
+        allBtns.forEach(btn => {
+            const baseColor = exId.includes('125-1') ? 'blue' : 'purple';
+            btn.classList.remove(`bg-${baseColor}-600`, 'text-white', 'border-transparent');
+            btn.classList.add(exId.includes('125-1') ? 'bg-white' : `bg-${baseColor}-50`, 'text-gray-400', `border-${baseColor}-100`);
+        });
+
+        const selectedBtn = document.getElementById(`btn-${exId}-${option}`);
+        const baseColor = exId.includes('125-1') ? 'blue' : 'purple';
+        selectedBtn.classList.remove(exId.includes('125-1') ? 'bg-white' : `bg-${baseColor}-50`, 'text-gray-400', `border-${baseColor}-100`);
+        selectedBtn.classList.add(`bg-${baseColor}-600`, 'text-white', 'border-transparent');
+
+        // Bài 1 - Chấm ngay
+        if (exId === '125-1') {
+            const feedback = document.getElementById('feedback-125-1');
+            feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-red-500', 'bg-emerald-50', 'bg-red-50');
+            if (option === 'D') {
+                feedback.innerText = "Chính xác! 🎉 V = 6 × 6 × 6 = 216 cm³";
+                feedback.classList.add('text-emerald-500', 'bg-emerald-50');
+                if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+            } else {
+                feedback.innerText = "Chưa đúng! Nhớ công thức V = a × a × a, đơn vị là cm³ nhé!";
+                feedback.classList.add('text-red-500', 'bg-red-50');
+                if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+            }
+            feedback.classList.add('opacity-100');
+        }
+
+        // Bài 3a - Chấm ngay
+        if (exId === '125-3a') {
+            // Đáp án đúng: A và C
+            if (option === 'AC') {
+                if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+            } else {
+                if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+            }
+        }
+    },
+    // Kiểm tra bài 2
+    checkEx2() {
+        const a = parseInt(document.getElementById('ans-125-2a').value);
+        const b = parseFloat(document.getElementById('ans-125-2b').value);
+        const fb = document.getElementById('fb-125-2');
+        fb.classList.remove('opacity-0', 'text-emerald-500', 'text-red-500');
+
+        const c1 = (a === 27);
+        const c2 = (b === 3.375);
+
+        if (c1 && c2) {
+            fb.innerText = "✅ Đúng cả hai! 3³ = 27 cm³ và 1,5³ = 3,375 dm³";
+            fb.classList.add('text-emerald-500', 'opacity-100');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            let msg = "❌ ";
+            if (!c1) msg += "Xúc xắc: V = 3×3×3 = 27 cm³. ";
+            if (!c2) msg += "Bể cá: V = 1,5×1,5×1,5 = 3,375 dm³.";
+            fb.innerText = msg;
+            fb.classList.add('text-red-500', 'opacity-100');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    }
 };
+
+window.lesson125 = lesson125;
