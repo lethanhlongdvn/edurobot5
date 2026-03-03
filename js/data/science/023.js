@@ -2,7 +2,7 @@ export const lesson023 = {
     "topic": "Khám phá Khoa học",
     "week": "12",
     "period": "23",
-    "title": ""BÀI 11: SỬ DỤNG NĂNG LƯỢNG MẶT TRỜI",
+    "title": "BÀI 11: SỬ DỤNG NĂNG LƯỢNG MẶT TRỜI",
     "desc": "Bài học Khoa học tuần 12, tiết 23.",
     "content": `
         <div class="space-y-4 text-emerald-900">
@@ -11,7 +11,7 @@ export const lesson023 = {
                     <span class="text-3xl">🌿</span>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-black italic">"Bài 11: Sử dụng năng lượng mặt trời</h3>
+                    <h3 class="text-2xl font-black italic">Bài 11: Sử dụng năng lượng mặt trời</h3>
                     <p class="text-sm font-bold opacity-80">Kiến thức Khoa học lớp 5</p>
                 </div>
             </div>

@@ -22,7 +22,7 @@ for line in lines:
         indexStr = parts[0]
         weekStr = parts[1]
         periodStr = parts[2]
-        titleStr = parts[3].strip()
+        titleStr = parts[3].strip().replace('"', '')
         
         # Write individual lesson file
         period = periodStr.zfill(3) # '001', '010', '070'
@@ -67,25 +67,4 @@ for line in lines:
         imports.append(f"import {{ {js_name} }} from './{period}.js';")
         lessons.append(js_name)
 
-# Write index.js
-index_content = "\n".join(imports) + "\n\n"
-index_content += "export const scienceData = [\n    " + ",\n    ".join(lessons) + "\n];\n"
-
-with open(os.path.join(base_path, 'index.js'), 'w', encoding='utf-8') as f:
-    f.write(index_content)
-    
-print("Created files successfully.")
-
-# Modify data_loader.js dynamically
-loader_path = r'c:\Users\Admin\Desktop\edurobot5\edurobot5\js\data_loader.js'
-with open(loader_path, 'r', encoding='utf-8') as f:
-    loader_content = f.read()
-
-if "import { scienceData }" not in loader_content:
-    loader_content = "import { scienceData } from './data/science/index.js';\n" + loader_content
-    # Replace science: [], with science: scienceData,
-    loader_content = loader_content.replace('science: [],', 'science: scienceData,')
-    
-    with open(loader_path, 'w', encoding='utf-8') as f:
-        f.write(loader_content)
-    print("Modified data_loader.js successfully.")
+# Script finished without overwriting index.js or data_loader.js.

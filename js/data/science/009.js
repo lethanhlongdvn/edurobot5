@@ -2,7 +2,7 @@ export const lesson009 = {
     "topic": "Khám phá Khoa học",
     "week": "5",
     "period": "9",
-    "title": ""BÀI 4: ĐẶC ĐIỂM CỦA CHẤT Ở TRẠNG THÁI RẮN",
+    "title": "BÀI 4: ĐẶC ĐIỂM CỦA CHẤT Ở TRẠNG THÁI RẮN",
     "desc": "Bài học Khoa học tuần 5, tiết 9.",
     "content": `
         <div class="space-y-4 text-emerald-900">
@@ -11,7 +11,7 @@ export const lesson009 = {
                     <span class="text-3xl">🌿</span>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-black italic">"Bài 4: Đặc điểm của chất ở trạng thái rắn</h3>
+                    <h3 class="text-2xl font-black italic">Bài 4: Đặc điểm của chất ở trạng thái rắn</h3>
                     <p class="text-sm font-bold opacity-80">Kiến thức Khoa học lớp 5</p>
                 </div>
             </div>

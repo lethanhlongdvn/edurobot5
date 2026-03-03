@@ -2,7 +2,7 @@ export const lesson004 = {
     "topic": "Khám phá Khoa học",
     "week": "2",
     "period": "4",
-    "title": ""BÀI 2: Ô NHIỄM",
+    "title": "BÀI 2: Ô NHIỄM",
     "desc": "Bài học Khoa học tuần 2, tiết 4.",
     "content": `
         <div class="space-y-4 text-emerald-900">
@@ -11,7 +11,7 @@ export const lesson004 = {
                     <span class="text-3xl">🌿</span>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-black italic">"Bài 2: Ô nhiễm</h3>
+                    <h3 class="text-2xl font-black italic">Bài 2: Ô nhiễm</h3>
                     <p class="text-sm font-bold opacity-80">Kiến thức Khoa học lớp 5</p>
                 </div>
             </div>
