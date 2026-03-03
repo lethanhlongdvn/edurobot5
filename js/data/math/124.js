@@ -12,11 +12,8 @@ export const lesson124 = {
             <!-- Hero Title -->
             <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] md:rounded-[48px] p-8 md:p-12 border border-purple-100 dark:border-slate-700 shadow-sm relative overflow-hidden">
                 <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-20 h-20 md:w-28 md:h-28 bg-purple-600 rounded-3xl flex items-center justify-center text-4xl md:text-7xl shadow-xl shadow-purple-200 dark:shadow-purple-900/40 shrink-0 transform rotate-6 text-white">🧊</div>
-                    <div class="text-center md:text-left">
-                        <h2 class="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-4 leading-tight uppercase">Thể tích hình lập phương</h2>
-                        <p class="text-lg md:text-2xl text-purple-700 dark:text-purple-400 font-bold italic leading-relaxed">Vì hình lập phương là hình hộp chữ nhật có ba kích thước bằng nhau nên việc tính toán vô cùng đơn giản!</p>
-                    </div>
+                    <div class="w-20 h-20 md:w-28 md:h-28 bg-purple-600 rounded-3xl flex items-center justify-center text-5xl md:text-8xl shadow-xl shadow-purple-200 dark:shadow-purple-900/40 shrink-0 transform rotate-6 text-white font-black italic">V</div>
+                    <p class="text-2xl md:text-4xl text-purple-700 dark:text-purple-400 font-bold italic leading-relaxed text-center md:text-left">Vì hình lập phương là hình hộp chữ nhật có ba kích thước bằng nhau nên việc tính toán vô cùng đơn giản!</p>
                 </div>
             </div>
 
@@ -30,9 +27,12 @@ export const lesson124 = {
                     
                     <div class="flex flex-col lg:grid lg:grid-cols-2 gap-10 items-center">
                         <img src="hinh_anh/toan/toan_tap_2/124-khampha.png" alt="Khám phá" class="w-full max-w-[500px] h-auto rounded-3xl shadow-xl border-4 border-white transition-transform hover:scale-105">
-                        <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] shadow-sm flex items-center gap-6 border-2 border-dashed border-purple-200">
+                        <div class="bg-white dark:bg-slate-800 p-10 rounded-[32px] shadow-sm flex items-center gap-6 border-2 border-dashed border-purple-200">
                             <div class="w-16 h-16 bg-purple-600 rounded-2xl shrink-0 flex items-center justify-center text-white font-black text-4xl shadow-lg">!</div>
-                            <p class="text-xl md:text-3xl font-black text-gray-800 dark:text-white leading-tight">Hình lập phương có <span class="text-purple-600 underline underline-offset-8 decoration-4">Dài = Rộng = Cao</span>.</p>
+                            <div>
+                                <p class="text-3xl md:text-5xl font-black text-gray-800 dark:text-white leading-snug">Hình lập phương có</p>
+                                <p class="text-3xl md:text-5xl font-black text-purple-600 leading-snug underline underline-offset-8 decoration-4">Dài = Rộng = Cao</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -40,9 +40,11 @@ export const lesson124 = {
 
             <!-- Công thức Ghi nhớ -->
             <div class="bg-gradient-to-r from-pink-500 to-rose-600 p-8 md:p-12 rounded-[48px] text-white shadow-2xl relative overflow-hidden group">
-                <div class="flex flex-col md:flex-row items-center gap-10">
-                   <img src="hinh_anh/toan/toan_tap_2/124-formula.png" alt="Công thức" class="w-full max-w-[280px] h-auto rounded-3xl border-4 border-pink-400/50 shadow-2xl group-hover:rotate-3 transition-transform">
-                   <div class="text-center md:text-left space-y-4">
+                <div class="flex flex-col lg:flex-row items-center gap-10">
+                   <div class="w-full lg:w-1/2 flex justify-center">
+                       <img src="hinh_anh/toan/toan_tap_2/124-formula.png" alt="Công thức" class="w-full h-auto rounded-3xl border-4 border-pink-400/50 shadow-2xl group-hover:rotate-1 transition-transform">
+                   </div>
+                   <div class="w-full lg:w-1/2 text-center lg:text-left space-y-4">
                         <p class="text-sm font-black uppercase tracking-[0.3em] opacity-80 bg-white/20 inline-block px-4 py-1 rounded-full">Ghi nhớ quan trọng</p>
                         <p class="text-5xl md:text-8xl font-black drop-shadow-lg tracking-tight">V = a &times; a &times; a</p>
                         <p class="text-xl md:text-2xl italic font-bold opacity-90">(Trong đó <span class="text-yellow-300">a</span> là độ dài của một cạnh)</p>
