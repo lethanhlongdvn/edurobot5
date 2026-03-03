@@ -312,20 +312,20 @@ export const lesson120 = {
         </div>
     `,
     "quizPool": [
-        { "question": "Hình lập phương có mấy mặt bằng nhau?", "options": ["6 mặt", "4 mặt", "8 mặt", "12 mặt"], "answer": 0, "level": 1 },
-        { "question": "Diện tích một mặt của hình lập phương có cạnh a là:", "options": ["a × a", "a × 4", "a × 6", "a × a × 4"], "answer": 0, "level": 1 },
+        { "question": "Hình lập phương có mấy mặt bằng nhau?", "options": ["4 mặt", "6 mặt", "8 mặt", "12 mặt"], "answer": 1, "level": 1 },
+        { "question": "Diện tích một mặt của hình lập phương có cạnh a là:", "options": ["a × 4", "a × a", "a × 6", "a × a × 4"], "answer": 1, "level": 1 },
         { "question": "Công thức tính diện tích xung quanh của hình lập phương cạnh a là:", "options": ["Sxq = (a × a) × 4", "Sxq = (a × a) × 6", "Sxq = a × 4", "Sxq = a × a"], "answer": 0, "level": 1 },
-        { "question": "Công thức tính diện tích toàn phần của hình lập phương cạnh a là:", "options": ["Stp = (a × a) × 6", "Stp = (a × a) × 4", "Stp = a × 6", "Stp = a × a"], "answer": 0, "level": 1 },
-        { "question": "Một hình lập phương có cạnh 2 cm. Diện tích xung quanh của nó là:", "options": ["16 cm<sup>2</sup>", "8 cm<sup>2</sup>", "24 cm<sup>2</sup>", "4 cm<sup>2</sup>"], "answer": 0, "level": 1 },
-        { "question": "Một hình lập phương có cạnh 3 dm. Diện tích toàn phần của nó là:", "options": ["54 dm<sup>2</sup>", "36 dm<sup>2</sup>", "9 dm<sup>2</sup>", "27 dm<sup>2</sup>"], "answer": 0, "level": 1 },
-        { "question": "Nếu cạnh của hình lập phương gấp lên 3 lần thì diện tích xung quanh gấp lên mấy lần?", "options": ["9 lần", "3 lần", "6 lần", "12 lần"], "answer": 0, "level": 2 },
-        { "question": "Diện tích toàn phần của hình lập phương có cạnh 1,1 m là:", "options": ["7,26 m<sup>2</sup>", "4,84 m<sup>2</sup>", "1,21 m<sup>2</sup>", "6,6 m<sup>2</sup>"], "answer": 0, "level": 1 },
-        { "question": "Một cái hộp hình lập phương không có nắp cạnh 5 dm. Diện tích giấy cần để dán mặt ngoài của hộp là:", "options": ["125 dm<sup>2</sup>", "100 dm<sup>2</sup>", "150 dm<sup>2</sup>", "25 dm<sup>2</sup>"], "answer": 0, "level": 2 },
-        { "question": "Hình lập phương là hình hộp chữ nhật đặc biệt có:", "options": ["Chiều dài = Chiều rộng = Chiều cao", "Chiều dài > Chiều rộng", "Có 6 mặt là hình chữ nhật", "Có 12 cạnh không bằng nhau"], "answer": 0, "level": 1 },
-        { "question": "Muốn tính diện tích toàn phần hình lập phương, ta lấy diện tích một mặt nhân với mấy?", "options": ["6", "4", "12", "2"], "answer": 0, "level": 1 },
-        { "question": "Một hình lập phương có diện tích một mặt là 25 cm<sup>2</sup>. Cạnh của hình lập phương đó là:", "options": ["5 cm", "4 cm", "6 cm", "25 cm"], "answer": 0, "level": 1 },
-        { "question": "Một hình lập phương có diện tích xung quanh là 100 cm<sup>2</sup>. Diện tích một mặt của nó là:", "options": ["25 cm<sup>2</sup>", "20 cm<sup>2</sup>", "50 cm<sup>2</sup>", "400 cm<sup>2</sup>"], "answer": 0, "level": 1 },
-        { "question": "Một hình lập phương có diện tích toàn phần là 96 dm<sup>2</sup>. Diện tích một mặt của nó là:", "options": ["16 dm<sup>2</sup>", "24 dm<sup>2</sup>", "6 dm<sup>2</sup>", "12 dm<sup>2</sup>"], "answer": 0, "level": 1 },
-        { "question": "Nếu diện tích một mặt của hình lập phương tăng 4 lần thì cạnh của nó tăng mấy lần?", "options": ["2 lần", "4 lần", "8 lần", "16 lần"], "answer": 0, "level": 2 }
+        { "question": "Công thức tính diện tích toàn phần của hình lập phương cạnh a là:", "options": ["Stp = (a × a) × 4", "Stp = a × 6", "Stp = (a × a) × 6", "Stp = a × a"], "answer": 2, "level": 1 },
+        { "question": "Một hình lập phương có cạnh 2 cm. Diện tích xung quanh của nó là:", "options": ["8 cm<sup>2</sup>", "16 cm<sup>2</sup>", "24 cm<sup>2</sup>", "4 cm<sup>2</sup>"], "answer": 1, "level": 1 },
+        { "question": "Một hình lập phương có cạnh 3 dm. Diện tích toàn phần của nó là:", "options": ["36 dm<sup>2</sup>", "9 dm<sup>2</sup>", "54 dm<sup>2</sup>", "27 dm<sup>2</sup>"], "answer": 2, "level": 1 },
+        { "question": "Nếu cạnh của hình lập phương gấp lên 3 lần thì diện tích xung quanh gấp lên mấy lần?", "options": ["3 lần", "6 lần", "9 lần", "12 lần"], "answer": 2, "level": 2 },
+        { "question": "Diện tích toàn phần của hình lập phương có cạnh 1,1 m là:", "options": ["4,84 m<sup>2</sup>", "7,26 m<sup>2</sup>", "1,21 m<sup>2</sup>", "6,6 m<sup>2</sup>"], "answer": 1, "level": 1 },
+        { "question": "Một cái hộp hình lập phương không có nắp cạnh 5 dm. Diện tích giấy cần để dán mặt ngoài của hộp là:", "options": ["100 dm<sup>2</sup>", "150 dm<sup>2</sup>", "125 dm<sup>2</sup>", "25 dm<sup>2</sup>"], "answer": 2, "level": 2 },
+        { "question": "Hình lập phương là hình hộp chữ nhật đặc biệt có:", "options": ["Có 6 mặt là hình chữ nhật", "Có 12 cạnh không bằng nhau", "Chiều dài = Chiều rộng = Chiều cao", "Chiều dài > Chiều rộng"], "answer": 2, "level": 1 },
+        { "question": "Muốn tính diện tích toàn phần hình lập phương, ta lấy diện tích một mặt nhân với mấy?", "options": ["4", "6", "12", "2"], "answer": 1, "level": 1 },
+        { "question": "Một hình lập phương có diện tích một mặt là 25 cm<sup>2</sup>. Cạnh của hình lập phương đó là:", "options": ["4 cm", "5 cm", "6 cm", "25 cm"], "answer": 1, "level": 1 },
+        { "question": "Một hình lập phương có diện tích xung quanh là 100 cm<sup>2</sup>. Diện tích một mặt của nó là:", "options": ["20 cm<sup>2</sup>", "25 cm<sup>2</sup>", "50 cm<sup>2</sup>", "400 cm<sup>2</sup>"], "answer": 1, "level": 1 },
+        { "question": "Một hình lập phương có diện tích toàn phần là 96 dm<sup>2</sup>. Diện tích một mặt của nó là:", "options": ["24 dm<sup>2</sup>", "16 dm<sup>2</sup>", "6 dm<sup>2</sup>", "12 dm<sup>2</sup>"], "answer": 1, "level": 1 },
+        { "question": "Nếu diện tích một mặt của hình lập phương tăng 4 lần thì cạnh của nó tăng mấy lần?", "options": ["4 lần", "8 lần", "2 lần", "16 lần"], "answer": 2, "level": 2 }
     ]
 };
