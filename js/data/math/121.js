@@ -1,6 +1,6 @@
 export const lesson121 = {
     "topic": "Hình học và Đo lường",
-    "week": "24",
+    "week": "25",
     "period": "121",
     "title": "BÀI 49: LUYỆN TẬP",
     "desc": "Luyện tập tính diện tích xung quanh và diện tích toàn phần của hình lập phương thông qua các bài toán vận dụng thực tế.",
