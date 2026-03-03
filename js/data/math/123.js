@@ -90,6 +90,10 @@ export const lesson123 = {
                         <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-amber-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-amber-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
                             <textarea id="ans-123-2" rows="5" class="w-full flex-grow p-6 rounded-2xl border-2 border-amber-200 bg-amber-50/50 dark:bg-slate-900 outline-none focus:border-amber-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;Thể tích khối 1: ...&#10;Thể tích khối 2: ...&#10;Thể tích cả khối gỗ: ...&#10;Đáp số: ... cm³"></textarea>
+                            <div class="mt-4 flex items-center gap-4">
+                                <button onclick="Lesson.submitWordProblemAI('123-2')" class="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                                <span id="fb-123-2" class="text-xl font-black opacity-0 transition-opacity"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,23 +115,42 @@ export const lesson123 = {
                         <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-blue-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-blue-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
                             <textarea id="ans-123-3" rows="5" class="w-full flex-grow p-6 rounded-2xl border-2 border-blue-200 bg-blue-50/50 dark:bg-slate-900 outline-none focus:border-blue-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;Thể tích nước lúc sau: ...&#10;Thể tích nước lúc đầu: ...&#10;Thể tích tảng đá: ...&#10;Đáp số: ... dm³"></textarea>
+                            <div class="mt-4 flex items-center gap-4">
+                                <button onclick="Lesson.submitWordProblemAI('123-3')" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                                <span id="fb-123-3" class="text-xl font-black opacity-0 transition-opacity"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Nộp bài toàn bộ -->
-            <div class="pt-12 flex justify-center">
-                <button onclick="window.submitMathLesson('Hoàn thành Luyện tập Thể tích', 100)" class="bg-blue-600 hover:bg-blue-700 text-white px-12 md:px-20 py-6 md:py-8 rounded-[40px] font-black text-2xl md:text-4xl uppercase tracking-widest shadow-2xl shadow-blue-300 transition-all transform hover:-translate-y-2 active:scale-95 flex items-center gap-6">
-                    Nộp bài học <svg class="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+            <!-- Nộp bài -->
+            <div class="pt-8 flex justify-center">
+                <button onclick="window.submitMathLesson('Hoàn thành Luyện tập Thể tích', 100)" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-4 rounded-2xl font-black text-xl uppercase tracking-widest shadow-xl transition-all active:scale-95 flex items-center gap-3">
+                    NỘP BÀI <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </button>
             </div>
         </div>
     `,
     quizPool: [
+        // Level 1 - Cơ bản
+        { "question": "Công thức tính thể tích hình hộp chữ nhật là:", "options": ["V = a × b", "V = (a + b) × c", "V = a × b × c", "V = a × b × 2"], "answer": 2, "level": 1 },
+        { "question": "Hình hộp chữ nhật có chiều dài 5cm, chiều rộng 3cm, chiều cao 2cm. Thể tích là:", "options": ["10 cm³", "30 cm³", "16 cm³", "26 cm³"], "answer": 1, "level": 1 },
         { "question": "Một khối hình ghép từ 5 khối lập phương 1cm³. Thể tích là:", "options": ["1 cm³", "5 cm³", "10 cm³", "25 cm³"], "answer": 1, "level": 1 },
-        { "question": "Khi cho một vật vào bể nước, chiều cao nước tăng 2cm. Đáy bể là 50cm². Thể tích vật là:", "options": ["50 cm³", "100 cm³", "25 cm³", "10 cm³"], "answer": 1, "level": 2 },
-        { "question": "Một hộp thể tích 20cm³. Có thể xếp bao nhiêu khối 2cm³ vào hộp?", "options": ["5 khối", "10 khối", "20 khối", "40 khối"], "answer": 1, "level": 1 }
+        { "question": "Hình hộp chữ nhật có chiều dài 10cm, chiều rộng 4cm, chiều cao 3cm. Thể tích là:", "options": ["120 cm³", "100 cm³", "70 cm³", "34 cm³"], "answer": 0, "level": 1 },
+        { "question": "Một hộp thể tích 20cm³. Có thể xếp tối đa bao nhiêu khối lập phương 2cm³ vào hộp?", "options": ["5 khối", "10 khối", "20 khối", "40 khối"], "answer": 1, "level": 1 },
+        // Level 2 - Nâng cao
+        { "question": "Hình hộp chữ nhật có V = 128cm³. Nếu khối gỗ nhỏ có V = 4cm³ thì xếp được nhiều nhất:", "options": ["16 khối", "32 khối", "64 khối", "128 khối"], "answer": 1, "level": 2 },
+        { "question": "Khi cho một vật vào bể nước, chiều cao nước tăng 2cm. Đáy bể có diện tích 50cm². Thể tích vật là:", "options": ["50 cm³", "100 cm³", "25 cm³", "52 cm³"], "answer": 1, "level": 2 },
+        { "question": "Một bể nước hình hộp chữ nhật dài 10dm, rộng 6dm, mực nước cao 3dm. Thể tích nước trong bể là:", "options": ["60 dm³", "180 dm³", "120 dm³", "300 dm³"], "answer": 1, "level": 2 },
+        { "question": "Khối gỗ chữ L gồm 2 hộp chữ nhật: hộp 1 có V₁ = 120cm³, hộp 2 có V₂ = 50cm³. Thể tích cả khối là:", "options": ["70 cm³", "170 cm³", "6000 cm³", "120 cm³"], "answer": 1, "level": 2 },
+        { "question": "Bể nước dài 10dm, rộng 6dm. Khi bỏ đá vào, nước dâng từ 3dm lên 4dm. Thể tích tảng đá là:", "options": ["30 dm³", "40 dm³", "60 dm³", "180 dm³"], "answer": 2, "level": 2 },
+        // Level 3 - Thử thách
+        { "question": "Một hộp dài 8cm, rộng 4cm, cao 4cm. Khối gỗ nhỏ dài 4cm, rộng 1cm, cao 1cm. Xếp được bao nhiêu khối?", "options": ["8 khối", "16 khối", "32 khối", "64 khối"], "answer": 2, "level": 3 },
+        { "question": "Một bể hình hộp chữ nhật có V = 240dm³, chiều dài 10dm, chiều rộng 6dm. Mực nước cao bao nhiêu dm?", "options": ["2 dm", "4 dm", "6 dm", "24 dm"], "answer": 1, "level": 3 },
+        { "question": "Ghép 2 hình hộp chữ nhật giống nhau (5×3×2) thành 1 khối. Thể tích khối mới là:", "options": ["30 cm³", "60 cm³", "90 cm³", "120 cm³"], "answer": 1, "level": 3 },
+        { "question": "Một khối gỗ hình chữ L có thể chia thành hộp (8×5×3cm) và hộp (8×6×5cm). Thể tích cả khối là:", "options": ["120 cm³", "240 cm³", "360 cm³", "480 cm³"], "answer": 2, "level": 3 },
+        { "question": "Bể nước dài 20dm, rộng 10dm, nước cao 5dm. Thả hòn đá vào, nước dâng lên 5,5dm. Thể tích hòn đá:", "options": ["50 dm³", "100 dm³", "200 dm³", "1000 dm³"], "answer": 1, "level": 3 }
     ],
     // Logic cho MCQ bài tập 1
     selectMCQ(exId, option) {
