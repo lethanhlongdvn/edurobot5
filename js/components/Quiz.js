@@ -28,7 +28,7 @@ export const Quiz = {
                             <span class="text-[10px] md:text-xs font-black text-orange-400 uppercase tracking-widest leading-none mb-1">Tiến độ</span>
                             <div class="flex items-baseline gap-1">
                                 <span id="quiz-progress-current" class="text-xl md:text-3xl font-black text-orange-600 leading-none">1</span>
-                                <span id="quiz-progress-total" class="text-sm md:text-lg font-bold text-orange-300">/15</span>
+                                <span id="quiz-progress-total" class="text-sm md:text-lg font-bold text-orange-300">/10</span>
                             </div>
                         </div>
                     </div>
@@ -167,14 +167,14 @@ export const Quiz = {
             return;
         }
 
-        // Chọn tối đa 15 câu (Tăng từ 10 lên 15 theo yêu cầu)
-        const lv1 = pool.filter(q => q.level === 1).sort(() => 0.5 - Math.random()).slice(0, 8);
-        const lv2 = pool.filter(q => q.level === 2).sort(() => 0.5 - Math.random()).slice(0, 5);
-        const lv3 = pool.filter(q => q.level === 3).sort(() => 0.5 - Math.random()).slice(0, 2);
+        // Chọn ngẫu nhiên 10 câu trong pool để tạo sự đa dạng (Phân bổ: 5 Dễ, 3 Trung bình, 2 Khó)
+        const lv1 = pool.filter(q => q.level === 1).sort(() => 0.5 - Math.random()).slice(0, 5);
+        const lv2 = pool.filter(q => q.level === 2).sort(() => 0.5 - Math.random()).slice(0, 3);
+        const lv3 = pool.filter(q => q.level === 3 || q.level === undefined).sort(() => 0.5 - Math.random()).slice(0, 2);
 
         let finalPool = [...lv1, ...lv2, ...lv3];
-        if (finalPool.length < 15) {
-            finalPool = pool.sort(() => 0.5 - Math.random()).slice(0, 15);
+        if (finalPool.length < 10) {
+            finalPool = pool.sort(() => 0.5 - Math.random()).slice(0, 10);
         }
         finalPool.sort(() => 0.5 - Math.random());
 
