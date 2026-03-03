@@ -1,0 +1,15 @@
+1. Muốn tính diện tích xung quanh hình hộp chữ nhật có dài a, rộng b, cao c: Sxq = (a + b) × 2 × c
+2. Diện tích toàn phần hình lập phương cạnh a là: a × a × 6
+3. Hai khối có thể tích bằng nhau thì diện tích toàn phần có nhất thiết bằng nhau không? Không
+4. Công thức tính thể tích hình lập phương là: V = a × a × a
+5. Hình có 6 mặt là hình lập phương và: Hình hộp chữ nhật
+6. Hình khai triển của khối trụ gồm 1 hình chữ nhật và mấy hình tròn? 2 hình tròn
+7. Hình hộp chữ nhật kích thước 25cm, 20cm, 10cm. Sxq là: 900 cm²
+8. Một chiếc hộp không nắp hình lập phương cạnh 8dm. Phần sơn phía ngoài là: 320 dm²
+9. HLP cạnh 0,5m có diện tích xung quanh là bao nhiêu m²? 1 m²
+10. Một hộp sữa hình hộp chữ nhật 5cm, 4cm, 10cm. Thể tích hộp sữa là: 200 cm³
+11. Muốn tính Sxq của tường phòng học, ta lấy chu vi nền nhà nhân với: Chiều cao căn phòng
+12. HLP cạnh 4cm, muốn sơn 6 mặt thì diện tích cần sơn là: 96 cm²
+13. Thể tích hình nào bằng (ab) x c? HHCN
+14. Diện tích 4 mặt bên hình lập phương gọi là: Diện tích xung quanh
+15. Lập phương có Sxq 100cm². Diện tích một mặt là: 25 cm²

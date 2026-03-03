@@ -1,0 +1,15 @@
+1. Công thức tính thể tích hình lập phương có cạnh a là: V = a × a × a
+2. Diện tích một mặt hình lập phương là a × a. Công thức tính khối lượng V có thể viết lại: S_mặt × a
+3. Một hình lập phương có cạnh 3cm. Thể tích của nó là: 27 cm³
+4. Một hình lập phương có cạnh 4dm. Thể tích của nó là: 64 dm³
+5. Một khối rubik hình lập phương có cạnh 5cm. Thể tích của khối rubik là: 125 cm³
+6. Nếu cạnh hình lập phương bằng 10cm thì thể tích của nó bằng: 1000 cm³
+7. Một khối lập phương có thể tích là 64cm³. Cạnh của nó là: 4 cm
+8. Bể nước dạng lập phương cạnh 2m. Thể tích bể là: 8 m³
+9. Hình lập phương cạnh 1dm. Vậy 1dm³ bằng bao nhiêu cm³? 1000 cm³
+10. Nước trong bể dạng lập phương cạnh 1m. Số lít nước: 1000 lít
+11. Một cái thùng LP cạnh 6dm. Thể tích cái thùng là: 216 dm³
+12. Nếu cạnh hình lập phương tăng gấp đôi thì thể tích HLP đó tăng: 8 lần
+13. Xếp 8 khối LP nhỏ cạnh 1cm thành 1 khối LP lớn. Thể tích HLP lớn là: 8 cm³
+14. Cạnh hình lập phương lớn gấp 3 lần cạnh hình lập phương bé thì thể tích HLP lớn gấp HLP bé: 27 lần
+15. Khối gỗ lập phương cạnh 20cm bị cắt một góc. Thể tích ban đầu là: 8000 cm³

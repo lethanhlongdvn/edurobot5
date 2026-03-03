@@ -1,0 +1,15 @@
+1. Để tính thể tích xúc xắc hình lập phương cạnh 3cm ta lấy: 3 × 3 × 3 = 27 cm³
+2. Bể cá hình lập phương cạnh 1,5dm có thể tích là: 3,375 dm³
+3. Một khối rubik cạnh 6cm có thể tích là bao nhiêu? 216 cm³
+4. 1m³ bằng bao nhiêu dm³? 1000 dm³
+5. Khối lập phương A có thể tích 64cm³. Cạnh của khối A là: 4 cm
+6. Xếp hai hình lập phương nhỏ thành một hình hộp chữ nhật. Thể tích khối ghép sẽ bằng tổng thể tích: 2 khối lập phương
+7. 10 lít nước tương đương 10 dm³. Đổi 10 dm³ sang cm³ được: 10 000 cm³
+8. Diện tích một mặt của hình lập phương là 25cm². Cạnh của hình lập phương là: 5 cm
+9. Diện tích một mặt là 25cm², độ dài cạnh là 5cm. Thể tích hình lập phương đó là: 125 cm³
+10. Phép toán tính thể tích bể nước hình lập phương cạnh 0,5m là: 0,5 × 0,5 × 0,5 = 0,125 m³
+11. Hộp A cạnh 2cm, Hộp B cạnh 4cm. Thể tích B gấp hộp A mấy lần? 8 lần
+12. Hình hộp chữ nhật có diện tích đáy 15cm², cao 4cm. Vậy V = 60 cm³
+13. Tháp chất lỏng có lớp cao 10cm, 15cm, 12cm. Lớp có khối lượng lớn nhất phụ thuộc: Thể tích lớp đó
+14. Đổ 27cm³ nước vào cốc có chia vạch. Mực nước chỉ bao nhiêu nếu cốc hình lập phương cạnh 3cm? Đầy cốc
+15. Khối lập phương nhỏ có cạnh 2cm, thể tích 8cm³. Nếu dùng 4 khối thế thì được thể tích: 32 cm³

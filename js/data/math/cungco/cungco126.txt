@@ -1,0 +1,15 @@
+1. Thể tích hình lập phương cạnh 2dm là: V = 2 × 2 × 2 = 8 dm³
+2. Đổi 1 m³ thành dm³. Ta có 1 m³ bằng: 1000 dm³
+3. Một căn phòng có thể chứa 100 thùng, mỗi thùng 1m³. Thể tích phòng là: 100 m³
+4. Hộp lập phương cạnh 2dm đựng chậu cây. 100 chậu cây cần bao nhiêu hộp? 100 hộp
+5. Phòng của em dài 6m, rộng 4m, cao 3m. Thể tích phòng học là: V = 6 × 4 × 3 = 72 m³
+6. Một thùng chở hàng hình lập phương thể tích 1m³. Có thể xếp bao nhiêu hòm LP cạnh 50cm vào nó? 8 hòm
+7. Thể tích hình hộp chữ nhật dài 6m, rộng 4m, cao 2m là bao nhiêu m³? 48 m³
+8. Xếp 12 hộp lập phương 2dm vào thùng 6x4x4 dm. Thùng đó thể tích: 96 dm³
+9. Ước lượng chai nước có thể tích xấp xỉ bao nhiêu? 1 dm³ (tương đương 1 lít)
+10. Thể tích một phòng tắm dài 2,5m; rộng 2m; cao 2m là: 10 m³
+11. Số hòm 1 m³ xếp vừa vào xe tải thùng kích thước 4x2x2 m là: 16 hòm
+12. Hình nào có thể tích lớn nhất: Cục tẩy 5cm³, Hộp 5dm³, Thùng 5m³? Thùng 5m³
+13. Thùng hàng có thể tích 40 m³. Nếu đáy là 8m², tính chiều cao thùng. 5m
+14. Lớp tổ chức trò chơi Đường Đua, ước lượng thể tích bàn học. Khoảng: 120 dm³
+15. Ước lượng 1 khối rubik 3x3 thông thường. Thể tích khoảng: 200 cm³

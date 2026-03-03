@@ -1,0 +1,15 @@
+1. Thể tích hình hộp chữ nhật có chiều dài a, chiều rộng b, chiều cao c là: V = a × b × c
+2. Đơn vị đo thể tích là: cm³, dm³, m³
+3. Một hình hộp chữ nhật có dài 5cm, rộng 4cm, cao 3cm. Thể tích của nó là: 60 cm³
+4. Hình hộp chữ nhật có diện tích đáy 20cm², chiều cao 5cm. Thể tích của nó là: 100 cm³
+5. Muốn tính thể tích hình hộp chữ nhật, ta lấy chiều dài nhân chiều rộng rồi nhân với: Chiều cao
+6. Một bể nước hình hộp chữ nhật có dài 2m, rộng 1,5m, sâu 1m. Thể tích bể là: 3 m³
+7. Một khúc gỗ hình hộp chữ nhật có các kích thước 10cm, 8cm, 5cm. Thể tích khúc gỗ là: 400 cm³
+8. Thể tích hình hộp chữ nhật bằng tích của diện tích mặt đáy và: Chiều cao
+9. Để tính thể tích kiện hàng HHCN dài 20dm, rộng 10dm, cao 5dm ta tính: 20 × 10 × 5 = 1000 dm³
+10. Một cái hòm có chiều dài 2m, chiều rộng 1m, chiều cao 0,5m. Thể tích hòm là: 1 m³
+11. Diện tích mặt đáy một hình hộp chữ nhật là 15cm², thể tích là 90cm³. Chiều cao hình hộp là: 6 cm
+12. 1dm³ bằng bao nhiêu cm³? 1000 cm³
+13. Hình hộp chữ nhật có chiều dài 8cm, chiều rộng bằng nửa chiều dài, cao 2cm. Thể tích của nó là: 64 cm³
+14. Thể tích hình hộp chữ nhật tăng bao nhiêu lần nếu cả 3 kích thước đều tăng gấp đôi? 8 lần
+15. Nếu giữ nguyên đáy, chiều cao tăng gấp 3 thì thể tích Hộp chữ nhật sẽ: Tăng gấp 3 lần
