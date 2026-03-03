@@ -6,15 +6,15 @@ export const Lesson = {
     renderLessonPage(subject, lesson, allSubjects = []) {
         const color = common.getColorClasses(subject.color);
 
-        const hasStudy = !!(lesson.content?.trim());
-        const hasPractice = !!(lesson.practice?.trim());
+        const hasStudy = !!(typeof lesson.content === 'function' || lesson.content?.trim());
+        const hasPractice = !!(typeof lesson.practice === 'function' || lesson.practice?.trim());
         const hasQuiz = !!(lesson.quizPool && lesson.quizPool.length > 0);
 
         return `
             <div class="max-w-full mx-auto pb-10 px-1 pt-1">
                 <!-- Slim Lesson Title: Centered & Blue -->
                 <div class="text-center mb-6 animate-slide-down">
-                    <h1 class="text-3xl md:text-5xl font-black text-blue-900 dark:text-blue-400 leading-tight tracking-tight uppercase">${lesson.title}</h1>
+                    <h1 class="${lesson.title.length > 60 ? 'text-xl md:text-2xl' : lesson.title.length > 35 ? 'text-2xl md:text-3xl' : 'text-3xl md:text-5xl'} font-black text-blue-900 dark:text-blue-400 leading-tight tracking-tight uppercase">${lesson.title}</h1>
                 </div>
 
                 <!-- Tabs Navigation: Mảnh & Rộng (Khớp Navbar) -->
@@ -1163,7 +1163,708 @@ export const Lesson = {
             feedback.innerText = "Đã gửi bài cho AI chấm! Xem cửa sổ chat.";
             feedback.classList.add('text-blue-500');
         }
+    },
+
+    // ========================================================================
+    // KHOA HỌC MODULE 1: ĐIỀN VÀO CHỖ TRỐNG (Fill-in-the-Blanks)
+    // Đoạn văn có [___] → HS chọn từ danh sách từ để điền vào
+    // ========================================================================
+    renderFillBlanks(id, paragraph, wordBank, correctAnswers) {
+        // paragraph chứa {0}, {1}, {2}... cho các chỗ trống
+        // wordBank: array of words (xáo trộn)
+        // correctAnswers: array of correct words theo thứ tự {0}, {1}...
+        const safeAnswers = JSON.stringify(correctAnswers).replace(/"/g, '&quot;');
+
+        let processedParagraph = paragraph;
+        for (let i = 0; i < correctAnswers.length; i++) {
+            processedParagraph = processedParagraph.replace(
+                `{${i}}`,
+                `<span id="fb-slot-${id}-${i}" class="inline-block min-w-[80px] md:min-w-[120px] px-3 py-1 mx-1 bg-amber-100 border-2 border-dashed border-amber-400 rounded-xl text-center font-black text-amber-700 cursor-pointer align-middle transition-all hover:bg-amber-200" onclick="Lesson.clearFillBlankSlot('${id}', ${i})" data-value="">[___]</span>`
+            );
+        }
+
+        const shuffledBank = [...wordBank].sort(() => Math.random() - 0.5);
+        const bankHtml = shuffledBank.map((word, idx) => `
+            <button id="fb-word-${id}-${idx}" onclick="Lesson.selectFillBlankWord('${id}', this, '${word.replace(/'/g, "\\'")}')"
+                class="px-4 py-2 bg-white border-2 border-emerald-200 text-emerald-800 font-bold rounded-xl shadow-sm hover:bg-emerald-50 hover:border-emerald-400 transition-all active:scale-95 text-base md:text-lg"
+                data-word="${word}">${word}</button>
+        `).join('');
+
+        return `
+        <div class="fill-blanks-exercise p-6 md:p-8 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] shadow-sm border border-amber-100 dark:border-slate-700 mt-6 animate-fade-in" id="fb-ex-${id}">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-amber-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">✏️</div>
+                <h3 class="text-xl md:text-2xl font-black text-amber-900 dark:text-amber-200">Điền vào chỗ trống</h3>
+            </div>
+
+            <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-amber-200 mb-6 text-lg md:text-xl font-bold text-gray-800 dark:text-slate-100 leading-loose">
+                ${processedParagraph}
+            </div>
+
+            <div class="mb-4">
+                <p class="text-sm font-black text-emerald-600 uppercase tracking-widest mb-3">📦 Ngân hàng từ</p>
+                <div class="flex flex-wrap gap-3" id="fb-bank-${id}">
+                    ${bankHtml}
+                </div>
+            </div>
+
+            <div class="mt-6 flex items-center gap-4">
+                <button onclick="Lesson.checkFillBlanks('${id}', '${safeAnswers}')" class="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white font-black rounded-xl shadow-lg transition-all active:scale-95 text-lg">Kiểm Tra</button>
+                <span id="fb-feedback-${id}" class="text-base font-bold opacity-0 transition-opacity"></span>
+            </div>
+        </div>
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window['fbState_${id}'] = { selectedWord: null, selectedBtn: null }" class="hidden">
+        `;
+    },
+
+    selectFillBlankWord(id, btn, word) {
+        const state = window[`fbState_${id}`];
+        if (!state) return;
+        // Remove previous selection
+        if (state.selectedBtn) {
+            state.selectedBtn.classList.remove('ring-4', 'ring-amber-400', 'scale-105');
+        }
+        state.selectedWord = word;
+        state.selectedBtn = btn;
+        btn.classList.add('ring-4', 'ring-amber-400', 'scale-105');
+    },
+
+    clearFillBlankSlot(id, slotIdx) {
+        const slot = document.getElementById(`fb-slot-${id}-${slotIdx}`);
+        if (!slot || !slot.dataset.value) return;
+        // Restore word to bank
+        const bank = document.getElementById(`fb-bank-${id}`);
+        const btns = bank.querySelectorAll('button');
+        btns.forEach(b => {
+            if (b.dataset.word === slot.dataset.value && b.classList.contains('hidden')) {
+                b.classList.remove('hidden');
+            }
+        });
+        slot.textContent = '[___]';
+        slot.dataset.value = '';
+        slot.classList.remove('bg-emerald-100', 'border-emerald-400', 'text-emerald-700');
+        slot.classList.add('bg-amber-100', 'border-amber-400', 'text-amber-700');
+    },
+
+    checkFillBlanks(id, answersStr) {
+        const state = window[`fbState_${id}`];
+        // If a word is selected and user clicks a slot, place it
+        // This is handled by click events, so checkFillBlanks just validates
+        const correctAnswers = JSON.parse(answersStr.replace(/&quot;/g, '"'));
+        const feedback = document.getElementById(`fb-feedback-${id}`);
+        let allCorrect = true;
+        let allFilled = true;
+
+        for (let i = 0; i < correctAnswers.length; i++) {
+            const slot = document.getElementById(`fb-slot-${id}-${i}`);
+            if (!slot) continue;
+            const val = slot.dataset.value || '';
+            if (!val) { allFilled = false; continue; }
+            if (val !== correctAnswers[i]) {
+                allCorrect = false;
+                slot.classList.remove('bg-emerald-100', 'border-emerald-400', 'text-emerald-700', 'bg-amber-100', 'border-amber-400', 'text-amber-700');
+                slot.classList.add('bg-red-100', 'border-red-400', 'text-red-700');
+            } else {
+                slot.classList.remove('bg-red-100', 'border-red-400', 'text-red-700', 'bg-amber-100', 'border-amber-400', 'text-amber-700');
+                slot.classList.add('bg-emerald-100', 'border-emerald-400', 'text-emerald-700');
+            }
+        }
+
+        feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-orange-500');
+        if (!allFilled) {
+            feedback.innerText = "Em chưa điền hết các chỗ trống!";
+            feedback.classList.add('text-orange-500');
+        } else if (allCorrect) {
+            feedback.innerText = "Hoàn hảo! Tất cả đều đúng! 🎉";
+            feedback.classList.add('text-emerald-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            feedback.innerText = "Có chỗ chưa đúng, thử lại nhé!";
+            feedback.classList.add('text-orange-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    // Override slot click to also place selected word
+    _initFillBlanksSlotClick() {
+        document.addEventListener('click', (e) => {
+            const slot = e.target.closest('[id^="fb-slot-"]');
+            if (!slot) return;
+            const parts = slot.id.split('-');
+            const id = parts[2];
+            const state = window[`fbState_${id}`];
+            if (!state || !state.selectedWord) return;
+
+            // Place word in slot
+            if (slot.dataset.value) {
+                // Already has a word, restore it first
+                const bank = document.getElementById(`fb-bank-${id}`);
+                const btns = bank.querySelectorAll('button');
+                btns.forEach(b => {
+                    if (b.dataset.word === slot.dataset.value && b.classList.contains('hidden')) {
+                        b.classList.remove('hidden');
+                    }
+                });
+            }
+
+            slot.textContent = state.selectedWord;
+            slot.dataset.value = state.selectedWord;
+            slot.classList.remove('bg-amber-100', 'border-amber-400', 'text-amber-700', 'bg-red-100', 'border-red-400', 'text-red-700');
+            slot.classList.add('bg-emerald-100', 'border-emerald-400', 'text-emerald-700');
+
+            // Hide the word button
+            state.selectedBtn.classList.add('hidden');
+            state.selectedBtn.classList.remove('ring-4', 'ring-amber-400', 'scale-105');
+            state.selectedWord = null;
+            state.selectedBtn = null;
+        });
+    },
+
+    // ========================================================================
+    // KHOA HỌC MODULE 2: ĐÚNG / SAI (True/False with Explanation)
+    // ========================================================================
+    renderTrueFalse(id, statements) {
+        // statements: [{text, answer: true/false, explanation}]
+        const safeStatements = JSON.stringify(statements).replace(/"/g, '&quot;');
+
+        const statementsHtml = statements.map((s, idx) => `
+            <div class="tf-item p-5 bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm" id="tf-item-${id}-${idx}">
+                <p class="text-lg md:text-xl font-bold text-gray-800 dark:text-slate-100 mb-4 leading-relaxed">${s.text}</p>
+                <div class="flex gap-3">
+                    <button onclick="Lesson.answerTrueFalse('${id}', ${idx}, true, '${safeStatements}')"
+                        id="tf-btn-true-${id}-${idx}"
+                        class="flex-1 py-3 bg-emerald-50 border-2 border-emerald-200 text-emerald-700 font-black rounded-xl hover:bg-emerald-100 transition-all active:scale-95 text-lg">
+                        ✅ Đúng
+                    </button>
+                    <button onclick="Lesson.answerTrueFalse('${id}', ${idx}, false, '${safeStatements}')"
+                        id="tf-btn-false-${id}-${idx}"
+                        class="flex-1 py-3 bg-red-50 border-2 border-red-200 text-red-700 font-black rounded-xl hover:bg-red-100 transition-all active:scale-95 text-lg">
+                        ❌ Sai
+                    </button>
+                </div>
+                <div id="tf-explain-${id}-${idx}" class="mt-3 p-4 rounded-xl text-base font-bold hidden transition-all"></div>
+            </div>
+        `).join('');
+
+        return `
+        <div class="true-false-exercise p-6 md:p-8 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] shadow-sm border border-blue-100 dark:border-slate-700 mt-6 animate-fade-in" id="tf-ex-${id}">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">⚖️</div>
+                <h3 class="text-xl md:text-2xl font-black text-blue-900 dark:text-blue-200">Đúng hay Sai?</h3>
+            </div>
+            <div class="space-y-4">
+                ${statementsHtml}
+            </div>
+        </div>
+        `;
+    },
+
+    answerTrueFalse(id, idx, userAnswer, statementsStr) {
+        const statements = JSON.parse(statementsStr.replace(/&quot;/g, '"'));
+        const s = statements[idx];
+        const explain = document.getElementById(`tf-explain-${id}-${idx}`);
+        const btnTrue = document.getElementById(`tf-btn-true-${id}-${idx}`);
+        const btnFalse = document.getElementById(`tf-btn-false-${id}-${idx}`);
+
+        btnTrue.disabled = true;
+        btnFalse.disabled = true;
+        btnTrue.classList.add('opacity-50');
+        btnFalse.classList.add('opacity-50');
+
+        const isCorrect = userAnswer === s.answer;
+
+        if (userAnswer) {
+            btnTrue.classList.remove('opacity-50');
+            btnTrue.classList.add(isCorrect ? 'ring-4 ring-emerald-400 bg-emerald-100' : 'ring-4 ring-red-400 bg-red-100');
+        } else {
+            btnFalse.classList.remove('opacity-50');
+            btnFalse.classList.add(isCorrect ? 'ring-4 ring-emerald-400 bg-emerald-100' : 'ring-4 ring-red-400 bg-red-100');
+        }
+
+        explain.classList.remove('hidden');
+        if (isCorrect) {
+            explain.classList.add('bg-emerald-50', 'text-emerald-700', 'border', 'border-emerald-200');
+            explain.innerHTML = `✅ Chính xác! ${s.explanation}`;
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            explain.classList.add('bg-red-50', 'text-red-700', 'border', 'border-red-200');
+            explain.innerHTML = `❌ Chưa đúng! ${s.explanation}`;
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    // ========================================================================
+    // KHOA HỌC MODULE 3: SẮP XẾP THỨ TỰ (Ordering / Sequencing)
+    // HS nhấn nút theo thứ tự đúng
+    // ========================================================================
+    renderOrdering(id, title, items, correctOrder) {
+        // items: array of step descriptions (shuffled)
+        // correctOrder: array of indices showing the correct sequence
+        const safeOrder = JSON.stringify(correctOrder).replace(/"/g, '&quot;');
+        const shuffled = items.map((item, idx) => ({ text: item, origIdx: idx })).sort(() => Math.random() - 0.5);
+
+        const itemsHtml = shuffled.map((item, idx) => `
+            <button id="ord-btn-${id}-${item.origIdx}" onclick="Lesson.selectOrderItem('${id}', ${item.origIdx})"
+                class="w-full p-4 bg-white dark:bg-slate-800 border-2 border-purple-200 dark:border-slate-600 text-gray-800 dark:text-slate-100 font-bold rounded-2xl shadow-sm hover:border-purple-400 hover:shadow-md transition-all active:scale-[0.98] text-left text-base md:text-lg flex items-center gap-4"
+                data-orig-idx="${item.origIdx}">
+                <div class="w-10 h-10 bg-purple-100 text-purple-500 rounded-xl flex items-center justify-center font-black shrink-0 text-lg" id="ord-num-${id}-${item.origIdx}">?</div>
+                <span>${item.text}</span>
+            </button>
+        `).join('');
+
+        return `
+        <div class="ordering-exercise p-6 md:p-8 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] shadow-sm border border-purple-100 dark:border-slate-700 mt-6 animate-fade-in" id="ord-ex-${id}">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-purple-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">🔢</div>
+                <h3 class="text-xl md:text-2xl font-black text-purple-900 dark:text-purple-200">${title}</h3>
+            </div>
+            <p class="text-base font-bold text-purple-700 dark:text-purple-300 mb-4">👆 Nhấn vào các bước theo đúng thứ tự (bước 1, 2, 3...)</p>
+            <div class="space-y-3" id="ord-list-${id}">
+                ${itemsHtml}
+            </div>
+            <div class="mt-6 flex items-center gap-4">
+                <button onclick="Lesson.resetOrdering('${id}')" class="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold rounded-xl transition-all active:scale-95">Làm lại</button>
+                <button onclick="Lesson.checkOrdering('${id}', '${safeOrder}')" class="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white font-black rounded-xl shadow-lg transition-all active:scale-95 text-lg">Kiểm Tra</button>
+                <span id="ord-feedback-${id}" class="text-base font-bold opacity-0 transition-opacity"></span>
+            </div>
+        </div>
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window['ordState_${id}'] = { sequence: [], step: 1 }" class="hidden">
+        `;
+    },
+
+    selectOrderItem(id, origIdx) {
+        const state = window[`ordState_${id}`];
+        if (!state) return;
+        // Check if already selected
+        if (state.sequence.includes(origIdx)) return;
+
+        state.sequence.push(origIdx);
+        const btn = document.getElementById(`ord-btn-${id}-${origIdx}`);
+        const numEl = document.getElementById(`ord-num-${id}-${origIdx}`);
+
+        numEl.textContent = state.step;
+        numEl.classList.remove('bg-purple-100', 'text-purple-500');
+        numEl.classList.add('bg-purple-600', 'text-white');
+        btn.classList.remove('border-purple-200');
+        btn.classList.add('border-purple-500', 'bg-purple-50');
+
+        state.step++;
+    },
+
+    resetOrdering(id) {
+        const state = window[`ordState_${id}`];
+        if (!state) return;
+        state.sequence.forEach(origIdx => {
+            const btn = document.getElementById(`ord-btn-${id}-${origIdx}`);
+            const numEl = document.getElementById(`ord-num-${id}-${origIdx}`);
+            numEl.textContent = '?';
+            numEl.classList.remove('bg-purple-600', 'text-white', 'bg-emerald-600', 'bg-red-500');
+            numEl.classList.add('bg-purple-100', 'text-purple-500');
+            btn.classList.remove('border-purple-500', 'bg-purple-50', 'border-emerald-400', 'bg-emerald-50', 'border-red-400', 'bg-red-50');
+            btn.classList.add('border-purple-200');
+        });
+        state.sequence = [];
+        state.step = 1;
+        const feedback = document.getElementById(`ord-feedback-${id}`);
+        feedback.classList.add('opacity-0');
+    },
+
+    checkOrdering(id, orderStr) {
+        const correctOrder = JSON.parse(orderStr.replace(/&quot;/g, '"'));
+        const state = window[`ordState_${id}`];
+        const feedback = document.getElementById(`ord-feedback-${id}`);
+
+        if (state.sequence.length < correctOrder.length) {
+            feedback.classList.remove('opacity-0');
+            feedback.innerText = "Em chưa chọn đủ các bước!";
+            feedback.classList.add('text-orange-500');
+            return;
+        }
+
+        let allCorrect = true;
+        for (let i = 0; i < correctOrder.length; i++) {
+            const btn = document.getElementById(`ord-btn-${id}-${state.sequence[i]}`);
+            const numEl = document.getElementById(`ord-num-${id}-${state.sequence[i]}`);
+            if (state.sequence[i] !== correctOrder[i]) {
+                allCorrect = false;
+                numEl.classList.remove('bg-purple-600');
+                numEl.classList.add('bg-red-500');
+                btn.classList.add('border-red-400', 'bg-red-50');
+            } else {
+                numEl.classList.remove('bg-purple-600');
+                numEl.classList.add('bg-emerald-600');
+                btn.classList.add('border-emerald-400', 'bg-emerald-50');
+            }
+        }
+
+        feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-orange-500');
+        if (allCorrect) {
+            feedback.innerText = "Xuất sắc! Thứ tự hoàn toàn chính xác! 🎉";
+            feedback.classList.add('text-emerald-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            feedback.innerText = "Chưa đúng thứ tự. Nhấn 'Làm lại' để thử lại!";
+            feedback.classList.add('text-orange-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    // ========================================================================
+    // KHOA HỌC MODULE 4: PHÂN LOẠI (Categorizing / Sorting)
+    // Kéo thả hoặc click chọn mục vào đúng nhóm
+    // ========================================================================
+    renderCategorizing(id, title, categories, items) {
+        // categories: [{name, color}]  e.g. [{name:'Chất rắn', color:'blue'}, ...]
+        // items: [{text, categoryIdx}]
+        const safeItems = JSON.stringify(items).replace(/"/g, '&quot;');
+        const shuffledItems = [...items].map((item, idx) => ({ ...item, origIdx: idx })).sort(() => Math.random() - 0.5);
+
+        const catHtml = categories.map((cat, idx) => `
+            <div class="flex-1 min-w-[140px]">
+                <div class="bg-${cat.color}-100 dark:bg-${cat.color}-900/30 p-3 rounded-t-2xl border-2 border-b-0 border-${cat.color}-300 text-center">
+                    <h4 class="font-black text-${cat.color}-800 dark:text-${cat.color}-200 text-base md:text-lg">${cat.name}</h4>
+                </div>
+                <div id="cat-zone-${id}-${idx}" 
+                    class="min-h-[120px] p-3 bg-white dark:bg-slate-800 border-2 border-t-0 border-${cat.color}-300 rounded-b-2xl flex flex-wrap gap-2 content-start transition-all"
+                    onclick="Lesson.placeInCategory('${id}', ${idx})">
+                </div>
+            </div>
+        `).join('');
+
+        const itemsHtml = shuffledItems.map(item => `
+            <button id="cat-item-${id}-${item.origIdx}" onclick="Lesson.selectCatItem('${id}', ${item.origIdx})"
+                class="px-4 py-2 bg-white border-2 border-gray-200 text-gray-800 font-bold rounded-xl shadow-sm hover:border-teal-400 hover:shadow-md transition-all active:scale-95 text-base"
+                data-orig-idx="${item.origIdx}">${item.text}</button>
+        `).join('');
+
+        return `
+        <div class="categorizing-exercise p-6 md:p-8 bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] shadow-sm border border-teal-100 dark:border-slate-700 mt-6 animate-fade-in" id="cat-ex-${id}">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-teal-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">📂</div>
+                <h3 class="text-xl md:text-2xl font-black text-teal-900 dark:text-teal-200">${title}</h3>
+            </div>
+
+            <div class="flex flex-wrap gap-4 mb-6" id="cat-zones-${id}">
+                ${catHtml}
+            </div>
+
+            <div class="mb-4">
+                <p class="text-sm font-black text-gray-500 uppercase tracking-widest mb-3">📋 Các mục cần phân loại (nhấn chọn rồi nhấn vào nhóm)</p>
+                <div class="flex flex-wrap gap-3" id="cat-bank-${id}">
+                    ${itemsHtml}
+                </div>
+            </div>
+
+            <div class="mt-6 flex items-center gap-4">
+                <button onclick="Lesson.checkCategorizing('${id}', '${safeItems}')" class="px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-black rounded-xl shadow-lg transition-all active:scale-95 text-lg">Kiểm Tra</button>
+                <span id="cat-feedback-${id}" class="text-base font-bold opacity-0 transition-opacity"></span>
+            </div>
+        </div>
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window['catState_${id}'] = { selectedItem: null, placements: {} }" class="hidden">
+        `;
+    },
+
+    selectCatItem(id, origIdx) {
+        const state = window[`catState_${id}`];
+        if (!state) return;
+        // Remove previous selection
+        document.querySelectorAll(`[id^="cat-item-${id}-"]`).forEach(b => b.classList.remove('ring-4', 'ring-teal-400', 'scale-105'));
+
+        state.selectedItem = origIdx;
+        const btn = document.getElementById(`cat-item-${id}-${origIdx}`);
+        btn.classList.add('ring-4', 'ring-teal-400', 'scale-105');
+    },
+
+    placeInCategory(id, catIdx) {
+        const state = window[`catState_${id}`];
+        if (!state || state.selectedItem === null) return;
+
+        const origIdx = state.selectedItem;
+        const btn = document.getElementById(`cat-item-${id}-${origIdx}`);
+        const zone = document.getElementById(`cat-zone-${id}-${catIdx}`);
+
+        // Remove from previous zone if exists
+        if (state.placements[origIdx] !== undefined) {
+            const prevZone = document.getElementById(`cat-zone-${id}-${state.placements[origIdx]}`);
+            const existing = prevZone.querySelector(`[data-cat-placed="${origIdx}"]`);
+            if (existing) existing.remove();
+        }
+
+        // Place in new zone
+        const chip = document.createElement('span');
+        chip.className = 'px-3 py-1 bg-teal-100 text-teal-800 font-bold rounded-lg text-sm cursor-pointer hover:bg-red-100 hover:text-red-600 transition-all';
+        chip.textContent = btn.textContent;
+        chip.dataset.catPlaced = origIdx;
+        chip.onclick = (e) => {
+            e.stopPropagation();
+            chip.remove();
+            btn.classList.remove('hidden');
+            delete state.placements[origIdx];
+        };
+        zone.appendChild(chip);
+
+        state.placements[origIdx] = catIdx;
+        btn.classList.add('hidden');
+        btn.classList.remove('ring-4', 'ring-teal-400', 'scale-105');
+        state.selectedItem = null;
+    },
+
+    checkCategorizing(id, itemsStr) {
+        const items = JSON.parse(itemsStr.replace(/&quot;/g, '"'));
+        const state = window[`catState_${id}`];
+        const feedback = document.getElementById(`cat-feedback-${id}`);
+
+        let correct = 0;
+        let total = items.length;
+        let placed = Object.keys(state.placements).length;
+
+        if (placed < total) {
+            feedback.classList.remove('opacity-0');
+            feedback.innerText = `Em chưa phân loại hết! (${placed}/${total})`;
+            feedback.classList.add('text-orange-500');
+            return;
+        }
+
+        items.forEach((item, idx) => {
+            if (state.placements[idx] === item.categoryIdx) correct++;
+        });
+
+        feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-orange-500');
+        if (correct === total) {
+            feedback.innerText = `Tuyệt vời! Phân loại chính xác ${correct}/${total}! 🎉`;
+            feedback.classList.add('text-emerald-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            feedback.innerText = `Đúng ${correct}/${total}. Thử lại nhé!`;
+            feedback.classList.add('text-orange-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    // ========================================================================
+    // KHOA HỌC MODULE 5: THẺ LẬT (Flashcards)
+    // Grid thẻ 2 mặt, click để lật
+    // ========================================================================
+    renderFlashcards(id, title, cards) {
+        // cards: [{front, back, emoji}]
+        const cardsHtml = cards.map((card, idx) => `
+            <div class="flashcard-wrapper cursor-pointer" onclick="this.classList.toggle('flipped')" style="perspective: 800px;">
+                <div class="flashcard-inner relative transition-transform duration-500" style="transform-style: preserve-3d; min-height: 160px;">
+                    <div class="flashcard-front absolute inset-0 p-5 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-2xl shadow-lg flex flex-col items-center justify-center gap-3 backface-hidden" style="backface-visibility: hidden;">
+                        <span class="text-4xl">${card.emoji || '❓'}</span>
+                        <p class="text-base md:text-lg font-black text-center leading-snug">${card.front}</p>
+                        <span class="text-xs opacity-60 font-bold uppercase tracking-widest">nhấn để lật</span>
+                    </div>
+                    <div class="flashcard-back absolute inset-0 p-5 bg-white dark:bg-slate-800 border-2 border-purple-200 rounded-2xl shadow-lg flex items-center justify-center backface-hidden" style="backface-visibility: hidden; transform: rotateY(180deg);">
+                        <p class="text-base md:text-lg font-bold text-gray-800 dark:text-slate-100 text-center leading-relaxed">${card.back}</p>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+        return `
+        <div class="flashcards-exercise p-6 md:p-8 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] shadow-sm border border-indigo-100 dark:border-slate-700 mt-6 animate-fade-in" id="fc-ex-${id}">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">🃏</div>
+                <h3 class="text-xl md:text-2xl font-black text-indigo-900 dark:text-indigo-200">${title}</h3>
+            </div>
+            <p class="text-base font-bold text-indigo-600 mb-4">👆 Nhấn vào thẻ để lật và xem đáp án!</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                ${cardsHtml}
+            </div>
+        </div>
+        <style>
+            .flashcard-wrapper.flipped .flashcard-inner { transform: rotateY(180deg); }
+        </style>
+        `;
+    },
+
+    // ========================================================================
+    // KHOA HỌC MODULE 6: GÁN NHÃN HÌNH ẢNH (Image Labeling)
+    // Hình ảnh với các hotspot, HS chọn nhãn cho mỗi hotspot
+    // ========================================================================
+    renderImageLabeling(id, title, imageUrl, hotspots, labels) {
+        // hotspots: [{x: %, y: %, correctLabel: string}]
+        // labels: array of all label options
+        const safeHotspots = JSON.stringify(hotspots).replace(/"/g, '&quot;');
+        const shuffledLabels = [...labels].sort(() => Math.random() - 0.5);
+
+        const hotspotsHtml = hotspots.map((h, idx) => `
+            <div id="hl-spot-${id}-${idx}" 
+                class="absolute w-8 h-8 bg-red-500 border-3 border-white rounded-full shadow-lg cursor-pointer flex items-center justify-center text-white font-black text-sm hover:scale-125 transition-transform z-10 animate-pulse"
+                style="left: ${h.x}%; top: ${h.y}%; transform: translate(-50%, -50%);"
+                onclick="Lesson.placeLabel('${id}', ${idx})">
+                ${idx + 1}
+            </div>
+            <div id="hl-label-${id}-${idx}" 
+                class="absolute px-2 py-1 bg-white border-2 border-red-300 rounded-lg text-xs font-bold text-red-700 shadow-md hidden z-20 whitespace-nowrap"
+                style="left: ${h.x}%; top: calc(${h.y}% + 20px); transform: translateX(-50%);">
+            </div>
+        `).join('');
+
+        const labelsHtml = shuffledLabels.map((label, idx) => `
+            <button id="hl-lbl-${id}-${idx}" onclick="Lesson.selectLabel('${id}', '${label.replace(/'/g, "\\'")}')"
+                class="px-4 py-2 bg-white border-2 border-rose-200 text-rose-800 font-bold rounded-xl shadow-sm hover:border-rose-400 hover:bg-rose-50 transition-all active:scale-95"
+                data-label="${label}">${label}</button>
+        `).join('');
+
+        return `
+        <div class="image-labeling-exercise p-6 md:p-8 bg-gradient-to-br from-rose-50 to-pink-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] shadow-sm border border-rose-100 dark:border-slate-700 mt-6 animate-fade-in" id="hl-ex-${id}">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-rose-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">🏷️</div>
+                <h3 class="text-xl md:text-2xl font-black text-rose-900 dark:text-rose-200">${title}</h3>
+            </div>
+            <p class="text-base font-bold text-rose-600 mb-4">👆 Chọn nhãn bên dưới, rồi nhấn vào điểm đánh số trên hình để gán nhãn</p>
+
+            <div class="relative inline-block w-full mb-6 rounded-2xl overflow-hidden border-2 border-rose-200 shadow-lg">
+                <img src="${imageUrl}" alt="Hình gán nhãn" class="w-full h-auto block">
+                ${hotspotsHtml}
+            </div>
+
+            <div class="mb-4">
+                <p class="text-sm font-black text-rose-500 uppercase tracking-widest mb-3">🏷️ Chọn nhãn</p>
+                <div class="flex flex-wrap gap-3" id="hl-labels-${id}">
+                    ${labelsHtml}
+                </div>
+            </div>
+
+            <div class="mt-6 flex items-center gap-4">
+                <button onclick="Lesson.checkImageLabeling('${id}', '${safeHotspots}')" class="px-8 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black rounded-xl shadow-lg transition-all active:scale-95 text-lg">Kiểm Tra</button>
+                <span id="hl-feedback-${id}" class="text-base font-bold opacity-0 transition-opacity"></span>
+            </div>
+        </div>
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window['hlState_${id}'] = { selectedLabel: null, placements: {} }" class="hidden">
+        `;
+    },
+
+    selectLabel(id, label) {
+        const state = window[`hlState_${id}`];
+        if (!state) return;
+        document.querySelectorAll(`[id^="hl-lbl-${id}-"]`).forEach(b => b.classList.remove('ring-4', 'ring-rose-400', 'scale-105'));
+        state.selectedLabel = label;
+        // Find and highlight the button
+        document.querySelectorAll(`[id^="hl-lbl-${id}-"]`).forEach(b => {
+            if (b.dataset.label === label) b.classList.add('ring-4', 'ring-rose-400', 'scale-105');
+        });
+    },
+
+    placeLabel(id, spotIdx) {
+        const state = window[`hlState_${id}`];
+        if (!state || !state.selectedLabel) return;
+
+        const labelEl = document.getElementById(`hl-label-${id}-${spotIdx}`);
+        const spot = document.getElementById(`hl-spot-${id}-${spotIdx}`);
+
+        labelEl.textContent = state.selectedLabel;
+        labelEl.classList.remove('hidden');
+        state.placements[spotIdx] = state.selectedLabel;
+
+        spot.classList.remove('bg-red-500', 'animate-pulse');
+        spot.classList.add('bg-blue-600');
+    },
+
+    checkImageLabeling(id, hotspotsStr) {
+        const hotspots = JSON.parse(hotspotsStr.replace(/&quot;/g, '"'));
+        const state = window[`hlState_${id}`];
+        const feedback = document.getElementById(`hl-feedback-${id}`);
+
+        let correct = 0;
+        hotspots.forEach((h, idx) => {
+            const spot = document.getElementById(`hl-spot-${id}-${idx}`);
+            if (state.placements[idx] === h.correctLabel) {
+                correct++;
+                spot.classList.remove('bg-blue-600', 'bg-red-500');
+                spot.classList.add('bg-emerald-500');
+            } else if (state.placements[idx]) {
+                spot.classList.remove('bg-blue-600');
+                spot.classList.add('bg-red-500');
+            }
+        });
+
+        feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-orange-500');
+        if (correct === hotspots.length) {
+            feedback.innerText = `Gán nhãn hoàn hảo ${correct}/${hotspots.length}! 🎉`;
+            feedback.classList.add('text-emerald-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            feedback.innerText = `Đúng ${correct}/${hotspots.length}. Thử lại!`;
+            feedback.classList.add('text-orange-500');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+        }
+    },
+
+    // ========================================================================
+    // KHOA HỌC MODULE 7: THÍ NGHIỆM MÔ PHỎNG (Simple Virtual Experiment)
+    // Hiển thị các bước thí nghiệm, HS thực hiện từng bước
+    // ========================================================================
+    renderExperiment(id, title, description, steps) {
+        // steps: [{instruction, result, emoji}]
+        const stepsHtml = steps.map((step, idx) => `
+            <div id="exp-step-${id}-${idx}" class="exp-step flex items-start gap-4 p-5 bg-white dark:bg-slate-800 rounded-2xl border-2 border-gray-100 dark:border-slate-700 shadow-sm ${idx > 0 ? 'opacity-40 pointer-events-none' : ''} transition-all">
+                <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center text-2xl shrink-0">${step.emoji || '🔬'}</div>
+                <div class="flex-grow">
+                    <p class="font-black text-gray-800 dark:text-slate-100 text-base md:text-lg mb-2">Bước ${idx + 1}: ${step.instruction}</p>
+                    <div id="exp-result-${id}-${idx}" class="hidden p-4 bg-cyan-50 dark:bg-cyan-900/20 rounded-xl border border-cyan-200 text-cyan-800 dark:text-cyan-200 font-bold text-base animate-fade-in">
+                        ${step.result}
+                    </div>
+                    <button id="exp-btn-${id}-${idx}" onclick="Lesson.doExperimentStep('${id}', ${idx}, ${steps.length})"
+                        class="mt-3 px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-bold rounded-xl shadow-md transition-all active:scale-95 text-sm">
+                        ${idx === 0 ? '▶ Bắt đầu' : '▶ Thực hiện'}
+                    </button>
+                </div>
+            </div>
+        `).join('');
+
+        return `
+        <div class="experiment-exercise p-6 md:p-8 bg-gradient-to-br from-cyan-50 to-sky-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] shadow-sm border border-cyan-100 dark:border-slate-700 mt-6 animate-fade-in" id="exp-ex-${id}">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-cyan-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">🧪</div>
+                <h3 class="text-xl md:text-2xl font-black text-cyan-900 dark:text-cyan-200">${title}</h3>
+            </div>
+            <p class="text-base font-bold text-cyan-700 dark:text-cyan-300 mb-6">${description}</p>
+            <div class="space-y-4">
+                ${stepsHtml}
+            </div>
+            <div id="exp-complete-${id}" class="hidden mt-6 p-6 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl border-2 border-emerald-300 text-center animate-fade-in">
+                <span class="text-4xl">🎉</span>
+                <p class="text-xl font-black text-emerald-700 dark:text-emerald-300 mt-2">Thí nghiệm hoàn tất!</p>
+                <p class="text-base font-bold text-emerald-600 mt-1">Em đã quan sát được các kết quả thí nghiệm.</p>
+            </div>
+        </div>
+        `;
+    },
+
+    doExperimentStep(id, stepIdx, totalSteps) {
+        // Show result for current step
+        const result = document.getElementById(`exp-result-${id}-${stepIdx}`);
+        const btn = document.getElementById(`exp-btn-${id}-${stepIdx}`);
+
+        result.classList.remove('hidden');
+        btn.classList.add('hidden');
+
+        if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+
+        // Unlock next step
+        if (stepIdx + 1 < totalSteps) {
+            const nextStep = document.getElementById(`exp-step-${id}-${stepIdx + 1}`);
+            nextStep.classList.remove('opacity-40', 'pointer-events-none');
+        } else {
+            // All steps done
+            const complete = document.getElementById(`exp-complete-${id}`);
+            complete.classList.remove('hidden');
+        }
     }
 };
+
+// Init fill-blanks slot click handler
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+        if (Lesson._initFillBlanksSlotClick) Lesson._initFillBlanksSlotClick();
+    });
+    // Also try immediate init in case DOM is already loaded
+    if (document.readyState !== 'loading') {
+        if (Lesson._initFillBlanksSlotClick) Lesson._initFillBlanksSlotClick();
+    }
+}
 
 window.Lesson = Lesson;
