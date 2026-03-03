@@ -100,59 +100,109 @@ export const lesson124 = {
             <div class="bg-white p-3 rounded-[48px] shadow-xl border border-orange-50 dark:bg-slate-800 dark:border-slate-700 overflow-hidden" id="ex-124-2">
                 <div class="p-8 md:p-12 bg-orange-50 dark:bg-slate-900 rounded-[40px]">
                     <div class="flex items-start gap-5 mb-8">
-                        <div class="w-12 h-12 bg-orange-600 text-white rounded-2xl flex items-center justify-center text-xl font-black shrink-0">2</div>
-                        <h3 class="text-2xl md:text-4xl font-bold text-orange-900 dark:text-orange-100 leading-tight">Tính thể tích khối bánh bông lan ban đầu và phần còn lại sau khi cắt.</h3>
+                        <div class="w-14 h-14 bg-orange-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">2</div>
+                        <h3 class="text-3xl md:text-5xl font-black text-orange-900 dark:text-orange-100 leading-tight">Bài toán về bánh bông lan</h3>
                     </div>
 
-                    <div class="flex flex-col lg:flex-row gap-10 items-center">
-                        <div class="w-full lg:w-2/5 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-orange-100 flex justify-center shadow-md">
-                            <img src="hinh_anh/toan/toan_tap_2/124-b2-cake.png" alt="Exercise 2" class="w-full max-w-[350px] h-auto rounded-2xl transition-transform hover:scale-105">
+                    <!-- Đề bài 1 bên + Dữ kiện 1 bên -->
+                    <div class="flex flex-col lg:flex-row gap-8 items-stretch mb-8">
+                        <!-- Đề bài bên trái -->
+                        <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border border-orange-100 shadow-sm">
+                            <p class="text-2xl md:text-3xl font-bold text-orange-900 dark:text-orange-100 leading-relaxed">
+                                Một chiếc bánh bông lan hình hộp chữ nhật có đáy là <b class="text-orange-600">hình vuông cạnh 12 cm</b>, chiều cao <b class="text-orange-600">6 cm</b>.
+                            </p>
+                            <div class="mt-6 space-y-4">
+                                <p class="text-xl md:text-3xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
+                                    <span class="text-orange-600 font-black">a)</span> Tính thể tích của chiếc bánh đó.
+                                </p>
+                                <p class="text-xl md:text-3xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
+                                    <span class="text-orange-600 font-black">b)</span> Rô-bốt đã cắt một miếng bánh <b class="text-orange-600">hình lập phương cạnh 6 cm</b> của chiếc bánh đó để mời Mi. Tính thể tích phần bánh còn lại.
+                                </p>
+                            </div>
                         </div>
-                        <div class="w-full lg:w-3/5 space-y-6">
-                            ${Lesson.renderMathExercise('124-2a', '864', 'Thể tích ban đầu (cm³)', 'V1 = 12 x 8 x 9 =', '864')}
-                            ${Lesson.renderMathExercise('124-2b', '648', 'Thể tích còn lại (cm³)', 'V còn lại = V1 - V cắt =', '648')}
+
+                        <!-- Dữ kiện quan trọng bên phải -->
+                        <div class="w-full lg:w-1/2 flex flex-col gap-6">
+                            <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-dashed border-orange-300 flex-1 flex flex-col justify-center">
+                                <p class="text-sm font-black text-orange-400 uppercase tracking-widest mb-4">📋 Dữ kiện</p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center text-xl">🍰</div>
+                                        <p class="text-2xl md:text-3xl font-black text-orange-800">Bánh: 12 × 12 × 6 cm</p>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-10 h-10 bg-rose-100 rounded-xl flex items-center justify-center text-xl">✂️</div>
+                                        <p class="text-2xl md:text-3xl font-black text-rose-600">Cắt: lập phương cạnh 6 cm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-orange-100 dark:bg-orange-900/30 p-6 rounded-2xl">
+                                <p class="text-lg md:text-xl font-bold text-orange-700 italic">💡 Gợi ý: Đáy hình vuông → chiều dài = chiều rộng = 12 cm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khu vực bài làm -->
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-orange-200 shadow-sm">
+                        <p class="text-lg md:text-2xl font-black text-orange-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
+                        <textarea id="ans-124-2" rows="5" class="w-full p-6 rounded-2xl border-2 border-orange-200 bg-orange-50/50 dark:bg-slate-900 outline-none focus:border-orange-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;a) Thể tích chiếc bánh: V = 12 × 12 × 6 = ...&#10;b) Thể tích miếng cắt: V = 6 × 6 × 6 = ...&#10;   Thể tích phần còn lại: ...&#10;Đáp số: a) ... cm³   b) ... cm³"></textarea>
+                        <div class="mt-4 flex items-center gap-4">
+                            <button onclick="Lesson.submitWordProblemAI('124-2')" class="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bài tập 3: Mai Robot -->
+            <!-- Bài tập 3: Chọn câu trả lời đúng -->
             <div class="bg-white p-3 rounded-[48px] shadow-xl border border-rose-50 dark:bg-slate-800 dark:border-slate-700 overflow-hidden" id="ex-124-3">
                 <div class="p-8 md:p-12 bg-rose-50 dark:bg-slate-900 rounded-[40px]">
-                    <div class="flex items-start gap-5 mb-8">
-                        <div class="w-12 h-12 bg-rose-600 text-white rounded-2xl flex items-center justify-center text-xl font-black shrink-0">3</div>
-                        <h3 class="text-2xl md:text-4xl font-bold text-rose-900 dark:text-rose-100 leading-tight">Dựa vào hình vẽ bộ lắp ghép Rô-bốt của Mai, hãy trả lời các câu hỏi sau:</h3>
+                    <div class="flex items-start gap-5 mb-6">
+                        <div class="w-14 h-14 bg-rose-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">3</div>
+                        <h3 class="text-3xl md:text-5xl font-black text-rose-900 dark:text-rose-100 leading-tight">Chọn câu trả lời đúng.</h3>
                     </div>
-                    
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                        <div class="p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-rose-100 flex justify-center">
-                            <img src="hinh_anh/toan/toan_tap_2/124-b3-mairobot.png" alt="Exercise 3" class="w-full max-w-[400px] h-auto rounded-2xl">
+
+                    <!-- Đề bài bên trái + Hình bên phải -->
+                    <div class="flex flex-col lg:flex-row gap-8 items-stretch mb-8">
+                        <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border border-rose-100 shadow-sm">
+                            <p class="text-2xl md:text-3xl font-bold text-rose-900 dark:text-rose-100 leading-relaxed">
+                                Mai và Rô-bốt xếp được hai hình từ các hình lập phương nhỏ như hình sau.
+                            </p>
                         </div>
-                        <div class="space-y-6">
-                             <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] shadow-sm border border-rose-100">
-                                <p class="text-xl md:text-3xl font-black text-rose-600 mb-4">a) Mai đã lấy bao nhiêu hình lập phương nhỏ ra khỏi hộp?</p>
-                                <div class="grid grid-cols-2 gap-4">
-                                    <button onclick="lesson124.selectMCQ('124-3a', 'A')" id="btn-124-3a-A" class="mcq-btn p-6 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400">12 hình</button>
-                                    <button onclick="lesson124.selectMCQ('124-3a', 'B')" id="btn-124-3a-B" class="mcq-btn p-6 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400">10 hình</button>
-                                </div>
-                             </div>
-                             <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] shadow-sm border border-rose-100">
-                                <p class="text-xl md:text-3xl font-black text-rose-600 mb-4">b) Thể tích của Rô-bốt đó là bao nhiêu cm³?</p>
-                                <div class="grid grid-cols-2 gap-4">
-                                    <button onclick="lesson124.selectMCQ('124-3b', 'A')" id="btn-124-3b-A" class="mcq-btn p-6 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400">96 cm³</button>
-                                    <button onclick="lesson124.selectMCQ('124-3b', 'B')" id="btn-124-3b-B" class="mcq-btn p-6 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400">64 cm³</button>
-                                </div>
-                             </div>
+                        <div class="w-full lg:w-1/2 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-rose-100 shadow-md flex items-center justify-center">
+                            <img src="hinh_anh/toan/toan_tap_2/124-b3-mairobot.png" alt="Hình của Mai và Rô-bốt" class="w-full h-auto rounded-2xl">
                         </div>
                     </div>
-                    <div id="feedback-124-3" class="mt-8 text-center text-xl md:text-2xl font-black opacity-0 transition-opacity p-6 rounded-3xl"></div>
+
+                    <!-- Câu a -->
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] shadow-sm border border-rose-100 mb-6">
+                        <p class="text-xl md:text-3xl font-black text-rose-600 mb-6"><span class="text-rose-800">a)</span> Mai cần bỏ đi bao nhiêu hình lập phương nhỏ để nhận được hình như của Rô-bốt?</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <button onclick="lesson124.selectMCQ('124-3a', 'A')" id="btn-124-3a-A" class="mcq-btn p-5 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400 transition-all">A. 12 hình</button>
+                            <button onclick="lesson124.selectMCQ('124-3a', 'B')" id="btn-124-3a-B" class="mcq-btn p-5 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400 transition-all">B. 10 hình</button>
+                            <button onclick="lesson124.selectMCQ('124-3a', 'C')" id="btn-124-3a-C" class="mcq-btn p-5 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400 transition-all">C. 8 hình</button>
+                            <button onclick="lesson124.selectMCQ('124-3a', 'D')" id="btn-124-3a-D" class="mcq-btn p-5 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400 transition-all">D. 6 hình</button>
+                        </div>
+                    </div>
+
+                    <!-- Câu b -->
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] shadow-sm border border-rose-100 mb-6">
+                        <p class="text-xl md:text-3xl font-black text-rose-600 mb-6"><span class="text-rose-800">b)</span> Nếu mỗi hình lập phương nhỏ có cạnh <b class="text-rose-800">2 cm</b> thì thể tích hình của Rô-bốt là bao nhiêu xăng-ti-mét khối?</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <button onclick="lesson124.selectMCQ('124-3b', 'A')" id="btn-124-3b-A" class="mcq-btn p-5 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400 transition-all">A. 96 cm³</button>
+                            <button onclick="lesson124.selectMCQ('124-3b', 'B')" id="btn-124-3b-B" class="mcq-btn p-5 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400 transition-all">B. 72 cm³</button>
+                            <button onclick="lesson124.selectMCQ('124-3b', 'C')" id="btn-124-3b-C" class="mcq-btn p-5 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400 transition-all">C. 64 cm³</button>
+                            <button onclick="lesson124.selectMCQ('124-3b', 'D')" id="btn-124-3b-D" class="mcq-btn p-5 bg-rose-50 border-2 border-rose-100 rounded-2xl font-black text-2xl text-gray-400 hover:border-rose-400 transition-all">D. 32 cm³</button>
+                        </div>
+                    </div>
+
+                    <div id="feedback-124-3" class="text-center text-xl md:text-2xl font-black opacity-0 transition-opacity p-6 rounded-3xl"></div>
                 </div>
             </div>
 
-            <!-- Nộp bài toàn bộ -->
-            <div class="pt-12 flex justify-center">
-                <button onclick="window.submitMathLesson('Hoàn thành Bài Thể tích hình lập phương', 100)" class="bg-indigo-600 hover:bg-indigo-700 text-white px-12 md:px-20 py-6 md:py-8 rounded-[40px] font-black text-2xl md:text-4xl uppercase tracking-widest shadow-2xl shadow-indigo-300 transition-all transform hover:-translate-y-2 active:scale-95 flex items-center gap-6">
-                    Nộp bài học <svg class="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+            <!-- Nộp bài -->
+            <div class="pt-8 flex justify-center">
+                <button onclick="window.submitMathLesson('Hoàn thành Bài Thể tích hình lập phương', 100)" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-4 rounded-2xl font-black text-xl uppercase tracking-widest shadow-xl transition-all active:scale-95 flex items-center gap-3">
+                    NỘP BÀI <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </button>
             </div>
         </div>
@@ -164,11 +214,9 @@ export const lesson124 = {
     ],
     // Logic cho MCQ 
     selectMCQ(exId, option) {
-        // Handle a and b sub-questions
-        const group = exId.startsWith('124-3a') ? '124-3a' : '124-3b';
-        const btns = group === '124-3a' ? document.querySelectorAll('#btn-124-3a-A, #btn-124-3a-B') : document.querySelectorAll('#btn-124-3b-A, #btn-124-3b-B');
-
-        btns.forEach(btn => {
+        // Get all buttons in the same group
+        const allBtns = document.querySelectorAll(`[id^="btn-${exId}-"]`);
+        allBtns.forEach(btn => {
             btn.classList.remove('bg-rose-600', 'text-white', 'border-transparent');
             btn.classList.add('bg-rose-50', 'text-gray-400', 'border-rose-100');
         });
@@ -177,7 +225,7 @@ export const lesson124 = {
         selectedBtn.classList.remove('bg-rose-50', 'text-gray-400', 'border-rose-100');
         selectedBtn.classList.add('bg-rose-600', 'text-white', 'border-transparent');
 
-        // Track state for feedback
+        // Track state
         if (!window.lesson124State) window.lesson124State = { a: null, b: null };
         if (exId === '124-3a') window.lesson124State.a = option;
         if (exId === '124-3b') window.lesson124State.b = option;
@@ -185,17 +233,13 @@ export const lesson124 = {
         const feedback = document.getElementById('feedback-124-3');
         if (window.lesson124State.a && window.lesson124State.b) {
             feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-red-500', 'bg-emerald-50', 'bg-red-50');
-            if (window.lesson124State.a === 'B' && window.lesson124State.b === 'B') {
-                feedback.innerText = "Chính xác cả hai câu! 🎉 Mai đã lấy 10 hình lập phương nhỏ. Thể tích Rô-bốt là 10 x (2x2x2) = 80... À khoan, cạnh là 2cm đúng không? (Nếu đề bài cho cạnh 2cm). Kết quả đúng: 10 hình và 80cm³. (Lưu ý: Bạn dựa vào hình vẽ để đếm nhé!)";
-                // Chỉnh lại logic: 8 hình lập phương (như đáp án cũ C là 64 nếu cạnh 2?)
-                // Dựa vào file cũ: c3 = (a3a === 'B' && a3b === 'C'); => B (10 hình) và C (64 cm3). Vậy thể tích mỗi hình là 8 cm3.
-                if (window.lesson124State.b === 'B') { // Tạm chấp nhận B/B hoặc B/C tùy đề
-                    feedback.innerText = "Tuyệt lắm! Bạn đã hoàn thành câu hỏi quan sát này.";
-                }
+            // Đáp án đúng: a) B (10 hình), b) C (64 cm³)
+            if (window.lesson124State.a === 'B' && window.lesson124State.b === 'C') {
+                feedback.innerText = "Chính xác cả hai câu! 🎉 Mai cần bỏ 10 hình. Rô-bốt gồm 8 hình LP nhỏ → V = 8 × (2×2×2) = 64 cm³.";
                 feedback.classList.add('text-emerald-500', 'bg-emerald-50');
                 if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
             } else {
-                feedback.innerText = "Có một câu chưa đúng rồi. Hãy quan sát kỹ lại số hình trong bộ lắp ghép nhé!";
+                feedback.innerText = "Có câu chưa đúng rồi. Hãy đếm kỹ số hình lập phương trong mỗi hình nhé!";
                 feedback.classList.add('text-red-500', 'bg-red-50');
                 if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
             }
