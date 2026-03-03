@@ -195,9 +195,24 @@ export const lesson124 = {
         </div>
     `,
     quizPool: [
-        { "question": "Thể tích hình lập phương có cạnh 5cm là:", "options": ["15 cm³", "25 cm³", "125 cm³", "50 cm³"], "answer": 2, "level": 1 },
-        { "question": "Muốn tính thể tích hình lập phương, ta làm thế nào?", "options": ["Cạnh × cạnh", "Cạnh × cạnh × 6", "Cạnh × cạnh × cạnh", "Cạnh × cạnh × 4"], "answer": 2, "level": 1 },
-        { "question": "Nếu tăng cạnh hình lập phương lên gấp đôi, thể tích thay đổi thế nào?", "options": ["Gấp 2 lần", "Gấp 4 lần", "Gấp 6 lần", "Gấp 8 lần"], "answer": 3, "level": 2 }
+        // Level 1 - Cơ bản
+        { "question": "Công thức tính thể tích hình lập phương là:", "options": ["V = a × a", "V = a × a × a", "V = a × a × 6", "V = a × 4"], "answer": 1, "level": 1 },
+        { "question": "Thể tích hình lập phương có cạnh 3 cm là:", "options": ["9 cm³", "18 cm³", "27 cm³", "54 cm³"], "answer": 2, "level": 1 },
+        { "question": "Thể tích hình lập phương có cạnh 5 cm là:", "options": ["15 cm³", "25 cm³", "125 cm³", "50 cm³"], "answer": 2, "level": 1 },
+        { "question": "Muốn tính thể tích hình lập phương, ta lấy:", "options": ["Cạnh × cạnh", "Cạnh × cạnh × 6", "Cạnh × cạnh × cạnh", "Cạnh × cạnh × 4"], "answer": 2, "level": 1 },
+        { "question": "Hình lập phương có cạnh 10 cm. Thể tích là:", "options": ["100 cm³", "600 cm³", "1000 cm³", "10000 cm³"], "answer": 2, "level": 1 },
+        // Level 2 - Nâng cao
+        { "question": "Hình lập phương có thể tích 64 cm³. Cạnh của nó là:", "options": ["2 cm", "4 cm", "8 cm", "16 cm"], "answer": 1, "level": 2 },
+        { "question": "Bánh bông lan hình hộp chữ nhật đáy vuông cạnh 12 cm, cao 6 cm. Thể tích bánh là:", "options": ["72 cm³", "432 cm³", "864 cm³", "1728 cm³"], "answer": 2, "level": 2 },
+        { "question": "Cắt miếng bánh hình lập phương cạnh 6 cm từ chiếc bánh 864 cm³. Phần còn lại là:", "options": ["216 cm³", "432 cm³", "648 cm³", "828 cm³"], "answer": 2, "level": 2 },
+        { "question": "Hình lập phương cạnh 2 cm có thể tích bao nhiêu?", "options": ["4 cm³", "6 cm³", "8 cm³", "12 cm³"], "answer": 2, "level": 2 },
+        { "question": "Xếp 8 hình lập phương nhỏ cạnh 2 cm. Tổng thể tích là:", "options": ["16 cm³", "32 cm³", "48 cm³", "64 cm³"], "answer": 3, "level": 2 },
+        // Level 3 - Thử thách
+        { "question": "Nếu tăng cạnh hình lập phương lên gấp đôi, thể tích thay đổi thế nào?", "options": ["Gấp 2 lần", "Gấp 4 lần", "Gấp 6 lần", "Gấp 8 lần"], "answer": 3, "level": 3 },
+        { "question": "Một khối rubik gồm 27 khối lập phương nhỏ cạnh 1 cm. Cạnh khối rubik là:", "options": ["3 cm", "9 cm", "27 cm", "6 cm"], "answer": 0, "level": 3 },
+        { "question": "Hình lập phương cạnh 1 dm đổi sang cm³ là:", "options": ["10 cm³", "100 cm³", "1000 cm³", "10000 cm³"], "answer": 2, "level": 3 },
+        { "question": "Hộp hình lập phương cạnh 8 cm. Xếp được tối đa bao nhiêu khối LP cạnh 2 cm vào hộp?", "options": ["8 khối", "16 khối", "32 khối", "64 khối"], "answer": 3, "level": 3 },
+        { "question": "Diện tích toàn phần hình LP cạnh 5 cm là 150 cm². Thể tích của nó là:", "options": ["25 cm³", "75 cm³", "125 cm³", "150 cm³"], "answer": 2, "level": 3 }
     ],
     // Logic cho MCQ 
     selectMCQ(exId, option) {
