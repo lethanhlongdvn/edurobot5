@@ -47,7 +47,7 @@ export const lesson124 = {
                    <div class="w-full lg:w-1/2 text-center lg:text-left space-y-4">
                         <p class="text-sm font-black uppercase tracking-[0.3em] opacity-80 bg-white/20 inline-block px-4 py-1 rounded-full">Ghi nhớ quan trọng</p>
                         <p class="text-5xl md:text-8xl font-black drop-shadow-lg tracking-tight">V = a &times; a &times; a</p>
-                        <p class="text-xl md:text-2xl italic font-bold opacity-90">(Trong đó <span class="text-yellow-300">a</span> là độ dài của một cạnh)</p>
+                        <p class="text-2xl md:text-4xl italic font-bold opacity-90">(Trong đó <span class="text-yellow-300">a</span> là độ dài của một cạnh)</p>
                    </div>
                 </div>
                 <div class="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
@@ -123,24 +123,9 @@ export const lesson124 = {
                             </div>
                         </div>
 
-                        <!-- Dữ kiện quan trọng bên phải -->
-                        <div class="w-full lg:w-1/2 flex flex-col gap-6">
-                            <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-dashed border-orange-300 flex-1 flex flex-col justify-center">
-                                <p class="text-sm font-black text-orange-400 uppercase tracking-widest mb-4">📋 Dữ kiện</p>
-                                <div class="space-y-4">
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center text-xl">🍰</div>
-                                        <p class="text-2xl md:text-3xl font-black text-orange-800">Bánh: 12 × 12 × 6 cm</p>
-                                    </div>
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-10 h-10 bg-rose-100 rounded-xl flex items-center justify-center text-xl">✂️</div>
-                                        <p class="text-2xl md:text-3xl font-black text-rose-600">Cắt: lập phương cạnh 6 cm</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-orange-100 dark:bg-orange-900/30 p-6 rounded-2xl">
-                                <p class="text-lg md:text-xl font-bold text-orange-700 italic">💡 Gợi ý: Đáy hình vuông → chiều dài = chiều rộng = 12 cm</p>
-                            </div>
+                        <!-- Hình minh họa bên phải -->
+                        <div class="w-full lg:w-1/2 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-orange-100 shadow-md flex items-center justify-center">
+                            <img src="hinh_anh/toan/toan_tap_2/124-b2-cake.png" alt="Bánh bông lan" class="w-full h-auto rounded-2xl">
                         </div>
                     </div>
 
