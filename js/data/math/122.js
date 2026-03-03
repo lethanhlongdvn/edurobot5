@@ -78,11 +78,11 @@ export const lesson122 = {
                     </p>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         <div class="col-span-1 space-y-4">
-                            <div class="bg-indigo-50 p-4 rounded-3xl border-2 border-indigo-100 h-full flex flex-col justify-center">
-                                <p class="text-xl md:text-2xl font-black text-indigo-900 border-b-2 border-indigo-200 pb-2 mb-3">Thông số:</p>
-                                <p class="text-lg md:text-xl font-bold text-gray-700">Chiều dài: <span class="text-indigo-600 font-black">8 cm</span></p>
-                                <p class="text-lg md:text-xl font-bold text-gray-700">Chiều rộng: <span class="text-indigo-600 font-black">5 cm</span></p>
-                                <p class="text-lg md:text-xl font-bold text-gray-700">Chiều cao: <span class="text-indigo-600 font-black">6 cm</span></p>
+                            <div class="bg-indigo-50 p-6 rounded-3xl border-2 border-indigo-100 h-full flex flex-col justify-center">
+                                <p class="text-2xl md:text-3xl font-black text-indigo-900 border-b-2 border-indigo-200 pb-2 mb-3">Thông số:</p>
+                                <p class="text-xl md:text-2xl font-bold text-gray-700">Chiều dài: <span class="text-indigo-600 font-black">8 cm</span></p>
+                                <p class="text-xl md:text-2xl font-bold text-gray-700">Chiều rộng: <span class="text-indigo-600 font-black">5 cm</span></p>
+                                <p class="text-xl md:text-2xl font-bold text-gray-700">Chiều cao: <span class="text-indigo-600 font-black">6 cm</span></p>
                             </div>
                         </div>
                         <div class="col-span-2">
@@ -161,7 +161,7 @@ export const lesson122 = {
                         <img src="hinh_anh/toan/toan_tap_2/122-b3-blocks.png" alt="Khối hình" class="w-full max-w-[450px] h-auto rounded-[32px] shadow-2xl border-4 border-white mx-auto">
                         <div class="space-y-6">
                             <p class="text-2xl font-bold text-amber-900 leading-tight">
-                                Để tạo ra hình bên, Việt ghép **6 hình hộp chữ nhật** giống nhau. Mỗi hình có kích thước: **10 cm, 5 cm và 2 cm**.
+                                Để tạo ra hình bên, Việt ghép <b>6 hình hộp chữ nhật</b> giống nhau. Mỗi hình có kích thước: <b>10 cm, 5 cm và 2 cm</b>.
                             </p>
                             <div class="space-y-4">
                                 <div class="bg-white p-4 rounded-2xl shadow-sm border border-amber-100 flex items-center justify-between">
