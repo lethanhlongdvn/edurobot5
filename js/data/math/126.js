@@ -36,12 +36,12 @@ export const lesson126 = {
                         </div>
                         <div class="w-full lg:w-1/2 flex flex-col gap-6">
                             <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border border-orange-100 shadow-sm">
-                                <p class="text-xl md:text-3xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
+                                <p class="text-3xl md:text-5xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
                                     <span class="text-orange-600 font-black">a)</span> Tính thể tích của mẫu hộp đó.
                                 </p>
                             </div>
                             <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border border-orange-100 shadow-sm flex-1">
-                                <p class="text-xl md:text-3xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
+                                <p class="text-3xl md:text-5xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
                                     <span class="text-orange-600 font-black">b)</span> Các bạn lớp 5A dự định xếp các hộp đó vào thùng để thuận tiện cho việc vận chuyển. Quan sát kích thước thùng và ước lượng số hộp có thể xếp vào 1 thùng.
                                 </p>
                             </div>
