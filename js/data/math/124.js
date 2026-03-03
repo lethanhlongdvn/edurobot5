@@ -1,107 +1,68 @@
-import { Lesson } from '../../components/Lesson.js';
-
 export const lesson124 = {
-    id: "math_5_124",
-    subject: "Toán học",
-    title: "Bài 53. Thể tích của hình lập phương",
-    subtitle: "Chủ điểm: Hình học và Đo lường",
-    week: "25",
-    period: "124",
-    content: `
-        <div class="space-y-6 md:space-y-8 animate-fade-in pb-10">
-            <!-- Hero Section -->
-            <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] md:rounded-[40px] p-6 md:p-10 border border-purple-100 dark:border-slate-700 shadow-sm relative overflow-hidden">
-                <div class="relative z-10 flex flex-col md:flex-row items-center gap-6">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-purple-600 rounded-3xl flex items-center justify-center text-3xl md:text-5xl shadow-xl shadow-purple-200 dark:shadow-purple-900/40 shrink-0 transform -rotate-6">🧊</div>
-                    <div class="text-center md:text-left">
-                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-2 leading-tight">Khám phá Thể tích Hình lập phương</h2>
-                        <p class="text-gray-500 dark:text-slate-400 font-bold text-sm md:text-base">Hình lập phương là một hình hộp chữ nhật đặc biệt có 3 cạnh bằng nhau: Dài = Rộng = Cao.</p>
-                    </div>
-                </div>
-                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl opacity-10"></div>
-                <div class="absolute -left-10 -top-10 w-40 h-40 bg-pink-500 rounded-full blur-3xl opacity-10"></div>
-            </div>
-
-            <!-- Khám phá qua hình ảnh -->
-            <div class="bg-white dark:bg-slate-800 p-2 rounded-[40px] shadow-xl border border-purple-50">
-                <div class="p-4 md:p-8 bg-purple-50/50 dark:bg-slate-900/50 rounded-[32px]">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-black text-purple-900 dark:text-purple-400 flex items-center gap-2">
-                                <span class="p-2 bg-purple-600 rounded-xl text-white text-lg">!</span>
-                                Quan sát và Suy luận
-                            </h3>
-                            <p class="text-lg font-bold text-gray-700 dark:text-slate-300 leading-relaxed italic">
-                                "Muốn tính thể tích hình hộp chữ nhật, ta lấy chiều dài nhân chiều rộng rồi nhân với chiều cao. Với hình lập phương, cả 3 kích thước này đều bằng nhau!"
-                            </p>
-                            <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl border-2 border-purple-100 shadow-inner">
-                                <p class="text-xl font-black text-purple-600">Nếu gọi cạnh là a:</p>
-                                <p class="text-3xl md:text-4xl font-black text-purple-900 dark:text-white mt-2">V = a &times; a &times; a</p>
-                            </div>
-                        </div>
-                        <div class="flex justify-center">
-                            <img src="hinh_anh/toan/toan_tap_2/124-khampha.png" alt="Khám phá" class="w-full max-w-[500px] h-auto rounded-3xl shadow-2xl border-4 border-white transform hover:scale-105 transition-all">
-                        </div>
+    "topic": "Hình học và Đo lường",
+    "week": "25",
+    "period": "124",
+    "title": "BÀI 53. THỂ TÍCH CỦA HÌNH LẬP PHƯƠNG",
+    "desc": "Bài 53: Cách tính thể tích hình lập phương dựa trên công thức của hình hộp chữ nhật (Trang 54-55).",
+    "content": `
+        <div class="space-y-2 text-purple-900">
+            <!-- 🎯 Khám phá -->
+            <div class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
+                <h3 class="font-black text-2xl md:text-3xl mb-1 flex items-center gap-2">
+                    <span class="p-2 bg-purple-600 rounded-xl shadow-lg">💡</span>
+                    Khám phá
+                </h3>
+                <div class="flex flex-col md:grid md:grid-cols-2 gap-2 p-1 bg-purple-50 rounded-[32px]">
+                    <img src="hinh_anh/toan/toan_tap_2/124-khampha.png" alt="Khám phá" class="w-full h-auto rounded-xl shadow-md border-2 border-white">
+                    <div class="bg-white p-4 rounded-3xl flex items-center gap-4">
+                        <div class="w-12 h-12 bg-purple-600 rounded-xl flex-shrink-0 flex items-center justify-center text-white font-black text-2xl">!</div>
+                        <p class="text-lg md:text-xl font-bold">Hình lập phương có <span class="text-purple-600">dài = rộng = cao</span>.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Lab Hình học Động -->
-            ${Lesson.renderDynamicGeometryLab('124-geo-lab', 'cube_volume', { a: 10 })}
-
-            <!-- Kéo thả Công thức -->
-            ${Lesson.renderDragDropFormula(
-        '124-dd-formula',
-        'Kéo các thẻ vào ô trống để lập hoàn chỉnh công thức tính thể tích (V) hình lập phương cạnh (a):',
-        ['a', 'a', 'a', '+', 'x', 'V', 'S'],
-        '<div class="text-3xl font-black text-purple-900 mr-2">V =</div>' +
-        '<div class="drop-slot w-14 h-14 border-4 border-dashed border-purple-300 rounded-2xl flex items-center justify-center font-black text-2xl text-purple-300 bg-white/50 transition-all cursor-pointer hover:bg-white" data-value="" ondragover="Lesson.allowDrop(event)" ondragleave="Lesson.dragleave(event)" ondrop="Lesson.drop(event, \'124-dd-formula\')" onclick="Lesson.clearSlot(event, \'124-dd-formula\')">?</div>' +
-        '<div class="text-2xl font-black text-purple-400">&times;</div>' +
-        '<div class="drop-slot w-14 h-14 border-4 border-dashed border-purple-300 rounded-2xl flex items-center justify-center font-black text-2xl text-purple-300 bg-white/50 transition-all cursor-pointer hover:bg-white" data-value="" ondragover="Lesson.allowDrop(event)" ondragleave="Lesson.dragleave(event)" ondrop="Lesson.drop(event, \'124-dd-formula\')" onclick="Lesson.clearSlot(event, \'124-dd-formula\')">?</div>' +
-        '<div class="text-2xl font-black text-purple-400">&times;</div>' +
-        '<div class="drop-slot w-14 h-14 border-4 border-dashed border-purple-300 rounded-2xl flex items-center justify-center font-black text-2xl text-purple-300 bg-white/50 transition-all cursor-pointer hover:bg-white" data-value="" ondragover="Lesson.allowDrop(event)" ondragleave="Lesson.dragleave(event)" ondrop="Lesson.drop(event, \'124-dd-formula\')" onclick="Lesson.clearSlot(event, \'124-dd-formula\')">?</div>',
-        { ordered: true, answer: ['a', 'a', 'a'] }
-    )}
+            <!-- 🖍️ Công thức -->
+            <div class="bg-pink-500 p-2 md:p-4 rounded-[40px] text-white shadow-xl relative overflow-hidden">
+                <div class="flex flex-col md:flex-row items-center gap-4">
+                   <img src="hinh_anh/toan/toan_tap_2/124-formula.png" alt="Công thức" class="w-full max-w-[200px] h-auto rounded-xl border border-pink-400">
+                   <div class="text-center md:text-left">
+                        <p class="text-xs font-black uppercase opacity-60">Ghi nhớ</p>
+                        <p class="text-4xl md:text-6xl font-black">V = a × a × a</p>
+                        <p class="text-sm italic opacity-80">(a là độ dài cạnh)</p>
+                   </div>
+                </div>
+            </div>
         </div>
     `,
-    practice: `
-        <div class="space-y-6 md:space-y-10 animate-fade-in pb-10">
-            <!-- Bài 1: Bảng thể tích -->
-            <div class="p-1 bg-white dark:bg-slate-800 rounded-[40px] border border-gray-100 dark:border-slate-700 shadow-xl overflow-hidden">
-                <p class="p-6 font-black text-2xl text-teal-700 dark:text-teal-400 flex items-center gap-3">
-                    <span class="w-12 h-12 bg-teal-600 text-white rounded-2xl flex items-center justify-center font-black shadow-lg shadow-teal-100">1</span>
-                    Hoàn thành bảng tính Thể tích (V) sau đây:
+    "practice": `
+        <div class="space-y-2">
+            <!-- Bài tập 1 -->
+            <div id="box-124-1" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
+                <p class="font-black text-xl md:text-2xl mb-1 text-teal-700 flex items-center gap-2">
+                    <span class="w-10 h-10 bg-teal-600 text-white rounded-xl flex items-center justify-center font-black">1</span>
+                    Hoàn thành bảng thể tích (V):
                 </p>
-                <div class="p-4 bg-teal-50 dark:bg-slate-900 rounded-[32px] overflow-x-auto">
-                    <table class="w-full text-center border-spacing-2 border-separate min-w-[500px]">
+                <div class="p-1 bg-teal-50 rounded-[32px]">
+                    <table class="w-full text-center border-spacing-1 border-separate">
                         <thead>
-                            <tr class="text-sm font-black text-teal-800 dark:text-teal-200 uppercase tracking-widest">
-                                <th class="p-4 bg-white/50 dark:bg-slate-800 rounded-2xl">Cạnh (a)</th>
-                                <th class="p-4 bg-white/50 dark:bg-slate-800 rounded-2xl">10 cm</th>
-                                <th class="p-4 bg-white dark:bg-slate-700 rounded-2xl ring-4 ring-teal-200">2,5 dm</th>
-                                <th class="p-4 bg-white/50 dark:bg-slate-800 rounded-2xl">0,4 m</th>
+                            <tr class="text-[10px] md:text-sm font-black text-teal-800 uppercase">
+                                <th class="p-1">Cạnh (a)</th>
+                                <th class="p-1 bg-white rounded-t-xl">10 cm</th>
+                                <th class="p-1 bg-white rounded-t-xl">2,5 dm</th>
+                                <th class="p-1 bg-white rounded-t-xl">0,4 m</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="p-4 font-black text-teal-900 dark:text-white uppercase text-xs">Thể tích (V)</td>
-                                <td class="p-2">
-                                    <div class="relative">
-                                        <input type="number" id="ans-124-1a" class="w-full p-4 text-2xl font-black text-teal-600 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent focus:border-teal-500 shadow-sm transition-all text-center" placeholder="?">
-                                        <span class="absolute bottom-1 right-2 text-[10px] font-bold text-gray-300">cm³</span>
-                                    </div>
+                                <td class="p-1 font-black text-teal-900 text-xs uppercase">Thể tích (V)</td>
+                                <td class="p-1 bg-white">
+                                    <input type="number" id="ans-124-1a" class="w-full text-xl font-black text-teal-600 bg-gray-50 p-1 rounded-lg border-none text-center" placeholder="?">
                                 </td>
-                                <td class="p-2">
-                                    <div class="relative">
-                                        <input type="number" step="0.001" id="ans-124-1b" class="w-full p-4 text-2xl font-black text-teal-600 bg-white dark:bg-slate-800 rounded-2xl border-2 border-teal-200 focus:border-teal-500 shadow-md transition-all text-center" placeholder="?">
-                                        <span class="absolute bottom-1 right-2 text-[10px] font-bold text-gray-300">dm³</span>
-                                    </div>
+                                <td class="p-1 bg-white text-teal-600">
+                                    <input type="number" step="0.001" id="ans-124-1b" class="w-full text-xl font-black text-teal-600 bg-gray-50 p-1 rounded-lg border-none text-center" placeholder="?">
                                 </td>
-                                <td class="p-2">
-                                    <div class="relative">
-                                        <input type="number" step="0.001" id="ans-124-1c" class="w-full p-4 text-2xl font-black text-teal-600 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent focus:border-teal-500 shadow-sm transition-all text-center" placeholder="?">
-                                        <span class="absolute bottom-1 right-2 text-[10px] font-bold text-gray-300">m³</span>
-                                    </div>
+                                <td class="p-1 bg-white rounded-br-xl">
+                                    <input type="number" step="0.001" id="ans-124-1c" class="w-full text-xl font-black text-teal-600 bg-gray-50 p-1 rounded-lg border-none text-center" placeholder="?">
                                 </td>
                             </tr>
                         </tbody>
@@ -109,50 +70,64 @@ export const lesson124 = {
                 </div>
             </div>
 
-            <!-- Bài 2: Giải toán bánh bông lan -->
-            ${Lesson.renderWordProblem(
-        '124-wp-cake',
-        'Mai có một chiếc bánh bông lan dạng hình hộp chữ nhật dài 30 cm, rộng 24 cm và cao 12 cm. Mai cắt chiếc bánh đó thành các miếng nhỏ dạng hình lập phương có cạnh 4 cm. Hỏi Mai cắt được bao nhiêu miếng bánh như vậy?',
-        ['Tính Thể tích bánh bông lan ban đầu (V1 = d \u00d7 r \u00d7 c)', 'Tính Thể tích một miếng bánh nhỏ (V2 = a \u00d7 a \u00d7 a)', 'Số miếng bánh = V1 \u00f7 V2'],
-        '135'
-    )}
-
-            <!-- Bài 3: Mai Robot -->
-            <div id="box-124-3" class="p-1 bg-white dark:bg-slate-800 rounded-[40px] border border-gray-100 dark:border-slate-700 shadow-2xl overflow-hidden group">
-                <p class="p-6 font-black text-2xl text-rose-700 dark:text-rose-400 flex items-center gap-3">
-                    <span class="w-12 h-12 bg-rose-600 text-white rounded-2xl flex items-center justify-center font-black shadow-lg shadow-rose-100">3</span>
-                    Thử tài quan sát: Rô-bốt của Mai
+            <!-- Bài tập 2 -->
+            <div id="box-124-2" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
+                <p class="font-black text-xl md:text-2xl mb-1 text-orange-700 flex items-center gap-2">
+                    <span class="w-10 h-10 bg-orange-600 text-white rounded-xl flex items-center justify-center font-black">2</span>
+                    Bánh bông lan:
                 </p>
-                <div class="bg-rose-50 dark:bg-slate-900/50 p-6 md:p-10 rounded-[32px] m-1 border-2 border-rose-100 dark:border-rose-900/30">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                        <img src="hinh_anh/toan/toan_tap_2/124-b3-mairobot.png" alt="Mai Robot" class="w-full max-w-[400px] mx-auto rounded-3xl shadow-2xl border-8 border-white dark:border-slate-800 group-hover:rotate-2 transition-transform">
-                        <div class="space-y-6">
-                            <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-lg border border-rose-100">
-                                <p class="text-sm font-black text-rose-900 dark:text-rose-400 uppercase tracking-widest mb-3">a) Mai đã dùng bao nhiêu khối lập phương 1cm để tạo thành hình bên?</p>
-                                <select id="ans-124-3a" class="w-full p-4 bg-rose-50 dark:bg-slate-900 border-2 border-rose-100 rounded-2xl text-xl font-black text-rose-700 focus:ring-4 focus:ring-rose-200 outline-none">
-                                    <option value="">-- Chọn đáp án --</option>
-                                    <option value="8">8 khối</option>
-                                    <option value="10">10 khối</option>
-                                    <option value="12">12 khối</option>
-                                    <option value="16">16 khối</option>
-                                </select>
-                            </div>
-                            <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-lg border border-pink-100">
-                                <p class="text-sm font-black text-pink-900 dark:text-pink-400 uppercase tracking-widest mb-3">b) Thể tích của cả khối hình đó là bao nhiêu cm³?</p>
-                                <div class="flex items-center gap-4">
-                                    <input type="number" id="ans-124-3b" class="w-full p-4 bg-pink-50 dark:bg-slate-900 border-2 border-pink-100 rounded-2xl text-2xl font-black text-pink-700 text-right focus:ring-4 focus:ring-pink-200 outline-none" placeholder="?">
-                                    <span class="text-xl font-black text-pink-300 uppercase">cm³</span>
-                                </div>
-                            </div>
+                <div class="flex flex-col md:grid md:grid-cols-2 gap-2 items-center bg-orange-50 p-1 rounded-[32px]">
+                    <img src="hinh_anh/toan/toan_tap_2/124-b2-cake.png" alt="Bánh" class="w-full max-w-[200px] h-auto rounded-xl">
+                    <div class="space-y-1 w-full">
+                        <div class="bg-white p-2 rounded-2xl border border-orange-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-gray-400">V ban đầu (cm³)</span>
+                            <input type="number" id="ans-124-2a" class="w-24 text-2xl font-black text-orange-700 text-right bg-transparent border-none focus:ring-0" placeholder="?">
+                        </div>
+                        <div class="bg-amber-100 p-2 rounded-2xl flex items-center justify-between">
+                            <span class="text-xs font-bold text-amber-900">V còn lại (cm³)</span>
+                            <input type="number" id="ans-124-2b" class="w-24 text-2xl font-black text-amber-800 text-right bg-transparent border-none focus:ring-0" placeholder="?">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bài tập 3 -->
+            <div id="box-124-3" class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
+                <p class="font-black text-xl md:text-2xl mb-1 text-rose-700 flex items-center gap-2">
+                    <span class="w-10 h-10 bg-rose-600 text-white rounded-xl flex items-center justify-center font-black">3</span>
+                    Thử tài tinh mắt:
+                </p>
+                <div class="bg-rose-50 p-1 rounded-[32px]">
+                    <img src="hinh_anh/toan/toan_tap_2/124-b3-mairobot.png" alt="Mai Robot" class="w-full max-w-[300px] h-auto mx-auto rounded-xl mb-1">
+                    <div class="grid grid-cols-2 gap-1 px-1 pb-1">
+                        <div class="bg-white/80 p-2 rounded-2xl">
+                            <p class="text-[10px] font-black text-rose-900 mb-1">a) Mai bỏ bao nhiêu hình?</p>
+                            <select id="ans-124-3a" class="w-full bg-rose-100 border-none rounded-lg text-rose-700 font-bold text-xs p-1">
+                                <option value="">Chọn...</option>
+                                <option value="A">12 hình</option>
+                                <option value="B">10 hình</option>
+                                <option value="C">8 hình</option>
+                                <option value="D">6 hình</option>
+                            </select>
+                        </div>
+                        <div class="bg-white/80 p-2 rounded-2xl">
+                            <p class="text-[10px] font-black text-pink-900 mb-1">b) Thể tích Rô-bốt (cm³)?</p>
+                            <select id="ans-124-3b" class="w-full bg-pink-100 border-none rounded-lg text-pink-700 font-bold text-xs p-1">
+                                <option value="">Chọn...</option>
+                                <option value="A">96</option>
+                                <option value="B">72</option>
+                                <option value="C">64</option>
+                                <option value="D">32</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Nộp bài -->
-            <div class="pt-8 flex justify-center">
-                <button onclick="submit124()" id="btn-submit-124" class="bg-purple-600 hover:bg-purple-700 text-white px-12 md:px-20 py-5 md:py-7 rounded-[32px] font-black text-2xl md:text-3xl uppercase tracking-widest shadow-2xl shadow-purple-300 dark:shadow-purple-900/40 transition-all transform hover:-translate-y-2 active:scale-95 flex items-center gap-4">
-                    Nộp Bài <span class="text-4xl">🚀</span>
+            <div class="flex justify-center mt-2">
+                <button id="btn-submit-124" onclick="submit124()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
+                    NỘP BÀI
                 </button>
             </div>
 
@@ -161,40 +136,45 @@ export const lesson124 = {
                     const a1a = document.getElementById('ans-124-1a').value;
                     const a1b = document.getElementById('ans-124-1b').value;
                     const a1c = document.getElementById('ans-124-1c').value;
+                    const a2a = document.getElementById('ans-124-2a').value;
+                    const a2b = document.getElementById('ans-124-2b').value;
                     const a3a = document.getElementById('ans-124-3a').value;
                     const a3b = document.getElementById('ans-124-3b').value;
 
-                    if (!a1a || !a1b || !a1c || !a3a || !a3b) {
-                        alert("Thầy E nhắc bé: Hãy hoàn thành hết bài tập để đạt huy chương nhé! 🏆");
+                    if (!a1a || !a1b || !a1c || !a2a || !a2b || !a3a || !a3b) {
+                        alert("Thầy E nhắc bé: Hãy hoàn thành hết bài nhé! 🚀");
                         return;
                     }
 
                     let score = 0;
-                    if (parseFloat(a1a) === 1000) score += 2;
-                    if (parseFloat(a1b) === 15.625) score += 2;
-                    if (parseFloat(a1c) === 0.064) score += 2;
-                    if (a3a === '10') score += 2;
-                    if (parseFloat(a3b) === 10) score += 2; // Giả sử mỗi khối là 1cm3 và có 10 khối
+                    
+                    // Feedback resets
+                    ['1', '2', '3'].forEach(id => {
+                        const box = document.getElementById('box-124-' + id);
+                        box.className = box.className.replace(/border-emerald-400|bg-emerald-50|border-red-400|bg-red-50/g, '').trim();
+                        box.classList.add('border-2');
+                    });
+
+                    let c1 = (parseFloat(a1a) === 1000 && parseFloat(a1b) === 15.625 && parseFloat(a1c) === 0.064);
+                    let c2 = (parseFloat(a2a) === 864 && parseFloat(a2b) === 648);
+                    let c3 = (a3a === 'B' && a3b === 'C');
+
+                    if (c1) { score += 3.5; document.getElementById('box-124-1').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-124-1').classList.add('border-red-400', 'bg-red-50'); }
+                    if (c2) { score += 3.5; document.getElementById('box-124-2').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-124-2').classList.add('border-red-400', 'bg-red-50'); }
+                    if (c3) { score += 3; document.getElementById('box-124-3').classList.add('border-emerald-400', 'bg-emerald-50'); } else { document.getElementById('box-124-3').classList.add('border-red-400', 'bg-red-50'); }
 
                     const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
                     if (window.submitMathLesson) {
-                        window.submitMathLesson("Tiết 124: " + score + "/10", status, "btn-submit-124");
+                        window.submitMathLesson("Score: " + score, status, "btn-submit-124");
                     }
-                    
-                    if (score === 10) {
-                        alert("XUẤT SẮC! 🎉 Bé đạt điểm 10 tuyệt đối. Thầy E rất tự hào về bé!");
-                    } else {
-                        alert("Bé làm tốt lắm! Điểm của bé là " + score + "/10. Hãy kiểm tra lại những câu chưa đúng nhé! ✨");
-                    }
+                    alert("Điểm của bé: " + Math.round(score*10)/10 + "/10. 🌟");
                 };
             </script>
         </div>
     `,
-    quizPool: [
+    "quizPool": [
         { "question": "Thể tích hình lập phương có cạnh 5cm là:", "options": ["15 cm³", "25 cm³", "125 cm³", "50 cm³"], "answer": 2, "level": 1 },
         { "question": "Muốn tính thể tích hình lập phương, ta làm thế nào?", "options": ["Cạnh × cạnh", "Cạnh × cạnh × 6", "Cạnh × cạnh × cạnh", "Cạnh × cạnh × 4"], "answer": 2, "level": 1 },
-        { "question": "Nếu tăng cạnh hình lập phương lên gấp đôi, thể tích thay đổi thế nào?", "options": ["Gấp 2 lần", "Gấp 4 lần", "Gấp 6 lần", "Gấp 8 lần"], "answer": 3, "level": 2 },
-        { "question": "Cạnh hình lập phương là 0,5m. Thể tích hình đó là:", "options": ["0,25 m³", "1,25 m³", "0,125 m³", "0,15 m³"], "answer": 2, "level": 1 },
-        { "question": "Một hình lập phương có diện tích một mặt là 36 cm². Thể tích của nó là:", "options": ["216 cm³", "36 cm³", "72 cm³", "108 cm³"], "answer": 0, "level": 2 }
+        { "question": "Nếu tăng cạnh hình lập phương lên gấp đôi, thể tích thay đổi thế nào?", "options": ["Gấp 2 lần", "Gấp 4 lần", "Gấp 6 lần", "Gấp 8 lần"], "answer": 3, "level": 2 }
     ]
 };
