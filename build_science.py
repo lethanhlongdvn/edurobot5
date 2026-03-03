@@ -17,7 +17,7 @@ with open(csv_path, 'r', encoding='utf-8') as f:
 
 lines = text.split('\n')
 for line in lines:
-    parts = line.split(';')
+    parts = line.split(',')
     if len(parts) >= 4 and parts[0].isdigit():
         indexStr = parts[0]
         weekStr = parts[1]
