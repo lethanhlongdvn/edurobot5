@@ -1,4 +1,4 @@
-import { lesson001 } from './001.js';
+﻿import { lesson001 } from './001.js';
 import { lesson002 } from './002.js';
 import { lesson003 } from './003.js';
 import { lesson004 } from './004.js';
@@ -68,6 +68,8 @@ import { lesson067 } from './067.js';
 import { lesson068 } from './068.js';
 import { lesson069 } from './069.js';
 import { lesson070 } from './070.js';
+
+import { lessonTemplate } from './template.js';
 
 export const scienceData = [
     lesson001,
@@ -139,5 +141,17 @@ export const scienceData = [
     lesson067,
     lesson068,
     lesson069,
-    lesson070
-];
+    lesson070,
+    lessonTemplate
+].sort((a, b) => {
+    // Attempt to sort by period (numerical value)
+    const pA = parseInt(a.period);
+    const pB = parseInt(b.period);
+    if (!isNaN(pA) && !isNaN(pB)) {
+        return pA - pB;
+    }
+    // Put non-numerical periods (like TEMPLATE) at the end
+    if (isNaN(pA) && isNaN(pB)) return 0;
+    if (isNaN(pA)) return 1;
+    return -1;
+});
