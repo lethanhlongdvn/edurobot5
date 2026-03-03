@@ -26,7 +26,7 @@ import { lesson127 } from './127.js';
 import { lessonTemplate } from './template.js';
 import { placeholderLessons } from './placeholders.js';
 
-export const mathData = [
+const activeLessons = [
     lesson103,
     lesson104,
     lesson105,
@@ -51,8 +51,14 @@ export const mathData = [
     lesson124,
     lesson125,
     lesson126,
-    lesson127,
-    ...placeholderLessons.filter(p => p.id !== 'math_5_127'),
+    lesson127
+];
+
+const activePeriods = activeLessons.map(l => l.period);
+
+export const mathData = [
+    ...activeLessons,
+    ...placeholderLessons.filter(p => !activePeriods.includes(p.period)),
     lessonTemplate
 ].sort((a, b) => {
     // Attempt to sort by period (numerical value)
