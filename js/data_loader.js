@@ -1,10 +1,11 @@
+import { scienceData } from './data/science/index.js';
 import { mathData } from './data/math/index.js';
 import { vietnameseData } from './data/vietnamese/index.js';
 
 export const lessons = {
     math: mathData,
     vietnamese: vietnameseData,
-    science: [],
+    science: scienceData,
     history: [],
     ethics: [],
     experiential: [],
