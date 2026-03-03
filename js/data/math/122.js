@@ -33,10 +33,10 @@ export const lesson122 = {
                         </p>
                         <div class="bg-indigo-50 p-6 rounded-3xl border-2 border-indigo-100">
                             <p class="text-xl md:text-2xl font-black text-indigo-900 space-y-2">
-                                <span class="block">📏 Chiều dài: 6 dm (6 khối)</span>
-                                <span class="block">📏 Chiều rộng: 5 dm (5 khối)</span>
-                                <span class="block">📏 Chiều cao: 4 dm (4 lớp)</span>
-                                <span class="block mt-4 text-3xl text-indigo-600">6 &times; 5 &times; 4 = 120 (khối)</span>
+                                <span class="block">📏 Chiều dài: 6 dm</span>
+                                <span class="block">📏 Chiều rộng: 5 dm</span>
+                                <span class="block">📏 Chiều cao: 4 dm</span>
+                                <span class="block mt-4 text-2xl text-indigo-600">6 &times; 5 &times; 4 = 120 (khối)</span>
                             </p>
                         </div>
                     </div>
@@ -54,12 +54,12 @@ export const lesson122 = {
                         <img src="hinh_anh/toan/toan_tap_2/122-formula.png" alt="Công thức" class="w-full max-w-[400px] h-auto rounded-3xl shadow-xl">
                     </div>
                     <div class="bg-white p-8 rounded-[40px] shadow-inner border-2 border-rose-100">
-                        <h4 class="text-2xl font-black text-rose-600 uppercase mb-4 tracking-widest text-center">Quy tắc cần nhớ</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-gray-800 leading-relaxed text-center italic">
-                            "Thể tích <span class="text-rose-600 font-black">V</span> của hình hộp chữ nhật bằng chiều dài <span class="text-rose-600 font-black italic text-4xl">a</span> nhân với chiều rộng <span class="text-rose-600 font-black italic text-4xl">b</span> rồi nhân với chiều cao <span class="text-rose-600 font-black italic text-4xl">c</span>."
+                        <h4 class="text-xl font-black text-rose-600 uppercase mb-3 tracking-widest text-center">Quy tắc cần nhớ</h4>
+                        <p class="text-xl md:text-2xl font-bold text-gray-800 leading-relaxed text-center italic">
+                            "Thể tích <span class="text-rose-600 font-black">V</span> của hình hộp chữ nhật bằng chiều dài <span class="text-rose-600 font-black italic text-3xl">a</span> nhân với chiều rộng <span class="text-rose-600 font-black italic text-3xl">b</span> rồi nhân với chiều cao <span class="text-rose-600 font-black italic text-3xl">c</span>."
                         </p>
-                        <div class="mt-8 bg-rose-600 p-6 rounded-3xl text-white text-center shadow-lg">
-                            <p class="text-5xl md:text-7xl font-black tracking-widest italic drop-shadow-md">V = a &times; b &times; c</p>
+                        <div class="mt-6 bg-rose-600 p-4 rounded-3xl text-white text-center shadow-lg">
+                            <p class="text-4xl md:text-6xl font-black tracking-widest italic drop-shadow-md">V = a &times; b &times; c</p>
                         </div>
                     </div>
                 </div>
@@ -78,19 +78,19 @@ export const lesson122 = {
                     </p>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         <div class="col-span-1 space-y-4">
-                            <div class="bg-indigo-50 p-6 rounded-3xl border-2 border-indigo-100 h-full flex flex-col justify-center">
-                                <p class="text-2xl md:text-3xl font-black text-indigo-900 border-b-2 border-indigo-200 pb-2 mb-4">Thông số:</p>
-                                <p class="text-2xl md:text-3xl font-bold text-gray-700">Chiều dài: <span class="text-indigo-600 font-black">8 cm</span></p>
-                                <p class="text-2xl md:text-3xl font-bold text-gray-700">Chiều rộng: <span class="text-indigo-600 font-black">5 cm</span></p>
-                                <p class="text-2xl md:text-3xl font-bold text-gray-700">Chiều cao: <span class="text-indigo-600 font-black">6 cm</span></p>
+                            <div class="bg-indigo-50 p-4 rounded-3xl border-2 border-indigo-100 h-full flex flex-col justify-center">
+                                <p class="text-xl md:text-2xl font-black text-indigo-900 border-b-2 border-indigo-200 pb-2 mb-3">Thông số:</p>
+                                <p class="text-lg md:text-xl font-bold text-gray-700">Chiều dài: <span class="text-indigo-600 font-black">8 cm</span></p>
+                                <p class="text-lg md:text-xl font-bold text-gray-700">Chiều rộng: <span class="text-indigo-600 font-black">5 cm</span></p>
+                                <p class="text-lg md:text-xl font-bold text-gray-700">Chiều cao: <span class="text-indigo-600 font-black">6 cm</span></p>
                             </div>
                         </div>
                         <div class="col-span-2">
-                             <div class="bg-gray-50 p-8 rounded-[40px] border-2 border-dashed border-gray-200 text-center flex flex-col justify-center items-center gap-6 h-full">
-                                <label class="text-gray-400 font-black text-sm uppercase tracking-widest">Nhập thể tích tính được</label>
-                                <div class="flex items-center gap-6">
-                                    <input type="number" id="ans-122-1" class="w-full max-w-[300px] text-6xl md:text-8xl font-black text-indigo-600 bg-white p-4 rounded-3xl shadow-xl border-none focus:ring-4 focus:ring-indigo-200 text-right transition-all" placeholder="?">
-                                    <span class="text-4xl md:text-5xl font-black text-gray-300">cm³</span>
+                             <div class="bg-gray-50 p-6 rounded-[40px] border-2 border-dashed border-gray-200 text-center flex flex-col justify-center items-center gap-4 h-full">
+                                <label class="text-gray-400 font-black text-xs uppercase tracking-widest">Thể tích tính được</label>
+                                <div class="flex items-center gap-4">
+                                    <input type="number" id="ans-122-1" class="w-full max-w-[200px] text-4xl md:text-6xl font-black text-indigo-600 bg-white p-3 rounded-2xl shadow-xl border-none focus:ring-4 focus:ring-indigo-200 text-right transition-all" placeholder="?">
+                                    <span class="text-2xl md:text-3xl font-black text-gray-300">cm³</span>
                                     <button onclick="checkInstant122('1')" class="w-16 h-16 bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
                                         <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
                                     </button>
@@ -123,18 +123,18 @@ export const lesson122 = {
                 <!-- Khu vực giải toán có lời văn -->
                 <div class="max-w-4xl mx-auto space-y-4 bg-white p-8 rounded-[48px] shadow-2xl border-2 border-emerald-100">
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-emerald-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black mt-2 shrink-0 shadow-lg">1</div>
-                        <textarea id="wp-solution-122-2" rows="1" class="w-full p-6 rounded-3xl border-2 border-emerald-100 focus:border-emerald-500 outline-none text-2xl font-bold transition-all shadow-inner placeholder:text-gray-100 resize-none" placeholder="Ví dụ: Thể tích bể cá là:"></textarea>
+                        <div class="w-10 h-10 bg-emerald-500 text-white rounded-2xl flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">1</div>
+                        <textarea id="wp-solution-122-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-emerald-100 focus:border-emerald-500 outline-none text-xl font-bold transition-all shadow-inner placeholder:text-gray-100 resize-none" placeholder="Ví dụ: Thể tích bể cá là:"></textarea>
                     </div>
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-blue-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black mt-2 shrink-0 shadow-lg">2</div>
-                        <textarea id="wp-calc-122-2" rows="1" class="w-full p-6 rounded-3xl border-2 border-blue-100 focus:border-blue-500 outline-none text-4xl font-black text-blue-800 transition-all shadow-inner placeholder:text-gray-100 resize-none" placeholder="Ví dụ: 10 x 6 x 8 = 480 (dm3)"></textarea>
+                        <div class="w-10 h-10 bg-blue-500 text-white rounded-2xl flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">2</div>
+                        <textarea id="wp-calc-122-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-blue-100 focus:border-blue-500 outline-none text-2xl font-black text-blue-800 transition-all shadow-inner placeholder:text-gray-100 resize-none" placeholder="Ví dụ: 10 x 6 x 8 = 480 (dm3)"></textarea>
                     </div>
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-rose-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black mt-2 shrink-0 shadow-lg">3</div>
-                        <div class="flex-grow flex items-center gap-6 bg-rose-50 p-4 rounded-3xl border-2 border-rose-100">
-                            <input type="number" id="ans-122-2" class="w-full max-w-[250px] p-4 rounded-2xl border-none outline-none text-5xl font-black text-rose-600 text-right bg-white shadow-md" placeholder="?">
-                            <span class="text-3xl font-black text-rose-300">dm³</span>
+                        <div class="w-10 h-10 bg-rose-500 text-white rounded-2xl flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">3</div>
+                        <div class="flex-grow flex items-center gap-4 bg-rose-50 p-3 rounded-2xl border-2 border-rose-100">
+                            <input type="number" id="ans-122-2" class="w-full max-w-[150px] p-3 rounded-xl border-none outline-none text-3xl font-black text-rose-600 text-right bg-white shadow-md" placeholder="?">
+                            <span class="text-xl font-black text-rose-300">dm³</span>
                             <button onclick="checkInstant122('2')" class="w-16 h-16 bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
                                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
                             </button>
@@ -164,18 +164,18 @@ export const lesson122 = {
                                 Để tạo ra hình bên, Việt ghép **6 hình hộp chữ nhật** giống nhau. Mỗi hình có kích thước: **10 cm, 5 cm và 2 cm**.
                             </p>
                             <div class="space-y-4">
-                                <div class="bg-white p-6 rounded-3xl shadow-sm border border-amber-100 flex items-center justify-between">
-                                    <span class="text-xl font-black text-gray-400">V₁ (1 khối):</span>
-                                    <div class="flex items-center gap-4">
-                                        <input type="number" id="ans-122-3a" class="w-28 text-4xl font-black text-amber-700 text-right bg-amber-50 rounded-xl p-2 outline-none" placeholder="?">
-                                        <span class="text-xl font-black text-gray-300">cm³</span>
+                                <div class="bg-white p-4 rounded-2xl shadow-sm border border-amber-100 flex items-center justify-between">
+                                    <span class="text-lg font-black text-gray-400">V₁ (1 khối):</span>
+                                    <div class="flex items-center gap-3">
+                                        <input type="number" id="ans-122-3a" class="w-24 text-2xl font-black text-amber-700 text-right bg-amber-50 rounded-xl p-2 outline-none" placeholder="?">
+                                        <span class="text-lg font-black text-gray-300">cm³</span>
                                     </div>
                                 </div>
-                                <div class="bg-amber-600 p-8 rounded-[32px] shadow-xl text-white flex flex-col gap-4">
-                                    <span class="text-2xl font-black uppercase tracking-widest text-center">Thể tích cả khối hình</span>
-                                    <div class="flex items-center justify-center gap-6">
-                                        <input type="number" id="ans-122-3b" class="w-full max-w-[200px] text-6xl font-black text-right bg-white text-amber-700 rounded-3xl p-4 shadow-inner outline-none placeholder:text-amber-100" placeholder="?">
-                                        <span class="text-3xl font-black text-white/80">cm³</span>
+                                <div class="bg-amber-600 p-6 rounded-[32px] shadow-xl text-white flex flex-col gap-3">
+                                    <span class="text-xl font-black uppercase tracking-widest text-center">Thể tích cả khối</span>
+                                    <div class="flex items-center justify-center gap-4">
+                                        <input type="number" id="ans-122-3b" class="w-full max-w-[150px] text-4xl font-black text-right bg-white text-amber-700 rounded-2xl p-3 shadow-inner outline-none placeholder:text-amber-100" placeholder="?">
+                                        <span class="text-2xl font-black text-white/80">cm³</span>
                                         <button onclick="checkInstant122('3')" class="w-16 h-16 bg-white text-emerald-500 rounded-2xl flex items-center justify-center shadow-lg active:scale-95 transition-all shrink-0" title="Kiểm tra ngay">
                                             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
                                         </button>
