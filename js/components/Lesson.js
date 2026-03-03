@@ -156,14 +156,14 @@ export const Lesson = {
                     <div class="flex items-center gap-4 md:gap-5 shrink-0">
                         <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-xl shadow-sm group-hover:rotate-6 transition-transform">🔢</div>
                         <div>
-                            <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">${label}</p>
-                            <h4 class="text-2xl font-black text-blue-900">${displayValue}</h4>
+                            <p class="text-xs md:text-sm font-black text-gray-400 uppercase tracking-widest mb-1">${label}</p>
+                            <h4 class="text-3xl md:text-4xl font-black text-blue-900">${displayValue}</h4>
                         </div>
                     </div>
-                    <span class="text-sm font-bold text-gray-400 uppercase tracking-tighter whitespace-nowrap shrink-0 md:ml-4">${actionLabel}</span>
+                    <span class="text-base md:text-lg font-bold text-gray-400 uppercase tracking-tighter whitespace-nowrap shrink-0 md:ml-4">${actionLabel}</span>
                     <div class="relative flex-grow w-full">
                         <input type="text" id="input-${id}" 
-                            class="w-full bg-white dark:bg-slate-800 border-2 border-white dark:border-slate-700 rounded-2xl px-6 py-4 pr-28 text-sm font-bold text-gray-800 dark:text-slate-100 shadow-sm focus:ring-4 focus:ring-blue-100 dark:focus:ring-blue-900/20 focus:border-blue-500 outline-none transition-all placeholder:text-gray-200"
+                            class="w-full bg-white dark:bg-slate-800 border-2 border-white dark:border-slate-700 rounded-2xl px-6 py-5 pr-28 text-lg md:text-xl font-black text-gray-800 dark:text-slate-100 shadow-sm focus:ring-4 focus:ring-blue-100 dark:focus:ring-blue-900/20 focus:border-blue-500 outline-none transition-all placeholder:text-gray-200"
                             placeholder="Nhập kết quả...">
                         
                         <!-- Mic Button -->
@@ -1055,34 +1055,34 @@ export const Lesson = {
                 <!-- 3 Bước giải bài -->
                 <div class="space-y-4">
                     <!-- Bước 1: Lời giải -->
-                    <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center text-sm font-black shrink-0 mt-1">1</div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-blue-500 text-white rounded-lg flex items-center justify-center text-lg font-black shrink-0 mt-1">1</div>
                         <div class="flex-grow">
-                            <label class="text-xs font-black text-blue-600 uppercase tracking-widest mb-1 block">Lời giải (Bài giải)</label>
+                            <label class="text-sm font-black text-blue-600 uppercase tracking-widest mb-1 block">Lời giải (Bài giải)</label>
                             <textarea id="wp-solution-${id}" rows="2"
-                                class="w-full p-3 rounded-xl border-2 border-blue-200 outline-none focus:border-blue-500 text-sm font-bold placeholder:text-gray-300 shadow-inner transition-all resize-none"
+                                class="w-full p-4 rounded-xl border-2 border-blue-200 outline-none focus:border-blue-500 text-lg md:text-xl font-bold placeholder:text-gray-300 shadow-inner transition-all resize-none"
                                 placeholder="Ví dụ: Quãng đường ô tô đi được là:"></textarea>
                         </div>
                     </div>
 
                     <!-- Bước 2: Phép tính -->
-                    <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 bg-indigo-500 text-white rounded-lg flex items-center justify-center text-sm font-black shrink-0 mt-1">2</div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-indigo-500 text-white rounded-lg flex items-center justify-center text-lg font-black shrink-0 mt-1">2</div>
                         <div class="flex-grow">
-                            <label class="text-xs font-black text-indigo-600 uppercase tracking-widest mb-1 block">Phép tính</label>
+                            <label class="text-sm font-black text-indigo-600 uppercase tracking-widest mb-1 block">Phép tính</label>
                             <textarea id="wp-calc-${id}" rows="2"
-                                class="w-full p-3 rounded-xl border-2 border-indigo-200 outline-none focus:border-indigo-500 text-sm font-bold font-mono placeholder:text-gray-300 shadow-inner transition-all resize-none"
+                                class="w-full p-4 rounded-xl border-2 border-indigo-200 outline-none focus:border-indigo-500 text-lg md:text-xl font-bold font-mono placeholder:text-gray-300 shadow-inner transition-all resize-none"
                                 placeholder="Ví dụ: 45 × 2.5 = 112.5 (km)"></textarea>
                         </div>
                     </div>
 
                     <!-- Bước 3: Đáp số -->
-                    <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 bg-emerald-500 text-white rounded-lg flex items-center justify-center text-sm font-black shrink-0 mt-1">3</div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-emerald-500 text-white rounded-lg flex items-center justify-center text-lg font-black shrink-0 mt-1">3</div>
                         <div class="flex-grow">
-                            <label class="text-xs font-black text-emerald-600 uppercase tracking-widest mb-1 block">Đáp số</label>
+                            <label class="text-sm font-black text-emerald-600 uppercase tracking-widest mb-1 block">Đáp số</label>
                             <input type="text" id="wp-answer-${id}"
-                                class="w-full p-3 rounded-xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-sm font-bold placeholder:text-gray-300 shadow-inner transition-all"
+                                class="w-full p-4 rounded-xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-lg md:text-xl font-bold placeholder:text-gray-300 shadow-inner transition-all"
                                 placeholder="Ví dụ: 112.5 km">
                         </div>
                     </div>
