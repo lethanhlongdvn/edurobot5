@@ -151,7 +151,7 @@ export const lesson124 = {
                     <!-- Đề bài bên trái + Hình bên phải -->
                     <div class="flex flex-col lg:flex-row gap-8 items-stretch mb-8">
                         <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border border-rose-100 shadow-sm">
-                            <p class="text-2xl md:text-3xl font-bold text-rose-900 dark:text-rose-100 leading-relaxed">
+                            <p class="text-3xl md:text-5xl font-black text-rose-900 dark:text-rose-100 leading-relaxed">
                                 Mai và Rô-bốt xếp được hai hình từ các hình lập phương nhỏ như hình sau.
                             </p>
                         </div>
