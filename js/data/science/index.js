@@ -1,11 +1,10 @@
 
-
-import { template } from './template.js';
+import { lessonTemplate } from './template.js';
 import { placeholderLessons } from './placeholders.js';
 
 export const scienceData = [
     ...placeholderLessons,
-    template
+    lessonTemplate
 ].sort((a, b) => {
     // Attempt to sort by period (numerical value)
     const pA = parseInt(a.period);
