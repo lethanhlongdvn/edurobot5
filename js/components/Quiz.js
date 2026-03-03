@@ -28,7 +28,7 @@ export const Quiz = {
                             <span class="text-[10px] md:text-xs font-black text-orange-400 uppercase tracking-widest leading-none mb-1">Tiến độ</span>
                             <div class="flex items-baseline gap-1">
                                 <span id="quiz-progress-current" class="text-xl md:text-3xl font-black text-orange-600 leading-none">1</span>
-                                <span class="text-sm md:text-lg font-bold text-orange-300">/10</span>
+                                <span id="quiz-progress-total" class="text-sm md:text-lg font-bold text-orange-300">/15</span>
                             </div>
                         </div>
                     </div>
@@ -279,12 +279,14 @@ export const Quiz = {
 
         // Update progress UI & streak
         const qCurrent = document.getElementById('quiz-progress-current');
+        const qTotal = document.getElementById('quiz-progress-total');
         const sDisplay = document.getElementById('quiz-score-display');
         const pFill = document.getElementById('quiz-progress-fill');
         const strContainer = document.getElementById('streak-container');
         const strDisplay = document.getElementById('quiz-streak-display');
 
         if (qCurrent) qCurrent.innerText = quiz.currentIndex + 1;
+        if (qTotal) qTotal.innerText = `/${quiz.currentQuiz.length}`;
         if (sDisplay) sDisplay.innerText = quiz.score;
         if (pFill) pFill.style.width = `${((quiz.currentIndex) / quiz.currentQuiz.length) * 100}%`;
 
