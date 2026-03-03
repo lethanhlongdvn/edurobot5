@@ -87,30 +87,41 @@ export const lesson127 = {
                                     <td class="p-6 bg-rose-100/30 text-2xl md:text-3xl font-bold text-rose-800 border-b border-rose-100">Diện tích xung quanh</td>
                                     <td class="p-4 bg-white border-l border-b border-rose-100">
                                         <div class="flex items-center justify-center gap-2">
-                                            <input type="number" id="ans-127-2-sxq-1" class="w-24 md:w-32 text-3xl md:text-4xl font-black text-teal-600 bg-teal-50 rounded-xl text-center outline-none focus:ring-2 focus:ring-teal-400 p-2" placeholder="?">
+                                            <input type="number" id="ans-127-2-sxq-1" class="w-24 md:w-32 text-3xl md:text-4xl font-black text-teal-600 bg-teal-50 rounded-xl text-center outline-none focus:ring-2 focus:ring-teal-400 p-2 border-2 border-transparent" placeholder="?">
                                             <span class="text-xl font-bold text-gray-500">dm²</span>
                                         </div>
                                     </td>
                                     <td class="p-4 bg-white border-l border-b border-rose-100">
                                         <div class="flex items-center justify-center gap-2">
-                                            <input type="number" step="0.01" id="ans-127-2-sxq-2" class="w-24 md:w-32 text-3xl md:text-4xl font-black text-blue-600 bg-blue-50 rounded-xl text-center outline-none focus:ring-2 focus:ring-blue-400 p-2" placeholder="?">
+                                            <input type="number" step="0.01" id="ans-127-2-sxq-2" class="w-24 md:w-32 text-3xl md:text-4xl font-black text-blue-600 bg-blue-50 rounded-xl text-center outline-none focus:ring-2 focus:ring-blue-400 p-2 border-2 border-transparent" placeholder="?">
                                             <span class="text-xl font-bold text-gray-500">m²</span>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="p-6 bg-rose-100/30 text-2xl md:text-3xl font-bold text-rose-800">Diện tích toàn phần</td>
-                                    <td class="p-4 bg-white border-l border-rose-100">
+                                    <td class="p-6 bg-rose-100/30 text-2xl md:text-3xl font-bold text-rose-800 border-b border-rose-100">Diện tích toàn phần</td>
+                                    <td class="p-4 bg-white border-l border-b border-rose-100">
                                         <div class="flex items-center justify-center gap-2">
-                                            <input type="number" id="ans-127-2-stp-1" class="w-24 md:w-32 text-3xl md:text-4xl font-black text-teal-600 bg-teal-50 rounded-xl text-center outline-none focus:ring-2 focus:ring-teal-400 p-2" placeholder="?">
+                                            <input type="number" id="ans-127-2-stp-1" class="w-24 md:w-32 text-3xl md:text-4xl font-black text-teal-600 bg-teal-50 rounded-xl text-center outline-none focus:ring-2 focus:ring-teal-400 p-2 border-2 border-transparent" placeholder="?">
                                             <span class="text-xl font-bold text-gray-500">dm²</span>
                                         </div>
                                     </td>
-                                    <td class="p-4 bg-white border-l border-rose-100">
+                                    <td class="p-4 bg-white border-l border-b border-rose-100">
                                         <div class="flex items-center justify-center gap-2">
-                                            <input type="number" step="0.01" id="ans-127-2-stp-2" class="w-24 md:w-32 text-3xl md:text-4xl font-black text-blue-600 bg-blue-50 rounded-xl text-center outline-none focus:ring-2 focus:ring-blue-400 p-2" placeholder="?">
+                                            <input type="number" step="0.01" id="ans-127-2-stp-2" class="w-24 md:w-32 text-3xl md:text-4xl font-black text-blue-600 bg-blue-50 rounded-xl text-center outline-none focus:ring-2 focus:ring-blue-400 p-2 border-2 border-transparent" placeholder="?">
                                             <span class="text-xl font-bold text-gray-500">m²</span>
                                         </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-6 bg-rose-100/30 text-2xl md:text-3xl font-bold text-rose-800 text-center">Kiểm tra kết quả</td>
+                                    <td class="p-4 bg-white border-l border-rose-100">
+                                        <button onclick="lesson127.checkEx2('1')" class="px-6 py-3 bg-teal-600 hover:bg-teal-700 active:scale-95 text-white font-bold rounded-xl md:text-2xl transition-all w-full max-w-[200px] shadow-md flex items-center justify-center gap-2 mx-auto">Kiểm tra</button>
+                                        <div id="fb-127-2-1" class="mt-3 text-lg md:text-xl font-bold text-center"></div>
+                                    </td>
+                                    <td class="p-4 bg-white border-l border-rose-100">
+                                        <button onclick="lesson127.checkEx2('2')" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold rounded-xl md:text-2xl transition-all w-full max-w-[200px] shadow-md flex items-center justify-center gap-2 mx-auto">Kiểm tra</button>
+                                        <div id="fb-127-2-2" class="mt-3 text-lg md:text-xl font-bold text-center"></div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -230,8 +241,8 @@ export const lesson127 = {
             feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-red-500', 'bg-emerald-50', 'bg-red-50');
 
             // Check answer logic:
-            if (option === 'C') { // Adjusted to C to match typical problem logic, but will say generic message.
-                feedback.innerText = "Chính xác! 🎉 Chiếc hộp này hoàn toàn trùng khớp với hình khai triển.";
+            if (option === 'B') {
+                feedback.innerText = "Chính xác! 🎉 Khai triển này khi gấp lại sẽ tạo thành Hộp B.";
                 feedback.classList.add('text-emerald-500', 'bg-emerald-50');
                 if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
             } else {
@@ -240,6 +251,64 @@ export const lesson127 = {
                 if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
             }
             feedback.classList.add('opacity-100');
+        }
+    },
+    checkEx2(box) {
+        let sxqId = `ans-127-2-sxq-${box}`;
+        let stpId = `ans-127-2-stp-${box}`;
+        let feedback = document.getElementById(`fb-127-2-${box}`);
+        let inputSxq = document.getElementById(sxqId);
+        let inputStp = document.getElementById(stpId);
+        let sxqVal = inputSxq.value.trim().replace(',', '.');
+        let stpVal = inputStp.value.trim().replace(',', '.');
+
+        // Reset styles
+        inputSxq.classList.remove('text-red-600', 'border-red-400', 'text-emerald-600', 'border-emerald-400', 'border-transparent');
+        inputStp.classList.remove('text-red-600', 'border-red-400', 'text-emerald-600', 'border-emerald-400', 'border-transparent');
+        inputSxq.classList.add('border-transparent');
+        inputStp.classList.add('border-transparent');
+
+        let correctSxq, correctStp;
+        if (box === '1') {
+            correctSxq = ["256"];
+            correctStp = ["384"];
+        } else {
+            correctSxq = ["1", "1.0", "1.00", "1,0"];
+            correctStp = ["1.5", "1.50", "1,5", "1,50", "3/2"];
+        }
+
+        if (sxqVal === "" || stpVal === "") {
+            feedback.innerHTML = `<span class="text-amber-500">Vui lòng điền đủ 2 ô trống!</span>`;
+            return;
+        }
+
+        let isSxqCorrect = correctSxq.includes(sxqVal);
+        let isStpCorrect = correctStp.includes(stpVal);
+
+        if (isSxqCorrect && isStpCorrect) {
+            feedback.innerHTML = `<span class="text-emerald-600">Tuyệt vời!</span>`;
+            inputSxq.classList.remove('border-transparent');
+            inputStp.classList.remove('border-transparent');
+            inputSxq.classList.add('text-emerald-600', 'border-emerald-400');
+            inputStp.classList.add('text-emerald-600', 'border-emerald-400');
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        } else {
+            feedback.innerHTML = `<span class="text-red-600">Sai rồi!</span>`;
+            if (!isSxqCorrect) {
+                inputSxq.classList.remove('border-transparent');
+                inputSxq.classList.add('text-red-600', 'border-red-400');
+            } else {
+                inputSxq.classList.remove('border-transparent');
+                inputSxq.classList.add('text-emerald-600', 'border-emerald-400');
+            }
+            if (!isStpCorrect) {
+                inputStp.classList.remove('border-transparent');
+                inputStp.classList.add('text-red-600', 'border-red-400');
+            } else {
+                inputStp.classList.remove('border-transparent');
+                inputStp.classList.add('text-emerald-600', 'border-emerald-400');
+            }
+            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
         }
     }
 };
