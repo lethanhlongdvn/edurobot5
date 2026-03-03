@@ -3,7 +3,7 @@ import csv
 import re
 
 base_path = r'c:\Users\Admin\Desktop\edurobot5\edurobot5\js\data\science'
-csv_path = r'c:\Users\Admin\Desktop\edurobot5\edurobot5\PPCTKhoahoc.csv'
+csv_path = r'c:\Users\Admin\Desktop\edurobot5\edurobot5\PPCTKhoahoc_py.csv'
 
 # Ensure directory exists
 os.makedirs(base_path, exist_ok=True)
