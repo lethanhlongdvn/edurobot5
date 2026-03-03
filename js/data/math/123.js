@@ -82,17 +82,15 @@ export const lesson123 = {
                         <h3 class="text-3xl md:text-5xl font-black text-gray-800 dark:text-slate-100 leading-tight">Tính thể tích của khối gỗ có hình dạng và kích thước như hình dưới đây.</h3>
                     </div>
 
-                    <!-- Hình ảnh căn giữa -->
-                    <div class="flex justify-center mb-8">
-                        <div class="p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-amber-100 shadow-md inline-block">
-                            <img src="hinh_anh/toan/toan_tap_2/123-b2-l-shape.png" alt="Exercise 2" class="w-full max-w-[500px] h-auto rounded-2xl">
+                    <!-- Hình bên trái + Bài làm bên phải -->
+                    <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                        <div class="w-full lg:w-1/2 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-amber-100 shadow-md flex items-center justify-center">
+                            <img src="hinh_anh/toan/toan_tap_2/123-b2-l-shape.png" alt="Exercise 2" class="w-full h-auto rounded-2xl">
                         </div>
-                    </div>
-
-                    <!-- Khu vực làm bài -->
-                    <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-amber-200 shadow-sm">
-                        <p class="text-lg md:text-2xl font-black text-amber-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
-                        <textarea id="ans-123-2" rows="5" class="w-full p-6 rounded-2xl border-2 border-amber-200 bg-amber-50/50 dark:bg-slate-900 outline-none focus:border-amber-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;Thể tích khối 1: ...&#10;Thể tích khối 2: ...&#10;Thể tích cả khối gỗ: ...&#10;Đáp số: ... cm³"></textarea>
+                        <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-amber-200 shadow-sm flex flex-col">
+                            <p class="text-lg md:text-2xl font-black text-amber-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
+                            <textarea id="ans-123-2" rows="5" class="w-full flex-grow p-6 rounded-2xl border-2 border-amber-200 bg-amber-50/50 dark:bg-slate-900 outline-none focus:border-amber-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;Thể tích khối 1: ...&#10;Thể tích khối 2: ...&#10;Thể tích cả khối gỗ: ...&#10;Đáp số: ... cm³"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,17 +103,15 @@ export const lesson123 = {
                         <h3 class="text-3xl md:text-5xl font-black text-gray-800 dark:text-slate-100 leading-tight">Quan sát hình vẽ và tính thể tích của tảng đá nằm trong bể nước.</h3>
                     </div>
 
-                    <!-- Hình ảnh căn giữa -->
-                    <div class="flex justify-center mb-8">
-                        <div class="p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-blue-100 shadow-md inline-block">
-                            <img src="hinh_anh/toan/toan_tap_2/123-b3-stone.png" alt="Exercise 3" class="w-full max-w-[550px] h-auto rounded-2xl">
+                    <!-- Hình bên trái + Bài làm bên phải -->
+                    <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                        <div class="w-full lg:w-1/2 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-blue-100 shadow-md flex items-center justify-center">
+                            <img src="hinh_anh/toan/toan_tap_2/123-b3-stone.png" alt="Exercise 3" class="w-full h-auto rounded-2xl">
                         </div>
-                    </div>
-
-                    <!-- Khu vực làm bài -->
-                    <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-blue-200 shadow-sm">
-                        <p class="text-lg md:text-2xl font-black text-blue-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
-                        <textarea id="ans-123-3" rows="5" class="w-full p-6 rounded-2xl border-2 border-blue-200 bg-blue-50/50 dark:bg-slate-900 outline-none focus:border-blue-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;Thể tích nước lúc sau: ...&#10;Thể tích nước lúc đầu: ...&#10;Thể tích tảng đá: ...&#10;Đáp số: ... dm³"></textarea>
+                        <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-blue-200 shadow-sm flex flex-col">
+                            <p class="text-lg md:text-2xl font-black text-blue-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
+                            <textarea id="ans-123-3" rows="5" class="w-full flex-grow p-6 rounded-2xl border-2 border-blue-200 bg-blue-50/50 dark:bg-slate-900 outline-none focus:border-blue-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;Thể tích nước lúc sau: ...&#10;Thể tích nước lúc đầu: ...&#10;Thể tích tảng đá: ...&#10;Đáp số: ... dm³"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
