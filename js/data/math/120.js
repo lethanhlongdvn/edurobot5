@@ -183,7 +183,7 @@ export const lesson120 = {
                             <div class="flex-grow">
                                 <textarea id="wp-calc-120-2" rows="1" 
                                     class="w-full p-4 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-3xl font-black text-blue-800 placeholder:text-gray-200 transition-all resize-none shadow-sm" 
-                                    placeholder="Ví dụ: 9 x 9 x 4 = 324 (cm2)"></textarea>
+                                    placeholder="Ví dụ: 5 x 5 x 4 = 100 (cm2)"></textarea>
                             </div>
                         </div>
                         

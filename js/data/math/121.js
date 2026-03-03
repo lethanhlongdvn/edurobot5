@@ -151,7 +151,7 @@ export const lesson121 = {
                         <div class="flex items-start gap-3">
                             <div class="w-10 h-10 bg-teal-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-2">2</div>
                             <div class="flex-grow">
-                                <textarea id="wp-calc-121-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-teal-200 outline-none focus:border-teal-500 text-3xl font-black text-emerald-700 placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Ví dụ: 10 x 10 x 5 = 500 (cm2)"></textarea>
+                                <textarea id="wp-calc-121-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-teal-200 outline-none focus:border-teal-500 text-3xl font-black text-emerald-700 placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Ví dụ: 2 x 2 x 5 = 20 (cm2)"></textarea>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
@@ -194,7 +194,7 @@ export const lesson121 = {
 
                     <!-- Khu vực giải toán -->
                     <div class="max-w-4xl mx-auto space-y-6 bg-white p-6 rounded-[40px] shadow-2xl border-2 border-orange-100 text-center">
-                        <textarea id="wp-solution-121-3" rows="2" class="w-full p-6 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Giải: Diện tích XQ chậu là: 20 x 20 x 4 = 1600 (cm2)..."></textarea>
+                        <textarea id="wp-solution-121-3" rows="2" class="w-full p-6 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Giải: Diện tích XQ chậu là: ... x ... x 4 = ... (cm2)"></textarea>
                         <div class="flex items-center justify-center gap-4 p-4 bg-orange-50/50 rounded-2xl shadow-inner">
                             <span class="text-3xl font-black text-orange-900 uppercase italic">Số tiền:</span>
                             <input type="number" id="ans-121-3" class="w-full max-w-[320px] p-4 rounded-2xl border-2 border-orange-300 outline-none focus:border-orange-500 text-4xl font-black text-rose-600" placeholder="?">
