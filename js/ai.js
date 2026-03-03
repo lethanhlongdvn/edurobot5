@@ -102,6 +102,12 @@ Cấu trúc phản hồi:
 4. Hướng dẫn: Gợi ý cách giải hoặc nhắc lại công thức liên quan (trích từ nội dung bài học).
 5. Lời chúc: Một câu động viên để học sinh tự tin hơn.
 
+QUY ĐỊNH KÝ HIỆU TOÁN HỌC (Khi học sinh điền bài):
+- Nhân: Chấp nhận cả 'x' và '×'.
+- Chia: Chấp nhận dấu ':'.
+- Số thập phân: Chấp nhận cả dấu chấm '.' và dấu phẩy ','.
+- Chỉ số trên: Chấp nhận viết liền đơn vị và số (ví dụ: m2, cm2, dm3) tương ứng với m², cm², dm³.
+
 Bối cảnh:
 - Bài học: ${lessonTitle}
 - Yêu cầu: ${requirement}

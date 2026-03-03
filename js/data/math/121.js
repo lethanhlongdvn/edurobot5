@@ -81,25 +81,40 @@ export const lesson121 = {
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="bg-white p-6 rounded-2xl shadow border border-indigo-50 text-center space-y-3">
-                            <p class="font-black text-indigo-400 text-xl uppercase italic tracking-widest leading-none">Cạnh 25cm</p>
+                        <div id="box-121-1a" class="bg-white p-6 rounded-2xl shadow border border-indigo-50 text-center space-y-3 transition-all">
+                            <p class="font-black text-indigo-400 text-xl uppercase italic tracking-widest leading-none flex items-center justify-between">
+                                <span>Cạnh 25cm</span>
+                                <button onclick="checkInstant121('1a')" class="w-8 h-8 bg-emerald-500 text-white rounded-lg flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
+                            </p>
                             <div class="flex items-center justify-center gap-2">
                                 <input type="number" id="ans-121-1a" class="w-full text-4xl md:text-5xl font-black text-indigo-600 bg-indigo-50 rounded-2xl p-4 text-center border-none shadow-inner" placeholder="?">
-                                <span class="text-2xl font-bold text-gray-300 italic">cm²</span>
+                                <span class="text-2xl font-bold text-gray-300 italic">cm<sup>2</sup></span>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-2xl shadow border border-indigo-50 text-center space-y-3">
-                            <p class="font-black text-indigo-400 text-xl uppercase italic tracking-widest leading-none">Cạnh 15cm</p>
+                        <div id="box-121-1b" class="bg-white p-6 rounded-2xl shadow border border-indigo-50 text-center space-y-3 transition-all">
+                            <p class="font-black text-indigo-400 text-xl uppercase italic tracking-widest leading-none flex items-center justify-between">
+                                <span>Cạnh 15cm</span>
+                                <button onclick="checkInstant121('1b')" class="w-8 h-8 bg-emerald-500 text-white rounded-lg flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
+                            </p>
                             <div class="flex items-center justify-center gap-2">
                                 <input type="number" id="ans-121-1b" class="w-full text-4xl md:text-5xl font-black text-indigo-600 bg-indigo-50 rounded-2xl p-4 text-center border-none shadow-inner" placeholder="?">
-                                <span class="text-2xl font-bold text-gray-300 italic">cm²</span>
+                                <span class="text-2xl font-bold text-gray-300 italic">cm<sup>2</sup></span>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-2xl shadow border border-indigo-50 text-center space-y-3">
-                            <p class="font-black text-indigo-400 text-xl uppercase italic tracking-widest leading-none">Cạnh 30cm</p>
+                        <div id="box-121-1c" class="bg-white p-6 rounded-2xl shadow border border-indigo-50 text-center space-y-3 transition-all">
+                            <p class="font-black text-indigo-400 text-xl uppercase italic tracking-widest leading-none flex items-center justify-between">
+                                <span>Cạnh 30cm</span>
+                                <button onclick="checkInstant121('1c')" class="w-8 h-8 bg-emerald-500 text-white rounded-lg flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
+                            </p>
                             <div class="flex items-center justify-center gap-2">
                                 <input type="number" id="ans-121-1c" class="w-full text-4xl md:text-5xl font-black text-indigo-600 bg-indigo-50 rounded-2xl p-4 text-center border-none shadow-inner" placeholder="?">
-                                <span class="text-2xl font-bold text-gray-300 italic">cm²</span>
+                                <span class="text-2xl font-bold text-gray-300 italic">cm<sup>2</sup></span>
                             </div>
                         </div>
                     </div>
@@ -130,20 +145,23 @@ export const lesson121 = {
                         <div class="flex items-start gap-3">
                             <div class="w-10 h-10 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-2">1</div>
                             <div class="flex-grow">
-                                <textarea id="wp-solution-121-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Lời giải..."></textarea>
+                                <textarea id="wp-solution-121-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Ví dụ: Diện tích cần phủ kẹo là:"></textarea>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <div class="w-10 h-10 bg-teal-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-2">2</div>
                             <div class="flex-grow">
-                                <textarea id="wp-calc-121-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-teal-200 outline-none focus:border-teal-500 text-3xl font-black text-emerald-700 placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Phép tính..."></textarea>
+                                <textarea id="wp-calc-121-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-teal-200 outline-none focus:border-teal-500 text-3xl font-black text-emerald-700 placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Ví dụ: 10 x 10 x 5 = 500 (cm2)"></textarea>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <div class="w-10 h-10 bg-cyan-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-2">3</div>
                             <div class="flex-grow flex items-center gap-4">
                                 <input type="number" id="ans-121-2" class="w-full max-w-[300px] p-4 rounded-2xl border-2 border-cyan-200 outline-none focus:border-cyan-500 text-4xl font-black text-cyan-600 transition-all shadow-sm" placeholder="?">
-                                <span class="text-2xl md:text-3xl font-black text-gray-300">cm²</span>
+                                <span class="text-2xl md:text-3xl font-black text-gray-300">cm<sup>2</sup></span>
+                                <button onclick="checkInstant121('2')" class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
                             </div>
                         </div>
                         <div class="pt-4 flex justify-center">
@@ -176,11 +194,14 @@ export const lesson121 = {
 
                     <!-- Khu vực giải toán -->
                     <div class="max-w-4xl mx-auto space-y-6 bg-white p-6 rounded-[40px] shadow-2xl border-2 border-orange-100 text-center">
-                        <textarea id="wp-solution-121-3" rows="2" class="w-full p-6 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Lời giải và phép tính..."></textarea>
+                        <textarea id="wp-solution-121-3" rows="2" class="w-full p-6 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Giải: Diện tích XQ chậu là: 20 x 20 x 4 = 1600 (cm2)..."></textarea>
                         <div class="flex items-center justify-center gap-4 p-4 bg-orange-50/50 rounded-2xl shadow-inner">
                             <span class="text-3xl font-black text-orange-900 uppercase italic">Số tiền:</span>
                             <input type="number" id="ans-121-3" class="w-full max-w-[320px] p-4 rounded-2xl border-2 border-orange-300 outline-none focus:border-orange-500 text-4xl font-black text-rose-600" placeholder="?">
                             <span class="text-2xl font-black text-gray-400 italic">đồng</span>
+                            <button onclick="checkInstant121('3')" class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                            </button>
                         </div>
                         <div class="pt-2 flex justify-center">
                             <button onclick="Lesson.submitWordProblemAI('121-3')" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black text-xl transition-all shadow-xl active:scale-95">
@@ -225,6 +246,34 @@ export const lesson121 = {
             </div>
 
             <script>
+                window.checkInstant121 = function(id) {
+                    const box = document.getElementById('box-121-' + id);
+                    if (!box) {
+                        // For Bài 1a, 1b, 1c targets might be inside a grid
+                        const target = document.getElementById('box-121-' + id);
+                        if (target) box = target;
+                    }
+                    let isCorrect = false;
+                    let val = "";
+
+                    if (id === '1a') isCorrect = (document.getElementById('ans-121-1a').value == '2500');
+                    else if (id === '1b') isCorrect = (document.getElementById('ans-121-1b').value == '900');
+                    else if (id === '1c') isCorrect = (document.getElementById('ans-121-1c').value == '3600');
+                    else if (id === '2') isCorrect = (document.getElementById('ans-121-2').value == '500');
+                    else if (id === '3') isCorrect = (document.getElementById('ans-121-3').value == '40000');
+
+                    box.classList.remove('border-gray-100', 'border-emerald-400', 'bg-emerald-50', 'border-red-400', 'bg-red-50');
+                    box.classList.add('border-4');
+
+                    if (isCorrect) {
+                        box.classList.add('border-emerald-400', 'bg-emerald-50');
+                        alert("Chính xác! Bạn thông minh quá! ✨🎉");
+                    } else {
+                        box.classList.add('border-red-400', 'bg-red-50');
+                        alert("Kết quả chưa đúng, bạn kiểm tra lại phép tính nhé! 🤔");
+                    }
+                };
+
                 window.check121_4 = function(isCorrect) {
                    if(isCorrect) {
                        alert("Chưa chính xác! Con hãy thử tính lại xem nhé. Khi ghép 2 hình thì có 2 mặt bị 'mất đi' do dán vào nhau đấy! 😉");
@@ -269,18 +318,18 @@ export const lesson121 = {
     "quizPool": [
         { "question": "Công thức tính diện tích xung quanh của hình lập phương cạnh a là:", "options": ["a × a × 4", "a × a × 6", "a × a × 2", "a × a × 8"], "answer": 0, "level": 1 },
         { "question": "Công thức tính diện tích toàn phần của hình lập phương cạnh a là:", "options": ["a × a × 4", "a × a × 6", "a × a × 12", "a × a × 6 × 6"], "answer": 1, "level": 1 },
-        { "question": "Một hình lập phương có cạnh 2cm. Diện tích xung quanh là:", "options": ["8 cm²", "16 cm²", "24 cm²", "32 cm²"], "answer": 1, "level": 1 },
-        { "question": "Một hình lập phương có cạnh 3dm. Diện tích toàn phần là:", "options": ["36 dm²", "54 dm²", "45 dm²", "90 dm²"], "answer": 1, "level": 2 },
-        { "question": "Diện tích một mặt hình lập phương là 10cm². Diện tích toàn phần là:", "options": ["40 cm²", "50 cm²", "60 cm²", "100 cm²"], "answer": 2, "level": 1 },
-        { "question": "Hình lập phương có cạnh 1m. Diện tích xung quanh là:", "options": ["1 m²", "4 m²", "6 m²", "8 m²"], "answer": 1, "level": 1 },
-        { "question": "Nếu cạnh hình lập phương tăng gấp đôi thì diện tích xung quanh tăng gấp mấy lần?", "options": ["2 lần", "4 lần", "6 lần", "8 lần"], "answer": 1, "level": 2 },
-        { "question": "Tính diện tích giấy để dán kín một cái hộp không nắp cạnh 10cm:", "options": ["400 cm²", "500 cm²", "600 cm²", "1000 cm²"], "answer": 1, "level": 2 },
-        { "question": "Hình lập phương có 6 mặt, các mặt đều là hình gì?", "options": ["Hình chữ nhật", "Hình vuông", "Hình tròn", "Hình tam giác"], "answer": 1, "level": 1 },
+        { "question": "Một hình lập phương có cạnh 2 cm. Diện tích xung quanh là:", "options": ["8 cm<sup>2</sup>", "16 cm<sup>2</sup>", "24 cm<sup>2</sup>", "32 cm<sup>2</sup>"], "answer": 1, "level": 1 },
+        { "question": "Một hình lập phương có cạnh 3 dm. Diện tích toàn phần là:", "options": ["36 dm<sup>2</sup>", "54 dm<sup>2</sup>", "45 dm<sup>2</sup>", "90 dm<sup>2</sup>"], "answer": 1, "level": 2 },
+        { "question": "Diện tích một mặt hình lập phương là 10 cm<sup>2</sup>. Diện tích toàn phần là:", "options": ["40 cm<sup>2</sup>", "50 cm<sup>2</sup>", "60 cm<sup>2</sup>", "100 cm<sup>2</sup>"], "answer": 2, "level": 1 },
+        { "question": "Hình lập phương có cạnh 1 m. Diện tích xung quanh là:", "options": ["1 m<sup>2</sup>", "4 m<sup>2</sup>", "6 m<sup>2</sup>", "8 m<sup>2</sup>"], "answer": 1, "level": 1 },
+        { "question": "Nếu cạnh hình lập phương tăng gấp đôi thì diện tích xung quanh tăng gấp mấy lần?", "options": ["4 lần", "2 lần", "6 lần", "8 lần"], "answer": 0, "level": 2 },
+        { "question": "Tính diện tích giấy để dán kín một cái hộp không nắp cạnh 10 cm:", "options": ["400 cm<sup>2</sup>", "500 cm<sup>2</sup>", "600 cm<sup>2</sup>", "1000 cm<sup>2</sup>"], "answer": 1, "level": 2 },
+        { "question": "Hình lập phương có 6 mặt, các mặt đều là hình gì?", "options": ["Hình vuông", "Hình chữ nhật", "Hình tròn", "Hình tam giác"], "answer": 0, "level": 1 },
         { "question": "Muốn tính diện tích toàn phần của hình lập phương, ta lấy diện tích một mặt nhân với:", "options": ["4", "6", "8", "2"], "answer": 1, "level": 1 },
-        { "question": "Một chiếc đèn lồng hình lập phương cạnh 20cm, diện tích 4 mặt xung quanh là:", "options": ["800 cm²", "1200 cm²", "1600 cm²", "2400 cm²"], "answer": 2, "level": 2 },
-        { "question": "Diện tích toàn phần của hình lập phương cạnh 0,5m là:", "options": ["1 m²", "1,25 m²", "1,5 m²", "2,5 m²"], "answer": 2, "level": 3 },
-        { "question": "Nếu cạnh hình lập phương là 4cm thì diện tích một mặt là:", "options": ["8 cm²", "12 cm²", "16 cm²", "24 cm²"], "answer": 2, "level": 1 },
+        { "question": "Một chiếc đèn lồng hình lập phương cạnh 20 cm, diện tích 4 mặt xung quanh là:", "options": ["800 cm<sup>2</sup>", "1200 cm<sup>2</sup>", "1600 cm<sup>2</sup>", "2400 cm<sup>2</sup>"], "answer": 2, "level": 2 },
+        { "question": "Diện tích toàn phần của hình lập phương cạnh 0,5 m là:", "options": ["1 m<sup>2</sup>", "1,25 m<sup>2</sup>", "1,5 m<sup>2</sup>", "2,5 m<sup>2</sup>"], "answer": 2, "level": 3 },
+        { "question": "Nếu cạnh hình lập phương là 4 cm thì diện tích một mặt là:", "options": ["8 cm<sup>2</sup>", "12 cm<sup>2</sup>", "16 cm<sup>2</sup>", "24 cm<sup>2</sup>"], "answer": 2, "level": 1 },
         { "question": "Tổng diện tích 4 mặt bên của hình lập phương được gọi là:", "options": ["Diện tích toàn phần", "Diện tích xung quanh", "Chu vi đáy", "Diện tích đáy"], "answer": 1, "level": 1 },
-        { "question": "Một chiếc hộp hình lập phương cạnh 1m có diện tích đáy là bao nhiêu dm²?", "options": ["10 dm²", "100 dm²", "1000 dm²", "1 dm²"], "answer": 1, "level": 2 }
+        { "question": "Một chiếc hộp hình lập phương cạnh 1 m có diện tích đáy là bao nhiêu dm<sup>2</sup>?", "options": ["10 dm<sup>2</sup>", "100 dm<sup>2</sup>", "1000 dm<sup>2</sup>", "1 dm<sup>2</sup>"], "answer": 1, "level": 2 }
     ]
 };

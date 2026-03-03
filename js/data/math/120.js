@@ -91,22 +91,25 @@ export const lesson120 = {
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- a) 12 cm -->
                         <div id="box-120-1a" class="bg-gray-50 p-6 rounded-3xl border-2 border-transparent transition-all text-center md:text-left">
-                            <h4 class="text-2xl md:text-4xl font-black text-indigo-800 mb-6 flex items-center justify-center md:justify-start gap-3">
+                            <h4 class="text-2xl md:text-4xl font-black text-indigo-800 mb-6 flex items-center justify-between gap-3">
                                 <span>a) Cạnh a = 12 cm</span>
+                                <button onclick="checkInstant120('1a')" class="w-10 h-10 bg-emerald-500 text-white rounded-xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
                             </h4>
                             <div class="grid grid-cols-1 gap-4">
                                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                     <label class="block text-gray-400 font-black text-xs md:text-sm uppercase tracking-widest mb-2">Diện tích xung quanh</label>
                                     <div class="flex items-center gap-3">
                                         <input type="number" id="ans-120-1a-xq" class="w-full text-4xl md:text-6xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
-                                        <span class="text-2xl md:text-3xl font-black text-gray-300">cm²</span>
+                                        <span class="text-2xl md:text-3xl font-black text-gray-300">cm<sup>2</sup></span>
                                     </div>
                                 </div>
                                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                     <label class="block text-gray-400 font-black text-xs md:text-sm uppercase tracking-widest mb-2">Diện tích toàn phần</label>
                                     <div class="flex items-center gap-3">
                                         <input type="number" id="ans-120-1a-tp" class="w-full text-4xl md:text-6xl font-black text-purple-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
-                                        <span class="text-2xl md:text-3xl font-black text-gray-300">cm²</span>
+                                        <span class="text-2xl md:text-3xl font-black text-gray-300">cm<sup>2</sup></span>
                                     </div>
                                 </div>
                             </div>
@@ -114,22 +117,25 @@ export const lesson120 = {
 
                         <!-- b) 1.5 m -->
                         <div id="box-120-1b" class="bg-gray-50 p-6 rounded-3xl border-2 border-transparent transition-all text-center md:text-left">
-                            <h4 class="text-2xl md:text-4xl font-black text-emerald-800 mb-6 flex items-center justify-center md:justify-start gap-3">
+                            <h4 class="text-2xl md:text-4xl font-black text-emerald-800 mb-6 flex items-center justify-between gap-3">
                                 <span>b) Cạnh a = 1,5 m</span>
+                                <button onclick="checkInstant120('1b')" class="w-10 h-10 bg-emerald-500 text-white rounded-xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
                             </h4>
                             <div class="grid grid-cols-1 gap-4">
                                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                     <label class="block text-gray-400 font-black text-xs md:text-sm uppercase tracking-widest mb-2">Diện tích xung quanh</label>
                                     <div class="flex items-center gap-3">
-                                        <input type="number" step="0.01" id="ans-120-1b-xq" class="w-full text-4xl md:text-6xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
-                                        <span class="text-2xl md:text-3xl font-black text-gray-300">m²</span>
+                                        <input type="text" inputmode="decimal" id="ans-120-1b-xq" class="w-full text-4xl md:text-6xl font-black text-indigo-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
+                                        <span class="text-2xl md:text-3xl font-black text-gray-300">m<sup>2</sup></span>
                                     </div>
                                 </div>
                                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                     <label class="block text-gray-400 font-black text-xs md:text-sm uppercase tracking-widest mb-2">Diện tích toàn phần</label>
                                     <div class="flex items-center gap-3">
-                                        <input type="number" step="0.01" id="ans-120-1b-tp" class="w-full text-4xl md:text-6xl font-black text-purple-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
-                                        <span class="text-2xl md:text-3xl font-black text-gray-300">m²</span>
+                                        <input type="text" inputmode="decimal" id="ans-120-1b-tp" class="w-full text-4xl md:text-6xl font-black text-purple-600 bg-transparent border-none focus:ring-0 text-right placeholder:text-gray-100" placeholder="?">
+                                        <span class="text-2xl md:text-3xl font-black text-gray-300">m<sup>2</sup></span>
                                     </div>
                                 </div>
                             </div>
@@ -167,7 +173,7 @@ export const lesson120 = {
                             <div class="flex-grow">
                                 <textarea id="wp-solution-120-2" rows="1" 
                                     class="w-full p-4 rounded-2xl border-2 border-amber-200 outline-none focus:border-amber-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" 
-                                    placeholder="Lời giải..."></textarea>
+                                    placeholder="Ví dụ: Diện tích túi bóng là:"></textarea>
                             </div>
                         </div>
                         
@@ -177,7 +183,7 @@ export const lesson120 = {
                             <div class="flex-grow">
                                 <textarea id="wp-calc-120-2" rows="1" 
                                     class="w-full p-4 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-3xl font-black text-blue-800 placeholder:text-gray-200 transition-all resize-none shadow-sm" 
-                                    placeholder="Phép tính..."></textarea>
+                                    placeholder="Ví dụ: 9 x 9 x 4 = 324 (cm2)"></textarea>
                             </div>
                         </div>
                         
@@ -189,6 +195,9 @@ export const lesson120 = {
                                     class="w-full max-w-[300px] p-4 rounded-2xl border-2 border-rose-200 outline-none focus:border-rose-500 text-4xl font-black text-rose-600 shadow-sm transition-all" 
                                     placeholder="?">
                                 <span class="text-2xl md:text-3xl font-black text-gray-300">cm²</span>
+                                <button onclick="checkInstant120('2')" class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
                             </div>
                         </div>
 
@@ -209,6 +218,40 @@ export const lesson120 = {
             </div>
 
             <script>
+                window.checkInstant120 = function(id) {
+                    const parseVal = (v) => parseFloat(v.toString().replace(',', '.'));
+                    const box = document.getElementById('box-120-' + id);
+                    let isCorrect = false;
+                    let val1, val2;
+
+                    if (id === '1a') {
+                        val1 = document.getElementById('ans-120-1a-xq').value;
+                        val2 = document.getElementById('ans-120-1a-tp').value;
+                        if (!val1 || !val2) { alert("Thầy E nhắc: Bạn hãy điền đủ kết quả của cả 2 ô nhé! ✏️"); return; }
+                        isCorrect = (parseInt(val1) === 576 && parseInt(val2) === 864);
+                    } else if (id === '1b') {
+                        val1 = document.getElementById('ans-120-1b-xq').value;
+                        val2 = document.getElementById('ans-120-1b-tp').value;
+                        if (!val1 || !val2) { alert("Thầy E nhắc: Bạn hãy điền đủ kết quả của cả 2 ô nhé! ✏️"); return; }
+                        isCorrect = (parseVal(val1) === 9 && parseVal(val2) === 13.5);
+                    } else if (id === '2') {
+                        val1 = document.getElementById('ans-120-2').value;
+                        if (!val1) { alert("Thầy E nhắc: Bạn hãy điền đáp số vào ô trống nhé! ✏️"); return; }
+                        isCorrect = (parseInt(val1) === 324);
+                    }
+
+                    box.classList.remove('border-transparent', 'border-emerald-400', 'bg-emerald-50', 'border-red-400', 'bg-red-50');
+                    box.classList.add('border-4');
+
+                    if (isCorrect) {
+                        box.classList.add('border-emerald-400', 'bg-emerald-50');
+                        alert("Chính xác! Bạn giỏi quá! ✨🎉");
+                    } else {
+                        box.classList.add('border-red-400', 'bg-red-50');
+                        alert("Chưa đúng rồi, bạn tính toán lại một chút nhé! 🤔");
+                    }
+                };
+
                 window.submit120 = function() {
                     const a1ax = document.getElementById('ans-120-1a-xq').value;
                     const a1at = document.getElementById('ans-120-1a-tp').value;
@@ -230,11 +273,13 @@ export const lesson120 = {
                         box.classList.add('border-4', 'border-transparent');
                     });
 
+                    const parseVal = (v) => parseFloat(v.toString().replace(',', '.'));
+
                     // Check results
                     // 1a: a=12 -> Sxq = 12*12*4 = 576, Stp = 12*12*6 = 864
                     let c1a = (parseInt(a1ax) === 576 && parseInt(a1at) === 864);
                     // 1b: a=1.5 -> Sxq = 1.5*1.5*4 = 9, Stp = 1.5*1.5*6 = 13.5
-                    let c1b = (parseFloat(a1bx.replace(',', '.')) === 9 && parseFloat(a1bt.replace(',', '.')) === 13.5);
+                    let c1b = (parseVal(a1bx) === 9 && parseVal(a1bt) === 13.5);
                     // 2: a=9 -> Sxq (cuốn quanh) = 9*9*4 = 324
                     let c2 = (parseInt(a2) === 324);
 
@@ -271,16 +316,16 @@ export const lesson120 = {
         { "question": "Diện tích một mặt của hình lập phương có cạnh a là:", "options": ["a × a", "a × 4", "a × 6", "a × a × 4"], "answer": 0, "level": 1 },
         { "question": "Công thức tính diện tích xung quanh của hình lập phương cạnh a là:", "options": ["Sxq = (a × a) × 4", "Sxq = (a × a) × 6", "Sxq = a × 4", "Sxq = a × a"], "answer": 0, "level": 1 },
         { "question": "Công thức tính diện tích toàn phần của hình lập phương cạnh a là:", "options": ["Stp = (a × a) × 6", "Stp = (a × a) × 4", "Stp = a × 6", "Stp = a × a"], "answer": 0, "level": 1 },
-        { "question": "Một hình lập phương có cạnh 2cm. Diện tích xung quanh của nó là:", "options": ["16 cm²", "8 cm²", "24 cm²", "4 cm²"], "answer": 0, "level": 1 },
-        { "question": "Một hình lập phương có cạnh 3dm. Diện tích toàn phần của nó là:", "options": ["54 dm²", "36 dm²", "9 dm²", "27 dm²"], "answer": 0, "level": 1 },
+        { "question": "Một hình lập phương có cạnh 2 cm. Diện tích xung quanh của nó là:", "options": ["16 cm<sup>2</sup>", "8 cm<sup>2</sup>", "24 cm<sup>2</sup>", "4 cm<sup>2</sup>"], "answer": 0, "level": 1 },
+        { "question": "Một hình lập phương có cạnh 3 dm. Diện tích toàn phần của nó là:", "options": ["54 dm<sup>2</sup>", "36 dm<sup>2</sup>", "9 dm<sup>2</sup>", "27 dm<sup>2</sup>"], "answer": 0, "level": 1 },
         { "question": "Nếu cạnh của hình lập phương gấp lên 3 lần thì diện tích xung quanh gấp lên mấy lần?", "options": ["9 lần", "3 lần", "6 lần", "12 lần"], "answer": 0, "level": 2 },
-        { "question": "Diện tích toàn phần của hình lập phương có cạnh 1,1m là:", "options": ["7,26 m²", "4,84 m²", "1,21 m²", "6,6 m²"], "answer": 0, "level": 1 },
-        { "question": "Một cái hộp hình lập phương không có nắp cạnh 5dm. Diện tích giấy cần để dán mặt ngoài của hộp là:", "options": ["125 dm²", "100 dm²", "150 dm²", "25 dm²"], "answer": 0, "level": 2 },
+        { "question": "Diện tích toàn phần của hình lập phương có cạnh 1,1 m là:", "options": ["7,26 m<sup>2</sup>", "4,84 m<sup>2</sup>", "1,21 m<sup>2</sup>", "6,6 m<sup>2</sup>"], "answer": 0, "level": 1 },
+        { "question": "Một cái hộp hình lập phương không có nắp cạnh 5 dm. Diện tích giấy cần để dán mặt ngoài của hộp là:", "options": ["125 dm<sup>2</sup>", "100 dm<sup>2</sup>", "150 dm<sup>2</sup>", "25 dm<sup>2</sup>"], "answer": 0, "level": 2 },
         { "question": "Hình lập phương là hình hộp chữ nhật đặc biệt có:", "options": ["Chiều dài = Chiều rộng = Chiều cao", "Chiều dài > Chiều rộng", "Có 6 mặt là hình chữ nhật", "Có 12 cạnh không bằng nhau"], "answer": 0, "level": 1 },
         { "question": "Muốn tính diện tích toàn phần hình lập phương, ta lấy diện tích một mặt nhân với mấy?", "options": ["6", "4", "12", "2"], "answer": 0, "level": 1 },
-        { "question": "Một hình lập phương có diện tích một mặt là 25 cm². Cạnh của hình lập phương đó là:", "options": ["5 cm", "4 cm", "6 cm", "25 cm"], "answer": 0, "level": 1 },
-        { "question": "Một hình lập phương có diện tích xung quanh là 100 cm². Diện tích một mặt của nó là:", "options": ["25 cm²", "20 cm²", "50 cm²", "400 cm²"], "answer": 0, "level": 1 },
-        { "question": "Một hình lập phương có diện tích toàn phần là 96 dm². Diện tích một mặt của nó là:", "options": ["16 dm²", "24 dm²", "6 dm²", "12 dm²"], "answer": 0, "level": 1 },
+        { "question": "Một hình lập phương có diện tích một mặt là 25 cm<sup>2</sup>. Cạnh của hình lập phương đó là:", "options": ["5 cm", "4 cm", "6 cm", "25 cm"], "answer": 0, "level": 1 },
+        { "question": "Một hình lập phương có diện tích xung quanh là 100 cm<sup>2</sup>. Diện tích một mặt của nó là:", "options": ["25 cm<sup>2</sup>", "20 cm<sup>2</sup>", "50 cm<sup>2</sup>", "400 cm<sup>2</sup>"], "answer": 0, "level": 1 },
+        { "question": "Một hình lập phương có diện tích toàn phần là 96 dm<sup>2</sup>. Diện tích một mặt của nó là:", "options": ["16 dm<sup>2</sup>", "24 dm<sup>2</sup>", "6 dm<sup>2</sup>", "12 dm<sup>2</sup>"], "answer": 0, "level": 1 },
         { "question": "Nếu diện tích một mặt của hình lập phương tăng 4 lần thì cạnh của nó tăng mấy lần?", "options": ["2 lần", "4 lần", "8 lần", "16 lần"], "answer": 0, "level": 2 }
     ]
 };
