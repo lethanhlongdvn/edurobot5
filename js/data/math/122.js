@@ -300,9 +300,10 @@ export const lesson122 = {
                         for(let y = totalY-1; y >= 0; y--) {
                             for(let z = 0; z < totalZ; z++) {
                                 for(let x = 0; x < totalX; x++) {
-                                    // Top-left-back corner center of the 300x200x250 box
-                                    const tx = -125 + (x * size);
-                                    const ty = -75 + (y * size);
+                                    // Origin of the absolute container is (0,0) at the top-left
+                                    // With a block size of 50, its center is placed at 25px offset
+                                    const tx = 25 + (x * size);
+                                    const ty = 25 + (y * size);
                                     const tz = -100 + (z * size);
 
                                     const block = document.createElement('div');
