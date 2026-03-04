@@ -594,19 +594,19 @@ export const Lesson = {
         const safeParams = JSON.stringify(correctPairs).replace(/"/g, '&quot;');
 
         let leftHtml = leftItems.map((item, idx) => `
-    < button id = "match-l-${id}-${idx}" onclick = "Lesson.selectMatch('${id}', 'left', ${idx})" class="match-btn w-full p-4 mb-3 bg-white border-2 border-indigo-100 dark:border-slate-700 text-indigo-900 dark:text-slate-200 font-bold rounded-2xl shadow-sm text-center transition-all hover:-translate-y-1 hover:border-indigo-300 relative z-20" >
-        ${item}
-            </button >
-    `).join('');
+            <button id="match-l-${id}-${idx}" onclick="Lesson.selectMatch('${id}', 'left', ${idx})" class="match-btn w-full p-4 mb-3 bg-white border-2 border-indigo-100 dark:border-slate-700 text-indigo-900 dark:text-slate-200 font-bold rounded-2xl shadow-sm text-center transition-all hover:-translate-y-1 hover:border-indigo-300 relative z-20">
+                ${item}
+            </button>
+        `).join('');
 
         let rightHtml = rightItems.map((item, idx) => `
-    < button id = "match-r-${id}-${idx}" onclick = "Lesson.selectMatch('${id}', 'right', ${idx})" class="match-btn w-full p-4 mb-3 bg-white border-2 border-fuchsia-100 dark:border-slate-700 text-fuchsia-900 dark:text-slate-200 font-bold rounded-2xl shadow-sm text-center transition-all hover:-translate-y-1 hover:border-fuchsia-300 relative z-20" >
-        ${item}
-            </button >
-    `).join('');
+            <button id="match-r-${id}-${idx}" onclick="Lesson.selectMatch('${id}', 'right', ${idx})" class="match-btn w-full p-4 mb-3 bg-white border-2 border-fuchsia-100 dark:border-slate-700 text-fuchsia-900 dark:text-slate-200 font-bold rounded-2xl shadow-sm text-center transition-all hover:-translate-y-1 hover:border-fuchsia-300 relative z-20">
+                ${item}
+            </button>
+        `).join('');
 
         return `
-    < div class="matching-exercise p-6 md:p-8 bg-gradient-to-br from-indigo-50 to-fuchsia-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] mt-6 relative animate-fade-in" id = "match-ex-${id}" >
+        <div class="matching-exercise p-6 md:p-8 bg-gradient-to-br from-indigo-50 to-fuchsia-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] mt-6 relative animate-fade-in" id="match-ex-${id}">
                 <div class="flex items-center gap-3 mb-6 relative z-10">
                     <span class="text-3xl">🔗</span>
                     <h3 class="text-xl font-bold text-gray-800 dark:text-slate-100">${title}</h3>
@@ -617,16 +617,16 @@ export const Lesson = {
                     <div class="flex-1" id="match-col-right-${id}">${rightHtml}</div>
                 </div>
                 
-                <!--SVG layer cho đường nối-- >
+                <!--SVG layer cho đường nối-->
                 <svg id="match-canvas-${id}" class="absolute inset-0 w-full h-full pointer-events-none z-10 opacity-70"></svg>
                 
                 <div class="mt-6 flex justify-end items-center gap-4 relative z-20">
                     <span id="match-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
                     <button onclick="Lesson.checkMatching('${id}', '${safeParams}')" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95">Kiểm Tra</button>
                 </div>
-            </div >
-            < !--Auto Init State-- >
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window['matchState_${id}'] = { left: null, right: null, lines: [] }" class="hidden">
+            </div>
+            <!--Auto Init State-->
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window['matchState_${id}'] = { left: null, right: null, lines: [] }" class="hidden">
         `;
     },
 
