@@ -476,9 +476,9 @@ export const lesson122 = {
             </div>
 
             <!-- Nộp bài -->
-            <div class="pt-8 border-t-4 border-dashed border-gray-100 flex flex-col items-center">
-                <button id="btn-submit-122" onclick="submit122()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-20 py-6 rounded-[32px] font-black text-3xl shadow-2xl active:scale-95 transition-all transform hover:-translate-y-2 uppercase tracking-widest">
-                    Nộp bài cho Robot
+            <div class="pt-8 border-t-4 border-dashed border-gray-100 flex justify-end">
+                <button id="btn-submit-122" onclick="submit122()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-2xl font-black text-base shadow-lg active:scale-95 transition-all">
+                    Nộp bài
                 </button>
             </div>
 
