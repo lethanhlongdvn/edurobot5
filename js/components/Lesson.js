@@ -1333,16 +1333,16 @@ export const Lesson = {
                 <div class="flex gap-3">
                     <button onclick="Lesson.answerTrueFalse('${id}', ${idx}, true, '${safeStatements}')"
                         id="tf-btn-true-${id}-${idx}"
-                        class="flex-1 py-3 bg-emerald-50 border-2 border-emerald-200 text-emerald-700 font-black rounded-xl hover:bg-emerald-100 transition-all active:scale-95 text-lg">
+                        class="flex-1 py-3 bg-emerald-50 border-2 border-emerald-200 text-emerald-700 font-black rounded-xl hover:bg-emerald-100 transition-all active:scale-95 text-lg relative z-20">
                         ✅ Đúng
                     </button>
                     <button onclick="Lesson.answerTrueFalse('${id}', ${idx}, false, '${safeStatements}')"
                         id="tf-btn-false-${id}-${idx}"
-                        class="flex-1 py-3 bg-red-50 border-2 border-red-200 text-red-700 font-black rounded-xl hover:bg-red-100 transition-all active:scale-95 text-lg">
+                        class="flex-1 py-3 bg-red-50 border-2 border-red-200 text-red-700 font-black rounded-xl hover:bg-red-100 transition-all active:scale-95 text-lg relative z-20">
                         ❌ Sai
                     </button>
                 </div>
-                <div id="tf-explain-${id}-${idx}" class="mt-3 p-4 rounded-xl text-base font-bold hidden transition-all"></div>
+                <div id="tf-explain-${id}-${idx}" class="mt-3 p-4 rounded-xl text-base font-bold hidden transition-all relative z-20"></div>
             </div>
         `).join('');
 

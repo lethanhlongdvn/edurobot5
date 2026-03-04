@@ -514,10 +514,18 @@ Files thay doi/them moi:
 
 Files thay doi/them moi:
   [CHECK] js/data/history/001.js - Da kiem tra tinh kha thi
+
+[09:56] Ngày 04/03/2026
+8. Fix loi UI / Nhan nut (Lesson.js):
+   - Fix loi nut bam trong bai tap Dung/Sai (renderTrueFalse) khong nhan duoc click vi bi che khuat, bang cach them class relative z-20.
+
+Files thay doi/them moi:
+  [MOD] js/components/Lesson.js - Them relative z-20 cho nut True/False
 Trang thai hien tai:
   - Mon LS&DL: Da khoi tao 70 tiet, 1 tiet demo hoan chinh
   - 10 cong cu tuong tac san sang su dung cho LS&DL
   - Google Maps tich hop thanh cong, zoom/lightbox hoat dong
   - Da push len GitHub, Netlify deploy thanh cong
   - Cac cong cu LS&DL trong 001.js da duoc kiem dinh kha thi.
+
 
