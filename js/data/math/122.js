@@ -108,7 +108,7 @@ export const lesson122 = {
                                 <div class="flex flex-wrap items-center justify-center gap-3 z-10 w-full mb-4">
 
                                     <button onclick="window.fillKhamPha122()" id="btn-fill-122" class="px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all flex items-center gap-2">
-                                        🧊 Xếp lập phương 1 dm³
+                                        🧊 Bấm lần 1: Xếp 1 hình
                                     </button>
                                     <button onclick="window.resetKhamPha122()" class="px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all">
                                         ↺ Đặt lại
@@ -258,8 +258,12 @@ export const lesson122 = {
                     window.fillKhamPha122 = function() {
                         const container = document.getElementById('cube-layers-122');
                         const btn = document.getElementById('btn-fill-122');
-                        if(container.children.length > 0) return; // already filling
                         
+                        if (typeof window.fillStage122 === 'undefined') window.fillStage122 = 0;
+                        if (typeof window.currentBlockIdx122 === 'undefined') window.currentBlockIdx122 = 0;
+                        
+                        if (window.fillStage122 >= 6) return; // Already full
+
                         btn.disabled = true;
                         btn.classList.add('opacity-50', 'cursor-not-allowed');
 
@@ -267,60 +271,78 @@ export const lesson122 = {
                         const totalX = 6, totalY = 4, totalZ = 5;
                         const size = 50;
 
-
-
-                        let count = 0;
-
-                        // Fill layer by layer (bottom to top)
-                        // In screen coordinates, Y is down. Bottom of box is y = positive.
-                        // So bottom layer is Y = 3, top layer is Y = 0.
-                        for(let y = totalY-1; y >= 0; y--) {
-                            for(let z = 0; z < totalZ; z++) {
-                                for(let x = 0; x < totalX; x++) {
-                                    // Box center is (0,0,0) in the 3D grid.
-                                    // With block size=50:
-                                    const tx = -125 + (x * size);
-                                    const ty = -75 + (y * size);
-                                    const tz = -100 + (z * size);
-
-                                    const block = document.createElement('div');
-                                    block.className = 'minicube-122';
-                                    block.style.transform = \`translate3d(\${tx}px, \${ty}px, \${tz}px) scale(0)\`;
-                                    block.style.opacity = '0';
-                                    block.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-
-                                    block.innerHTML = \`
-                                        <div class="face top"></div>
-                                        <div class="face front"></div>
-                                        <div class="face right"></div>
-                                    \`;
-
-                                    container.appendChild(block);
-
-                                    setTimeout(() => {
-                                        block.style.opacity = '1';
-                                        block.style.transform = \`translate3d(\${tx}px, \${ty}px, \${tz}px) scale(1)\`;
-                                        count++;
-                                        if (count === 120) {
-                                            btn.disabled = false;
-                                            btn.classList.remove('opacity-50', 'cursor-not-allowed');
-                                            btn.innerHTML = '✅ Đã lấp đầy';
-                                            btn.classList.replace('from-amber-400', 'from-emerald-500');
-                                            btn.classList.replace('to-orange-500', 'to-emerald-600');
-                                        }
-                                    }, delay);
-
-                                    delay += 30; // 30ms per block
+                        if (!window.blocksData122) {
+                            window.blocksData122 = [];
+                            for(let y = totalY-1; y >= 0; y--) {
+                                for(let z = 0; z < totalZ; z++) {
+                                    for(let x = 0; x < totalX; x++) {
+                                        window.blocksData122.push({x, y, z});
+                                    }
                                 }
                             }
+                        }
+
+                        const stageCounts = [1, 5, 24, 30, 30, 30];
+                        const blocksToStack = stageCounts[window.fillStage122];
+                        let count = 0;
+
+                        for(let i = 0; i < blocksToStack; i++) {
+                            if (window.currentBlockIdx122 >= window.blocksData122.length) break;
+                            const b = window.blocksData122[window.currentBlockIdx122++];
+                            const tx = -125 + (b.x * size);
+                            const ty = -75 + (b.y * size);
+                            const tz = -100 + (b.z * size);
+
+                            const block = document.createElement('div');
+                            block.className = 'minicube-122';
+                            block.style.transform = \`translate3d(\${tx}px, \${ty}px, \${tz}px) scale(0)\`;
+                            block.style.opacity = '0';
+                            block.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+
+                            block.innerHTML = \`
+                                <div class="face top"></div>
+                                <div class="face front"></div>
+                                <div class="face right"></div>
+                            \`;
+
+                            container.appendChild(block);
+
+                            setTimeout(() => {
+                                block.style.opacity = '1';
+                                block.style.transform = \`translate3d(\${tx}px, \${ty}px, \${tz}px) scale(1)\`;
+                                count++;
+                                
+                                if (count === blocksToStack) {
+                                    window.fillStage122++;
+                                    const stageBtnTexts = [
+                                        "🧊 Bấm lần 2: Xếp 1 hàng",
+                                        "🧊 Bấm lần 3: Xếp lớp 1",
+                                        "🧊 Bấm lần 4: Xếp lớp 2",
+                                        "🧊 Bấm lần 5: Xếp lớp 3",
+                                        "🧊 Bấm lần 6: Xếp lớp 4",
+                                        "✅ Đã lấp đầy"
+                                    ];
+                                    
+                                    btn.innerHTML = stageBtnTexts[window.fillStage122 - 1];
+                                    
+                                    if (window.fillStage122 < 6) {
+                                        btn.disabled = false;
+                                        btn.classList.remove('opacity-50', 'cursor-not-allowed');
+                                    } else {
+                                        btn.classList.remove('opacity-50', 'cursor-not-allowed');
+                                        btn.classList.replace('from-amber-400', 'from-emerald-500');
+                                        btn.classList.replace('to-orange-500', 'to-emerald-600');
+                                    }
+                                }
+                            }, delay);
+
+                            delay += 30; // 30ms per block
                         }
                     };
 
                     window.resetKhamPha122 = function() {
                         const container = document.getElementById('cube-layers-122');
                         container.innerHTML = '';
-                        // Remove counter if exists
-                        // Remove counter if exists
                         const lastChild = container.lastElementChild;
                         if(lastChild && lastChild.innerHTML.includes('khối')) {
                             container.removeChild(lastChild);
@@ -328,7 +350,9 @@ export const lesson122 = {
                         const btn = document.getElementById('btn-fill-122');
                         btn.disabled = false;
                         btn.classList.remove('opacity-50', 'cursor-not-allowed');
-                        btn.innerHTML = '🧊 Xếp lập phương 1 dm³';
+                        window.fillStage122 = 0;
+                        window.currentBlockIdx122 = 0;
+                        btn.innerHTML = '🧊 Bấm lần 1: Xếp 1 hình';
                         btn.classList.replace('from-emerald-500', 'from-amber-400');
                         btn.classList.replace('to-emerald-600', 'to-orange-500');
                         
@@ -357,7 +381,7 @@ export const lesson122 = {
                             "Thể tích <span class="text-rose-600 font-black">V</span> của hình hộp chữ nhật bằng chiều dài <span class="text-rose-600 font-black italic text-3xl">a</span> nhân với chiều rộng <span class="text-rose-600 font-black italic text-3xl">b</span> rồi nhân với chiều cao <span class="text-rose-600 font-black italic text-3xl">c</span>."
                         </p>
                         <div class="mt-6 bg-rose-600 p-4 rounded-3xl text-white text-center shadow-lg">
-                            <p class="text-4xl md:text-6xl font-black tracking-widest italic drop-shadow-md">V = a &times; b &times; c</p>
+                            <p class="text-3xl md:text-5xl font-black tracking-wide italic drop-shadow-md">V = a &times; b &times; c</p>
                         </div>
                     </div>
                 </div>
