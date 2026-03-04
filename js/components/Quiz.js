@@ -307,15 +307,15 @@ export const Quiz = {
 
         container.innerHTML = `
             <div class="animate-slide-in-right relative z-30">
-                <h3 class="text-xl md:text-2xl font-bold text-gray-800 dark:text-slate-100 mb-4 md:mb-6 leading-snug text-center sm:text-left">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 mb-3 leading-snug text-center sm:text-left">
                     <span class="text-orange-500 font-black mr-2">Q${quiz.currentIndex + 1}.</span> ${q.question}
                 </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 relative z-50" id="opts-container">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 relative z-50" id="opts-container">
                     ${q.options.map((opt, optIdx) => `
-                         <button onclick="Quiz.selectAnswer(${optIdx})" class="quiz-opt-btn relative w-full text-left p-4 md:p-5 rounded-2xl border-2 border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-slate-800/50 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:border-orange-200 dark:hover:border-orange-800 hover:shadow-lg hover:-translate-y-1 transition-all group overflow-hidden cursor-pointer text-gray-700 dark:text-slate-200">
+                         <button onclick="Quiz.selectAnswer(${optIdx})" class="quiz-opt-btn relative w-full text-left p-3 md:p-4 rounded-2xl border-2 border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-slate-800/50 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:border-orange-200 dark:hover:border-orange-800 hover:shadow-lg hover:-translate-y-1 transition-all group overflow-hidden cursor-pointer text-gray-700 dark:text-slate-200">
                             <div class="flex items-center pointer-events-none">
                                 <div class="w-8 h-8 md:w-10 md:h-10 border-3 border-gray-200 dark:border-slate-700 rounded-full flex-shrink-0 mr-3 md:mr-4 group-hover:border-orange-400 transition-colors flex items-center justify-center opt-indicator"></div>
-                                <span class="text-lg md:text-xl font-bold group-hover:text-orange-900 dark:group-hover:text-orange-300 transition-colors leading-tight">${opt}</span>
+                                <span class="text-2xl md:text-3xl font-bold group-hover:text-orange-900 dark:group-hover:text-orange-300 transition-colors leading-tight">${opt}</span>
                             </div>
                         </button>
                     `).join('')}
