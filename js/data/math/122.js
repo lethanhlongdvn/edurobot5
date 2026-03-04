@@ -78,25 +78,25 @@ export const lesson122 = {
                                 <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px]" id="scene-122">
                                     <div id="cube-wrapper-122" class="relative transform-style-3d transition-transform duration-[0.1s] ease-out cursor-grab active:cursor-grabbing" style="width: 300px; height: 200px; transform: rotateX(-20deg) rotateY(-30deg);">
                                         <!-- Container for mini blocks -->
-                                        <div id="cube-layers-122" class="absolute inset-0 transform-style-3d"></div>
+                                        <div id="cube-layers-122" class="absolute left-[50%] top-[50%] transform-style-3d"></div>
 
                                         <!-- The Container Box -->
                                         <div class="absolute inset-0 transform-style-3d pointer-events-none">
-                                            <!-- Outside Faces -->
+                                            <!-- Outside Faces - centered relative to 300x200 container -> center is at (150, 100) -->
                                             <!-- Back -->
-                                            <div class="absolute border-2 border-indigo-400/60 bg-indigo-500/10 grid-bg-122" style="width: 300px; height: 200px; transform: rotateY(180deg) translateZ(125px);"></div>
+                                            <div class="absolute border-2 border-indigo-400/60 bg-indigo-500/10 grid-bg-122" style="width: 300px; height: 200px; left: 50%; top: 50%; margin-left: -150px; margin-top: -100px; transform: rotateY(180deg) translateZ(125px);"></div>
                                             <!-- Left -->
-                                            <div class="absolute border-2 border-indigo-400/60 bg-indigo-500/10 grid-bg-122" style="width: 250px; height: 200px; transform: rotateY(-90deg) translateZ(150px);"></div>
+                                            <div class="absolute border-2 border-indigo-400/60 bg-indigo-500/10 grid-bg-122" style="width: 250px; height: 200px; left: 50%; top: 50%; margin-left: -125px; margin-top: -100px; transform: rotateY(-90deg) translateZ(150px);"></div>
                                             <!-- Bottom -->
-                                            <div class="absolute border-2 border-indigo-400/60 bg-indigo-500/10 grid-bg-122" style="width: 300px; height: 250px; transform: rotateX(-90deg) translateZ(100px);"></div>
+                                            <div class="absolute border-2 border-indigo-400/60 bg-indigo-500/10 grid-bg-122" style="width: 300px; height: 250px; left: 50%; top: 50%; margin-left: -150px; margin-top: -125px; transform: rotateX(-90deg) translateZ(100px);"></div>
                                             <!-- Top (transparent grid) -->
-                                            <div class="absolute border-2 border-sky-400 shadow-[inset_0_0_20px_rgba(56,189,248,0.2)] bg-sky-300/10 grid-bg-122" style="width: 300px; height: 250px; transform: rotateX(90deg) translateZ(100px);"></div>
+                                            <div class="absolute border-2 border-sky-400 shadow-[inset_0_0_20px_rgba(56,189,248,0.2)] bg-sky-300/10 grid-bg-122" style="width: 300px; height: 250px; left: 50%; top: 50%; margin-left: -150px; margin-top: -125px; transform: rotateX(90deg) translateZ(100px);"></div>
                                             <!-- Right (transparent grid) -->
-                                            <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-122 flex items-center justify-center" style="width: 250px; height: 200px; transform: rotateY(90deg) translateZ(150px);">
+                                            <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-122 flex items-center justify-center" style="width: 250px; height: 200px; left: 50%; top: 50%; margin-left: -125px; margin-top: -100px; transform: rotateY(90deg) translateZ(150px);">
                                                 <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 transform -rotate-y-90 shadow-md text-sm">5 dm</div>
                                             </div>
                                             <!-- Front (transparent grid) -->
-                                            <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-122 flex items-center justify-center flex-col justify-end pb-4 gap-2" style="width: 300px; height: 200px; transform: translateZ(125px);">
+                                            <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-122 flex items-center justify-center flex-col justify-end pb-4 gap-2" style="width: 300px; height: 200px; left: 50%; top: 50%; margin-left: -150px; margin-top: -100px; transform: translateZ(125px);">
                                                 <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md translate-y-[100px] absolute text-sm">Chiều dài: 6 dm</div>
                                                 <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md -translate-x-[180px] absolute text-sm">Cao: 4 dm</div>
                                             </div>
