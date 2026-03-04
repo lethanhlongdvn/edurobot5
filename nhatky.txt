@@ -539,6 +539,12 @@ Trang thai hien tai:
 - Tao man hinh tuong tac mau demo_interactions.js luu tru toan bo 10 dang bai tap tuong tac, duoc import vao Bai 0 cua Lich su - Dia ly de de dang copy-paste cho cac bai sau.
 - Tich hop render cho file 002.js tren he thong router.
 
-Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi dung, san sang ban giao giao vien. San san demo interactions chuc nang 10 module tuong tac.
+[16:45] Ngay 04/03/2026 - Cap nhat Bai 122 Toan 5 (The tich HHCN)
+- Xay dung the tich HHCN 3D tuong tac toan man hinh (Fullscreen Modal) cho phan Kham pha.
+- Tich hop mo hinh box 3D CSS co the xoay tuong tac.
+- Hieu ung dien hoat xep 120 khoi lap phuong (1 dm3) vao ben trong Hop chu nhat de giang bai truc quan.
+- Tich hop nut phong to hinh anh trong SGK ket hop hieu ung hover mien man.
+
+Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi dung, san sang ban giao giao vien. San sang demo interactions chuc nang 10 module tuong tac. Mon Toan Tiet 122 da co mo hinh 3D truc quan de giang the tich Hinh hop chu nhat.
 
 
