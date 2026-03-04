@@ -209,7 +209,7 @@ export const lesson118 = {
                     const report = "B1: " + a1a + ", " + a1b + ", " + a1c + " | B2: " + selectedBox118;
 
                     if (window.submitMathLesson) {
-                        window.submitMathLesson(report, status, "btn-submit-118-final");
+                        window.submitMathLesson(report, Math.round(score * 10), "btn-submit-118-final");
                     }
                     alert("🎉 Tuyệt vời! Bài làm của bạn đã được gửi tới Thầy E!");
                 };

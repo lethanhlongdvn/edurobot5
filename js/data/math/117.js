@@ -290,7 +290,7 @@ export const lesson117 = {
                     const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
 
                     if (window.submitMathLesson) {
-                        window.submitMathLesson(report, status, "btn-submit-117");
+                        window.submitMathLesson(report, Math.round(score * 10), "btn-submit-117");
                     }
                     alert("🎉 Tuyệt vời! Bài làm của bạn đã được gửi tới Thầy E!");
                     btn.disabled = false;

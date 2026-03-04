@@ -247,7 +247,7 @@ export const lesson116 = {
                     let report = "Bài 1: Chọn " + window.ans116_1 + "\\nBài 3: Đã chọn " + (window.ans116_3 || 'Chưa bấm') + "\\nBài 4: Đã cắt " + (selectedB4.join(', ') || 'Chưa cắt');
                     
                     if (window.submitMathLesson) {
-                        window.submitMathLesson(report, "Đ", "btn-submit-116");
+                        window.submitMathLesson(report, 100, "btn-submit-116");
                     }
                     alert("🎉 Tuyệt vời! Bài làm của bạn đã được gửi tới Thầy E!");
                     btn.disabled = false;

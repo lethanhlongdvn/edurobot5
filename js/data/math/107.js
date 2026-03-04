@@ -89,7 +89,7 @@ export const lesson107 = {
                     score += 5; 
                     const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
                     if (window.submitMathLesson) {
-                        window.submitMathLesson("Score: " + score, status, "btn-submit-107");
+                        window.submitMathLesson("Score: " + score, Math.round(score * 10), "btn-submit-107");
                     }
                     alert("Điểm của bé: " + Math.round(score*10)/10 + "/10. 🌟");
                 };

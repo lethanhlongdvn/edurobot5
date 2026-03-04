@@ -231,18 +231,19 @@
                 }, error => console.error("Lỗi Realtime Luyện tập:", error));
         }
 
-        function parseScoreTo10(rawScore) {
+        function parseScore(rawScore) {
             if (rawScore === undefined || rawScore === null) return 0;
             if (typeof rawScore === 'string') {
                 const s = rawScore.trim().toUpperCase();
-                if (s === 'XS') return 10;
-                if (s === 'Đ') return 8;
-                if (s === 'CĐ') return 5;
+                if (s === 'XS') return 100;
+                if (s === 'Đ') return 80;
+                if (s === 'CĐ') return 50;
             }
             let num = parseFloat(rawScore);
             if (isNaN(num)) return 0;
-            if (num > 10) return Number((num / 10).toFixed(1));
-            return Number(num.toFixed(1));
+            // Nếu điểm cũ là hệ 10 (ví dụ 8.5) thì nhân 10 thành 85
+            if (num <= 10 && num > 0) return Math.round(num * 10);
+            return Math.round(num);
         }
 
         function renderStats() {
@@ -284,7 +285,7 @@
                     if (timestamp > st.lastTimestamp) st.lastTimestamp = timestamp;
 
                     if (data.sourceTab === 'Luyện tập') {
-                        const s = parseScoreTo10(data.aiScore);
+                        const s = parseScore(data.aiScore);
                         if (st.luyenTapScore === null || s > st.luyenTapScore) {
                             st.luyenTapScore = s;
                             st.luyenTapTime = data.timeTaken || 0;
@@ -292,7 +293,7 @@
                             if ((data.timeTaken || 0) < (st.luyenTapTime || 999999)) st.luyenTapTime = data.timeTaken || 0;
                         }
                     } else if (data.sourceTab === 'Củng cố') {
-                        const s = parseScoreTo10(data.score);
+                        const s = parseScore(data.score);
                         if (st.cungCoScore === null || s > st.cungCoScore) {
                             st.cungCoScore = s;
                             st.cungCoTime = data.timeTaken || 0;
@@ -307,7 +308,7 @@
                 uniqueData.forEach(d => {
                     const s1 = d.luyenTapScore !== null ? d.luyenTapScore : 0;
                     const s2 = d.cungCoScore !== null ? d.cungCoScore : 0;
-                    d.avgScore = Number(((s1 + s2) / 2).toFixed(1));
+                    d.avgScore = Math.round((s1 + s2) / 2);
 
                     const t1 = d.luyenTapTime !== null ? d.luyenTapTime : 0;
                     const t2 = d.cungCoTime !== null ? d.cungCoTime : 0;
@@ -335,7 +336,7 @@
 
                 let rows = "";
                 uniqueData.forEach((data, index) => {
-                    const avgClass = data.avgScore >= 8 ? 'text-green-600' : (data.avgScore >= 5 ? 'text-orange-600' : 'text-red-600');
+                    const avgClass = data.avgScore >= 80 ? 'text-green-600' : (data.avgScore >= 50 ? 'text-orange-600' : 'text-red-600');
                     const rankIcon = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : (index + 1);
 
                     rows += `
@@ -364,7 +365,7 @@
                 table.innerHTML = rows || `<tr><td colspan="6" class="p-10 text-center text-gray-400">Chưa có kết quả.</td></tr>`;
 
                 document.getElementById('stat-total').innerText = filtered.length;
-                document.getElementById('stat-avg').innerText = studentCount > 0 ? (totalScoreSum / studentCount).toFixed(1) : "0";
+                document.getElementById('stat-avg').innerText = studentCount > 0 ? Math.round(totalScoreSum / studentCount) : "0";
                 document.getElementById('stat-students').innerText = studentCount;
 
                 // Vẽ biểu đồ phân bố điểm
@@ -405,7 +406,7 @@
             const table = document.getElementById('results-table');
             let rows = "";
             allQuizData.forEach((data, index) => {
-                const avgClass = data.avgScore >= 8 ? 'text-green-600' : (data.avgScore >= 5 ? 'text-orange-600' : 'text-red-600');
+                const avgClass = data.avgScore >= 80 ? 'text-green-600' : (data.avgScore >= 50 ? 'text-orange-600' : 'text-red-600');
                 const rankIcon = index + 1; // When custom sorting, exact rank might not be 1, 2, 3 medals initially
 
                 rows += `
@@ -441,9 +442,9 @@
                     "Họ và Tên": d.studentName,
                     "Lớp": "'" + (d.studentClass || "N/A"),
                     "Trường": d.school || "N/A",
-                    "Điểm Luyện tập (10)": d.luyenTapScore !== null ? d.luyenTapScore : "Chưa làm",
-                    "Điểm Củng cố (10)": d.cungCoScore !== null ? d.cungCoScore : "Chưa làm",
-                    "Điểm Trung bình": d.avgScore,
+                    "Điểm Luyện tập (100)": d.luyenTapScore !== null ? d.luyenTapScore : "Chưa làm",
+                    "Điểm Củng cố (100)": d.cungCoScore !== null ? d.cungCoScore : "Chưa làm",
+                    "Điểm Trung bình (100)": d.avgScore,
                     "Tổng thời gian (giây)": d.totalTime || 0
                 }));
 
@@ -462,20 +463,27 @@
             const ctx = document.getElementById('score-chart');
             if (!ctx) return;
 
-            // Đếm số lượng học sinh theo từng mức điểm từ 1 đến 10
-            const scoreCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 };
+            // Đếm số lượng học sinh theo từng nhóm điểm: <=10, 11-20, ... 91-100
+            const scoreCounts = { 10: 0, 20: 0, 30: 0, 40: 0, 50: 0, 60: 0, 70: 0, 80: 0, 90: 0, 100: 0 };
 
             uniqueData.forEach(d => {
                 let score = Math.round(d.avgScore);
-                if (score < 1) score = 1;
-                if (score > 10) score = 10;
-                scoreCounts[score]++;
+                if (score <= 10) scoreCounts[10]++;
+                else if (score <= 20) scoreCounts[20]++;
+                else if (score <= 30) scoreCounts[30]++;
+                else if (score <= 40) scoreCounts[40]++;
+                else if (score <= 50) scoreCounts[50]++;
+                else if (score <= 60) scoreCounts[60]++;
+                else if (score <= 70) scoreCounts[70]++;
+                else if (score <= 80) scoreCounts[80]++;
+                else if (score <= 90) scoreCounts[90]++;
+                else scoreCounts[100]++;
             });
 
-            const labels = ['1 điểm', '2 điểm', '3 điểm', '4 điểm', '5 điểm', '6 điểm', '7 điểm', '8 điểm', '9 điểm', '10 điểm'];
+            const labels = ['0-10đ', '11-20đ', '21-30đ', '31-40đ', '41-50đ', '51-60đ', '61-70đ', '71-80đ', '81-90đ', '91-100đ'];
             const data = [
-                scoreCounts[1], scoreCounts[2], scoreCounts[3], scoreCounts[4], scoreCounts[5],
-                scoreCounts[6], scoreCounts[7], scoreCounts[8], scoreCounts[9], scoreCounts[10]
+                scoreCounts[10], scoreCounts[20], scoreCounts[30], scoreCounts[40], scoreCounts[50],
+                scoreCounts[60], scoreCounts[70], scoreCounts[80], scoreCounts[90], scoreCounts[100]
             ];
 
             // Tùy chỉnh màu sắc dựa trên điểm số (từ đỏ/cam tới xanh lá)

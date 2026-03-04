@@ -212,7 +212,7 @@ export const lesson119 = {
 
                 const status = score >= 80 ? "XS" : (score >= 50 ? "Đ" : "CĐ");
                 if (window.submitMathLesson) {
-                    window.submitMathLesson("Score: " + score, status, "submit-btn-119");
+                    window.submitMathLesson("Score: " + score, Math.round(score * 10), "submit-btn-119");
                 }
                 alert("Bé được " + score + "/100 điểm! Thầy E rất tự hào về bé! 🌟");
             }

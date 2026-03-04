@@ -75,7 +75,7 @@ export const lesson105 = {
                     if (document.getElementById('b105-2a').value == '30') score += 3;
                     const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
                     if (window.submitMathLesson) {
-                        window.submitMathLesson("Score: " + score, status, "btn-submit-105");
+                        window.submitMathLesson("Score: " + score, Math.round(score * 10), "btn-submit-105");
                     }
                     alert("Điểm của bé: " + Math.round(score*10)/10 + "/10. 🌟");
                 };

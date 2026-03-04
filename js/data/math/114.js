@@ -161,7 +161,7 @@ export const lesson114 = {
 
                     const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
                     if (window.submitMathLesson) {
-                        window.submitMathLesson("Score: " + score, status, "btn-submit-114");
+                        window.submitMathLesson("Score: " + score, Math.round(score * 10), "btn-submit-114");
                     }
                     alert("Điểm của bé: " + Math.round(score*10)/10 + "/10. 🌟");
                 };

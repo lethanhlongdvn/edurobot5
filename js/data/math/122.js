@@ -541,7 +541,7 @@ export const lesson122 = {
                     }
 
                     if (window.submitMathLesson) {
-                        window.submitMathLesson("Tiết 122: Đã nộp bài giải", "Đ", "btn-submit-122");
+                        window.submitMathLesson("Tiết 122: Đã nộp bài giải", 100, "btn-submit-122");
                     }
                     alert("Giỏi quá! Bạn đã nộp bài thành công! Thầy E sẽ chấm bài giải ở phần Chat nhé! 🌈");
                 };

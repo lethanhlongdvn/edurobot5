@@ -299,7 +299,7 @@ export const lesson120 = {
                     const status = score >= 8 ? "XS" : (score >= 6 ? "Đ" : "CĐ");
                     
                     if (window.submitMathLesson) {
-                        window.submitMathLesson("Score: " + score, status, "btn-submit-120");
+                        window.submitMathLesson("Score: " + score, Math.round(score * 10), "btn-submit-120");
                     }
                     
                     if (score === 10) {

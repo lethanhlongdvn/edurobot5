@@ -308,7 +308,7 @@ export const lesson121 = {
 
                     const status = score >= 8 ? "XS" : (score >= 5 ? "Đ" : "CĐ");
                     if (window.submitMathLesson) {
-                        window.submitMathLesson("Tiết 121: " + score + "/10", status, "btn-submit-121");
+                        window.submitMathLesson("Tiết 121: " + score + "/10", Math.round(score * 10), "btn-submit-121");
                     }
                     alert("Kết quả của em: " + score + "/10. Hãy tiếp tục cố gắng nhé! 🌈");
                 }
