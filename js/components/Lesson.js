@@ -1853,6 +1853,129 @@ export const Lesson = {
             const complete = document.getElementById(`exp-complete-${id}`);
             complete.classList.remove('hidden');
         }
+    },
+
+    // ========================================================================
+    // LS&ĐL MODULE: BẢN ĐỒ TƯƠNG TÁC (Interactive Google Map)
+    // Nhúng Google Maps với các điểm đánh dấu + ghi chú giáo dục
+    // ========================================================================
+    renderInteractiveMap(id, title, description, locations) {
+        // locations: [{ name, lat, lng, info, emoji }]
+        // Default map center = first location or Vietnam
+        const center = locations[0] || { lat: 16.047079, lng: 108.206230 };
+        const zoom = locations.length === 1 ? 8 : 6;
+
+        // Build markers HTML
+        const markersHtml = locations.map((loc, idx) => `
+            <button onclick="Lesson.flyToMapLocation('${id}', ${idx}, ${loc.lat}, ${loc.lng}, '${(loc.name || '').replace(/'/g, "\\'")}', '${(loc.info || '').replace(/'/g, "\\'")}', '${loc.emoji || '📍'}')"
+                class="flex items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-2xl border-2 border-gray-100 dark:border-slate-700 hover:border-blue-400 hover:shadow-lg transition-all active:scale-95 text-left group"
+                id="map-marker-btn-${id}-${idx}">
+                <span class="text-2xl shrink-0">${loc.emoji || '📍'}</span>
+                <div class="flex-grow min-w-0">
+                    <p class="font-black text-gray-800 dark:text-slate-100 text-sm md:text-base truncate">${loc.name}</p>
+                    <p class="text-[11px] font-bold text-gray-400 dark:text-slate-500 truncate">${loc.info || ''}</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-300 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        `).join('');
+
+        // Build Google Maps embed URL - free, no API key required
+        const q = encodeURIComponent(locations[0]?.name || 'Việt Nam');
+        const mapSrc = `https://maps.google.com/maps?q=${center.lat},${center.lng}&z=${zoom}&output=embed&t=k`;
+
+        return `
+        <div class="interactive-map-module p-6 md:p-8 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] border border-blue-100 dark:border-slate-700 mb-6 mt-6" id="map-module-${id}">
+            <div class="flex items-center gap-3 mb-2">
+                <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg shadow-blue-200">🗺️</div>
+                <div>
+                    <h3 class="text-xl md:text-2xl font-black text-blue-900 dark:text-blue-400">${title}</h3>
+                    <p class="text-sm font-bold text-blue-600/70 dark:text-blue-400/50">${description || 'Nhấn vào các địa điểm bên dưới để khám phá trên bản đồ'}</p>
+                </div>
+            </div>
+
+            <!-- Map Container -->
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-200 dark:border-slate-600 mt-4">
+                <iframe 
+                    id="map-iframe-${id}"
+                    src="${mapSrc}"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="w-full">
+                </iframe>
+
+                <!-- Info overlay -->
+                <div id="map-info-${id}" class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white transform translate-y-full transition-transform duration-300">
+                    <div class="flex items-center gap-3">
+                        <span id="map-info-emoji-${id}" class="text-3xl">📍</span>
+                        <div>
+                            <h4 id="map-info-name-${id}" class="text-lg font-black"></h4>
+                            <p id="map-info-detail-${id}" class="text-sm font-bold opacity-80"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location markers grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+                ${markersHtml}
+            </div>
+
+            <!-- Map type switcher -->
+            <div class="flex gap-2 mt-4 justify-center">
+                <button onclick="Lesson.switchMapType('${id}', 'k')" class="px-4 py-2 bg-blue-600 text-white font-black rounded-xl text-sm shadow-md active:scale-95 transition-all" title="Vệ tinh">🛰️ Vệ tinh</button>
+                <button onclick="Lesson.switchMapType('${id}', 'm')" class="px-4 py-2 bg-white dark:bg-slate-700 text-gray-700 dark:text-slate-200 font-black rounded-xl text-sm shadow-md active:scale-95 transition-all border" title="Bản đồ">🗺️ Bản đồ</button>
+                <button onclick="Lesson.switchMapType('${id}', 'p')" class="px-4 py-2 bg-white dark:bg-slate-700 text-gray-700 dark:text-slate-200 font-black rounded-xl text-sm shadow-md active:scale-95 transition-all border" title="Địa hình">⛰️ Địa hình</button>
+            </div>
+        </div>
+        `;
+    },
+
+    flyToMapLocation(id, idx, lat, lng, name, info, emoji) {
+        const iframe = document.getElementById(`map-iframe-${id}`);
+        if (iframe) {
+            iframe.src = `https://maps.google.com/maps?q=${lat},${lng}&z=10&output=embed&t=k`;
+        }
+
+        // Show info overlay
+        const overlay = document.getElementById(`map-info-${id}`);
+        const nameEl = document.getElementById(`map-info-name-${id}`);
+        const detailEl = document.getElementById(`map-info-detail-${id}`);
+        const emojiEl = document.getElementById(`map-info-emoji-${id}`);
+        if (overlay && nameEl && detailEl) {
+            nameEl.textContent = name;
+            detailEl.textContent = info;
+            if (emojiEl) emojiEl.textContent = emoji;
+            overlay.classList.remove('translate-y-full');
+            setTimeout(() => overlay.classList.add('translate-y-full'), 5000);
+        }
+
+        // Highlight active button
+        const module = document.getElementById(`map-module-${id}`);
+        if (module) {
+            module.querySelectorAll('[id^="map-marker-btn-"]').forEach(btn => {
+                btn.classList.remove('border-blue-500', 'bg-blue-50', 'shadow-lg');
+                btn.classList.add('border-gray-100');
+            });
+            const activeBtn = document.getElementById(`map-marker-btn-${id}-${idx}`);
+            if (activeBtn) {
+                activeBtn.classList.add('border-blue-500', 'bg-blue-50', 'shadow-lg');
+                activeBtn.classList.remove('border-gray-100');
+            }
+        }
+    },
+
+    switchMapType(id, type) {
+        const iframe = document.getElementById(`map-iframe-${id}`);
+        if (iframe) {
+            const src = iframe.src;
+            iframe.src = src.replace(/&t=[a-z]/, `&t=${type}`);
+        }
     }
 };
 
