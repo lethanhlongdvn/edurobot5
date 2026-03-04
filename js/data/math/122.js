@@ -45,12 +45,12 @@ export const lesson122 = {
                             <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full max-w-[600px] h-auto rounded-[40px] shadow-2xl border-8 border-white transform group-hover:rotate-1 transition-transform" onclick="Lesson.openZoom(this.src)">
                             
                             <!-- Overlay Action Buttons -->
-                            <div class="absolute bottom-6 right-6 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button onclick="Lesson.openZoom('hinh_anh/toan/toan_tap_2/122-khampha.png'); event.stopPropagation();" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-2xl font-black shadow-2xl flex items-center gap-2 transform active:scale-95 transition-all outline-none">
-                                    <span class="text-2xl">🔍</span> Phóng to ảnh
+                            <div class="absolute bottom-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button onclick="Lesson.openZoom('hinh_anh/toan/toan_tap_2/122-khampha.png'); event.stopPropagation();" class="w-12 h-12 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-black shadow-2xl flex items-center justify-center transform active:scale-95 transition-all outline-none" title="Phóng to ảnh">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                 </button>
-                                <button onclick="window.openKhamPhaModal(); event.stopPropagation();" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-3 rounded-2xl font-black shadow-2xl flex items-center gap-2 transform active:scale-95 transition-all outline-none">
-                                    <span class="text-2xl">🧊</span> Mô phỏng 3D
+                                <button onclick="window.openKhamPhaModal(); event.stopPropagation();" class="w-12 h-12 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-black shadow-2xl flex items-center justify-center transform active:scale-95 transition-all outline-none text-lg" title="Mô phỏng 3D">
+                                    3D
                                 </button>
                             </div>
                         </div>
