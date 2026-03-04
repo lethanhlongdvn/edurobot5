@@ -69,16 +69,10 @@ export const lesson122 = {
                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg>
                             </button>
                         </div>
-                        
                         <!-- Body -->
                         <div class="flex-grow flex flex-col p-6 gap-6 overflow-hidden relative">
-                                <div class="bg-amber-50 rounded-2xl p-6 border-l-8 border-amber-400 mt-auto">
-                                    <p class="text-xl font-bold text-amber-900 text-center">🤖 Robot nói: "Có một cách nhanh hơn là dùng cách tính thể tích của hình hộp chữ nhật."</p>
-                                </div>
-                            </div>
-
-                            <!-- Right: 3D Simulator -->
-                            <div class="lg:flex-[1.5] flex flex-col items-center justify-between gap-6 bg-gradient-to-br from-slate-800 to-indigo-950 p-6 rounded-[32px] shadow-2xl border-4 border-indigo-200 overflow-hidden relative">
+                            <!-- Left: 3D Simulator -->
+                            <div class="flex-1 flex flex-col items-center justify-between gap-6 bg-gradient-to-br from-slate-800 to-indigo-950 p-6 rounded-[32px] shadow-2xl border-4 border-indigo-200 overflow-hidden relative">
                                 <div class="absolute top-4 left-4 inline-block bg-sky-500/20 border border-sky-400/50 text-sky-300 px-4 py-1.5 rounded-full font-bold text-sm uppercase tracking-wider backdrop-blur-sm z-10 w-auto">Mô phỏng 3D Tương tác</div>
                                 <!-- 3D SCENE -->
                                 <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px]" id="scene-122">
@@ -123,6 +117,10 @@ export const lesson122 = {
                                         ↺ Đặt lại
                                     </button>
                                 </div>
+                                <div class="bg-amber-50/10 rounded-2xl p-4 border border-amber-400/50 mt-auto w-full max-w-2xl mx-auto backdrop-blur-sm z-10">
+                                    <p class="text-lg md:text-xl font-bold text-amber-200 text-center">🤖 Robot nói: "Có một cách nhanh hơn là dùng cách tính thể tích của hình hộp chữ nhật."</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
