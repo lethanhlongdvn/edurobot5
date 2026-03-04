@@ -501,7 +501,12 @@ export const lesson122 = {
                         prompt = \`Đề bài: Để tạo ra khối hình chữ T ngược, Việt ghép 6 hình hộp chữ nhật giống nhau. Mỗi hình có kích thước: 10 cm, 5 cm và 2 cm.\n\nBài giải của học sinh:\n\${solution}\`;
                     }
 
-                    const hiddenPrompt = \`\n\nYêu cầu thầy E: Đánh giá nhận xét ngắn gọn nhưng đầy đủ. NẾU học sinh làm đúng (đáp số đúng và các bước hợp lý), CÓ THỂ nêu lại các bước làm và đáp số đúng. NẾU học sinh làm sai (sai công thức, tính sai, hoặc sai lý thuyết cơ bản), THÌ CHỈ GIẢNG GIẢI cách làm mà KHÔNG ĐƯA RA ĐÁP SỐ. Nhớ đọc hết nội dung bài để KHÔNG CHƯA ĐƯA RA LỜI GIẢI để học sinh ghi vào nếu học sinh chưa làm đúng.\`;
+                    const hiddenPrompt = \`\n\n[HƯỚNG DẪN DÀNH RIÊNG CHO AI]:
+- NẾU HỌC SINH LÀM ĐÚNG (đáp số đúng, cách làm đúng): Khen ngợi và có thể nhắc lại ngắn gọn bước giải.
+- ⛔ NẾU HỌC SINH LÀM SAI(tính sai, sai công thức, thiếu bước):
+  + TUYỆT ĐỐI KHÔNG ĐƯỢC tính ra đáp số đúng hoặc tiết lộ kết quả cuối cùng.
+  + CHỈ chỉ ra lỗi sai ở đâu(ví dụ: "Bạn tính nhầm phép nhân" hoặc "nhầm công thức").
+  + Hướng dẫn bước tiếp theo để học sinh TỰ TÍNH LẠI. NHỚ RÕ: KHÔNG ĐƯỢC ĐƯA ĐÁP ÁN!\`;
 
                     // Hiển thị dạng Popup Modal ưu tiên
                     if (window.AIInteraction && typeof window.AIInteraction.gradeWithModal === 'function') {
