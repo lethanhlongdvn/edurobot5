@@ -92,8 +92,8 @@ export const lesson122 = {
                             <div class="lg:flex-[1.5] flex flex-col items-center justify-between gap-6 bg-gradient-to-br from-slate-800 to-indigo-950 p-6 rounded-[32px] shadow-2xl border-4 border-indigo-200 overflow-hidden relative">
                                 <div class="absolute top-4 left-4 inline-block bg-sky-500/20 border border-sky-400/50 text-sky-300 px-4 py-1.5 rounded-full font-bold text-sm uppercase tracking-wider backdrop-blur-sm z-10 w-auto">Mô phỏng 3D Tương tác</div>
                                 <!-- 3D SCENE -->
-                                <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px]">
-                                    <div id="cube-wrapper-122" class="relative transform-style-3d rotate-x-[-20deg] rotate-y-[-30deg] transition-transform duration-[1.5s] ease-[cubic-bezier(0.2,0.8,0.2,1)]" style="width: 300px; height: 200px;">
+                                <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px]" id="scene-122">
+                                    <div id="cube-wrapper-122" class="relative transform-style-3d transition-transform duration-[0.1s] ease-out cursor-grab active:cursor-grabbing" style="width: 300px; height: 200px; transform: rotateX(-20deg) rotateY(-30deg);">
                                         <!-- Container for mini blocks -->
                                         <div id="cube-layers-122" class="absolute inset-0 transform-style-3d"></div>
 
@@ -179,6 +179,13 @@ export const lesson122 = {
                 </style>
 
                 <script>
+                    (function() {
+                    let isDragging122 = false;
+                    let startX122, startY122;
+                    let currentRotX = -20;
+                    let currentRotY = -30;
+                    let dragInit = false;
+
                     window.openKhamPhaModal = function() {
                         const modal = document.getElementById('modal-122-khampha');
                         modal.classList.remove('hidden');
@@ -186,6 +193,70 @@ export const lesson122 = {
                         setTimeout(() => {
                             modal.classList.remove('opacity-0');
                         }, 10);
+
+                        if (!dragInit) {
+                            const scene122 = document.getElementById('scene-122');
+                            const wrapper122 = document.getElementById('cube-wrapper-122');
+                            
+                            if (scene122 && wrapper122) {
+                                function handleDragStart(e) {
+                                    if (wrapper122.classList.contains('rotate-anim-122')) return;
+                                    isDragging122 = true;
+                                    wrapper122.classList.replace('cursor-grab', 'cursor-grabbing');
+                                    
+                                    if (e.type === 'touchstart') {
+                                        startX122 = e.touches[0].clientX;
+                                        startY122 = e.touches[0].clientY;
+                                    } else {
+                                        startX122 = e.clientX;
+                                        startY122 = e.clientY;
+                                    }
+                                }
+
+                                function handleDragMove(e) {
+                                    if (!isDragging122) return;
+                                    e.preventDefault();
+
+                                    let currentX, currentY;
+                                    if (e.type === 'touchmove') {
+                                        currentX = e.touches[0].clientX;
+                                        currentY = e.touches[0].clientY;
+                                    } else {
+                                        currentX = e.clientX;
+                                        currentY = e.clientY;
+                                    }
+
+                                    const deltaX = currentX - startX122;
+                                    const deltaY = currentY - startY122;
+
+                                    const sensitivity = 0.5;
+                                    currentRotY += deltaX * sensitivity;
+                                    currentRotX -= deltaY * sensitivity;
+
+                                    currentRotX = Math.max(-80, Math.min(80, currentRotX));
+                                    wrapper122.style.transform = 'rotateX(' + currentRotX + 'deg) rotateY(' + currentRotY + 'deg)';
+
+                                    startX122 = currentX;
+                                    startY122 = currentY;
+                                }
+
+                                function handleDragEnd() {
+                                    if (!isDragging122) return;
+                                    isDragging122 = false;
+                                    wrapper122.classList.replace('cursor-grabbing', 'cursor-grab');
+                                }
+
+                                scene122.addEventListener('mousedown', handleDragStart);
+                                document.addEventListener('mousemove', handleDragMove);
+                                document.addEventListener('mouseup', handleDragEnd);
+
+                                scene122.addEventListener('touchstart', handleDragStart, {passive: false});
+                                document.addEventListener('touchmove', handleDragMove, {passive: false});
+                                document.addEventListener('touchend', handleDragEnd);
+                                
+                                dragInit = true;
+                            }
+                        }
                     };
 
                     window.closeKhamPhaModal = function() {
@@ -229,9 +300,9 @@ export const lesson122 = {
                         for(let y = totalY-1; y >= 0; y--) {
                             for(let z = 0; z < totalZ; z++) {
                                 for(let x = 0; x < totalX; x++) {
-                                    const tx = (x - totalX/2 + 0.5) * size;
-                                    const ty = (y - totalY/2 + 0.5) * size;
-                                    const tz = (z - totalZ/2 + 0.5) * size;
+                                    const tx = (x - (totalX - 1) / 2) * size;
+                                    const ty = (y - (totalY - 1) / 2) * size;
+                                    const tz = (z - (totalZ - 1) / 2) * size;
 
                                     const block = document.createElement('div');
                                     block.className = 'minicube-122';
@@ -271,10 +342,10 @@ export const lesson122 = {
                         const container = document.getElementById('cube-layers-122');
                         container.innerHTML = '';
                         // Remove counter if exists
-                        const modal = document.getElementById('modal-122-khampha');
-                        const lastChild = modal.lastElementChild;
+                        // Remove counter if exists
+                        const lastChild = container.lastElementChild;
                         if(lastChild && lastChild.innerHTML.includes('khối')) {
-                            modal.removeChild(lastChild);
+                            container.removeChild(lastChild);
                         }
                         const btn = document.getElementById('btn-fill-122');
                         btn.disabled = false;
@@ -282,8 +353,16 @@ export const lesson122 = {
                         btn.innerHTML = '🧊 Xếp lập phương 1 dm³';
                         btn.classList.replace('from-emerald-500', 'from-amber-400');
                         btn.classList.replace('to-emerald-600', 'to-orange-500');
-                        document.getElementById('cube-wrapper-122').classList.remove('rotate-anim-122');
+                        
+                        const wrapper = document.getElementById('cube-wrapper-122');
+                        if (wrapper) {
+                            wrapper.classList.remove('rotate-anim-122');
+                            currentRotX = -20;
+                            currentRotY = -30;
+                            wrapper.style.transform = 'rotateX(' + currentRotX + 'deg) rotateY(' + currentRotY + 'deg)';
+                        }
                     };
+                    })();
                 </script>
             </div>
 
