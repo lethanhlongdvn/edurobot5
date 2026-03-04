@@ -498,7 +498,7 @@ export const lesson122 = {
                     } else if (id === '122-2') {
                         prompt = \`Đề bài: Bố của Mai vừa làm một bể cá dạng hình hộp chữ nhật với kích thước chiều dài 10 dm, chiều rộng 6 dm, chiều cao 8 dm. Tính thể tích của bể cá đó.\n\nBài giải của học sinh:\n\${solution}\`;
                     } else if (id === '122-3') {
-                        prompt = \`Đề bài: Để tạo ra khối hình chữ T ngược, Việt ghép 6 hình hộp chữ nhật giống nhau. Mỗi hình có kích thước: 10 cm, 5 cm và 2 cm.\n\nBài giải của học sinh:\n\${solution}\`;
+                        prompt = \`Đề bài: Để tạo ra hình bên (một khối ghép từ các hình hộp chữ nhật), Việt ghép 6 hình hộp chữ nhật giống nhau. Mỗi hình có kích thước: 10 cm, 5 cm và 2 cm.\n\nBài giải của học sinh:\n\${solution}\`;
                     }
 
                     const hiddenPrompt = \`\n\n[HƯỚNG DẪN DÀNH RIÊNG CHO AI]:
