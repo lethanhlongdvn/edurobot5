@@ -392,74 +392,97 @@ export const lesson122 = {
         <div class="space-y-6 animate-fade-in">
             <!-- Bài tập 1 -->
             <div id="box-122-1" class="bg-white p-6 rounded-[40px] border border-gray-100 shadow-2xl relative overflow-hidden group">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-full transition-all group-hover:scale-110"></div>
-                <div class="relative z-10">
-                    <p class="font-black text-2xl md:text-4xl mb-6 text-indigo-700 flex items-center gap-4">
-                        <span class="w-12 h-12 bg-indigo-600 text-white rounded-2xl flex items-center justify-center font-black shadow-lg shadow-indigo-200">1</span>
-                        Tính thể tích hình hộp chữ nhật:
+                <div class="relative z-10 flex items-center mb-6 gap-4">
+                    <span class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black text-2xl shadow-lg shadow-indigo-200">1</span>
+                    <p class="font-black text-2xl md:text-3xl text-indigo-700">
+                        Tính thể tích hình hộp chữ nhật có chiều dài 8 cm, chiều rộng 5 cm và chiều cao 6 cm.
                     </p>
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <div class="col-span-1 space-y-4">
-                            <div class="bg-indigo-50 p-6 rounded-3xl border-2 border-indigo-100 h-full flex flex-col justify-center">
-                                <p class="text-2xl md:text-3xl font-black text-indigo-900 border-b-2 border-indigo-200 pb-2 mb-3">Thông số:</p>
-                                <p class="text-xl md:text-2xl font-bold text-gray-700">Chiều dài: <span class="text-indigo-600 font-black">8 cm</span></p>
-                                <p class="text-xl md:text-2xl font-bold text-gray-700">Chiều rộng: <span class="text-indigo-600 font-black">5 cm</span></p>
-                                <p class="text-xl md:text-2xl font-bold text-gray-700">Chiều cao: <span class="text-indigo-600 font-black">6 cm</span></p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto space-y-4 bg-indigo-50/30 p-8 rounded-[48px] border-2 border-indigo-50">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-indigo-500 text-white rounded-full flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">1</div>
+                        <div class="w-full relative">
+                            <textarea id="wp-solution-122-1" rows="1" class="w-full p-4 pr-12 rounded-2xl border-2 border-indigo-100 focus:border-indigo-500 outline-none text-xl font-bold transition-all shadow-inner placeholder:text-indigo-200 resize-none bg-white" placeholder="Ví dụ: Thể tích hình hộp chữ nhật là:"></textarea>
+                            <button onclick="Lesson.startDictation('wp-solution-122-1')" class="absolute right-3 top-3 text-indigo-400 hover:text-indigo-600 transition-colors" title="Nhập bằng giọng nói">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">2</div>
+                        <div class="w-full relative">
+                            <textarea id="wp-calc-122-1" rows="1" class="w-full p-4 pr-12 rounded-2xl border-2 border-blue-100 focus:border-blue-500 outline-none text-2xl font-black text-blue-800 transition-all shadow-inner placeholder:text-blue-200 resize-none bg-white" placeholder="Ví dụ: 8 x 5 x 6 = 240 (cm3)"></textarea>
+                            <button onclick="Lesson.startDictation('wp-calc-122-1')" class="absolute right-3 top-3 text-blue-400 hover:text-blue-600 transition-colors" title="Nhập bằng giọng nói">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-rose-500 text-white rounded-full flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">3</div>
+                        <div class="flex-grow flex items-center justify-center gap-4 bg-rose-50 p-6 rounded-[32px] border-2 border-rose-100 flex-col md:flex-row">
+                            <span class="text-gray-500 font-black text-sm uppercase tracking-widest whitespace-nowrap">THỂ TÍCH TÍNH ĐƯỢC</span>
+                            <div class="flex items-center gap-4">
+                                <input type="number" id="ans-122-1" class="w-full max-w-[150px] p-4 rounded-2xl border-none outline-none text-4xl font-black text-gray-500 text-center bg-white shadow-md focus:ring-4 focus:ring-rose-200 transition-all" placeholder="?">
+                                <span class="text-3xl font-black text-gray-300">cm³</span>
+                                <button onclick="checkInstant122('1')" class="w-16 h-16 bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
+                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
                             </div>
                         </div>
-                        <div class="col-span-2">
-                             <div class="bg-gray-50 p-6 rounded-[40px] border-2 border-dashed border-gray-200 text-center flex flex-col justify-center items-center gap-4 h-full">
-                                <label class="text-gray-400 font-black text-xs uppercase tracking-widest">Thể tích tính được</label>
-                                <div class="flex items-center gap-4">
-                                    <input type="number" id="ans-122-1" class="w-full max-w-[200px] text-4xl md:text-6xl font-black text-indigo-600 bg-white p-3 rounded-2xl shadow-xl border-none focus:ring-4 focus:ring-indigo-200 text-right transition-all" placeholder="?">
-                                    <span class="text-2xl md:text-3xl font-black text-gray-300">cm³</span>
-                                    <button onclick="checkInstant122('1')" class="w-16 h-16 bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
-                                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
-                                    </button>
-                                </div>
-                             </div>
-                        </div>
+                    </div>
+                    <div class="pt-6 flex justify-center">
+                        <button onclick="Lesson.submitWordProblemAI('122-1')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-3xl font-black text-2xl transition-all shadow-2xl active:scale-95 flex items-center gap-3">
+                            <span>Thầy E chấm lời giải</span>
+                            <span class="text-3xl">👨‍🏫</span>
+                        </button>
                     </div>
                 </div>
             </div>
 
             <!-- Bài tập 2 -->
-            <div id="box-122-2" class="bg-white p-6 rounded-[40px] border border-gray-100 shadow-2xl relative overflow-hidden">
-                <p class="font-black text-2xl md:text-4xl mb-6 text-emerald-700 flex items-center gap-4">
-                    <span class="w-12 h-12 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black shadow-lg shadow-emerald-200">2</span>
-                    Giải bài toán về bể cá:
-                </p>
-                <div class="bg-emerald-50/50 p-8 rounded-[40px] border-2 border-emerald-100 mb-6">
-                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-                        <div class="lg:col-span-3 space-y-6">
-                            <p class="text-2xl md:text-3xl font-bold text-emerald-900 leading-snug italic bg-white p-6 rounded-3xl shadow-sm border-l-8 border-emerald-500">
-                                "Bố của Mai vừa làm một bể cá dạng hình hộp chữ nhật với kích thước như hình bên. Tính thể tích của bể cá đó."
-                            </p>
-                        </div>
-                        <div class="lg:col-span-2 flex justify-center">
-                            <img src="hinh_anh/toan/toan_tap_2/122-b2-beca.png" alt="Bể cá" class="w-full max-w-[400px] h-auto rounded-[32px] shadow-2xl border-4 border-white transition-all hover:scale-105">
-                        </div>
-                    </div>
+            <div id="box-122-2" class="bg-white p-6 rounded-[40px] border border-gray-100 shadow-2xl relative overflow-hidden group mt-8">
+                <div class="relative z-10 flex items-center mb-6 gap-4">
+                    <span class="w-12 h-12 bg-emerald-500 text-white rounded-full flex items-center justify-center font-black text-2xl shadow-lg shadow-emerald-200">2</span>
+                    <p class="font-black text-2xl md:text-3xl text-emerald-700">
+                        Bố của Mai vừa làm một bể cá dạng hình hộp chữ nhật với kích thước như hình bên. Tính thể tích của bể cá đó.
+                    </p>
+                </div>
+                
+                <div class="flex justify-center mb-8">
+                    <img src="hinh_anh/toan/toan_tap_2/122-b2-beca.png" alt="Bể cá" class="w-full max-w-[400px] h-auto rounded-[32px] shadow-xl border-4 border-white transition-all hover:scale-105">
                 </div>
 
-                <!-- Khu vực giải toán có lời văn -->
-                <div class="max-w-4xl mx-auto space-y-4 bg-white p-8 rounded-[48px] shadow-2xl border-2 border-emerald-100">
+                <div class="max-w-4xl mx-auto space-y-4 bg-emerald-50/30 p-8 rounded-[48px] border-2 border-emerald-50">
                     <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 bg-emerald-500 text-white rounded-2xl flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">1</div>
-                        <textarea id="wp-solution-122-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-emerald-100 focus:border-emerald-500 outline-none text-xl font-bold transition-all shadow-inner placeholder:text-gray-100 resize-none" placeholder="Ví dụ: Thể tích bể cá là:"></textarea>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 bg-blue-500 text-white rounded-2xl flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">2</div>
-                        <textarea id="wp-calc-122-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-blue-100 focus:border-blue-500 outline-none text-2xl font-black text-blue-800 transition-all shadow-inner placeholder:text-gray-100 resize-none" placeholder="Ví dụ: 10 x 6 x 8 = 480 (dm3)"></textarea>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 bg-rose-500 text-white rounded-2xl flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">3</div>
-                        <div class="flex-grow flex items-center gap-4 bg-rose-50 p-3 rounded-2xl border-2 border-rose-100">
-                            <input type="number" id="ans-122-2" class="w-full max-w-[150px] p-3 rounded-xl border-none outline-none text-3xl font-black text-rose-600 text-right bg-white shadow-md" placeholder="?">
-                            <span class="text-xl font-black text-rose-300">dm³</span>
-                            <button onclick="checkInstant122('2')" class="w-16 h-16 bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
-                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                        <div class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">1</div>
+                        <div class="w-full relative">
+                            <textarea id="wp-solution-122-2" rows="1" class="w-full p-4 pr-12 rounded-2xl border-2 border-emerald-100 focus:border-emerald-500 outline-none text-xl font-bold transition-all shadow-inner placeholder:text-emerald-200 resize-none bg-white" placeholder="Ví dụ: Thể tích bể cá là:"></textarea>
+                            <button onclick="Lesson.startDictation('wp-solution-122-2')" class="absolute right-3 top-3 text-emerald-400 hover:text-emerald-600 transition-colors" title="Nhập bằng giọng nói">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                             </button>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">2</div>
+                        <div class="w-full relative">
+                            <textarea id="wp-calc-122-2" rows="1" class="w-full p-4 pr-12 rounded-2xl border-2 border-blue-100 focus:border-blue-500 outline-none text-2xl font-black text-blue-800 transition-all shadow-inner placeholder:text-blue-200 resize-none bg-white" placeholder="Ví dụ: 10 x 6 x 8 = 480 (dm3)"></textarea>
+                            <button onclick="Lesson.startDictation('wp-calc-122-2')" class="absolute right-3 top-3 text-blue-400 hover:text-blue-600 transition-colors" title="Nhập bằng giọng nói">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-rose-500 text-white rounded-full flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">3</div>
+                        <div class="flex-grow flex items-center justify-center gap-4 bg-rose-50 p-6 rounded-[32px] border-2 border-rose-100 flex-col md:flex-row">
+                            <span class="text-gray-500 font-black text-sm uppercase tracking-widest whitespace-nowrap">THỂ TÍCH TÍNH ĐƯỢC</span>
+                            <div class="flex items-center gap-4">
+                                <input type="number" id="ans-122-2" class="w-full max-w-[150px] p-4 rounded-2xl border-none outline-none text-4xl font-black text-gray-500 text-center bg-white shadow-md focus:ring-4 focus:ring-rose-200 transition-all" placeholder="?">
+                                <span class="text-3xl font-black text-rose-300">dm³</span>
+                                <button onclick="checkInstant122('2')" class="w-16 h-16 bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-lg active:scale-95 transition-all hover:bg-emerald-600 shrink-0" title="Kiểm tra ngay">
+                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="pt-6 flex justify-center">
@@ -472,28 +495,72 @@ export const lesson122 = {
             </div>
 
             <!-- Bài tập 3 -->
-            <div id="box-122-3" class="bg-white p-6 rounded-[40px] border border-gray-100 shadow-2xl relative overflow-hidden group">
-                <div class="absolute top-0 left-0 w-32 h-32 bg-amber-50 rounded-br-full -z-0"></div>
-                <div class="relative z-10">
-                    <p class="font-black text-2xl md:text-4xl mb-6 text-amber-700 flex items-center gap-4">
-                        <span class="w-12 h-12 bg-amber-600 text-white rounded-2xl flex items-center justify-center font-black shadow-lg shadow-amber-200">3</span>
-                        Khối hình ghép độc đáo:
-                    </p>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-amber-50 p-8 rounded-[40px] border-2 border-dashed border-amber-200">
-                        <img src="hinh_anh/toan/toan_tap_2/122-b3-blocks.png" alt="Khối hình" class="w-full max-w-[450px] h-auto rounded-[32px] shadow-2xl border-4 border-white mx-auto">
-                        <div class="space-y-6">
-                            <p class="text-2xl font-bold text-amber-900 leading-tight">
-                                Để tạo ra hình bên, Việt ghép <b>6 hình hộp chữ nhật</b> giống nhau. Mỗi hình có kích thước: <b>10 cm, 5 cm và 2 cm</b>.
-                            </p>
-                            <div class="space-y-4">
-                                <div class="bg-white p-4 rounded-2xl shadow-sm border border-amber-100 flex items-center justify-between">
+            <div id="box-122-3" class="bg-amber-50/50 p-6 rounded-[40px] border-2 border-dashed border-amber-200 shadow-xl relative overflow-hidden group mt-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <img src="hinh_anh/toan/toan_tap_2/122-b3-blocks.png" alt="Khối hình" class="w-full max-w-[450px] h-auto rounded-[32px] shadow-xl border-4 border-white mx-auto bg-white mb-6">
+                    </div>
+                    <div class="space-y-6">
+                        <p class="text-2xl font-bold text-amber-900 leading-tight">
+                            Để tạo ra hình bên, Việt ghép <b>6 hình hộp chữ nhật</b> giống nhau. Mỗi hình có kích thước: <b>10 cm, 5 cm và 2 cm</b>.
+                        </p>
+
+                        <!-- Area for word problem steps -->
+                        <div class="space-y-4">
+                            <!-- step 1 -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">1</div>
+                                <div class="w-full relative">
+                                    <textarea id="wp-solution-122-3-1" rows="1" class="w-full p-4 pr-12 rounded-2xl border-2 border-amber-100 focus:border-amber-500 outline-none text-xl font-bold transition-all shadow-inner placeholder:text-amber-200 resize-none bg-white" placeholder="Lời giải..."></textarea>
+                                    <button onclick="Lesson.startDictation('wp-solution-122-3-1')" class="absolute right-3 top-3 text-amber-400 hover:text-amber-600 transition-colors" title="Nhập bằng giọng nói">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-amber-600 text-white rounded-full flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">2</div>
+                                <div class="w-full relative">
+                                    <textarea id="wp-calc-122-3-1" rows="1" class="w-full p-4 pr-12 rounded-2xl border-2 border-amber-200 focus:border-amber-500 outline-none text-2xl font-black text-amber-800 transition-all shadow-inner placeholder:text-amber-200 resize-none bg-white" placeholder="Phép tính..."></textarea>
+                                    <button onclick="Lesson.startDictation('wp-calc-122-3-1')" class="absolute right-3 top-3 text-amber-500 hover:text-amber-700 transition-colors" title="Nhập bằng giọng nói">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 py-2">
+                                <div class="w-10 h-10 bg-amber-400 text-white rounded-full flex items-center justify-center text-xl font-black shrink-0 shadow-lg">3</div>
+                                <div class="w-full bg-white p-4 rounded-2xl shadow-sm border border-amber-100 flex items-center justify-between">
                                     <span class="text-lg font-black text-gray-400">V₁ (1 khối):</span>
                                     <div class="flex items-center gap-3">
-                                        <input type="number" id="ans-122-3a" class="w-24 text-2xl font-black text-amber-700 text-right bg-amber-50 rounded-xl p-2 outline-none" placeholder="?">
-                                        <span class="text-lg font-black text-gray-300">cm³</span>
+                                        <input type="number" id="ans-122-3a" class="w-24 text-4xl font-black text-amber-700 text-right bg-amber-50 rounded-xl p-2 outline-none" placeholder="?">
+                                        <span class="text-xl font-black text-gray-300">cm³</span>
                                     </div>
                                 </div>
-                                <div class="bg-amber-600 p-6 rounded-[32px] shadow-xl text-white flex flex-col gap-3">
+                            </div>
+
+                            <!-- step 2 -->
+                            <div class="flex items-start gap-4 mt-6">
+                                <div class="w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">4</div>
+                                <div class="w-full relative">
+                                    <textarea id="wp-solution-122-3-2" rows="1" class="w-full p-4 pr-12 rounded-2xl border-2 border-amber-100 focus:border-amber-500 outline-none text-xl font-bold transition-all shadow-inner placeholder:text-amber-200 resize-none bg-white" placeholder="Lời giải..."></textarea>
+                                    <button onclick="Lesson.startDictation('wp-solution-122-3-2')" class="absolute right-3 top-3 text-amber-400 hover:text-amber-600 transition-colors" title="Nhập bằng giọng nói">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-amber-600 text-white rounded-full flex items-center justify-center text-xl font-black mt-2 shrink-0 shadow-lg">5</div>
+                                <div class="w-full relative">
+                                    <textarea id="wp-calc-122-3-2" rows="1" class="w-full p-4 pr-12 rounded-2xl border-2 border-amber-200 focus:border-amber-500 outline-none text-2xl font-black text-amber-800 transition-all shadow-inner placeholder:text-amber-200 resize-none bg-white" placeholder="Phép tính..."></textarea>
+                                    <button onclick="Lesson.startDictation('wp-calc-122-3-2')" class="absolute right-3 top-3 text-amber-500 hover:text-amber-700 transition-colors" title="Nhập bằng giọng nói">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- final answer -->
+                            <div class="flex items-center gap-4 py-2">
+                                <div class="w-10 h-10 bg-amber-700 text-white rounded-full flex items-center justify-center text-xl font-black shrink-0 shadow-lg">6</div>
+                                <div class="w-full bg-amber-600 p-6 rounded-[32px] shadow-xl text-white flex flex-col gap-3">
                                     <span class="text-xl font-black uppercase tracking-widest text-center">Thể tích cả khối</span>
                                     <div class="flex items-center justify-center gap-4">
                                         <input type="number" id="ans-122-3b" class="w-full max-w-[150px] text-4xl font-black text-right bg-white text-amber-700 rounded-2xl p-3 shadow-inner outline-none placeholder:text-amber-100" placeholder="?">
@@ -504,6 +571,13 @@ export const lesson122 = {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="pt-6 flex justify-center">
+                            <button onclick="Lesson.submitWordProblemAI('122-3')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-3xl font-black text-2xl transition-all shadow-2xl active:scale-95 flex items-center gap-3">
+                                <span>Thầy E chấm lời giải</span>
+                                <span class="text-3xl">👨‍🏫</span>
+                            </button>
                         </div>
                     </div>
                 </div>
