@@ -71,18 +71,7 @@ export const lesson122 = {
                         </div>
                         
                         <!-- Body -->
-                        <div class="flex-grow flex flex-col md:flex-row p-6 gap-6 overflow-hidden relative">
-                            <!-- Left: Image Reference -->
-                            <div class="flex-1 flex flex-col gap-4 bg-white p-4 lg:p-6 rounded-[32px] shadow-lg border border-indigo-100 overflow-y-auto">
-                                <div class="inline-block bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-black text-xs md:text-sm uppercase tracking-widest text-center self-start">Hình vẽ trong bài</div>
-                                <div class="relative group cursor-pointer h-full max-h-[400px]" onclick="if(window.openZoom) window.openZoom('hinh_anh/toan/toan_tap_2/122-khampha.png')">
-                                    <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full h-full rounded-2xl md:rounded-3xl object-contain shadow-md border-4 border-indigo-50">
-                                    <div class="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                                        <div class="bg-indigo-600/90 text-white px-4 py-2 md:px-6 md:py-3 rounded-2xl font-black shadow-lg flex items-center gap-2 transform scale-90 group-hover:scale-100 transition-transform">
-                                            <span class="text-xl md:text-2xl">🔍</span> Phóng to ảnh
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="flex-grow flex flex-col p-6 gap-6 overflow-hidden relative">
                                 <div class="bg-amber-50 rounded-2xl p-6 border-l-8 border-amber-400 mt-auto">
                                     <p class="text-xl font-bold text-amber-900 text-center">🤖 Robot nói: "Có một cách nhanh hơn là dùng cách tính thể tích của hình hộp chữ nhật."</p>
                                 </div>
