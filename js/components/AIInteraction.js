@@ -79,6 +79,66 @@ export const AIInteraction = {
         }
     },
 
+    // Hàm gọi AI ẩn context (dành cho chấm điểm gửi vào chat nếu cần)
+    async sendDirectMessage(displayMessage, hiddenContext = '') {
+        const chatMessages = document.getElementById('ai-chat-messages');
+        const bcCurrent = document.getElementById('breadcrumb-current');
+        const lessonTitle = bcCurrent ? bcCurrent.innerText : "Tổng quát";
+        const lessonData = window.currentLessonData;
+        const lessonContent = lessonData ? (lessonData.content || '') + '\n' + (lessonData.practice || '') : '';
+
+        // Tự động mở chat nếu đang đóng
+        const chatWindow = document.getElementById('ai-chat-window');
+        if (chatWindow && chatWindow.classList.contains('hidden')) {
+            chatWindow.classList.remove('hidden');
+            chatWindow.classList.add('flex');
+        }
+
+        // Chỉ hiển thị displayMessage cho người dùng xem
+        chatMessages.innerHTML += `
+            <div class="flex justify-end mb-4 animate-slide-up">
+                <div class="bg-blue-600 text-white p-3 rounded-2xl rounded-tr-none max-w-[80%] text-sm font-medium shadow-md">
+                    ${displayMessage}
+                </div>
+            </div>
+        `;
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        const loadingId = 'ai-loading-' + Date.now();
+        chatMessages.innerHTML += `
+            <div id="${loadingId}" class="flex mb-4 animate-fade-in">
+                <div class="bg-gray-100 p-3 rounded-2xl rounded-tl-none text-gray-500 text-xs italic shadow-sm flex items-center gap-2">
+                    <div class="w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
+                    <div class="w-2 h-2 bg-blue-400 rounded-full animate-bounce [animation-delay:0.2s]"></div>
+                    <div class="w-2 h-2 bg-blue-400 rounded-full animate-bounce [animation-delay:0.4s]"></div>
+                    Đang xem bài...
+                </div>
+            </div>
+        `;
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        try {
+            // Gửi message thực tế (bao gồm cả displayMessage và hiddenContext)
+            const fullPrompt = hiddenContext ? `${displayMessage}\n\n${hiddenContext}` : displayMessage;
+            const response = await AI.ask(fullPrompt, lessonTitle, lessonContent);
+            document.getElementById(loadingId).remove();
+
+            chatMessages.innerHTML += `
+                <div class="flex mb-4 animate-slide-up">
+                    <div class="bg-white dark:bg-slate-800 border border-blue-100 dark:border-slate-700 p-4 rounded-2xl rounded-tl-none max-w-[85%] text-sm text-gray-700 dark:text-slate-200 font-medium shadow-sm leading-relaxed">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-black uppercase text-blue-600 dark:text-blue-400 tracking-widest">AI E</span>
+                        </div>
+                        ${response}
+                    </div>
+                </div>
+            `;
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        } catch (e) {
+            document.getElementById(loadingId).innerText = "Lỗi kết nối Robot!";
+        }
+    },
+
     renderTutor(id, requirement, placeholder = "Con hãy nhập câu trả lời hoặc nội dung bài làm vào đây nhé...") {
         return `
             <div class="tutor-container my-12 animate-fade-in" id="tutor-${id}">
@@ -195,6 +255,34 @@ export const AIInteraction = {
     closeAiModal() {
         const modal = document.getElementById('ai-modal');
         if (modal) modal.classList.add('hidden');
+    },
+
+    async gradeWithModal(title, prompt) {
+        // Hiển thị modal loading
+        this.showAiModal(title, `
+            <div class="flex flex-col items-center justify-center py-12 space-y-6">
+                <div class="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+                <p class="text-blue-600 font-bold animate-pulse text-lg">Thầy E đang đọc bài của em...</p>
+            </div>
+        `);
+
+        try {
+            const bcCurrent = document.getElementById('breadcrumb-current');
+            const lessonTitle = bcCurrent ? bcCurrent.innerText : "Toán lớp 5";
+            const lessonData = window.currentLessonData;
+            const lessonContent = lessonData ? (lessonData.content || '') + '\n' + (lessonData.practice || '') : '';
+
+            const response = await AI.ask(prompt, lessonTitle, lessonContent);
+
+            // Cập nhật nội dung modal với kết quả
+            this.showAiModal(title, `
+                <div class="prose prose-blue max-w-none dark:prose-invert">
+                    ${response.replace(/\n/g, '<br>')}
+                </div>
+            `);
+        } catch (error) {
+            this.showAiModal(title, "Rất tiếc, kết nối của Thầy E đang gặp trục trặc. Em hãy kiểm tra internet hoặc thử lại sau nhé!");
+        }
     },
 
     // Hệ thống Chat Quiz mới (Multi-turn)

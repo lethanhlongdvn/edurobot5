@@ -1093,21 +1093,26 @@ export const Lesson = {
             return;
         }
 
-        const prompt = `Đề bài:\n${problemText}\n\nBài giải của học sinh:\n${solution}\n\nYêu cầu Thầy E: Đánh giá nhận xét ngắn gọn nhưng đầy đủ. NẾU học sinh làm đúng (đáp số đúng và các bước hợp lý), CÓ THỂ nêu lại các bước làm và đáp số đúng. NẾU học sinh làm sai (sai công thức, tính sai, hoặc sai lý thuyết cơ bản), THÌ CHỈ GIẢNG GIẢI cách làm mà KHÔNG ĐƯA RA ĐÁP SỐ. Nhớ đọc hết nội dung bài để KHÔNG ĐƯA RA LỜI GIẢI để học sinh chép vào nếu học sinh chưa làm đúng. Chỉ hướng dẫn tư duy. Hãy động viên học sinh nhé!`;
+        const displayPrompt = `Đề bài:\n${problemText}\n\nBài giải của học sinh:\n${solution}`;
+        const hiddenPrompt = `\n\nYêu cầu Thầy E: Đánh giá nhận xét ngắn gọn nhưng đầy đủ. NẾU học sinh làm đúng (đáp số đúng và các bước hợp lý), CÓ THỂ nêu lại các bước làm và đáp số đúng. NẾU học sinh làm sai (sai công thức, tính sai, hoặc sai lý thuyết cơ bản), THÌ CHỈ GIẢNG GIẢI cách làm mà KHÔNG ĐƯA RA ĐÁP SỐ. Nhớ đọc hết nội dung bài để KHÔNG ĐƯA RA LỜI GIẢI để học sinh chép vào nếu học sinh chưa làm đúng. Chỉ hướng dẫn tư duy. Hãy động viên học sinh nhé!`;
 
-        // Gửi qua AIInteraction nếu có
-        if (window.AIInteraction && typeof window.AIInteraction.sendDirectMessage === 'function') {
-            window.AIInteraction.sendDirectMessage(prompt);
+        // Hiển thị dạng Popup Modal ưu tiên
+        if (window.AIInteraction && typeof window.AIInteraction.gradeWithModal === 'function') {
+            window.AIInteraction.gradeWithModal("👨‍🏫 Thầy E Nhận Xét", displayPrompt + hiddenPrompt);
+        } else if (window.AIInteraction && typeof window.AIInteraction.sendDirectMessage === 'function') {
+            window.AIInteraction.sendDirectMessage(displayPrompt, hiddenPrompt);
         } else {
-            // Fallback: mở chat window
+            // Fallback: nếu gọi bằng chat thông thường
             const chatInput = document.getElementById('ai-chat-input');
             if (chatInput) {
-                chatInput.value = prompt;
+                chatInput.value = displayPrompt; // Chỉ hiện thị những gì người dùng cần thấy
                 const chatWindow = document.getElementById('ai-chat-window');
                 if (chatWindow && chatWindow.classList.contains('hidden')) {
                     chatWindow.classList.remove('hidden');
                     chatWindow.classList.add('flex');
                 }
+                // Gắn lén propmt nếu có thể
+                window.tempHiddenAiContext = hiddenPrompt;
                 chatInput.focus();
             }
         }

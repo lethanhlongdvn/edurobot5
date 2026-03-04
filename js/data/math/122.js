@@ -504,21 +504,25 @@ export const lesson122 = {
                         prompt = \`Đề bài: Để tạo ra khối hình chữ T ngược, Việt ghép 6 hình hộp chữ nhật giống nhau. Mỗi hình có kích thước: 10 cm, 5 cm và 2 cm.\n\nBài giải của học sinh:\n\${solution}\`;
                     }
 
-                    prompt += \`\n\nYêu cầu thầy E: Đánh giá nhận xét ngắn gọn nhưng đầy đủ. NẾU học sinh làm đúng (đáp số đúng và các bước hợp lý), CÓ THỂ nêu lại các bước làm và đáp số đúng. NẾU học sinh làm sai (sai công thức, tính sai, hoặc sai lý thuyết cơ bản), THÌ CHỈ GIẢNG GIẢI cách làm mà KHÔNG ĐƯA RA ĐÁP SỐ. Nhớ đọc hết nội dung bài để KHÔNG CHƯA ĐƯA RA LỜI GIẢI để học sinh ghi vào nếu học sinh chưa làm đúng.\`;
+                    const hiddenPrompt = \`\n\nYêu cầu thầy E: Đánh giá nhận xét ngắn gọn nhưng đầy đủ. NẾU học sinh làm đúng (đáp số đúng và các bước hợp lý), CÓ THỂ nêu lại các bước làm và đáp số đúng. NẾU học sinh làm sai (sai công thức, tính sai, hoặc sai lý thuyết cơ bản), THÌ CHỈ GIẢNG GIẢI cách làm mà KHÔNG ĐƯA RA ĐÁP SỐ. Nhớ đọc hết nội dung bài để KHÔNG CHƯA ĐƯA RA LỜI GIẢI để học sinh ghi vào nếu học sinh chưa làm đúng.\`;
 
-                    // Gửi qua AIInteraction nếu có
-                    if (window.AIInteraction && typeof window.AIInteraction.sendDirectMessage === 'function') {
-                        window.AIInteraction.sendDirectMessage(prompt);
+                    // Hiển thị dạng Popup Modal ưu tiên
+                    if (window.AIInteraction && typeof window.AIInteraction.gradeWithModal === 'function') {
+                        window.AIInteraction.gradeWithModal("👨‍🏫 Thầy E Nhận Xét", prompt + hiddenPrompt);
+                    } else if (window.AIInteraction && typeof window.AIInteraction.sendDirectMessage === 'function') {
+                        window.AIInteraction.sendDirectMessage(prompt, hiddenPrompt);
                     } else {
-                        // Fallback: mở chat window
+                        // Fallback: nếu gọi bằng chat thông thường
                         const chatInput = document.getElementById('ai-chat-input');
                         if (chatInput) {
-                            chatInput.value = prompt;
+                            chatInput.value = prompt; // Chỉ hiện nội dung bài giải lên ô input
                             const chatWindow = document.getElementById('ai-chat-window');
                             if (chatWindow && chatWindow.classList.contains('hidden')) {
                                 chatWindow.classList.remove('hidden');
                                 chatWindow.classList.add('flex');
                             }
+                            // Gắn lén propmt nếu có thể
+                            window.tempHiddenAiContext = hiddenPrompt;
                             chatInput.focus();
                         }
                     }
