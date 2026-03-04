@@ -106,19 +106,16 @@ export const lesson122 = {
 
                                 <!-- Controls -->
                                 <div class="flex flex-wrap items-center justify-center gap-3 z-10 w-full mb-4">
-                                    <button onclick="window.animKhamPha122()" class="px-5 py-3 bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-xl font-bold text-lg shadow-md active:scale-95 transition-all flex items-center gap-2">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                                    <button onclick="window.animKhamPha122()" class="px-3 py-2 bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all flex items-center gap-2">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
                                         Xoay mô hình
                                     </button>
-                                    <button onclick="window.fillKhamPha122()" id="btn-fill-122" class="px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-xl font-bold text-lg shadow-md active:scale-95 transition-all flex items-center gap-2">
+                                    <button onclick="window.fillKhamPha122()" id="btn-fill-122" class="px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all flex items-center gap-2">
                                         🧊 Xếp lập phương 1 dm³
                                     </button>
-                                    <button onclick="window.resetKhamPha122()" class="px-5 py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-xl font-bold text-lg shadow-md active:scale-95 transition-all">
+                                    <button onclick="window.resetKhamPha122()" class="px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all">
                                         ↺ Đặt lại
                                     </button>
-                                </div>
-                                <div class="bg-amber-50/10 rounded-2xl p-4 border border-amber-400/50 mt-auto w-full max-w-2xl mx-auto backdrop-blur-sm z-10">
-                                    <p class="text-lg md:text-xl font-bold text-amber-200 text-center">🤖 Robot nói: "Có một cách nhanh hơn là dùng cách tính thể tích của hình hộp chữ nhật."</p>
                                 </div>
                             </div>
                         </div>
@@ -287,10 +284,10 @@ export const lesson122 = {
                         for(let y = totalY-1; y >= 0; y--) {
                             for(let z = 0; z < totalZ; z++) {
                                 for(let x = 0; x < totalX; x++) {
-                                    // Origin of the absolute container is (0,0) at the top-left
-                                    // With a block size of 50, its center is placed at 25px offset
-                                    const tx = 25 + (x * size);
-                                    const ty = 25 + (y * size);
+                                    // Box center is (0,0,0) in the 3D grid.
+                                    // With block size=50:
+                                    const tx = -125 + (x * size);
+                                    const ty = -75 + (y * size);
                                     const tz = -100 + (z * size);
 
                                     const block = document.createElement('div');
