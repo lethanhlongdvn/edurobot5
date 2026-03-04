@@ -1034,11 +1034,12 @@ export const Lesson = {
     },
 
     // ========================================================================
-    // MODULE MỚI 3: GIẢI TOÁN CÓ LỜI VĂN (Word Problem Solving - 3 Steps)
-    // Cho HS nhập: Lời giải → Phép tính → Đáp số, rồi chấm bằng AI hoặc key
+    // MODULE MỚI 3: GIẢI TOÁN CÓ LỜI VĂN (Word Problem Solving - Single Step)
+    // Cho HS nhập: Bài giải đầy đủ vào 1 ô, rồi chấm bằng AI
     // ========================================================================
     renderWordProblem(id, problemText, hintSteps = [], expectedAnswer = null) {
         const safeExpected = expectedAnswer ? expectedAnswer.toString().replace(/'/g, "\\'") : '';
+        const safeProblemText = problemText ? problemText.toString().replace(/'/g, "\\'").replace(/"/g, '&quot;') : '';
 
         return `
             <div class="word-problem p-6 md:p-8 bg-white dark:bg-slate-800 rounded-[32px] shadow-sm border border-gray-100 dark:border-slate-700 mt-6 animate-fade-in" id="wp-ex-${id}">
@@ -1049,42 +1050,19 @@ export const Lesson = {
 
                 <!-- Đề bài -->
                 <div class="p-5 bg-amber-50 dark:bg-slate-900 rounded-2xl border-2 border-amber-200 dark:border-amber-800/30 mb-6">
-                    <p class="text-lg md:text-xl font-bold text-gray-800 dark:text-slate-100 leading-relaxed">${problemText}</p>
+                    <p class="text-lg md:text-xl font-bold text-gray-800 dark:text-slate-100 leading-relaxed" id="wp-problem-text-${id}">${problemText}</p>
                 </div>
 
-                <!-- 3 Bước giải bài -->
+                <!-- Bài giải -->
                 <div class="space-y-4">
-                    <!-- Bước 1: Lời giải -->
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 bg-blue-500 text-white rounded-lg flex items-center justify-center text-lg font-black shrink-0 mt-1">1</div>
-                        <div class="flex-grow">
-                            <label class="text-sm font-black text-blue-600 uppercase tracking-widest mb-1 block">Lời giải (Bài giải)</label>
-                            <textarea id="wp-solution-${id}" rows="2"
-                                class="w-full p-4 rounded-xl border-2 border-blue-200 outline-none focus:border-blue-500 text-lg md:text-xl font-bold placeholder:text-gray-300 shadow-inner transition-all resize-none"
-                                placeholder="Ví dụ: Quãng đường ô tô đi được là:"></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Bước 2: Phép tính -->
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 bg-indigo-500 text-white rounded-lg flex items-center justify-center text-lg font-black shrink-0 mt-1">2</div>
-                        <div class="flex-grow">
-                            <label class="text-sm font-black text-indigo-600 uppercase tracking-widest mb-1 block">Phép tính</label>
-                            <textarea id="wp-calc-${id}" rows="2"
-                                class="w-full p-4 rounded-xl border-2 border-indigo-200 outline-none focus:border-indigo-500 text-lg md:text-xl font-bold font-mono placeholder:text-gray-300 shadow-inner transition-all resize-none"
-                                placeholder="Ví dụ: 45 × 2.5 = 112.5 (km)"></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Bước 3: Đáp số -->
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 bg-emerald-500 text-white rounded-lg flex items-center justify-center text-lg font-black shrink-0 mt-1">3</div>
-                        <div class="flex-grow">
-                            <label class="text-sm font-black text-emerald-600 uppercase tracking-widest mb-1 block">Đáp số</label>
-                            <input type="text" id="wp-answer-${id}"
-                                class="w-full p-4 rounded-xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-lg md:text-xl font-bold placeholder:text-gray-300 shadow-inner transition-all"
-                                placeholder="Ví dụ: 112.5 km">
-                        </div>
+                    <div class="w-full relative">
+                        <label class="text-sm font-black text-amber-600 uppercase tracking-widest mb-2 block">Bài giải của em</label>
+                        <textarea id="wp-full-${id}" rows="5"
+                            class="w-full p-5 pr-14 rounded-2xl border-2 border-amber-200 outline-none focus:border-amber-500 text-lg md:text-xl font-bold placeholder:text-gray-300 shadow-inner transition-all resize-y bg-amber-50/30 leading-relaxed"
+                            placeholder="Ví dụ:\nSố đó là:\n10 + 5 = 15\nĐáp số: 15"></textarea>
+                        <button onclick="Lesson.startDictation('wp-full-${id}')" class="absolute right-4 top-10 text-amber-400 hover:text-amber-600 transition-colors bg-white p-2 rounded-xl shadow-sm" title="Nhập bằng giọng nói">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                        </button>
                     </div>
                 </div>
 
@@ -1097,57 +1075,34 @@ export const Lesson = {
                     </details>
                 ` : ''}
 
-                <div class="mt-6 flex items-center gap-4 flex-wrap">
-                    ${expectedAnswer ? `
-                        <button onclick="Lesson.submitWordProblem('${id}', '${safeExpected}')" class="px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95">Kiểm Tra Đáp Số</button>
-                    ` : ''}
-                    <button onclick="Lesson.submitWordProblemAI('${id}')" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl shadow-md transition-transform active:scale-95 flex items-center gap-2">
-                        <span>Gửi AI Chấm Bài</span> <span class="text-lg">🤖</span>
+                <div class="mt-6 flex items-center justify-center gap-4 flex-wrap">
+                    <button onclick="Lesson.submitWordProblemAI('${id}')" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl shadow-xl transition-transform active:scale-95 flex items-center gap-3 text-xl">
+                        <span>Gửi Thầy E Chấm Bài</span> <span class="text-2xl">👨‍🏫</span>
                     </button>
-                    <span id="wp-feedback-${id}" class="text-sm font-bold opacity-0 transition-opacity"></span>
                 </div>
             </div>
             `;
     },
 
-    submitWordProblem(id, expectedAnswer) {
-        const userAnswer = (document.getElementById(`wp-answer-${id}`)?.value || '').trim().replace(/\s/g, '');
-        const cleanExpected = expectedAnswer.replace(/\s/g, '');
-        const feedback = document.getElementById(`wp-feedback-${id}`);
-
-        feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-orange-500');
-
-        if (userAnswer === cleanExpected) {
-            feedback.innerText = "Đáp số chính xác! 🎉";
-            feedback.classList.add('text-emerald-500');
-            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
-        } else {
-            feedback.innerText = "Đáp số chưa đúng. Xem lại phép tính nhé!";
-            feedback.classList.add('text-orange-500');
-            if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
-        }
-    },
-
     submitWordProblemAI(id) {
-        const solution = document.getElementById(`wp-solution-${id}`)?.value || '';
-        const calc = document.getElementById(`wp-calc-${id}`)?.value || '';
-        const answer = document.getElementById(`wp-answer-${id}`)?.value || '';
+        const solution = document.getElementById(`wp-full-${id}`)?.value || '';
+        const problemText = document.getElementById(`wp-problem-text-${id}`)?.innerText || '';
 
-        if (!solution.trim() && !calc.trim() && !answer.trim()) {
-            alert("Em chưa điền gì cả. Hãy viết lời giải, phép tính và đáp số nhé!");
+        if (!solution.trim()) {
+            alert("Thầy E nhắc: Em chưa điền bài giải kìa. Hãy viết lời giải, phép tính và đáp số nhé! ✏️");
             return;
         }
 
-        const fullText = `Bài giải:\n${solution}\nPhép tính:\n${calc}\nĐáp số: ${answer}`;
+        const prompt = `Đề bài:\n${problemText}\n\nBài giải của học sinh:\n${solution}\n\nYêu cầu Thầy E: Đánh giá nhận xét ngắn gọn nhưng đầy đủ. NẾU học sinh làm đúng (đáp số đúng và các bước hợp lý), CÓ THỂ nêu lại các bước làm và đáp số đúng. NẾU học sinh làm sai (sai công thức, tính sai, hoặc sai lý thuyết cơ bản), THÌ CHỈ GIẢNG GIẢI cách làm mà KHÔNG ĐƯA RA ĐÁP SỐ. Nhớ đọc hết nội dung bài để KHÔNG ĐƯA RA LỜI GIẢI để học sinh chép vào nếu học sinh chưa làm đúng. Chỉ hướng dẫn tư duy. Hãy động viên học sinh nhé!`;
 
         // Gửi qua AIInteraction nếu có
         if (window.AIInteraction && typeof window.AIInteraction.sendDirectMessage === 'function') {
-            window.AIInteraction.sendDirectMessage(`Chấm bài Toán lời văn của em. Nội dung bài làm:\n${fullText}\n\nHãy nhận xét: Lời giải đúng/sai, Phép tính đúng/sai, Đáp số đúng/sai. Cho điểm thang 10.`);
+            window.AIInteraction.sendDirectMessage(prompt);
         } else {
             // Fallback: mở chat window
             const chatInput = document.getElementById('ai-chat-input');
             if (chatInput) {
-                chatInput.value = `Em giải bài Toán:\n${fullText}\n\nThầy/cô chấm giúp em với ạ!`;
+                chatInput.value = prompt;
                 const chatWindow = document.getElementById('ai-chat-window');
                 if (chatWindow && chatWindow.classList.contains('hidden')) {
                     chatWindow.classList.remove('hidden');
@@ -1155,13 +1110,6 @@ export const Lesson = {
                 }
                 chatInput.focus();
             }
-        }
-
-        const feedback = document.getElementById(`wp-feedback-${id}`);
-        if (feedback) {
-            feedback.classList.remove('opacity-0');
-            feedback.innerText = "Đã gửi bài cho AI chấm! Xem cửa sổ chat.";
-            feedback.classList.add('text-blue-500');
         }
     },
 
