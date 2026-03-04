@@ -6,7 +6,7 @@ export const Lesson = {
     renderLessonPage(subject, lesson, allSubjects = []) {
         const color = common.getColorClasses(subject.color);
 
-        const hasStudy = !!(typeof lesson.content === 'function' || lesson.content?.trim());
+        const hasStudy = !!(typeof lesson.content === 'function' || (typeof lesson.content === 'string' && lesson.content.trim()));
         const hasPractice = !!(typeof lesson.practice === 'function' || lesson.practice?.trim());
         const hasQuiz = !!(lesson.quizPool && lesson.quizPool.length > 0);
 

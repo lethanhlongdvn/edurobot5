@@ -296,8 +296,8 @@ export const router = {
             container.innerHTML = UI.renderLessonPage(subject, lesson, subjects);
             window.scrollTo(0, 0);
 
-            const hasStudy = !!(lesson.content?.trim());
-            const hasPractice = !!(lesson.practice?.trim());
+            const hasStudy = !!(typeof lesson.content === 'function' || (typeof lesson.content === 'string' && lesson.content.trim()));
+            const hasPractice = !!(typeof lesson.practice === 'function' || lesson.practice?.trim());
             const hasQuiz = !!(lesson.quizPool && lesson.quizPool.length > 0);
 
             let defaultTab = 'study';
@@ -338,7 +338,8 @@ export const router = {
         // Render nội dung tùy theo Tab
         let html = '';
         if (tabId === 'study') {
-            const studyContent = lesson.content ||
+            const rawContent = typeof lesson.content === 'function' ? lesson.content() : lesson.content;
+            const studyContent = rawContent ||
                 (lesson.tabs?.study?.blocks?.find(b => b.type === 'html')?.content) ||
                 (lesson.tabs?.lesson?.blocks?.find(b => b.type === 'html')?.content) ||
                 (lesson.blocks?.find(b => b.type === 'html')?.content) ||
@@ -350,7 +351,8 @@ export const router = {
                 </div>
             `;
         } else if (tabId === 'practice') {
-            const practiceContent = lesson.practice ||
+            const rawPractice = typeof lesson.practice === 'function' ? lesson.practice() : lesson.practice;
+            const practiceContent = rawPractice ||
                 (lesson.tabs?.practice?.blocks?.find(b => b.type === 'html')?.content) ||
                 UI.renderEmptyPractice();
 
