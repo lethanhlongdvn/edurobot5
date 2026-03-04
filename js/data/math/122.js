@@ -300,12 +300,10 @@ export const lesson122 = {
                         for(let y = totalY-1; y >= 0; y--) {
                             for(let z = 0; z < totalZ; z++) {
                                 for(let x = 0; x < totalX; x++) {
-                                    // The origin of container 300x200 is center
-                                    // Back Left Top corner is (-150, -100, -125)
-                                    // For a block size 50, its center should be at (-125, -75, -100)
-                                    const tx = -125 + x * size;
-                                    const ty = -75 + y * size;
-                                    const tz = -100 + z * size;
+                                    // Top-left-back corner center of the 300x200x250 box
+                                    const tx = -125 + (x * size);
+                                    const ty = -75 + (y * size);
+                                    const tz = -100 + (z * size);
 
                                     const block = document.createElement('div');
                                     block.className = 'minicube-122';
