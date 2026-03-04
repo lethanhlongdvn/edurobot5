@@ -1,11 +1,11 @@
-// Bài 1 Tiết 1: Vị trí địa lý, lãnh thổ, đơn vị hành chính, Quốc kỳ, Quốc huy, Quốc ca
-// DEMO: Tất cả các dạng tương tác áp dụng cho môn Lịch sử & Địa lý
+// Bài 1 Tiết 1: Vị trí địa lý, lãnh thổ, đơn vị hành chính
+// VBT Lịch sử & Địa lí 5 - KNTT: Bài 1 (Phần 1 & 2)
 export const lesson001 = {
     topic: 'Địa lý Việt Nam',
     week: '1',
     period: '1',
-    title: 'Bài 1: Vị trí địa lý, lãnh thổ, đơn vị hành chính, Quốc kỳ, Quốc huy, Quốc ca (Tiết 1)',
-    description: 'Tìm hiểu vị trí địa lý, lãnh thổ và các biểu tượng quốc gia Việt Nam.',
+    title: 'Bài 1: Vị trí địa lý, lãnh thổ, đơn vị hành chính (Tiết 1)',
+    description: 'Khám phá vị trí đặc biệt của Việt Nam trên bản đồ thế giới, hình dạng lãnh thổ và đơn vị hành chính.',
 
     content() {
         return `
@@ -66,39 +66,48 @@ export const lesson001 = {
             </div>
         </div>
 
-        <!-- ====== 2. BIỂU TƯỢNG QUỐC GIA ====== -->
+        <!-- ====== 2. LÃNH THỔ VÀ ĐƠN VỊ HÀNH CHÍNH ====== -->
         <div class="bg-white dark:bg-slate-800 rounded-[32px] p-6 md:p-8 shadow-sm border border-gray-100 dark:border-slate-700 mb-6">
             <div class="flex items-center gap-3 mb-6">
                 <div class="w-12 h-12 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-2xl font-black">🇻🇳</div>
-                <h2 class="text-2xl font-black text-gray-800 dark:text-slate-100">Các biểu tượng quốc gia</h2>
+                <h2 class="text-2xl font-black text-gray-800 dark:text-slate-100">Lãnh thổ và đơn vị hành chính</h2>
             </div>
+            
+            <p class="text-lg font-bold text-gray-700 dark:text-slate-200 mb-6 leading-relaxed">
+                Lãnh thổ Việt Nam gồm vùng đất, vùng trời và vùng biển. Vùng đất của nước ta gồm toàn bộ phần đất liền và các đảo, quần đảo trên Biển Đông, có tổng diện tích hơn 331 nghìn km².
+            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="p-6 bg-red-50 dark:bg-red-900/20 rounded-2xl border-2 border-red-200 text-center">
-                    <span class="text-6xl block mb-3">🚩</span>
-                    <h3 class="text-xl font-black text-red-800 mb-2">Quốc kỳ</h3>
-                    <p class="text-base font-bold text-red-700">Cờ đỏ sao vàng. Nền đỏ tượng trưng cho cách mạng, ngôi sao vàng năm cánh tượng trưng cho sự đoàn kết các tầng lớp nhân dân.</p>
-                </div>
-                <div class="p-6 bg-yellow-50 dark:bg-yellow-900/20 rounded-2xl border-2 border-yellow-200 text-center">
-                    <span class="text-6xl block mb-3">🏅</span>
-                    <h3 class="text-xl font-black text-yellow-800 mb-2">Quốc huy</h3>
-                    <p class="text-base font-bold text-yellow-700">Hình tròn, nền đỏ, có ngôi sao vàng năm cánh, bông lúa, bánh xe răng và dòng chữ "Cộng hòa Xã hội Chủ nghĩa Việt Nam".</p>
-                </div>
-                <div class="p-6 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border-2 border-amber-200 text-center">
-                    <span class="text-6xl block mb-3">🎵</span>
-                    <h3 class="text-xl font-black text-amber-800 mb-2">Quốc ca</h3>
-                    <p class="text-base font-bold text-amber-700">Bài "Tiến quân ca" do nhạc sĩ <b>Văn Cao</b> sáng tác năm 1944. Là bài ca tập hợp, kêu gọi toàn dân đứng lên.</p>
-                </div>
-            </div>
+            <ul class="space-y-4 mb-6">
+                 <li class="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-2xl">
+                    <div class="text-3xl mt-1">🧩</div>
+                    <div>
+                        <h3 class="text-lg font-black text-slate-800 dark:text-slate-100 uppercase tracking-widest">Phần đất liền</h3>
+                        <p class="text-base font-bold text-slate-600 dark:text-slate-300 mt-1">Nước ta có dạng hình chữ S, hẹp ngang và trải dài theo chiều bắc – nam.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-2xl">
+                    <div class="text-3xl mt-1">🌊</div>
+                    <div>
+                        <h3 class="text-lg font-black text-slate-800 dark:text-slate-100 uppercase tracking-widest">Vùng biển</h3>
+                        <p class="text-base font-bold text-slate-600 dark:text-slate-300 mt-1">Vùng biển nước ta có diện tích khoảng 1 triệu km².</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-2xl">
+                    <div class="text-3xl mt-1">📍</div>
+                    <div>
+                        <h3 class="text-lg font-black text-slate-800 dark:text-slate-100 uppercase tracking-widest">Đơn vị hành chính</h3>
+                        <p class="text-base font-bold text-slate-600 dark:text-slate-300 mt-1">Việt Nam có 63 tỉnh, thành phố trực thuộc Trung ương. Trong đó, 5 thành phố trực thuộc Trung ương là: Hà Nội, Hải Phòng, Đà Nẵng, Thành phố Hồ Chí Minh và Cần Thơ.</p>
+                    </div>
+                </li>
+            </ul>
 
             <!-- Ghi nhớ -->
             <div class="mt-6 p-6 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl border-2 border-emerald-200">
                 <h3 class="text-xl font-black text-emerald-800 mb-3">📝 Ghi nhớ</h3>
                 <ul class="space-y-2 text-base font-bold text-emerald-700">
                     <li class="flex items-start gap-2"><span class="text-emerald-500 mt-1">✅</span> Việt Nam nằm ở khu vực Đông Nam Á, trên bán đảo Đông Dương</li>
-                    <li class="flex items-start gap-2"><span class="text-emerald-500 mt-1">✅</span> Lãnh thổ hình chữ S, diện tích khoảng 331.212 km²</li>
-                    <li class="flex items-start gap-2"><span class="text-emerald-500 mt-1">✅</span> 63 tỉnh, thành phố trực thuộc trung ương, thủ đô là Hà Nội</li>
-                    <li class="flex items-start gap-2"><span class="text-emerald-500 mt-1">✅</span> Quốc kỳ: Cờ đỏ sao vàng | Quốc ca: Tiến quân ca (Văn Cao)</li>
+                    <li class="flex items-start gap-2"><span class="text-emerald-500 mt-1">✅</span> Lãnh thổ hình chữ S, diện tích đất liền khoảng 331 nghìn km²</li>
+                    <li class="flex items-start gap-2"><span class="text-emerald-500 mt-1">✅</span> 63 tỉnh, thành phố trực thuộc trung ương</li>
                 </ul>
             </div>
         </div>
@@ -123,148 +132,69 @@ export const lesson001 = {
     // Practice is a FUNCTION → gets called at render time when Lesson is loaded
     practice() {
         return `
-        <h2 class="text-2xl font-black text-gray-800 dark:text-slate-100 mb-6">🏋️ Luyện tập</h2>
+        <h2 class="text-2xl font-black text-gray-800 dark:text-slate-100 mb-6">🏋️ Luyện tập (Tiết 1)</h2>
 
-        <!-- ====== 1. ĐIỀN VÀO CHỖ TRỐNG (Fill-in-the-Blanks) ====== -->
-        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mb-2">BÀI 1: Điền vào chỗ trống</h3>
-        ${Lesson.renderFillBlanks(
-            'ls-fb-1',
-            'Việt Nam nằm ở khu vực {0}, trên bán đảo {1}. Phía bắc giáp {2}, phía tây giáp Lào và {3}. Lãnh thổ có hình chữ {4}, dài khoảng {5} km.',
-            ['Đông Nam Á', 'Đông Dương', 'Trung Quốc', 'Cam-pu-chia', 'S', '1.650', 'Tây Á', 'Đông Bắc', 'O', '2.500'],
-            ['Đông Nam Á', 'Đông Dương', 'Trung Quốc', 'Cam-pu-chia', 'S', '1.650']
-        )}
-
-        <!-- ====== 2. ĐÚNG / SAI (True/False) ====== -->
-        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">BÀI 2: Đúng hay Sai?</h3>
+        <!-- ====== 1. ĐÚNG / SAI (VBT Bài 1.1 - 1.4) ====== -->
+        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mb-2">Bài tập 1 (VBT trang 5)</h3>
         ${Lesson.renderTrueFalse('ls-tf-1', [
             {
-                text: 'Việt Nam nằm ở khu vực Đông Bắc Á.',
+                text: 'Việt Nam nằm ở khu vực Đông Nam Á.',
+                answer: true,
+                explanation: 'Đúng! Nước ta thuộc khu vực Đông Nam Á của châu Á.'
+            },
+            {
+                text: 'Việt Nam có chung đường biên giới đất liền với Thái Lan.',
                 answer: false,
-                explanation: 'Sai! Việt Nam nằm ở khu vực Đông Nam Á, trên bán đảo Đông Dương.'
+                explanation: 'Sai! Việt Nam có chung đường biên giới với Trung Quốc, Lào, và Cam-pu-chia, không giáp Thái Lan.'
             },
             {
-                text: 'Thủ đô của Việt Nam là Hà Nội.',
+                text: 'Lãnh thổ phần đất liền nước ta có dạng hình chữ S.',
                 answer: true,
-                explanation: 'Đúng! Hà Nội là thủ đô nước Cộng hòa Xã hội Chủ nghĩa Việt Nam.'
+                explanation: 'Đúng! Hình dạng đất liền nước ta có dạng chữ S.'
             },
             {
-                text: 'Việt Nam có 63 tỉnh, thành phố trực thuộc trung ương.',
+                text: 'Hải Phòng là một trong các thành phố trực thuộc Trung ương của nước ta.',
                 answer: true,
-                explanation: 'Chính xác! Việt Nam có 63 đơn vị hành chính cấp tỉnh.'
-            },
-            {
-                text: 'Quốc ca Việt Nam do nhạc sĩ Phạm Tuyên sáng tác.',
-                answer: false,
-                explanation: 'Sai! Quốc ca "Tiến quân ca" do nhạc sĩ Văn Cao sáng tác năm 1944.'
-            },
-            {
-                text: 'Lãnh thổ Việt Nam có hình chữ S.',
-                answer: true,
-                explanation: 'Đúng! Lãnh thổ Việt Nam kéo dài theo hướng Bắc - Nam, có hình chữ S đặc trưng.'
+                explanation: 'Đúng! 5 thành phố là: Hà Nội, Hải Phòng, Đà Nẵng, TP Hồ Chí Minh, Cần Thơ.'
             }
         ])}
 
-        <!-- ====== 3. SẮP XẾP THỨ TỰ (Ordering) ====== -->
-        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">BÀI 3: Sắp xếp thứ tự</h3>
-        ${Lesson.renderOrdering(
-            'ls-ord-1',
-            'Sắp xếp các nước giáp biên giới Việt Nam theo thứ tự từ Bắc đến Tây',
-            [
-                'Trung Quốc (phía Bắc)',
-                'Lào (phía Tây)',
-                'Cam-pu-chia (phía Tây Nam)',
-                'Biển Đông (phía Đông và Nam)'
-            ],
-            [0, 1, 2, 3]
+        <!-- ====== 2. ĐIỀN VÀO CHỖ TRỐNG (VBT Bài 2 - Sơ đồ) ====== -->
+        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">Bài tập 2 (VBT trang 5)</h3>
+        <p class="text-base font-bold text-slate-700 dark:text-slate-300 mb-4">Hoàn thành đoạn thông tin mô tả sơ đồ ảnh hưởng của vị trí địa lí đối với tự nhiên và hoạt động sản xuất.</p>
+        ${Lesson.renderFillBlanks(
+            'ls-fb-1',
+            'Thiên nhiên nước ta mang tính chất {0} ẩm gió mùa, thích hợp phát triển cây trồng, vật nuôi của vùng nhiệt đới. Vị trí địa lí thuận lợi phát triển loại hình giao thông {1} và hoạt động {2}. Tuy nhiên, nước ta cũng gặp nhiều thiên tai, đặc biệt là {3}.',
+            ['nhiệt đới', 'vận tải biển', 'xuất nhập khẩu', 'bão', 'ôn đới', 'đường sắt', 'đóng băng'],
+            ['nhiệt đới', 'vận tải biển', 'xuất nhập khẩu', 'bão']
         )}
 
-        <!-- ====== 4. PHÂN LOẠI (Categorizing) ====== -->
-        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">BÀI 4: Phân loại</h3>
+        <!-- ====== 3. PHÂN LOẠI (VBT Bài 3) ====== -->
+        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">Bài tập 3 (VBT trang 6)</h3>
+        <p class="text-base font-bold text-slate-700 dark:text-slate-300 mb-4">Mô tả đặc điểm lãnh thổ và đơn vị hành chính của Việt Nam bằng cách đưa thông tin vào cột đúng.</p>
         ${Lesson.renderCategorizing(
             'ls-cat-1',
-            'Phân loại các thông tin về biểu tượng quốc gia',
+            'Phân loại thông tin Lãnh thổ & Đơn vị hành chính',
             [
-                { name: '🚩 Quốc kỳ', color: 'red' },
-                { name: '🏅 Quốc huy', color: 'yellow' },
-                { name: '🎵 Quốc ca', color: 'amber' }
+                { name: '🗺️ Bộ phận lãnh thổ', color: 'blue' },
+                { name: '📍 Hình dạng đất liền', color: 'green' },
+                { name: '🏛️ Đơn vị hành chính', color: 'purple' }
             ],
             [
-                { text: 'Nền đỏ, sao vàng năm cánh', categoryIdx: 0 },
-                { text: 'Tiến quân ca', categoryIdx: 2 },
-                { text: 'Nhạc sĩ Văn Cao sáng tác', categoryIdx: 2 },
-                { text: 'Có bông lúa và bánh xe răng', categoryIdx: 1 },
-                { text: 'Tượng trưng cho cách mạng', categoryIdx: 0 },
-                { text: 'Hình tròn, nền đỏ', categoryIdx: 1 },
-                { text: 'Sáng tác năm 1944', categoryIdx: 2 },
-                { text: 'Năm cánh sao tượng trưng đoàn kết', categoryIdx: 0 }
+                { text: 'Vùng đất, vùng biển, vùng trời', categoryIdx: 0 },
+                { text: 'Dạng hình chữ S', categoryIdx: 1 },
+                { text: 'Hẹp ngang, trải dài Bắc - Nam', categoryIdx: 1 },
+                { text: '63 tỉnh, thành phố', categoryIdx: 2 },
+                { text: '5 thành phố trực thuộc Trung ương', categoryIdx: 2 }
             ]
         )}
 
-        <!-- ====== 5. THẺ LẬT (Flashcards) ====== -->
-        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">BÀI 5: Thẻ kiến thức</h3>
-        ${Lesson.renderFlashcards('ls-fc-1', 'Ôn tập Vị trí địa lý & Biểu tượng quốc gia', [
-            { front: 'Việt Nam nằm ở khu vực nào?', back: 'Đông Nam Á, trên bán đảo Đông Dương', emoji: '🌏' },
-            { front: 'Diện tích Việt Nam?', back: 'Khoảng 331.212 km², xếp thứ 66 thế giới', emoji: '📐' },
-            { front: 'Đường bờ biển dài bao nhiêu?', back: 'Hơn 3.260 km, chạy dọc phía đông và nam', emoji: '🏖️' },
-            { front: 'Có bao nhiêu tỉnh, thành phố?', back: '63 tỉnh, thành phố trực thuộc trung ương', emoji: '🏛️' },
-            { front: 'Ai sáng tác Quốc ca?', back: 'Nhạc sĩ Văn Cao sáng tác bài Tiến quân ca (1944)', emoji: '🎵' },
-            { front: 'Ý nghĩa cờ đỏ sao vàng?', back: 'Nền đỏ: cách mạng. Sao vàng 5 cánh: đoàn kết các tầng lớp nhân dân', emoji: '🚩' }
-        ])}
-
-        <!-- ====== 6. NỐI CẶP ĐÔI (Matching) ====== -->
-        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">BÀI 6: Nối cặp đôi</h3>
-        ${Lesson.renderMatchingExercise(
-            'ls-match-1',
-            'Nối nước láng giềng với hướng tiếp giáp',
-            ['Trung Quốc', 'Lào', 'Cam-pu-chia', 'Biển Đông'],
-            ['Phía Tây', 'Phía Bắc', 'Phía Đông và Nam', 'Phía Tây Nam'],
-            [{ leftIdx: 0, rightIdx: 1 }, { leftIdx: 1, rightIdx: 0 }, { leftIdx: 2, rightIdx: 3 }, { leftIdx: 3, rightIdx: 2 }]
-        )}
-
-        <!-- ====== 7. KHÁM PHÁ TỪNG BƯỚC (Experiment/Discovery) ====== -->
-        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">BÀI 7: Khám phá từng bước</h3>
-        ${Lesson.renderExperiment(
-            'ls-exp-1',
-            'Khám phá: Tìm hiểu vị trí Việt Nam trên bản đồ',
-            'Cùng khám phá vị trí đặc biệt của Việt Nam trên bản đồ thế giới từng bước.',
-            [
-                {
-                    instruction: 'Tìm châu Á trên bản đồ thế giới',
-                    result: '🌍 Châu Á là châu lục lớn nhất thế giới, nằm ở phía đông bán cầu. Việt Nam là một phần của châu Á.',
-                    emoji: '🗺️'
-                },
-                {
-                    instruction: 'Xác định khu vực Đông Nam Á',
-                    result: '📍 Đông Nam Á gồm 11 quốc gia, nằm ở phía đông nam châu Á. Đây là nơi Việt Nam tọa lạc.',
-                    emoji: '🌏'
-                },
-                {
-                    instruction: 'Tìm Việt Nam trên bán đảo Đông Dương',
-                    result: '🇻🇳 Việt Nam nằm ở phía đông bán đảo Đông Dương, có đường bờ biển dài hơn 3.260 km dọc Biển Đông.',
-                    emoji: '🏖️'
-                },
-                {
-                    instruction: 'Xác định các nước láng giềng',
-                    result: '🤝 Phía Bắc giáp <b>Trung Quốc</b>, phía Tây giáp <b>Lào</b> và <b>Cam-pu-chia</b>, phía Đông và Nam giáp <b>Biển Đông</b>.',
-                    emoji: '🌐'
-                }
-            ]
-        )}
-
-        <!-- ====== 8. VẬN DỤNG THỰC TẾ (Real World) ====== -->
-        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">BÀI 8: Vận dụng thực tế</h3>
-        ${Lesson.renderRealWorldMeasurement(
-            'ls-rw-1',
-            'Tìm hiểu quê hương em trên bản đồ',
-            'Em hãy chụp ảnh bản đồ hành chính tỉnh/thành phố nơi em sống và ghi lại: Tên tỉnh/thành, các tỉnh giáp ranh, đặc điểm nổi bật (biển, núi, sông...).'
-        )}
-
-        <!-- ====== 9. HỎI ĐÁP VỚI AI ====== -->
-        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">BÀI 9: Hỏi đáp với AI</h3>
+        <!-- ====== 4. HỎI ĐÁP VỚI AI (VBT Bài 7 & Trải nghiệm) ====== -->
+        <h3 class="text-lg font-black text-gray-500 uppercase tracking-widest mt-8 mb-2">Vận dụng & Liên hệ (VBT trang 7)</h3>
         ${AIInteraction.renderTutor(
             'ls-tutor-1',
-            'Em hãy trả lời: Vì sao vị trí địa lý của Việt Nam được xem là thuận lợi cho việc giao lưu với các nước? Nêu ít nhất 3 lý do.',
-            'Nhập câu trả lời của em vào đây...'
+            'Em hãy kể tên 5 thành phố trực thuộc Trung ương của nước ta. Tỉnh hoặc thành phố nơi em đang sống có tên là gì? Nó tiếp giáp với những tỉnh/thành phố nào?',
+            'Ví dụ: 5 thành phố là... Em đang sống ở...'
         )}
         `;
     },
@@ -279,26 +209,14 @@ export const lesson001 = {
         },
         {
             level: 1,
-            question: 'Thủ đô của Việt Nam là thành phố nào?',
-            options: ['TP. Hồ Chí Minh', 'Đà Nẵng', 'Hà Nội', 'Huế'],
-            answer: 2
+            question: 'Việt Nam không có chung đường biên giới đất liền với quốc gia nào sau đây?',
+            options: ['Thái Lan', 'Lào', 'Cam-pu-chia', 'Trung Quốc'],
+            answer: 0
         },
         {
             level: 1,
             question: 'Việt Nam có bao nhiêu tỉnh, thành phố trực thuộc trung ương?',
             options: ['53', '58', '63', '68'],
-            answer: 2
-        },
-        {
-            level: 1,
-            question: 'Quốc ca Việt Nam có tên gọi là gì?',
-            options: ['Giải phóng miền Nam', 'Tiến quân ca', 'Hành quân ca', 'Chiến sĩ ca'],
-            answer: 1
-        },
-        {
-            level: 1,
-            question: 'Ai là tác giả bài Quốc ca Việt Nam?',
-            options: ['Phạm Tuyên', 'Đỗ Nhuận', 'Văn Cao', 'Lưu Hữu Phước'],
             answer: 2
         },
         // Level 2 - Thông hiểu
@@ -316,34 +234,17 @@ export const lesson001 = {
         },
         {
             level: 2,
-            question: 'Ngôi sao vàng năm cánh trên Quốc kỳ tượng trưng cho điều gì?',
-            options: [
-                'Năm vùng miền đất nước',
-                'Sự đoàn kết các tầng lớp nhân dân',
-                'Năm châu lục trên thế giới',
-                'Năm nền văn minh cổ đại'
-            ],
-            answer: 1
-        },
-        {
-            level: 2,
             question: 'Lãnh thổ Việt Nam có hình dạng giống chữ gì?',
             options: ['Chữ C', 'Chữ S', 'Chữ L', 'Chữ V'],
             answer: 1
-        },
-        {
-            level: 2,
-            question: 'Việt Nam nằm trên bán đảo nào?',
-            options: ['Bán đảo Triều Tiên', 'Bán đảo Mã Lai', 'Bán đảo Đông Dương', 'Bán đảo Ả Rập'],
-            answer: 2
         },
         // Level 3 - Vận dụng
         {
             level: 3,
             question: 'Vị trí ven Biển Đông mang lại thuận lợi gì cho Việt Nam?',
             options: [
-                'Có khí hậu lạnh quanh năm',
-                'Thuận lợi giao thương đường biển, khai thác hải sản và du lịch biển',
+                'Có khí hậu ôn đới lạnh quanh năm',
+                'Thuận lợi phát triển giao thông vận tải biển và xuất nhập khẩu',
                 'Không bị ảnh hưởng bởi bão',
                 'Có nhiều sa mạc rộng lớn'
             ],
@@ -351,45 +252,23 @@ export const lesson001 = {
         },
         {
             level: 3,
-            question: 'Vì sao Quốc kỳ, Quốc huy, Quốc ca là biểu tượng thiêng liêng?',
+            question: 'Thành phố nào sau đây KHÔNG PHẢI là thành phố trực thuộc Trung ương?',
             options: [
-                'Vì chúng rất đẹp',
-                'Vì chúng đại diện cho chủ quyền, lịch sử và tinh thần đoàn kết dân tộc',
-                'Vì chúng được nước ngoài công nhận',
-                'Vì chúng được sử dụng hằng ngày'
+                'Hà Nội',
+                'Đà Nẵng',
+                'Cần Thơ',
+                'Huế'
             ],
-            answer: 1
+            answer: 3
         },
         {
             level: 3,
-            question: 'So với các nước Đông Nam Á, diện tích Việt Nam thuộc nhóm nào?',
+            question: 'Khí hậu nhiệt đới ẩm gió mùa của Việt Nam ảnh hưởng tới tự nhiên như thế nào?',
             options: [
-                'Nhỏ nhất (như Singapore, Brunei)',
-                'Trung bình (tương tự Philippines, Malaysia)',
-                'Lớn nhất (như Indonesia)',
-                'Rất lớn, chiếm phần lớn Đông Nam Á'
-            ],
-            answer: 1
-        },
-        {
-            level: 3,
-            question: 'Việt Nam giáp biên giới đất liền với 3 nước. Đặc điểm này có ý nghĩa gì?',
-            options: [
-                'Gây khó khăn cho phát triển kinh tế',
-                'Thuận lợi cho giao lưu văn hóa và thương mại với các nước láng giềng',
-                'Làm cho Việt Nam bị cô lập',
-                'Không có ý nghĩa đặc biệt'
-            ],
-            answer: 1
-        },
-        {
-            level: 3,
-            question: 'Bài Tiến quân ca được sáng tác trong hoàn cảnh nào?',
-            options: [
-                'Sau khi hòa bình lập lại 1954',
-                'Trong phong trào đấu tranh giành độc lập, năm 1944',
-                'Sau ngày thống nhất đất nước 1975',
-                'Trong thời kỳ đổi mới 1986'
+                'Chỉ trồng được lúa mì',
+                'Thích hợp phát triển cây trồng, vật nuôi của vùng nhiệt đới',
+                'Nông nghiệp kém phát triển',
+                'Chỉ có băng tuyết quanh năm'
             ],
             answer: 1
         }

@@ -1,3 +1,4 @@
+import { lessonDemo } from '../demo_interactions.js';
 import { lesson001 } from './001.js';
 import { lesson002 } from './002.js';
 import { lesson003 } from './003.js';
@@ -72,6 +73,7 @@ import { lesson070 } from './070.js';
 import { lessonTemplate } from './template.js';
 
 export const historyData = [
+    lessonDemo,
     lesson001,
     lesson002,
     lesson003,

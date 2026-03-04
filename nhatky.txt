@@ -426,9 +426,12 @@ VÃ Dá»¤ CÃCH YÃŠU Cáº¦U:
 
 ÄÃƒ ÃP Dá»¤NG Äá»‚ Sá»¬A Äá»”I: Tiáº¿t 120, Tiáº¿t 121 vÃ  cÃ¡c bÃ i há»c tÆ°Æ¡ng lai.
 ================================================================================
-1 2 6   c h Ñt .  
- B Õ  s u n g   f i l e   c u n g c o   c h o   1 2 3 ,   1 2 4 ,   1 2 5 ,   1 2 6 ,   1 2 7 .  
- C á c   f i l e   c u n g c o . t x t   l à   c á c   f i l e   v n   b £n   t h u §n   t ú y   ( . t x t ) ,   n g °Ýi   d ù n g   h o à n   t o à n   C Ó   T H Â  m ß  l ê n   v à   t ñ  c h Én h   s ía ,   c ­p   n h ­t   t h ê m   b Ût   b ±n g   N o t e P a d   h o ·c   b ¥t   k ó  c ô n g   c å  c h Én h   s ía   v n   b £n   n à o .  
+1 2 6   c h Ñt . 
+ 
+ B Õ  s u n g   f i l e   c u n g c o   c h o   1 2 3 ,   1 2 4 ,   1 2 5 ,   1 2 6 ,   1 2 7 . 
+ 
+ C á c   f i l e   c u n g c o . t x t   l à   c á c   f i l e   v n   b £n   t h u §n   t ú y   ( . t x t ) ,   n g °Ýi   d ù n g   h o à n   t o à n   C Ó   T H Â  m ß  l ê n   v à   t ñ  c h Én h   s ía ,   c ­p   n h ­t   t h ê m   b Ût   b ±n g   N o t e P a d   h o ·c   b ¥t   k ó  c ô n g   c å  c h Én h   s ía   v n   b £n   n à o . 
+ 
  Kh?i t?o thành công c?u trúc môn Khoa h?c: js/data/science/cungco, index.js, template.js, placeholders.js.
 Ðã ch?y script build_science.py d? t? d?ng t?o 70 bài h?c Khoa h?c t? file CSV, c?u hình t? tu?n 1 d?n tu?n 35 tuong duong môn Toán.
 Ðã fix l?i s?p giao di?n (màn hình tr?ng Loading) do script build_science.py ghi dè m?t file template.js và hàm Sort c?a m?ng scienceData.
@@ -527,5 +530,15 @@ Trang thai hien tai:
   - Google Maps tich hop thanh cong, zoom/lightbox hoat dong
   - Da push len GitHub, Netlify deploy thanh cong
   - Cac cong cu LS&DL trong 001.js da duoc kiem dinh kha thi.
+
+[13:30] Ngay 04/03/2026 - Soan bai 1 Dia Ly
+- Hoan thien Tiet 1 & Tiet 2 mon Dia ly Bai 1 ("Vi tri dia ly, lanh tho, don vi hanh chinh, Quoc ky, Quoc huy, Quoc ca").
+- Tach bai 1 thanh 2 tiet ro rang: 001.js (Lanh tho, vi tri) va 002.js (Quoc ky, Quoc huy, Quoc ca).
+- Bo sung cac bai tap thuc hanh tu Vo Bai Tap (VBT) Lich su va Dia ly 5 (KNTT) bao gom Dien khuyet, Dung/Sai, Noi cap doi, Hoi dap trai nghiem.
+- Cap nhat Ngan hang cau hoi (Quiz) phu hop cho tung tiet.
+- Tao man hinh tuong tac mau demo_interactions.js luu tru toan bo 10 dang bai tap tuong tac, duoc import vao Bai 0 cua Lich su - Dia ly de de dang copy-paste cho cac bai sau.
+- Tich hop render cho file 002.js tren he thong router.
+
+Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi dung, san sang ban giao giao vien. San san demo interactions chuc nang 10 module tuong tac.
 
 
