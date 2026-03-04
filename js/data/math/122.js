@@ -304,7 +304,7 @@ export const lesson122 = {
                                         if (count === 120) {
                                             btn.disabled = false;
                                             btn.classList.remove('opacity-50', 'cursor-not-allowed');
-                                            btn.innerHTML = '✅ Đã lấp đầy (120 khối) = 120 dm³';
+                                            btn.innerHTML = '✅ Đã lấp đầy';
                                             btn.classList.replace('from-amber-400', 'from-emerald-500');
                                             btn.classList.replace('to-orange-500', 'to-emerald-600');
                                         }
