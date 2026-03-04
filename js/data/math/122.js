@@ -42,11 +42,11 @@ export const lesson122 = {
                     </div>
                         <div class="relative group cursor-pointer inline-block">
                             <!-- Image with openZoom -->
-                            <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full max-w-[600px] h-auto rounded-[40px] shadow-2xl border-8 border-white transform group-hover:rotate-1 transition-transform" onclick="if(window.openZoom) window.openZoom(this.src)">
+                            <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full max-w-[600px] h-auto rounded-[40px] shadow-2xl border-8 border-white transform group-hover:rotate-1 transition-transform" onclick="Lesson.openZoom(this.src)">
                             
                             <!-- Overlay Action Buttons -->
                             <div class="absolute bottom-6 right-6 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button onclick="if(window.openZoom) window.openZoom('hinh_anh/toan/toan_tap_2/122-khampha.png'); event.stopPropagation();" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-2xl font-black shadow-2xl flex items-center gap-2 transform active:scale-95 transition-all outline-none">
+                                <button onclick="Lesson.openZoom('hinh_anh/toan/toan_tap_2/122-khampha.png'); event.stopPropagation();" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-2xl font-black shadow-2xl flex items-center gap-2 transform active:scale-95 transition-all outline-none">
                                     <span class="text-2xl">🔍</span> Phóng to ảnh
                                 </button>
                                 <button onclick="window.openKhamPhaModal(); event.stopPropagation();" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-3 rounded-2xl font-black shadow-2xl flex items-center gap-2 transform active:scale-95 transition-all outline-none">
@@ -92,12 +92,12 @@ export const lesson122 = {
                                             <!-- Top (transparent grid) -->
                                             <div class="absolute border-2 border-sky-400 shadow-[inset_0_0_20px_rgba(56,189,248,0.2)] bg-sky-300/10 grid-bg-122" style="width: 300px; height: 250px; left: 50%; top: 50%; margin-left: -150px; margin-top: -125px; transform: rotateX(90deg) translateZ(100px);"></div>
                                             <!-- Right (transparent grid) -->
-                                            <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-122 flex items-center justify-center" style="width: 250px; height: 200px; left: 50%; top: 50%; margin-left: -125px; margin-top: -100px; transform: rotateY(90deg) translateZ(150px);">
-                                                <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 transform -rotate-y-90 shadow-md text-sm">5 dm</div>
+                                            <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-122 flex items-end justify-center pb-2" style="width: 250px; height: 200px; left: 50%; top: 50%; margin-left: -125px; margin-top: -100px; transform: rotateY(90deg) translateZ(150px);">
+                                                <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md text-sm">Rộng: 5 dm</div>
                                             </div>
                                             <!-- Front (transparent grid) -->
                                             <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-122 flex items-center justify-center flex-col justify-end pb-4 gap-2" style="width: 300px; height: 200px; left: 50%; top: 50%; margin-left: -150px; margin-top: -100px; transform: translateZ(125px);">
-                                                <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md translate-y-[100px] absolute text-sm">Chiều dài: 6 dm</div>
+                                                <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md translate-y-[100px] absolute text-sm">Dài: 6 dm</div>
                                                 <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md -translate-x-[180px] absolute text-sm">Cao: 4 dm</div>
                                             </div>
                                         </div>
@@ -106,10 +106,7 @@ export const lesson122 = {
 
                                 <!-- Controls -->
                                 <div class="flex flex-wrap items-center justify-center gap-3 z-10 w-full mb-4">
-                                    <button onclick="window.animKhamPha122()" class="px-3 py-2 bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all flex items-center gap-2">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                                        Xoay mô hình
-                                    </button>
+
                                     <button onclick="window.fillKhamPha122()" id="btn-fill-122" class="px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all flex items-center gap-2">
                                         🧊 Xếp lập phương 1 dm³
                                     </button>
@@ -270,11 +267,7 @@ export const lesson122 = {
                         const totalX = 6, totalY = 4, totalZ = 5;
                         const size = 50;
 
-                        // Add block text indicator
-                        const counter = document.createElement('div');
-                        counter.className = 'absolute bottom-4 left-4 bg-indigo-900/60 text-amber-300 font-bold text-xl px-4 py-2 border border-amber-300/30 rounded-xl transform-style-flat z-50 backdrop-blur-md shadow-lg transition-all';
-                        counter.innerHTML = '0 / 120 khối';
-                        container.appendChild(counter);
+
 
                         let count = 0;
 
@@ -308,7 +301,6 @@ export const lesson122 = {
                                         block.style.opacity = '1';
                                         block.style.transform = \`translate3d(\${tx}px, \${ty}px, \${tz}px) scale(1)\`;
                                         count++;
-                                        counter.innerHTML = \`\${count} / 120 khối\`;
                                         if (count === 120) {
                                             btn.disabled = false;
                                             btn.classList.remove('opacity-50', 'cursor-not-allowed');
