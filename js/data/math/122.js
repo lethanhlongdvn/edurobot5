@@ -40,20 +40,25 @@ export const lesson122 = {
                             </p>
                         </div>
                     </div>
-                        <div class="relative group cursor-pointer" onclick="window.openKhamPhaModal()">
-                            <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full max-w-[600px] h-auto rounded-[40px] shadow-2xl border-8 border-white transform group-hover:rotate-1 transition-transform">
-                            <!-- Overlay Button -->
-                            <div class="absolute inset-0 bg-indigo-900/20 rounded-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm border-8 border-transparent">
-                                <div class="bg-white/95 px-6 py-4 rounded-3xl flex items-center gap-3 text-indigo-700 font-black shadow-2xl transform scale-90 group-hover:scale-100 transition-transform">
-                                    <span class="text-3xl">🔲</span> Phóng to & Mô phỏng 3D
-                                </div>
+                        <div class="relative group cursor-pointer inline-block">
+                            <!-- Image with openZoom -->
+                            <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full max-w-[600px] h-auto rounded-[40px] shadow-2xl border-8 border-white transform group-hover:rotate-1 transition-transform" onclick="if(window.openZoom) window.openZoom(this.src)">
+                            
+                            <!-- Overlay Action Buttons -->
+                            <div class="absolute bottom-6 right-6 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button onclick="if(window.openZoom) window.openZoom('hinh_anh/toan/toan_tap_2/122-khampha.png'); event.stopPropagation();" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-2xl font-black shadow-2xl flex items-center gap-2 transform active:scale-95 transition-all outline-none">
+                                    <span class="text-2xl">🔍</span> Phóng to ảnh
+                                </button>
+                                <button onclick="window.openKhamPhaModal(); event.stopPropagation();" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-3 rounded-2xl font-black shadow-2xl flex items-center gap-2 transform active:scale-95 transition-all outline-none">
+                                    <span class="text-2xl">🧊</span> Mô phỏng 3D
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 💥 MODAL 3D FULLSCREEN 💥 -->
-                <div id="modal-122-khampha" class="fixed inset-0 z-[9999] bg-slate-900/90 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-md" onclick="window.closeKhamPhaModal()">
+                <div id="modal-122-khampha" class="fixed inset-0 z-[9999] bg-slate-900/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-md" onclick="window.closeKhamPhaModal()">
                     <div class="bg-indigo-50 w-[96%] h-[92%] max-w-[1400px] rounded-[40px] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative flex flex-col" onclick="event.stopPropagation()">
                         <!-- Header -->
                         <div class="bg-indigo-600 bg-gradient-to-r from-indigo-700 to-blue-600 text-white p-5 flex justify-between items-center shrink-0 shadow-lg z-20 relative">
@@ -70,7 +75,14 @@ export const lesson122 = {
                             <!-- Left: Image Reference -->
                             <div class="flex-1 flex flex-col gap-4 bg-white p-6 rounded-[32px] shadow-lg border border-indigo-100 overflow-y-auto">
                                 <div class="inline-block bg-indigo-100 text-indigo-800 px-6 py-2 rounded-full font-black text-xl uppercase tracking-widest text-center self-start">Hình vẽ trong bài</div>
-                                <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full max-w-[500px] mx-auto rounded-3xl object-contain shadow-md border-4 border-indigo-50">
+                                <div class="relative group cursor-pointer" onclick="if(window.openZoom) window.openZoom('hinh_anh/toan/toan_tap_2/122-khampha.png')">
+                                    <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full max-w-[500px] mx-auto rounded-3xl object-contain shadow-md border-4 border-indigo-50">
+                                    <div class="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                        <div class="bg-indigo-600/90 text-white px-6 py-3 rounded-2xl font-black shadow-lg flex items-center gap-2 transform scale-90 group-hover:scale-100 transition-transform">
+                                            <span class="text-2xl">🔍</span> Phóng to ảnh
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="bg-amber-50 rounded-2xl p-6 border-l-8 border-amber-400 mt-auto">
                                     <p class="text-xl font-bold text-amber-900 text-center">🤖 Robot nói: "Có một cách nhanh hơn là dùng cách tính thể tích của hình hộp chữ nhật."</p>
                                 </div>
@@ -78,8 +90,7 @@ export const lesson122 = {
 
                             <!-- Right: 3D Simulator -->
                             <div class="lg:flex-[1.5] flex flex-col items-center justify-between gap-6 bg-gradient-to-br from-slate-800 to-indigo-950 p-6 rounded-[32px] shadow-2xl border-4 border-indigo-200 overflow-hidden relative">
-                                <div class="absolute top-6 left-6 inline-block bg-sky-500/20 border border-sky-400/50 text-sky-300 px-6 py-2 rounded-full font-black text-xl uppercase tracking-widest backdrop-blur-sm z-10 w-auto">Mô phỏng 3D Tương tác</div>
-                                
+                                <div class="absolute top-4 left-4 inline-block bg-sky-500/20 border border-sky-400/50 text-sky-300 px-4 py-1.5 rounded-full font-bold text-sm uppercase tracking-wider backdrop-blur-sm z-10 w-auto">Mô phỏng 3D Tương tác</div>
                                 <!-- 3D SCENE -->
                                 <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px]">
                                     <div id="cube-wrapper-122" class="relative transform-style-3d rotate-x-[-20deg] rotate-y-[-30deg] transition-transform duration-[1.5s] ease-[cubic-bezier(0.2,0.8,0.2,1)]" style="width: 300px; height: 200px;">
@@ -99,31 +110,30 @@ export const lesson122 = {
                                             <div class="absolute border-2 border-sky-400 shadow-[inset_0_0_20px_rgba(56,189,248,0.2)] bg-sky-300/10 grid-bg-122" style="width: 300px; height: 250px; transform: rotateX(90deg) translateZ(100px);"></div>
                                             <!-- Right (transparent grid) -->
                                             <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-122 flex items-center justify-center" style="width: 250px; height: 200px; transform: rotateY(90deg) translateZ(150px);">
-                                                <div class="bg-indigo-900/80 px-4 py-2 rounded-xl text-sky-200 font-bold border border-sky-500/50 transform -rotate-y-90 shadow-lg">5 dm</div>
+                                                <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 transform -rotate-y-90 shadow-md text-sm">5 dm</div>
                                             </div>
                                             <!-- Front (transparent grid) -->
                                             <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-122 flex items-center justify-center flex-col justify-end pb-4 gap-2" style="width: 300px; height: 200px; transform: translateZ(125px);">
-                                                <div class="bg-indigo-900/80 px-4 py-2 rounded-xl text-sky-200 font-bold border border-sky-500/50 shadow-lg translate-y-[100px] absolute">Chiều dài: 6 dm</div>
-                                                <div class="bg-indigo-900/80 px-4 py-2 rounded-xl text-sky-200 font-bold border border-sky-500/50 shadow-lg -translate-x-[180px] absolute">Cao: 4 dm</div>
+                                                <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md translate-y-[100px] absolute text-sm">Chiều dài: 6 dm</div>
+                                                <div class="bg-indigo-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md -translate-x-[180px] absolute text-sm">Cao: 4 dm</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Controls -->
-                                <div class="flex flex-wrap items-center justify-center gap-4 z-10 w-full mb-4">
-                                    <button onclick="window.animKhamPha122()" class="px-6 py-4 bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-2xl font-black text-xl shadow-lg active:scale-95 transition-all flex items-center gap-2">
-                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                                <div class="flex flex-wrap items-center justify-center gap-3 z-10 w-full mb-4">
+                                    <button onclick="window.animKhamPha122()" class="px-5 py-3 bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-xl font-bold text-lg shadow-md active:scale-95 transition-all flex items-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
                                         Xoay mô hình
                                     </button>
-                                    <button onclick="window.fillKhamPha122()" id="btn-fill-122" class="px-8 py-4 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-2xl font-black text-xl shadow-lg active:scale-95 transition-all flex items-center gap-2">
+                                    <button onclick="window.fillKhamPha122()" id="btn-fill-122" class="px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-xl font-bold text-lg shadow-md active:scale-95 transition-all flex items-center gap-2">
                                         🧊 Xếp lập phương 1 dm³
                                     </button>
-                                    <button onclick="window.resetKhamPha122()" class="px-6 py-4 bg-slate-600 hover:bg-slate-700 text-white rounded-2xl font-black text-xl shadow-lg active:scale-95 transition-all">
+                                    <button onclick="window.resetKhamPha122()" class="px-5 py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-xl font-bold text-lg shadow-md active:scale-95 transition-all">
                                         ↺ Đặt lại
                                     </button>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -144,6 +154,7 @@ export const lesson122 = {
                     .minicube-122 {
                         position: absolute;
                         width: 50px; height: 50px;
+                        margin-left: -25px; margin-top: -25px;
                         transform-style: preserve-3d;
                     }
                     .minicube-122 .face {
@@ -152,9 +163,10 @@ export const lesson122 = {
                         background: rgba(253, 230, 138, 0.95); /* amber-200 */
                         box-shadow: inset 0 0 10px rgba(251, 191, 36, 0.5);
                     }
-                    .minicube-122 .face.top { transform: rotateX(90deg) translateZ(25px); background: #fef3c7; }
+                    .minicube-122 .face.top { transform: translateY(-25px) rotateX(90deg); background: #fef3c7; }
                     .minicube-122 .face.front { transform: translateZ(25px); }
-                    .minicube-122 .face.right { transform: rotateY(90deg) translateZ(25px); background: #fcd34d; }
+                    .minicube-122 .face.right { transform: translateX(25px) rotateY(90deg); background: #fcd34d; }
+
                     
                     /* Animation class */
                     .rotate-anim-122 {
@@ -205,7 +217,7 @@ export const lesson122 = {
 
                         // Add block text indicator
                         const counter = document.createElement('div');
-                        counter.className = 'absolute -left-32 -top-16 bg-white/10 text-amber-300 font-black text-4xl px-6 py-3 border border-amber-300/50 rounded-2xl transform-style-flat z-50 backdrop-blur-md shadow-2xl transition-all';
+                        counter.className = 'absolute bottom-4 left-4 bg-indigo-900/60 text-amber-300 font-bold text-xl px-4 py-2 border border-amber-300/30 rounded-xl transform-style-flat z-50 backdrop-blur-md shadow-lg transition-all';
                         counter.innerHTML = '0 / 120 khối';
                         container.appendChild(counter);
 
@@ -258,6 +270,12 @@ export const lesson122 = {
                     window.resetKhamPha122 = function() {
                         const container = document.getElementById('cube-layers-122');
                         container.innerHTML = '';
+                        // Remove counter if exists
+                        const modal = document.getElementById('modal-122-khampha');
+                        const lastChild = modal.lastElementChild;
+                        if(lastChild && lastChild.innerHTML.includes('khối')) {
+                            modal.removeChild(lastChild);
+                        }
                         const btn = document.getElementById('btn-fill-122');
                         btn.disabled = false;
                         btn.classList.remove('opacity-50', 'cursor-not-allowed');
