@@ -1927,10 +1927,11 @@ export const Lesson = {
             </div>
 
             <!-- Map type switcher -->
-            <div class="flex gap-2 mt-4 justify-center">
+            <div class="flex gap-2 mt-4 justify-center flex-wrap">
                 <button onclick="Lesson.switchMapType('${id}', 'k')" class="px-4 py-2 bg-blue-600 text-white font-black rounded-xl text-sm shadow-md active:scale-95 transition-all" title="Vệ tinh">🛰️ Vệ tinh</button>
                 <button onclick="Lesson.switchMapType('${id}', 'm')" class="px-4 py-2 bg-white dark:bg-slate-700 text-gray-700 dark:text-slate-200 font-black rounded-xl text-sm shadow-md active:scale-95 transition-all border" title="Bản đồ">🗺️ Bản đồ</button>
                 <button onclick="Lesson.switchMapType('${id}', 'p')" class="px-4 py-2 bg-white dark:bg-slate-700 text-gray-700 dark:text-slate-200 font-black rounded-xl text-sm shadow-md active:scale-95 transition-all border" title="Địa hình">⛰️ Địa hình</button>
+                <button onclick="Lesson.openMapFullscreen('${id}')" class="px-4 py-2 bg-emerald-600 text-white font-black rounded-xl text-sm shadow-md active:scale-95 transition-all" title="Phóng to toàn màn hình">🔍 Phóng to</button>
             </div>
         </div>
         `;
@@ -1976,17 +1977,228 @@ export const Lesson = {
             const src = iframe.src;
             iframe.src = src.replace(/&t=[a-z]/, `&t=${type}`);
         }
+    },
+
+    // ========================================================================
+    // ZOOM / LIGHTBOX — Phóng to hình ảnh & bản đồ khi dạy học
+    // ========================================================================
+    _zoomLevel: 1,
+    _zoomOffsetX: 0,
+    _zoomOffsetY: 0,
+    _isDragging: false,
+    _dragStart: { x: 0, y: 0 },
+
+    openZoom(src, caption) {
+        this._zoomLevel = 1;
+        this._zoomOffsetX = 0;
+        this._zoomOffsetY = 0;
+
+        // Remove existing modal if any
+        const existing = document.getElementById('edu-zoom-modal');
+        if (existing) existing.remove();
+
+        const isIframe = src.startsWith('http') && (src.includes('maps.google') || src.includes('youtube') || src.includes('embed'));
+
+        const modal = document.createElement('div');
+        modal.id = 'edu-zoom-modal';
+        modal.className = 'fixed inset-0 z-[9999] flex items-center justify-center';
+        modal.innerHTML = `
+            <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="Lesson.closeZoom()"></div>
+            <div class="relative z-10 w-full h-full flex flex-col">
+                <!-- Toolbar -->
+                <div class="flex items-center justify-between p-4 shrink-0">
+                    <div class="flex items-center gap-2">
+                        <button onclick="Lesson.zoomIn()" class="w-12 h-12 bg-white/20 hover:bg-white/30 text-white rounded-2xl flex items-center justify-center text-2xl font-black backdrop-blur-md transition-all active:scale-90" title="Phóng to (Ctrl +)">🔍+</button>
+                        <button onclick="Lesson.zoomOut()" class="w-12 h-12 bg-white/20 hover:bg-white/30 text-white rounded-2xl flex items-center justify-center text-2xl font-black backdrop-blur-md transition-all active:scale-90" title="Thu nhỏ (Ctrl -)">🔍−</button>
+                        <button onclick="Lesson.zoomReset()" class="w-12 h-12 bg-white/20 hover:bg-white/30 text-white rounded-2xl flex items-center justify-center text-lg font-black backdrop-blur-md transition-all active:scale-90" title="Về gốc">↺</button>
+                        <span id="edu-zoom-level" class="ml-3 text-white/70 font-black text-sm backdrop-blur-md bg-white/10 px-3 py-1.5 rounded-xl">100%</span>
+                    </div>
+                    ${caption ? `<span class="text-white font-bold text-sm bg-white/10 px-4 py-2 rounded-xl backdrop-blur-md max-w-[40%] truncate">${caption}</span>` : ''}
+                    <button onclick="Lesson.closeZoom()" class="w-12 h-12 bg-red-500/80 hover:bg-red-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black backdrop-blur-md transition-all active:scale-90" title="Đóng (Esc)">✕</button>
+                </div>
+                <!-- Content area -->
+                <div id="edu-zoom-content" class="flex-grow flex items-center justify-center overflow-hidden px-4 pb-4" ${!isIframe ? 'onwheel="Lesson._handleZoomWheel(event)"' : ''}>
+                    ${isIframe ? `
+                        <iframe src="${src}" class="w-full h-full rounded-2xl border-2 border-white/20" allowfullscreen loading="lazy" style="min-height:80vh"></iframe>
+                    ` : `
+                        <img id="edu-zoom-img" src="${src}" alt="${caption || ''}" 
+                            class="max-w-none transition-transform duration-200 ease-out rounded-xl shadow-2xl select-none"
+                            style="transform: scale(1) translate(0px, 0px); cursor: grab;"
+                            draggable="false"
+                            onmousedown="Lesson._startDrag(event)"
+                            ontouchstart="Lesson._startDragTouch(event)"
+                        />
+                    `}
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+        document.body.style.overflow = 'hidden';
+
+        // Keyboard shortcuts
+        this._zoomKeyHandler = (e) => {
+            if (e.key === 'Escape') this.closeZoom();
+            else if (e.key === '+' || e.key === '=') this.zoomIn();
+            else if (e.key === '-') this.zoomOut();
+            else if (e.key === '0') this.zoomReset();
+        };
+        document.addEventListener('keydown', this._zoomKeyHandler);
+
+        // Mouse move/up for dragging
+        this._dragMoveHandler = (e) => this._handleDragMove(e);
+        this._dragEndHandler = () => this._endDrag();
+        document.addEventListener('mousemove', this._dragMoveHandler);
+        document.addEventListener('mouseup', this._dragEndHandler);
+        document.addEventListener('touchmove', this._dragMoveHandler, { passive: false });
+        document.addEventListener('touchend', this._dragEndHandler);
+    },
+
+    closeZoom() {
+        const modal = document.getElementById('edu-zoom-modal');
+        if (modal) modal.remove();
+        document.body.style.overflow = '';
+        if (this._zoomKeyHandler) {
+            document.removeEventListener('keydown', this._zoomKeyHandler);
+        }
+        if (this._dragMoveHandler) {
+            document.removeEventListener('mousemove', this._dragMoveHandler);
+            document.removeEventListener('touchmove', this._dragMoveHandler);
+        }
+        if (this._dragEndHandler) {
+            document.removeEventListener('mouseup', this._dragEndHandler);
+            document.removeEventListener('touchend', this._dragEndHandler);
+        }
+    },
+
+    _updateZoomTransform() {
+        const img = document.getElementById('edu-zoom-img');
+        const label = document.getElementById('edu-zoom-level');
+        if (img) {
+            img.style.transform = `scale(${this._zoomLevel}) translate(${this._zoomOffsetX}px, ${this._zoomOffsetY}px)`;
+        }
+        if (label) {
+            label.textContent = `${Math.round(this._zoomLevel * 100)}%`;
+        }
+    },
+
+    zoomIn() {
+        this._zoomLevel = Math.min(this._zoomLevel + 0.25, 5);
+        this._updateZoomTransform();
+    },
+
+    zoomOut() {
+        this._zoomLevel = Math.max(this._zoomLevel - 0.25, 0.25);
+        this._updateZoomTransform();
+    },
+
+    zoomReset() {
+        this._zoomLevel = 1;
+        this._zoomOffsetX = 0;
+        this._zoomOffsetY = 0;
+        this._updateZoomTransform();
+    },
+
+    _handleZoomWheel(event) {
+        event.preventDefault();
+        if (event.deltaY < 0) {
+            this._zoomLevel = Math.min(this._zoomLevel + 0.15, 5);
+        } else {
+            this._zoomLevel = Math.max(this._zoomLevel - 0.15, 0.25);
+        }
+        this._updateZoomTransform();
+    },
+
+    _startDrag(event) {
+        event.preventDefault();
+        this._isDragging = true;
+        this._dragStart = { x: event.clientX - this._zoomOffsetX, y: event.clientY - this._zoomOffsetY };
+        const img = document.getElementById('edu-zoom-img');
+        if (img) img.style.cursor = 'grabbing';
+    },
+
+    _startDragTouch(event) {
+        if (event.touches.length === 1) {
+            const touch = event.touches[0];
+            this._isDragging = true;
+            this._dragStart = { x: touch.clientX - this._zoomOffsetX, y: touch.clientY - this._zoomOffsetY };
+        }
+    },
+
+    _handleDragMove(event) {
+        if (!this._isDragging) return;
+        if (event.type === 'touchmove') {
+            event.preventDefault();
+            const touch = event.touches[0];
+            this._zoomOffsetX = touch.clientX - this._dragStart.x;
+            this._zoomOffsetY = touch.clientY - this._dragStart.y;
+        } else {
+            this._zoomOffsetX = event.clientX - this._dragStart.x;
+            this._zoomOffsetY = event.clientY - this._dragStart.y;
+        }
+        this._updateZoomTransform();
+    },
+
+    _endDrag() {
+        this._isDragging = false;
+        const img = document.getElementById('edu-zoom-img');
+        if (img) img.style.cursor = 'grab';
+    },
+
+    // Fullscreen map toggle
+    openMapFullscreen(id) {
+        const iframe = document.getElementById(`map-iframe-${id}`);
+        if (!iframe) return;
+        this.openZoom(iframe.src, 'Bản đồ tương tác — cuộn chuột để zoom | kéo để di chuyển');
+    },
+
+    // Auto-attach zoom to all images in lesson content
+    _initImageZoom() {
+        const attachZoom = (container) => {
+            if (!container) return;
+            const images = container.querySelectorAll('img:not([data-no-zoom]):not([data-zoom-ready])');
+            images.forEach(img => {
+                img.setAttribute('data-zoom-ready', 'true');
+                img.style.cursor = 'zoom-in';
+                img.title = 'Nhấn để phóng to';
+                img.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    Lesson.openZoom(img.src, img.alt || img.title || '');
+                });
+            });
+        };
+
+        // Attach to existing content
+        attachZoom(document.getElementById('tab-content'));
+
+        // Watch for new content (tab switches)
+        if (!this._zoomObserver) {
+            this._zoomObserver = new MutationObserver((mutations) => {
+                mutations.forEach(m => {
+                    m.addedNodes.forEach(node => {
+                        if (node.nodeType === 1) attachZoom(node);
+                    });
+                });
+            });
+            const tabContent = document.getElementById('tab-content');
+            if (tabContent) {
+                this._zoomObserver.observe(tabContent, { childList: true, subtree: true });
+            }
+        }
     }
 };
 
-// Init fill-blanks slot click handler
+// Init fill-blanks slot click handler and zoom
 if (typeof document !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
         if (Lesson._initFillBlanksSlotClick) Lesson._initFillBlanksSlotClick();
+        if (Lesson._initImageZoom) Lesson._initImageZoom();
     });
     // Also try immediate init in case DOM is already loaded
     if (document.readyState !== 'loading') {
         if (Lesson._initFillBlanksSlotClick) Lesson._initFillBlanksSlotClick();
+        if (Lesson._initImageZoom) Lesson._initImageZoom();
     }
 }
 
