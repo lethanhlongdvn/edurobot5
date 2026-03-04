@@ -229,22 +229,22 @@ export const lesson001 = {
             'Cùng khám phá vị trí đặc biệt của Việt Nam trên bản đồ thế giới từng bước.',
             [
                 {
-                    instruction: 'Bước 1: Tìm châu Á trên bản đồ thế giới',
+                    instruction: 'Tìm châu Á trên bản đồ thế giới',
                     result: '🌍 Châu Á là châu lục lớn nhất thế giới, nằm ở phía đông bán cầu. Việt Nam là một phần của châu Á.',
                     emoji: '🗺️'
                 },
                 {
-                    instruction: 'Bước 2: Xác định khu vực Đông Nam Á',
+                    instruction: 'Xác định khu vực Đông Nam Á',
                     result: '📍 Đông Nam Á gồm 11 quốc gia, nằm ở phía đông nam châu Á. Đây là nơi Việt Nam tọa lạc.',
                     emoji: '🌏'
                 },
                 {
-                    instruction: 'Bước 3: Tìm Việt Nam trên bán đảo Đông Dương',
+                    instruction: 'Tìm Việt Nam trên bán đảo Đông Dương',
                     result: '🇻🇳 Việt Nam nằm ở phía đông bán đảo Đông Dương, có đường bờ biển dài hơn 3.260 km dọc Biển Đông.',
                     emoji: '🏖️'
                 },
                 {
-                    instruction: 'Bước 4: Xác định các nước láng giềng',
+                    instruction: 'Xác định các nước láng giềng',
                     result: '🤝 Phía Bắc giáp <b>Trung Quốc</b>, phía Tây giáp <b>Lào</b> và <b>Cam-pu-chia</b>, phía Đông và Nam giáp <b>Biển Đông</b>.',
                     emoji: '🌐'
                 }
