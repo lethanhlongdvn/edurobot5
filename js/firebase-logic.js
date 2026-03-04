@@ -106,7 +106,11 @@ window.openStudentModal = function () {
 window.closeStudentModal = function () {
     const modal = document.getElementById('student-modal');
     const content = document.getElementById('student-modal-content');
-    content.classList.replace('scale-100', 'scale-95');
+    if (!modal) return;
+    if (content) {
+        content.classList.remove('scale-100');
+        content.classList.add('scale-95');
+    }
     setTimeout(() => {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
