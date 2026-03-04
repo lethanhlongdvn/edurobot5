@@ -146,6 +146,7 @@ window.saveStudentInfo = function () {
     }
 
     closeStudentModal();
+    if (window.showStudentBadge) window.showStudentBadge();
 
     // Resume submission if there was one pending
     if (pendingSubmission) {
@@ -517,3 +518,36 @@ window.checkSchool = function () {
         }
     }
 };
+
+/**
+ * Show Student Badge in Navbar
+ */
+window.showStudentBadge = function () {
+    const name = localStorage.getItem('eduMathName');
+    const badge = document.getElementById('student-badge-li');
+    const badgeName = document.getElementById('student-badge-name');
+    if (!badge || !badgeName) return;
+
+    if (name && name.trim()) {
+        badgeName.innerText = name.trim();
+        badge.classList.remove('hidden');
+    } else {
+        badge.classList.add('hidden');
+    }
+};
+
+window.logoutStudent = function () {
+    if (confirm('Bạn muốn đổi học sinh? Thông tin đã lưu sẽ bị xóa.')) {
+        localStorage.removeItem('eduMathName');
+        localStorage.removeItem('eduMathClass');
+        localStorage.removeItem('eduMathSchool');
+        localStorage.removeItem('eduMathOtherSchool');
+        const badge = document.getElementById('student-badge-li');
+        if (badge) badge.classList.add('hidden');
+    }
+};
+
+// Auto-show badge on page load
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => window.showStudentBadge(), 500);
+});

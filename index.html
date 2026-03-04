@@ -75,6 +75,12 @@
                                 </path>
                             </svg>
                         </button></li>
+                    <li id="student-badge-li" class="hidden">
+                        <div class="flex items-center gap-1 bg-emerald-50 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 px-3 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800">
+                            <span class="text-[10px] font-black truncate max-w-[100px]" id="student-badge-name"></span>
+                            <button onclick="window.logoutStudent()" title="Đổi học sinh" class="ml-1 w-5 h-5 rounded-full bg-emerald-200 dark:bg-emerald-800 hover:bg-red-400 hover:text-white text-emerald-600 dark:text-emerald-300 flex items-center justify-center transition-colors text-[10px] font-black">✕</button>
+                        </div>
+                    </li>
                     <li><button onclick="openTeacherAuthModal()"
                             class="bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 font-black px-4 py-2 rounded-xl border border-blue-100 dark:border-blue-800 transition-all hover:bg-blue-100 dark:hover:bg-blue-900 active:scale-95">Giáo
                             viên</button></li>
