@@ -1075,9 +1075,9 @@ export const Lesson = {
                     </details>
                 ` : ''}
 
-                <div class="mt-6 flex items-center justify-center gap-4 flex-wrap">
-                    <button onclick="Lesson.submitWordProblemAI('${id}')" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl shadow-xl transition-transform active:scale-95 flex items-center gap-3 text-xl">
-                        <span>Gửi Thầy E Chấm Bài</span> <span class="text-2xl">👨‍🏫</span>
+                <div class="mt-6 flex justify-end">
+                    <button onclick="Lesson.submitWordProblemAI('${id}')" class="w-14 h-14 bg-amber-600 hover:bg-amber-700 text-white rounded-2xl font-black text-2xl transition-all shadow-lg active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">
+                        E
                     </button>
                 </div>
             </div>

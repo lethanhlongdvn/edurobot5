@@ -407,10 +407,9 @@ export const lesson122 = {
                         </button>
                     </div>
                     
-                    <div class="pt-4 flex justify-center">
-                        <button onclick="submitWordProblemAILocal('122-1')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-3xl font-black text-2xl transition-all shadow-2xl active:scale-95 flex items-center gap-3">
-                            <span>Thầy E chấm lời giải</span>
-                            <span class="text-3xl">👨‍🏫</span>
+                    <div class="pt-4 flex justify-end">
+                        <button onclick="submitWordProblemAILocal('122-1')" class="w-14 h-14 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black text-2xl transition-all shadow-lg active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm lời giải">
+                            E
                         </button>
                     </div>
                 </div>
@@ -437,10 +436,9 @@ export const lesson122 = {
                         </button>
                     </div>
 
-                    <div class="pt-4 flex justify-center">
-                        <button onclick="submitWordProblemAILocal('122-2')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-3xl font-black text-2xl transition-all shadow-2xl active:scale-95 flex items-center gap-3">
-                            <span>Thầy E chấm lời giải</span>
-                            <span class="text-3xl">👨‍🏫</span>
+                    <div class="pt-4 flex justify-end">
+                        <button onclick="submitWordProblemAILocal('122-2')" class="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-2xl transition-all shadow-lg active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm lời giải">
+                            E
                         </button>
                     </div>
                 </div>
@@ -468,10 +466,9 @@ export const lesson122 = {
 
                         </div>
 
-                        <div class="pt-6 flex justify-center">
-                            <button onclick="submitWordProblemAILocal('122-3')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-3xl font-black text-2xl transition-all shadow-2xl active:scale-95 flex items-center gap-3">
-                                <span>Thầy E chấm lời giải</span>
-                                <span class="text-3xl">👨‍🏫</span>
+                        <div class="pt-6 flex justify-end">
+                            <button onclick="submitWordProblemAILocal('122-3')" class="w-14 h-14 bg-amber-600 hover:bg-amber-700 text-white rounded-2xl font-black text-2xl transition-all shadow-lg active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm lời giải">
+                                E
                             </button>
                         </div>
                     </div>
