@@ -335,14 +335,15 @@ window.submitMathLesson = async function (content, score, btnId, timeTaken = 0) 
 
         const week = window.currentLessonData ? window.currentLessonData.week : "N/A";
         const period = window.currentLessonData ? window.currentLessonData.period : "N/A";
+        const subjectName = (window.router?.currentSubject === 'math') ? "Toán học" : "Tiếng Việt";
 
         // Lưu vào diem_tieng_viet_lop5 cho Trắc nghiệm (đồng bộ với Teacher.html)
         if (typeof content === 'string' && content.includes("Trắc nghiệm tổng:")) {
             await db.collection("diem_tieng_viet_lop5").doc(docId).set({
                 studentName: name,
                 studentClass: cls,
-                school: school, // Tương thích ngược với teacher.html
-                studentSchool: school, // Tương thích mới
+                school: school,
+                studentSchool: school,
                 score: parseInt(score) || 0,
                 totalQuestions: 10,
                 correctCount: (parseInt(score) || 0) / 10,
@@ -353,7 +354,7 @@ window.submitMathLesson = async function (content, score, btnId, timeTaken = 0) 
                 type: "Luyện tập - Củng cố",
                 deviceId: window.getDeviceId(),
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                subject: "Toán học"
+                subject: subjectName
             });
         } else {
             // Mặc định lưu vào bài tự luận Toán học

@@ -196,29 +196,46 @@ export const Quiz = {
         Quiz.renderCurrentQuestion();
 
         if (window.db) {
-            Quiz.loadLeaderboard(lesson.title);
+            Quiz.loadLeaderboard(lesson);
         }
     },
 
-    loadLeaderboard(lessonTitle) {
-        if (!window.db) return;
+    loadLeaderboard(lesson) {
+        if (!window.db || !lesson) return;
         const listDiv = document.getElementById('quiz-leaderboard-list');
         if (!listDiv) return;
 
+        const subjectName = (window.router?.currentSubject === 'math') ? "Toán học" : "Tiếng Việt";
+
+        // Query by period and subject (more reliable than title)
+        // Remove orderBy to avoid index requirement, sort at client side
         window.db.collection("diem_tieng_viet_lop5")
-            .where("lessonTitle", "==", lessonTitle)
-            .orderBy("score", "desc")
-            .limit(10)
+            .where("period", "==", lesson.period)
+            .where("subject", "==", subjectName)
             .onSnapshot((snapshot) => {
                 if (snapshot.empty) {
                     listDiv.innerHTML = '<div class="text-center py-6 text-gray-400 text-sm font-bold italic">Chưa có ai hoàn thành bài thử thách này. Hãy là người đầu tiên!</div>';
                     return;
                 }
 
+                let allResults = [];
+                snapshot.forEach(doc => allResults.push(doc.data()));
+
+                // Best attempt per student (optional but recommended for leaderboard)
+                const bestAttempts = {};
+                allResults.forEach(data => {
+                    const key = `${data.studentName}_${data.studentClass}`;
+                    if (!bestAttempts[key] || (data.score || 0) > (bestAttempts[key].score || 0)) {
+                        bestAttempts[key] = data;
+                    }
+                });
+
+                // Client-side Sort
+                const sortedData = Object.values(bestAttempts).sort((a, b) => (b.score || 0) - (a.score || 0));
+
                 let html = '';
                 let rank = 1;
-                snapshot.forEach(doc => {
-                    const data = doc.data();
+                sortedData.slice(0, 10).forEach(data => {
                     let rankIcon = rank === 1 ? '🥇' : (rank === 2 ? '🥈' : (rank === 3 ? '🥉' : `<span class="bg-gray-100 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center text-xs font-black shadow-inner">${rank}</span>`));
                     let rowClass = rank === 1 ? 'bg-amber-50 border-amber-200' : (rank <= 3 ? 'bg-blue-50 border-blue-100' : 'bg-gray-50 border-gray-100');
 
@@ -239,6 +256,9 @@ export const Quiz = {
                     rank++;
                 });
                 listDiv.innerHTML = html;
+            }, (error) => {
+                console.error("Leaderboard error:", error);
+                listDiv.innerHTML = `<div class="text-center py-6 text-red-400 text-xs font-bold italic">Lỗi tải bảng xếp hạng: ${error.message}</div>`;
             });
     },
 

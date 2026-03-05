@@ -245,6 +245,7 @@ export const router = {
         this.saveState();
 
         window.currentLessonData = lesson; // Lưu trữ dữ liệu bài học hiện tại để các component truy cập
+        document.title = `${lesson.title} - EduRobot`;
 
         // Lưu bài học cuối cùng
         localStorage.setItem('edurobot_last_lesson', JSON.stringify({
