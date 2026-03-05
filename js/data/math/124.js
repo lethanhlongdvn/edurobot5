@@ -8,35 +8,369 @@ export const lesson124 = {
     week: "25",
     period: "124",
     content: `
-        <div class="space-y-8 animate-fade-in pb-10">
-            <!-- Hero Title -->
-            <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] md:rounded-[48px] p-8 md:p-12 border border-purple-100 dark:border-slate-700 shadow-sm relative overflow-hidden">
-                <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-20 h-20 md:w-28 md:h-28 bg-purple-600 rounded-3xl flex items-center justify-center text-5xl md:text-8xl shadow-xl shadow-purple-200 dark:shadow-purple-900/40 shrink-0 transform rotate-6 text-white font-black italic">V</div>
-                    <p class="text-2xl md:text-4xl text-purple-700 dark:text-purple-400 font-bold italic leading-relaxed text-center md:text-left">Vì hình lập phương là hình hộp chữ nhật có ba kích thước bằng nhau nên việc tính toán vô cùng đơn giản!</p>
+        <div class="space-y-6 text-purple-900 animate-fade-in">
+            <!-- 🎯 Mục tiêu bài học -->
+            <div class="bg-gradient-to-br from-purple-600 to-indigo-700 p-8 rounded-[40px] text-white shadow-2xl flex items-center gap-8 relative overflow-hidden group">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-all"></div>
+                <div class="w-24 h-24 bg-white/20 rounded-3xl flex items-center justify-center backdrop-blur-md border-2 border-white/30 shrink-0 text-5xl shadow-lg">🎯</div>
+                <div>
+                    <h3 class="text-2xl md:text-4xl font-black uppercase tracking-tight mb-2">Mục tiêu bài học</h3>
+                    <ul class="list-disc list-inside font-bold text-lg md:text-2xl opacity-95 space-y-1">
+                        <li>Biết quy tắc và công thức tính thể tích hình lập phương.</li>
+                        <li>Dựa trên thể tích hình hộp chữ nhật để tính thể tích hình lập phương.</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Khám phá -->
-            <div class="bg-white p-3 rounded-[40px] shadow-xl border border-purple-100 dark:bg-slate-800 dark:border-slate-700 overflow-hidden">
-                <div class="p-8 md:p-12 bg-purple-50 dark:bg-slate-900 rounded-[40px]">
-                    <div class="flex items-start gap-5 mb-8">
-                        <div class="w-12 h-12 bg-purple-600 text-white rounded-2xl flex items-center justify-center text-xl font-black shrink-0">💡</div>
-                        <h3 class="text-2xl md:text-4xl font-bold text-purple-900 dark:text-purple-100 leading-tight">Khám phá công thức</h3>
+            <!-- 📖 Khám phá -->
+            <div class="bg-white p-8 rounded-[40px] border border-purple-100 shadow-2xl overflow-hidden relative">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-amber-100 rounded-bl-full -z-0 opacity-40"></div>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <span class="bg-amber-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-black text-2xl shadow-lg">?</span>
+                            <h4 class="text-3xl md:text-4xl font-black text-amber-700 uppercase">Khám phá công thức</h4>
+                        </div>
+                        <p class="text-xl md:text-2xl font-bold leading-tight text-gray-700 italic border-l-8 border-amber-400 pl-4 bg-amber-50 py-4 rounded-r-2xl">
+                            "Hình lập phương đó chứa được 3 × 3 × 3 = 27 (hình lập phương nhỏ)."
+                        </p>
+                        <div class="bg-purple-50 p-6 rounded-3xl border-2 border-purple-100">
+                            <p class="text-xl md:text-2xl font-black text-purple-900 space-y-2">
+                                <span class="block">📏 Chiều dài: 3 cm</span>
+                                <span class="block">📏 Chiều rộng: 3 cm</span>
+                                <span class="block">📏 Chiều cao: 3 cm</span>
+                                <span class="block mt-4 text-2xl text-purple-600">3 &times; 3 &times; 3 = 27 (cm³)</span>
+                            </p>
+                        </div>
                     </div>
                     
-                    <div class="flex flex-col lg:grid lg:grid-cols-2 gap-10 items-center">
-                        <img src="hinh_anh/toan/toan_tap_2/124-khampha.png" alt="Khám phá" class="w-full max-w-[500px] h-auto rounded-3xl shadow-xl border-4 border-white transition-transform hover:scale-105">
-                        <div class="bg-white dark:bg-slate-800 p-10 rounded-[32px] shadow-sm flex items-center gap-6 border-2 border-dashed border-purple-200">
-                            <div class="w-16 h-16 bg-purple-600 rounded-2xl shrink-0 flex items-center justify-center text-white font-black text-4xl shadow-lg">!</div>
-                            <div>
-                                <p class="text-3xl md:text-5xl font-black text-gray-800 dark:text-white leading-snug">Hình lập phương có</p>
-                                <p class="text-3xl md:text-5xl font-black text-purple-600 leading-snug underline underline-offset-8 decoration-4">Dài = Rộng = Cao</p>
+                    <!-- Phần bên phải ảnh khám phá có nút 3D -->
+                    <div class="relative flex justify-center lg:justify-end">
+                        <div class="relative group cursor-pointer inline-block">
+                            <!-- Image with openZoom -->
+                            <img src="hinh_anh/toan/toan_tap_2/124-khampha.png" alt="Khám phá" class="w-full max-w-[600px] h-auto rounded-[40px] shadow-2xl border-8 border-white transform group-hover:rotate-1 transition-transform">
+                            
+                            <!-- Overlay Action Buttons -->
+                            <div class="absolute bottom-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button onclick="window.openKhamPhaModal124(); event.stopPropagation();" class="w-12 h-12 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-black shadow-2xl flex items-center justify-center transform active:scale-95 transition-all outline-none text-lg" title="Mô phỏng 3D">
+                                    3D
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+                <!-- 💥 MODAL 3D FULLSCREEN 💥 -->
+                <div id="modal-124-khampha" class="fixed inset-0 z-[9999] bg-slate-900/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-md" onclick="window.closeKhamPhaModal124()">
+                    <div class="bg-purple-50 w-[96%] h-[92%] max-w-[1400px] rounded-[40px] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative flex flex-col" onclick="event.stopPropagation()">
+                        <!-- Header -->
+                        <div class="bg-purple-600 bg-gradient-to-r from-purple-700 to-indigo-600 text-white p-5 flex justify-between items-center shrink-0 shadow-lg z-20 relative">
+                            <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight flex items-center gap-4">
+                                <span class="bg-white/20 p-2 rounded-2xl">🧊</span> Khám phá thể tích 3D
+                            </h3>
+                            <button onclick="window.closeKhamPhaModal124()" class="w-14 h-14 bg-white/20 hover:bg-rose-500 rounded-full flex items-center justify-center transition-all shadow-md active:scale-90">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </button>
+                        </div>
+                        <!-- Body -->
+                        <div class="flex-grow flex flex-col p-6 gap-6 overflow-hidden relative">
+                            <!-- Left: 3D Simulator -->
+                            <div class="flex-1 flex flex-col items-center justify-between gap-6 bg-gradient-to-br from-slate-800 to-purple-950 p-6 rounded-[32px] shadow-2xl border-4 border-purple-200 overflow-hidden relative">
+                                <div class="absolute top-4 left-4 inline-block bg-sky-500/20 border border-sky-400/50 text-sky-300 px-4 py-1.5 rounded-full font-bold text-sm uppercase tracking-wider backdrop-blur-sm z-10 w-auto">Mô phỏng 3D Tương tác</div>
+                                <!-- 3D SCENE -->
+                                <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px]" id="scene-124">
+                                    <div id="cube-wrapper-124" class="relative transform-style-3d transition-transform duration-[0.1s] ease-out cursor-grab active:cursor-grabbing" style="width: 240px; height: 240px; transform: rotateX(-20deg) rotateY(-30deg);">
+                                        <!-- Container for mini blocks -->
+                                        <div id="cube-layers-124" class="absolute left-[50%] top-[50%] transform-style-3d"></div>
+
+                                        <!-- The Container Box (3x3x3 blocks of 80px) -->
+                                        <div class="absolute inset-0 transform-style-3d pointer-events-none">
+                                            <!-- Outside Faces - centered relative to 240x240 container -> center is at (120, 120) -->
+                                            <!-- Back -->
+                                            <div class="absolute border-2 border-purple-400/60 bg-purple-500/10 grid-bg-124" style="width: 240px; height: 240px; left: 50%; top: 50%; margin-left: -120px; margin-top: -120px; transform: rotateY(180deg) translateZ(120px);"></div>
+                                            <!-- Left -->
+                                            <div class="absolute border-2 border-purple-400/60 bg-purple-500/10 grid-bg-124" style="width: 240px; height: 240px; left: 50%; top: 50%; margin-left: -120px; margin-top: -120px; transform: rotateY(-90deg) translateZ(120px);"></div>
+                                            <!-- Bottom -->
+                                            <div class="absolute border-2 border-purple-400/60 bg-purple-500/10 grid-bg-124" style="width: 240px; height: 240px; left: 50%; top: 50%; margin-left: -120px; margin-top: -120px; transform: rotateX(-90deg) translateZ(120px);"></div>
+                                            <!-- Top (transparent grid) -->
+                                            <div class="absolute border-2 border-sky-400 shadow-[inset_0_0_20px_rgba(56,189,248,0.2)] bg-sky-300/10 grid-bg-124" style="width: 240px; height: 240px; left: 50%; top: 50%; margin-left: -120px; margin-top: -120px; transform: rotateX(90deg) translateZ(120px);"></div>
+                                            <!-- Right (transparent grid) -->
+                                            <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-124 flex items-end justify-center pb-2" style="width: 240px; height: 240px; left: 50%; top: 50%; margin-left: -120px; margin-top: -120px; transform: rotateY(90deg) translateZ(120px);">
+                                                <div class="bg-purple-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md text-sm">Rộng: 3 cm</div>
+                                            </div>
+                                            <!-- Front (transparent grid) -->
+                                            <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-124 flex items-center justify-center flex-col justify-end pb-4 gap-2" style="width: 240px; height: 240px; left: 50%; top: 50%; margin-left: -120px; margin-top: -120px; transform: translateZ(120px);">
+                                                <div class="bg-purple-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md translate-y-[120px] absolute text-sm">Dài: 3 cm</div>
+                                                <div class="bg-purple-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md -translate-x-[150px] absolute text-sm">Cao: 3 cm</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <div class="flex flex-wrap items-center justify-center gap-3 z-10 w-full mb-4">
+                                    <button onclick="window.fillKhamPha124()" id="btn-fill-124" class="px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all flex items-center gap-2">
+                                        🧊 Bấm lần 1: Xếp 1 hình
+                                    </button>
+                                    <button onclick="window.resetKhamPha124()" class="px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all">
+                                        ↺ Đặt lại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    /* Grid lines for box faces */
+                    .grid-bg-124 {
+                        background-size: 80px 80px;
+                        background-image: 
+                            linear-gradient(to right, rgba(56, 189, 248, 0.4) 1px, transparent 1px),
+                            linear-gradient(to bottom, rgba(56, 189, 248, 0.4) 1px, transparent 1px);
+                    }
+                    .transform-style-3d {
+                        transform-style: preserve-3d;
+                    }
+                    
+                    /* Mini Blocks */
+                    .minicube-124 {
+                        position: absolute;
+                        width: 80px; height: 80px;
+                        margin-left: -40px; margin-top: -40px;
+                        transform-style: preserve-3d;
+                    }
+                    .minicube-124 .face {
+                        position: absolute; width: 80px; height: 80px;
+                        border: 1px solid rgba(251, 191, 36, 0.9);
+                        background: rgba(253, 230, 138, 0.95); /* amber-200 */
+                        box-shadow: inset 0 0 16px rgba(251, 191, 36, 0.5);
+                    }
+                    .minicube-124 .face.top { transform: translateY(-40px) rotateX(90deg); background: #fef3c7; }
+                    .minicube-124 .face.front { transform: translateZ(40px); }
+                    .minicube-124 .face.right { transform: translateX(40px) rotateY(90deg); background: #fcd34d; }
+
+                    .rotate-anim-124 {
+                        animation: spinBox124 15s linear infinite;
+                    }
+                    @keyframes spinBox124 {
+                        0% { transform: rotateX(-20deg) rotateY(-30deg); }
+                        100% { transform: rotateX(-20deg) rotateY(330deg); }
+                    }
+                </style>
+
+                <script>
+                    (function() {
+                    let isDragging124 = false;
+                    let startX124, startY124;
+                    let currentRotX124 = -20;
+                    let currentRotY124 = -30;
+                    let dragInit124 = false;
+
+                    window.openKhamPhaModal124 = function() {
+                        const modal = document.getElementById('modal-124-khampha');
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex');
+                        setTimeout(() => {
+                            modal.classList.remove('opacity-0');
+                        }, 10);
+
+                        if (!dragInit124) {
+                            const scene124 = document.getElementById('scene-124');
+                            const wrapper124 = document.getElementById('cube-wrapper-124');
+                            
+                            if (scene124 && wrapper124) {
+                                function handleDragStart(e) {
+                                    if (wrapper124.classList.contains('rotate-anim-124')) return;
+                                    isDragging124 = true;
+                                    wrapper124.classList.replace('cursor-grab', 'cursor-grabbing');
+                                    
+                                    if (e.type === 'touchstart') {
+                                        startX124 = e.touches[0].clientX;
+                                        startY124 = e.touches[0].clientY;
+                                    } else {
+                                        startX124 = e.clientX;
+                                        startY124 = e.clientY;
+                                    }
+                                }
+
+                                function handleDragMove(e) {
+                                    if (!isDragging124) return;
+                                    e.preventDefault();
+
+                                    let currentX, currentY;
+                                    if (e.type === 'touchmove') {
+                                        currentX = e.touches[0].clientX;
+                                        currentY = e.touches[0].clientY;
+                                    } else {
+                                        currentX = e.clientX;
+                                        currentY = e.clientY;
+                                    }
+
+                                    const deltaX = currentX - startX124;
+                                    const deltaY = currentY - startY124;
+
+                                    const sensitivity = 0.5;
+                                    currentRotY124 += deltaX * sensitivity;
+                                    currentRotX124 -= deltaY * sensitivity;
+
+                                    currentRotX124 = Math.max(-80, Math.min(80, currentRotX124));
+                                    wrapper124.style.transform = 'rotateX(' + currentRotX124 + 'deg) rotateY(' + currentRotY124 + 'deg)';
+
+                                    startX124 = currentX;
+                                    startY124 = currentY;
+                                }
+
+                                function handleDragEnd() {
+                                    if (!isDragging124) return;
+                                    isDragging124 = false;
+                                    wrapper124.classList.replace('cursor-grabbing', 'cursor-grab');
+                                }
+
+                                scene124.addEventListener('mousedown', handleDragStart);
+                                document.addEventListener('mousemove', handleDragMove);
+                                document.addEventListener('mouseup', handleDragEnd);
+
+                                scene124.addEventListener('touchstart', handleDragStart, {passive: false});
+                                document.addEventListener('touchmove', handleDragMove, {passive: false});
+                                document.addEventListener('touchend', handleDragEnd);
+                                
+                                dragInit124 = true;
+                            }
+                        }
+                    };
+
+                    window.closeKhamPhaModal124 = function() {
+                        const modal = document.getElementById('modal-124-khampha');
+                        modal.classList.add('opacity-0');
+                        setTimeout(() => {
+                            modal.classList.add('hidden');
+                            modal.classList.remove('flex');
+                            window.resetKhamPha124(); // reset on close
+                        }, 300);
+                    };
+
+                    window.animKhamPha124 = function() {
+                        const wrapper = document.getElementById('cube-wrapper-124');
+                        wrapper.classList.toggle('rotate-anim-124');
+                    };
+
+                    window.fillKhamPha124 = function() {
+                        const container = document.getElementById('cube-layers-124');
+                        const btn = document.getElementById('btn-fill-124');
+                        
+                        if (typeof window.fillStage124 === 'undefined') window.fillStage124 = 0;
+                        if (typeof window.currentBlockIdx124 === 'undefined') window.currentBlockIdx124 = 0;
+                        
+                        // Total 4 stages:
+                        // Stage 0: empty
+                        // Stage 1: 1 block
+                        // Stage 2: 8 blocks (1 layer minus 1 block)
+                        // Stage 3: 9 blocks (second layer)
+                        // Stage 4: 9 blocks (third layer) -> Total: 27
+                        if (window.fillStage124 >= 4) return; // Already full
+
+                        btn.disabled = true;
+                        btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+                        let delay = 0;
+                        const totalX = 3, totalY = 3, totalZ = 3;
+                        const size = 80;
+
+                        if (!window.blocksData124) {
+                            window.blocksData124 = [];
+                            for(let y = totalY-1; y >= 0; y--) {
+                                for(let z = 0; z < totalZ; z++) {
+                                    for(let x = 0; x < totalX; x++) {
+                                        window.blocksData124.push({x, y, z});
+                                    }
+                                }
+                            }
+                        }
+
+                        // Stacking 27 blocks: 1, 8, 9, 9
+                        const stageCounts = [1, 8, 9, 9];
+                        const blocksToStack = stageCounts[window.fillStage124];
+                        let count = 0;
+
+                        for(let i = 0; i < blocksToStack; i++) {
+                            if (window.currentBlockIdx124 >= window.blocksData124.length) break;
+                            const b = window.blocksData124[window.currentBlockIdx124++];
+                            
+                            // Center offset for 3x3x3 blocks calculation
+                            const tx = -120 + (b.x * size) + (size/2);
+                            const ty = -120 + (b.y * size) + (size/2);
+                            const tz = -120 + (b.z * size) + (size/2);
+
+                            const block = document.createElement('div');
+                            block.className = 'minicube-124';
+                            block.style.transform = \`translate3d(\${tx}px, \${ty}px, \${tz}px) scale(0)\`;
+                            block.style.opacity = '0';
+                            block.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+
+                            block.innerHTML = \`
+                                <div class="face front"></div>
+                                <div class="face right"></div>
+                                <div class="face top"></div>
+                            \`;
+
+                            container.appendChild(block);
+
+                            setTimeout(() => {
+                                block.style.transform = \`translate3d(\${tx}px, \${ty}px, \${tz}px) scale(1)\`;
+                                block.style.opacity = '1';
+                                if (window.Quiz && typeof window.Quiz.playSFX === 'function' && blocksToStack < 20) {
+                                   window.Quiz.playSFX('pop', 0.2); 
+                                }
+                            }, delay);
+                            
+                            delay += (blocksToStack > 10) ? 20 : 100;
+                            count++;
+                        }
+
+                        setTimeout(() => {
+                            window.fillStage124++;
+                            btn.disabled = false;
+                            btn.classList.remove('opacity-50', 'cursor-not-allowed');
+                            
+                            if (window.fillStage124 === 1) btn.innerHTML = '🧊 Bấm lần 2: Đầy 1 lớp ngang';
+                            else if (window.fillStage124 === 2) btn.innerHTML = '🧊 Bấm lần 3: Đầy lớp 2';
+                            else if (window.fillStage124 === 3) btn.innerHTML = '🧊 Bấm lần 4: Đầy hộp !';
+                            else {
+                                btn.innerHTML = '✨ Đã đầy hộp (27 khối)';
+                                btn.disabled = true;
+                                btn.classList.add('opacity-50', 'bg-emerald-500');
+                                btn.classList.remove('from-amber-400', 'to-orange-500', 'hover:from-amber-500', 'hover:to-orange-600');
+                                window.animKhamPha124(); // auto spin when full
+                            }
+                        }, delay + 300);
+                    };
+
+                    window.resetKhamPha124 = function() {
+                        const container = document.getElementById('cube-layers-124');
+                        if(container) container.innerHTML = '';
+                        window.fillStage124 = 0;
+                        window.currentBlockIdx124 = 0;
+                        
+                        const btn = document.getElementById('btn-fill-124');
+                        if (btn) {
+                            btn.disabled = false;
+                            btn.innerHTML = '🧊 Bấm lần 1: Xếp 1 hình';
+                            btn.classList.remove('opacity-50', 'cursor-not-allowed', 'bg-emerald-500');
+                            btn.classList.add('from-amber-400', 'to-orange-500', 'hover:from-amber-500', 'hover:to-orange-600');
+                        }
+                        
+                        const wrapper = document.getElementById('cube-wrapper-124');
+                        if(wrapper) {
+                            wrapper.classList.remove('rotate-anim-124');
+                            currentRotX124 = -20;
+                            currentRotY124 = -30;
+                            wrapper.style.transform = \`rotateX(\${currentRotX124}deg) rotateY(\${currentRotY124}deg)\`;
+                        }
+                    };
+                    })();
+                </script>
 
             <!-- Công thức Ghi nhớ -->
             <div class="bg-gradient-to-r from-pink-500 to-rose-600 p-8 md:p-12 rounded-[48px] text-white shadow-2xl relative overflow-hidden group">
