@@ -574,5 +574,7 @@ Khởi tạo thành công cấu trúc môn Khoa học: js/data/science/cungco, i
   + Bổ sung lên 15 câu hỏi trắc nghiệm chất lượng cao cho mỗi bài (Tiết 130 từ 10 lên 15 câu).
   + Tạo file cungco122.txt, cungco128.txt, cungco129.txt, cungco130.txt đồng bộ với mã nguồn JS.
   + Chuẩn hóa ký hiệu chiều cao là "c" trên toàn bộ ngân hàng câu hỏi.
-  + Chuẩn hóa giao diện nút "Kiểm tra" (.btn-check-premium) và "Nộp bài" (.btn-submit-premium) cao cấp, đồng nhất cho toàn hệ thống.
+  + Chuẩn hóa giao diện nút bấm Premium (.btn-check-premium, .btn-submit-premium) đồng nhất toàn dự án.
+- Sửa lỗi Bảng vàng (Leaderboard): Đồng bộ document.title, lọc theo period/subject, sắp xếp tại client khắc phục lỗi Index Firebase.
+- Cập nhật Quiz Tiết 122, 128, 129, 130 lên 15 câu, chuẩn hóa ký hiệu chiều cao "c".
 - Trạng thái hiện tại: Hoàn thành đồng bộ và chuẩn hóa giao diện củng cố.
