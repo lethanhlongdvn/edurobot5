@@ -709,3 +709,8 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - Bài học: Toán 5 - Tiết 129
 - Mô tả thay đổi: Thay đổi layout Ghi nhớ sang dạng dọc (Thể tích dưới Diện tích) và tăng cỡ chữ cực đại (max-size) để phù hợp hiển thị trên TV.
 - Trạng thái hiện tại: Đã cập nhật layout và font.
+
+[18:27] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 129
+- Mô tả thay đổi: Gắn thêm nút Microphone (Voice Input) vào các ô Trình bày bài giải. Thiết lập đây làm chuẩn giao diện mới (Vertical layout, Max font, Voice integrated).
+- Trạng thái hiện tại: Hoàn tất toàn bộ yêu cầu.
