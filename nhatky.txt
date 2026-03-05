@@ -563,6 +563,6 @@ Khởi tạo thành công cấu trúc môn Khoa học: js/data/science/cungco, i
 [21:40] Ngày 05/03/2026
 - Bài học: Toán 5 - Tiết 130
 - Mô tả thay đổi: Hoàn thành Tiết 130 (Các đơn vị đo thời gian). Đã thiết kế giao diện điền và chấm điểm tự động cho Bài 1 (Điền thế kỉ cho mốc lịch sử có kèm hình ảnh) và Bài 2 (Đổi thời gian từ đơn vị nhỏ sang đơn vị lớn dạng thập phân). Cập nhật ngân hàng 10 câu hỏi Củng cố trực tiếp vào file mã nguồn dựa trên nội dung tiết học.
-- Tối ưu UI: Đã cân bằng lại kích thước font chữ (text-3xl đến text-5xl) để vừa đảm bảo hiển thị rõ trên TV, vừa đảm bảo tính thẩm mỹ, không bị chồng lấn nội dung.
-- Sửa lỗi: Sửa lỗi chính tả "Mẹo" và tinh chỉnh layout bảng đơn vị thoáng hơn.
+- Tối ưu UI: Đã cân bằng lại kích thước font chữ, xóa bỏ các tiêu đề thừa để giao diện gọn gàng hơn.
+- Sửa lỗi: Sửa lỗi chính tả "Mẹo", xóa dấu "/" dư thừa và hoàn thiện văn bản mốc lịch sử (Lý Công Uẩn dời đô về Thăng Long).
 - Trạng thái hiện tại: Bài học 130 hoàn thiện ưu việt, sẵn sàng sử dụng.
