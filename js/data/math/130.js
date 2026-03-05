@@ -139,40 +139,40 @@ export const lesson130 = {
                     </p>
 
                     <!-- Mẫu hướng dẫn -->
-                    <div class="bg-purple-50 p-8 rounded-3xl border-4 border-purple-200 mb-10 w-fit mx-auto shadow-inner text-center">
-                        <p class="text-3xl md:text-4xl font-black tracking-wider text-purple-900 flex items-center justify-center gap-6 flex-wrap leading-relaxed">
-                            <span class="bg-purple-600 text-white px-4 py-1 rounded-xl">Mẫu:</span> 
-                            <span>72 phút = <span class="bg-white px-5 py-2 rounded-xl shadow-lg inline-flex flex-col items-center justify-center align-middle mx-1 border-2 border-purple-100" style="line-height: 1.1;"><span class="border-b-2 border-purple-900 block px-2">72</span><span>60</span></span> giờ = <span class="text-rose-600 font-black decoration-rose-200 underline decoration-4">1,2</span> giờ</span>
+                    <div class="bg-purple-50 p-6 rounded-2xl border-2 border-purple-200 mb-8 w-fit mx-auto shadow-inner text-center">
+                        <p class="text-2xl md:text-3xl font-black tracking-wider text-purple-900 flex items-center justify-center gap-4 flex-wrap leading-relaxed">
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-lg text-xl">Mẫu:</span> 
+                            <span>72 phút = <span class="bg-white px-4 py-1 rounded-lg shadow-md inline-flex flex-col items-center justify-center align-middle mx-1 border border-purple-100" style="line-height: 1.1;"><span class="border-b border-purple-900 block px-2">72</span><span>60</span></span> giờ = <span class="text-rose-600 font-black decoration-rose-200 underline decoration-2">1,2</span> giờ</span>
                         </p>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <!-- Câu a -->
-                        <div class="bg-emerald-50/50 p-8 rounded-[40px] border-4 border-emerald-100 space-y-10">
-                            <div class="flex items-center gap-6 text-3xl md:text-4xl font-black text-emerald-900 flex-wrap">
-                                <span class="text-5xl font-black text-emerald-500">a)</span>
+                        <div class="bg-emerald-50/50 p-6 rounded-3xl border-2 border-emerald-100 space-y-8">
+                            <div class="flex items-center gap-4 text-2xl md:text-3xl font-black text-emerald-900 flex-nowrap whitespace-nowrap">
+                                <span class="text-4xl font-black text-emerald-500">a)</span>
                                 <span>90 phút =</span>
-                                <input type="number" id="ans-130-2-a1" step="0.1" class="w-32 text-5xl font-black text-emerald-700 bg-white border-4 border-emerald-200 rounded-2xl p-4 text-center outline-none focus:border-emerald-500 shadow-xl transition-all" placeholder="?">
+                                <input type="number" id="ans-130-2-a1" step="0.1" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-md transition-all" placeholder="?">
                                 <span>giờ</span>
                             </div>
-                            <div class="flex items-center gap-6 text-3xl md:text-4xl font-black text-emerald-900 lg:pl-16 flex-wrap">
+                            <div class="flex items-center gap-4 text-2xl md:text-3xl font-black text-emerald-900 lg:pl-12 flex-nowrap whitespace-nowrap">
                                 <span>42 giây =</span>
-                                <input type="number" id="ans-130-2-a2" step="0.1" class="w-32 text-5xl font-black text-emerald-700 bg-white border-4 border-emerald-200 rounded-2xl p-4 text-center outline-none focus:border-emerald-500 shadow-xl transition-all" placeholder="?">
+                                <input type="number" id="ans-130-2-a2" step="0.1" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-md transition-all" placeholder="?">
                                 <span>phút</span>
                             </div>
                         </div>
 
                         <!-- Câu b -->
-                        <div class="bg-emerald-50/50 p-8 rounded-[40px] border-4 border-emerald-100 space-y-10">
-                            <div class="flex items-center gap-6 text-3xl md:text-4xl font-black text-emerald-900 flex-wrap">
-                                <span class="text-5xl font-black text-emerald-500">b)</span>
+                        <div class="bg-emerald-50/50 p-6 rounded-3xl border-2 border-emerald-100 space-y-8">
+                            <div class="flex items-center gap-4 text-2xl md:text-3xl font-black text-emerald-900 flex-nowrap whitespace-nowrap">
+                                <span class="text-4xl font-black text-emerald-500">b)</span>
                                 <span>1 giờ 15 phút =</span>
-                                <input type="number" id="ans-130-2-b1" step="0.1" class="w-32 text-5xl font-black text-emerald-700 bg-white border-4 border-emerald-200 rounded-2xl p-4 text-center outline-none focus:border-emerald-500 shadow-xl transition-all" placeholder="?">
+                                <input type="number" id="ans-130-2-b1" step="0.1" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-md transition-all" placeholder="?">
                                 <span>giờ</span>
                             </div>
-                            <div class="flex items-center gap-6 text-3xl md:text-4xl font-black text-emerald-900 lg:pl-16 flex-wrap">
+                            <div class="flex items-center gap-4 text-2xl md:text-3xl font-black text-emerald-900 lg:pl-12 flex-nowrap whitespace-nowrap">
                                 <span>2 phút 27 giây =</span>
-                                <input type="number" id="ans-130-2-b2" step="0.1" class="w-32 text-5xl font-black text-emerald-700 bg-white border-4 border-emerald-200 rounded-2xl p-4 text-center outline-none focus:border-emerald-500 shadow-xl transition-all" placeholder="?">
+                                <input type="number" id="ans-130-2-b2" step="0.1" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-md transition-all" placeholder="?">
                                 <span>phút</span>
                             </div>
                         </div>
@@ -185,8 +185,15 @@ export const lesson130 = {
             </div>
 
             <!-- Nộp bài toàn diện -->
-            <div class="flex flex-col items-center pt-10 border-t-4 border-dashed border-gray-100 mt-10">
-                <button id="btn-submit-130" onclick="submit130()" class="btn-submit-global">Nộp bài</button>
+            <div class="flex flex-col items-center pt-12 border-t-8 border-double border-indigo-100 mt-16 pb-10">
+                <button id="btn-submit-130" onclick="submit130()" 
+                    class="group relative px-16 py-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-full text-white font-black text-4xl shadow-[0_10px_40px_-10px_rgba(79,70,229,0.5)] hover:shadow-[0_20px_50px_-10px_rgba(79,70,229,0.7)] active:scale-95 transform">
+                    <span class="relative z-10 flex items-center gap-4">
+                        <span class="text-5xl">🎯</span> HOÀN THÀNH BÀI HỌC
+                    </span>
+                    <div class="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </button>
+                <p class="mt-6 text-indigo-400 font-bold text-2xl italic">Nhấn để gửi kết quả và nhận đánh giá từ thầy cô</p>
             </div>
 
             <script>
