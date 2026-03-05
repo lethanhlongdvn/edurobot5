@@ -202,9 +202,7 @@ export const lesson120 = {
                         </div>
 
                         <div class="mt-8 flex justify-center">
-                            <button onclick="Lesson.submitWordProblemAI('120-2')" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black text-xl transition-all shadow-xl active:scale-95">
-                                Thầy E chấm bài
-                            </button>
+                            <button onclick="Lesson.submitWordProblemAI('120-2')" class="btn-tutor-e" title="Thầy E chấm bài">E</button>
                         </div>
                     </div>
                 </div>
@@ -212,9 +210,7 @@ export const lesson120 = {
 
             <!-- Nộp bài -->
             <div class="flex flex-col items-center pt-4 border-t border-dashed border-gray-100 mt-4">
-                <button id="btn-submit-120" onclick="submit120()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-xl font-black text-lg shadow-lg active:scale-95 transition-all">
-                    Nộp bài
-                </button>
+                <button id="btn-submit-120" onclick="submit120()" class="btn-submit-global">Nộp bài</button>
             </div>
 
             <script>

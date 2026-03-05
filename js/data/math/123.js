@@ -32,15 +32,8 @@ export const lesson123 = {
                         <p class="text-4xl md:text-6xl font-black text-indigo-600 dark:text-indigo-400">V = a &times; b &times; c</p>
                     </div>
                 </div>
-                <div class="bg-white p-8 rounded-[40px] border border-emerald-50 shadow-sm dark:bg-slate-800 dark:border-slate-700">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-xl font-black">2</div>
-                        <h4 class="text-2xl font-black text-gray-800 dark:text-slate-100 uppercase">Khối hình đặc biệt</h4>
-                    </div>
-                    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-8 rounded-3xl text-center">
-                        <p class="text-xs font-black tracking-widest text-emerald-400 uppercase mb-4">Phương pháp giải</p>
-                        <p class="text-2xl md:text-3xl font-black text-emerald-700 dark:text-emerald-400 uppercase leading-tight italic">Chia nhỏ và cộng dồn các khối hình</p>
-                    </div>
+                <div class="bg-white p-8 rounded-[40px] border border-emerald-50 shadow-sm dark:bg-slate-800 dark:border-slate-700 flex justify-center items-center">
+                    <img src="hinh_anh/toan/toan_tap_2/122-formula.png" alt="Hình hộp chữ nhật" class="w-full max-w-[300px] h-auto rounded-3xl">
                 </div>
             </div>
         </div>

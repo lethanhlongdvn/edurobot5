@@ -53,9 +53,7 @@ export const lesson103 = {
 
             <!-- Nộp bài -->
             <div class="flex justify-center mt-2">
-                <button id="btn-submit-103" onclick="submit103()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
-                    NỘP BÀI
-                </button>
+                <button id="btn-submit-103" onclick="submit103()" class="btn-submit-global">Nộp bài</button>
             </div>
 
             <script>

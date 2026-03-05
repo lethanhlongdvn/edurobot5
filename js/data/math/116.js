@@ -149,9 +149,7 @@ export const lesson116 = {
 
             <!-- Nút Nộp Bài Tổng Kết -->
             <div class="flex justify-center mt-10">
-                <button id="btn-submit-116" onclick="submitFinal116()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-12 py-5 rounded-[32px] font-black text-2xl shadow-2xl shadow-indigo-300 active:scale-95 transition-all flex items-center gap-3">
-                    NỘP BÀI TỔNG KẾT <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                </button>
+                <button id="btn-submit-116" onclick="submitFinal116()" class="btn-submit-global">Nộp bài</button>
             </div>
 
             <script>

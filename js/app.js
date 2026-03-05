@@ -1,6 +1,7 @@
 // app.js - Điểm khởi đầu của ứng dụng
 import { router } from './router.js';
 import { common } from './components/common.js';
+import { SoundManager } from './components/SoundManager.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('EduRobot Lớp 5 2.0 - Khởi tạo thành hệ thống module');

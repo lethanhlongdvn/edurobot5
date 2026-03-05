@@ -240,7 +240,7 @@ export const router = {
         this.saveState();
 
         const subject = subjects.find(s => s.id === subId);
-        const lesson = lessons[subId].find(l => l.period === period);
+        const lesson = lessons[subId].find(l => (l.id === period) || (l.period === period));
 
         if (!subject || !lesson) return;
 

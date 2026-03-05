@@ -42,13 +42,11 @@ export const lesson122 = {
                     </div>
                         <div class="relative group cursor-pointer inline-block">
                             <!-- Image with openZoom -->
-                            <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full max-w-[600px] h-auto rounded-[40px] shadow-2xl border-8 border-white transform group-hover:rotate-1 transition-transform" onclick="Lesson.openZoom(this.src)">
+                            <img src="hinh_anh/toan/toan_tap_2/122-khampha.png" alt="Khám phá" class="w-full max-w-[600px] h-auto rounded-[40px] shadow-2xl border-8 border-white transform group-hover:rotate-1 transition-transform">
                             
                             <!-- Overlay Action Buttons -->
                             <div class="absolute bottom-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button onclick="Lesson.openZoom('hinh_anh/toan/toan_tap_2/122-khampha.png'); event.stopPropagation();" class="w-12 h-12 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-black shadow-2xl flex items-center justify-center transform active:scale-95 transition-all outline-none" title="Phóng to ảnh">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                                </button>
+                                
                                 <button onclick="window.openKhamPhaModal(); event.stopPropagation();" class="w-12 h-12 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-black shadow-2xl flex items-center justify-center transform active:scale-95 transition-all outline-none text-lg" title="Mô phỏng 3D">
                                     3D
                                 </button>
@@ -408,7 +406,7 @@ export const lesson122 = {
                     </div>
                     
                     <div class="pt-4 flex justify-end">
-                        <button onclick="submitWordProblemAILocal('122-1')" class="w-14 h-14 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black text-2xl transition-all shadow-lg active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm lời giải">
+                        <button onclick="submitWordProblemAILocal('122-1')" class="btn-tutor-e" title="Thầy E chấm lời giải">
                             E
                         </button>
                     </div>
@@ -437,9 +435,7 @@ export const lesson122 = {
                     </div>
 
                     <div class="pt-4 flex justify-end">
-                        <button onclick="submitWordProblemAILocal('122-2')" class="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-2xl transition-all shadow-lg active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm lời giải">
-                            E
-                        </button>
+                        <button onclick="submitWordProblemAILocal('122-2')" class="btn-tutor-e" title="Thầy E chấm lời giải">E</button>
                     </div>
                 </div>
             </div>
@@ -467,9 +463,7 @@ export const lesson122 = {
                         </div>
 
                         <div class="pt-6 flex justify-end">
-                            <button onclick="submitWordProblemAILocal('122-3')" class="w-14 h-14 bg-amber-600 hover:bg-amber-700 text-white rounded-2xl font-black text-2xl transition-all shadow-lg active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm lời giải">
-                                E
-                            </button>
+                            <button onclick="submitWordProblemAILocal('122-3')" class="btn-tutor-e" title="Thầy E chấm lời giải">E</button>
                         </div>
                     </div>
                 </div>
@@ -477,9 +471,7 @@ export const lesson122 = {
 
             <!-- Nộp bài -->
             <div class="pt-8 border-t-4 border-dashed border-gray-100 flex justify-end">
-                <button id="btn-submit-122" onclick="submit122()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-2xl font-black text-base shadow-lg active:scale-95 transition-all">
-                    Nộp bài
-                </button>
+                <button id="btn-submit-122" onclick="submit122()" class="btn-submit-global">Nộp bài</button>
             </div>
 
             <script>

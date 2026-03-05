@@ -76,9 +76,11 @@
                             </svg>
                         </button></li>
                     <li id="student-badge-li" class="hidden">
-                        <div class="flex items-center gap-1 bg-emerald-50 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 px-3 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800">
+                        <div
+                            class="flex items-center gap-1 bg-emerald-50 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 px-3 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800">
                             <span class="text-[10px] font-black truncate max-w-[100px]" id="student-badge-name"></span>
-                            <button onclick="window.logoutStudent()" title="Đổi học sinh" class="ml-1 w-5 h-5 rounded-full bg-emerald-200 dark:bg-emerald-800 hover:bg-red-400 hover:text-white text-emerald-600 dark:text-emerald-300 flex items-center justify-center transition-colors text-[10px] font-black">✕</button>
+                            <button onclick="window.logoutStudent()" title="Đổi học sinh"
+                                class="ml-1 w-5 h-5 rounded-full bg-emerald-200 dark:bg-emerald-800 hover:bg-red-400 hover:text-white text-emerald-600 dark:text-emerald-300 flex items-center justify-center transition-colors text-[10px] font-black">✕</button>
                         </div>
                     </li>
                     <li><button onclick="openTeacherAuthModal()"
@@ -264,11 +266,10 @@
     <script src="js/firebase-logic.js"></script>
 
     <!-- Tiếng Việt 5 Modules -->
-    <script src="js/vietnamese-modules/ai-grader.js"></script>
-    <script src="js/vietnamese-modules/interactive-exercises.js"></script>
-    <script src="js/vietnamese-modules/ltvc-core.js"></script>
-    <script src="js/vietnamese-modules/ltvc_patch.js"></script>
-    <script src="js/vietnamese-modules/lesson-engine.js"></script>
+    <script src="js/legacy-vietnamese/ai-grader.js"></script>
+    <script src="js/legacy-vietnamese/interactive-exercises.js"></script>
+    <script src="js/legacy-vietnamese/ltvc-core.js"></script>
+    <script src="js/legacy-vietnamese/ltvc_patch.js"></script>
 
     <script>
         // Fullscreen toggle logic

@@ -129,5 +129,35 @@ Bối cảnh:
             console.error('Tutor Error:', error);
             return "Thầy E hiện chưa xem bài được, bạn hãy tự kiểm tra lại các bước làm nhé!";
         }
+    },
+
+    async vietnameseWriting(studentWork, subjectContext) {
+        try {
+            const prompt = `Bạn là giáo viên Tiếng Việt lớp 5. 
+Yêu cầu: ${subjectContext}.
+Nhận xét ngắn gọn (tối đa 4 câu) bài làm sau của học sinh: "${studentWork}". 
+Nếu hay thì khen (Chỉ ra điểm sáng như cách dùng từ, hình ảnh). Nếu chưa hay thì gợi ý nhẹ nhàng.
+Định dạng trả về:
+1. Nhận xét ưu điểm.
+2. Gợi ý cải thiện.
+3. Chấm điểm dự kiến: X/10.`;
+
+            const response = await fetch(this.API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    sentence: prompt,
+                    mode: 'chat',
+                    persona: 'tlv'
+                })
+            });
+
+            if (!response.ok) throw new Error('API Error');
+            const data = await response.json();
+            return data.content || data.response || "Mình vừa xem bài của bạn, bạn thử viết lại rõ hơn được không?";
+        } catch (error) {
+            console.error('Writing Eval Error:', error);
+            return "Thầy E hiện chưa xem bài được, em hãy tự kiểm tra lại nhé!";
+        }
     }
 };

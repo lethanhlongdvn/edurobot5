@@ -112,10 +112,7 @@ export const lesson_252_viet = {
                                         <span>🤖</span> 
                                         <span>EduRobot Góp ý</span>
                                     </button>
-                                    <button onclick="submitLesson252Viet()" class="px-12 py-6 bg-gray-800 hover:bg-black text-white font-black rounded-[32px] shadow-2xl transition-all active:scale-[0.95] flex items-center justify-center gap-4 text-2xl uppercase tracking-widest">
-                                        <span>🎯</span> 
-                                        <span>Hoàn thành & Nộp bài</span>
-                                    </button>
+                                    <button onclick="submitLesson252Viet()" class="btn-submit-global">Nộp bài</button>
                                 </div>
                                 <div id="fb-252-viet" class="mt-10 hidden"></div>
                             </div>

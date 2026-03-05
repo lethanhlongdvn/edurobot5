@@ -165,9 +165,7 @@ export const lesson121 = {
                             </div>
                         </div>
                         <div class="pt-4 flex justify-center">
-                            <button onclick="Lesson.submitWordProblemAI('121-2')" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black text-xl transition-all shadow-xl active:scale-95">
-                                Thầy E chấm bài
-                            </button>
+                            <button onclick="Lesson.submitWordProblemAI('121-2')" class="btn-tutor-e" title="Thầy E chấm bài">E</button>
                         </div>
                     </div>
                 </div>
@@ -204,9 +202,7 @@ export const lesson121 = {
                             </button>
                         </div>
                         <div class="pt-2 flex justify-center">
-                            <button onclick="Lesson.submitWordProblemAI('121-3')" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black text-xl transition-all shadow-xl active:scale-95">
-                                Thầy E chấm bài
-                            </button>
+                            <button onclick="Lesson.submitWordProblemAI('121-3')" class="btn-tutor-e" title="Thầy E chấm bài">E</button>
                         </div>
                     </div>
                 </div>
@@ -240,9 +236,7 @@ export const lesson121 = {
 
             <!-- Nộp bài toàn diện -->
             <div class="flex flex-col items-center pt-10 border-t-4 border-dashed border-gray-100 mt-10">
-                <button id="btn-submit-121" onclick="submit121()" class="px-16 py-6 bg-indigo-600 hover:bg-indigo-700 text-white rounded-[40px] font-black text-3xl shadow-2xl shadow-indigo-900/20 active:scale-95 transition-all">
-                    Nộp bài
-                </button>
+                <button id="btn-submit-121" onclick="submit121()" class="btn-submit-global">Nộp bài</button>
             </div>
 
             <script>

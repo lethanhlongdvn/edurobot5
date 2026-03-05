@@ -286,10 +286,7 @@ export const lesson_231_viet = {
                                     <div class="mt-10 p-8 bg-gray-900 rounded-[32px] shadow-2xl border-4 border-gray-800 text-center animate-in slide-in-from-bottom-10">
                                         <h4 class="text-2xl font-black text-white uppercase tracking-widest mb-4 italic">Hoàn tất bài học</h4>
                                         <p class="text-gray-400 mb-6 text-sm">Bấm nộp bài để chúng mình tổng kết điểm nhé! (Mỗi ý đúng được 10 điểm)</p>
-                                        <button onclick="submit231VietFinal()" class="group relative px-12 py-4 bg-rose-600 text-white font-black text-xl rounded-2xl shadow-[0_0_20px_rgba(225,29,72,0.4)] hover:bg-rose-700 active:scale-95 transition-all flex items-center justify-center gap-3 mx-auto">
-                                            <div class="w-6 h-6 bg-white rounded-lg flex items-center justify-center text-rose-600 font-black text-xs shadow-sm">E</div>
-                                            <span>NỘP BÀI TỔNG HỢP</span>
-                                        </button>
+                                        <button onclick="submit231VietFinal()" class="btn-submit-global">Nộp bài</button>
                                         <div id="final-score-231v" class="hidden mt-6 p-4 bg-white/10 rounded-2xl border border-white/20 text-white font-bold text-xl"></div>
                                     </div>
                                 </div>

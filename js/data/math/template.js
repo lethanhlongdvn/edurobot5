@@ -127,9 +127,7 @@ export const lessonTemplate = {
                     <h3 class="text-emerald-800 font-black text-xl md:text-2xl mb-2">Hoàn thành Luyện Tập?</h3>
                     <p class="text-emerald-700 font-bold text-sm md:text-base">Hệ thống sẽ lưu lại toàn bộ bài làm để Thầy/Cô chấm điểm nhé.</p>
                 </div>
-                <button id="btn-submit-all-practice-template" onclick="submitAllPracticeTemplate()" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-5 rounded-3xl font-black text-base md:text-lg uppercase tracking-wide shadow-xl shadow-emerald-200 transition-all flex justify-center items-center gap-3 active:scale-95 group">
-                    <span>NỘP BÀI</span>
-                </button>
+                <button id="btn-submit-all-practice-template" onclick="submitAllPracticeTemplate()" class="btn-submit-global">Nộp bài</button>
             </div>
             
             <script>

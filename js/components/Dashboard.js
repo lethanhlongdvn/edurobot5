@@ -44,7 +44,7 @@ export const Dashboard = {
         return `
             <div class="touch-feedback flex items-center p-4 md:p-5 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 shadow-sm 
                  hover:shadow-md hover:border-blue-100 dark:hover:border-blue-800 cursor-pointer group border-l-4 ${color.border} transition-all" 
-                 onclick="router.renderLesson('${router.currentSubject}', '${lesson.period}')">
+                 onclick="router.renderLesson('${router.currentSubject}', '${lesson.id || lesson.period}')">
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center gap-1.5 mb-1">
                         <span class="w-1.5 h-1.5 ${color.bg} rounded-full"></span>

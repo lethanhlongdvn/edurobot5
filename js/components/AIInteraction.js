@@ -218,6 +218,51 @@ export const AIInteraction = {
         }
     },
 
+    async evaluateWriting(id, requirement) {
+        const input = document.getElementById(`ai-${id}`);
+        const feedbackBox = document.getElementById(`fb-${id}`);
+        const studentWork = input ? input.value.trim() : '';
+
+        if (!studentWork) {
+            alert("Em hãy viết bài trước khi xem nhận xét nhé!");
+            if (input) input.focus();
+            return;
+        }
+
+        const btn = event.currentTarget;
+        const originalHtml = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = `<div class="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>`;
+
+        try {
+            feedbackBox.classList.remove('hidden');
+            feedbackBox.innerHTML = `
+                <div class="flex items-center gap-2 text-blue-600 animate-pulse font-bold">
+                    <div class="w-6 h-6 bg-blue-600 rounded-lg flex items-center justify-center text-white font-black text-[10px] shadow-sm mr-1">E</div> 
+                    <span>Thầy E đang đọc bài của em...</span>
+                </div>
+            `;
+
+            const feedback = await AI.vietnameseWriting(studentWork, requirement);
+
+            feedbackBox.innerHTML = `
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between border-b border-rose-100 pb-2 mb-2">
+                        <div class="flex items-center gap-2 text-rose-500 font-black">
+                            <span class="text-2xl">✍️</span> NHẬN XÉT CHI TIẾT
+                        </div>
+                    </div>
+                    <div class="text-gray-700 leading-relaxed text-sm">${feedback.replace(/\n/g, '<br>').replace(/\*\*/g, '<b>')}</div>
+                </div>
+            `;
+        } catch (e) {
+            feedbackBox.innerHTML = `<div class="text-red-500 font-bold p-2">Lỗi rồi! Em hãy thử lại sau nhé.</div>`;
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = originalHtml;
+        }
+    },
+
     showAiModal(title, content) {
         let modal = document.getElementById('ai-modal');
         if (!modal) {

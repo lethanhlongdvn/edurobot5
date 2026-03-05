@@ -460,6 +460,25 @@ html.dark ::-webkit-scrollbar-thumb:hover {
     transition: transform 0.15s ease;
 }
 
-.touch-feedback:active {
-    transform: scale(0.98);
+/* Standardized Buttons for project-wide use */
+.btn-tutor-e {
+    @apply w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black text-2xl flex items-center justify-center shadow-lg transition-all active:scale-95 shrink-0;
+}
+
+.btn-submit-global {
+    @apply px-12 py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-[32px] font-black text-2xl shadow-xl shadow-indigo-900/20 active:scale-95 transition-all;
+}
+
+/* Global Floating Zoom Button Style */
+#global-zoom-btn {
+    pointer-events: auto;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#global-zoom-btn:hover {
+    transform: scale(1.1);
+}
+
+.zoom-active-cursor {
+    cursor: zoom-in !important;
 }
