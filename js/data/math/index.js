@@ -16,6 +16,7 @@ import { lesson117 } from './117.js';
 import { lesson118 } from './118.js';
 import { lesson119 } from './119.js';
 import { lesson120 } from './120.js';
+import { lesson120B } from './120B.js';
 import { lesson121 } from './121.js';
 import { lesson122 } from './122.js';
 import { lesson123 } from './123.js';
@@ -49,6 +50,7 @@ const activeLessons = [
     lesson118,
     lesson119,
     lesson120,
+    lesson120B,
     lesson121,
     lesson122,
     lesson123,
