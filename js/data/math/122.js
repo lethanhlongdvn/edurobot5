@@ -404,9 +404,10 @@ export const lesson122 = {
                 <div class="max-w-4xl mx-auto space-y-4 bg-indigo-50/30 p-8 rounded-[48px] border-2 border-indigo-50">
                     <div class="w-full relative">
                         <textarea id="wp-full-122-1" rows="4" class="w-full p-6 pr-14 rounded-3xl border-2 border-indigo-100 focus:border-indigo-500 outline-none text-xl font-bold transition-all shadow-inner placeholder:text-indigo-200 resize-y bg-white leading-relaxed" placeholder="Viết bài giải của em vào đây..."></textarea>
-                        <button onclick="Lesson.startDictation('wp-full-122-1')" class="absolute right-4 top-4 text-indigo-400 hover:text-indigo-600 transition-colors p-2 bg-indigo-50 rounded-xl" title="Nhập bằng giọng nói">
+                        <button id="btn-mic-122-1" onclick="Lesson.toggleSpeechRec('wp-full-122-1')" class="absolute right-4 top-4 text-indigo-400 hover:text-indigo-600 transition-colors p-2 bg-indigo-50 rounded-xl" title="Nhập bằng giọng nói">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                         </button>
+                        <div id="mic-status-122-1" class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse hidden z-10 whitespace-nowrap">Đang nghe...</div>
                     </div>
                     
                     <div class="pt-4 flex justify-end">
@@ -433,9 +434,10 @@ export const lesson122 = {
                 <div class="max-w-4xl mx-auto space-y-4 bg-emerald-50/30 p-8 rounded-[48px] border-2 border-emerald-50">
                     <div class="w-full relative">
                         <textarea id="wp-full-122-2" rows="4" class="w-full p-6 pr-14 rounded-3xl border-2 border-emerald-100 focus:border-emerald-500 outline-none text-xl font-bold transition-all shadow-inner placeholder:text-emerald-200 resize-y bg-white leading-relaxed" placeholder="Viết bài giải của em vào đây..."></textarea>
-                        <button onclick="Lesson.startDictation('wp-full-122-2')" class="absolute right-4 top-4 text-emerald-400 hover:text-emerald-600 transition-colors p-2 bg-emerald-50 rounded-xl" title="Nhập bằng giọng nói">
+                        <button id="btn-mic-122-2" onclick="Lesson.toggleSpeechRec('wp-full-122-2')" class="absolute right-4 top-4 text-emerald-400 hover:text-emerald-600 transition-colors p-2 bg-emerald-50 rounded-xl" title="Nhập bằng giọng nói">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                         </button>
+                        <div id="mic-status-122-2" class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse hidden z-10 whitespace-nowrap">Đang nghe...</div>
                     </div>
 
                     <div class="pt-4 flex justify-end">
@@ -459,9 +461,10 @@ export const lesson122 = {
                         <div class="space-y-4">
                             <div class="w-full relative">
                                 <textarea id="wp-full-122-3" rows="6" class="w-full p-6 pr-14 rounded-3xl border-2 border-amber-100 focus:border-amber-500 outline-none text-xl font-bold transition-all shadow-inner placeholder:text-amber-200 resize-y bg-white leading-relaxed" placeholder="Viết bài giải của em vào đây..."></textarea>
-                                <button onclick="Lesson.startDictation('wp-full-122-3')" class="absolute right-4 top-4 text-amber-400 hover:text-amber-600 transition-colors p-2 bg-amber-50 rounded-xl" title="Nhập bằng giọng nói">
+                                <button id="btn-mic-122-3" onclick="Lesson.toggleSpeechRec('wp-full-122-3')" class="absolute right-4 top-4 text-amber-400 hover:text-amber-600 transition-colors p-2 bg-amber-50 rounded-xl" title="Nhập bằng giọng nói">
                                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                                 </button>
+                                <div id="mic-status-122-3" class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse hidden z-10 whitespace-nowrap">Đang nghe...</div>
                             </div>
 
                         </div>

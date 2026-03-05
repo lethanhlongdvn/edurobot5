@@ -144,14 +144,22 @@ export const lesson121 = {
                     <div class="max-w-4xl mx-auto space-y-4 bg-white p-6 rounded-[40px] shadow-2xl border-2 border-emerald-100">
                         <div class="flex items-start gap-3">
                             <div class="w-10 h-10 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-2">1</div>
-                            <div class="flex-grow">
-                                <textarea id="wp-solution-121-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Ví dụ: Diện tích cần phủ kẹo là:"></textarea>
+                            <div class="flex-grow relative">
+                                <textarea id="wp-solution-121-2" rows="1" class="w-full p-4 pr-12 rounded-2xl border-2 border-emerald-200 outline-none focus:border-emerald-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Ví dụ: Diện tích cần phủ kẹo là:"></textarea>
+                                <button id="btn-mic-121-2-1" onclick="Lesson.toggleSpeechRec('wp-solution-121-2')" class="absolute right-2 top-1/2 -translate-y-1/2 text-emerald-400 hover:text-emerald-600 p-2" title="Giọng nói">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                                </button>
+                                <div id="mic-status-121-2-1" class="absolute -top-6 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse hidden z-10">...</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <div class="w-10 h-10 bg-teal-500 text-white rounded-xl flex items-center justify-center text-xl font-black shrink-0 mt-2">2</div>
-                            <div class="flex-grow">
-                                <textarea id="wp-calc-121-2" rows="1" class="w-full p-4 rounded-2xl border-2 border-teal-200 outline-none focus:border-teal-500 text-3xl font-black text-emerald-700 placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Ví dụ: 2 x 2 x 5 = 20 (cm2)"></textarea>
+                            <div class="flex-grow relative">
+                                <textarea id="wp-calc-121-2" rows="1" class="w-full p-4 pr-12 rounded-2xl border-2 border-teal-200 outline-none focus:border-teal-500 text-3xl font-black text-emerald-700 placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Ví dụ: 2 x 2 x 5 = 20 (cm2)"></textarea>
+                                <button id="btn-mic-121-2-2" onclick="Lesson.toggleSpeechRec('wp-calc-121-2')" class="absolute right-2 top-1/2 -translate-y-1/2 text-teal-400 hover:text-teal-600 p-2" title="Giọng nói">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                                </button>
+                                <div id="mic-status-121-2-2" class="absolute -top-6 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse hidden z-10">...</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
@@ -192,7 +200,13 @@ export const lesson121 = {
 
                     <!-- Khu vực giải toán -->
                     <div class="max-w-4xl mx-auto space-y-6 bg-white p-6 rounded-[40px] shadow-2xl border-2 border-orange-100 text-center">
-                        <textarea id="wp-solution-121-3" rows="2" class="w-full p-6 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Giải: Diện tích XQ chậu là: ... x ... x 4 = ... (cm2)"></textarea>
+                        <div class="relative">
+                            <textarea id="wp-solution-121-3" rows="2" class="w-full p-6 pr-14 rounded-2xl border-2 border-orange-200 outline-none focus:border-orange-500 text-2xl font-bold placeholder:text-gray-200 transition-all resize-none shadow-sm" placeholder="Giải: Diện tích XQ chậu là: ... x ... x 4 = ... (cm2)"></textarea>
+                            <button id="btn-mic-121-3" onclick="Lesson.toggleSpeechRec('wp-solution-121-3')" class="absolute right-4 top-4 text-orange-400 hover:text-orange-600 p-2" title="Giọng nói">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                            </button>
+                            <div id="mic-status-121-3" class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse hidden z-10 whitespace-nowrap">Đang nghe...</div>
+                        </div>
                         <div class="flex items-center justify-center gap-4 p-4 bg-orange-50/50 rounded-2xl shadow-inner">
                             <span class="text-3xl font-black text-orange-900 uppercase italic">Số tiền:</span>
                             <input type="number" id="ans-121-3" class="w-full max-w-[320px] p-4 rounded-2xl border-2 border-orange-300 outline-none focus:border-orange-500 text-4xl font-black text-rose-600" placeholder="?">

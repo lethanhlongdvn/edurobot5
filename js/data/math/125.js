@@ -135,7 +135,13 @@ export const lesson125 = {
                             <span class="text-purple-600 font-black">b)</span> Biết mỗi hình lập phương nhỏ trong hình trên có cạnh <b class="text-purple-600">2 cm</b>. Hãy tính thể tích của hình lập phương lớn ghép được ở câu a.
                         </p>
                         <p class="hidden" id="wp-problem-text-125-3b">Quan sát hình vẽ và cho biết 2 khối hình nào ghép được thành hình lập phương. Biết mỗi hình lập phương nhỏ trong hình trên có cạnh 2 cm. Hãy tính thể tích của hình lập phương lớn ghép được ở câu a.</p>
-                        <textarea id="wp-full-125-3b" rows="4" class="w-full p-6 rounded-2xl border-2 border-purple-200 bg-purple-50/50 dark:bg-slate-900 outline-none focus:border-purple-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;Đáp số: ... cm³"></textarea>
+                        <div class="relative">
+                            <textarea id="wp-full-125-3b" rows="4" class="w-full p-6 pr-14 rounded-2xl border-2 border-purple-200 bg-purple-50/50 dark:bg-slate-900 outline-none focus:border-purple-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;Đáp số: ... cm³"></textarea>
+                            <button id="btn-mic-125-3b" onclick="Lesson.toggleSpeechRec('wp-full-125-3b')" class="absolute right-4 top-4 text-purple-400 hover:text-purple-600 p-2" title="Giọng nói">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                            </button>
+                            <div id="mic-status-125-3b" class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse hidden z-10 whitespace-nowrap">Đang nghe...</div>
+                        </div>
                         <div class="mt-6 flex justify-end">
                             <button onclick="Lesson.submitWordProblemAI('125-3b')" class="w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                         </div>
@@ -166,7 +172,13 @@ export const lesson125 = {
                         <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-amber-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-amber-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
                             <p class="hidden" id="wp-problem-text-125-4">Rô-bốt làm một tháp chất lỏng như hình dưới đây. Hỏi phần chất lỏng nào có thể tích lớn nhất và thể tích đó bằng bao nhiêu?</p>
-                            <textarea id="wp-full-125-4" rows="6" class="w-full flex-grow p-6 rounded-2xl border-2 border-amber-200 bg-amber-50/50 dark:bg-slate-900 outline-none focus:border-amber-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;&#10;&#10;Đáp số: ..."></textarea>
+                            <div class="relative flex-grow">
+                                <textarea id="wp-full-125-4" rows="6" class="w-full p-6 pr-14 rounded-2xl border-2 border-amber-200 bg-amber-50/50 dark:bg-slate-900 outline-none focus:border-amber-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;&#10;&#10;Đáp số: ..."></textarea>
+                                <button id="btn-mic-125-4" onclick="Lesson.toggleSpeechRec('wp-full-125-4')" class="absolute right-4 top-4 text-amber-400 hover:text-amber-600 p-2" title="Giọng nói">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                                </button>
+                                <div id="mic-status-125-4" class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse hidden z-10 whitespace-nowrap">Đang nghe...</div>
+                            </div>
                             <div class="mt-6 flex justify-end">
                                 <button onclick="Lesson.submitWordProblemAI('125-4')" class="w-14 h-14 bg-amber-600 hover:bg-amber-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                             </div>

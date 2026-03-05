@@ -49,9 +49,13 @@ export const lesson126 = {
                     </div>
 
                     <!-- Bài làm -->
-                    <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-orange-200 shadow-sm">
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-orange-200 shadow-sm relative">
                         <p class="text-lg md:text-2xl font-black text-orange-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
-                        <textarea id="ans-126-1" rows="5" class="w-full p-6 rounded-2xl border-2 border-orange-200 bg-orange-50/50 dark:bg-slate-900 outline-none focus:border-orange-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;a) Thể tích mẫu hộp: ...&#10;b) Thể tích thùng: ...&#10;   Số hộp xếp được: ...&#10;Đáp số: ..."></textarea>
+                        <textarea id="ans-126-1" rows="5" class="w-full p-6 pr-14 rounded-2xl border-2 border-orange-200 bg-orange-50/50 dark:bg-slate-900 outline-none focus:border-orange-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;a) Thể tích mẫu hộp: ...&#10;b) Thể tích thùng: ...&#10;   Số hộp xếp được: ...&#10;Đáp số: ..."></textarea>
+                        <button id="btn-mic-126-1" onclick="Lesson.toggleSpeechRec('ans-126-1')" class="absolute right-12 top-20 text-orange-400 hover:text-orange-600 p-2" title="Giọng nói">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                        </button>
+                        <div id="mic-status-126-1" class="absolute top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse hidden z-10 whitespace-nowrap">Đang nghe...</div>
                         <div class="mt-6 flex justify-end">
                             <button onclick="Lesson.submitWordProblemAI('126-1')" class="w-14 h-14 bg-orange-600 hover:bg-orange-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                         </div>
@@ -76,9 +80,15 @@ export const lesson126 = {
                         <div class="w-full lg:w-1/2 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-blue-100 shadow-md flex items-center justify-center">
                             <img src="hinh_anh/toan/toan_tap_2/126-b2-room.png" alt="Phòng học" class="w-full h-auto rounded-2xl">
                         </div>
-                        <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-blue-200 shadow-sm flex flex-col">
+                        <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-blue-200 shadow-sm flex flex-col relative">
                             <p class="text-lg md:text-2xl font-black text-blue-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
-                            <textarea id="ans-126-2" rows="5" class="w-full flex-grow p-6 rounded-2xl border-2 border-blue-200 bg-blue-50/50 dark:bg-slate-900 outline-none focus:border-blue-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;Ước lượng phòng học: dài ... m, rộng ... m, cao ... m&#10;Thể tích phòng: ...&#10;Số thùng 1m³ xếp được: ...&#10;Đáp số: ... thùng"></textarea>
+                            <div class="relative flex-grow">
+                                <textarea id="ans-126-2" rows="5" class="w-full p-6 pr-14 rounded-2xl border-2 border-blue-200 bg-blue-50/50 dark:bg-slate-900 outline-none focus:border-blue-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;Ước lượng phòng học: dài ... m, rộng ... m, cao ... m&#10;Thể tích phòng: ...&#10;Số thùng 1m³ xếp được: ...&#10;Đáp số: ... thùng"></textarea>
+                                <button id="btn-mic-126-2" onclick="Lesson.toggleSpeechRec('ans-126-2')" class="absolute right-4 top-4 text-blue-400 hover:text-blue-600 p-2" title="Giọng nói">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                                </button>
+                                <div id="mic-status-126-2" class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse hidden z-10 whitespace-nowrap">Đang nghe...</div>
+                            </div>
                             <div class="mt-6 flex justify-end">
                                 <button onclick="Lesson.submitWordProblemAI('126-2')" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                             </div>

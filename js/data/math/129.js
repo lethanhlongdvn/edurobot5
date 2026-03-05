@@ -27,13 +27,20 @@ export const lesson129 = {
                         <h3 class="text-4xl md:text-6xl font-black text-indigo-900 dark:text-indigo-100 uppercase tracking-tighter">Diện tích</h3>
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div class="p-8 bg-indigo-50/50 dark:bg-slate-900 rounded-[32px] border-2 border-indigo-50 leading-relaxed text-center shadow-sm">
-                            <p class="font-bold text-indigo-700 text-2xl md:text-4xl mb-4">Hình lập phương:</p>
-                            <p class="text-4xl md:text-7xl font-black tracking-tight text-slate-800 dark:text-white">S<sub>tp</sub> = a × a × 6</p>
+                        <!-- Hình lập phương -->
+                        <div class="bg-white/90 dark:bg-slate-800/90 p-8 rounded-[40px] shadow-sm border-2 border-blue-100 flex flex-col items-center gap-6">
+                            <h3 class="text-4xl md:text-5xl font-black text-blue-700 uppercase tracking-tighter">Hình lập phương:</h3>
+                            <div class="w-full bg-blue-50/50 dark:bg-slate-900/50 p-6 rounded-3xl text-center shadow-inner">
+                                <p class="text-5xl md:text-6xl font-black text-blue-600 drop-shadow-sm whitespace-nowrap">S<sub>tp</sub> = a × a × 6</p>
+                            </div>
                         </div>
-                        <div class="p-8 bg-blue-50/50 dark:bg-slate-900 rounded-[32px] border-2 border-blue-50 leading-relaxed text-center shadow-sm">
-                            <p class="font-bold text-blue-700 text-2xl md:text-4xl mb-4">Hình hộp chữ nhật:</p>
-                            <p class="text-3xl md:text-6xl font-black tracking-tight text-slate-800 dark:text-white">S<sub>tp</sub> = S<sub>xq</sub> + S<sub>đáy</sub> × 2</p>
+
+                        <!-- Hình hộp chữ nhật -->
+                        <div class="bg-white/90 dark:bg-slate-800/90 p-8 rounded-[40px] shadow-sm border-2 border-teal-100 flex flex-col items-center gap-6">
+                            <h3 class="text-4xl md:text-5xl font-black text-teal-700 uppercase tracking-tighter">Hình hộp chữ nhật:</h3>
+                            <div class="w-full bg-teal-50/50 dark:bg-slate-900/50 p-6 rounded-3xl text-center shadow-inner">
+                                <p class="text-4xl md:text-5xl font-black text-teal-600 drop-shadow-sm whitespace-nowrap">S<sub>tp</sub> = S<sub>xq</sub> + S<sub>đáy</sub> × 2</p>
+                            </div>
                         </div>
                     </div>
                 </div>
