@@ -595,3 +595,9 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - File thay đổi: js/data/math/123.js
 - Mô tả thay đổi: Thay thế khối div text "Khối hình đặc biệt" bằng hình ảnh minh hoạ khối hộp chữ nhật (122-formula.png) ở phần lý thuyết theo yêu cầu.
 - Trạng thái hiện tại: Đã hoàn tất sửa đổi giáo án tiết 123.
+[07:29] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 123
+- File thay đổi: js/data/math/123.js
+- Mô tả thay đổi: Cập nhật giao diện khối Header (Hero Title) cho giống với hình ảnh của tiết 123 luyện tập thể tích gồm nền xanh nhạt, bo góc và icon eke thay vì rubik chữ.
+- Trạng thái hiện tại: Đã hoàn tất thay đổi giao diện theo yêu cầu mới ở tiết 123.
+

@@ -10,13 +10,11 @@ export const lesson123 = {
     content: `
         <div class="space-y-8 animate-fade-in pb-10">
             <!-- Hero Title -->
-            <div class="bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] md:rounded-[40px] p-8 md:p-12 border border-blue-100 dark:border-slate-700 shadow-sm relative overflow-hidden">
-                <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-20 h-20 md:w-24 md:h-24 bg-blue-600 rounded-3xl flex items-center justify-center text-4xl md:text-6xl shadow-xl shadow-blue-200 dark:shadow-blue-900/40 shrink-0 transform -rotate-6 text-white">📐</div>
-                    <div class="text-center md:text-left">
-                        <h2 class="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Luyện tập Thể tích</h2>
-                        <p class="text-lg md:text-2xl text-gray-500 dark:text-slate-400 font-bold italic">Vận dụng công thức tính thể tích hình hộp chữ nhật vào thực tế và các hình khối phức tạp.</p>
-                    </div>
+            <div class="bg-[#f0f5ff] rounded-[24px] md:rounded-[32px] p-6 md:p-8 flex items-center gap-6 md:gap-8">
+                <div class="w-16 h-16 md:w-20 md:h-20 bg-[#2563eb] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-md shrink-0 text-white transform -rotate-12">📐</div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#111827] mb-2 font-display tracking-tight">Luyện tập Thể tích</h2>
+                    <p class="text-base md:text-xl text-[#6b7280] font-bold italic leading-relaxed">Vận dụng công thức tính thể tích hình hộp chữ nhật vào thực tế và các hình khối phức tạp.</p>
                 </div>
             </div>
 
