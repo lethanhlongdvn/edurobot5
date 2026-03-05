@@ -689,3 +689,8 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - Bài học: Toán 5 - Tiết 129
 - Mô tả thay đổi: Tăng kích thước font chữ (font-size) cho các khối công thức và đề bài để phù hợp hiển thị trên màn hình lớn.
 - Trạng thái hiện tại: Đã cập nhật UI.
+
+[17:31] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 129
+- Mô tả thay đổi: Giảm nhẹ kích thước font chữ (font-size) cho các khối công thức và đề bài để tránh bị nhảy dòng trên các màn hình có chiều ngang hạn chế.
+- Trạng thái hiện tại: Đã tinh chỉnh UI.
