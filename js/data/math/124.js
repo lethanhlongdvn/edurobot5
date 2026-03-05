@@ -342,7 +342,8 @@ export const lesson124 = {
                                 btn.disabled = true;
                                 btn.classList.add('opacity-50', 'bg-emerald-500');
                                 btn.classList.remove('from-amber-400', 'to-orange-500', 'hover:from-amber-500', 'hover:to-orange-600');
-                                window.animKhamPha124(); // auto spin when full
+                                // Không tự động xoay nữa để người dùng dùng chuột
+                                // window.animKhamPha124();
                             }
                         }, delay + 300);
                     };
