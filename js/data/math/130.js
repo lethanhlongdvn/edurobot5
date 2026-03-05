@@ -1,0 +1,290 @@
+export const lesson130 = {
+    "topic": "Số đo thời gian",
+    "week": "26",
+    "period": "130",
+    "title": "BÀI 56: CÁC ĐƠN VỊ ĐO THỜI GIAN",
+    "desc": "Ôn tập các đơn vị đo thời gian đã học, mối quan hệ giữa một số đơn vị đo thời gian thông dụng và cách đổi đơn vị.",
+    "content": `
+        <div class="space-y-4 text-indigo-900 animate-fade-in">
+            <!-- 🌟 Bảng đơn vị đo thời gian -->
+            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 p-6 rounded-3xl shadow-xl text-white">
+                <h3 class="text-3xl font-black mb-6 text-center italic tracking-tight uppercase">Bảng Đơn Vị Đo Thời Gian</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xl md:text-2xl font-bold">
+                    <div class="bg-white/20 p-4 rounded-xl backdrop-blur-sm border border-white/30 space-y-2">
+                        <p>1 thế kỉ = <span class="text-yellow-300 font-black">100</span> năm</p>
+                        <p>1 năm = <span class="text-yellow-300 font-black">12</span> tháng</p>
+                        <p>1 năm = <span class="text-yellow-300 font-black">365</span> ngày</p>
+                        <p>1 năm nhuận = <span class="text-yellow-300 font-black">366</span> ngày</p>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-xl backdrop-blur-sm border border-white/30 space-y-2">
+                        <p>1 tuần lễ = <span class="text-yellow-300 font-black">7</span> ngày</p>
+                        <p>1 ngày = <span class="text-yellow-300 font-black">24</span> giờ</p>
+                        <p>1 giờ = <span class="text-yellow-300 font-black">60</span> phút</p>
+                        <p>1 phút = <span class="text-yellow-300 font-black">60</span> giây</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 💡 Số ngày trong tháng -->
+            <div class="bg-emerald-50 p-6 rounded-[32px] border-4 border-dashed border-emerald-200">
+                <p class="text-emerald-700 font-black text-2xl uppercase mb-4 flex items-center gap-2">
+                    <span>💡</span> Số ngày của các tháng trong năm
+                </p>
+                <div class="grid grid-cols-1 gap-4 text-xl">
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold shrink-0 mt-1">31</div>
+                        <p class="font-bold text-emerald-900 leading-snug">
+                            Tháng có 31 ngày: Tháng 1, Tháng 3, Tháng 5, Tháng 7, Tháng 8, Tháng 10, Tháng 12.
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold shrink-0 mt-1">30</div>
+                        <p class="font-bold text-emerald-900 leading-snug">
+                            Tháng có 30 ngày: Tháng 4, Tháng 6, Tháng 9, Tháng 11.
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center font-bold shrink-0 mt-1">28</div>
+                        <p class="font-bold text-emerald-900 leading-snug">
+                            Tháng 2 có 28 ngày (Vào năm nhuận có 29 ngày).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `,
+    "practice": `
+        <div class="space-y-6 animate-fade-in">
+            <!-- Bài tập 1 -->
+            <div id="box-130-1" class="bg-white p-6 rounded-3xl border border-gray-100 shadow-xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-indigo-50 rounded-full -z-0"></div>
+                <div class="relative z-10">
+                    <p class="font-black text-3xl md:text-4xl mb-6 text-indigo-700 flex items-center gap-4">
+                        <span class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black shadow-lg shadow-indigo-200 shrink-0 text-2xl">1</span>
+                        <span>Dưới đây là năm (khoảng thời gian) xảy ra các sự kiện trong lịch sử Việt Nam. Em hãy cho biết mỗi sự kiện xảy ra vào thế kỉ nào?</span>
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Sự kiện 1 -->
+                        <div id="item-130-1-1" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
+                            <p class="text-xl font-bold text-indigo-900">Hai Bà Trưng phát cờ khởi nghĩa năm 40.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-HBT.png" alt="Sự kiện 1" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
+                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
+                                <span class="font-black text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-1" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                            </div>
+                        </div>
+
+                        <!-- Sự kiện 2 -->
+                        <div id="item-130-1-2" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
+                            <p class="text-xl font-bold text-indigo-900">Đinh Bộ Lĩnh lên ngôi Hoàng đế năm 968.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-DBL.png" alt="Sự kiện 2" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
+                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
+                                <span class="font-black text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-2" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                            </div>
+                        </div>
+
+                        <!-- Sự kiện 3 -->
+                        <div id="item-130-1-3" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
+                            <p class="text-xl font-bold text-indigo-900">Vua Lý Công Uẩn dời đô từ Hoa Lư về Thăng Long năm 1010.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-LCU.png" alt="Sự kiện 3" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
+                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
+                                <span class="font-black text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-3" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                            </div>
+                        </div>
+
+                        <!-- Sự kiện 4 -->
+                        <div id="item-130-1-4" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
+                            <p class="text-xl font-bold text-indigo-900">Nhà Trần đánh bại quân Nguyên Mông năm 1285.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-NT.png" alt="Sự kiện 4" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
+                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
+                                <span class="font-black text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-4" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                            </div>
+                        </div>
+
+                        <!-- Sự kiện 5 -->
+                        <div id="item-130-1-5" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
+                            <p class="text-xl font-bold text-indigo-900">Chiến thắng Điện Biên Phủ năm 1954.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-ĐBP.png" alt="Sự kiện 5" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
+                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
+                                <span class="font-black text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-5" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                            </div>
+                        </div>
+
+                        <!-- Sự kiện 6 -->
+                        <div id="item-130-1-6" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
+                            <p class="text-xl font-bold text-indigo-900">Giải phóng miền Nam thống nhất đất nước năm 1975.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-GPMN.png" alt="Sự kiện 6" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
+                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
+                                <span class="font-black text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-6" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center mt-6">
+                        <button onclick="check130_1()" class="bg-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-lg active:scale-95 transition-all outline-none hover:bg-indigo-600">Kiểm tra bài 1</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bài tập 2 -->
+            <div id="box-130-2" class="bg-white p-6 rounded-3xl border border-gray-100 shadow-xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-50 rounded-full -z-0"></div>
+                <div class="relative z-10">
+                    <p class="font-black text-3xl md:text-5xl mb-6 text-emerald-700 flex items-center gap-4">
+                        <span class="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black shadow-lg shadow-emerald-200">2</span>
+                        Số ?
+                    </p>
+
+                    <!-- Mẫu hướng dẫn -->
+                    <div class="bg-purple-50 p-6 rounded-2xl border-2 border-purple-200 mb-6 w-fit mx-auto shadow-inner">
+                        <p class="text-2xl font-bold tracking-wider text-purple-900 flex items-center gap-4 flex-wrap">
+                            <span class="font-black text-purple-600 underline">Mẫu:</span> 
+                            <span>72 phút = <span class="bg-white px-3 py-1 rounded shadow inline-flex flex-col items-center justify-center align-middle mx-1" style="line-height: 1.2;"><span class="border-b-2 border-purple-900 block px-1">72</span><span>60</span></span> giờ = <span class="text-rose-600 font-black">1,2</span> giờ</span>
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Câu a -->
+                        <div class="bg-emerald-50/50 p-6 rounded-3xl border-2 border-emerald-100 space-y-6">
+                            <div class="flex items-center gap-4 text-2xl font-bold text-emerald-900">
+                                <span class="text-3xl font-black text-emerald-500">a)</span>
+                                <span>90 phút =</span>
+                                <input type="number" id="ans-130-2-a1" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-sm" placeholder="?">
+                                <span>giờ</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-2xl font-bold text-emerald-900 lg:pl-10">
+                                <span>42 giây =</span>
+                                <input type="number" id="ans-130-2-a2" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-sm" placeholder="?">
+                                <span>phút</span>
+                            </div>
+                        </div>
+
+                        <!-- Câu b -->
+                        <div class="bg-emerald-50/50 p-6 rounded-3xl border-2 border-emerald-100 space-y-6">
+                            <div class="flex items-center gap-4 text-2xl font-bold text-emerald-900 flex-wrap">
+                                <span class="text-3xl font-black text-emerald-500">b)</span>
+                                <span>1 giờ 15 phút =</span>
+                                <input type="number" id="ans-130-2-b1" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-sm" placeholder="?">
+                                <span>giờ</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-2xl font-bold text-emerald-900 lg:pl-10 flex-wrap">
+                                <span>2 phút 27 giây =</span>
+                                <input type="number" id="ans-130-2-b2" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-sm" placeholder="?">
+                                <span>phút</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center mt-8">
+                        <button onclick="check130_2()" class="bg-emerald-500 text-white font-bold py-3 px-8 rounded-full shadow-lg active:scale-95 transition-all outline-none hover:bg-emerald-600">Kiểm tra bài 2</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nộp bài toàn diện -->
+            <div class="flex flex-col items-center pt-10 border-t-4 border-dashed border-gray-100 mt-10">
+                <button id="btn-submit-130" onclick="submit130()" class="btn-submit-global">Nộp bài</button>
+            </div>
+
+            <script>
+                window.check130_1 = function() {
+                    const answers = ["I", "X", "XI", "XIII", "XX", "XX"];
+                    let allCorrect = true;
+
+                    for (let i = 0; i < 6; i++) {
+                        const inputE = document.getElementById('ans-130-1-' + (i+1));
+                        const val = inputE.value.trim().toUpperCase();
+                        if (val === answers[i]) {
+                            inputE.classList.remove('bg-red-100', 'text-red-700');
+                            inputE.classList.add('bg-emerald-100', 'text-emerald-700');
+                        } else {
+                            inputE.classList.remove('bg-emerald-100', 'text-emerald-700');
+                            inputE.classList.add('bg-red-100', 'text-red-700');
+                            allCorrect = false;
+                        }
+                    }
+
+                    if (allCorrect) {
+                        alert("Xuất sắc! Em đã đoán đúng thế kỉ của các sự kiện lịch sử! 🏆🎉");
+                        if(window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+                    } else {
+                        alert("Có một vài sự kiện em xác định chưa đúng thế kỉ. Em thử xem lại và viết số La Mã nhé! 🤔");
+                        if(window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+                    }
+                };
+
+                window.check130_2 = function() {
+                    const ans = [
+                        {id: 'ans-130-2-a1', val: '1.5', val2: '1,5'}, 
+                        {id: 'ans-130-2-a2', val: '0.7', val2: '0,7'},
+                        {id: 'ans-130-2-b1', val: '1.25', val2: '1,25'}, 
+                        {id: 'ans-130-2-b2', val: '2.45', val2: '2,45'}
+                    ];
+                    let allCorrect = true;
+
+                    for(let i=0; i<ans.length; i++) {
+                        const el = document.getElementById(ans[i].id);
+                        const userVal = el.value.trim().replace(',', '.'); // Allow both comma and dot input
+                        if(userVal === ans[i].val || userVal === ans[i].val2) {
+                            el.classList.remove('border-emerald-200', 'border-red-400', 'text-red-600', 'bg-red-50');
+                            el.classList.add('border-emerald-500', 'text-emerald-700', 'bg-emerald-50');
+                        } else {
+                            el.classList.remove('border-emerald-200', 'border-emerald-500', 'text-emerald-700', 'bg-emerald-50');
+                            el.classList.add('border-red-400', 'text-red-600', 'bg-red-50');
+                            allCorrect = false;
+                        }
+                    }
+
+                    if (allCorrect) {
+                        alert("Chính xác tuyệt đối! Em đổi đơn vị số thập phân rất giỏi! ✨");
+                        if(window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+                    } else {
+                        alert("Chưa chính xác hoàn toàn. Hãy nhớ lại kiến thức đổi ra số thập phân ở phần Mẫu nhé (Chia cho 60)! 🤔");
+                        if(window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+                    }
+                };
+
+                window.submit130 = function() {
+                    let score = 0;
+                    const answers = ["I", "X", "XI", "XIII", "XX", "XX"];
+                    for (let i = 0; i < 6; i++) {
+                        const inputE = document.getElementById('ans-130-1-' + (i+1));
+                        if(inputE.value.trim().toUpperCase() === answers[i]) score += 1;
+                    }
+
+                    const ans2 = ['1.5', '0.7', '1.25', '2.45'];
+                    const ids2 = ['ans-130-2-a1', 'ans-130-2-a2', 'ans-130-2-b1', 'ans-130-2-b2'];
+                    for (let i = 0; i < 4; i++) {
+                        const inputE = document.getElementById(ids2[i]);
+                        const val = inputE.value.trim().replace(',', '.');
+                        if(val === ans2[i]) score += 1;
+                    }
+
+                    const finalScore = Math.min(10, Math.round(score));
+                    if (window.submitMathLesson) {
+                        window.submitMathLesson("Tiết 130: " + finalScore + "/10", finalScore * 10, "btn-submit-130");
+                    }
+                    alert("Kết quả của em: " + finalScore + "/10. Hãy lưu lại trong nhật ký Toán học nhé! 🌈");
+                }
+            </script>
+        </div>
+    `,
+    "quizPool": [
+        { "question": "Năm 2024 thuộc thế kỉ thứ mấy?", "options": ["XX", "XXI", "XV", "XIX"], "answer": 1, "level": 1 },
+        { "question": "1 năm nhuận có bao nhiêu ngày?", "options": ["365 ngày", "366 ngày", "364 ngày", "360 ngày"], "answer": 1, "level": 1 },
+        { "question": "Tháng nào sau đây chỉ có 28 hoặc 29 ngày?", "options": ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4"], "answer": 1, "level": 1 },
+        { "question": "Thế kỉ thứ XV kéo dài từ năm nào đến năm nào?", "options": ["Từ năm 1400 đến 1499", "Từ năm 1500 đến 1599", "Từ năm 1401 đến 1500", "Từ năm 1501 đến 1600"], "answer": 2, "level": 2 },
+        { "question": "1 thế kỉ bằng bao nhiêu năm?", "options": ["10 năm", "50 năm", "100 năm", "1000 năm"], "answer": 2, "level": 1 },
+        { "question": "Tháng nào sau đây có 31 ngày?", "options": ["Tháng 4", "Tháng 6", "Tháng 8", "Tháng 11"], "answer": 2, "level": 1 },
+        { "question": "Tháng nào sau đây có 30 ngày?", "options": ["Tháng 3", "Tháng 9", "Tháng 10", "Tháng 12"], "answer": 1, "level": 1 },
+        { "question": "Đổi 120 phút bằng bao nhiêu giờ?", "options": ["1,5 giờ", "2 giờ", "2,5 giờ", "1,2 giờ"], "answer": 1, "level": 1 },
+        { "question": "Đổi 2,5 năm bằng bao nhiêu tháng?", "options": ["25 tháng", "30 tháng", "24 tháng", "12 tháng"], "answer": 1, "level": 2 },
+        { "question": "Năm 1010 Vua Lý Công Uẩn dời đô về Thăng Long. Kỉ niệm 1000 năm Thăng Long - Hà Nội vào thế kỉ nào?", "options": ["Thế kỉ XX", "Thế kỉ XXI", "Thế kỉ XIX", "Thế kỉ X"], "answer": 1, "level": 3 }
+    ]
+};

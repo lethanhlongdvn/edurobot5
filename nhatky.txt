@@ -559,3 +559,8 @@ Khởi tạo thành công cấu trúc môn Khoa học: js/data/science/cungco, i
 - Bài học: Toán 5 - Các tiết
 - Mô tả thay đổi: Thống nhất ký hiệu "c" là chiều cao của hình hộp chữ nhật thay cho "h" trên toàn bộ ngân hàng câu trắc nghiệm và nội dung bài giảng nhằm đồng bộ chuẩn kiến thức (đã tự động rà soát và thay đổi trong 122.js, 129.js, cungco117.txt...).
 - Trạng thái hiện tại: Hoàn thành chuẩn hóa ký hiệu toán học.
+
+[21:40] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 130
+- Mô tả thay đổi: Hoàn thành Tiết 130 (Các đơn vị đo thời gian). Đã thiết kế giao diện điền và chấm điểm tự động cho Bài 1 (Điền thế kỉ cho mốc lịch sử có kèm hình ảnh) và Bài 2 (Đổi thời gian từ đơn vị nhỏ sang đơn vị lớn dạng thập phân). Cập nhật ngân hàng 10 câu hỏi Củng cố trực tiếp vào file mã nguồn dựa trên nội dung tiết học.
+- Trạng thái hiện tại: Bài học 130 đã sẵn sàng để sử dụng.

@@ -1,0 +1,207 @@
+--- Page 1 ---
+Tiết Tên bài học
+1 Bài 1. Ôn tập số tự nhiên (tiết 1)
+2 Bài 1. Ôn tập số tự nhiên (tiết 2)
+3 Bài 2. Ôn tập các phép tính với số tự nhiên (Tiết 1)
+4 Bài 2. Ôn tập các phép tính với số tự nhiên (Tiết 2)
+5 Bài 3. Ôn tập phân số (Tiết 1)
+6 Bài 3. Ôn tập phân số (Tiết 2)
+7 Bài 4. Phân số thập phân
+8 Bài 5. Ôn tập các phép tính với phân số (Tiết 1)
+9 Bài 5. Ôn tập các phép tính với phân số (Tiết 2)
+10 Bài 5. Ôn tập các phép tính với phân số (Tiết 3)
+11 Bài 6. Cộng, trừ hai phân số khác mẫu số (Tiết 1)
+12 Bài 6. Cộng, trừ hai phân số khác mẫu số (Tiết 2)
+13 Bài 7. Hỗn số (Tiết 1)
+14 Bài 7. Hỗn số (Tiết 2)
+15 Bài 8. Ôn tập hình học và đo lường (Tiết 1)
+16 Bài 8. Ôn tập hình học và đo lường (Tiết 2)
+17 Bài 9. Luyện tập chung (tiết 1)
+18 Bài 9. Luyện tập chung (tiết 2)
+19 Bài 9. Luyện tập chung (tiết 3)
+20 Bài 10. Khái niệm số thập phân (Tiết 1)
+21 Bài 10. Khái niệm số thập phân (Tiết 2)
+22 Bài 10. Khái niệm số thập phân (Tiết 3)
+23 Bài 11. So sánh các số thập phân (Tiết 1)
+24 Bài 11. So sánh các số thập phân (Tiết 2)
+25 Bài 12. Viết số đo đại lượng dưới dạng số thập phân (Tiết 1)
+26 Bài 12. Viết số đo đại lượng dưới dạng số thập phân (Tiết 2)
+27 Bài 12. Viết số đo đại lượng dưới dạng số thập phân (Tiết 3
+28 Bài 13. Làm tròn số thập phân (Tiết 1)
+29 Bài 13. Làm tròn số thập phân (Tiết 2)
+30 Bài 14. Luyện tập chung (Tiết 1)BẢNG PHÂN PHỐI CHƯƠNG TRÌNH
+Môn Toán, Phân môn Chính, Lớp 5/4
+--- Page 2 ---
+31 Bài 14. Luyện tập chung (Tiết 2)
+32 Bài 15. Ki-lô-mét vuông. Héc-ta (tiết 1)
+33 Bài 15. Ki-lô-mét vuông. Héc-ta (tiết 2)
+34 Bài 16. Các đơn vị đo diện tích (Tiết 1)
+35 Bài 16. Các đơn vị đo diện tích (Tiết 2)
+36 Bài 17. Thực hành và trải nghiệm với một số đơn vị đo đại lượng (Tiết 1)
+37 Bài 17. Thực hành và trải nghiệm với một số đơn vị đo đại lượng (Tiết 2)
+38 Bài 18. Luyện tập chung (Tiết 1)
+39 Bài 18. Luyện tập chung (Tiết 2)
+40 Bài 19: Phép cộng số thập phân (Tiết 1)
+41 Bài 19: Phép cộng số thập phân (Tiết 2)
+42 Bài 20. Phép trừ số thập phân (Tiết 1)
+43 Bài 20. Phép trừ số thập phân (Tiết 2)
+44 Bài 21: Phép nhân số thập phân (Tiết 1)
+45 Bài 21: Phép nhân số thập phân (Tiết 2)
+46 Bài 21: Phép nhân số thập phân (Tiết 3)
+47 Bài 22: Phép chia số thập phân (Tiết 1)
+48 Bài 22: Phép chia số thập phân (Tiết 2)
+49 Bài 22: Phép chia số thập phân (Tiết 3)
+50 Bài 22: Phép chia số thập phân (Tiết 4)
+51 Bài 23. Nhân, chia số thập phân với 10; 100; 1000;... hoặc với 0,1; 0,01;0,001… (Tiết 1)
+52 Bài 23. Nhân, chia số thập phân với 10; 100; 1000;... hoặc với 0,1; 0,01;0,001… (Tiết 2)
+53 Bài 24. Luyện tập chung (Tiết 1)
+54 Bài 24. Luyện tập chung (Tiết 2)
+55 Bài 24. Luyện tập chung (Tiết 3)
+56 Bài 25. Hình tam giác. Diện tích hình tam giác (Tiết 1)
+57 Bài 25. Hình tam giác. Diện tích hình tam giác (Tiết 2)
+58 Bài 25. Hình tam giác. Diện tích hình tam giác (Tiết 3)
+59 Bài 25. Hình tam giác. Diện tích hình tam giác (Tiết 4)
+60 Bài 26. Hình thang. Diện tích hình thang (Tiết 1)
+61 Bài 26. Hình thang. Diện tích hình thang (Tiết 2)
+62 Bài 26. Hình thang. Diện tích hình thang (Tiết 3)
+63 Bài 26. Hình thang. Diện tích hình thang (Tiết 4)
+--- Page 3 ---
+64 Bài 27. Đường tròn. Chu vi và diện tích hình tròn (Tiết 1)
+65 Bài 27. Đường tròn. Chu vi và diện tích hình tròn (Tiết 2)
+66 Bài 27. Đường tròn. Chu vi và diện tích hình tròn (Tiết 3)
+67 Bài 27. Đường tròn. Chu vi và diện tích hình tròn (Tiết 4)
+68 Bài 27. Đường tròn. Chu vi và diện tích hình tròn (Tiết 5)
+69 Bài 28. Thực hành và trải nghiệm đo, vẽ, lắp ghép, tạo hình (Tiết 1)
+70 Bài 28. Thực hành và trải nghiệm đo, vẽ, lắp ghép, tạo hình (Tiết 2)
+71 Bài 29. Luyện tập chung (Tiết 1)
+72 Bài 29. Luyện tập chung (Tiết 2)
+73 Bài 29. Luyện tập chung (Tiết 3)
+74 Bài 30. Ôn tập số thập phân (Tiết 1)
+75 Bài 30. Ôn tập số thập phân (Tiết 2)
+76 Bài 30. Ôn tập số thập phân (Tiết 3)
+77 Bài 31. Ôn tập các phép tính với số thập phân (Tiết 1)
+78 Bài 31. Ôn tập các phép tính với số thập phân (Tiết 2)
+79 Bài 31. Ôn tập các phép tính với số thập phân (Tiết 3)
+80 Bài 31. Ôn tập các phép tính với số thập phân (Tiết 4)
+81 Bài 32. Ôn tập một số hình phẳng (Tiết 1)
+82 Bài 32. Ôn tập một số hình phẳng (Tiết 2)
+83 Bài 33. Ôn tập diện tích, chu vi một số hình phẳng (Tiết 1)
+84 Bài 33. Ôn tập diện tích, chu vi một số hình phẳng (Tiết 2)
+85 Bài 33. Ôn tập diện tích, chu vi một số hình phẳng (Tiết 3)
+86 Bài 34: Ôn tập đo lường (Tiết 1)
+87 Bài 34: Ôn tập đo lường (Tiết 2)
+88 Bài 35: Ôn tập chung (Tiết 1)
+89 Bài 35: Ôn tập chung (Tiết 2)
+90 Bài 35: Ôn tập chung (Tiết 3)
+91 Bài 36. Tỉ số. Tỉ số phần trăm (tiết 1)
+92 Bài 36. Tỉ số. Tỉ số phần trăm (tiết 2)
+93 Bài 37. Tỉ lệ bản đồ và ứng dụng (tiết 1)
+94 Bài 37. Tỉ lệ bản đồ và ứng dụng (tiết 2)
+95 Bài 38. Tìm hai số khi biết tổng và tỉ số của hai số đó (tiết 1)
+96 Bài 38. Tìm hai số khi biết tổng và tỉ số của hai số đó (tiết 2)
+--- Page 4 ---
+97 Bài 39. Tìm hai số khi biết hiệu và tỉ số của hai số đó (tiết 1)
+98 Bài 39. Tìm hai số khi biết hiệu và tỉ số của hai số đó (tiết 2)
+99 Bài 40. Tìm tỉ số phần trăm của hai số (tiết 1)
+100 Bài 40. Tìm tỉ số phần trăm của hai số (tiết 2)
+101 Bài 41. Tìm giá trị phần trăm của một số (tiết 1)
+102 Bài 41. Tìm giá trị phần trăm của một số (tiết 2)
+103 Bài 42. Máy tính cầm tay (tiết 1)
+104 Bài 42. Máy tính cầm tay (tiết 2)
+105 Bài 43. Thực hành và trải nghiệm sử dụng máy tính cầm tay
+106 Bài 44. Luyện tập chung (tiết 1)
+107 Bài 44. Luyện tập chung (tiết 2)
+108 Bài 45. Thể tích của một hình
+109 Bài 46. Xăng-ti-mét khối. Đề-xi-mét khối (tiết 1)
+110 Bài 46. Xăng-ti-mét khối. Đề-xi-mét khối (tiết 2)
+111 Bài 47. Mét khối (tiết 1)
+112 Bài 47. Mét khối (tiết 2)
+113 Bài 48. Luyện tập chung (tiết 1)
+114 Bài 48. Luyện tập chung (tiết 2)
+115 Bài 49. Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ (tiết 1)
+116 Bài 49. Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ (tiết 2)
+117 Bài 50. Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (tiết 1)
+118 Bài 50. Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (tiết 2)
+119 Bài 50. Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật (tiết 3)
+120 Bài 51. Diện tích xung quanh và diện tích toàn phần của hình lập phương (tiết 1)
+121 Bài 51. Diện tích xung quanh và diện tích toàn phần của hình lập phương (tiết 2)
+122 Bài 52. Thể tích của hình hộp chữ nhật (tiết 1)
+123 Bài 52. Thể tích của hình hộp chữ nhật (tiết 2)
+124 Bài 53. Thể tích của hình lập phương (tiết 1)
+125 Bài 53. Thể tích của hình lập phương (tiết 2)
+126 Bài 54. Thực hành tính toán và ước lượng thể tích một số hình khối
+127 Bài 55. Luyện tập chung (Tiết 1)
+128 Bài 55. Luyện tập chung (Tiết 2)
+129 Bài 55. Luyện tập chung (Tiết 3)
+--- Page 5 ---
+130 Bài 56. Các đơn vị đo thời gian
+131 Bài 57. Cộng, trừ số đo thời gian (tiết 1)
+132 Bài 57. Cộng, trừ số đo thời gian (tiết 2)
+133 Bài 58. Nhân, chia số đo thời gian với một số (tiết 1)
+134 Bài 58. Nhân, chia số đo thời gian với một số (tiết 2)
+135 Bài 58. Nhân, chia số đo thời gian với một số (tiết 3)
+136 Bài 59. Vận tốc của một chuyển động đều (tiết 1)
+137 Bài 59. Vận tốc của một chuyển động đều (tiết 2)
+138 Bài 60. Quãng đường, thời gian của một chuyển động đều (tiết 1)
+139 Bài 60. Quãng đường, thời gian của một chuyển động đều (tiết 2)
+140 Bài 60. Quãng đường, thời gian của một chuyển động đều (tiết 3)
+141 Bài 61. Thực hành tính toán và ước lượng về vận tốc, quãng đường, thời gian trong chuyển động đều (Tiết 1)
+142 Bài 61. Thực hành tính toán và ước lượng về vận tốc, quãng đường, thời gian trong chuyển động đều (Tiết 2)
+143 Bài 62. Luyện tập chung (Tiết 1)
+144 Bài 62. Luyện tập chung (Tiết 2)
+145 Bài 62. Luyện tập chung (Tiết 3)
+146 Bài 63. Thu thập, phân loại, sắp xếp các số liệu
+147 Bài 64. Biểu đồ hình quạt tròn (Tiết 1)
+148 Bài 64. Biểu đồ hình quạt tròn (Tiết 2)
+149 Bài 65. Tỉ số của số lần lặp lại một sự kiện so với tổng số lần thực hiện
+150 Bài 66. Thực hành và trải nghiệm thu thập, phân tích, biểu diễn các số liệu thống kê (Tiết 1)
+151 Bài 66. Thực hành và trải nghiệm thu thập, phân tích, biểu diễn các số liệu thống kê (Tiết 2)
+152 Bài 67. Luyện tập chung
+153 Bài 68. Ôn tập số tự nhiên, phân số, số thập phân (tiết 1)
+154 Bài 68. Ôn tập số tự nhiên, phân số, số thập phân (tiết 2)
+155 Bài 68. Ôn tập số tự nhiên, phân số, số thập phân (tiết 3)
+156 Bài 69. Ôn tập các phép tính với số tự nhiên, phân số, số thập phân (Tiết 1)
+157 Bài 69. Ôn tập các phép tính với số tự nhiên, phân số, số thập phân (Tiết 2)
+158 Bài 69. Ôn tập các phép tính với số tự nhiên, phân số, số thập phân (Tiết 3)
+159 Bài 69. Ôn tập các phép tính với số tự nhiên, phân số, số thập phân (Tiết 4)
+160 Bài 70. Ôn tập tỉ số, tỉ số phần trăm (Tiết 1)
+161 Bài 70. Ôn tập tỉ số, tỉ số phần trăm (Tiết 2)
+162 Bài 71. Ôn tập hình học (Tiết 1)
+--- Page 6 ---
+163 Bài 71. Ôn tập hình học (Tiết 2)
+164 Bài 71. Ôn tập hình học (Tiết 3)
+165 Bài 71. Ôn tập hình học (Tiết 4)
+166 Bài 72. Ôn tập đo lường (tiết 1)
+167 Bài 72. Ôn tập đo lường (tiết 2)
+168 Bài 73. Ôn tập toán chuyển động đều (tiết 1)
+169 Bài 73. Ôn tập toán chuyển động đều (tiết 2)
+170 Bài 74. Ôn tập một số yếu tố thống kê và xác suất (Tiết 1)
+171 Bài 74. Ôn tập một số yếu tố thống kê và xác suất (Tiết 2)
+172 Bài 75. Ôn tập chung (tiết 1)
+173 Bài 75. Ôn tập chung (tiết 2)
+174 Bài 75. Ôn tập chung (tiết 3)
+175 Bài 75. Ôn tập chung (tiết 4)
+--- Page 7 ---
+
+--- Page 8 ---
+
+--- Page 9 ---
+
+--- Page 10 ---
+
+--- Page 11 ---
+
+--- Page 12 ---
+
+--- Page 13 ---
+
+--- Page 14 ---
+
+--- Page 15 ---
+
+--- Page 16 ---
+
+--- Page 17 ---
+
+--- Page 18 ---
+
