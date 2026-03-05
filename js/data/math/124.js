@@ -62,8 +62,8 @@ export const lesson124 = {
             </div>
 
                 <!-- 💥 MODAL 3D FULLSCREEN 💥 -->
-                <div id="modal-124-khampha" class="fixed inset-0 z-[9999] bg-slate-900/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-md" onclick="window.closeKhamPhaModal124()">
-                    <div class="bg-purple-50 w-[96%] max-w-5xl h-[90vh] max-h-[900px] rounded-[40px] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative flex flex-col" onclick="event.stopPropagation()">
+                <div id="modal-124-khampha" class="fixed inset-0 z-[9999] bg-slate-900/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-md" p-4" onclick="window.closeKhamPhaModal124()">
+                    <div class="bg-purple-50 w-[96%] max-w-5xl h-[94vh] max-h-[1000px] rounded-[40px] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative flex flex-col" onclick="event.stopPropagation()">
                         <!-- Header -->
                         <div class="bg-purple-600 bg-gradient-to-r from-purple-700 to-indigo-600 text-white p-5 flex justify-between items-center shrink-0 shadow-lg z-20 relative">
                             <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight flex items-center gap-4">
@@ -74,9 +74,9 @@ export const lesson124 = {
                             </button>
                         </div>
                         <!-- Body -->
-                        <div class="flex-grow flex flex-col p-4 md:p-6 gap-4 overflow-hidden relative">
+                        <div class="flex-grow flex flex-col p-4 md:p-6 gap-4 relative">
                             <!-- Left: 3D Simulator -->
-                            <div class="flex-1 flex flex-col items-center justify-center bg-gradient-to-br from-slate-800 to-purple-950 p-2 md:p-6 rounded-[32px] shadow-2xl border-4 border-purple-200 overflow-hidden relative">
+                            <div class="flex-1 flex flex-col items-center justify-center bg-gradient-to-br from-slate-800 to-purple-950 p-2 md:p-6 rounded-[32px] shadow-2xl border-4 border-purple-200 relative">
                                 <div class="absolute top-4 left-4 inline-block bg-sky-500/20 border border-sky-400/50 text-sky-300 px-4 py-1.5 rounded-full font-bold text-sm uppercase tracking-wider backdrop-blur-sm z-10 w-auto">Mô phỏng 3D Tương tác</div>
                                 <!-- 3D SCENE -->
                                 <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px]" id="scene-124">
