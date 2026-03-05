@@ -6,11 +6,22 @@ export const lesson125 = {
     desc: "Bài 53: Luyện tập tính thể tích hình lập phương qua các bài tập ghép hình và giải toán thực tế (Trang 56-57).",
     content: `
         <div class="space-y-8 animate-fade-in pb-10">
-            <!-- Hero -->
-            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-900 rounded-[32px] md:rounded-[48px] p-8 md:p-12 border border-emerald-100 dark:border-slate-700 shadow-sm relative overflow-hidden">
-                <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-20 h-20 md:w-28 md:h-28 bg-emerald-600 rounded-3xl flex items-center justify-center text-5xl md:text-8xl shadow-xl shadow-emerald-200 dark:shadow-emerald-900/40 shrink-0 transform rotate-6 text-white font-black italic">V</div>
-                    <p class="text-2xl md:text-4xl text-emerald-700 dark:text-emerald-400 font-bold italic leading-relaxed text-center md:text-left">Luyện tập tính thể tích hình lập phương qua bài tập trắc nghiệm, bảng tính, ghép khối và bài toán thực tế.</p>
+            <!-- 🖍️ Công thức Ghi nhớ -->
+            <div class="bg-rose-50 p-8 rounded-[48px] border-4 border-rose-200 shadow-xl relative overflow-hidden">
+                <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-rose-200/50 rounded-full blur-2xl"></div>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="flex justify-center">
+                        <img src="hinh_anh/toan/toan_tap_2/124-formula.png" alt="Công thức" class="w-full max-w-[400px] h-auto rounded-3xl shadow-xl">
+                    </div>
+                    <div class="bg-white p-8 rounded-[40px] shadow-inner border-2 border-rose-100">
+                        <h4 class="text-xl font-black text-rose-600 uppercase mb-3 tracking-widest text-center">Quy tắc cần nhớ</h4>
+                        <p class="text-xl md:text-2xl font-bold text-gray-800 leading-relaxed text-center italic">
+                            "Thể tích <span class="text-rose-600 font-black">V</span> của hình lập phương có cạnh <span class="text-rose-600 font-black italic text-3xl">a</span> được tính theo công thức:"
+                        </p>
+                        <div class="mt-6 bg-rose-600 p-4 rounded-3xl text-white text-center shadow-lg">
+                            <p class="text-3xl md:text-5xl font-black tracking-wide italic drop-shadow-md">V = a &times; a &times; a</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
