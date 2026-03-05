@@ -674,3 +674,8 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - Bài học: Toán 5 - Tiết 128
 - Mô tả thay đổi: Fix lỗi định dạng text bold (thay ** thành thẻ <b>) trong phần Ghi chú của bài học.
 - Trạng thái hiện tại: Đã sửa và chuẩn bị cập nhật lên GitHub.
+
+[17:08] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 128
+- Mô tả thay đổi: Sửa đáp án đúng Câu 1 (Luyện tập) từ A sang D.
+- Trạng thái hiện tại: Đã cập nhật.

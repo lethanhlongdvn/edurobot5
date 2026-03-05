@@ -276,12 +276,12 @@ export const lesson128 = {
             const feedback = document.getElementById('feedback-128-1');
             feedback.classList.remove('opacity-0', 'text-emerald-600', 'text-red-500', 'bg-emerald-50', 'bg-red-50');
 
-            if (option === 'A') {
-                feedback.innerText = "Tuyệt vời! Hình A chính là hình khai triển của một hình hộp chữ nhật. 🌟";
+            if (option === 'D') {
+                feedback.innerText = "Tuyệt vời! Hình D chính là hình khai triển của một hình lập phương. 🌟";
                 feedback.classList.add('text-emerald-600', 'bg-emerald-50');
                 if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
             } else {
-                feedback.innerText = "Tiếc quá, chưa chính xác! Bạn hãy xem kĩ số lượng và vị trí các mặt nhé. 🧐";
+                feedback.innerText = "Tiếc quá, chưa chính xác! Bạn hãy xem kĩ vị trí các mặt và ký hiệu nhé. 🧐";
                 feedback.classList.add('text-red-500', 'bg-red-50');
                 if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
             }
