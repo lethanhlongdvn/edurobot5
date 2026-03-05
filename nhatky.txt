@@ -638,3 +638,8 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - File thay đổi: js/data/math/124.js
 - Mô tả thay đổi: Cập nhật giao diện phần Khám phá (Tìm hiểu bài) theo chuẩn thiết kế mới, nhúng trình mô phỏng khối lập phương 3D tương tác (kích thước 3x3x3). Khắc phục lỗi DOM HTML khiến nút 3D bị ẩn.
 - Trạng thái hiện tại: Đã cập nhật xong, trình mô phỏng 3D Bài 124 hoạt động tốt.
+
+[10:48] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 124
+- Mô tả thay đổi: Hoàn tất kiểm tra Phần Luyện tập. Chức năng nhập bảng điền số, AI chấm tự luận bài toán Bánh bông lan, và Câu hỏi trắc nghiệm đếm hình lập phương (Bài 3) hoạt động hoàn hảo, phản hồi chính xác. CSS Layout đồng nhất.
+- Trạng thái hiện tại: Bài 124 đã hoàn thành 100% bao gồm cả 3 tab Tìm hiểu, Luyện tập và Củng cố.
