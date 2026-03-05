@@ -19,39 +19,39 @@ export const lesson129 = {
                 <div class="absolute -left-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 gap-10">
                 <!-- Nhắc lại công thức diện tích -->
-                <div class="bg-white dark:bg-slate-800 p-8 rounded-[40px] border-2 border-indigo-100 shadow-sm space-y-6">
-                    <div class="flex items-center gap-4 mb-2">
-                        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-2xl">📐</div>
-                        <h3 class="text-2xl md:text-3xl font-black text-indigo-900 dark:text-indigo-100">Diện tích</h3>
+                <div class="bg-white dark:bg-slate-800 p-10 md:p-14 rounded-[48px] border-4 border-indigo-100 shadow-xl space-y-8">
+                    <div class="flex items-center gap-6 mb-4">
+                        <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center text-4xl shadow-inner">📐</div>
+                        <h3 class="text-4xl md:text-6xl font-black text-indigo-900 dark:text-indigo-100 uppercase tracking-tighter">Diện tích</h3>
                     </div>
-                    <div class="space-y-4">
-                        <div class="p-6 bg-indigo-50/50 dark:bg-slate-900 rounded-2xl border border-indigo-50 leading-relaxed text-center">
-                            <p class="font-bold text-indigo-700 text-xl md:text-2xl mb-2">Hình lập phương:</p>
-                            <p class="text-2xl md:text-4xl font-black tracking-tight">S<sub>tp</sub> = a × a × 6</p>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="p-8 bg-indigo-50/50 dark:bg-slate-900 rounded-[32px] border-2 border-indigo-50 leading-relaxed text-center shadow-sm">
+                            <p class="font-bold text-indigo-700 text-2xl md:text-4xl mb-4">Hình lập phương:</p>
+                            <p class="text-4xl md:text-7xl font-black tracking-tight text-slate-800 dark:text-white">S<sub>tp</sub> = a × a × 6</p>
                         </div>
-                        <div class="p-6 bg-blue-50/50 dark:bg-slate-900 rounded-2xl border border-blue-50 leading-relaxed text-center">
-                            <p class="font-bold text-blue-700 text-xl md:text-2xl mb-2">Hình hộp chữ nhật:</p>
-                            <p class="text-2xl md:text-4xl font-black tracking-tight">S<sub>tp</sub> = S<sub>xq</sub> + S<sub>đáy</sub> × 2</p>
+                        <div class="p-8 bg-blue-50/50 dark:bg-slate-900 rounded-[32px] border-2 border-blue-50 leading-relaxed text-center shadow-sm">
+                            <p class="font-bold text-blue-700 text-2xl md:text-4xl mb-4">Hình hộp chữ nhật:</p>
+                            <p class="text-3xl md:text-6xl font-black tracking-tight text-slate-800 dark:text-white">S<sub>tp</sub> = S<sub>xq</sub> + S<sub>đáy</sub> × 2</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Nhắc lại công thức thể tích -->
-                <div class="bg-white dark:bg-slate-800 p-8 rounded-[40px] border-2 border-emerald-100 shadow-sm space-y-6">
-                    <div class="flex items-center gap-4 mb-2">
-                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-2xl">🧪</div>
-                        <h3 class="text-2xl md:text-3xl font-black text-emerald-900 dark:text-emerald-100">Thể tích</h3>
+                <div class="bg-white dark:bg-slate-800 p-10 md:p-14 rounded-[48px] border-4 border-emerald-100 shadow-xl space-y-8">
+                    <div class="flex items-center gap-6 mb-4">
+                        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-4xl shadow-inner">🧪</div>
+                        <h3 class="text-4xl md:text-6xl font-black text-emerald-900 dark:text-emerald-100 uppercase tracking-tighter">Thể tích</h3>
                     </div>
-                    <div class="space-y-4">
-                        <div class="p-6 bg-emerald-50/50 dark:bg-slate-900 rounded-2xl border border-emerald-50 leading-relaxed text-center">
-                            <p class="font-bold text-emerald-700 text-xl md:text-2xl mb-2">Thể tích (V):</p>
-                            <p class="text-2xl md:text-4xl font-black tracking-tight uppercase">V = S<sub>đ</sub> × C</p>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="p-8 bg-emerald-50/50 dark:bg-slate-900 rounded-[32px] border-2 border-emerald-50 leading-relaxed text-center shadow-sm">
+                            <p class="font-bold text-emerald-700 text-2xl md:text-4xl mb-4">Thể tích (V):</p>
+                            <p class="text-4xl md:text-7xl font-black tracking-tight uppercase text-slate-800 dark:text-white">V = S<sub>đ</sub> × C</p>
                         </div>
-                        <div class="p-6 bg-teal-50/50 dark:bg-slate-900 rounded-2xl border border-teal-50 leading-relaxed text-center">
-                            <p class="font-bold text-teal-700 text-xl md:text-2xl mb-2">Quan hệ:</p>
-                            <p class="text-2xl md:text-4xl font-black tracking-tight uppercase">C = V : S<sub>đ</sub></p>
+                        <div class="p-8 bg-teal-50/50 dark:bg-slate-900 rounded-[32px] border-2 border-teal-50 leading-relaxed text-center shadow-sm">
+                            <p class="font-bold text-teal-700 text-2xl md:text-4xl mb-4">Quan hệ:</p>
+                            <p class="text-4xl md:text-7xl font-black tracking-tight uppercase text-slate-800 dark:text-white">C = V : S<sub>đ</sub></p>
                         </div>
                     </div>
                 </div>

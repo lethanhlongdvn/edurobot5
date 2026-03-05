@@ -704,3 +704,8 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - Bài học: Toán 5 - Tiết 129
 - Mô tả thay đổi: Cập nhật giao diện Bài 2, 3, 4 sang dạng ô trình bày bài giải (có textarea ghi lời giải và ô đáp số riêng biệt).
 - Trạng thái hiện tại: Hoàn tất cập nhật layout.
+
+[18:24] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 129
+- Mô tả thay đổi: Thay đổi layout Ghi nhớ sang dạng dọc (Thể tích dưới Diện tích) và tăng cỡ chữ cực đại (max-size) để phù hợp hiển thị trên TV.
+- Trạng thái hiện tại: Đã cập nhật layout và font.
