@@ -271,17 +271,17 @@ export const lesson129 = {
         { "question": "Hộp lập phương cạnh 2,5dm. Diện tích một mặt là:", "options": ["6,25 dm²", "2,5 dm²", "5 dm²", "6,25 dm³"], "answer": 0, "level": 1 },
         { "question": "Nếu cắt đi một khối gỗ thể tích 8dm³ từ khối gỗ 45dm³ thì phần còn lại là:", "options": ["37 dm³", "53 dm³", "35 dm³", "40 dm³"], "answer": 0, "level": 1 },
         { "question": "Mực nước trong bể Fig 1 cao 8cm, đáy 8x8. Thể tích nước là:", "options": ["512 cm³", "64 cm³", "192 cm³", "256 cm³"], "answer": 0, "level": 1 },
-        { "question": "Thể tích nước 512 cm³, đáy mới 16x8. Chiều cao h là:", "options": ["4 cm", "8 cm", "2 cm", "16 cm"], "answer": 0, "level": 1 },
+        { "question": "Thể tích nước 512 cm³, đáy mới 16x8. Chiều cao c là:", "options": ["4 cm", "8 cm", "2 cm", "16 cm"], "answer": 0, "level": 1 },
 
         { "question": "Diện tích toàn phần của hình lập phương cạnh a là:", "options": ["a × a × 4", "a × a × 6", "a × a × a", "a × 4 × 6"], "answer": 1, "level": 2 },
         { "question": "Một hình lập phương có diện tích một mặt là 9 cm². Thể tích của nó là:", "options": ["27 cm³", "18 cm³", "54 cm³", "81 cm³"], "answer": 0, "level": 2 },
         { "question": "Đổi 2,5 dm² sang cm² ta được:", "options": ["250 cm²", "25 cm²", "2500 cm²", "0,25 cm²"], "answer": 0, "level": 2 },
-        { "question": "Muốn tính thể tích HHCN khi biết diện tích đáy S và chiều cao h:", "options": ["V = S × h", "V = S : h", "V = h : S", "V = S + h"], "answer": 0, "level": 2 },
+        { "question": "Muốn tính thể tích HHCN khi biết diện tích đáy S và chiều cao c:", "options": ["V = S × c", "V = S : c", "V = c : S", "V = S + c"], "answer": 0, "level": 2 },
         { "question": "HHCN có V = 120 cm³, đáy có diện tích 30 cm². Chiều cao là:", "options": ["4 cm", "40 cm", "4 dm", "4 mm"], "answer": 0, "level": 2 },
 
         { "question": "Gấp cạnh hình lập phương lên 2 lần thì diện tích toàn phần tăng:", "options": ["2 lần", "4 lần", "6 lần", "8 lần"], "answer": 1, "level": 3 },
         { "question": "Gấp cạnh hình lập phương lên 2 lần thì thể tích tăng:", "options": ["2 lần", "4 lần", "8 lần", "16 lần"], "answer": 2, "level": 3 },
-        { "question": "Bình chứa 1 lít nước (1 dm³). Đổ vào hộp đáy 10x10 cm thì h là:", "options": ["10 cm", "1 cm", "100 cm", "0,1 cm"], "answer": 0, "level": 3 },
+        { "question": "Bình chứa 1 lít nước (1 dm³). Đổ vào hộp đáy 10x10 cm thì c là:", "options": ["10 cm", "1 cm", "100 cm", "0,1 cm"], "answer": 0, "level": 3 },
         { "question": "Một mặt hình lập phương có chu vi 20 cm. Thể tích là:", "options": ["125 cm³", "100 cm³", "150 cm³", "20 cm³"], "answer": 0, "level": 3 },
         { "question": "Khối gỗ 3dm x 3dm x 3dm. Cắt đi 1dm x 1dm x 1dm ở góc. Sxq có đổi không?", "options": ["Không đổi", "Tăng lên", "Giảm đi", "Tùy vị trí cắt"], "answer": 0, "level": 3 }
     ],
