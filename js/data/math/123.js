@@ -27,8 +27,6 @@ export const lesson123 = {
                     </div>
                 </div>
             </div>
-
-
         </div>
     `,
     practice: `
