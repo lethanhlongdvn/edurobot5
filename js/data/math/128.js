@@ -77,7 +77,7 @@ export const lesson128 = {
                     <span class="text-4xl shrink-0">💡</span>
                     <div>
                         <p class="text-xl md:text-2xl font-bold text-amber-900 dark:text-amber-200">Lưu ý cực kỳ quan trọng:</p>
-                        <p class="text-lg md:text-xl text-amber-800 dark:text-amber-300 mt-2">Khi tính diện tích và thể tích, các số đo (chiều dài, chiều rộng, chiều cao, cạnh) phải được đưa về **cùng một đơn vị đo** đấy nhé!</p>
+                        <p class="text-lg md:text-xl text-amber-800 dark:text-amber-300 mt-2">Khi tính diện tích và thể tích, các số đo (chiều dài, chiều rộng, chiều cao, cạnh) phải được đưa về <b class="text-amber-900 border-b-2 border-amber-400">cùng một đơn vị đo</b> đấy nhé!</p>
                     </div>
                 </div>
             </div>

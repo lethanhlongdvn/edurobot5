@@ -669,3 +669,8 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - Bài học: Toán 5 - Tiết 128
 - Mô tả thay đổi: Hoàn thành soạn bài Toán 5 - Tiết 128: Luyện tập chung về diện tích và thể tích hình hộp chữ nhật, hình lập phương. Bao gồm nội dung lý thuyết, bài tập luyện tập và bộ câu hỏi trắc nghiệm.
 - Trạng thái hiện tại: Đã tích hợp vào hệ thống, sẵn sàng sử dụng.
+
+[16:51] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 128
+- Mô tả thay đổi: Fix lỗi định dạng text bold (thay ** thành thẻ <b>) trong phần Ghi chú của bài học.
+- Trạng thái hiện tại: Đã sửa và chuẩn bị cập nhật lên GitHub.
