@@ -619,3 +619,9 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - Mô tả thay đổi: Sửa lỗi cú pháp HTML dư thừa (các thẻ đóng div không tương thích) gây ra lỗi trắng nội dung Tab Tìm hiểu bài ở Tiết 123.
 - Trạng thái hiện tại: Đã khắc phục lỗi hiển thị bài 123.
 
+[09:46] Ngày 05/03/2026
+- Bài học: Core Engine
+- File thay đổi: js/router.js
+- Mô tả thay đổi: Sửa lỗi trắng trang ở bài 123. Hàm \switchTab()\ gặp lỗi do biến \currentLessonPeriod\ lưu cứng dữ liệu từ URL, vô tình khiến dữ liệu không khớp với \lesson.period\.
+- Trạng thái hiện tại: Đã sửa. Trình chuyển tab nay có thể xử lý cả link chứa ID (\math_5_123\) lẫn Period (\123\).
+
