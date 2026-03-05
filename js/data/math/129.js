@@ -126,12 +126,15 @@ export const lesson129 = {
                         </div>
                         <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-teal-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-teal-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
-                            <div class="flex-grow space-y-6">
-                                <div class="p-6 bg-teal-50/50 dark:bg-slate-900 rounded-2xl border-2 border-dashed border-teal-200">
-                                    <p class="text-xl font-bold text-teal-800 dark:text-teal-200 mb-4 text-center">Diện tích nhựa cứng (Diện tích toàn phần):</p>
-                                    <div class="flex items-center justify-center gap-3">
-                                        <input type="number" step="0.1" id="ans-129-2" class="w-40 md:w-56 text-3xl md:text-5xl font-black text-teal-600 bg-white rounded-2xl text-center outline-none focus:ring-4 focus:ring-teal-200 p-4 border-2 border-teal-100 transition-all" placeholder="?">
-                                        <span class="text-2xl font-black text-gray-500">dm²</span>
+                            <div class="flex-grow flex flex-col gap-5">
+                                <p class="text-xl font-bold text-teal-800 dark:text-teal-200 uppercase tracking-tighter">— Trình bày bài giải —</p>
+                                <textarea id="wp-full-129-2" rows="5" class="w-full p-6 rounded-3xl border-2 border-teal-100 bg-teal-50/30 dark:bg-slate-900 outline-none focus:border-teal-400 text-xl md:text-2xl font-medium text-gray-700 dark:text-slate-200 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Lời giải: ...&#10;Phép tính: ..."></textarea>
+                                
+                                <div class="p-5 bg-white dark:bg-slate-900 rounded-2xl border-2 border-dashed border-teal-200 flex items-center justify-between gap-4 shadow-sm">
+                                    <span class="text-xl md:text-2xl font-black text-teal-800 dark:text-teal-200">Đáp số:</span>
+                                    <div class="flex items-center gap-3">
+                                        <input type="number" step="0.1" id="ans-129-2" class="w-32 md:w-44 text-2xl md:text-4xl font-black text-teal-600 bg-teal-50 rounded-xl text-center outline-none p-3 border border-teal-100 focus:ring-4 focus:ring-teal-200 transition-all" placeholder="?">
+                                        <span class="text-xl md:text-2xl font-black text-gray-500">dm²</span>
                                     </div>
                                 </div>
                             </div>
@@ -162,12 +165,15 @@ export const lesson129 = {
                         </div>
                         <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-purple-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-purple-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
-                            <div class="flex-grow space-y-6">
-                                <div class="p-6 bg-purple-50/50 dark:bg-slate-900 rounded-2xl border-2 border-dashed border-purple-200">
-                                    <p class="text-xl font-bold text-purple-800 dark:text-purple-200 mb-4 text-center">Thể tích phần khối gỗ làm ghế:</p>
-                                    <div class="flex items-center justify-center gap-3">
-                                        <input type="number" id="ans-129-3" class="w-40 md:w-56 text-3xl md:text-5xl font-black text-purple-600 bg-white rounded-2xl text-center outline-none focus:ring-4 focus:ring-purple-200 p-4 border-2 border-purple-100 transition-all" placeholder="?">
-                                        <span class="text-2xl font-black text-gray-500">dm³</span>
+                            <div class="flex-grow flex flex-col gap-5">
+                                <p class="text-xl font-bold text-purple-800 dark:text-purple-200 uppercase tracking-tighter">— Trình bày bài giải —</p>
+                                <textarea id="wp-full-129-3" rows="5" class="w-full p-6 rounded-3xl border-2 border-purple-100 bg-purple-50/30 dark:bg-slate-900 outline-none focus:border-purple-400 text-xl md:text-2xl font-medium text-gray-700 dark:text-slate-200 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Lời giải: ...&#10;Phép tính: ..."></textarea>
+                                
+                                <div class="p-5 bg-white dark:bg-slate-900 rounded-2xl border-2 border-dashed border-purple-200 flex items-center justify-between gap-4 shadow-sm">
+                                    <span class="text-xl md:text-2xl font-black text-purple-800 dark:text-purple-200">Đáp số:</span>
+                                    <div class="flex items-center gap-3">
+                                        <input type="number" id="ans-129-3" class="w-32 md:w-44 text-2xl md:text-4xl font-black text-purple-600 bg-purple-50 rounded-xl text-center outline-none p-3 border border-purple-100 focus:ring-4 focus:ring-purple-200 transition-all" placeholder="?">
+                                        <span class="text-xl md:text-2xl font-black text-gray-500">dm³</span>
                                     </div>
                                 </div>
                             </div>
@@ -198,12 +204,15 @@ export const lesson129 = {
                         </div>
                         <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-amber-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-amber-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
-                            <div class="flex-grow space-y-6">
-                                <div class="p-6 bg-amber-50/50 dark:bg-slate-900 rounded-2xl border-2 border-dashed border-amber-200">
-                                    <p class="text-xl font-bold text-amber-800 dark:text-amber-200 mb-4 text-center">Chiều cao mực nước ở hình 2 là:</p>
-                                    <div class="flex items-center justify-center gap-3">
-                                        <input type="number" id="ans-129-4" class="w-40 md:w-56 text-3xl md:text-5xl font-black text-amber-600 bg-white rounded-2xl text-center outline-none focus:ring-4 focus:ring-amber-200 p-4 border-2 border-amber-100 transition-all" placeholder="?">
-                                        <span class="text-2xl font-black text-gray-500">cm</span>
+                            <div class="flex-grow flex flex-col gap-5">
+                                <p class="text-xl font-bold text-amber-800 dark:text-amber-200 uppercase tracking-tighter">— Trình bày bài giải —</p>
+                                <textarea id="wp-full-129-4" rows="5" class="w-full p-6 rounded-3xl border-2 border-amber-100 bg-amber-50/30 dark:bg-slate-900 outline-none focus:border-amber-400 text-xl md:text-2xl font-medium text-gray-700 dark:text-slate-200 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Lời giải: ...&#10;Phép tính: ..."></textarea>
+                                
+                                <div class="p-5 bg-white dark:bg-slate-900 rounded-2xl border-2 border-dashed border-amber-200 flex items-center justify-between gap-4 shadow-sm">
+                                    <span class="text-xl md:text-2xl font-black text-amber-800 dark:text-amber-200">Đáp số:</span>
+                                    <div class="flex items-center gap-3">
+                                        <input type="number" id="ans-129-4" class="w-32 md:w-44 text-2xl md:text-4xl font-black text-amber-600 bg-amber-50 rounded-xl text-center outline-none p-3 border border-amber-100 focus:ring-4 focus:ring-amber-200 transition-all" placeholder="?">
+                                        <span class="text-xl md:text-2xl font-black text-gray-500">cm</span>
                                     </div>
                                 </div>
                             </div>
