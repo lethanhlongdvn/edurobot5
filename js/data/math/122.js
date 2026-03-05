@@ -57,7 +57,7 @@ export const lesson122 = {
 
                 <!-- 💥 MODAL 3D FULLSCREEN 💥 -->
                 <div id="modal-122-khampha" class="fixed inset-0 z-[9999] bg-slate-900/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-md" onclick="window.closeKhamPhaModal()">
-                    <div class="bg-indigo-50 w-[96%] h-[92%] max-w-[1400px] rounded-[40px] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative flex flex-col" onclick="event.stopPropagation()">
+                    <div class="bg-indigo-50 w-[96%] h-[94vh] max-h-[1000px] max-w-[1400px] rounded-[40px] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative flex flex-col" onclick="event.stopPropagation()">
                         <!-- Header -->
                         <div class="bg-indigo-600 bg-gradient-to-r from-indigo-700 to-blue-600 text-white p-5 flex justify-between items-center shrink-0 shadow-lg z-20 relative">
                             <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight flex items-center gap-4">
@@ -68,9 +68,9 @@ export const lesson122 = {
                             </button>
                         </div>
                         <!-- Body -->
-                        <div class="flex-grow flex flex-col p-6 gap-6 overflow-hidden relative">
+                        <div class="flex-grow flex flex-col p-4 md:p-6 gap-4 relative">
                             <!-- Left: 3D Simulator -->
-                            <div class="flex-1 flex flex-col items-center justify-between gap-6 bg-gradient-to-br from-slate-800 to-indigo-950 p-6 rounded-[32px] shadow-2xl border-4 border-indigo-200 overflow-hidden relative">
+                            <div class="flex-1 flex flex-col items-center justify-center bg-gradient-to-br from-slate-800 to-indigo-950 p-2 md:p-6 rounded-[32px] shadow-2xl border-4 border-indigo-200 relative">
                                 <div class="absolute top-4 left-4 inline-block bg-sky-500/20 border border-sky-400/50 text-sky-300 px-4 py-1.5 rounded-full font-bold text-sm uppercase tracking-wider backdrop-blur-sm z-10 w-auto">Mô phỏng 3D Tương tác</div>
                                 <!-- 3D SCENE -->
                                 <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px]" id="scene-122">
@@ -102,17 +102,20 @@ export const lesson122 = {
                                     </div>
                                 </div>
 
-                                <!-- Controls -->
-                                <div class="flex flex-wrap items-center justify-center gap-3 z-10 w-full mb-4">
-
-                                    <button onclick="window.fillKhamPha122()" id="btn-fill-122" class="px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all flex items-center gap-2">
-                                        🧊 Bấm lần 1: Xếp 1 hình
-                                    </button>
-                                    <button onclick="window.resetKhamPha122()" class="px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all">
-                                        ↺ Đặt lại
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- Footer Controls -->
+                            <div class="flex flex-wrap items-center justify-center gap-4 z-10 w-full mb-2 shrink-0">
+                                <button onclick="window.fillKhamPha122()" id="btn-fill-122" class="px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-2xl font-black text-lg md:text-xl shadow-xl active:scale-95 transition-all flex items-center gap-3">
+                                    🧊 Bấm lần 1: Xếp 1 hình
+                                </button>
+                                <button onclick="window.resetKhamPha122()" class="px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-2xl font-black text-lg md:text-xl shadow-xl active:scale-95 transition-all">
+                                    ↺ Đặt lại
+                                </button>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -143,8 +146,11 @@ export const lesson122 = {
                         box-shadow: inset 0 0 10px rgba(251, 191, 36, 0.5);
                     }
                     .minicube-122 .face.top { transform: translateY(-25px) rotateX(90deg); background: #fef3c7; }
+                    .minicube-122 .face.bottom { transform: translateY(25px) rotateX(-90deg); background: #f59e0b; }
                     .minicube-122 .face.front { transform: translateZ(25px); }
+                    .minicube-122 .face.back { transform: translateZ(-25px) rotateY(180deg); background: #d97706; }
                     .minicube-122 .face.right { transform: translateX(25px) rotateY(90deg); background: #fcd34d; }
+                    .minicube-122 .face.left { transform: translateX(-25px) rotateY(-90deg); background: #fbbf24; }
 
                     
                     /* Animation class */
@@ -301,6 +307,9 @@ export const lesson122 = {
                                 <div class="face top"></div>
                                 <div class="face front"></div>
                                 <div class="face right"></div>
+                                <div class="face bottom"></div>
+                                <div class="face back"></div>
+                                <div class="face left"></div>
                             \`;
 
                             container.appendChild(block);
@@ -558,3 +567,5 @@ export const lesson122 = {
         { "question": "Diện tích một mặt của hình hộp chữ nhật là 15 cm<sup>2</sup>, chiều cao 4 cm. Thể tích là:", "options": ["60 cm<sup>3</sup>", "30 cm<sup>3</sup>", "19 cm<sup>3</sup>", "40 cm<sup>3</sup>"], "answer": 0, "level": 1 }
     ]
 };
+
+
