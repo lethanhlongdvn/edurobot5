@@ -248,7 +248,7 @@ export const lesson128 = {
         </div>
     `,
     quizPool: [
-        { "question": "Muốn tính diện tích xung quanh HHCN, ta lấy chu vi đáy nhân với:", "options": ["Chiều dài", "Chiều rộng", "Chiều cao", "Diện tích đáy"], "answer": 2, "level": 1 },
+        { "question": "Muốn tính diện tích xung quanh HHCN, ta lấy chu vi đáy nhân với:", "options": ["Chiều dài", "Chiều rộng", "Chiều cao (c)", "Diện tích đáy"], "answer": 2, "level": 1 },
         { "question": "Thể tích HLP cạnh 2 cm là:", "options": ["4 cm³", "8 cm³", "12 cm³", "16 cm³"], "answer": 1, "level": 1 },
         { "question": "HHCN có 3 kích thước: 4dm, 3dm, 2dm. Thể tích là:", "options": ["24 dm³", "24 dm²", "14 dm³", "9 dm³"], "answer": 0, "level": 1 },
         { "question": "Sxq của HLP cạnh 5m là:", "options": ["25 m²", "100 m²", "150 m²", "125 m²"], "answer": 1, "level": 1 },
@@ -256,15 +256,15 @@ export const lesson128 = {
 
         { "question": "HHCN dài 5cm, rộng 4cm, cao 3cm. Diện tích mặt đáy là:", "options": ["20 cm²", "12 cm²", "15 cm²", "60 cm²"], "answer": 0, "level": 2 },
         { "question": "HLP có cạnh 0,5m. Thể tích là:", "options": ["0,25 m³", "0,125 m³", "1,25 m³", "0,125 m²"], "answer": 1, "level": 2 },
-        { "question": "Chu vi đáy của HHCN là 20cm, cao 5cm. Sxq là:", "options": ["100 cm²", "100 cm³", "50 cm²", "400 cm²"], "answer": 0, "level": 2 },
+        { "question": "Chu vi đáy của HHCN là 20cm, cao c là 5cm. Sxq là:", "options": ["100 cm²", "100 cm³", "50 cm²", "400 cm²"], "answer": 0, "level": 2 },
         { "question": "Một hình khai triển của HHCN gồm có mấy mặt?", "options": ["4 mặt", "5 mặt", "6 mặt", "8 mặt"], "answer": 2, "level": 2 },
         { "question": "Đơn vị đo thể tích thường gặp là:", "options": ["cm", "cm²", "cm³", "kg"], "answer": 2, "level": 2 },
 
         { "question": "HLP có Sxq là 36 cm². Thể tích của nó là:", "options": ["9 cm³", "27 cm³", "54 cm³", "81 cm³"], "answer": 1, "level": 3 },
         { "question": "Gấp cạnh HLP lên 3 lần thì thể tích tăng lên:", "options": ["3 lần", "9 lần", "27 lần", "81 lần"], "answer": 2, "level": 3 },
-        { "question": "HHCN có thể tích 60 cm³, dài 5cm, rộng 4cm. Chiều cao là:", "options": ["3 cm", "4 cm", "5 cm", "12 cm"], "answer": 0, "level": 3 },
-        { "question": "Bể bơi dài 10m, rộng 5m, sâu 2m. Thể tích nước đầy bể là:", "options": ["50 m³", "100 m³", "70 m³", "100 m²"], "answer": 1, "level": 3 },
-        { "question": "Để tính diện tích lát gạch bể bơi (không nắp), ta tính:", "options": ["Sxq", "Stp", "Sxq + S đáy", "Sxq + 2 × S đáy"], "answer": 2, "level": 3 }
+        { "question": "HHCN có thể tích 60 cm³, dài 5cm, rộng 4cm. Chiều cao c là:", "options": ["3 cm", "4 cm", "5 cm", "12 cm"], "answer": 0, "level": 3 },
+        { "question": "Bể bơi dài 10m, rộng 5m, cao c là 2m. Thể tích nước đầy bể là:", "options": ["50 m³", "100 m³", "70 m³", "100 m²"], "answer": 1, "level": 3 },
+        { "question": "Để tính diện tích lát gạch bể bơi (không nắp), ta tính:", "options": ["Sxq", "Stp", "Sxq + S-đáy", "Sxq + 2 × S-đáy"], "answer": 2, "level": 3 }
     ],
     // Logic tương tác
     selectMCQ(exId, option) {

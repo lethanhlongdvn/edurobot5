@@ -566,3 +566,13 @@ Khởi tạo thành công cấu trúc môn Khoa học: js/data/science/cungco, i
 - Tối ưu UI: Đã nâng cấp nút "Nộp bài" lên style High-End (Gradient, Animation) và cân đối lại font size Bài 2 để hiển thị chuyên nghiệp nhất trên TV.
 - Sửa lỗi: Đã sửa toàn bộ lỗi chính tả và lỗi trình bày văn bản theo phản hồi.
 - Trạng thái hiện tại: Bài học 130 hoàn thiện ưu việt, sẵn sàng sử dụng.
+
+[22:15] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 122, 128, 129, 130
+- Mô tả thay đổi: 
+  + Cập nhật nội dung Củng cố (Quiz) cho Tiết 122, 128, 129, 130.
+  + Bổ sung lên 15 câu hỏi trắc nghiệm chất lượng cao cho mỗi bài (Tiết 130 từ 10 lên 15 câu).
+  + Tạo file cungco122.txt, cungco128.txt, cungco129.txt, cungco130.txt đồng bộ với mã nguồn JS.
+  + Chuẩn hóa ký hiệu chiều cao là "c" trên toàn bộ ngân hàng câu hỏi.
+  + Chuẩn hóa giao diện nút "Kiểm tra" (.btn-check-premium) và "Nộp bài" (.btn-submit-premium) cao cấp, đồng nhất cho toàn hệ thống.
+- Trạng thái hiện tại: Hoàn thành đồng bộ và chuẩn hóa giao diện củng cố.

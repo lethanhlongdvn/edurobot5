@@ -549,20 +549,20 @@ export const lesson122 = {
     `,
     "quizPool": [
         { "question": "Công thức tính thể tích của hình hộp chữ nhật có 3 kích thước a, b, c là:", "options": ["V = a + b + c", "V = a × b + c", "V = a × b × c", "V = a + b × c"], "answer": 2, "level": 1 },
-        { "question": "Muốn tính thể tích hình hộp chữ nhật, ta lấy chiều dài nhân chiều rộng rồi nhân với:", "options": ["Chu vi đáy", "Diện tích đáy", "Chiều cao", "Chiều rộng"], "answer": 2, "level": 1 },
-        { "question": "Đơn vị đo thể tích thường gặp là:", "options": ["cm<sup>2</sup>, dm<sup>2</sup>, m<sup>2</sup>", "cm, dm, m", "cm<sup>3</sup>, dm<sup>3</sup>, m<sup>3</sup>", "kg, g, tấn"], "answer": 2, "level": 1 },
-        { "question": "Nếu một hình hộp chữ nhật có ba kích thước: 2 dm, 3 dm, 4 dm thì thể tích là:", "options": ["24 dm<sup>3</sup>", "12 dm<sup>3</sup>", "9 dm<sup>3</sup>", "18 dm<sup>3</sup>"], "answer": 0, "level": 1 },
-        { "question": "Một hình hộp chữ nhật có chiều dài 10 cm, chiều rộng 5 cm, chiều cao 2 cm. Thể tích là:", "options": ["50 cm<sup>3</sup>", "100 cm<sup>3</sup>", "150 cm<sup>3</sup>", "20 cm<sup>3</sup>"], "answer": 1, "level": 1 },
-        { "question": "Công thức V = S × c (trong đó S là diện tích đáy, c là chiều cao) có dùng để tính thể tích hình hộp chữ nhật không?", "options": ["Không dùng được", "Có dùng được", "Chỉ dùng cho hình vuông", "Chỉ dùng cho hình tròn"], "answer": 1, "level": 2 },
-        { "question": "Một bể cá dài 2 m, rộng 1,5 m, cao 1 m. Thể tích bể cá đó là:", "options": ["3 m<sup>3</sup>", "4,5 m<sup>3</sup>", "2 m<sup>3</sup>", "3,5 m<sup>3</sup>"], "answer": 0, "level": 2 },
+        { "question": "Muốn tính thể tích hình hộp chữ nhật, ta lấy chiều dài nhân chiều rộng rồi nhân với:", "options": ["Chu vi đáy", "Diện tích đáy", "Chiều cao (c)", "Chiều rộng"], "answer": 2, "level": 1 },
+        { "question": "Đơn vị đo thể tích thường gặp là:", "options": ["cm², dm², m²", "cm, dm, m", "cm³, dm³, m³", "kg, g, tấn"], "answer": 2, "level": 1 },
+        { "question": "Nếu một hình hộp chữ nhật có ba kích thước: 2 dm, 3 dm, 4 dm thì thể tích là:", "options": ["24 dm³", "12 dm³", "9 dm³", "18 dm³"], "answer": 0, "level": 1 },
+        { "question": "Một hình hộp chữ nhật có chiều dài 10 cm, chiều rộng 5 cm, chiều cao 2 cm. Thể tích là:", "options": ["50 cm³", "100 cm³", "150 cm³", "20 cm³"], "answer": 1, "level": 1 },
+        { "question": "Công thức V = S × c (trong đó S là diện tích đáy, c là chiều cao) có dùng để tính thể tích hình hộp chữ nhật không?", "options": ["Không dùng được", "Có dùng được", "Chỉ dùng cho hình lập phương", "Chỉ dùng cho hình tròn"], "answer": 1, "level": 2 },
+        { "question": "Một bể cá dài 2 m, rộng 1,5 m, cao 1 m. Thể tích bể cá đó là:", "options": ["3 m³", "4,5 m³", "2 m³", "3,5 m³"], "answer": 0, "level": 2 },
         { "question": "Nếu gấp chiều dài hình hộp chữ nhật lên 2 lần, các kích thước khác giữ nguyên thì thể tích tăng mấy lần?", "options": ["2 lần", "4 lần", "6 lần", "8 lần"], "answer": 0, "level": 2 },
         { "question": "Nếu gấp tất cả ba kích thước của hình hộp chữ nhật lên 2 lần thì thể tích tăng mấy lần?", "options": ["2 lần", "4 lần", "6 lần", "8 lần"], "answer": 3, "level": 3 },
-        { "question": "Một hình hộp chữ nhật có diện tích đáy là 20 cm<sup>2</sup>, chiều cao là 5 cm. Thể tích là:", "options": ["100 cm<sup>3</sup>", "40 cm<sup>3</sup>", "25 cm<sup>3</sup>", "200 cm<sup>3</sup>"], "answer": 0, "level": 2 },
-        { "question": "Nếu thể tích của hình hộp chữ nhật là 60 cm<sup>3</sup>, chiều dài 5 cm, chiều rộng 4 cm thì chiều cao là:", "options": ["2 cm", "3 cm", "4 cm", "5 cm"], "answer": 1, "level": 3 },
-        { "question": "1 m<sup>3</sup> bằng bao nhiêu dm<sup>3</sup>?", "options": ["10 dm<sup>3</sup>", "100 dm<sup>3</sup>", "1000 dm<sup>3</sup>", "10000 dm<sup>3</sup>"], "answer": 2, "level": 1 },
-        { "question": "Một chiếc hộp sữa 10 cm, 5 cm và 20 cm có thể tích là:", "options": ["1000 cm<sup>3</sup>", "500 cm<sup>3</sup>", "200 cm<sup>3</sup>", "1500 cm<sup>3</sup>"], "answer": 0, "level": 2 },
-        { "question": "Hình hộp chữ nhật đặc biệt có ba kích thước bằng nhau được gọi là:", "options": ["Hình vuông", "Hình lập phương", "Hình cầu", "Hình trụ"], "answer": 1, "level": 1 },
-        { "question": "Diện tích một mặt của hình hộp chữ nhật là 15 cm<sup>2</sup>, chiều cao 4 cm. Thể tích là:", "options": ["60 cm<sup>3</sup>", "30 cm<sup>3</sup>", "19 cm<sup>3</sup>", "40 cm<sup>3</sup>"], "answer": 0, "level": 1 }
+        { "question": "Một hình hộp chữ nhật có diện tích đáy là 20 cm², chiều cao c là 5 cm. Thể tích là:", "options": ["100 cm³", "40 cm³", "25 cm³", "200 cm³"], "answer": 0, "level": 2 },
+        { "question": "Nếu thể tích của hình hộp chữ nhật là 60 cm³, chiều dài 5 cm, chiều rộng 4 cm thì chiều cao c là:", "options": ["2 cm", "3 cm", "4 cm", "5 cm"], "answer": 1, "level": 3 },
+        { "question": "1 m³ bằng bao nhiêu dm³?", "options": ["10 dm³", "100 dm³", "1000 dm³", "10000 dm³"], "answer": 2, "level": 1 },
+        { "question": "Một chiếc hộp sữa 10 cm, 5 cm và 20 cm có thể tích là:", "options": ["1000 cm³", "500 cm³", "200 cm³", "1500 cm³"], "answer": 0, "level": 2 },
+        { "question": "Hình hộp chữ nhật đặc biệt có ba kích thước bằng nhau được gọi là:", "options": ["Hình hộp vuông", "Hình lập phương", "Hình cầu", "Hình trụ"], "answer": 1, "level": 1 },
+        { "question": "Diện tích một mặt của hình hộp chữ nhật là 15 cm², chiều cao c là 4 cm. Thể tích là:", "options": ["60 cm³", "30 cm³", "19 cm³", "40 cm³"], "answer": 0, "level": 2 }
     ]
 };
 

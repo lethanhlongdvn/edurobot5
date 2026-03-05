@@ -1,0 +1,15 @@
+Một khối gỗ dạng HHCN có các kích thước 5dm, 3dm, 3dm. Thể tích là: | 45 dm³, 11 dm³, 30 dm³, 15 dm³ | 1
+Hộp lập phương cạnh 2,5dm. Diện tích một mặt là: | 6,25 dm², 2,5 dm², 5 dm², 6,25 dm³ | 1
+Nếu cắt đi một khối gỗ thể tích 8dm³ từ khối gỗ 45dm³ thì phần còn lại là: | 37 dm³, 53 dm³, 35 dm³, 40 dm³ | 1
+Mực nước trong hộp Fig 1 cao 8cm, đáy 8x8. Thể tích nước là: | 512 cm³, 64 cm³, 192 cm³, 256 cm³ | 1
+Thể tích nước 512 cm³, đáy mới 16x8. Chiều cao c là: | 4 cm, 8 cm, 2 cm, 16 cm | 1
+Diện tích toàn phần của hình lập phương cạnh a là: | a × a × 4, a × a × 6, a × a × a, a × 4 × 6 | 2
+Một hình lập phương có diện tích một mặt là 9 cm². Thể tích của nó là: | 27 cm³, 18 cm³, 54 cm³, 81 cm³ | 1
+Đổi 2,5 dm² sang cm² ta được: | 250 cm², 25 cm², 2500 cm², 0,25 cm² | 1
+Muốn tính thể tích HHCN khi biết diện tích đáy S và chiều cao c: | V = S × c, V = S : c, V = c : S, V = S + c | 1
+HHCN có V = 120 cm³, đáy có diện tích 30 cm². Chiều cao c là: | 4 cm, 40 cm, 4 dm, 4 mm | 1
+Gấp cạnh hình lập phương lên 2 lần thì diện tích toàn phần tăng: | 2 lần, 4 lần, 6 lần, 8 lần | 2
+Gấp cạnh hình lập phương lên 2 lần thì thể tích tăng: | 2 lần, 4 lần, 8 lần, 16 lần | 3
+Bình chứa 1 lít nước (1 dm³). Đổ vào hộp đáy 10x10 cm thì cao c là: | 10 cm, 1 cm, 100 cm, 0,1 cm | 1
+Một mặt hình lập phương có chu vi 20 cm. Thể tích là: | 125 cm³, 100 cm³, 150 cm³, 20 cm³ | 1
+Khối gỗ 3dm x 3dm x 3dm. Cắt đi 1dm x 1dm x 1dm ở góc. Sxq có đổi không? | Không đổi, Tăng lên, Giảm đi, Tùy vị trí cắt | 1

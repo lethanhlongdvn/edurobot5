@@ -124,7 +124,9 @@ export const lesson130 = {
                     </div>
 
                     <div class="flex justify-center mt-6">
-                        <button onclick="check130_1()" class="bg-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-lg active:scale-95 transition-all outline-none hover:bg-indigo-600">Kiểm tra bài 1</button>
+                        <button onclick="check130_1()" class="btn-check-premium bg-indigo-500 hover:bg-indigo-600 text-white" title="Kiểm tra bài 1">
+                            <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -179,15 +181,16 @@ export const lesson130 = {
                     </div>
 
                     <div class="flex justify-center mt-12">
-                        <button onclick="check130_2()" class="bg-emerald-500 text-white font-black text-3xl py-4 px-12 rounded-full shadow-lg active:scale-95 transition-all outline-none hover:bg-emerald-600">Kiểm tra bài 2</button>
+                        <button onclick="check130_2()" class="btn-check-premium bg-emerald-500 hover:bg-emerald-600 text-white" title="Kiểm tra bài 2">
+                            <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
                     </div>
                 </div>
             </div>
 
             <!-- Nộp bài toàn diện -->
             <div class="flex flex-col items-center pt-12 border-t-8 border-double border-indigo-100 mt-16 pb-10">
-                <button id="btn-submit-130" onclick="submit130()" 
-                    class="group relative px-16 py-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-full text-white font-black text-4xl shadow-[0_10px_40px_-10px_rgba(79,70,229,0.5)] hover:shadow-[0_20px_50px_-10px_rgba(79,70,229,0.7)] active:scale-95 transform">
+                <button id="btn-submit-130" onclick="submit130()" class="btn-submit-premium">
                     <span class="relative z-10 flex items-center gap-4">
                         <span class="text-5xl">🎯</span> HOÀN THÀNH BÀI HỌC
                     </span>
@@ -289,6 +292,11 @@ export const lesson130 = {
         { "question": "Tháng nào sau đây có 30 ngày?", "options": ["Tháng 3", "Tháng 9", "Tháng 10", "Tháng 12"], "answer": 1, "level": 1 },
         { "question": "Đổi 120 phút bằng bao nhiêu giờ?", "options": ["1,5 giờ", "2 giờ", "2,5 giờ", "1,2 giờ"], "answer": 1, "level": 1 },
         { "question": "Đổi 2,5 năm bằng bao nhiêu tháng?", "options": ["25 tháng", "30 tháng", "24 tháng", "12 tháng"], "answer": 1, "level": 2 },
-        { "question": "Năm 1010 Vua Lý Công Uẩn dời đô về Thăng Long. Kỉ niệm 1000 năm Thăng Long - Hà Nội vào thế kỉ nào?", "options": ["Thế kỉ XX", "Thế kỉ XXI", "Thế kỉ XIX", "Thế kỉ X"], "answer": 1, "level": 3 }
+        { "question": "Năm 1010 kỉ niệm 1000 năm Thăng Long - Hà Nội vào thế kỉ nào?", "options": ["Thế kỉ XX", "Thế kỉ XXI", "Thế kỉ XIX", "Thế kỉ X"], "answer": 1, "level": 3 },
+        { "question": "Kim giây quay được 1 vòng thì kim phút quay được:", "options": ["1 vòng", "1/60 vòng", "60 vòng", "1 nấc (1 phút)"], "answer": 1, "level": 1 },
+        { "question": "Đổi 1,5 giờ ra phút ta được:", "options": ["150 phút", "105 phút", "90 phút", "60 phút"], "answer": 2, "level": 1 },
+        { "question": "Tháng 2 của năm nhuận có bao nhiêu ngày?", "options": ["28 ngày", "29 ngày", "30 ngày", "31 ngày"], "answer": 1, "level": 1 },
+        { "question": "Từ 1 giờ 15 phút đến 2 giờ là bao nhiêu phút?", "options": ["15 phút", "30 phút", "45 phút", "60 phút"], "answer": 2, "level": 2 },
+        { "question": "Năm 1904 có phải là năm nhuận không?", "options": ["Phải", "Không phải", "Tùy quốc gia", "Chưa xác định"], "answer": 0, "level": 1 }
     ]
 };
