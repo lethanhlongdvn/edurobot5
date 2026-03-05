@@ -437,6 +437,10 @@ export const lesson124 = {
                             </tbody>
                         </table>
                     </div>
+                    <div class="mt-8 flex flex-col items-center gap-4">
+                        <button onclick="window.checkEx124_1()" class="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                        <div id="feedback-124-1" class="text-xl md:text-2xl font-black transition-opacity p-4 rounded-2xl text-center"></div>
+                    </div>
                 </div>
             </div>
 
@@ -474,9 +478,10 @@ export const lesson124 = {
                     <!-- Khu vực bài làm -->
                     <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-orange-200 shadow-sm">
                         <p class="text-lg md:text-2xl font-black text-orange-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
-                        <textarea id="ans-124-2" rows="5" class="w-full p-6 rounded-2xl border-2 border-orange-200 bg-orange-50/50 dark:bg-slate-900 outline-none focus:border-orange-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;a) Thể tích chiếc bánh: V = 12 × 12 × 6 = ...&#10;b) Thể tích miếng cắt: V = 6 × 6 × 6 = ...&#10;   Thể tích phần còn lại: ...&#10;Đáp số: a) ... cm³   b) ... cm³"></textarea>
-                        <div class="mt-4 flex items-center gap-4">
-                            <button onclick="Lesson.submitWordProblemAI('124-2')" class="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                        <p class="text-xl md:text-2xl font-bold text-gray-700 dark:text-slate-200 leading-relaxed mb-4 hidden" id="wp-problem-text-124-2">Một chiếc bánh bông lan hình hộp chữ nhật có đáy là hình vuông cạnh 12 cm, chiều cao 6 cm. a) Tính thể tích của chiếc bánh đó. b) Rô-bốt đã cắt một miếng bánh hình lập phương cạnh 6 cm. Tính thể tích phần bánh còn lại.</p>
+                        <textarea id="wp-full-124-2" rows="5" class="w-full p-6 rounded-2xl border-2 border-orange-200 bg-orange-50/50 dark:bg-slate-900 outline-none focus:border-orange-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;a) Thể tích chiếc bánh: V = 12 × 12 × 6 = ...&#10;b) Thể tích miếng cắt: V = 6 × 6 × 6 = ...&#10;   Thể tích phần còn lại: ...&#10;Đáp số: a) ... cm³   b) ... cm³"></textarea>
+                        <div class="mt-6 flex justify-end">
+                            <button onclick="Lesson.submitWordProblemAI('124-2')" class="btn-tutor-e w-14 h-14" title="Thầy E chấm bài">E</button>
                         </div>
                     </div>
                 </div>
@@ -524,7 +529,10 @@ export const lesson124 = {
                         </div>
                     </div>
 
-                    <div id="feedback-124-3" class="text-center text-xl md:text-2xl font-black opacity-0 transition-opacity p-6 rounded-3xl"></div>
+                    <div class="mt-6 flex justify-center">
+                        <button onclick="window.checkEx124_3()" class="px-8 py-4 bg-rose-600 hover:bg-rose-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                    </div>
+                    <div id="feedback-124-3" class="text-center text-xl md:text-2xl font-black opacity-0 transition-opacity p-6 rounded-3xl mt-4"></div>
                 </div>
             </div>
 
@@ -556,9 +564,8 @@ export const lesson124 = {
         { "question": "Hộp hình lập phương cạnh 8 cm. Xếp được tối đa bao nhiêu khối LP cạnh 2 cm vào hộp?", "options": ["8 khối", "16 khối", "32 khối", "64 khối"], "answer": 3, "level": 3 },
         { "question": "Diện tích toàn phần hình LP cạnh 5 cm là 150 cm². Thể tích của nó là:", "options": ["25 cm³", "75 cm³", "125 cm³", "150 cm³"], "answer": 2, "level": 3 }
     ],
-    // Logic cho MCQ 
+    // Logic cho MCQ - chỉ track lựa chọn, không tự check
     selectMCQ(exId, option) {
-        // Get all buttons in the same group
         const allBtns = document.querySelectorAll(`[id^="btn-${exId}-"]`);
         allBtns.forEach(btn => {
             btn.classList.remove('bg-rose-600', 'text-white', 'border-transparent');
@@ -569,28 +576,77 @@ export const lesson124 = {
         selectedBtn.classList.remove('bg-rose-50', 'text-gray-400', 'border-rose-100');
         selectedBtn.classList.add('bg-rose-600', 'text-white', 'border-transparent');
 
-        // Track state
         if (!window.lesson124State) window.lesson124State = { a: null, b: null };
         if (exId === '124-3a') window.lesson124State.a = option;
         if (exId === '124-3b') window.lesson124State.b = option;
-
-        const feedback = document.getElementById('feedback-124-3');
-        if (window.lesson124State.a && window.lesson124State.b) {
-            feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-red-500', 'bg-emerald-50', 'bg-red-50');
-            // Đáp án đúng: a) B (10 hình), b) C (64 cm³)
-            if (window.lesson124State.a === 'B' && window.lesson124State.b === 'C') {
-                feedback.innerText = "Chính xác cả hai câu! 🎉 Mai cần bỏ 10 hình. Rô-bốt gồm 8 hình LP nhỏ → V = 8 × (2×2×2) = 64 cm³.";
-                feedback.classList.add('text-emerald-500', 'bg-emerald-50');
-                if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
-            } else {
-                feedback.innerText = "Có câu chưa đúng rồi. Hãy đếm kỹ số hình lập phương trong mỗi hình nhé!";
-                feedback.classList.add('text-red-500', 'bg-red-50');
-                if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
-            }
-            feedback.classList.add('opacity-100');
-        }
     }
 };
 
 window.lesson124 = lesson124;
+
+// === Nút Kiểm tra Bài 1: Bảng tính thể tích ===
+window.checkEx124_1 = function () {
+    const answers = { a: 1000, b: 15.625, c: 0.064 };
+    const feedback = document.getElementById('feedback-124-1');
+    let correct = 0;
+    let total = 3;
+
+    ['a', 'b', 'c'].forEach(key => {
+        const input = document.getElementById(`ans-124-1${key}`);
+        const val = parseFloat(input.value);
+        const inputWrapper = input.closest('td');
+        inputWrapper.classList.remove('border-emerald-400', 'border-red-400');
+
+        if (!isNaN(val) && Math.abs(val - answers[key]) < 0.001) {
+            correct++;
+            inputWrapper.classList.add('border-emerald-400');
+            input.classList.remove('text-teal-600');
+            input.classList.add('text-emerald-600');
+        } else if (input.value.trim() !== '') {
+            inputWrapper.classList.add('border-red-400');
+            input.classList.remove('text-teal-600');
+            input.classList.add('text-red-500');
+        }
+    });
+
+    feedback.classList.remove('text-emerald-600', 'text-red-500', 'bg-emerald-50', 'bg-red-50');
+    if (correct === total) {
+        feedback.innerHTML = "🎉 Tuyệt vời! Đúng hết cả 3 ô!";
+        feedback.classList.add('text-emerald-600', 'bg-emerald-50');
+        if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+    } else if (correct > 0) {
+        feedback.innerHTML = `Đúng ${correct}/${total}. Kiểm tra lại các ô còn lại nhé!`;
+        feedback.classList.add('text-red-500', 'bg-red-50');
+        if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+    } else {
+        feedback.innerHTML = "Chưa đúng. Nhớ công thức V = a × a × a nhé!";
+        feedback.classList.add('text-red-500', 'bg-red-50');
+        if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+    }
+};
+
+// === Nút Kiểm tra Bài 3: MCQ ===
+window.checkEx124_3 = function () {
+    if (!window.lesson124State) window.lesson124State = { a: null, b: null };
+    const feedback = document.getElementById('feedback-124-3');
+
+    if (!window.lesson124State.a || !window.lesson124State.b) {
+        feedback.classList.remove('opacity-0');
+        feedback.classList.add('opacity-100', 'text-orange-500', 'bg-orange-50');
+        feedback.innerText = "Em hãy chọn đáp án cho cả hai câu a) và b) trước khi kiểm tra nhé!";
+        return;
+    }
+
+    feedback.classList.remove('opacity-0', 'text-emerald-500', 'text-red-500', 'text-orange-500', 'bg-emerald-50', 'bg-red-50', 'bg-orange-50');
+    // Đáp án đúng: a) B (10 hình), b) C (64 cm³)
+    if (window.lesson124State.a === 'B' && window.lesson124State.b === 'C') {
+        feedback.innerText = "Chính xác cả hai câu! 🎉 Mai cần bỏ 10 hình. Rô-bốt gồm 8 hình LP nhỏ → V = 8 × (2×2×2) = 64 cm³.";
+        feedback.classList.add('text-emerald-500', 'bg-emerald-50', 'opacity-100');
+        if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+    } else {
+        feedback.innerText = "Có câu chưa đúng rồi. Hãy đếm kỹ số hình lập phương trong mỗi hình nhé!";
+        feedback.classList.add('text-red-500', 'bg-red-50', 'opacity-100');
+        if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+    }
+};
 
