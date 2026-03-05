@@ -660,3 +660,8 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
   + Controls: Tách riêng nút bấm xuống khối Footer dưới cùng.
   + Minicubes: Render đủ 6 face (top, bottom, front, back, left, right) cho khối lập phương lõi.
   + Interact: Không tự động xoay màn hình (auto-spin) khi xếp xong để người dùng tự do quay 3D.
+
+[11:46] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 122
+- Mô tả thay đổi: Fix lỗi DOM Modal bị thủng (thừa thẻ đóng </div>) làm cho layout 3D tràn ra nền màn hình ngoài và gây lỗi tính năng lúc xếp hình con. Yêu cầu Hard Refresh trang (Ctrl+F5) để CSS và JS mới nạp đủ 6 mặt thẻ.
+- Trạng thái hiện tại: Đã fix Layout, các thẻ Div khớp chuẩn cấu trúc UI.
