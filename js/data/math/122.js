@@ -101,11 +101,7 @@ export const lesson122 = {
                                         </div>
                                     </div>
                                 </div>
-
-                                    </div>
                                 </div>
-                            </div>
-
                             <!-- Footer Controls -->
                             <div class="flex flex-wrap items-center justify-center gap-4 z-10 w-full mb-2 shrink-0">
                                 <button onclick="window.fillKhamPha122()" id="btn-fill-122" class="px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-2xl font-black text-lg md:text-xl shadow-xl active:scale-95 transition-all flex items-center gap-3">
@@ -115,7 +111,6 @@ export const lesson122 = {
                                     ↺ Đặt lại
                                 </button>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
