@@ -127,11 +127,11 @@ export const lesson129 = {
                         </p>
                     </div>
 
-                    <div class="flex flex-col lg:flex-row gap-8 items-stretch">
-                        <div class="w-full lg:w-1/2 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-teal-100 shadow-md flex items-center justify-center">
-                            <img src="hinh_anh/toan/toan_tap_2/129-2.png" alt="Hộp nhựa" class="w-full h-auto rounded-2xl max-w-[400px]">
+                    <div class="flex flex-col gap-8 items-stretch">
+                        <div class="w-full p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-teal-100 shadow-md flex items-center justify-center">
+                            <img src="hinh_anh/toan/toan_tap_2/129-2.png" alt="Hộp nhựa" class="w-full h-auto rounded-2xl max-w-[700px]">
                         </div>
-                        <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-teal-200 shadow-sm flex flex-col">
+                        <div class="w-full bg-white dark:bg-slate-800 p-8 md:p-10 rounded-[32px] border-2 border-teal-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-teal-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
                             <div class="flex-grow flex flex-col gap-5">
                                 <div class="flex items-center justify-between">
@@ -174,11 +174,11 @@ export const lesson129 = {
                         </p>
                     </div>
 
-                    <div class="flex flex-col lg:flex-row gap-8 items-stretch">
-                        <div class="w-full lg:w-1/2 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-purple-100 shadow-md flex items-center justify-center">
-                            <img src="hinh_anh/toan/toan_tap_2/129-3.png" alt="Khối gỗ" class="w-full h-auto rounded-2xl">
+                    <div class="flex flex-col gap-8 items-stretch">
+                        <div class="w-full p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-purple-100 shadow-md flex items-center justify-center">
+                            <img src="hinh_anh/toan/toan_tap_2/129-3.png" alt="Khối gỗ" class="w-full h-auto rounded-2xl max-w-[700px]">
                         </div>
-                        <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-purple-200 shadow-sm flex flex-col">
+                        <div class="w-full bg-white dark:bg-slate-800 p-8 md:p-10 rounded-[32px] border-2 border-purple-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-purple-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
                             <div class="flex-grow flex flex-col gap-5">
                                 <div class="flex items-center justify-between">
@@ -221,11 +221,11 @@ export const lesson129 = {
                         </p>
                     </div>
 
-                    <div class="flex flex-col lg:flex-row gap-8 items-stretch">
-                        <div class="w-full lg:w-1/2 p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-amber-100 shadow-md flex items-center justify-center">
-                            <img src="hinh_anh/toan/toan_tap_2/129-4.png" alt="Bể nước" class="w-full h-auto rounded-2xl">
+                    <div class="flex flex-col gap-8 items-stretch">
+                        <div class="w-full p-6 bg-white dark:bg-slate-800 rounded-[32px] border border-amber-100 shadow-md flex items-center justify-center">
+                            <img src="hinh_anh/toan/toan_tap_2/129-4.png" alt="Bể nước" class="w-full h-auto rounded-2xl max-w-[700px]">
                         </div>
-                        <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-amber-200 shadow-sm flex flex-col">
+                        <div class="w-full bg-white dark:bg-slate-800 p-8 md:p-10 rounded-[32px] border-2 border-amber-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-amber-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
                             <div class="flex-grow flex flex-col gap-5">
                                 <div class="flex items-center justify-between">
