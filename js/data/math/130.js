@@ -7,43 +7,42 @@ export const lesson130 = {
     "content": `
         <div class="space-y-4 text-indigo-900 animate-fade-in">
             <!-- 🌟 Bảng đơn vị đo thời gian -->
-            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 p-10 rounded-[40px] shadow-2xl text-white">
-                <h3 class="text-4xl md:text-7xl font-black mb-10 text-center italic tracking-tight uppercase border-b-4 border-white/20 pb-6">Bảng Đơn Vị Đo Thời Gian</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-4xl md:text-5xl font-black">
-                    <div class="bg-white/20 p-8 rounded-3xl backdrop-blur-md border-2 border-white/40 space-y-6 shadow-xl leading-relaxed">
-                        <p class="flex justify-between items-center"><span class="text-white/80">1 thế kỉ</span> <span class="text-yellow-300 text-5xl md:text-6xl">= 100</span> <span class="text-white/80 text-3xl">năm</span></p>
-                        <p class="flex justify-between items-center"><span class="text-white/80">1 năm</span> <span class="text-yellow-300 text-5xl md:text-6xl">= 12</span> <span class="text-white/80 text-3xl">tháng</span></p>
-                        <p class="flex justify-between items-center"><span class="text-white/80">1 năm</span> <span class="text-yellow-300 text-5xl md:text-6xl">= 365</span> <span class="text-white/80 text-3xl">ngày</span></p>
-                        <p class="flex justify-between items-center"><span class="text-white/80">1 năm nhuận</span> <span class="text-yellow-300 text-5xl md:text-6xl">= 366</span> <span class="text-white/80 text-3xl">ngày</span></p>
+            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 p-8 rounded-[32px] shadow-xl text-white">
+                <h3 class="text-3xl md:text-5xl font-black mb-8 text-center italic tracking-tight uppercase border-b-2 border-white/20 pb-4">Bảng Đơn Vị Đo Thời Gian</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-2xl md:text-4xl font-black">
+                    <div class="bg-white/20 p-6 rounded-2xl backdrop-blur-md border border-white/30 space-y-4 shadow-lg">
+                        <p class="flex justify-between items-center"><span class="text-white/90">1 thế kỉ</span> <span class="text-yellow-300 text-4xl md:text-5xl">= 100</span> <span class="text-white/80 text-2xl">năm</span></p>
+                        <p class="flex justify-between items-center"><span class="text-white/90">1 năm</span> <span class="text-yellow-300 text-4xl md:text-5xl">= 12</span> <span class="text-white/80 text-2xl">tháng</span></p>
+                        <p class="flex justify-between items-center"><span class="text-white/90">1 năm</span> <span class="text-yellow-300 text-4xl md:text-5xl">= 365</span> <span class="text-white/80 text-2xl">ngày</span></p>
+                        <p class="flex justify-between items-center"><span class="text-white/90">1 năm nhuận</span> <span class="text-yellow-300 text-4xl md:text-5xl">= 366</span> <span class="text-white/80 text-2xl">ngày</span></p>
                     </div>
-                    <div class="bg-white/20 p-8 rounded-3xl backdrop-blur-md border-2 border-white/40 space-y-6 shadow-xl leading-relaxed">
-                        <p class="flex justify-between items-center"><span class="text-white/80">1 tuần lễ</span> <span class="text-yellow-300 text-5xl md:text-6xl">= 7</span> <span class="text-white/80 text-3xl">ngày</span></p>
-                        <p class="flex justify-between items-center"><span class="text-white/80">1 ngày</span> <span class="text-yellow-300 text-5xl md:text-6xl">= 24</span> <span class="text-white/80 text-3xl">giờ</span></p>
-                        <p class="flex justify-between items-center"><span class="text-white/80">1 giờ</span> <span class="text-yellow-300 text-5xl md:text-6xl">= 60</span> <span class="text-white/80 text-3xl">phút</span></p>
-                        <p class="flex justify-between items-center"><span class="text-white/80">1 phút</span> <span class="text-yellow-300 text-5xl md:text-6xl">= 60</span> <span class="text-white/80 text-3xl">giây</span></p>
+                    <div class="bg-white/20 p-6 rounded-2xl backdrop-blur-md border border-white/30 space-y-4 shadow-lg">
+                        <p class="flex justify-between items-center"><span class="text-white/90">1 tuần lễ</span> <span class="text-yellow-300 text-4xl md:text-5xl">= 7</span> <span class="text-white/80 text-2xl">ngày</span></p>
+                        <p class="flex justify-between items-center"><span class="text-white/90">1 ngày</span> <span class="text-yellow-300 text-4xl md:text-5xl">= 24</span> <span class="text-white/80 text-2xl">giờ</span></p>
+                        <p class="flex justify-between items-center"><span class="text-white/90">1 giờ</span> <span class="text-yellow-300 text-4xl md:text-5xl">= 60</span> <span class="text-white/80 text-2xl">phút</span></p>
+                        <p class="flex justify-between items-center"><span class="text-white/90">1 phút</span> <span class="text-yellow-300 text-4xl md:text-5xl">= 60</span> <span class="text-white/80 text-2xl">giây</span></p>
                     </div>
                 </div>
             </div>
 
             <!-- 💡 Số ngày trong tháng -->
-            <div class="bg-gradient-to-br from-indigo-50 to-white p-10 rounded-[40px] border-4 border-indigo-100 shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-100/50 rounded-full blur-3xl -z-0"></div>
-                <p class="text-4xl md:text-6xl font-black text-indigo-900 mb-10 flex items-center gap-6">
-                    <span class="p-4 bg-indigo-600 rounded-2xl text-white shadow-lg">📦</span> Mẹo ghi nhớ số ngày trong tháng
+            <div class="bg-gradient-to-br from-indigo-50 to-white p-8 rounded-3xl border-2 border-indigo-100 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-100/30 rounded-full blur-3xl -z-0"></div>
+                <p class="text-3xl md:text-5xl font-black text-indigo-900 mb-8 flex items-center gap-6">
+                    <span class="p-3 bg-indigo-600 rounded-xl text-white shadow-md text-3xl">📦</span> Mẹo ghi nhớ số ngày trong tháng
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-3xl md:text-4xl font-black">
-                    <div class="p-8 bg-white rounded-3xl border-4 border-indigo-50 shadow-xl scale-100 hover:scale-[1.02] transition-transform duration-300">
-                        <p class="text-rose-600 mb-6 underline decoration-rose-200 decoration-8 underline-offset-8">Tháng có 31 ngày:</p>
-                        <p class="text-indigo-800 text-5xl md:text-6xl tracking-widest bg-indigo-50/50 p-4 rounded-2xl">1, 3, 5, 7, 8, 10, 12</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-2xl md:text-3xl font-black">
+                    <div class="p-6 bg-white rounded-2xl border-2 border-indigo-50 shadow-lg">
+                        <p class="text-rose-600 mb-4 underline decoration-rose-200 decoration-4 underline-offset-4">Tháng có 31 ngày:</p>
+                        <p class="text-indigo-800 text-4xl md:text-5xl tracking-widest bg-indigo-50/50 p-3 rounded-xl border border-indigo-100">1, 3, 5, 7, 8, 10, 12</p>
                     </div>
-                    <div class="p-8 bg-white rounded-3xl border-4 border-indigo-50 shadow-xl scale-100 hover:scale-[1.02] transition-transform duration-300">
-                        <p class="text-emerald-600 mb-6 underline decoration-emerald-200 decoration-8 underline-offset-8">Tháng có 30 ngày:</p>
-                        <p class="text-indigo-800 text-5xl md:text-6xl tracking-widest bg-emerald-50/30 p-4 rounded-2xl">4, 6, 9, 11</p>
+                    <div class="p-6 bg-white rounded-2xl border-2 border-indigo-50 shadow-lg">
+                        <p class="text-emerald-600 mb-4 underline decoration-emerald-200 decoration-4 underline-offset-4">Tháng có 30 ngày:</p>
+                        <p class="text-indigo-800 text-4xl md:text-5xl tracking-widest bg-emerald-50/30 p-3 rounded-xl border border-emerald-100">4, 6, 9, 11</p>
                     </div>
-                    <div class="md:col-span-2 p-10 bg-amber-100 rounded-[40px] border-4 border-amber-300 shadow-xl relative mt-4">
-                        <div class="absolute -top-6 left-10 bg-rose-600 text-white px-6 py-2 rounded-full text-2xl font-black shadow-lg uppercase">Đặc biệt</div>
-                        <p class="text-amber-950 italic text-3xl md:text-4xl leading-relaxed">
-                            Riêng <span class="font-black text-rose-600 text-5xl mx-2">Tháng 2</span> có 28 ngày (năm thường) hoặc 29 ngày (năm nhuận).
+                    <div class="md:col-span-2 p-8 bg-amber-50 rounded-3xl border-2 border-amber-200 shadow-md relative mt-2">
+                        <p class="text-amber-950 italic text-2xl md:text-3xl leading-relaxed">
+                            Riêng <span class="font-black text-rose-600 text-4xl mx-1">Tháng 2</span> có 28 ngày (năm thường) hoặc 29 ngày (năm nhuận).
                         </p>
                     </div>
                 </div>
