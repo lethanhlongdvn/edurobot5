@@ -80,7 +80,7 @@ export const lesson124 = {
                                 <div class="absolute top-4 left-4 inline-block bg-sky-500/20 border border-sky-400/50 text-sky-300 px-4 py-1.5 rounded-full font-bold text-sm uppercase tracking-wider backdrop-blur-sm z-10 w-auto">Mô phỏng 3D Tương tác</div>
                                 <!-- 3D SCENE -->
                                 <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px]" id="scene-124">
-                                    <div id="cube-wrapper-124" class="relative transform-style-3d transition-transform duration-[0.1s] ease-out cursor-grab active:cursor-grabbing" style="width: 240px; height: 240px; transform: rotateX(-20deg) rotateY(-30deg);">
+                                    <div id="cube-wrapper-124" class="relative transform-style-3d transition-transform duration-[0.1s] ease-out cursor-grab active:cursor-grabbing scale-90 md:scale-100" style="width: 240px; height: 240px; transform: rotateX(-20deg) rotateY(-30deg);">
                                         <!-- Container for mini blocks -->
                                         <div id="cube-layers-124" class="absolute left-[50%] top-[50%] transform-style-3d"></div>
 
