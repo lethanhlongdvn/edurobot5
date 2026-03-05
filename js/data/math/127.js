@@ -116,11 +116,15 @@ export const lesson127 = {
                                 <tr>
                                     <td class="p-6 bg-rose-100/30 text-2xl md:text-3xl font-bold text-rose-800 text-center">Kiểm tra kết quả</td>
                                     <td class="p-4 bg-white border-l border-rose-100">
-                                        <button onclick="lesson127.checkEx2('1')" class="px-6 py-3 bg-teal-600 hover:bg-teal-700 active:scale-95 text-white font-bold rounded-xl md:text-2xl transition-all w-full max-w-[200px] shadow-md flex items-center justify-center gap-2 mx-auto">Kiểm tra</button>
+                                        <button onclick="lesson127.checkEx2('1')" class="w-14 h-14 bg-teal-600 hover:bg-teal-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center mx-auto" title="Kiểm tra đáp án">
+                                            <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                        </button>
                                         <div id="fb-127-2-1" class="mt-3 text-lg md:text-xl font-bold text-center"></div>
                                     </td>
                                     <td class="p-4 bg-white border-l border-rose-100">
-                                        <button onclick="lesson127.checkEx2('2')" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold rounded-xl md:text-2xl transition-all w-full max-w-[200px] shadow-md flex items-center justify-center gap-2 mx-auto">Kiểm tra</button>
+                                        <button onclick="lesson127.checkEx2('2')" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center mx-auto" title="Kiểm tra đáp án">
+                                            <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                        </button>
                                         <div id="fb-127-2-2" class="mt-3 text-lg md:text-xl font-bold text-center"></div>
                                     </td>
                                 </tr>
@@ -158,8 +162,8 @@ export const lesson127 = {
                     <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-purple-200 shadow-sm">
                         <p class="text-lg md:text-2xl font-black text-purple-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
                         <textarea id="ans-127-3" rows="5" class="w-full p-6 rounded-2xl border-2 border-purple-200 bg-purple-50/50 dark:bg-slate-900 outline-none focus:border-purple-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;&#10;Đáp số: ..."></textarea>
-                        <div class="mt-4 flex items-center gap-4">
-                            <button onclick="Lesson.submitWordProblemAI('127-3')" class="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                        <div class="mt-6 flex justify-end">
+                            <button onclick="Lesson.submitWordProblemAI('127-3')" class="w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                         </div>
                     </div>
                 </div>
@@ -188,8 +192,8 @@ export const lesson127 = {
                             </div>
                             <p class="text-lg md:text-2xl font-black text-amber-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
                             <textarea id="ans-127-4" rows="4" class="w-full flex-grow p-6 rounded-2xl border-2 border-amber-200 bg-amber-50/50 dark:bg-slate-900 outline-none focus:border-amber-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;Đáp số: ..."></textarea>
-                            <div class="mt-4 flex items-center gap-4">
-                                <button onclick="Lesson.submitWordProblemAI('127-4')" class="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                            <div class="mt-6 flex justify-end">
+                                <button onclick="Lesson.submitWordProblemAI('127-4')" class="w-14 h-14 bg-amber-600 hover:bg-amber-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                             </div>
                         </div>
                     </div>
