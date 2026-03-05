@@ -72,9 +72,7 @@ export const lesson120B = {
                     color: #1e3a8a;
                     outline: none;
                 }
-                .cell-120B input:focus {
-                    background: #f0f7ff;
-                }
+                .cell-120B input:focus { background: #f0f7ff; }
                 .op-sign {
                     position: absolute;
                     left: -35px;
@@ -89,10 +87,7 @@ export const lesson120B = {
                     background: #1e3a8a;
                     margin: 0;
                 }
-                .result-cell {
-                    background: #fffbeb;
-                    border: 1px dashed #f59e0b !important;
-                }
+                .result-cell { background: #fffbeb; border: 1px dashed #f59e0b !important; }
                 .division-grid {
                     display: grid;
                     grid-template-columns: 140px 2px 100px;
@@ -108,32 +103,12 @@ export const lesson120B = {
                 .div-line-h { grid-column: 3; grid-row: 2; background: #1e3a8a; }
                 .div-quotient { grid-column: 3; grid-row: 3; display: flex; align-items: flex-start; padding-left: 10px; padding-top: 5px; gap: 2px; flex-wrap: wrap; }
                 .div-steps { grid-column: 1; grid-row: 3; display: flex; flex-direction: column; align-items: flex-end; padding-right: 10px; padding-top: 5px; gap: 5px; }
-                
-                .div-cell {
-                    width: 20px;
-                    height: 30px;
-                    border: 1px solid #e2e8f0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-weight: 800;
-                }
-                .div-cell input {
-                    width: 100%;
-                    height: 100%;
-                    border: none;
-                    text-align: center;
-                    background: transparent;
-                    font-size: 16px;
-                    font-weight: 800;
-                    outline: none;
-                    padding: 0;
-                }
+                .div-cell { width: 20px; height: 30px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+                .div-cell input { width: 100%; height: 100%; border: none; text-align: center; background: transparent; font-size: 16px; font-weight: 800; outline: none; padding: 0; }
                 .hidden { display: none !important; }
             </style>
 
             <script>
-                // Data Generation
                 const problems120B = {
                     add: [
                         {a: 12.5, b: 3.48, r: 15.98}, {a: 45.12, b: 7.8, r: 52.92}, {a: 125.5, b: 3.1, r: 128.6}, {a: 0.45, b: 0.89, r: 1.34},
@@ -169,12 +144,10 @@ export const lesson120B = {
                     const activeBtn = event.target;
                     activeBtn.classList.add('active', 'text-white');
                     activeBtn.classList.remove('bg-gray-100', 'text-gray-600');
-                    
                     if(type === 'add') activeBtn.classList.add('bg-blue-600');
                     if(type === 'sub') activeBtn.classList.add('bg-indigo-600');
                     if(type === 'mul') activeBtn.classList.add('bg-purple-600');
                     if(type === 'div') activeBtn.classList.add('bg-amber-600');
-
                     document.querySelectorAll('.operation-section').forEach(s => s.classList.add('hidden'));
                     document.getElementById('section-' + type).classList.remove('hidden');
                 };
@@ -192,54 +165,49 @@ export const lesson120B = {
                             let gridHtml = '';
                             if (type !== 'div') {
                                 gridHtml = \`
-                                    <div class="grid-120B mx-auto my-4">
-                                        <div class="op-sign">\${signs[type]}</div>
-                                        \${Array(6).fill().map((_, c) => \`<div class="cell-120B"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-r1-c\${c}"></div>\`).join('')}
-                                        \${Array(6).fill().map((_, c) => \`<div class="cell-120B"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-r2-c\${c}"></div>\`).join('')}
-                                        <div class="line-120B"></div>
-                                        \${Array(6).fill().map((_, c) => \`<div class="cell-120B result-cell"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-res-c\${c}"></div>\`).join('')}
+                                    <div class="flex flex-col items-center">
+                                        <div class="grid-120B mx-auto my-4">
+                                            <div class="op-sign">\${signs[type]}</div>
+                                            \${Array(6).fill().map((_, c) => \`<div class="cell-120B"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-r1-c\${c}"></div>\`).join('')}
+                                            \${Array(6).fill().map((_, c) => \`<div class="cell-120B"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-r2-c\${c}"></div>\`).join('')}
+                                            <div class="line-120B"></div>
+                                            \${Array(6).fill().map((_, c) => \`<div class="cell-120B result-cell"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-res-c\${c}"></div>\`).join('')}
+                                        </div>
+                                        <button onclick="checkOne120B('\${type}', \${i})" class="mt-2 px-6 py-2 bg-emerald-500 text-white rounded-xl font-black shadow-lg active:scale-95 flex items-center gap-2">Kiểm tra <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg></button>
                                     </div>
                                 \`;
                             } else {
                                 gridHtml = \`
-                                    <div class="division-grid">
-                                        <!-- Số bị chia -->
-                                        <div class="div-dividend">
-                                            \${Array(6).fill().map((_, c) => \`<div class="div-cell"><input type="text" maxlength="1"></div>\`).join('')}
+                                    <div class="flex flex-col items-center">
+                                        <div class="division-grid scale-90 md:scale-100">
+                                            <div class="div-dividend">
+                                                \${Array(6).fill().map((_, c) => \`<div class="div-cell"><input type="text" maxlength="1" id="grid-120B-div-\${i}-dividend-c\${c}"></div>\`).join('')}
+                                            </div>
+                                            <div class="div-line-v"></div>
+                                            <div class="div-divisor">
+                                                \${Array(4).fill().map((_, c) => \`<div class="div-cell"><input type="text" maxlength="1" id="grid-120B-div-\${i}-divisor-c\${c}"></div>\`).join('')}
+                                            </div>
+                                            <div class="div-line-h"></div>
+                                            <div class="div-quotient">
+                                                \${Array(4).fill().map((_, c) => \`<div class="div-cell"><input type="text" maxlength="1" id="grid-120B-div-\${i}-quotient-c\${c}"></div>\`).join('')}
+                                            </div>
+                                            <div class="div-steps">
+                                                <div class="flex gap-[2px]">\${Array(4).fill().map((_, c) => \`<div class="div-cell border-none opacity-40"><input type="text" maxlength="1"></div>\`).join('')}</div>
+                                                <div class="flex gap-[2px]">\${Array(4).fill().map((_, c) => \`<div class="div-cell border-none opacity-40"><input type="text" maxlength="1"></div>\`).join('')}</div>
+                                            </div>
                                         </div>
-                                        <!-- Vạch đứng -->
-                                        <div class="div-line-v"></div>
-                                        <!-- Số chia -->
-                                        <div class="div-divisor">
-                                            \${Array(4).fill().map((_, c) => \`<div class="div-cell"><input type="text" maxlength="1"></div>\`).join('')}
-                                        </div>
-                                        <!-- Vạch ngang -->
-                                        <div class="div-line-h"></div>
-                                        <!-- Thương -->
-                                        <div class="div-quotient">
-                                            \${Array(4).fill().map((_, c) => \`<div class="div-cell"><input type="text" maxlength="1"></div>\`).join('')}
-                                        </div>
-                                        <!-- Các bước dư -->
-                                        <div class="div-steps">
-                                            <div class="flex gap-[2px]">\${Array(4).fill().map((_, c) => \`<div class="div-cell border-none opacity-20"><input type="text" maxlength="1"></div>\`).join('')}</div>
-                                            <div class="flex gap-[2px]">\${Array(4).fill().map((_, c) => \`<div class="div-cell border-none opacity-20"><input type="text" maxlength="1"></div>\`).join('')}</div>
-                                        </div>
+                                        <button onclick="checkOne120B('div', \${i})" class="mt-2 px-6 py-2 bg-amber-500 text-white rounded-xl font-black shadow-lg active:scale-95 flex items-center gap-2">Kiểm tra <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg></button>
                                     </div>
                                 \`;
                             }
 
                             card.innerHTML = \`
-                                <div class="flex flex-col md:flex-row items-center gap-6">
-                                    <div class="w-full md:w-1/3">
+                                <div class="flex flex-col items-center gap-4">
+                                    <div class="w-full text-center">
                                         <p class="text-2xl font-black text-indigo-700">\${i+1}. \${p.a} \${signs[type]} \${p.b} = ?</p>
                                     </div>
-                                    <div class="w-full md:w-2/3">
+                                    <div class="w-full">
                                         \${gridHtml}
-                                        <div class="flex items-center gap-4 mt-4 justify-center">
-                                            <span class="text-lg font-bold">Đáp số:</span>
-                                            <input type="text" id="ans-120B-\${type}-\${i}" class="w-32 p-2 border-2 border-indigo-200 rounded-xl font-black text-xl text-center text-indigo-600" placeholder="?">
-                                            <button onclick="checkOne120B('\${type}', \${i})" class="w-10 h-10 bg-emerald-500 text-white rounded-xl flex items-center justify-center shadow-lg active:scale-95"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg></button>
-                                        </div>
                                     </div>
                                 </div>
                             \`;
@@ -249,41 +217,29 @@ export const lesson120B = {
                 }
 
                 window.checkOne120B = function(type, i) {
-                    const input = document.getElementById(\`ans-120B-\${type}-\${i}\`);
-                    const val = parseFloat(input.value.replace(',', '.'));
-                    const correct = problems120B[type][i].r;
-                    
-                    if (Math.abs(val - correct) < 0.001) {
-                        input.classList.remove('border-red-400', 'bg-red-50');
-                        input.classList.add('border-emerald-400', 'bg-emerald-50');
-                        if(window.Quiz) window.Quiz.playSFX('correct');
+                    const prob = problems120B[type][i];
+                    let isCorrect = false;
+                    if (type !== 'div') {
+                        let resStr = "";
+                        for(let c=0; c<6; c++) resStr += document.getElementById(\`grid-120B-\${type}-\${i}-res-c\${c}\`).value;
+                        const studentVal = parseFloat(resStr.trim().replace(',', '.'));
+                        if (Math.abs(studentVal - prob.r) < 0.001) isCorrect = true;
                     } else {
-                        input.classList.remove('border-emerald-400', 'bg-emerald-50');
-                        input.classList.add('border-red-400', 'bg-red-50');
+                        let quoStr = "";
+                        for(let c=0; c<4; c++) quoStr += document.getElementById(\`grid-120B-div-\${i}-quotient-c\${c}\`).value;
+                        const studentVal = parseFloat(quoStr.trim().replace(',', '.'));
+                        if (Math.abs(studentVal - prob.r) < 0.001) isCorrect = true;
+                    }
+                    if (isCorrect) {
+                        if(window.Quiz) window.Quiz.playSFX('correct');
+                        alert("Chính xác!");
+                    } else {
                         if(window.Quiz) window.Quiz.playSFX('wrong');
+                        alert("Chưa đúng, hãy kiểm tra lại kết quả.");
                     }
                 };
 
-                window.submit120B = function() {
-                    let correctCount = 0;
-                    const types = ['add', 'sub', 'mul', 'div'];
-                    types.forEach(type => {
-                        problems120B[type].forEach((p, i) => {
-                            const val = parseFloat(document.getElementById(\`ans-120B-\${type}-\${i}\`).value.replace(',', '.'));
-                            if (Math.abs(val - p.r) < 0.001) correctCount++;
-                        });
-                    });
-
-                    const total = 64;
-                    const score = (correctCount / total) * 10;
-                    
-                    if (window.submitMathLesson) {
-                        window.submitMathLesson("Kết quả: " + correctCount + "/" + total, Math.round(score), "btn-submit-120B");
-                    }
-                    alert("Bạn đã đúng " + correctCount + "/" + total + " câu. Điểm: " + Math.round(score*10)/10);
-                };
-
-                // Initialize
+                window.submit120B = function() { alert("Hãy hoàn thành các bài tập và nhấn Kiểm tra tại từng bài."); };
                 setTimeout(renderGrids120B, 100);
             </script>
         </div>
