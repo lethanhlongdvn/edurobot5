@@ -1,0 +1,20 @@
+Yêu cầu soạn bài giảng tương tác Tiết 130 - Các đơn vị đo thời gian:
+
+1. Nội dung khám phá (Discovery):
+- Bảng quy đổi các đơn vị đo thời gian: thế kỉ, năm, tháng, tuần, ngày, giờ, phút, giây.
+- Kiến thức về số ngày trong tháng và năm nhuận.
+
+2. Bài tập thực hành (Practice):
+- Bài 1: Xác định thế kỉ của các sự kiện lịch sử Việt Nam dựa trên hình ảnh minh họa. Sử dụng số La Mã (I, X, XI, XIII, XX...).
+- Bài 2: Đổi đơn vị thời gian sang số thập phân (phút sang giờ, giây sang phút...). Cho phép người dùng nhập cả dấu phẩy (,) và dấu chấm (.) để ngăn cách phần thập phân.
+
+3. Kiểm tra & Điểm số:
+- Có nút "Kiểm tra" cho từng bài tập để phản hồi ngay lập tức.
+- Nút "Nộp bài" tổng kết điểm trên thang 10.
+- Tích hợp ngân hàng câu hỏi trắc nghiệm (quizPool) 10 câu bám sát nội dung bài học.
+
+4. Thiết kế & Hiệu ứng (UI/UX):
+- Tối ưu kích thước chữ (Font size) cực lớn (text-3xl đến text-6xl) để hiển thị rõ trên Smart TV.
+- Hình ảnh minh họa phóng to, rõ nét.
+- Hiệu ứng chuyển động (animate-fade-in) và âm thanh phản hồi (SFX correct/wrong).
+- Đẩy code lên GitHub sau khi hoàn thành.
