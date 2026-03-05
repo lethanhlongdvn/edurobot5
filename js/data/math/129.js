@@ -27,13 +27,13 @@ export const lesson129 = {
                         <h3 class="text-2xl md:text-3xl font-black text-indigo-900 dark:text-indigo-100">Diện tích</h3>
                     </div>
                     <div class="space-y-4">
-                        <div class="p-4 bg-indigo-50/50 dark:bg-slate-900 rounded-2xl border border-indigo-50">
-                            <p class="font-bold text-indigo-700">Hình lập phương:</p>
-                            <p class="text-xl tracking-tight">S<sub>tp</sub> = a × a × 6</p>
+                        <div class="p-6 bg-indigo-50/50 dark:bg-slate-900 rounded-2xl border border-indigo-50 leading-relaxed text-center">
+                            <p class="font-bold text-indigo-700 text-2xl md:text-3xl mb-2">Hình lập phương:</p>
+                            <p class="text-3xl md:text-5xl font-black tracking-tight">S<sub>tp</sub> = a × a × 6</p>
                         </div>
-                        <div class="p-4 bg-blue-50/50 dark:bg-slate-900 rounded-2xl border border-blue-50">
-                            <p class="font-bold text-blue-700">Hình hộp chữ nhật:</p>
-                            <p class="text-xl tracking-tight">S<sub>tp</sub> = S<sub>xq</sub> + S<sub>đáy</sub> × 2</p>
+                        <div class="p-6 bg-blue-50/50 dark:bg-slate-900 rounded-2xl border border-blue-50 leading-relaxed text-center">
+                            <p class="font-bold text-blue-700 text-2xl md:text-3xl mb-2">Hình hộp chữ nhật:</p>
+                            <p class="text-3xl md:text-5xl font-black tracking-tight">S<sub>tp</sub> = S<sub>xq</sub> + S<sub>đáy</sub> × 2</p>
                         </div>
                     </div>
                 </div>
@@ -45,13 +45,13 @@ export const lesson129 = {
                         <h3 class="text-2xl md:text-3xl font-black text-emerald-900 dark:text-emerald-100">Thể tích</h3>
                     </div>
                     <div class="space-y-4">
-                        <div class="p-4 bg-emerald-50/50 dark:bg-slate-900 rounded-2xl border border-emerald-50">
-                            <p class="font-bold text-emerald-700">Thể tích (V):</p>
-                            <p class="text-xl tracking-tight">V = Diện tích đáy × Chiều cao</p>
+                        <div class="p-6 bg-emerald-50/50 dark:bg-slate-900 rounded-2xl border border-emerald-50 leading-relaxed text-center">
+                            <p class="font-bold text-emerald-700 text-2xl md:text-3xl mb-2">Thể tích (V):</p>
+                            <p class="text-3xl md:text-5xl font-black tracking-tight">V = Diện tích đáy × Chiều cao</p>
                         </div>
-                        <div class="p-4 bg-teal-50/50 dark:bg-slate-900 rounded-2xl border border-teal-50">
-                            <p class="font-bold text-teal-700">Quan hệ:</p>
-                            <p class="text-xl tracking-tight">Chiều cao h = V : Diện tích đáy</p>
+                        <div class="p-6 bg-teal-50/50 dark:bg-slate-900 rounded-2xl border border-teal-50 leading-relaxed text-center">
+                            <p class="font-bold text-teal-700 text-2xl md:text-3xl mb-2">Quan hệ:</p>
+                            <p class="text-3xl md:text-5xl font-black tracking-tight">Chiều cao h = V : Diện tích đáy</p>
                         </div>
                     </div>
                 </div>
@@ -66,8 +66,8 @@ export const lesson129 = {
                     <div class="flex items-start gap-5 mb-8">
                         <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">1</div>
                         <div>
-                            <p class="text-3xl md:text-5xl font-black text-blue-900 dark:text-blue-100 leading-tight">Chọn câu trả lời đúng.</p>
-                            <p class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-200 mt-4 leading-relaxed">
+                            <p class="text-4xl md:text-6xl font-black text-blue-900 dark:text-blue-100 leading-tight">Chọn câu trả lời đúng.</p>
+                            <p class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-slate-200 mt-6 leading-relaxed">
                                 Mai có hình khai triển như hình bên. Hỏi Mai có thể gấp được hình lập phương nào dưới đây?
                             </p>
                         </div>
@@ -115,7 +115,7 @@ export const lesson129 = {
                 <div class="p-8 md:p-12 bg-teal-50 dark:bg-slate-900 rounded-[40px]">
                     <div class="flex items-start gap-5 mb-8">
                         <div class="w-14 h-14 bg-teal-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">2</div>
-                        <p class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
+                        <p class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
                             Chú Nhân vừa hoàn thành mô hình quả bóng bằng các miếng gỗ. Chú muốn làm một chiếc hộp hình lập phương bằng nhựa cứng cạnh <b class="text-teal-600">2,5 dm</b> để bảo quản quả bóng. Tính diện tích nhựa cứng mà chú cần dùng để làm chiếc hộp đó.
                         </p>
                     </div>
@@ -151,7 +151,7 @@ export const lesson129 = {
                 <div class="p-8 md:p-12 bg-purple-50 dark:bg-slate-900 rounded-[40px]">
                     <div class="flex items-start gap-5 mb-8">
                         <div class="w-14 h-14 bg-purple-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">3</div>
-                        <p class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
+                        <p class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
                             Bác thợ mộc có một khối gỗ dạng hình hộp chữ nhật có kích thước như hình vẽ. Bác cắt đi một phần gỗ có dạng hình lập phương cạnh <b class="text-purple-600">2 dm</b> để làm đế đỡ chậu cây và phần còn lại dùng làm ghế. Tính thể tích phần khối gỗ dùng làm ghế.
                         </p>
                     </div>
@@ -187,7 +187,7 @@ export const lesson129 = {
                 <div class="p-8 md:p-12 bg-amber-50 dark:bg-slate-900 rounded-[40px]">
                     <div class="flex items-start gap-5 mb-8">
                         <div class="w-14 h-14 bg-amber-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shrink-0">4</div>
-                        <p class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
+                        <p class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed">
                             Khi đặt hộp đứng như hình 1, phần nước có chiều cao là <b class="text-amber-600">8 cm</b>. Vậy khi xoay hộp đó như hình 2 thì phần nước có chiều cao là bao nhiêu cm?
                         </p>
                     </div>
