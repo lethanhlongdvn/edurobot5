@@ -9,12 +9,22 @@ export const lesson123 = {
     period: "123",
     content: `
         <div class="space-y-8 animate-fade-in pb-10">
-            <!-- Hero Title -->
-            <div class="bg-[#f0f5ff] rounded-[24px] md:rounded-[32px] p-6 md:p-8 flex items-center gap-6 md:gap-8">
-                <div class="w-16 h-16 md:w-20 md:h-20 bg-[#2563eb] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-md shrink-0 text-white transform -rotate-12">📐</div>
-                <div>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#111827] mb-2 font-display tracking-tight">Luyện tập Thể tích</h2>
-                    <p class="text-base md:text-xl text-[#6b7280] font-bold italic leading-relaxed">Vận dụng công thức tính thể tích hình hộp chữ nhật vào thực tế và các hình khối phức tạp.</p>
+            <!-- 🖍️ Công thức Ghi nhớ -->
+            <div class="bg-rose-50 p-8 rounded-[48px] border-4 border-rose-200 shadow-xl relative overflow-hidden">
+                <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-rose-200/50 rounded-full blur-2xl"></div>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="flex justify-center">
+                        <img src="hinh_anh/toan/toan_tap_2/122-formula.png" alt="Công thức" class="w-full max-w-[400px] h-auto rounded-3xl shadow-xl">
+                    </div>
+                    <div class="bg-white p-8 rounded-[40px] shadow-inner border-2 border-rose-100">
+                        <h4 class="text-xl font-black text-rose-600 uppercase mb-3 tracking-widest text-center">Quy tắc cần nhớ</h4>
+                        <p class="text-xl md:text-2xl font-bold text-gray-800 leading-relaxed text-center italic">
+                            "Thể tích <span class="text-rose-600 font-black">V</span> của hình hộp chữ nhật bằng chiều dài <span class="text-rose-600 font-black italic text-3xl">a</span> nhân với chiều rộng <span class="text-rose-600 font-black italic text-3xl">b</span> rồi nhân với chiều cao <span class="text-rose-600 font-black italic text-3xl">c</span>."
+                        </p>
+                        <div class="mt-6 bg-rose-600 p-4 rounded-3xl text-white text-center shadow-lg">
+                            <p class="text-3xl md:text-5xl font-black tracking-wide italic drop-shadow-md">V = a &times; b &times; c</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -30,8 +40,15 @@ export const lesson123 = {
                         <p class="text-4xl md:text-6xl font-black text-indigo-600 dark:text-indigo-400">V = a &times; b &times; c</p>
                     </div>
                 </div>
-                <div class="bg-white p-8 rounded-[40px] border border-emerald-50 shadow-sm dark:bg-slate-800 dark:border-slate-700 flex justify-center items-center">
-                    <img src="hinh_anh/toan/toan_tap_2/122-formula.png" alt="Hình hộp chữ nhật" class="w-full max-w-[300px] h-auto rounded-3xl">
+                <div class="bg-white p-8 rounded-[40px] border border-emerald-50 shadow-sm dark:bg-slate-800 dark:border-slate-700">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-xl font-black">2</div>
+                        <h4 class="text-2xl font-black text-gray-800 dark:text-slate-100 uppercase">Khối hình đặc biệt</h4>
+                    </div>
+                    <div class="bg-emerald-50 dark:bg-emerald-900/20 p-8 rounded-3xl text-center">
+                        <p class="text-xs font-black tracking-widest text-emerald-400 uppercase mb-4">Phương pháp giải</p>
+                        <p class="text-2xl md:text-3xl font-black text-emerald-700 dark:text-emerald-400 uppercase leading-tight italic">Chia nhỏ và cộng dồn các khối hình</p>
+                    </div>
                 </div>
             </div>
         </div>

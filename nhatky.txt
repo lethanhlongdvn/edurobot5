@@ -601,3 +601,9 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - Mô tả thay đổi: Cập nhật giao diện khối Header (Hero Title) cho giống với hình ảnh của tiết 123 luyện tập thể tích gồm nền xanh nhạt, bo góc và icon eke thay vì rubik chữ.
 - Trạng thái hiện tại: Đã hoàn tất thay đổi giao diện theo yêu cầu mới ở tiết 123.
 
+[07:33] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 123
+- File thay đổi: js/data/math/123.js
+- Mô tả thay đổi: Thay thế Hero title bằng Quy tắc tính thể tích hình hộp chữ nhật (từ tiết 122) và khôi phục lại phần Khối hình đặc biệt bị ghi đè nhầm trước đó.
+- Trạng thái hiện tại: Đã hoàn tất thay đổi giao diện theo yêu cầu mới ở tiết 123.
+
