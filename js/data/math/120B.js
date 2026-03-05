@@ -29,7 +29,6 @@ export const lesson120B = {
                 <button onclick="switchTab120B('div')" class="tab-btn-120B bg-amber-100 text-amber-700 px-6 py-2 rounded-full font-black">Chia (:)</button>
             </div>
 
-            <!-- Các phần bài tập -->
             <div id="section-add" class="operation-section space-y-6"></div>
             <div id="section-sub" class="operation-section hidden space-y-6"></div>
             <div id="section-mul" class="operation-section hidden space-y-6"></div>
@@ -40,63 +39,14 @@ export const lesson120B = {
             </div>
 
             <style>
-                .grid-120B {
-                    display: grid;
-                    grid-template-columns: repeat(6, 40px);
-                    grid-template-rows: repeat(3, 40px);
-                    gap: 0px;
-                    border: 1px solid #e2e8f0;
-                    width: fit-content;
-                    background: white;
-                    position: relative;
-                }
-                .cell-120B {
-                    border: 0.5px solid #cbd5e1;
-                    width: 40px;
-                    height: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 20px;
-                    font-weight: 800;
-                    color: #1e3a8a;
-                }
-                .cell-120B input {
-                    width: 100%;
-                    height: 100%;
-                    border: none;
-                    text-align: center;
-                    background: transparent;
-                    font-size: 20px;
-                    font-weight: 800;
-                    color: #1e3a8a;
-                    outline: none;
-                }
+                .grid-120B { display: grid; grid-template-columns: repeat(6, 40px); grid-template-rows: repeat(3, 40px); gap: 0px; border: 1px solid #e2e8f0; width: fit-content; background: white; position: relative; }
+                .cell-120B { border: 0.5px solid #cbd5e1; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: #1e3a8a; }
+                .cell-120B input { width: 100%; height: 100%; border: none; text-align: center; background: transparent; font-size: 20px; font-weight: 800; color: #1e3a8a; outline: none; }
                 .cell-120B input:focus { background: #f0f7ff; }
-                .op-sign {
-                    position: absolute;
-                    left: -35px;
-                    top: 50px;
-                    font-size: 24px;
-                    font-weight: 900;
-                    color: #64748b;
-                }
-                .line-120B {
-                    grid-column: 1 / span 6;
-                    height: 2px;
-                    background: #1e3a8a;
-                    margin: 0;
-                }
+                .op-sign { position: absolute; left: -35px; top: 50px; font-size: 24px; font-weight: 900; color: #64748b; }
+                .line-120B { grid-column: 1 / span 6; height: 2px; background: #1e3a8a; margin: 0; }
                 .result-cell { background: #fffbeb; border: 1px dashed #f59e0b !important; }
-                .division-grid {
-                    display: grid;
-                    grid-template-columns: 140px 2px 100px;
-                    grid-template-rows: 40px 2px 120px;
-                    gap: 0;
-                    margin: 20px auto;
-                    background: white;
-                    position: relative;
-                }
+                .division-grid { display: grid; grid-template-columns: 140px 2px 100px; grid-template-rows: 40px 2px 120px; gap: 0; margin: 20px auto; background: white; position: relative; }
                 .div-dividend { grid-column: 1; grid-row: 1; display: flex; justify-content: flex-end; align-items: center; gap: 2px; padding-right: 10px; }
                 .div-line-v { grid-column: 2; grid-row: 1 / span 3; background: #1e3a8a; }
                 .div-divisor { grid-column: 3; grid-row: 1; display: flex; align-items: center; padding-left: 10px; gap: 2px; }
@@ -164,8 +114,8 @@ export const lesson120B = {
                             
                             let gridHtml = '';
                             if (type !== 'div') {
-                                gridHtml = \`
-                                    <div class="flex flex-col items-center">
+                                gridHtml = `
+        < div class= "flex flex-col items-center" >
                                         <div class="grid-120B mx-auto my-4">
                                             <div class="op-sign">\${signs[type]}</div>
                                             \${Array(6).fill().map((_, c) => \`<div class="cell-120B"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-r1-c\${c}"></div>\`).join('')}
@@ -174,11 +124,11 @@ export const lesson120B = {
                                             \${Array(6).fill().map((_, c) => \`<div class="cell-120B result-cell"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-res-c\${c}"></div>\`).join('')}
                                         </div>
                                         <button onclick="checkOne120B('\${type}', \${i})" class="mt-2 px-6 py-2 bg-emerald-500 text-white rounded-xl font-black shadow-lg active:scale-95 flex items-center gap-2">Kiểm tra <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg></button>
-                                    </div>
-                                \`;
+                                    </div >
+    `;
                             } else {
-                                gridHtml = \`
-                                    <div class="flex flex-col items-center">
+                                gridHtml = `
+    < div class="flex flex-col items-center" >
                                         <div class="division-grid scale-90 md:scale-100">
                                             <div class="div-dividend">
                                                 \${Array(6).fill().map((_, c) => \`<div class="div-cell"><input type="text" maxlength="1" id="grid-120B-div-\${i}-dividend-c\${c}"></div>\`).join('')}
@@ -197,20 +147,20 @@ export const lesson120B = {
                                             </div>
                                         </div>
                                         <button onclick="checkOne120B('div', \${i})" class="mt-2 px-6 py-2 bg-amber-500 text-white rounded-xl font-black shadow-lg active:scale-95 flex items-center gap-2">Kiểm tra <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg></button>
-                                    </div>
-                                \`;
+                                    </div >
+    `;
                             }
 
-                            card.innerHTML = \`
-                                <div class="flex flex-col items-center gap-4">
+                            card.innerHTML = `
+    < div class="flex flex-col items-center gap-4" >
                                     <div class="w-full text-center">
                                         <p class="text-2xl font-black text-indigo-700">\${i+1}. \${p.a} \${signs[type]} \${p.b} = ?</p>
                                     </div>
                                     <div class="w-full">
                                         \${gridHtml}
                                     </div>
-                                </div>
-                            \`;
+                                </div >
+    `;
                             section.appendChild(card);
                         });
                     });
@@ -221,14 +171,20 @@ export const lesson120B = {
                     let isCorrect = false;
                     if (type !== 'div') {
                         let resStr = "";
-                        for(let c=0; c<6; c++) resStr += document.getElementById(\`grid-120B-\${type}-\${i}-res-c\${c}\`).value;
+                        for(let c=0; c<6; c++) {
+                            const el = document.getElementById(\`grid-120B-\${type}-\${i}-res-c\${c}\`);
+                            if(el) resStr += el.value;
+                        }
                         const studentVal = parseFloat(resStr.trim().replace(',', '.'));
-                        if (Math.abs(studentVal - prob.r) < 0.001) isCorrect = true;
+                        if (!isNaN(studentVal) && Math.abs(studentVal - prob.r) < 0.001) isCorrect = true;
                     } else {
                         let quoStr = "";
-                        for(let c=0; c<4; c++) quoStr += document.getElementById(\`grid-120B-div-\${i}-quotient-c\${c}\`).value;
+                        for(let c=0; c<4; c++) {
+                            const el = document.getElementById(\`grid-120B-div-\${i}-quotient-c\${c}\`);
+                            if(el) quoStr += el.value;
+                        }
                         const studentVal = parseFloat(quoStr.trim().replace(',', '.'));
-                        if (Math.abs(studentVal - prob.r) < 0.001) isCorrect = true;
+                        if (!isNaN(studentVal) && Math.abs(studentVal - prob.r) < 0.001) isCorrect = true;
                     }
                     if (isCorrect) {
                         if(window.Quiz) window.Quiz.playSFX('correct');
@@ -239,7 +195,38 @@ export const lesson120B = {
                     }
                 };
 
-                window.submit120B = function() { alert("Hãy hoàn thành các bài tập và nhấn Kiểm tra tại từng bài."); };
+                window.submit120B = function() {
+                    let correctCount = 0;
+                    const types = ['add', 'sub', 'mul', 'div'];
+                    types.forEach(type => {
+                        problems120B[type].forEach((p, i) => {
+                            let isCorrect = false;
+                            if (type !== 'div') {
+                                let resStr = "";
+                                for(let c=0; c<6; c++) {
+                                    const el = document.getElementById(\`grid-120B-\${type}-\${i}-res-c\${c}\`);
+                                    if(el) resStr += el.value;
+                                }
+                                const studentVal = parseFloat(resStr.trim().replace(',', '.'));
+                                if (!isNaN(studentVal) && Math.abs(studentVal - p.r) < 0.001) isCorrect = true;
+                            } else {
+                                let quoStr = "";
+                                for(let c=0; c<4; c++) {
+                                    const el = document.getElementById(\`grid-120B-div-\${i}-quotient-c\${c}\`);
+                                    if(el) quoStr += el.value;
+                                }
+                                const studentVal = parseFloat(quoStr.trim().replace(',', '.'));
+                                if (!isNaN(studentVal) && Math.abs(studentVal - p.r) < 0.001) isCorrect = true;
+                            }
+                            if (isCorrect) correctCount++;
+                        });
+                    });
+                    const totalPoints = correctCount * 10;
+                    if (window.submitMathLesson) {
+                        window.submitMathLesson(\`Đúng \${correctCount}/64 câu\`, totalPoints, "btn-submit-120B");
+                    }
+                    alert(\`Kết quả: \${correctCount}/64 câu đúng.\\nTổng điểm: \${totalPoints}/640 điểm.\`);
+                };
                 setTimeout(renderGrids120B, 100);
             </script>
         </div>
