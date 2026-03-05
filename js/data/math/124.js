@@ -63,7 +63,7 @@ export const lesson124 = {
 
                 <!-- 💥 MODAL 3D FULLSCREEN 💥 -->
                 <div id="modal-124-khampha" class="fixed inset-0 z-[9999] bg-slate-900/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-md" onclick="window.closeKhamPhaModal124()">
-                    <div class="bg-purple-50 w-[96%] max-w-4xl max-h-[85vh] h-[700px] rounded-[40px] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative flex flex-col" onclick="event.stopPropagation()">
+                    <div class="bg-purple-50 w-[96%] max-w-5xl h-[90vh] max-h-[900px] rounded-[40px] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative flex flex-col" onclick="event.stopPropagation()">
                         <!-- Header -->
                         <div class="bg-purple-600 bg-gradient-to-r from-purple-700 to-indigo-600 text-white p-5 flex justify-between items-center shrink-0 shadow-lg z-20 relative">
                             <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight flex items-center gap-4">
@@ -74,9 +74,9 @@ export const lesson124 = {
                             </button>
                         </div>
                         <!-- Body -->
-                        <div class="flex-grow flex flex-col p-6 gap-6 overflow-hidden relative">
+                        <div class="flex-grow flex flex-col p-4 md:p-6 gap-4 overflow-hidden relative">
                             <!-- Left: 3D Simulator -->
-                            <div class="flex-1 flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-slate-800 to-purple-950 p-6 rounded-[32px] shadow-2xl border-4 border-purple-200 overflow-hidden relative">
+                            <div class="flex-1 flex flex-col items-center justify-center bg-gradient-to-br from-slate-800 to-purple-950 p-2 md:p-6 rounded-[32px] shadow-2xl border-4 border-purple-200 overflow-hidden relative">
                                 <div class="absolute top-4 left-4 inline-block bg-sky-500/20 border border-sky-400/50 text-sky-300 px-4 py-1.5 rounded-full font-bold text-sm uppercase tracking-wider backdrop-blur-sm z-10 w-auto">Mô phỏng 3D Tương tác</div>
                                 <!-- 3D SCENE -->
                                 <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px]" id="scene-124">
@@ -106,17 +106,18 @@ export const lesson124 = {
                                             </div>
                                         </div>
                                     </div>
+                                    </div>
                                 </div>
+                            </div>
 
-                                <!-- Controls -->
-                                <div class="flex flex-wrap items-center justify-center gap-3 z-10 w-full mb-4">
-                                    <button onclick="window.fillKhamPha124()" id="btn-fill-124" class="px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all flex items-center gap-2">
-                                        🧊 Bấm lần 1: Xếp 1 hình
-                                    </button>
-                                    <button onclick="window.resetKhamPha124()" class="px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-xl font-bold text-sm md:text-base shadow-md active:scale-95 transition-all">
-                                        ↺ Đặt lại
-                                    </button>
-                                </div>
+                            <!-- Footer Controls -->
+                            <div class="flex flex-wrap items-center justify-center gap-4 z-10 w-full mb-2 shrink-0">
+                                <button onclick="window.fillKhamPha124()" id="btn-fill-124" class="px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-2xl font-black text-lg shadow-xl active:scale-95 transition-all flex items-center gap-3">
+                                    🧊 Bấm lần 1: Xếp 1 hình
+                                </button>
+                                <button onclick="window.resetKhamPha124()" class="px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-2xl font-black text-lg shadow-xl active:scale-95 transition-all">
+                                    ↺ Đặt lại
+                                </button>
                             </div>
                         </div>
                     </div>
