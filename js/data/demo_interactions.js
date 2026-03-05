@@ -4,7 +4,7 @@
 
 export const lessonDemo = {
     topic: 'Mẫu Tương Tác Chuẩn',
-    week: '0',
+    week: '35',
     period: 'DEMO',
     title: 'BÀI HỌC MẪU: TỔNG HỢP CÁC TÍNH NĂNG TƯƠNG TÁC',
     description: 'Tài liệu tham khảo đầy đủ nhất về các dạng bài tập tương tác: Toán học 3D, Khoa học mô phỏng, Tiếng Việt kéo thả...',
