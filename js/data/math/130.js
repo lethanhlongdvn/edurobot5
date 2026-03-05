@@ -54,10 +54,7 @@ export const lesson130 = {
             <!-- Bài tập 1 -->
             <div id="box-130-1" class="bg-white p-6 rounded-3xl border border-gray-100 shadow-xl relative overflow-hidden">
                 <div class="absolute -top-10 -right-10 w-40 h-40 bg-indigo-50 rounded-full -z-0"></div>
-                <div class="relative z-10 text-center space-y-4">
-                    <p class="font-black text-4xl md:text-6xl text-indigo-900 leading-tight">1. Các đơn vị đo thời gian</p>
-                    <p class="text-2xl md:text-4xl text-indigo-600 font-medium italic">Khám phá mối liên hệ giữa các đơn vị đo thời gian</p>
-                </div>
+
                 <div class="relative z-10">
                     <p class="font-black text-3xl md:text-4xl mb-6 text-indigo-700 flex items-center gap-4">
                         <span class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black shadow-lg shadow-indigo-200 shrink-0 text-3xl">1</span>
@@ -87,7 +84,7 @@ export const lesson130 = {
 
                         <!-- Sự kiện 3 -->
                         <div id="item-130-1-3" class="bg-indigo-50/50 p-6 rounded-3xl border-4 border-indigo-100 space-y-6">
-                            <p class="text-3xl font-black text-indigo-900 leading-tight">Vua Lý Công Uẩn dời đô / Thăng Long năm 1010.</p>
+                            <p class="text-3xl font-black text-indigo-900 leading-tight">Vua Lý Công Uẩn dời đô về Thăng Long năm 1010.</p>
                             <img src="hinh_anh/toan/toan_tap_2/130-1-LCU.png" alt="Sự kiện 3" class="w-full h-80 object-cover rounded-2xl shadow-lg border-4 border-white-500">
                             <div class="flex items-center justify-between bg-white p-5 rounded-2xl border-2 border-indigo-50 shadow-inner">
                                 <span class="font-black text-3xl text-indigo-500">Thế kỉ:</span>
