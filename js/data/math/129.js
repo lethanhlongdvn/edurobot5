@@ -47,11 +47,11 @@ export const lesson129 = {
                     <div class="space-y-4">
                         <div class="p-6 bg-emerald-50/50 dark:bg-slate-900 rounded-2xl border border-emerald-50 leading-relaxed text-center">
                             <p class="font-bold text-emerald-700 text-xl md:text-2xl mb-2">Thể tích (V):</p>
-                            <p class="text-2xl md:text-4xl font-black tracking-tight">V = Diện tích đáy × Chiều cao</p>
+                            <p class="text-2xl md:text-4xl font-black tracking-tight uppercase">V = S<sub>đ</sub> × C</p>
                         </div>
                         <div class="p-6 bg-teal-50/50 dark:bg-slate-900 rounded-2xl border border-teal-50 leading-relaxed text-center">
                             <p class="font-bold text-teal-700 text-xl md:text-2xl mb-2">Quan hệ:</p>
-                            <p class="text-2xl md:text-4xl font-black tracking-tight">Chiều cao h = V : Diện tích đáy</p>
+                            <p class="text-2xl md:text-4xl font-black tracking-tight uppercase">C = V : S<sub>đ</sub></p>
                         </div>
                     </div>
                 </div>
