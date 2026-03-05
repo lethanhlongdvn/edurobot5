@@ -23,6 +23,7 @@ import { lesson124 } from './124.js';
 import { lesson125 } from './125.js';
 import { lesson126 } from './126.js';
 import { lesson127 } from './127.js';
+import { lesson128 } from './128.js';
 import { lessonTemplate } from './template.js';
 import { placeholderLessons } from './placeholders.js';
 
@@ -51,7 +52,8 @@ const activeLessons = [
     lesson124,
     lesson125,
     lesson126,
-    lesson127
+    lesson127,
+    lesson128
 ];
 
 const activePeriods = activeLessons.map(l => l.period);
