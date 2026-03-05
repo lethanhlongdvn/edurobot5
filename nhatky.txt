@@ -625,3 +625,9 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - Mô tả thay đổi: Sửa lỗi trắng trang ở bài 123. Hàm \switchTab()\ gặp lỗi do biến \currentLessonPeriod\ lưu cứng dữ liệu từ URL, vô tình khiến dữ liệu không khớp với \lesson.period\.
 - Trạng thái hiện tại: Đã sửa. Trình chuyển tab nay có thể xử lý cả link chứa ID (\math_5_123\) lẫn Period (\123\).
 
+[09:49] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 123
+- File thay đổi: js/data/math/123.js
+- Mô tả thay đổi: Thay đổi màu chữ của các nút trắc nghiệm (A, B, C, D) từ màu xám nhạt (text-gray-300) sang màu đen xám đậm (text-gray-700) để dễ nhìn và đọc hơn.
+- Trạng thái hiện tại: Đã cập nhật xong UI phần trắc nghiệm bài 123.
+
