@@ -9,45 +9,38 @@ export const lesson130 = {
             <!-- 🌟 Bảng đơn vị đo thời gian -->
             <div class="bg-gradient-to-br from-indigo-500 to-purple-600 p-6 rounded-3xl shadow-xl text-white">
                 <h3 class="text-3xl font-black mb-6 text-center italic tracking-tight uppercase">Bảng Đơn Vị Đo Thời Gian</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xl md:text-2xl font-bold">
-                    <div class="bg-white/20 p-4 rounded-xl backdrop-blur-sm border border-white/30 space-y-2">
-                        <p>1 thế kỉ = <span class="text-yellow-300 font-black">100</span> năm</p>
-                        <p>1 năm = <span class="text-yellow-300 font-black">12</span> tháng</p>
-                        <p>1 năm = <span class="text-yellow-300 font-black">365</span> ngày</p>
-                        <p>1 năm nhuận = <span class="text-yellow-300 font-black">366</span> ngày</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-3xl md:text-4xl font-black">
+                    <div class="bg-white/20 p-6 rounded-2xl backdrop-blur-sm border-2 border-white/30 space-y-4">
+                        <p>1 thế kỉ = <span class="text-yellow-300">100</span> năm</p>
+                        <p>1 năm = <span class="text-yellow-300">12</span> tháng</p>
+                        <p>1 năm = <span class="text-yellow-300">365</span> ngày</p>
+                        <p>1 năm nhuận = <span class="text-yellow-300">366</span> ngày</p>
                     </div>
-                    <div class="bg-white/20 p-4 rounded-xl backdrop-blur-sm border border-white/30 space-y-2">
-                        <p>1 tuần lễ = <span class="text-yellow-300 font-black">7</span> ngày</p>
-                        <p>1 ngày = <span class="text-yellow-300 font-black">24</span> giờ</p>
-                        <p>1 giờ = <span class="text-yellow-300 font-black">60</span> phút</p>
-                        <p>1 phút = <span class="text-yellow-300 font-black">60</span> giây</p>
+                    <div class="bg-white/20 p-6 rounded-2xl backdrop-blur-sm border-2 border-white/30 space-y-4">
+                        <p>1 tuần lễ = <span class="text-yellow-300">7</span> ngày</p>
+                        <p>1 ngày = <span class="text-yellow-300">24</span> giờ</p>
+                        <p>1 giờ = <span class="text-yellow-300">60</span> phút</p>
+                        <p>1 phút = <span class="text-yellow-300">60</span> giây</p>
                     </div>
                 </div>
             </div>
 
             <!-- 💡 Số ngày trong tháng -->
-            <div class="bg-emerald-50 p-6 rounded-[32px] border-4 border-dashed border-emerald-200">
-                <p class="text-emerald-700 font-black text-2xl uppercase mb-4 flex items-center gap-2">
-                    <span>💡</span> Số ngày của các tháng trong năm
+            <div class="bg-gradient-to-br from-indigo-50 to-white p-8 rounded-3xl border-2 border-indigo-100 shadow-lg">
+                <p class="text-3xl font-black text-indigo-900 mb-6 flex items-center gap-4">
+                    <span class="p-2 bg-indigo-600 rounded-lg text-white">📦</span> Mẹm ghi nhớ số ngày trong tháng
                 </p>
-                <div class="grid grid-cols-1 gap-4 text-xl">
-                    <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold shrink-0 mt-1">31</div>
-                        <p class="font-bold text-emerald-900 leading-snug">
-                            Tháng có 31 ngày: Tháng 1, Tháng 3, Tháng 5, Tháng 7, Tháng 8, Tháng 10, Tháng 12.
-                        </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-2xl font-bold">
+                    <div class="p-4 bg-white rounded-2xl border border-indigo-50 shadow-sm">
+                        <p class="text-rose-600 mb-3 underline decoration-rose-200 decoration-4">Tháng có 31 ngày:</p>
+                        <p class="text-indigo-800">1, 3, 5, 7, 8, 10, 12</p>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold shrink-0 mt-1">30</div>
-                        <p class="font-bold text-emerald-900 leading-snug">
-                            Tháng có 30 ngày: Tháng 4, Tháng 6, Tháng 9, Tháng 11.
-                        </p>
+                    <div class="p-4 bg-white rounded-2xl border border-indigo-50 shadow-sm">
+                        <p class="text-emerald-600 mb-3 underline decoration-emerald-200 decoration-4">Tháng có 30 ngày:</p>
+                        <p class="text-indigo-800">4, 6, 9, 11</p>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center font-bold shrink-0 mt-1">28</div>
-                        <p class="font-bold text-emerald-900 leading-snug">
-                            Tháng 2 có 28 ngày (Vào năm nhuận có 29 ngày).
-                        </p>
+                    <div class="md:col-span-2 p-6 bg-amber-50 rounded-2xl border-2 border-amber-200">
+                        <p class="text-amber-800 italic">Riêng <span class="font-black text-rose-600">Tháng 2</span> có 28 ngày (năm thường) hoặc 29 ngày (năm nhuận).</p>
                     </div>
                 </div>
             </div>
@@ -58,70 +51,74 @@ export const lesson130 = {
             <!-- Bài tập 1 -->
             <div id="box-130-1" class="bg-white p-6 rounded-3xl border border-gray-100 shadow-xl relative overflow-hidden">
                 <div class="absolute -top-10 -right-10 w-40 h-40 bg-indigo-50 rounded-full -z-0"></div>
+                <div class="relative z-10 text-center space-y-4">
+                    <p class="font-black text-4xl md:text-6xl text-indigo-900 leading-tight">1. Các đơn vị đo thời gian</p>
+                    <p class="text-2xl md:text-4xl text-indigo-600 font-medium italic">Khám phá mối liên hệ giữa các đơn vị đo thời gian</p>
+                </div>
                 <div class="relative z-10">
                     <p class="font-black text-3xl md:text-4xl mb-6 text-indigo-700 flex items-center gap-4">
-                        <span class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black shadow-lg shadow-indigo-200 shrink-0 text-2xl">1</span>
+                        <span class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black shadow-lg shadow-indigo-200 shrink-0 text-3xl">1</span>
                         <span>Dưới đây là năm (khoảng thời gian) xảy ra các sự kiện trong lịch sử Việt Nam. Em hãy cho biết mỗi sự kiện xảy ra vào thế kỉ nào?</span>
                     </p>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <!-- Sự kiện 1 -->
-                        <div id="item-130-1-1" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
-                            <p class="text-xl font-bold text-indigo-900">Hai Bà Trưng phát cờ khởi nghĩa năm 40.</p>
-                            <img src="hinh_anh/toan/toan_tap_2/130-1-HBT.png" alt="Sự kiện 1" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
-                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
-                                <span class="font-black text-indigo-500">Thế kỉ:</span>
-                                <input type="text" id="ans-130-1-1" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                        <div id="item-130-1-1" class="bg-indigo-50/50 p-6 rounded-3xl border-4 border-indigo-100 space-y-6">
+                            <p class="text-3xl font-black text-indigo-900 leading-tight">Hai Bà Trưng phát cờ khởi nghĩa năm 40.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-HBT.png" alt="Sự kiện 1" class="w-full h-80 object-cover rounded-2xl shadow-lg border-4 border-white-500">
+                            <div class="flex items-center justify-between bg-white p-5 rounded-2xl border-2 border-indigo-50 shadow-inner">
+                                <span class="font-black text-3xl text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-1" class="w-32 text-4xl font-black text-indigo-700 bg-indigo-50 rounded-xl p-3 text-center border-none shadow-inner uppercase" placeholder="?">
                             </div>
                         </div>
 
                         <!-- Sự kiện 2 -->
-                        <div id="item-130-1-2" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
-                            <p class="text-xl font-bold text-indigo-900">Đinh Bộ Lĩnh lên ngôi Hoàng đế năm 968.</p>
-                            <img src="hinh_anh/toan/toan_tap_2/130-1-DBL.png" alt="Sự kiện 2" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
-                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
-                                <span class="font-black text-indigo-500">Thế kỉ:</span>
-                                <input type="text" id="ans-130-1-2" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                        <div id="item-130-1-2" class="bg-indigo-50/50 p-6 rounded-3xl border-4 border-indigo-100 space-y-6">
+                            <p class="text-3xl font-black text-indigo-900 leading-tight">Đinh Bộ Lĩnh lên ngôi Hoàng đế năm 968.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-DBL.png" alt="Sự kiện 2" class="w-full h-80 object-cover rounded-2xl shadow-lg border-4 border-white-500">
+                            <div class="flex items-center justify-between bg-white p-5 rounded-2xl border-2 border-indigo-50 shadow-inner">
+                                <span class="font-black text-3xl text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-2" class="w-32 text-4xl font-black text-indigo-700 bg-indigo-50 rounded-xl p-3 text-center border-none shadow-inner uppercase" placeholder="?">
                             </div>
                         </div>
 
                         <!-- Sự kiện 3 -->
-                        <div id="item-130-1-3" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
-                            <p class="text-xl font-bold text-indigo-900">Vua Lý Công Uẩn dời đô từ Hoa Lư về Thăng Long năm 1010.</p>
-                            <img src="hinh_anh/toan/toan_tap_2/130-1-LCU.png" alt="Sự kiện 3" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
-                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
-                                <span class="font-black text-indigo-500">Thế kỉ:</span>
-                                <input type="text" id="ans-130-1-3" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                        <div id="item-130-1-3" class="bg-indigo-50/50 p-6 rounded-3xl border-4 border-indigo-100 space-y-6">
+                            <p class="text-3xl font-black text-indigo-900 leading-tight">Vua Lý Công Uẩn dời đô / Thăng Long năm 1010.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-LCU.png" alt="Sự kiện 3" class="w-full h-80 object-cover rounded-2xl shadow-lg border-4 border-white-500">
+                            <div class="flex items-center justify-between bg-white p-5 rounded-2xl border-2 border-indigo-50 shadow-inner">
+                                <span class="font-black text-3xl text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-3" class="w-32 text-4xl font-black text-indigo-700 bg-indigo-50 rounded-xl p-3 text-center border-none shadow-inner uppercase" placeholder="?">
                             </div>
                         </div>
 
                         <!-- Sự kiện 4 -->
-                        <div id="item-130-1-4" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
-                            <p class="text-xl font-bold text-indigo-900">Nhà Trần đánh bại quân Nguyên Mông năm 1285.</p>
-                            <img src="hinh_anh/toan/toan_tap_2/130-1-NT.png" alt="Sự kiện 4" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
-                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
-                                <span class="font-black text-indigo-500">Thế kỉ:</span>
-                                <input type="text" id="ans-130-1-4" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                        <div id="item-130-1-4" class="bg-indigo-50/50 p-6 rounded-3xl border-4 border-indigo-100 space-y-6">
+                            <p class="text-3xl font-black text-indigo-900 leading-tight">Nhà Trần đánh bại quân Nguyên Mông năm 1285.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-NT.png" alt="Sự kiện 4" class="w-full h-80 object-cover rounded-2xl shadow-lg border-4 border-white-500">
+                            <div class="flex items-center justify-between bg-white p-5 rounded-2xl border-2 border-indigo-50 shadow-inner">
+                                <span class="font-black text-3xl text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-4" class="w-32 text-4xl font-black text-indigo-700 bg-indigo-50 rounded-xl p-3 text-center border-none shadow-inner uppercase" placeholder="?">
                             </div>
                         </div>
 
                         <!-- Sự kiện 5 -->
-                        <div id="item-130-1-5" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
-                            <p class="text-xl font-bold text-indigo-900">Chiến thắng Điện Biên Phủ năm 1954.</p>
-                            <img src="hinh_anh/toan/toan_tap_2/130-1-ĐBP.png" alt="Sự kiện 5" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
-                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
-                                <span class="font-black text-indigo-500">Thế kỉ:</span>
-                                <input type="text" id="ans-130-1-5" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                        <div id="item-130-1-5" class="bg-indigo-50/50 p-6 rounded-3xl border-4 border-indigo-100 space-y-6">
+                            <p class="text-3xl font-black text-indigo-900 leading-tight">Chiến thắng Điện Biên Phủ năm 1954.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-ĐBP.png" alt="Sự kiện 5" class="w-full h-80 object-cover rounded-2xl shadow-lg border-4 border-white-500">
+                            <div class="flex items-center justify-between bg-white p-5 rounded-2xl border-2 border-indigo-50 shadow-inner">
+                                <span class="font-black text-3xl text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-5" class="w-32 text-4xl font-black text-indigo-700 bg-indigo-50 rounded-xl p-3 text-center border-none shadow-inner uppercase" placeholder="?">
                             </div>
                         </div>
 
                         <!-- Sự kiện 6 -->
-                        <div id="item-130-1-6" class="bg-indigo-50/50 p-4 rounded-2xl border-2 border-indigo-100 space-y-4">
-                            <p class="text-xl font-bold text-indigo-900">Giải phóng miền Nam thống nhất đất nước năm 1975.</p>
-                            <img src="hinh_anh/toan/toan_tap_2/130-1-GPMN.png" alt="Sự kiện 6" class="w-full h-48 object-cover rounded-xl shadow border-4 border-white">
-                            <div class="flex items-center justify-between bg-white p-3 rounded-xl border border-indigo-50">
-                                <span class="font-black text-indigo-500">Thế kỉ:</span>
-                                <input type="text" id="ans-130-1-6" class="w-24 text-2xl font-black text-indigo-700 bg-indigo-100 rounded-lg p-2 text-center border-none shadow-inner" placeholder="?">
+                        <div id="item-130-1-6" class="bg-indigo-50/50 p-6 rounded-3xl border-4 border-indigo-100 space-y-6">
+                            <p class="text-3xl font-black text-indigo-900 leading-tight">Giải phóng miền Nam năm 1975.</p>
+                            <img src="hinh_anh/toan/toan_tap_2/130-1-GPMN.png" alt="Sự kiện 6" class="w-full h-80 object-cover rounded-2xl shadow-lg border-4 border-white-500">
+                            <div class="flex items-center justify-between bg-white p-5 rounded-2xl border-2 border-indigo-50 shadow-inner">
+                                <span class="font-black text-3xl text-indigo-500">Thế kỉ:</span>
+                                <input type="text" id="ans-130-1-6" class="w-32 text-4xl font-black text-indigo-700 bg-indigo-50 rounded-xl p-3 text-center border-none shadow-inner uppercase" placeholder="?">
                             </div>
                         </div>
                     </div>
@@ -133,56 +130,56 @@ export const lesson130 = {
             </div>
 
             <!-- Bài tập 2 -->
-            <div id="box-130-2" class="bg-white p-6 rounded-3xl border border-gray-100 shadow-xl relative overflow-hidden">
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-50 rounded-full -z-0"></div>
+            <div id="box-130-2" class="bg-white p-8 rounded-3xl border-2 border-emerald-50 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-48 h-48 bg-emerald-50 rounded-full -z-0"></div>
                 <div class="relative z-10">
-                    <p class="font-black text-3xl md:text-5xl mb-6 text-emerald-700 flex items-center gap-4">
-                        <span class="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black shadow-lg shadow-emerald-200">2</span>
+                    <p class="font-black text-4xl md:text-6xl mb-10 text-emerald-700 flex items-center gap-6">
+                        <span class="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black shadow-lg shadow-emerald-200">2</span>
                         Số ?
                     </p>
 
                     <!-- Mẫu hướng dẫn -->
-                    <div class="bg-purple-50 p-6 rounded-2xl border-2 border-purple-200 mb-6 w-fit mx-auto shadow-inner">
-                        <p class="text-2xl font-bold tracking-wider text-purple-900 flex items-center gap-4 flex-wrap">
-                            <span class="font-black text-purple-600 underline">Mẫu:</span> 
-                            <span>72 phút = <span class="bg-white px-3 py-1 rounded shadow inline-flex flex-col items-center justify-center align-middle mx-1" style="line-height: 1.2;"><span class="border-b-2 border-purple-900 block px-1">72</span><span>60</span></span> giờ = <span class="text-rose-600 font-black">1,2</span> giờ</span>
+                    <div class="bg-purple-50 p-8 rounded-3xl border-4 border-purple-200 mb-10 w-fit mx-auto shadow-inner text-center">
+                        <p class="text-3xl md:text-4xl font-black tracking-wider text-purple-900 flex items-center justify-center gap-6 flex-wrap leading-relaxed">
+                            <span class="bg-purple-600 text-white px-4 py-1 rounded-xl">Mẫu:</span> 
+                            <span>72 phút = <span class="bg-white px-5 py-2 rounded-xl shadow-lg inline-flex flex-col items-center justify-center align-middle mx-1 border-2 border-purple-100" style="line-height: 1.1;"><span class="border-b-2 border-purple-900 block px-2">72</span><span>60</span></span> giờ = <span class="text-rose-600 font-black decoration-rose-200 underline decoration-4">1,2</span> giờ</span>
                         </p>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <!-- Câu a -->
-                        <div class="bg-emerald-50/50 p-6 rounded-3xl border-2 border-emerald-100 space-y-6">
-                            <div class="flex items-center gap-4 text-2xl font-bold text-emerald-900">
-                                <span class="text-3xl font-black text-emerald-500">a)</span>
+                        <div class="bg-emerald-50/50 p-8 rounded-[40px] border-4 border-emerald-100 space-y-10">
+                            <div class="flex items-center gap-6 text-3xl md:text-4xl font-black text-emerald-900 flex-wrap">
+                                <span class="text-5xl font-black text-emerald-500">a)</span>
                                 <span>90 phút =</span>
-                                <input type="number" id="ans-130-2-a1" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-sm" placeholder="?">
+                                <input type="number" id="ans-130-2-a1" step="0.1" class="w-32 text-5xl font-black text-emerald-700 bg-white border-4 border-emerald-200 rounded-2xl p-4 text-center outline-none focus:border-emerald-500 shadow-xl transition-all" placeholder="?">
                                 <span>giờ</span>
                             </div>
-                            <div class="flex items-center gap-4 text-2xl font-bold text-emerald-900 lg:pl-10">
+                            <div class="flex items-center gap-6 text-3xl md:text-4xl font-black text-emerald-900 lg:pl-16 flex-wrap">
                                 <span>42 giây =</span>
-                                <input type="number" id="ans-130-2-a2" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-sm" placeholder="?">
+                                <input type="number" id="ans-130-2-a2" step="0.1" class="w-32 text-5xl font-black text-emerald-700 bg-white border-4 border-emerald-200 rounded-2xl p-4 text-center outline-none focus:border-emerald-500 shadow-xl transition-all" placeholder="?">
                                 <span>phút</span>
                             </div>
                         </div>
 
                         <!-- Câu b -->
-                        <div class="bg-emerald-50/50 p-6 rounded-3xl border-2 border-emerald-100 space-y-6">
-                            <div class="flex items-center gap-4 text-2xl font-bold text-emerald-900 flex-wrap">
-                                <span class="text-3xl font-black text-emerald-500">b)</span>
+                        <div class="bg-emerald-50/50 p-8 rounded-[40px] border-4 border-emerald-100 space-y-10">
+                            <div class="flex items-center gap-6 text-3xl md:text-4xl font-black text-emerald-900 flex-wrap">
+                                <span class="text-5xl font-black text-emerald-500">b)</span>
                                 <span>1 giờ 15 phút =</span>
-                                <input type="number" id="ans-130-2-b1" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-sm" placeholder="?">
+                                <input type="number" id="ans-130-2-b1" step="0.1" class="w-32 text-5xl font-black text-emerald-700 bg-white border-4 border-emerald-200 rounded-2xl p-4 text-center outline-none focus:border-emerald-500 shadow-xl transition-all" placeholder="?">
                                 <span>giờ</span>
                             </div>
-                            <div class="flex items-center gap-4 text-2xl font-bold text-emerald-900 lg:pl-10 flex-wrap">
+                            <div class="flex items-center gap-6 text-3xl md:text-4xl font-black text-emerald-900 lg:pl-16 flex-wrap">
                                 <span>2 phút 27 giây =</span>
-                                <input type="number" id="ans-130-2-b2" class="w-24 text-3xl font-black text-emerald-700 bg-white border-2 border-emerald-200 rounded-xl p-2 text-center outline-none focus:border-emerald-500 shadow-sm" placeholder="?">
+                                <input type="number" id="ans-130-2-b2" step="0.1" class="w-32 text-5xl font-black text-emerald-700 bg-white border-4 border-emerald-200 rounded-2xl p-4 text-center outline-none focus:border-emerald-500 shadow-xl transition-all" placeholder="?">
                                 <span>phút</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex justify-center mt-8">
-                        <button onclick="check130_2()" class="bg-emerald-500 text-white font-bold py-3 px-8 rounded-full shadow-lg active:scale-95 transition-all outline-none hover:bg-emerald-600">Kiểm tra bài 2</button>
+                    <div class="flex justify-center mt-12">
+                        <button onclick="check130_2()" class="bg-emerald-500 text-white font-black text-3xl py-4 px-12 rounded-full shadow-lg active:scale-95 transition-all outline-none hover:bg-emerald-600">Kiểm tra bài 2</button>
                     </div>
                 </div>
             </div>
