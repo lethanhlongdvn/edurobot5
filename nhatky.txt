@@ -643,3 +643,8 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - Bài học: Toán 5 - Tiết 124
 - Mô tả thay đổi: Hoàn tất kiểm tra Phần Luyện tập. Chức năng nhập bảng điền số, AI chấm tự luận bài toán Bánh bông lan, và Câu hỏi trắc nghiệm đếm hình lập phương (Bài 3) hoạt động hoàn hảo, phản hồi chính xác. CSS Layout đồng nhất.
 - Trạng thái hiện tại: Bài 124 đã hoàn thành 100% bao gồm cả 3 tab Tìm hiểu, Luyện tập và Củng cố.
+
+[11:25] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 124
+- Mô tả thay đổi: Fix CSS Responsive cho 3D Modal. Tách Control Buttons xuống block Footer riêng để tránh đè lên nhãn Dài/Rộng/Cao trên không gian hẹp. Tắt chế độ Auto-Spin sau khi hoàn thành 27 khối để thuận tiện tự xoay.
+- Trạng thái hiện tại: Giao diện Khám phá 3D hoạt động hoàn hảo trên mọi kích cỡ màn hình.
