@@ -52,8 +52,8 @@ export const lesson126 = {
                     <div class="bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-orange-200 shadow-sm">
                         <p class="text-lg md:text-2xl font-black text-orange-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
                         <textarea id="ans-126-1" rows="5" class="w-full p-6 rounded-2xl border-2 border-orange-200 bg-orange-50/50 dark:bg-slate-900 outline-none focus:border-orange-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;a) Thể tích mẫu hộp: ...&#10;b) Thể tích thùng: ...&#10;   Số hộp xếp được: ...&#10;Đáp số: ..."></textarea>
-                        <div class="mt-4 flex items-center gap-4">
-                            <button onclick="Lesson.submitWordProblemAI('126-1')" class="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                        <div class="mt-6 flex justify-end">
+                            <button onclick="Lesson.submitWordProblemAI('126-1')" class="w-14 h-14 bg-orange-600 hover:bg-orange-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                         </div>
                     </div>
                 </div>
@@ -79,8 +79,8 @@ export const lesson126 = {
                         <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-blue-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-blue-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
                             <textarea id="ans-126-2" rows="5" class="w-full flex-grow p-6 rounded-2xl border-2 border-blue-200 bg-blue-50/50 dark:bg-slate-900 outline-none focus:border-blue-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;Ước lượng phòng học: dài ... m, rộng ... m, cao ... m&#10;Thể tích phòng: ...&#10;Số thùng 1m³ xếp được: ...&#10;Đáp số: ... thùng"></textarea>
-                            <div class="mt-4 flex items-center gap-4">
-                                <button onclick="Lesson.submitWordProblemAI('126-2')" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                            <div class="mt-6 flex justify-end">
+                                <button onclick="Lesson.submitWordProblemAI('126-2')" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                             </div>
                         </div>
                     </div>
