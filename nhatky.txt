@@ -549,3 +549,8 @@ Khởi tạo thành công cấu trúc môn Khoa học: js/data/science/cungco, i
   + Thêm nút Micro và hiệu ứng "Đang nghe..." cho các textarea bài giải.
   + Tinh chỉnh font-size Tiết 129 để tránh nhảy dòng trên TV nhưng vẫn đảm bảo dễ đọc.
 - Trạng thái hiện tại: Hoàn tất audit và chuẩn hóa voice input cho toàn bộ loạt bài từ 121-129.
+
+[19:03] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 129
+- Mô tả thay đổi: Thay đổi bố cục (layout) phần trình bày bài giải (Bài 2, 3, 4) từ chia 2 cột ngang (side-by-side) thành xếp dọc (ảnh phía trên tối đa 700px, ô nhập liệu phía dưới).
+- Trạng thái hiện tại: Hoàn thành cấu hình diện tích hiển thị hình ảnh rộng hơn, giúp hiển thị trên TV trực quan hơn.
