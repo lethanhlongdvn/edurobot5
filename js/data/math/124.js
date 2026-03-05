@@ -437,10 +437,12 @@ export const lesson124 = {
                             </tbody>
                         </table>
                     </div>
-                    <div class="mt-8 flex flex-col items-center gap-4">
-                        <button onclick="window.checkEx124_1()" class="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
-                        <div id="feedback-124-1" class="text-xl md:text-2xl font-black transition-opacity p-4 rounded-2xl text-center"></div>
+                    <div class="mt-8 flex justify-center">
+                        <button onclick="window.checkEx124_1()" class="w-14 h-14 bg-teal-600 hover:bg-teal-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center" title="Kiểm tra đáp án">
+                            <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
                     </div>
+                    <div id="feedback-124-1" class="mt-4 text-xl md:text-2xl font-black transition-opacity p-4 rounded-2xl text-center"></div>
                 </div>
             </div>
 
@@ -481,7 +483,7 @@ export const lesson124 = {
                         <p class="text-xl md:text-2xl font-bold text-gray-700 dark:text-slate-200 leading-relaxed mb-4 hidden" id="wp-problem-text-124-2">Một chiếc bánh bông lan hình hộp chữ nhật có đáy là hình vuông cạnh 12 cm, chiều cao 6 cm. a) Tính thể tích của chiếc bánh đó. b) Rô-bốt đã cắt một miếng bánh hình lập phương cạnh 6 cm. Tính thể tích phần bánh còn lại.</p>
                         <textarea id="wp-full-124-2" rows="5" class="w-full p-6 rounded-2xl border-2 border-orange-200 bg-orange-50/50 dark:bg-slate-900 outline-none focus:border-orange-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;a) Thể tích chiếc bánh: V = 12 × 12 × 6 = ...&#10;b) Thể tích miếng cắt: V = 6 × 6 × 6 = ...&#10;   Thể tích phần còn lại: ...&#10;Đáp số: a) ... cm³   b) ... cm³"></textarea>
                         <div class="mt-6 flex justify-end">
-                            <button onclick="Lesson.submitWordProblemAI('124-2')" class="btn-tutor-e w-14 h-14" title="Thầy E chấm bài">E</button>
+                            <button onclick="Lesson.submitWordProblemAI('124-2')" class="w-14 h-14 bg-orange-600 hover:bg-orange-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                         </div>
                     </div>
                 </div>
@@ -530,7 +532,9 @@ export const lesson124 = {
                     </div>
 
                     <div class="mt-6 flex justify-center">
-                        <button onclick="window.checkEx124_3()" class="px-8 py-4 bg-rose-600 hover:bg-rose-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                        <button onclick="window.checkEx124_3()" class="w-14 h-14 bg-rose-600 hover:bg-rose-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center" title="Kiểm tra đáp án">
+                            <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </button>
                     </div>
                     <div id="feedback-124-3" class="text-center text-xl md:text-2xl font-black opacity-0 transition-opacity p-6 rounded-3xl mt-4"></div>
                 </div>
