@@ -388,7 +388,7 @@ export const lesson124 = {
                    </div>
                    <div class="w-full lg:w-1/2 text-center lg:text-left space-y-4">
                         <p class="text-sm font-black uppercase tracking-[0.3em] opacity-80 bg-white/20 inline-block px-4 py-1 rounded-full">Ghi nhớ quan trọng</p>
-                        <p class="text-5xl md:text-8xl font-black drop-shadow-lg tracking-tight">V = a &times; a &times; a</p>
+                        <p class="text-3xl md:text-5xl font-black drop-shadow-lg tracking-tight">V = a &times; a &times; a</p>
                         <p class="text-2xl md:text-4xl italic font-bold opacity-90">(Trong đó <span class="text-yellow-300">a</span> là độ dài của một cạnh)</p>
                    </div>
                 </div>
