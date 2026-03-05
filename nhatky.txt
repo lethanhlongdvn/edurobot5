@@ -554,3 +554,8 @@ Khởi tạo thành công cấu trúc môn Khoa học: js/data/science/cungco, i
 - Bài học: Toán 5 - Tiết 129
 - Mô tả thay đổi: Thay đổi bố cục (layout) phần trình bày bài giải (Bài 2, 3, 4) từ chia 2 cột ngang (side-by-side) thành xếp dọc (ảnh phía trên tối đa 700px, ô nhập liệu phía dưới).
 - Trạng thái hiện tại: Hoàn thành cấu hình diện tích hiển thị hình ảnh rộng hơn, giúp hiển thị trên TV trực quan hơn.
+
+[19:15] Ngày 05/03/2026
+- Bài học: Toán 5 - Các tiết
+- Mô tả thay đổi: Thống nhất ký hiệu "c" là chiều cao của hình hộp chữ nhật thay cho "h" trên toàn bộ ngân hàng câu trắc nghiệm và nội dung bài giảng nhằm đồng bộ chuẩn kiến thức (đã tự động rà soát và thay đổi trong 122.js, 129.js, cungco117.txt...).
+- Trạng thái hiện tại: Hoàn thành chuẩn hóa ký hiệu toán học.
