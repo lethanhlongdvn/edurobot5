@@ -149,8 +149,11 @@ export const lesson124 = {
                         box-shadow: inset 0 0 16px rgba(251, 191, 36, 0.5);
                     }
                     .minicube-124 .face.top { transform: translateY(-40px) rotateX(90deg); background: #fef3c7; }
+                    .minicube-124 .face.bottom { transform: translateY(40px) rotateX(-90deg); background: #f59e0b; }
                     .minicube-124 .face.front { transform: translateZ(40px); }
+                    .minicube-124 .face.back { transform: translateZ(-40px) rotateY(180deg); background: #d97706; }
                     .minicube-124 .face.right { transform: translateX(40px) rotateY(90deg); background: #fcd34d; }
+                    .minicube-124 .face.left { transform: translateX(-40px) rotateY(-90deg); background: #fbbf24; }
 
                     .rotate-anim-124 {
                         animation: spinBox124 15s linear infinite;
@@ -312,8 +315,11 @@ export const lesson124 = {
 
                             block.innerHTML = \`
                                 <div class="face front"></div>
+                                <div class="face back"></div>
                                 <div class="face right"></div>
+                                <div class="face left"></div>
                                 <div class="face top"></div>
+                                <div class="face bottom"></div>
                             \`;
 
                             container.appendChild(block);
@@ -587,3 +593,4 @@ export const lesson124 = {
 };
 
 window.lesson124 = lesson124;
+
