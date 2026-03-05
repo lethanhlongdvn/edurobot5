@@ -607,3 +607,9 @@ Trang thai hien tai: Bai 1 Dia Ly da hoan thien voi day du bai tap VBT va noi du
 - Mô tả thay đổi: Thay thế Hero title bằng Quy tắc tính thể tích hình hộp chữ nhật (từ tiết 122) và khôi phục lại phần Khối hình đặc biệt bị ghi đè nhầm trước đó.
 - Trạng thái hiện tại: Đã hoàn tất thay đổi giao diện theo yêu cầu mới ở tiết 123.
 
+[08:17] Ngày 05/03/2026
+- Bài học: Toán 5 - Tiết 123
+- File thay đổi: js/data/math/123.js
+- Mô tả thay đổi: Xóa bỏ khối "Hình hộp chữ nhật" và "Khối hình đặc biệt" ở phần mở đầu bài 123 do trùng lặp nội dung với khối Hero vừa chèn.
+- Trạng thái hiện tại: Đã cập nhật xong giao diện bài 123 (Chỉ còn khối công thức quy tắc tính).
+
