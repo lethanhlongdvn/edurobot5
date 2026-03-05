@@ -142,10 +142,13 @@ export const LessonInteractive = {
 
                         <div class="bg-indigo-600/20 p-6 rounded-3xl border border-indigo-500/30">
                             <h4 class="text-xs font-black text-indigo-300 uppercase tracking-widest mb-2">Kết quả tính toán</h4>
-                            <div id="geo-result-${id}" class="text-2xl font-black text-white">
-                                ${config.initialResult || '---'}
-                            </div>
+                        <div id="geo-result-${id}" class="text-2xl font-black text-white opacity-0 transition-opacity duration-500">
+                            ${config.initialResult || '---'}
                         </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <button onclick="Lesson.showGeometryResult('${id}')" class="flex-1 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-black rounded-2xl shadow-lg transition-all active:scale-95 uppercase tracking-widest text-xs">Chốt kết quả</button>
+                        <button onclick="Lesson.resetGeometry('${id}', '${type}', ${JSON.stringify(config).replace(/"/g, '&quot;')})" class="px-6 py-4 bg-slate-800 text-slate-400 font-bold rounded-2xl hover:bg-slate-700 transition-all text-xs uppercase italic">Làm lại</button>
                     </div>
                 </div>
             </div>
@@ -160,21 +163,47 @@ export const LessonInteractive = {
         const target = document.getElementById(`geo-target-${id}`);
         const result = document.getElementById(`geo-result-${id}`);
 
+        // Ẩn kết quả khi đang điều chỉnh
+        if (result) result.classList.add('opacity-0');
+
         if (type === 'cube') {
-            const size = value * 2;
-            target.style.width = `${size}px`;
-            target.style.height = `${size}px`;
-            const offset = size / 2;
-            const faces = target.children;
-            faces[0].style.transform = `translateZ(${offset}px)`;
-            faces[1].style.transform = `translateZ(-${offset}px) rotateY(180deg)`;
-            faces[2].style.transform = `translateX(${offset}px) rotateY(90deg)`;
-            faces[3].style.transform = `translateX(-${offset}px) rotateY(-90deg)`;
-            faces[4].style.transform = `translateY(-${offset}px) rotateX(90deg)`;
-            faces[5].style.transform = `translateY(${offset}px) rotateX(-90deg)`;
+            const size = Math.min(value * 2, 200); // Giới hạn kích thước hiển thị
+            if (target) {
+                target.style.width = `${size}px`;
+                target.style.height = `${size}px`;
+                const offset = size / 2;
+                const faces = target.children;
+                if (faces.length >= 6) {
+                    faces[0].style.transform = `translateZ(${offset}px)`;
+                    faces[1].style.transform = `translateZ(-${offset}px) rotateY(180deg)`;
+                    faces[2].style.transform = `translateX(${offset}px) rotateY(90deg)`;
+                    faces[3].style.transform = `translateX(-${offset}px) rotateY(-90deg)`;
+                    faces[4].style.transform = `translateY(-${offset}px) rotateX(90deg)`;
+                    faces[5].style.transform = `translateY(${offset}px) rotateX(-90deg)`;
+                }
+            }
 
             const volume = Math.pow(value, 3);
-            result.innerText = `V = ${value}³ = ${volume} cm³`;
+            if (result) result.innerHTML = `V = ${value}³ = <span class="text-emerald-400">${volume}</span> cm³`;
+        }
+    },
+
+    showGeometryResult(id) {
+        const result = document.getElementById(`geo-result-${id}`);
+        if (result) {
+            result.classList.remove('opacity-0');
+            result.classList.add('animate-bounce-brief');
+
+            // Hiệu ứng âm thanh nếu có
+            if (window.audioCommon) window.audioCommon.playSuccess();
+        }
+    },
+
+    resetGeometry(id, type, config) {
+        const container = document.getElementById(`geo-lab-${id}`);
+        if (container) {
+            const parent = container.parentElement;
+            parent.innerHTML = this.renderDynamicGeometryLab(id, type, config);
         }
     },
 
