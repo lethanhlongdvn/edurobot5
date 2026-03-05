@@ -77,9 +77,11 @@ export const lesson125 = {
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="mt-4 flex items-center gap-4">
-                                <button onclick="lesson125.checkEx2()" class="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
-                                <span id="fb-125-2" class="text-xl font-black opacity-0 transition-opacity"></span>
+                            <div class="mt-4 flex justify-center gap-4">
+                                <button onclick="lesson125.checkEx2()" class="w-14 h-14 bg-teal-600 hover:bg-teal-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Kiểm tra đáp án">
+                                    <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
+                                <span id="fb-125-2" class="text-xl font-black opacity-0 transition-opacity flex items-center"></span>
                             </div>
                         </div>
                     </div>
@@ -121,9 +123,10 @@ export const lesson125 = {
                         <p class="text-xl md:text-3xl font-bold text-gray-800 dark:text-slate-200 leading-relaxed mb-6">
                             <span class="text-purple-600 font-black">b)</span> Biết mỗi hình lập phương nhỏ trong hình trên có cạnh <b class="text-purple-600">2 cm</b>. Hãy tính thể tích của hình lập phương lớn ghép được ở câu a.
                         </p>
-                        <textarea id="ans-125-3b" rows="4" class="w-full p-6 rounded-2xl border-2 border-purple-200 bg-purple-50/50 dark:bg-slate-900 outline-none focus:border-purple-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;Đáp số: ... cm³"></textarea>
-                        <div class="mt-4 flex items-center gap-4">
-                            <button onclick="Lesson.submitWordProblemAI('125-3b')" class="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                        <p class="hidden" id="wp-problem-text-125-3b">Quan sát hình vẽ và cho biết 2 khối hình nào ghép được thành hình lập phương. Biết mỗi hình lập phương nhỏ trong hình trên có cạnh 2 cm. Hãy tính thể tích của hình lập phương lớn ghép được ở câu a.</p>
+                        <textarea id="wp-full-125-3b" rows="4" class="w-full p-6 rounded-2xl border-2 border-purple-200 bg-purple-50/50 dark:bg-slate-900 outline-none focus:border-purple-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;Đáp số: ... cm³"></textarea>
+                        <div class="mt-6 flex justify-end">
+                            <button onclick="Lesson.submitWordProblemAI('125-3b')" class="w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                         </div>
                     </div>
                 </div>
@@ -151,9 +154,10 @@ export const lesson125 = {
                         </div>
                         <div class="w-full lg:w-1/2 bg-white dark:bg-slate-800 p-8 rounded-[32px] border-2 border-amber-200 shadow-sm flex flex-col">
                             <p class="text-lg md:text-2xl font-black text-amber-600 uppercase tracking-widest mb-4">📝 Bài làm</p>
-                            <textarea id="ans-125-4" rows="6" class="w-full flex-grow p-6 rounded-2xl border-2 border-amber-200 bg-amber-50/50 dark:bg-slate-900 outline-none focus:border-amber-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;&#10;&#10;Đáp số: ..."></textarea>
-                            <div class="mt-4 flex items-center gap-4">
-                                <button onclick="Lesson.submitWordProblemAI('125-4')" class="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black text-xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3">Kiểm tra <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'></path></svg></button>
+                            <p class="hidden" id="wp-problem-text-125-4">Rô-bốt làm một tháp chất lỏng như hình dưới đây. Hỏi phần chất lỏng nào có thể tích lớn nhất và thể tích đó bằng bao nhiêu?</p>
+                            <textarea id="wp-full-125-4" rows="6" class="w-full flex-grow p-6 rounded-2xl border-2 border-amber-200 bg-amber-50/50 dark:bg-slate-900 outline-none focus:border-amber-500 text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-100 placeholder:text-gray-300 transition-all resize-none shadow-inner leading-relaxed" placeholder="Bài giải:&#10;&#10;&#10;&#10;&#10;Đáp số: ..."></textarea>
+                            <div class="mt-6 flex justify-end">
+                                <button onclick="Lesson.submitWordProblemAI('125-4')" class="w-14 h-14 bg-amber-600 hover:bg-amber-700 text-white font-black text-2xl rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center shrink-0" title="Thầy E chấm bài">E</button>
                             </div>
                         </div>
                     </div>
