@@ -235,14 +235,14 @@ export const router = {
             return;
         }
 
-        this.currentSubject = subId;
-        this.currentLessonPeriod = period;
-        this.saveState();
-
         const subject = subjects.find(s => s.id === subId);
-        const lesson = lessons[subId].find(l => (l.id === period) || (l.period === period));
+        const lesson = lessons[subId]?.find(l => (l.id === period) || (l.period === period));
 
         if (!subject || !lesson) return;
+
+        this.currentSubject = subId;
+        this.currentLessonPeriod = lesson.period; // Fix: Always use the period as the identifier
+        this.saveState();
 
         window.currentLessonData = lesson; // Lưu trữ dữ liệu bài học hiện tại để các component truy cập
 
