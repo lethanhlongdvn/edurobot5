@@ -31,7 +31,11 @@ export const AIInteraction = {
 
         // Lấy nội dung bài học hiện tại để AI nghiên cứu trước khi trả lời
         const lessonData = window.currentLessonData;
-        const lessonContent = lessonData ? (lessonData.content || '') + '\n' + (lessonData.practice || '') : '';
+        let lessonContent = lessonData ? (lessonData.content || '') + '\n' + (lessonData.practice || '') : '';
+
+        // Bổ sung dữ liệu bài tập đặc biệt (120B, 120C)
+        if (window.problems120B) lessonContent += '\n\nDANH SÁCH PHÉP TÍNH (120B):\n' + JSON.stringify(window.problems120B);
+        if (window.problems120C) lessonContent += '\n\nDANH SÁCH PHÉP TÍNH (120C):\n' + JSON.stringify(window.problems120C);
 
         // Thêm tin nhắn học sinh
         chatMessages.innerHTML += `
@@ -85,7 +89,11 @@ export const AIInteraction = {
         const bcCurrent = document.getElementById('breadcrumb-current');
         const lessonTitle = bcCurrent ? bcCurrent.innerText : "Tổng quát";
         const lessonData = window.currentLessonData;
-        const lessonContent = lessonData ? (lessonData.content || '') + '\n' + (lessonData.practice || '') : '';
+        let lessonContent = lessonData ? (lessonData.content || '') + '\n' + (lessonData.practice || '') : '';
+
+        // Bổ sung dữ liệu bài tập đặc biệt (120B, 120C)
+        if (window.problems120B) lessonContent += '\n\nDANH SÁCH PHÉP TÍNH (120B):\n' + JSON.stringify(window.problems120B);
+        if (window.problems120C) lessonContent += '\n\nDANH SÁCH PHÉP TÍNH (120C):\n' + JSON.stringify(window.problems120C);
 
         // Tự động mở chat nếu đang đóng
         const chatWindow = document.getElementById('ai-chat-window');
@@ -188,7 +196,11 @@ export const AIInteraction = {
 
             // Lấy nội dung bài học để AI chấm bài chính xác hơn
             const lessonData = window.currentLessonData;
-            const lessonContent = lessonData ? (lessonData.content || '') + '\n' + (lessonData.practice || '') : '';
+            let lessonContent = lessonData ? (lessonData.content || '') + '\n' + (lessonData.practice || '') : '';
+
+            // Bổ sung dữ liệu bài tập đặc biệt (120B, 120C)
+            if (window.problems120B) lessonContent += '\n\nDANH SÁCH PHÉP TÍNH (120B):\n' + JSON.stringify(window.problems120B);
+            if (window.problems120C) lessonContent += '\n\nDANH SÁCH PHÉP TÍNH (120C):\n' + JSON.stringify(window.problems120C);
 
             responseBox.classList.remove('hidden');
             responseBox.innerHTML = `

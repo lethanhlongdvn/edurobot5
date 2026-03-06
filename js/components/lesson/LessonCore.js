@@ -42,9 +42,9 @@ export const LessonCore = {
 
                 <div id="tab-content" class="lesson-content min-h-[600px] animate-fade-in px-1"></div>
 
-                <button onclick="AIInteraction.toggleChat()" class="fixed bottom-8 right-8 w-20 h-20 bg-blue-600 hover:bg-blue-700 text-white rounded-3xl shadow-2xl shadow-blue-200 flex items-center justify-center text-3xl font-black transition-all active:scale-90 z-[60] group border-4 border-white/20">
+                <button onclick="AIInteraction.toggleChat()" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-16 h-16 md:w-20 md:h-20 bg-blue-600 hover:bg-blue-700 text-white rounded-3xl shadow-2xl shadow-blue-500/40 flex items-center justify-center text-3xl font-black transition-all active:scale-90 z-[9999] group border-4 border-white/20">
                     <span class="group-hover:scale-125 transition-transform">E</span>
-                    <div class="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full border-4 border-white animate-bounce"></div>
+                    <div class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full border-4 border-white animate-bounce"></div>
                 </button>
 
                 <div id="ai-chat-window" class="fixed inset-4 md:inset-auto md:bottom-32 md:right-8 md:w-[420px] md:h-[600px] bg-white dark:bg-slate-900 rounded-[28px] md:rounded-[40px] shadow-2xl border border-gray-100 dark:border-slate-800 hidden flex-col z-[70] animate-scale-up overflow-hidden">
