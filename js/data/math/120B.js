@@ -4,7 +4,7 @@ export const lesson120B = {
     "period": "120B",
     "title": "ÔN TẬP: CỘNG, TRỪ, NHÂN, CHIA SỐ THẬP PHÂN",
     "desc": "Luyện tập đặt tính và tính 4 phép tính cơ bản với số thập phân (64 bài tập).",
-    "pptLink": "https://onedrive.live.com/embed?resid=...&authkey=...&em=2&wdAr=1.7777777777777777",
+    "pptLink": "https://onedrive.live.com/embed?resid=E81DA6F58910AD22%21206&authkey=!AJc6qwPK5fdjyaY&em=2&wdAr=1.7777777777777777",
     "content": `
         <div class="space-y-4 text-indigo-900">
             <div class="bg-gradient-to-br from-indigo-600 to-blue-700 p-6 rounded-[32px] text-white shadow-xl flex items-center gap-6 ppt-slide-up">
