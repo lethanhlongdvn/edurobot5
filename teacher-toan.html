@@ -175,13 +175,17 @@
         function checkLogin() {
             const pass = document.getElementById('teacher-password').value;
             if (pass === "123456" || pass === "gv123" || pass === "admin") {
+                localStorage.setItem('userRole', 'teacher');
                 document.getElementById('login-screen').classList.add('hidden');
                 document.getElementById('dashboard').classList.remove('hidden');
                 populateFilters();
                 initRealtime();
             } else { alert("Mật khẩu không đúng! Thầy/Cô vui lòng thử lại."); }
         }
-        function logout() { window.location.reload(); }
+        function logout() { 
+            localStorage.removeItem('userRole');
+            window.location.reload(); 
+        }
 
         function formatTimeTaken(seconds) {
             if (!seconds && seconds !== 0) return "--:--";

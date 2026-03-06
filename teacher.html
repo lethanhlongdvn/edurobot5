@@ -169,6 +169,7 @@
             // The password requested is "123456" for demo or whatever the user expects.
             // I'll use a simple check for now.
             if (pass === "123456") {
+                localStorage.setItem('userRole', 'teacher');
                 document.getElementById('login-screen').classList.add('hidden');
                 document.getElementById('dashboard').classList.remove('hidden');
                 populateLessonFilter(); // Populate FIRST
@@ -178,6 +179,7 @@
         }
 
         function logout() {
+            localStorage.removeItem('userRole');
             window.location.reload();
         }
 

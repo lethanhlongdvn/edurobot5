@@ -195,6 +195,7 @@
         function checkLogin() {
             const pass = document.getElementById('teacher-password').value;
             if (pass === "123456") {
+                localStorage.setItem('userRole', 'teacher');
                 document.getElementById('login-screen').classList.add('hidden');
                 document.getElementById('dashboard').classList.remove('hidden');
                 // Initial Load
@@ -205,6 +206,7 @@
         }
 
         function logout() {
+            localStorage.removeItem('userRole');
             window.location.reload();
         }
 
