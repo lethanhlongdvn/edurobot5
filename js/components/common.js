@@ -47,8 +47,90 @@ export const common = {
             .week-card.active * {
                 color: white !important;
             }
+            /* Toast Notification Styles */
+            .toast-container {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10000;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                pointer-events: none;
+            }
+            .toast-item {
+                background: white;
+                padding: 20px 40px;
+                border-radius: 32px;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                animate: toast-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+                border: 4px solid white;
+                min-width: 320px;
+                pointer-events: auto;
+            }
+            .toast-success {
+                background: linear-gradient(135deg, #10b981, #059669);
+                color: white;
+                border-color: #34d399;
+            }
+            .toast-error {
+                background: linear-gradient(135deg, #ef4444, #dc2626);
+                color: white;
+                border-color: #f87171;
+            }
+            .toast-icon {
+                font-size: 32px;
+            }
+            .toast-text {
+                font-size: 20px;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            @keyframes toast-in {
+                0% { opacity: 0; transform: scale(0.5) translateY(100px); }
+                100% { opacity: 1; transform: scale(1) translateY(0); }
+            }
+            @keyframes toast-out {
+                0% { opacity: 1; transform: scale(1) translateY(0); }
+                100% { opacity: 0; transform: scale(0.8) translateY(-50px); }
+            }
         `;
         document.head.appendChild(style);
+    },
+
+    showToast(message, type = 'success', duration = 2000) {
+        let container = document.querySelector('.toast-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.className = 'toast-container';
+            document.body.appendChild(container);
+        }
+
+        const toast = document.createElement('div');
+        const isSuccess = type === 'success';
+        toast.className = `toast-item ${isSuccess ? 'toast-success' : 'toast-error'}`;
+
+        toast.innerHTML = `
+            <span class="toast-icon">${isSuccess ? '🎉' : '💡'}</span>
+            <span class="toast-text">${message}</span>
+        `;
+
+        container.appendChild(toast);
+
+        // Auto remove
+        setTimeout(() => {
+            toast.style.animation = 'toast-out 0.5s ease forwards';
+            setTimeout(() => {
+                toast.remove();
+                if (container.children.length === 0) container.remove();
+            }, 500);
+        }, duration);
     },
 
     getColorClasses(color) {

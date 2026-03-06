@@ -1,4 +1,9 @@
-﻿[11:45] Ngày 06/03/2026
+﻿[11:50] Ngày 06/03/2026
+- UI: Thay thế lệnh alert() bằng hệ thống Toast Notification (thông báo nổi) tự động đóng đẹp mắt.
+- Áp dụng: Đã cập nhật cho bài 120B và 120C để báo kết quả Đúng/Sai mượt mà hơn.
+- Kỹ thuật: Triển khai hàm UI.showToast() trong common.js và bổ sung CSS animation.
+
+[11:45] Ngày 06/03/2026
 - Giao diện: Cố định vị trí biểu tượng Thầy E (fixed bottom-right) với z-index cao để luôn nổi trên bài học.
 - AI: Nâng cấp AI để đọc được dữ liệu các phép tính từ biến toàn cục (window.problems120B/C).
 - Chức năng: Đảm bảo Thầy E có thể hướng dẫn học sinh các bài toán nâng cao 120B/C.
@@ -605,4 +610,5 @@ Ng├áy 06/03/2026:
 - Tạo bài học 120C: Ôn tập về 4 phép tính với số thập phân nâng cao, dựa trên cấu trúc của 120B.\
 - Thêm 120C vào hệ thống (data_loader.js/index.js).\
 - Cập nhật trang Giáo viên (teacher-toan.html) với 2 cột điểm riêng biệt: '120B (Ôn tập)' và '120C (Nâng cao)' thu thập kết quả từ Firebase (essays_v2).
+
 

@@ -168,10 +168,10 @@ export const lesson120B = {
                 if (typeof confetti === 'function') {
                     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 }, colors: ['#10b981', '#3b82f6', '#f59e0b'] });
                 }
-                alert("Chính xác! 🎉");
+                UI.showToast("Chính xác! 🎉", "success");
             } else {
                 if (window.Quiz) window.Quiz.playSFX('wrong');
-                alert("Chưa đúng rồi! Em hãy kiểm tra lại nhé.");
+                UI.showToast("Chưa đúng rồi! Em hãy kiểm tra lại nhé.", "error");
             }
         };
 
@@ -205,7 +205,7 @@ export const lesson120B = {
             const totalPoints = Math.round((correctCount / 64) * 100);
             if (window.submitMathLesson) window.submitMathLesson("Đúng " + correctCount + "/64 câu", totalPoints, "btn-submit-120B");
             if (totalPoints >= 80 && typeof confetti === 'function') confetti({ particleCount: 200, spread: 160, origin: { y: 0.6 } });
-            alert("Kết quả: " + correctCount + "/64 câu đúng.\nSố điểm của em: " + totalPoints + " / 100 điểm.");
+            UI.showToast("Đã gửi bài! Kết quả: " + correctCount + "/64 đúng.", "success", 3000);
         };
 
         return `
