@@ -107,8 +107,52 @@ export const lesson120B = {
             `;
         };
 
+        // Pagination state
+        window.currentPage120B = { add: 0, sub: 0, mul: 0, div: 0 };
+        const itemsPerPage = 2;
+
         const renderSection = (type) => {
-            return problems[type].map((p, i) => generateGridHtml(type, p, i)).join('');
+            const totalProblems = problems[type].length;
+            const totalPages = Math.ceil(totalProblems / itemsPerPage);
+            const currentPage = window.currentPage120B[type];
+            
+            const startIndex = currentPage * itemsPerPage;
+            const endIndex = Math.min(startIndex + itemsPerPage, totalProblems);
+            
+            let html = '<div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8 mb-8">';
+            for(let i = startIndex; i < endIndex; i++) {
+                html += generateGridHtml(type, problems[type][i], i);
+            }
+            html += '</div>';
+
+            // Pagination Controls
+            html += `
+                <div class="flex items-center justify-center gap-4 mt-8 ppt-slide-up">
+                    <button onclick="window.goToPage120B('${type}', ${currentPage - 1})" 
+                            class="p-3 rounded-full bg-slate-100 hover:bg-indigo-100 text-slate-600 hover:text-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                            ${currentPage === 0 ? 'disabled' : ''}>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <span class="font-black text-slate-500">Trang ${currentPage + 1} / ${totalPages}</span>
+                    <button onclick="window.goToPage120B('${type}', ${currentPage + 1})" 
+                            class="p-3 rounded-full bg-slate-100 hover:bg-indigo-100 text-slate-600 hover:text-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                            ${currentPage >= totalPages - 1 ? 'disabled' : ''}>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            `;
+            return html;
+        };
+
+        window.goToPage120B = function(type, page) {
+            const totalPages = Math.ceil(problems[type].length / itemsPerPage);
+            if (page >= 0 && page < totalPages) {
+                window.currentPage120B[type] = page;
+                const section = document.getElementById('section-' + type);
+                if (section) {
+                    section.innerHTML = renderSection(type);
+                }
+            }
         };
 
         // Actions: Define global handlers (only once)
@@ -219,12 +263,12 @@ export const lesson120B = {
                     <button onclick="window.switchTab120B('div')" class="tab-btn-120B bg-amber-100 text-amber-700 px-8 py-3 rounded-full font-black transition-all">Chia (:)</button>
                 </div>
 
-                <div id="section-add" class="operation-section grid md:grid-cols-1 lg:grid-cols-2 gap-8">${renderSection('add')}</div>
-                <div id="section-sub" class="operation-section hidden grid md:grid-cols-1 lg:grid-cols-2 gap-8">${renderSection('sub')}</div>
-                <div id="section-mul" class="operation-section hidden grid md:grid-cols-1 lg:grid-cols-2 gap-8">${renderSection('mul')}</div>
-                <div id="section-div" class="operation-section hidden grid md:grid-cols-1 lg:grid-cols-2 gap-8">${renderSection('div')}</div>
+                <div id="section-add" class="operation-section w-full">${renderSection('add')}</div>
+                <div id="section-sub" class="operation-section hidden w-full">${renderSection('sub')}</div>
+                <div id="section-mul" class="operation-section hidden w-full">${renderSection('mul')}</div>
+                <div id="section-div" class="operation-section hidden w-full">${renderSection('div')}</div>
 
-                <div class="flex flex-col items-center pt-10 border-t-4 border-dashed border-gray-100 ppt-slide-up delay-700">
+                <div class="flex flex-col items-center pt-10 border-t-4 border-dashed border-gray-100 w-full ppt-slide-up delay-700">
                      <button id="btn-submit-120B" onclick="window.submit120B()" class="btn-submit-global p-8 text-3xl">Gửi bài làm</button>
                 </div>
 
