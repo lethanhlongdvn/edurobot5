@@ -205,6 +205,18 @@
                 opt.value = i.toString();
                 opt.innerText = "Tiết " + i;
                 periodSelect.appendChild(opt);
+
+                if (i === 120) {
+                    let opt120B = document.createElement('option');
+                    opt120B.value = "120B";
+                    opt120B.innerText = "Tiết 120B";
+                    periodSelect.appendChild(opt120B);
+
+                    let opt120C = document.createElement('option');
+                    opt120C.value = "120C";
+                    opt120C.innerText = "Tiết 120C";
+                    periodSelect.appendChild(opt120C);
+                }
             }
         }
 
