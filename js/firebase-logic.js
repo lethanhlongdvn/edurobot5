@@ -524,20 +524,54 @@ window.checkSchool = function () {
  * Show Student Badge in Navbar
  */
 window.showStudentBadge = function () {
-    const name = localStorage.getItem('eduMathName');
+    const studentName = localStorage.getItem('eduMathName');
+    const userRole = localStorage.getItem('userRole');
+    const teacherName = localStorage.getItem('teacherName') || 'Giáo viên';
+
     const badge = document.getElementById('student-badge-li');
     const badgeName = document.getElementById('student-badge-name');
+    const teacherBtn = document.querySelector('button[onclick="openTeacherAuthModal()"]');
+
     if (!badge || !badgeName) return;
 
-    if (name && name.trim()) {
-        badgeName.innerText = name.trim();
+    if (userRole === 'teacher') {
+        badgeName.innerText = `👩‍🏫 ${teacherName}`;
         badge.classList.remove('hidden');
+        if (teacherBtn) teacherBtn.parentElement.classList.add('hidden');
+        
+        // Update styling for teacher (blue theme)
+        const badgeDiv = badge.querySelector('div');
+        if (badgeDiv) {
+            badgeDiv.className = "flex items-center gap-1 bg-blue-50 dark:bg-blue-900/50 text-blue-700 dark:text-blue-400 px-3 py-1.5 rounded-xl border border-blue-200 dark:border-blue-800";
+        }
+    } else if (studentName && studentName.trim()) {
+        badgeName.innerText = studentName.trim();
+        badge.classList.remove('hidden');
+        if (teacherBtn) teacherBtn.parentElement.classList.remove('hidden');
+        
+        // Restore green styling for student
+        const badgeDiv = badge.querySelector('div');
+        if (badgeDiv) {
+            badgeDiv.className = "flex items-center gap-1 bg-emerald-50 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 px-3 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800";
+        }
     } else {
         badge.classList.add('hidden');
+        if (teacherBtn) teacherBtn.parentElement.classList.remove('hidden');
     }
 };
 
 window.logoutStudent = function () {
+    const userRole = localStorage.getItem('userRole');
+    
+    if (userRole === 'teacher') {
+        if (confirm('Thầy/Cô có muốn đăng xuất khỏi tài khoản Giáo viên không?')) {
+            localStorage.removeItem('userRole');
+            localStorage.removeItem('teacherName');
+            window.location.reload();
+        }
+        return;
+    }
+
     if (confirm('Bạn muốn đổi học sinh? Thông tin đã lưu sẽ bị xóa.')) {
         localStorage.removeItem('eduMathName');
         localStorage.removeItem('eduMathClass');
@@ -545,6 +579,7 @@ window.logoutStudent = function () {
         localStorage.removeItem('eduMathOtherSchool');
         const badge = document.getElementById('student-badge-li');
         if (badge) badge.classList.add('hidden');
+        window.location.reload();
     }
 };
 

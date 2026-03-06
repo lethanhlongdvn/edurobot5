@@ -39,6 +39,8 @@
             <p class="text-gray-500 mb-8 font-bold text-sm uppercase tracking-widest">Đăng nhập báo cáo</p>
 
             <div class="space-y-4">
+                <input type="text" id="teacher-name" placeholder="Tên Thầy/Cô (VD: Cô Lan)..."
+                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-100 focus:border-blue-500 transition-all outline-none font-bold text-center text-xl tracking-widest">
                 <input type="password" id="teacher-password" placeholder="Nhập mật khẩu..."
                     class="w-full px-6 py-4 rounded-2xl border-2 border-gray-100 focus:border-blue-500 transition-all outline-none font-bold text-center text-xl tracking-widest">
                 <button onclick="checkLogin()"
@@ -194,8 +196,10 @@
         // Authentication Logic
         function checkLogin() {
             const pass = document.getElementById('teacher-password').value;
+            const tName = document.getElementById('teacher-name') ? document.getElementById('teacher-name').value.trim() : 'Giáo viên';
             if (pass === "123456") {
                 localStorage.setItem('userRole', 'teacher');
+                localStorage.setItem('teacherName', tName || 'Giáo viên');
                 document.getElementById('login-screen').classList.add('hidden');
                 document.getElementById('dashboard').classList.remove('hidden');
                 // Initial Load
@@ -207,6 +211,7 @@
 
         function logout() {
             localStorage.removeItem('userRole');
+            localStorage.removeItem('teacherName');
             window.location.reload();
         }
 

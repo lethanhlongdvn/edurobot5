@@ -212,9 +212,11 @@
         <div class="bg-white rounded-3xl p-6 sm:p-8 w-[90%] max-w-sm shadow-2xl scale-95 transition-transform duration-300 transform-gpu"
             id="teacher-auth-content">
             <h3 class="text-xl font-black text-rose-600 mb-2 uppercase tracking-wide text-center">Khu vực Giáo Viên</h3>
-            <p class="text-gray-500 text-xs font-medium mb-6 text-center">Nhập mật khẩu để truy cập trang quản lý và tải
+            <p class="text-gray-500 text-xs font-medium mb-6 text-center">Nhập tên và mật khẩu để truy cập trang quản lý và tải
                 dữ liệu bảng điểm.</p>
 
+            <input type="text" id="teacherNameInput" placeholder="Tên Thầy/Cô (VD: Cô Lan)..."
+                class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 text-center text-lg font-bold text-gray-800 focus:border-rose-400 focus:ring-4 focus:ring-rose-50 outline-none transition-all placeholder:text-gray-300 tracking-widest mb-4">
             <input type="password" id="teacherPassword" placeholder="Mật khẩu..."
                 class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 text-center text-lg font-bold text-gray-800 focus:border-rose-400 focus:ring-4 focus:ring-rose-50 outline-none transition-all placeholder:text-gray-300 tracking-widest mb-6">
 
@@ -321,8 +323,12 @@
 
         window.verifyTeacherPassword = function () {
             const pwd = document.getElementById('teacherPassword').value;
+            const tName = document.getElementById('teacherNameInput') ? document.getElementById('teacherNameInput').value.trim() : 'Giáo viên';
             // Password hardcoded - simple security based on user request
             if (pwd === "gv123" || pwd === "admin" || pwd === "123456") {
+                localStorage.setItem('userRole', 'teacher');
+                localStorage.setItem('teacherName', tName || 'Giáo viên');
+                
                 if (pwd === "admin") {
                     localStorage.setItem('edurobot_admin', 'true');
                     if (confirm("Đã mở khóa các môn học! Bạn muốn xem giao diện học sinh (OK) hay vào trang Giáo viên (Cancel)?")) {
