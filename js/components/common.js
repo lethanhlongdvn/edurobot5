@@ -117,7 +117,9 @@ export const common = {
         toast.className = `toast-item ${isSuccess ? 'toast-success' : 'toast-error'}`;
 
         toast.innerHTML = `
-            <span class="toast-icon">${isSuccess ? '🎉' : '💡'}</span>
+            <div class="w-12 h-12 ${isSuccess ? 'bg-white text-emerald-600' : 'bg-white text-rose-600'} rounded-2xl flex items-center justify-center text-3xl font-black shadow-inner shrink-0 leading-none">
+                ${isSuccess ? 'V' : 'E'}
+            </div>
             <span class="toast-text">${message}</span>
         `;
 

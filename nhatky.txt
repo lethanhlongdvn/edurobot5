@@ -1,4 +1,7 @@
-﻿[11:50] Ngày 06/03/2026
+﻿[11:55] Ngày 06/03/2026
+- UI: Tinh chỉnh icon thông báo Toast thành 'V' (Đúng) và 'E' (Sai) với thiết kế hình ô vuông trắng bo góc để đồng bộ với nút Kiểm tra.
+
+[11:50] Ngày 06/03/2026
 - UI: Thay thế lệnh alert() bằng hệ thống Toast Notification (thông báo nổi) tự động đóng đẹp mắt.
 - Áp dụng: Đã cập nhật cho bài 120B và 120C để báo kết quả Đúng/Sai mượt mà hơn.
 - Kỹ thuật: Triển khai hàm UI.showToast() trong common.js và bổ sung CSS animation.
@@ -610,5 +613,6 @@ Ng├áy 06/03/2026:
 - Tạo bài học 120C: Ôn tập về 4 phép tính với số thập phân nâng cao, dựa trên cấu trúc của 120B.\
 - Thêm 120C vào hệ thống (data_loader.js/index.js).\
 - Cập nhật trang Giáo viên (teacher-toan.html) với 2 cột điểm riêng biệt: '120B (Ôn tập)' và '120C (Nâng cao)' thu thập kết quả từ Firebase (essays_v2).
+
 
 
