@@ -58,8 +58,10 @@ export const lesson120B = {
             let numRows = 6;
             if (type === 'add' || type === 'sub') numRows = 3;
 
+            let numCols = type === 'div' ? 8 : 6;
+
             for (let r = 1; r <= numRows; r++) {
-                for (let c = 1; c <= 6; c++) {
+                for (let c = 1; c <= numCols; c++) {
                     let extraClass = '';
                     if (type === 'div') {
                         if (c === 4) extraClass += ' div-v-line';
@@ -75,8 +77,8 @@ export const lesson120B = {
                         </div>
                     `;
                 }
-                if ((type === 'add' || type === 'sub') && r === 2) cellsHtml += '<div class="line-120B"></div>';
-                if (type === 'mul' && (r === 2 || r === 5)) cellsHtml += '<div class="line-120B"></div>';
+                if ((type === 'add' || type === 'sub') && r === 2) cellsHtml += `<div class="line-120B" style="grid-column: 1 / span ${numCols}"></div>`;
+                if (type === 'mul' && (r === 2 || r === 5)) cellsHtml += `<div class="line-120B" style="grid-column: 1 / span ${numCols}"></div>`;
             }
 
             return `
@@ -86,7 +88,7 @@ export const lesson120B = {
                             <p class="text-4xl font-black text-indigo-900 tracking-tight leading-tight"><span class="text-blue-500 mr-2">${i + 1}.</span>${p.a} ${signs[type]} ${p.b} = ?</p>
                         </div>
                         <div class="flex flex-col items-center gap-6 px-2">
-                            <div class="grid-120B bg-slate-50" style="grid-template-rows: repeat(${numRows}, 60px);">
+                            <div class="grid-120B bg-slate-50" style="grid-template-rows: repeat(${numRows}, 60px); grid-template-columns: repeat(${numCols}, 60px);">
                                 ${(type !== 'div') ? `<div class="op-sign-120B" style="top: 75px">${signs[type]}</div>` : ''}
                                 ${cellsHtml}
                             </div>
@@ -128,8 +130,10 @@ export const lesson120B = {
         };
 
         window.clearGrid120B = function (type, i) {
-            for (let r = 1; r <= 6; r++) {
-                for (let c = 1; c <= 6; c++) {
+            let numRows = (type === 'add' || type === 'sub') ? 3 : 6;
+            let numCols = type === 'div' ? 8 : 6;
+            for (let r = 1; r <= numRows; r++) {
+                for (let c = 1; c <= numCols; c++) {
                     const el = document.getElementById(`grid-120B-${type}-${i}-r${r}-c${c}`);
                     if (el) el.value = '';
                 }
@@ -151,7 +155,7 @@ export const lesson120B = {
                 }
             } else if (type === 'div') {
                 for (let r = 2; r <= 6; r++) {
-                    for (let c = 5; c <= 6; c++) {
+                    for (let c = 5; c <= 8; c++) {
                         const el = document.getElementById(`grid-120B-div-${i}-r${r}-c${c}`);
                         if (el && el.value.trim() !== '') resStr += el.value.trim();
                     }
@@ -188,7 +192,7 @@ export const lesson120B = {
                         }
                     } else if (type === 'div') {
                         for (let r = 1; r <= 6; r++) {
-                            for (let c = 5; c <= 6; c++) {
+                            for (let c = 5; c <= 8; c++) {
                                 const el = document.getElementById(`grid-120B-div-${i}-r${r}-c${c}`);
                                 if (el && el.value.trim() !== '') resStr += el.value.trim();
                             }
@@ -223,7 +227,7 @@ export const lesson120B = {
                 </div>
 
                 <style>
-                    .grid-120B { display: grid; grid-template-columns: repeat(6, 60px); gap: 0px; border: 2px solid #1e3a8a; width: fit-content; background: white; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.2); }
+                    .grid-120B { display: grid; gap: 0px; border: 2px solid #1e3a8a; width: fit-content; background: white; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.2); }
                     .cell-120B { border: 1px solid #e2e8f0; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
                     .cell-120B input { width: 100%; height: 100%; border: none; text-align: center; background: transparent; font-size: 32px; font-weight: 800; color: #1e3a8a; outline: none; padding: 0; }
                     .cell-120B input:focus { background: #f0f7ff; }
