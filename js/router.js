@@ -403,11 +403,12 @@ export const router = {
                     </div>
                     <div class="flex-grow w-full rounded-2xl overflow-hidden shadow-inner border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-800">
                         ${pptLink ? `
-                            <iframe src="${pptLink}" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="w-full h-[600px] md:h-[800px]"></iframe>
+                            <iframe src="${pptLink}" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" scrolling="no" class="w-full h-[600px] md:h-[800px]"></iframe>
                         ` : `
-                            <div class="flex flex-col items-center justify-center h-full text-gray-400 py-32">
-                                <span class="text-4xl mb-4">📭</span>
-                                <p>Chưa có link bài giảng cho tiết này.</p>
+                            <div class="flex flex-col items-center justify-center h-full text-gray-400 py-32 space-y-4 text-center px-4">
+                                <span class="text-6xl mb-4">📭</span>
+                                <h4 class="text-xl font-black text-gray-600">Chưa có link bài giảng</h4>
+                                <p class="text-sm font-bold max-w-md">Thầy/Cô hãy thêm link nhúng (embed link) từ <span class="text-blue-500">Google Slides</span> hoặc <span class="text-orange-500">Microsoft PowerPoint Online (Office 365)</span> vào biến <code class="bg-gray-200 px-2 py-1 rounded text-orange-600">pptLink</code> trong file dữ liệu bài học nhé.</p>
                             </div>
                         `}
                     </div>
