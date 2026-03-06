@@ -5,15 +5,15 @@ export const lesson120B = {
     "title": "ÔN TẬP: CỘNG, TRỪ, NHÂN, CHIA SỐ THẬP PHÂN",
     "desc": "Luyện tập đặt tính và tính 4 phép tính cơ bản với số thập phân (64 bài tập).",
     "content": `
-        <div class="space-y-4 text-indigo-900 animate-fade-in">
-            <div class="bg-gradient-to-br from-indigo-600 to-blue-700 p-6 rounded-[32px] text-white shadow-xl flex items-center gap-6">
-                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md border-2 border-white/30 shrink-0 text-4xl">📚</div>
+        <div class="space-y-4 text-indigo-900">
+            <div class="bg-gradient-to-br from-indigo-600 to-blue-700 p-6 rounded-[32px] text-white shadow-xl flex items-center gap-6 ppt-slide-up">
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md border-2 border-white/30 shrink-0 text-4xl ppt-bounce-in delay-200">📚</div>
                 <div>
-                    <h3 class="text-xl md:text-2xl font-black uppercase tracking-tight mb-1">Cần nhớ</h3>
+                    <h3 class="text-xl md:text-2xl font-black uppercase tracking-tight mb-1 ppt-fade-in delay-300">Cần nhớ</h3>
                     <ul class="list-disc list-inside font-bold text-lg md:text-xl opacity-95 space-y-1">
-                        <li>Cộng/Trừ: Phải đặt thẳng cột dấu phẩy.</li>
-                        <li>Nhân: Đếm tổng số chữ số ở phần thập phân để đặt dấu phẩy ở tích.</li>
-                        <li>Chia: Chuyển về chia cho số tự nhiên bằng cách dời dấu phẩy.</li>
+                        <li class="ppt-fade-in delay-400">Cộng/Trừ: Phải đặt thẳng cột dấu phẩy.</li>
+                        <li class="ppt-fade-in delay-500">Nhân: Đếm tổng số chữ số ở phần thập phân để đặt dấu phẩy ở tích.</li>
+                        <li class="ppt-fade-in delay-600">Chia: Chuyển về chia cho số tự nhiên bằng cách dời dấu phẩy.</li>
                     </ul>
                 </div>
             </div>
@@ -82,17 +82,17 @@ export const lesson120B = {
             }
 
             return `
-                <div class="bg-white p-8 rounded-[40px] border-2 border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div class="bg-white p-8 rounded-[40px] border-2 border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-300 ppt-slide-up" style="animation-delay: ${i * 100}ms">
                     <div class="flex flex-col gap-6">
                         <div class="w-full text-center px-2">
-                            <p class="text-4xl font-black text-indigo-900 tracking-tight leading-tight"><span class="text-blue-500 mr-2">${i + 1}.</span>${p.a} ${signs[type]} ${p.b} = ?</p>
+                            <p class="text-4xl font-black text-indigo-900 tracking-tight leading-tight ppt-fade-in delay-200"><span class="text-blue-500 mr-2">${i + 1}.</span>${p.a} ${signs[type]} ${p.b} = ?</p>
                         </div>
-                        <div class="flex flex-col items-center gap-6 px-2">
+                        <div class="flex flex-col items-center gap-6 px-2 ppt-scale-up delay-300">
                             <div class="grid-120B bg-slate-50" style="grid-template-rows: repeat(${numRows}, 60px); grid-template-columns: repeat(${numCols}, 60px);">
                                 ${(type !== 'div') ? `<div class="op-sign-120B" style="top: 75px">${signs[type]}</div>` : ''}
                                 ${cellsHtml}
                             </div>
-                            <div class="flex flex-row gap-6 items-center justify-center">
+                            <div class="flex flex-row gap-6 items-center justify-center ppt-fade-in delay-500">
                                 <button onclick="window.checkOne120B('${type}', ${i})" class="check-v-btn shrink-0" title="Kiểm tra">
                                     <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                                 </button>
@@ -211,8 +211,8 @@ export const lesson120B = {
         };
 
         return `
-            <div class="space-y-4 animate-fade-in" id="container-120B">
-                <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <div class="space-y-4" id="container-120B">
+                <div class="flex flex-wrap justify-center gap-2 mb-8 ppt-fade-in delay-200">
                     <button onclick="window.switchTab120B('add')" class="tab-btn-120B active bg-blue-600 text-white px-8 py-3 rounded-full font-black shadow-lg transition-all">Cộng (+)</button>
                     <button onclick="window.switchTab120B('sub')" class="tab-btn-120B bg-indigo-100 text-indigo-700 px-8 py-3 rounded-full font-black transition-all">Trừ (-)</button>
                     <button onclick="window.switchTab120B('mul')" class="tab-btn-120B bg-purple-100 text-purple-700 px-8 py-3 rounded-full font-black transition-all">Nhân (×)</button>
@@ -224,7 +224,7 @@ export const lesson120B = {
                 <div id="section-mul" class="operation-section hidden grid md:grid-cols-1 lg:grid-cols-2 gap-8">${renderSection('mul')}</div>
                 <div id="section-div" class="operation-section hidden grid md:grid-cols-1 lg:grid-cols-2 gap-8">${renderSection('div')}</div>
 
-                <div class="flex flex-col items-center pt-10 border-t-4 border-dashed border-gray-100">
+                <div class="flex flex-col items-center pt-10 border-t-4 border-dashed border-gray-100 ppt-slide-up delay-700">
                      <button id="btn-submit-120B" onclick="window.submit120B()" class="btn-submit-global p-8 text-3xl">Gửi bài làm</button>
                 </div>
 
