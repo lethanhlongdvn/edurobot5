@@ -112,7 +112,7 @@
                         </div>
 
                         <div class="flex flex-wrap gap-4 items-center w-full">
-                            <select id="week-filter" onchange="renderStats()"
+                            <select id="week-filter" onchange="updatePeriodDropdown(this.value); renderStats()"
                                 class="pl-4 pr-10 py-2 rounded-xl border-2 border-orange-100 focus:border-orange-500 outline-none font-bold text-gray-600 bg-white cursor-pointer transition-all text-sm min-w-[150px]">
                                 <option value="">-- Tất cả Tuần --</option>
                             </select>
@@ -199,8 +199,25 @@
                 weekSelect.appendChild(opt);
             }
 
+            // Populate all periods initially
+            updatePeriodDropdown("");
+        }
+
+        function updatePeriodDropdown(selectedWeek) {
             const periodSelect = document.getElementById('period-filter');
-            for (let i = 1; i <= 200; i++) {
+            // Keep the first option "-- Tất cả Tiết --"
+            periodSelect.innerHTML = '<option value="">-- Tất cả Tiết --</option>';
+
+            let startPeriod = 1;
+            let endPeriod = 200;
+
+            if (selectedWeek) {
+                const weekNum = parseInt(selectedWeek);
+                startPeriod = (weekNum - 1) * 5 + 1;
+                endPeriod = weekNum * 5;
+            }
+
+            for (let i = startPeriod; i <= endPeriod; i++) {
                 let opt = document.createElement('option');
                 opt.value = i.toString();
                 opt.innerText = "Tiết " + i;
