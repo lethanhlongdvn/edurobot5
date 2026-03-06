@@ -55,7 +55,10 @@ export const lesson120B = {
 
         const generateGridHtml = (type, p, i) => {
             let cellsHtml = '';
-            for (let r = 1; r <= 6; r++) {
+            let numRows = 6;
+            if (type === 'add' || type === 'sub') numRows = 3;
+
+            for (let r = 1; r <= numRows; r++) {
                 for (let c = 1; c <= 6; c++) {
                     let extraClass = '';
                     if (type === 'div') {
@@ -79,17 +82,17 @@ export const lesson120B = {
             return `
                 <div class="bg-white p-8 rounded-[40px] border-2 border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-300">
                     <div class="flex flex-col gap-6">
-                        <div class="w-full text-left px-2">
+                        <div class="w-full text-center px-2">
                             <p class="text-4xl font-black text-indigo-900 tracking-tight leading-tight"><span class="text-blue-500 mr-2">${i + 1}.</span>${p.a} ${signs[type]} ${p.b} = ?</p>
                         </div>
-                        <div class="flex flex-row items-center gap-10 px-2 flex-wrap sm:flex-nowrap">
-                            <div class="grid-120B bg-slate-50">
+                        <div class="flex flex-col items-center gap-6 px-2">
+                            <div class="grid-120B bg-slate-50" style="grid-template-rows: repeat(${numRows}, 60px);">
                                 ${(type !== 'div') ? `<div class="op-sign-120B" style="top: 75px">${signs[type]}</div>` : ''}
                                 ${cellsHtml}
                             </div>
-                            <div class="flex flex-row sm:flex-col gap-4 items-center">
-                                <button onclick="window.checkOne120B('${type}', ${i})" class="check-v-btn" title="Kiểm tra">V</button>
-                                <button onclick="window.clearGrid120B('${type}', ${i})" class="flex items-center gap-1 px-4 py-2 text-sm font-black text-slate-400 hover:text-rose-500 transition-colors uppercase tracking-widest">
+                            <div class="flex flex-row gap-6 items-center justify-center">
+                                <button onclick="window.checkOne120B('${type}', ${i})" class="check-v-btn shrink-0" title="Kiểm tra">V</button>
+                                <button onclick="window.clearGrid120B('${type}', ${i})" class="flex items-center gap-1 px-4 py-2 text-sm font-black text-slate-400 hover:text-rose-500 transition-colors uppercase tracking-widest shrink-0">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
                                     Xóa
                                 </button>
@@ -220,7 +223,7 @@ export const lesson120B = {
                 </div>
 
                 <style>
-                    .grid-120B { display: grid; grid-template-columns: repeat(6, 60px); grid-template-rows: repeat(6, 60px); gap: 0px; border: 2px solid #1e3a8a; width: fit-content; background: white; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.2); }
+                    .grid-120B { display: grid; grid-template-columns: repeat(6, 60px); gap: 0px; border: 2px solid #1e3a8a; width: fit-content; background: white; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.2); }
                     .cell-120B { border: 1px solid #e2e8f0; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
                     .cell-120B input { width: 100%; height: 100%; border: none; text-align: center; background: transparent; font-size: 32px; font-weight: 800; color: #1e3a8a; outline: none; padding: 0; }
                     .cell-120B input:focus { background: #f0f7ff; }
