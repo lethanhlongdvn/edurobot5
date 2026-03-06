@@ -28,10 +28,10 @@ export const lesson120B = {
                 <button onclick="switchTab120B('div')" class="tab-btn-120B bg-amber-100 text-amber-700 px-6 py-2 rounded-full font-black">Chia (:)</button>
             </div>
 
-            <div id="section-add" class="operation-section space-y-4"></div>
-            <div id="section-sub" class="operation-section hidden space-y-4"></div>
-            <div id="section-mul" class="operation-section hidden space-y-4"></div>
-            <div id="section-div" class="operation-section hidden space-y-4"></div>
+            <div id="section-add" class="operation-section grid md:grid-cols-2 gap-4"></div>
+            <div id="section-sub" class="operation-section hidden grid md:grid-cols-2 gap-4"></div>
+            <div id="section-mul" class="operation-section hidden grid md:grid-cols-2 gap-4"></div>
+            <div id="section-div" class="operation-section hidden grid md:grid-cols-2 gap-4"></div>
 
             <div class="flex flex-col items-center pt-6 border-t border-dashed border-gray-100">
                  <button id="btn-submit-120B" onclick="submit120B()" class="btn-submit-global">Gửi bài làm</button>
@@ -61,7 +61,7 @@ export const lesson120B = {
                 .hidden { display: none !important; }
                 
                 /* Nút kiểm tra bên phải */
-                .check-btn-right { height: fit-content; align-self: center; padding: 12px 24px; font-size: 20px; }
+                .check-btn-right { height: fit-content; align-self: center; padding: 6px 14px; font-size: 16px; border-radius: 12px !important; }
             </style>
 
             <script>
@@ -128,21 +128,21 @@ export const lesson120B = {
                                 let gridHtml = '';
                                 if (type !== 'div') {
                                     gridHtml = \`
-                                        <div class="flex flex-row items-center gap-12"> <!-- Bố cục ngang -->
-                                            <div class="grid-120B">
+                                        <div class="flex flex-row items-center gap-4"> <!-- Giảm gap -->
+                                            <div class="grid-120B scale-90 origin-left"> <!-- Thu nhỏ grid một chút để vừa 2 cột -->
                                                 <div class="op-sign">\${signs[type]}</div>
                                                 \${Array(6).fill().map((_, c) => \`<div class="cell-120B"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-r1-c\${c}"></div>\`).join('')}
                                                 \${Array(6).fill().map((_, c) => \`<div class="cell-120B"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-r2-c\${c}"></div>\`).join('')}
                                                 <div class="line-120B"></div>
                                                 \${Array(6).fill().map((_, c) => \`<div class="cell-120B result-cell"><input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-res-c\${c}"></div>\`).join('')}
                                             </div>
-                                            <button onclick="checkOne120B('\${type}', \${i})" class="check-btn-right bg-emerald-500 text-white rounded-2xl font-black shadow-lg active:scale-95">Kiểm tra</button>
+                                            <button onclick="checkOne120B('\${type}', \${i})" class="check-btn-right bg-emerald-500 text-white font-black shadow-lg active:scale-95">Kiểm tra</button>
                                         </div>
                                     \`;
                                 } else {
                                     gridHtml = \`
-                                        <div class="flex flex-row items-center gap-12">
-                                            <div class="division-grid">
+                                        <div class="flex flex-row items-center gap-4">
+                                            <div class="division-grid scale-90 origin-left">
                                                 <div class="div-dividend">
                                                     \${Array(6).fill().map((_, c) => \`<div class="div-cell"><input type="text" maxlength="1" id="grid-120B-div-\${i}-dividend-c\${c}"></div>\`).join('')}
                                                 </div>

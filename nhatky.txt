@@ -578,3 +578,16 @@ Khởi tạo thành công cấu trúc môn Khoa học: js/data/science/cungco, i
 - Sửa lỗi Bảng vàng (Leaderboard): Đồng bộ document.title, lọc theo period/subject, sắp xếp tại client khắc phục lỗi Index Firebase.
 - Cập nhật Quiz Tiết 122, 128, 129, 130 lên 15 câu, chuẩn hóa ký hiệu chiều cao "c".
 - Trạng thái hiện tại: Hoàn thành đồng bộ và chuẩn hóa giao diện củng cố.
+
+Ng├áy 06/03/2026:
+----------------
+[05:50] Ho├án th├ánh soạn bài Tiết 120B: Ôn tập Cộng, trừ, nhân, chia số thập phân.
+- Nội dung: 64 bài tập được chia đều cho 4 phép tính cơ bản.
+- Giao diện: Thiết kế lưới đặt tính trống (Cộng, Trừ, Nhân) và mẫu kẻ phép chia đặc biệt cho học sinh tự thao tác trực tiếp trên màn hình.
+- Tích hợp hệ thống: Đã đăng ký vào index.js (nằm sau Tiết 120) và đẩy mã nguồn lên GitHub thành công.
+- Trạng thái: Đã hoàn thành và sẵn sàng sử dụng.
+
+[07:16] Ngày 06/03/2026
+- Bài học: Toán 5 - Tiết 120B
+- Mô tả thay đổi: Tối ưu hóa giao diện cho TV. Chuyển đổi bố cục bài tập từ 1 cột sang 2 cột (side-by-side). Thu nhỏ nút "Kiểm tra" và tỉ lệ lưới đặt tính (scale 90%) để hiển thị gọn gàng, chuyên nghiệp hơn.
+- Trạng thái hiện tại: Đã cập nhật layout và đẩy lên GitHub.
