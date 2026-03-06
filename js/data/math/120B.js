@@ -196,42 +196,40 @@ export const lesson120B = {
                                             if (r === 1 && c >= 5) extraClass += ' div-h-line';
                                         }
                                         
-                                        // Final result row logic
                                         if (type === 'mul' && r === 6) extraClass += ' final-row';
                                         if ((type === 'add' || type === 'sub') && r === 3) extraClass += ' final-row';
                                         if (type === 'div' && r === 6) extraClass += ' final-row';
                                         
-                                        cellsHtml += `
-        < div class= "cell-120B ${extraClass}" >
-            <input type="text" maxlength="1" id="grid-120B-${type}-${i}-r${r}-c${c}" autocomplete="off">
-            </div>
-                                        `;
+                                        cellsHtml += \`
+                                            <div class="cell-120B \${extraClass}">
+                                                <input type="text" maxlength="1" id="grid-120B-\${type}-\${i}-r\${r}-c\${c}" autocomplete="off">
+                                            </div>
+                                        \`;
                                     }
-                                    // Line placement logic
                                     if ((type === 'add' || type === 'sub') && r === 2) cellsHtml += '<div class="line-120B"></div>';
                                     if (type === 'mul' && (r === 2 || r === 5)) cellsHtml += '<div class="line-120B"></div>';
                                 }
 
-                                card.innerHTML = `
-    < div class="flex flex-col gap-6" >
+                                card.innerHTML = \`
+                                    <div class="flex flex-col gap-6">
                                         <div class="w-full text-left px-2">
-                                            <p class="text-4xl font-black text-indigo-900 tracking-tight leading-tight"><span class="text-blue-500 mr-2">${i+1}.</span>${p.a} ${signs[type]} ${p.b} = ?</p>
+                                            <p class="text-4xl font-black text-indigo-900 tracking-tight leading-tight"><span class="text-blue-500 mr-2">\${i+1}.</span>\${p.a} \${signs[type]} \${p.b} = ?</p>
                                         </div>
                                         <div class="flex flex-row items-center gap-10 px-2 flex-wrap sm:flex-nowrap">
                                             <div class="grid-120B bg-slate-50">
-                                                ${(type !== 'div') ? `<div class="op-sign-120B" style="top: ${(type==='mul') ? '75px' : '75px'}">${signs[type]}</div>` : ''}
-                                                ${cellsHtml}
+                                                \${(type !== 'div') ? \`<div class="op-sign-120B" style="top: \${(type==='mul') ? '75px' : '75px'}">\${signs[type]}</div>\` : ''}
+                                                \${cellsHtml}
                                             </div>
                                             <div class="flex flex-row sm:flex-col gap-4 items-center">
-                                                <button onclick="checkOne120B('${type}', ${i})" class="check-v-btn" title="Kiểm tra">V</button>
-                                                <button onclick="clearGrid120B('${type}', ${i})" class="flex items-center gap-1 px-4 py-2 text-sm font-black text-slate-400 hover:text-rose-500 transition-colors uppercase tracking-widest">
+                                                <button onclick="checkOne120B('\${type}', \${i})" class="check-v-btn" title="Kiểm tra">V</button>
+                                                <button onclick="clearGrid120B('\${type}', \${i})" class="flex items-center gap-1 px-4 py-2 text-sm font-black text-slate-400 hover:text-rose-500 transition-colors uppercase tracking-widest">
                                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
                                                     Xóa
                                                 </button>
                                             </div>
                                         </div>
-                                    </div >
-    `;
+                                    </div>
+                                \`;
                                 section.appendChild(card);
                             });
                         });
@@ -240,7 +238,7 @@ export const lesson120B = {
                     window.clearGrid120B = function(type, i) {
                         for(let r=1; r<=6; r++) {
                             for(let c=1; c<=6; c++) {
-                                const el = document.getElementById(`grid - 120B - ${ type } -${ i } -r${ r } -c${ c } `);
+                                const el = document.getElementById(\`grid-120B-\${type}-\${i}-r\${r}-c\${c}\`);
                                 if(el) el.value = '';
                             }
                         }
@@ -251,18 +249,18 @@ export const lesson120B = {
                         let resStr = "";
                         if (type === 'mul') {
                             for(let c=1; c<=6; c++) {
-                                const el = document.getElementById(`grid - 120B - ${ type } -${ i } -r6 - c${ c } `);
+                                const el = document.getElementById(\`grid-120B-\${type}-\${i}-r6-c\${c}\`);
                                 if(el && el.value.trim() !== '') resStr += el.value.trim();
                             }
                         } else if (type === 'add' || type === 'sub') {
                             for(let c=1; c<=6; c++) {
-                                const el = document.getElementById(`grid - 120B - ${ type } -${ i } -r3 - c${ c } `);
+                                const el = document.getElementById(\`grid-120B-\${type}-\${i}-r3-c\${c}\`);
                                 if(el && el.value.trim() !== '') resStr += el.value.trim();
                             }
                         } else if (type === 'div') {
                             for(let r=2; r<=6; r++) {
                                 for(let c=5; c<=6; c++) {
-                                    const el = document.getElementById(`grid - 120B - div - ${ i } -r${ r } -c${ c } `);
+                                    const el = document.getElementById(\`grid-120B-div-\${i}-r\${r}-c\${c}\`);
                                     if(el && el.value.trim() !== '') resStr += el.value.trim();
                                 }
                             }
@@ -289,18 +287,18 @@ export const lesson120B = {
                                 let resStr = "";
                                 if (type === 'mul') {
                                     for(let c=1; c<=6; c++) {
-                                        const el = document.getElementById(`grid - 120B - ${ type } -${ i } -r6 - c${ c } `);
+                                        const el = document.getElementById(\`grid-120B-\${type}-\${i}-r6-c\${c}\`);
                                         if(el && el.value.trim() !== '') resStr += el.value.trim();
                                     }
                                 } else if (type === 'add' || type === 'sub') {
                                     for(let c=1; c<=6; c++) {
-                                        const el = document.getElementById(`grid - 120B - ${ type } -${ i } -r3 - c${ c } `);
+                                        const el = document.getElementById(\`grid-120B-\${type}-\${i}-r3-c\${c}\`);
                                         if(el && el.value.trim() !== '') resStr += el.value.trim();
                                     }
                                 } else if (type === 'div') {
                                     for(let r=2; r<=6; r++) {
                                         for(let c=5; c<=6; c++) {
-                                            const el = document.getElementById(`grid - 120B - div - ${ i } -r${ r } -c${ c } `);
+                                            const el = document.getElementById(\`grid-120B-div-\${i}-r\${r}-c\${c}\`);
                                             if(el && el.value.trim() !== '') resStr += el.value.trim();
                                         }
                                     }
