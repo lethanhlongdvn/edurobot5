@@ -77,6 +77,12 @@ export const router = {
         const sub = subjects.find(s => s.id === subId);
         if (!sub) return;
 
+        const isAdmin = localStorage.getItem('edurobot_admin') === 'true';
+        if (sub.locked && !isAdmin) {
+            alert('Môn học này đang trong quá trình phát triển. Vui lòng quay lại sau!');
+            return;
+        }
+
         if (sub.externalUrl) {
             window.location.href = sub.externalUrl;
         } else {

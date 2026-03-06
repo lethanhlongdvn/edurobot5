@@ -323,8 +323,17 @@
             const pwd = document.getElementById('teacherPassword').value;
             // Password hardcoded - simple security based on user request
             if (pwd === "gv123" || pwd === "admin" || pwd === "123456") {
+                if (pwd === "admin") {
+                    localStorage.setItem('edurobot_admin', 'true');
+                    if (confirm("Đã mở khóa các môn học! Bạn muốn xem giao diện học sinh (OK) hay vào trang Giáo viên (Cancel)?")) {
+                        window.closeTeacherAuthModal();
+                        window.location.reload();
+                        return;
+                    }
+                }
+
                 // Determine destination based on current subject
-                const subject = window.router && window.router.currentSubject ? window.router.currentSubject : 'vietnamese';
+                const subject = window.router && window.router.currentSubject ? window.router.currentSubject : 'math';
                 if (subject === 'math') {
                     window.location.href = "teacher-toan.html";
                 } else {
@@ -339,4 +348,5 @@
     <script src="js/app.js" type="module"></script>
 </body>
 
-</html> <script type='module'>import { lesson130 } from './js/data/math/130.js';</script>
+</html>
+<script type='module'>import { lesson130 } from './js/data/math/130.js';</script>

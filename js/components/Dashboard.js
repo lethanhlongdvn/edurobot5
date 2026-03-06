@@ -71,16 +71,19 @@ export const Dashboard = {
                         <nav class="flex flex-col p-2 space-y-1">
                             ${subjects.map(s => {
             const isActive = activeSubject === s.id;
+            const isAdmin = localStorage.getItem('edurobot_admin') === 'true';
+            const isLocked = s.locked && !isAdmin;
+
             return `
                                     <a onclick="router.navigateSubject('${s.id}')" 
                                        class="${isActive
                     ? 'sidebar-active'
-                    : 'text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-700'} px-4 py-3.5 rounded-xl flex items-center justify-between font-bold text-sm tracking-wide cursor-pointer transition-all">
+                    : 'text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-700'} ${isLocked ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'} px-4 py-3.5 rounded-xl flex items-center justify-between font-bold text-sm tracking-wide transition-all">
                                         <span class="flex items-center gap-3">
-                                            <span class="text-lg">${s.icon}</span>
+                                            <span class="text-lg ${isLocked ? 'grayscale' : ''}">${s.icon}</span>
                                             ${s.name}
                                         </span>
-                                        ${isActive ? `<svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>` : ''}
+                                        ${isActive ? `<svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>` : (isLocked ? `<span class="text-xs">🔒</span>` : '')}
                                     </a>
                                 `;
         }).join('')}
@@ -183,14 +186,18 @@ export const Dashboard = {
             <nav class="fixed bottom-0 left-0 right-0 md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-gray-200 dark:border-slate-700 px-2 py-2 flex justify-around items-center z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
                 ${subjects.filter(s => !s.externalUrl).map(s => {
                 const isActive = activeSubject === s.id;
+                const isAdmin = localStorage.getItem('edurobot_admin') === 'true';
+                const isLocked = s.locked && !isAdmin;
                 return `
-                        <a onclick="router.selectDashboardSubject('${s.id}')" 
-                           class="flex flex-col items-center gap-0.5 cursor-pointer group min-w-[56px]">
+                        <a onclick="router.navigateSubject('${s.id}')" 
+                           class="flex flex-col items-center gap-0.5 cursor-pointer group min-w-[56px] relative ${isLocked ? 'opacity-60 grayscale cursor-not-allowed' : ''}">
                             <div class="flex h-10 w-10 items-center justify-center rounded-full transition-all ${isActive ? 'bg-blue-600 text-white shadow-lg shadow-blue-200 dark:shadow-blue-900 scale-105' : 'text-gray-400 dark:text-slate-500 group-hover:bg-gray-100 dark:group-hover:bg-slate-800'
                     }">
                                 <span class="text-lg leading-none">${s.icon}</span>
                             </div>
-                            <p class="text-[9px] font-bold uppercase tracking-wide ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-slate-500'}">${s.shortName.split(' ')[0]}</p>
+                            <p class="text-[9px] font-bold uppercase tracking-wide flex items-center gap-0.5 ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-slate-500'}">
+                                ${s.shortName.split(' ')[0]} ${isLocked ? '🔒' : ''}
+                            </p>
                         </a>
                     `;
             }).join('')}
