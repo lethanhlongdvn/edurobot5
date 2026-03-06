@@ -6,11 +6,18 @@ export const LessonCore = {
         const hasStudy = !!(typeof lesson.content === 'function' || (typeof lesson.content === 'string' && lesson.content.trim()));
         const hasPractice = !!(typeof lesson.practice === 'function' || lesson.practice?.trim());
         const hasQuiz = !!(lesson.quizPool && lesson.quizPool.length > 0);
+        const hasPptx = !!(lesson.pptLink);
+        
+        let isTeacher = false;
+        try {
+            isTeacher = localStorage.getItem('userRole') === 'teacher';
+        } catch(e) {}
 
         return `
             <div class="max-w-full mx-auto pb-10 px-1 pt-1">
-                <div class="text-center mb-6 animate-slide-down">
+                <div class="text-center mb-6 animate-slide-down flex items-center justify-center gap-4 relative">
                     <h1 class="${lesson.title.length > 60 ? 'text-xl md:text-2xl' : lesson.title.length > 35 ? 'text-2xl md:text-3xl' : 'text-3xl md:text-5xl'} font-black text-blue-900 dark:text-blue-400 leading-tight tracking-tight uppercase">${lesson.title}</h1>
+                    ${isTeacher ? '<span class="hidden md:inline-block bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest border border-orange-200 shadow-sm absolute right-0">Chế độ Giáo viên</span>' : ''}
                 </div>
 
                 <div class="flex justify-center mb-4 overflow-x-auto px-1 sticky top-16 z-40">
@@ -28,6 +35,11 @@ export const LessonCore = {
                         ${hasQuiz ? `
                         <button id="tab-quiz" onclick="router.switchTab('quiz')" class="tab-btn flex-1 py-4 rounded-full text-[16px] md:text-xl font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-gray-400">
                             <span class="text-2xl">🏆</span> Củng cố
+                        </button>` : ''}
+                        
+                        ${(isTeacher && hasPptx) ? `
+                        <button id="tab-pptx" onclick="router.switchTab('pptx')" class="tab-btn flex-1 py-4 rounded-full text-[16px] md:text-xl font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-orange-500 bg-orange-50/50 border border-orange-200">
+                            <span class="text-2xl">🎦</span> Bài Giảng
                         </button>` : ''}
 
                         ${lesson.audio ? `
@@ -137,5 +149,58 @@ export const LessonCore = {
             state.selectedWord = null;
             state.selectedBtn = null;
         });
+    },
+
+    // Inject Fullscreen capabilities for iframe
+    _initFullscreenPPTX() {
+        window.toggleFullscreenPPTX = function() {
+            const container = document.getElementById('pptx-container');
+            if (!container) return;
+
+            if (!document.fullscreenElement) {
+                if (container.requestFullscreen) {
+                    container.requestFullscreen().catch(err => {
+                        console.error(`Error attempting to enable fullscreen: ${err.message}`);
+                    });
+                } else if (container.mozRequestFullScreen) { /* Firefox */
+                    container.mozRequestFullScreen();
+                } else if (container.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) { /* IE/Edge */
+                    container.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        };
+
+        // Listen for fullscreen change to update buttons if necessary
+        document.addEventListener('fullscreenchange', () => {
+            const btnExpand = document.getElementById('btn-expand-pptx');
+            const btnCollapse = document.getElementById('btn-collapse-pptx');
+            if (!btnExpand || !btnCollapse) return;
+
+            if (document.fullscreenElement) {
+                btnExpand.classList.add('hidden');
+                btnCollapse.classList.remove('hidden');
+            } else {
+                btnExpand.classList.remove('hidden');
+                btnCollapse.classList.add('hidden');
+            }
+        });
     }
 };
+
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+        if (LessonCore._initFullscreenPPTX) LessonCore._initFullscreenPPTX();
+    });
+}

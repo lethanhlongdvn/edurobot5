@@ -382,6 +382,37 @@ export const router = {
                 }));
             }
             html = UI.renderQuizContainer(lesson);
+        } else if (tabId === 'pptx') {
+            const pptLink = lesson.pptLink || '';
+            html = `
+                <div id="pptx-container" class="glass-card rounded-[40px] p-2 md:p-4 bg-white dark:bg-slate-900 min-h-[600px] animate-fade-in relative flex flex-col">
+                    <div class="flex justify-between items-center mb-4 px-4">
+                        <h3 class="text-xl font-black text-gray-800 dark:text-gray-100 flex items-center gap-2">
+                            <span class="text-orange-500">🎦</span> Bài giảng PowerPoint
+                        </h3>
+                        <div class="flex gap-2">
+                            <button id="btn-expand-pptx" onclick="Lesson.toggleFullscreenPPTX()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-xl font-bold text-sm transition-all flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                                Toàn màn hình
+                            </button>
+                            <button id="btn-collapse-pptx" onclick="Lesson.toggleFullscreenPPTX()" class="hidden bg-orange-100 hover:bg-orange-200 text-orange-700 px-4 py-2 rounded-xl font-bold text-sm transition-all flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                Thu nhỏ
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex-grow w-full rounded-2xl overflow-hidden shadow-inner border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-800">
+                        ${pptLink ? `
+                            <iframe src="${pptLink}" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="w-full h-[600px] md:h-[800px]"></iframe>
+                        ` : `
+                            <div class="flex flex-col items-center justify-center h-full text-gray-400 py-32">
+                                <span class="text-4xl mb-4">📭</span>
+                                <p>Chưa có link bài giảng cho tiết này.</p>
+                            </div>
+                        `}
+                    </div>
+                </div>
+            `;
         }
 
         container.innerHTML = html;
