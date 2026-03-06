@@ -1,4 +1,8 @@
-﻿[12:10] Ngày 06/03/2026
+﻿[12:15] Ngày 06/03/2026
+- UI: Cập nhật nút 'Kiểm tra' (V) trong bài 120B/120C thành icon dấu tích SVG trắng trên nền xanh, loại bỏ viền đen theo mẫu của người dùng.
+- Đồng bộ: Tinh chỉnh shadow và border-radius nút cho phong cách hiện đại hơn.
+
+[12:10] Ngày 06/03/2026
 - UI: Tinh chỉnh icon Toast thành dấu tích trắng trên nền xanh lục (#10b981) khớp hoàn toàn với hình ảnh mẫu của người dùng.
 - Thiết kế: Sử dụng stroke-width lớn (5) cho SVG để dấu tích trông rõ ràng và cao cấp hơn.
 
@@ -620,6 +624,7 @@ Ng├áy 06/03/2026:
 - Tạo bài học 120C: Ôn tập về 4 phép tính với số thập phân nâng cao, dựa trên cấu trúc của 120B.\
 - Thêm 120C vào hệ thống (data_loader.js/index.js).\
 - Cập nhật trang Giáo viên (teacher-toan.html) với 2 cột điểm riêng biệt: '120B (Ôn tập)' và '120C (Nâng cao)' thu thập kết quả từ Firebase (essays_v2).
+
 
 
 

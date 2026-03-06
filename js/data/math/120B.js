@@ -93,7 +93,9 @@ export const lesson120B = {
                                 ${cellsHtml}
                             </div>
                             <div class="flex flex-row gap-6 items-center justify-center">
-                                <button onclick="window.checkOne120B('${type}', ${i})" class="check-v-btn shrink-0" title="Kiểm tra">V</button>
+                                <button onclick="window.checkOne120B('${type}', ${i})" class="check-v-btn shrink-0" title="Kiểm tra">
+                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                </button>
                                 <button onclick="window.clearGrid120B('${type}', ${i})" class="flex items-center gap-1 px-4 py-2 text-sm font-black text-slate-400 hover:text-rose-500 transition-colors uppercase tracking-widest shrink-0">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
                                     Xóa
@@ -236,7 +238,7 @@ export const lesson120B = {
                     .div-v-line { border-right: 4px solid #1e3a8a !important; }
                     .div-h-line { border-bottom: 4px solid #1e3a8a !important; }
                     .final-row { background: #fffbeb; }
-                    .check-v-btn { width: 64px; height: 64px; background: #10b981; color: white; display: flex; align-items: center; justify-content: center; font-size: 36px; font-weight: 900; border-radius: 16px; box-shadow: 0 8px 15px -3px rgba(16, 185, 129, 0.3); cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); border: none; }
+                    .check-v-btn { width: 64px; height: 64px; background: #10b981; color: white; display: flex; align-items: center; justify-content: center; border-radius: 18px; box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4); cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); border: none; }
                     .check-v-btn:hover { background: #059669; transform: translateY(-3px) scale(1.05); }
                     .hidden { display: none !important; }
                     @media (max-width: 768px) { .grid-120B { transform: scale(0.8); transform-origin: left top; } .cell-120B { width: 45px; height: 45px; } .cell-120B input { font-size: 24px; } }
