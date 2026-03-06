@@ -117,9 +117,9 @@ export const common = {
         toast.className = `toast-item ${isSuccess ? 'toast-success' : 'toast-error'}`;
 
         toast.innerHTML = `
-            <div class="w-12 h-12 ${isSuccess ? 'bg-white text-emerald-600' : 'bg-white text-rose-600'} rounded-2xl flex items-center justify-center text-3xl font-black shadow-inner shrink-0 leading-none">
+            <div class="w-12 h-12 ${isSuccess ? 'bg-[#10b981] text-white' : 'bg-rose-500 text-white'} rounded-2xl flex items-center justify-center text-3xl font-black shadow-lg shrink-0 leading-none">
                 ${isSuccess ?
-                '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>' :
+                '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>' :
                 'E'}
             </div>
             <span class="toast-text">${message}</span>
