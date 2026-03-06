@@ -148,6 +148,10 @@
                             <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center cursor-pointer hover:text-orange-500"
                                 onclick="sortTableBy('cungCoScore')">Củng cố ↕</th>
                             <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center cursor-pointer hover:text-orange-500"
+                                onclick="sortTableBy('score120B')">120B (Ôn tập) ↕</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center cursor-pointer hover:text-orange-500"
+                                onclick="sortTableBy('score120C')">120C (Nâng cao) ↕</th>
+                            <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center cursor-pointer hover:text-orange-500"
                                 onclick="sortTableBy('avgScore')">Điểm TB ↕</th>
                             <th class="p-6 text-xs font-black text-gray-400 uppercase tracking-widest text-center cursor-pointer hover:text-orange-500"
                                 onclick="sortTableBy('totalTime')">Tổng t.gian ↕</th>
@@ -274,6 +278,8 @@
                             luyenTapTime: null,
                             cungCoScore: null,
                             cungCoTime: null,
+                            score120B: null,
+                            score120C: null,
                             attemptsCount: 0,
                             lastTimestamp: 0
                         };
@@ -286,11 +292,18 @@
 
                     if (data.sourceTab === 'Luyện tập') {
                         const s = parseScore(data.aiScore);
-                        if (st.luyenTapScore === null || s > st.luyenTapScore) {
-                            st.luyenTapScore = s;
-                            st.luyenTapTime = data.timeTaken || 0;
-                        } else if (s === st.luyenTapScore) {
-                            if ((data.timeTaken || 0) < (st.luyenTapTime || 999999)) st.luyenTapTime = data.timeTaken || 0;
+                        // Check if it's 120B or 120C
+                        if (data.lessonTitle && data.lessonTitle.includes('120B')) {
+                            if (st.score120B === null || s > st.score120B) st.score120B = s;
+                        } else if (data.lessonTitle && data.lessonTitle.includes('120C')) {
+                            if (st.score120C === null || s > st.score120C) st.score120C = s;
+                        } else {
+                            if (st.luyenTapScore === null || s > st.luyenTapScore) {
+                                st.luyenTapScore = s;
+                                st.luyenTapTime = data.timeTaken || 0;
+                            } else if (s === st.luyenTapScore) {
+                                if ((data.timeTaken || 0) < (st.luyenTapTime || 999999)) st.luyenTapTime = data.timeTaken || 0;
+                            }
                         }
                     } else if (data.sourceTab === 'Củng cố') {
                         const s = parseScore(data.score);
@@ -306,9 +319,15 @@
                 let uniqueData = Object.values(studentData);
 
                 uniqueData.forEach(d => {
-                    const s1 = d.luyenTapScore !== null ? d.luyenTapScore : 0;
-                    const s2 = d.cungCoScore !== null ? d.cungCoScore : 0;
-                    d.avgScore = Math.round((s1 + s2) / 2);
+                    let totalScores = 0;
+                    let countScores = 0;
+
+                    if (d.luyenTapScore !== null) { totalScores += d.luyenTapScore; countScores++; }
+                    if (d.cungCoScore !== null) { totalScores += d.cungCoScore; countScores++; }
+                    if (d.score120B !== null) { totalScores += d.score120B; countScores++; }
+                    if (d.score120C !== null) { totalScores += d.score120C; countScores++; }
+
+                    d.avgScore = countScores > 0 ? Math.round(totalScores / countScores) : 0;
 
                     const t1 = d.luyenTapTime !== null ? d.luyenTapTime : 0;
                     const t2 = d.cungCoTime !== null ? d.cungCoTime : 0;
@@ -318,9 +337,9 @@
                 // Mặc định: TB > Củng cố > Luyện tập > Thời gian thấp
                 uniqueData.sort((a, b) => {
                     if (a.avgScore !== b.avgScore) return b.avgScore - a.avgScore;
-                    const cungCoA = a.cungCoScore || 0;
-                    const cungCoB = b.cungCoScore || 0;
-                    if (cungCoA !== cungCoB) return cungCoB - cungCoA;
+                    const cA = Math.max(a.score120C || 0, a.score120B || 0, a.cungCoScore || 0);
+                    const cB = Math.max(b.score120C || 0, b.score120B || 0, b.cungCoScore || 0);
+                    if (cA !== cB) return cB - cA;
                     const luyenTapA = a.luyenTapScore || 0;
                     const luyenTapB = b.luyenTapScore || 0;
                     if (luyenTapA !== luyenTapB) return luyenTapB - luyenTapA;
@@ -351,6 +370,12 @@
                             </td>
                             <td class="p-4 text-center">
                                 <div class="font-black text-blue-600 text-lg">${data.cungCoScore !== null ? data.cungCoScore : '-'}</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div class="font-black text-emerald-600 text-lg">${data.score120B !== null ? data.score120B : '-'}</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div class="font-black text-rose-600 text-lg">${data.score120C !== null ? data.score120C : '-'}</div>
                             </td>
                             <td class="p-4 text-center bg-green-50/30">
                                 <span class="text-xl font-black ${avgClass}">${data.avgScore}</span>
@@ -422,6 +447,12 @@
                         <td class="p-4 text-center">
                             <div class="font-black text-blue-600 text-lg">${data.cungCoScore !== null ? data.cungCoScore : '-'}</div>
                         </td>
+                        <td class="p-4 text-center">
+                            <div class="font-black text-emerald-600 text-lg">${data.score120B !== null ? data.score120B : '-'}</div>
+                        </td>
+                        <td class="p-4 text-center">
+                            <div class="font-black text-rose-600 text-lg">${data.score120C !== null ? data.score120C : '-'}</div>
+                        </td>
                         <td class="p-4 text-center bg-green-50/30">
                             <span class="text-xl font-black ${avgClass}">${data.avgScore}</span>
                         </td>
@@ -444,6 +475,8 @@
                     "Trường": d.school || "N/A",
                     "Điểm Luyện tập (100)": d.luyenTapScore !== null ? d.luyenTapScore : "Chưa làm",
                     "Điểm Củng cố (100)": d.cungCoScore !== null ? d.cungCoScore : "Chưa làm",
+                    "Điểm 120B (Ôn tập)": d.score120B !== null ? d.score120B : "Chưa làm",
+                    "Điểm 120C (Nâng cao)": d.score120C !== null ? d.score120C : "Chưa làm",
                     "Điểm Trung bình (100)": d.avgScore,
                     "Tổng thời gian (giây)": d.totalTime || 0
                 }));

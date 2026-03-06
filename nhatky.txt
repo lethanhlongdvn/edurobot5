@@ -596,4 +596,7 @@ Ng├áy 06/03/2026:
  -   B a i   h o c :   T o a n   5   -   T i e t   1 2 0 B  
  -   S u a   l o i :   K h a c   p h u c   t r i e t   d e   l o i   k h o n g   h i e n   t h i   l u o i   t i n h   b a n g   c a c h   s u   d u n g   w i n d o w   g l o b a l s   v a   t o i   u u   h o a   t h o i   g i a n   r e n d e r   ( 3 0 0 m s ) .  
  -   T r a n g   t h a i :   D a   h o a n   t h a n h ,   k i e m   t r a   o n   d i n h   v a   d a y   l e n   G i t H u b .  
- 
+ \
+- Tạo bài học 120C: Ôn tập về 4 phép tính với số thập phân nâng cao, dựa trên cấu trúc của 120B.\
+- Thêm 120C vào hệ thống (data_loader.js/index.js).\
+- Cập nhật trang Giáo viên (teacher-toan.html) với 2 cột điểm riêng biệt: '120B (Ôn tập)' và '120C (Nâng cao)' thu thập kết quả từ Firebase (essays_v2).
