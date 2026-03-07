@@ -323,7 +323,7 @@ export const LessonMedia = {
         this._presentationActive = true;
         
         // Hiện Overlay
-        overlay.classList.remove('hidden');
+        overlay.classList.add('active');
         document.body.style.overflow = 'hidden'; // Khoá cuộn trang nền
 
         // Đảm bảo nút điều hướng luôn hiển thị đúng text
@@ -358,7 +358,7 @@ export const LessonMedia = {
         this._presentationActive = false;
         const overlay = document.getElementById('presentation-overlay');
         if (overlay) {
-            overlay.classList.add('hidden');
+            overlay.classList.remove('active');
         }
         document.body.style.overflow = ''; // Mở lại cuộn trang nền
     },

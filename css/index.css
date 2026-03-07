@@ -550,9 +550,13 @@ html.dark ::-webkit-scrollbar-thumb:hover {
     height: 100%;
     background: #ffffff; 
     z-index: 99999; /* Luôn nổi trên cùng */
-    display: flex; 
+    display: none; 
     flex-direction: column;
     overflow: hidden; /* Ngăn cuộn trang */
+}
+
+#presentation-overlay.active {
+    display: flex;
 }
 
 /* Nền tối cho Đêm */

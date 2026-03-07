@@ -368,7 +368,6 @@ window.submitMathLesson = async function (content, score, btnId, timeTaken = 0) 
                 week: week,
                 period: period,
                 timeTaken: timeTaken,
-                type: "Tự luận - Giới thiệu",
                 deviceId: window.getDeviceId(),
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                 status: "Chưa chấm",

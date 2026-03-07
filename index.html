@@ -129,7 +129,7 @@
 
     <!-- Presentation Overlay -->
     <div id="presentation-overlay" class="hidden">
-        <button class="close-btn" onclick="if(window.Lesson && window.Lesson.stopPresentation) window.Lesson.stopPresentation(); else document.getElementById('presentation-overlay').classList.add('hidden');">Đóng &times;</button>
+        <button class="close-btn" onclick="if(window.Lesson && window.Lesson.stopPresentation) window.Lesson.stopPresentation(); else document.getElementById('presentation-overlay').classList.remove('active');">Đóng &times;</button>
         <div id="slides-wrapper" class="slides-wrapper">
             <!-- Từng thẻ <section class="web-slide"> sẽ chứa nội dung và được inject qua JS -->
         </div>
@@ -367,4 +367,3 @@
 </body>
 
 </html>
-<script type='module'>import { lesson130 } from './js/data/math/130.js';</script>
