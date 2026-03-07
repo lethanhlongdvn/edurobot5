@@ -17,12 +17,16 @@ export const LessonCore = {
             <div class="max-w-full mx-auto pb-10 px-1 pt-1">
                 <div class="text-center mb-6 animate-slide-down flex flex-col md:flex-row items-center justify-center gap-4 relative">
                     <h1 class="${lesson.title.length > 60 ? 'text-xl md:text-2xl' : lesson.title.length > 35 ? 'text-2xl md:text-3xl' : 'text-3xl md:text-5xl'} font-black text-blue-900 dark:text-blue-400 leading-tight tracking-tight uppercase">${lesson.title}</h1>
-                    <div class="hidden md:flex absolute right-0 top-0 flex-col items-end gap-2 z-50">
-                        ${isTeacher ? '<span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest border border-orange-200 shadow-sm">Chế độ Giáo viên</span>' : ''}
+                    <div class="hidden md:flex absolute right-0 -top-4 flex-col items-end gap-2 z-50">
+                        ${isTeacher ? '<span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border border-orange-200 shadow-sm">Chế độ Giáo viên</span>' : ''}
                         ${(isTeacher && Array.isArray(lesson.presentation) && lesson.presentation.length > 0) ? `
-                        <button onclick="if(window.Lesson && window.Lesson.startPresentation) window.Lesson.startPresentation('${lesson.id || lesson.key || ''}')" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-sm transition-all active:scale-95 flex items-center justify-center gap-1 w-full border border-blue-700">
-                            <span class="text-sm">🖥️</span> Trình chiếu
+                        <button onclick="if(window.Lesson && window.Lesson.startPresentation) window.Lesson.startPresentation('${lesson.id || lesson.key || ''}')" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-sm transition-all active:scale-95 flex items-center justify-center gap-1 w-full border border-blue-700">
+                            <span class="text-xs">🖥️</span> Trình chiếu
                         </button>` : ''}
+                        ${isTeacher ? `
+                        <a href="${router.currentSubject === 'math' ? 'teacher-toan.html' : 'teacher.html'}" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-sm transition-all active:scale-95 flex items-center justify-center gap-1 w-full border border-emerald-700 decoration-none">
+                            <span class="text-xs">📊</span> Xem kết quả
+                        </a>` : ''}
                     </div>
                 </div>
 

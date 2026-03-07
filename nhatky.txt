@@ -645,6 +645,14 @@ Ng├áy 06/03/2026:
 - Trạng thái: Đã cập nhật `123.js` và đồng bộ qua Git.
 - Trạng thái hiện tại: Đã hoàn thiện UI/UX (CSS, HTML), Logic điều khiển (LessonMedia.js), tích hợp nút bấm (LessonCore.js). Đã thêm dữ liệu mẫu vào bài 123. Sẵn sàng sử dụng.
 
+**Ngày 07/03/2026**
+- Nội dung: Bổ sung nút "Xem kết quả" và tinh chỉnh vị trí khối công cụ giáo viên.
+- Chi tiết:
+  + Thêm nút "Xem kết quả" vào `LessonCore.js`, tự động điều hướng tới `teacher-toan.html` (Toán) hoặc `teacher.html` (Tiếng Việt).
+  + Điều chỉnh vị trí khối 3 nút lên trên một chút (-top-4 thay vì top-0) để giao diện gọn gàng hơn.
+  + Cập nhật kích thước text và padding cho các nút công cụ giáo viên đồng bộ (text-[10px], py-1.5).
+- Trạng thái: Đã hoàn thành và push lên GitHub.
+
 [19:05] Ngày 07/03/2026
 - Bài học: Toán 5 - Tiết 124
 - Mô tả thay đổi: Bổ sung 3 slide vào tính năng Trình chiếu Native cho phần "Khám phá" (Tìm hiểu bài). Slide 1: Khám phá công thức. Slide 2: Mô phỏng khối lập phương 3D. Slide 3: Ghi nhớ công thức. Tích hợp sẵn chức năng tương tác 3D ngay bên trong slide trình chiếu.
