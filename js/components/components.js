@@ -16,6 +16,7 @@ export const UI = {
     // Quiz redirects to ensure single state management
     renderQuizContainer(lesson) { return Quiz.renderQuizContainer(lesson); },
     initQuiz(lesson) { Quiz.initQuiz(lesson); },
+    cleanupQuiz() { if (Quiz.cleanup) Quiz.cleanup(); },
 
     renderNavbarSubjectSwitcher(currentSubject, allSubjects) {
         const isAdmin = localStorage.getItem('edurobot_admin') === 'true';
@@ -69,6 +70,13 @@ export const UI = {
         // Xử lý [[CHAT_QUIZ|id|lesson_key]]
         content = content.replace(/\[\[CHAT_QUIZ\|([^|\]]+)\|([^\]]+)\]\]/g, (match, id, lessonKey) => {
             return AIInteraction.renderChatQuiz(id, lessonKey);
+        });
+
+        content = content.replace(/<img\b([^>]*?)>/gi, (match, attrs) => {
+            let a = attrs || '';
+            if (!/loading\s*=/.test(a)) a += ' loading="lazy"';
+            if (!/decoding\s*=/.test(a)) a += ' decoding="async"';
+            return `<img${a}>`;
         });
 
         return content;

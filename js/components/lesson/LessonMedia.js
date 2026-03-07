@@ -337,11 +337,11 @@ export const LessonMedia = {
         if (!this._pptKeyHandler) {
             this._pptKeyHandler = (e) => {
                 if (!this._presentationActive) return;
-                if (e.key === "ArrowRight" || e.key === "Space") {
+                if (e.key === "ArrowRight" || e.key === "ArrowDown" || e.key === "Space") {
                     e.preventDefault();
                     this.moveSlide(1);
                 }
-                if (e.key === "ArrowLeft") {
+                if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
                     e.preventDefault();
                     this.moveSlide(-1);
                 }

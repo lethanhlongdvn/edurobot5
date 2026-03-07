@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hệ thống Học tập EduRobot - Lớp 5</title>
-    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googleapis.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
+        tailwind.config = { darkMode: 'class' }
     </script>
-    <link rel="stylesheet" href="css/index.css">
-    <!-- Lottie Animation Player -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body class="flex flex-col min-h-screen">
@@ -274,16 +273,16 @@
     </script>
 
     <!-- Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
-    <script src="js/firebase-logic.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js" defer></script>
+    <script src="js/firebase-logic.js" defer></script>
 
     <!-- Tiếng Việt 5 Modules -->
-    <script src="js/legacy-vietnamese/ai-grader.js"></script>
-    <script src="js/legacy-vietnamese/interactive-exercises.js"></script>
-    <script src="js/legacy-vietnamese/ltvc-core.js"></script>
-    <script src="js/legacy-vietnamese/ltvc_patch.js"></script>
+    <script src="js/legacy-vietnamese/ai-grader.js" defer></script>
+    <script src="js/legacy-vietnamese/interactive-exercises.js" defer></script>
+    <script src="js/legacy-vietnamese/ltvc-core.js" defer></script>
+    <script src="js/legacy-vietnamese/ltvc_patch.js" defer></script>
 
     <script>
         // Fullscreen toggle logic
@@ -361,6 +360,14 @@
                 alert("Mật khẩu không đúng. Vui lòng thử lại!");
             }
         };
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator && !navigator.webdriver) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('sw.js').catch(function(){});
+            });
+        }
     </script>
 
     <script src="js/app.js" type="module"></script>

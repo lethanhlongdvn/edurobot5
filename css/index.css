@@ -509,21 +509,67 @@ html.dark ::-webkit-scrollbar-thumb:hover {
 
 /* Standardized Buttons for project-wide use */
 .btn-tutor-e {
-    @apply w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black text-2xl flex items-center justify-center shadow-lg transition-all active:scale-95 shrink-0;
+    width: 3rem;
+    height: 3rem;
+    background-color: #2563eb;
+    color: #fff;
+    border-radius: 1rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    transition: all .15s ease;
+    flex-shrink: 0;
 }
+.btn-tutor-e:hover { background-color: #1d4ed8; }
+.btn-tutor-e:active { transform: scale(0.95); }
 
 .btn-submit-global {
-    @apply px-12 py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-[32px] font-black text-2xl shadow-xl shadow-indigo-900/20 active:scale-95 transition-all;
+    padding: 1.25rem 3rem;
+    background-color: #4f46e5;
+    color: #fff;
+    border-radius: 32px;
+    font-weight: 900;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 40px -10px rgba(30, 41, 59, 0.4);
+    transition: all .15s ease;
 }
+.btn-submit-global:hover { background-color: #4338ca; }
+.btn-submit-global:active { transform: scale(0.95); }
 
-/* 🏆 Premium Standardized Buttons */
 .btn-check-premium {
-    @apply flex items-center justify-center w-14 h-14 rounded-2xl shadow-lg transition-all active:scale-90 hover:scale-105;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    transition: transform .15s ease;
 }
+.btn-check-premium:hover { transform: scale(1.05); }
+.btn-check-premium:active { transform: scale(0.9); }
 
 .btn-submit-premium {
-    @apply group relative px-16 py-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-full text-white font-black text-4xl shadow-[0_10px_40px_-10px_rgba(79, 70, 229, 0.5)] hover:shadow-[0_20px_50px_-10px_rgba(79, 70, 229, 0.7)] active:scale-95 transform;
+    position: relative;
+    padding: 1.5rem 4rem;
+    background-image: linear-gradient(to right, #4f46e5, #7c3aed, #4f46e5);
+    background-size: 200% auto;
+    color: #fff;
+    border-radius: 9999px;
+    font-weight: 900;
+    font-size: 2.25rem;
+    box-shadow: 0 10px 40px -10px rgba(79, 70, 229, 0.5);
+    transition: all .5s ease;
+    transform: translateZ(0);
 }
+.btn-submit-premium:hover {
+    background-position: right center;
+    box-shadow: 0 20px 50px -10px rgba(79, 70, 229, 0.7);
+}
+.btn-submit-premium:active { transform: scale(0.95); }
 
 /* Global Floating Zoom Button Style */
 #global-zoom-btn {

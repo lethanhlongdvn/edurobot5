@@ -1,6 +1,10 @@
 # Dependencies
 node_modules/
 
+# Playwright artifacts
+test-results/
+playwright-report/
+
 # Archive (local-only backup files)
 _archive/
 

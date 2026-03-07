@@ -71,6 +71,28 @@ export const Quiz = {
     streak: 0,
     isProcessing: false,
     audioCtx: null,
+    _leaderboardUnsub: null,
+    _lottieLoadingPromise: null,
+
+    ensureLottieLoaded() {
+        if (window.customElements && window.customElements.get && window.customElements.get('lottie-player')) return Promise.resolve();
+        if (this._lottieLoadingPromise) return this._lottieLoadingPromise;
+        this._lottieLoadingPromise = new Promise((resolve) => {
+            const existing = document.querySelector('script[data-lottie="1"]');
+            if (existing && (window.customElements && window.customElements.get && window.customElements.get('lottie-player'))) {
+                resolve();
+                return;
+            }
+            const s = document.createElement('script');
+            s.src = 'https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js';
+            s.async = true;
+            s.defer = true;
+            s.setAttribute('data-lottie', '1');
+            s.onload = () => resolve();
+            document.head.appendChild(s);
+        });
+        return this._lottieLoadingPromise;
+    },
 
     playSFX(type) {
         try {
@@ -111,6 +133,7 @@ export const Quiz = {
     },
 
     showLottieFeedback(isCorrect) {
+        this.ensureLottieLoaded();
         const layer = document.getElementById('quiz-gamification-layer');
         if (!layer) return;
 
@@ -140,6 +163,7 @@ export const Quiz = {
 
     async initQuiz(lesson) {
         console.log('Quiz: Khởi tạo quiz với lesson:', lesson.title);
+        try { await this.ensureLottieLoaded(); } catch(e) {}
         let pool = lesson.quizPool || [];
 
         // Cố gắng tải từ file .txt nếu có (ưu tiên để người dùng dễ cập nhật)
@@ -205,11 +229,14 @@ export const Quiz = {
         const listDiv = document.getElementById('quiz-leaderboard-list');
         if (!listDiv) return;
 
+        if (Quiz._leaderboardUnsub) {
+            try { Quiz._leaderboardUnsub(); } catch(e) {}
+            Quiz._leaderboardUnsub = null;
+        }
+
         const subjectName = (window.router?.currentSubject === 'math') ? "Toán học" : "Tiếng Việt";
 
-        // Query by period and subject (more reliable than title)
-        // Remove orderBy to avoid index requirement, sort at client side
-        window.db.collection("diem_tieng_viet_lop5")
+        const unsub = window.db.collection("diem_tieng_viet_lop5")
             .where("period", "==", lesson.period)
             .where("subject", "==", subjectName)
             .onSnapshot((snapshot) => {
@@ -221,7 +248,6 @@ export const Quiz = {
                 let allResults = [];
                 snapshot.forEach(doc => allResults.push(doc.data()));
 
-                // Best attempt per student (optional but recommended for leaderboard)
                 const bestAttempts = {};
                 allResults.forEach(data => {
                     const key = `${data.studentName}_${data.studentClass}`;
@@ -260,6 +286,7 @@ export const Quiz = {
                 console.error("Leaderboard error:", error);
                 listDiv.innerHTML = `<div class="text-center py-6 text-red-400 text-xs font-bold italic">Lỗi tải bảng xếp hạng: ${error.message}</div>`;
             });
+        Quiz._leaderboardUnsub = unsub;
     },
 
     async loadQuizFromFile(period) {
@@ -496,6 +523,19 @@ export const Quiz = {
             window.submitMathLesson(fullContent, score, "btn-submit-final-score", timeTaken);
         } else {
             alert("Bạn hãy tải lại trang để nộp điểm nhé! (Hệ thống nộp bài đang bận)");
+        }
+    },
+
+    cleanup() {
+        if (this._leaderboardUnsub) {
+            try { this._leaderboardUnsub(); } catch(e) {}
+            this._leaderboardUnsub = null;
+        }
+        const layer = document.getElementById('quiz-gamification-layer');
+        if (layer) layer.innerHTML = '';
+        if (this.audioCtx) {
+            try { this.audioCtx.close(); } catch(e) { try { this.audioCtx.suspend(); } catch(_) {} }
+            this.audioCtx = null;
         }
     }
 };

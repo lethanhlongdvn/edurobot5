@@ -19,6 +19,7 @@ export const router = {
         window.UI = UI;
         window.subjects = subjects;
         window.lessons = lessons;
+        if (!window.__lessonCache) window.__lessonCache = new Map();
 
         // Phục hồi trạng thái (kỳ, tuần) nếu có
         try {
@@ -91,6 +92,7 @@ export const router = {
     },
 
     renderHome(fromHash = false) {
+        if (UI && UI.cleanupQuiz) UI.cleanupQuiz();
         this.saveState();
         const currentHash = window.location.hash;
         if (!fromHash && currentHash !== '' && currentHash !== '#' && currentHash !== '#/') {
@@ -235,16 +237,206 @@ export const router = {
         }
     },
 
-    renderLesson(subId, period, fromHash = false) {
+    async renderLesson(subId, period, fromHash = false) {
         if (!fromHash) {
             window.location.hash = `/lesson/${subId}/${period}`;
             return;
         }
 
         const subject = subjects.find(s => s.id === subId);
-        const lesson = lessons[subId]?.find(l => (l.id === period) || (l.period === period));
+        let lesson = lessons[subId]?.find(l => (l.id === period) || (l.period === period));
 
         if (!subject || !lesson) return;
+
+        const loadingHost = document.getElementById('app-content');
+        if (loadingHost) {
+            loadingHost.innerHTML = `
+                <div class="flex flex-col items-center justify-center h-64">
+                    <div class="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4"></div>
+                    <p class="text-blue-800 font-bold animate-pulse">Đang nạp nội dung bài học...</p>
+                </div>
+            `;
+        }
+
+        if (subId === 'math' && !lesson.content) {
+            try {
+                const cache = window.__lessonCache;
+                if (cache && cache.has(lesson.period)) {
+                    Object.assign(lesson, cache.get(lesson.period));
+                } else {
+                    const mod = await import(`./data/math/${lesson.period}.js`);
+                    const key = `lesson${lesson.period}`;
+                    const full = mod[key] || Object.values(mod)[0];
+                    if (full) {
+                        Object.assign(lesson, full);
+                        if (cache) cache.set(lesson.period, full);
+                    }
+                }
+                const list = lessons['math'] || [];
+                const idx = list.findIndex(l => (l.id === lesson.period) || (l.period === lesson.period));
+                if (idx >= 0 && idx + 1 < list.length) {
+                    const nextPeriod = list[idx + 1].period;
+                    const cache2 = window.__lessonCache;
+                    if (cache2 && !cache2.has(nextPeriod)) {
+                        import(`./data/math/${nextPeriod}.js`).then(mod2 => {
+                            const key2 = `lesson${nextPeriod}`;
+                            const full2 = mod2[key2] || Object.values(mod2)[0];
+                            if (full2) cache2.set(nextPeriod, full2);
+                        }).catch(() => {});
+                    }
+                }
+            } catch (e) {
+                console.error('Không thể nạp bài học động:', e);
+            }
+        }
+        if (subId === 'vietnamese' && (!lesson.content && lesson.modulePath)) {
+            try {
+                const cache = window.__lessonCache;
+                const cacheKey = lesson.id || lesson.period;
+                if (cache && cache.has(cacheKey)) {
+                    Object.assign(lesson, cache.get(cacheKey));
+                } else {
+                    const cleanPath = (lesson.modulePath || '').replace('./', '').replace(/\.js$/i, '');
+                    const mod = await import(`./data/vietnamese/${cleanPath}.js`);
+                    const full = (lesson.exportName && mod[lesson.exportName]) ? mod[lesson.exportName] : Object.values(mod)[0];
+                    if (full) {
+                        Object.assign(lesson, full);
+                        if (cache) cache.set(cacheKey, full);
+                    }
+                }
+                const list = lessons['vietnamese'] || [];
+                const idx = list.findIndex(l => (l.id === lesson.id) || (l.period === lesson.period));
+                const prefetchNext = (offset) => {
+                    const next = list[idx + offset];
+                    if (!next) return;
+                    const cache2 = window.__lessonCache;
+                    const key2 = next.id || next.period;
+                    if (cache2 && !cache2.has(key2) && next.modulePath) {
+                        const np = (next.modulePath || '').replace('./', '').replace(/\.js$/i, '');
+                        import(`./data/vietnamese/${np}.js`).then(mod2 => {
+                            const full2 = (next.exportName && mod2[next.exportName]) ? mod2[next.exportName] : Object.values(mod2)[0];
+                            if (full2) cache2.set(key2, full2);
+                        }).catch(() => {});
+                    }
+                };
+                if (idx >= 0) {
+                    if ('requestIdleCallback' in window) {
+                        requestIdleCallback(() => { prefetchNext(1); prefetchNext(2); });
+                    } else {
+                        setTimeout(() => { prefetchNext(1); prefetchNext(2); }, 500);
+                    }
+                }
+            } catch (e) {
+                console.error('Không thể nạp bài Tiếng Việt động:', e);
+                const c = document.getElementById('app-content');
+                if (c) {
+                    c.innerHTML = `
+                        <div class="max-w-xl mx-auto p-8 bg-red-50 rounded-3xl border border-red-200 text-red-800">
+                            <div class="font-black text-lg mb-2">Không thể tải bài học</div>
+                            <div class="text-sm font-bold">Vui lòng thử lại sau hoặc chọn bài khác.</div>
+                        </div>
+                    `;
+                }
+            }
+        }
+        if (subId === 'science' && !lesson.content) {
+            try {
+                const cache = window.__lessonCache;
+                const cacheKey = lesson.id || lesson.period;
+                if (cache && cache.has(cacheKey)) {
+                    Object.assign(lesson, cache.get(cacheKey));
+                } else {
+                    const padded = String(lesson.period).padStart(3, '0');
+                    const mod = await import(`./data/science/${padded}.js`);
+                    const full = mod[`lesson${padded}`] || Object.values(mod)[0];
+                    if (full) {
+                        Object.assign(lesson, full);
+                        if (cache) cache.set(cacheKey, full);
+                    }
+                }
+                const list = lessons['science'] || [];
+                const idx = list.findIndex(l => (l.id === cacheKey) || (l.period === lesson.period));
+                const prefetchNext = (offset) => {
+                    const n = list[idx + offset];
+                    if (!n) return;
+                    const nextPadded = String(n.period).padStart(3, '0');
+                    const cache2 = window.__lessonCache;
+                    if (cache2 && !cache2.has(n.id || n.period)) {
+                        import(`./data/science/${nextPadded}.js`).then(mod2 => {
+                            const full2 = mod2[`lesson${nextPadded}`] || Object.values(mod2)[0];
+                            if (full2) cache2.set(n.id || n.period, full2);
+                        }).catch(() => {});
+                    }
+                };
+                if (idx >= 0) {
+                    if ('requestIdleCallback' in window) {
+                        requestIdleCallback(() => { prefetchNext(1); prefetchNext(2); });
+                    } else {
+                        setTimeout(() => { prefetchNext(1); prefetchNext(2); }, 500);
+                    }
+                }
+            } catch (e) {
+                console.error('Không thể nạp bài Khoa học động:', e);
+                const c = document.getElementById('app-content');
+                if (c) {
+                    c.innerHTML = `
+                        <div class="max-w-xl mx-auto p-8 bg-red-50 rounded-3xl border border-red-200 text-red-800">
+                            <div class="font-black text-lg mb-2">Không thể tải bài học</div>
+                            <div class="text-sm font-bold">Vui lòng thử lại sau hoặc chọn bài khác.</div>
+                        </div>
+                    `;
+                }
+            }
+        }
+        if (subId === 'history' && !lesson.content) {
+            try {
+                const cache = window.__lessonCache;
+                const cacheKey = lesson.id || lesson.period;
+                if (cache && cache.has(cacheKey)) {
+                    Object.assign(lesson, cache.get(cacheKey));
+                } else {
+                    const padded = String(lesson.period).padStart(3, '0');
+                    const mod = await import(`./data/history/${padded}.js`);
+                    const full = mod[`lesson${padded}`] || Object.values(mod)[0];
+                    if (full) {
+                        Object.assign(lesson, full);
+                        if (cache) cache.set(cacheKey, full);
+                    }
+                }
+                const list = lessons['history'] || [];
+                const idx = list.findIndex(l => (l.id === cacheKey) || (l.period === lesson.period));
+                const prefetchNext = (offset) => {
+                    const n = list[idx + offset];
+                    if (!n) return;
+                    const nextPadded = String(n.period).padStart(3, '0');
+                    const cache2 = window.__lessonCache;
+                    if (cache2 && !cache2.has(n.id || n.period)) {
+                        import(`./data/history/${nextPadded}.js`).then(mod2 => {
+                            const full2 = mod2[`lesson${nextPadded}`] || Object.values(mod2)[0];
+                            if (full2) cache2.set(n.id || n.period, full2);
+                        }).catch(() => {});
+                    }
+                };
+                if (idx >= 0) {
+                    if ('requestIdleCallback' in window) {
+                        requestIdleCallback(() => { prefetchNext(1); prefetchNext(2); });
+                    } else {
+                        setTimeout(() => { prefetchNext(1); prefetchNext(2); }, 500);
+                    }
+                }
+            } catch (e) {
+                console.error('Không thể nạp bài Lịch sử & Địa lý động:', e);
+                const c = document.getElementById('app-content');
+                if (c) {
+                    c.innerHTML = `
+                        <div class="max-w-xl mx-auto p-8 bg-red-50 rounded-3xl border border-red-200 text-red-800">
+                            <div class="font-black text-lg mb-2">Không thể tải bài học</div>
+                            <div class="text-sm font-bold">Vui lòng thử lại sau hoặc chọn bài khác.</div>
+                        </div>
+                    `;
+                }
+            }
+        }
 
         this.currentSubject = subId;
         this.currentLessonPeriod = lesson.period; // Fix: Always use the period as the identifier
@@ -326,6 +518,7 @@ export const router = {
         const lesson = subjectLessons.find(l => l.period === this.currentLessonPeriod);
 
         if (!lesson) return;
+        if (tabId !== 'quiz' && UI && UI.cleanupQuiz) UI.cleanupQuiz();
 
         // Cập nhật giao diện Button Active
         document.querySelectorAll('.tab-btn').forEach(btn => {

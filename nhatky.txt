@@ -1,4 +1,8 @@
-﻿[12:15] Ngày 06/03/2026
+[15:30] Ngày 06/03/2026
+- UI: Mở rộng tính năng Trình chiếu Native.
+- Tính năng: Bổ sung khả năng điều hướng slide trình chiếu (trong Bài giảng / Tìm hiểu bài) bằng phím Up/Down bên cạnh phím Left/Right hiện tại. Thao tác trở nên thuận tiện hơn.
+
+[12:15] Ngày 06/03/2026
 - UI: Cập nhật nút 'Kiểm tra' (V) trong bài 120B/120C thành icon dấu tích SVG trắng trên nền xanh, loại bỏ viền đen theo mẫu của người dùng.
 - Đồng bộ: Tinh chỉnh shadow và border-radius nút cho phong cách hiện đại hơn.
 
