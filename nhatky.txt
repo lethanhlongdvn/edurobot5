@@ -630,3 +630,8 @@ Ng├áy 06/03/2026:
 
 
 
+
+[16:30] Ngày 06/03/2026
+- Bài học: Toàn hệ thống (Tính năng Trình chiếu Nội vùng)
+- Mô tả thay đổi: Thêm hệ thống 'Native Web Presentation' vào trang Học tập. Cho phép giáo viên chiếu các slide bằng HTML/CSS tích hợp sẵn, hiển thị Fullscreen, có nút điều hướng, thay vì iframe bên ngoài. Dữ liệu slide được cấu hình trực tiếp trong mảng presentation của từng bài (ví dụ 123.js).
+- Trạng thái hiện tại: Đã hoàn thiện UI/UX (CSS, HTML), Logic điều khiển (LessonMedia.js), tích hợp nút bấm (LessonCore.js). Đã thêm dữ liệu mẫu vào bài 123. Sẵn sàng sử dụng.

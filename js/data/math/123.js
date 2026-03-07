@@ -176,6 +176,46 @@ export const lesson123 = {
         }
         feedback.classList.add('opacity-100');
     }
-};
+};// Cấu hình Slide Trình chiếu (Native Presentation)
+lesson123.presentation = [
+    `
+        <div class="h-full flex flex-col justify-center items-center w-full px-10">
+            <h1 class="text-6xl md:text-[5rem] font-black text-blue-600 mb-6 drop-shadow-md text-center max-w-5xl leading-tight">Bài 123: Ôn tập về Diện tích, Thể tích một số hình</h1>
+            <p class="text-3xl text-gray-500 font-bold max-w-4xl text-center leading-relaxed">
+                Chúng ta cùng ôn lại các công thức quan trọng ngày hôm nay nhé!
+            </p>
+        </div>
+    `,
+    `
+        <div class="h-full flex flex-col justify-center items-center w-full px-10">
+            <h2 class="text-5xl font-black text-orange-600 mb-12">1. Hình Hộp Chữ Nhật</h2>
+            <div class="grid grid-cols-2 gap-10 max-w-6xl w-full">
+                <div class="bg-blue-50 p-10 rounded-3xl border-4 border-blue-200 text-center shadow-xl">
+                    <h3 class="text-3xl font-black text-blue-800 mb-4">Diện tích xung quanh</h3>
+                    <p class="text-2xl font-bold text-gray-700">Sxq = (a + b) × 2 × c</p>
+                </div>
+                <div class="bg-emerald-50 p-10 rounded-3xl border-4 border-emerald-200 text-center shadow-xl">
+                    <h3 class="text-3xl font-black text-emerald-800 mb-4">Thể tích</h3>
+                    <p class="text-2xl font-bold text-gray-700">V = a × b × c</p>
+                </div>
+            </div>
+        </div>
+    `,
+    `
+        <div class="h-full flex flex-col justify-center items-center w-full px-10">
+            <h2 class="text-5xl font-black text-rose-600 mb-12">2. Hình Lập Phương</h2>
+            <div class="grid grid-cols-2 gap-10 max-w-6xl w-full">
+                <div class="bg-indigo-50 p-10 rounded-3xl border-4 border-indigo-200 text-center shadow-xl">
+                    <h3 class="text-3xl font-black text-indigo-800 mb-4">Diện tích toàn phần</h3>
+                    <p class="text-2xl font-bold text-gray-700">Stp = (a × a) × 6</p>
+                </div>
+                <div class="bg-amber-50 p-10 rounded-3xl border-4 border-amber-200 text-center shadow-xl">
+                    <h3 class="text-3xl font-black text-amber-800 mb-4">Thể tích</h3>
+                    <p class="text-2xl font-bold text-gray-700">V = a × a × a</p>
+                </div>
+            </div>
+        </div>
+    `
+];
 
 window.lesson123 = lesson123;

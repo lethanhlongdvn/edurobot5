@@ -538,3 +538,120 @@ html.dark ::-webkit-scrollbar-thumb:hover {
 .zoom-active-cursor {
     cursor: zoom-in !important;
 }
+
+/* =========================================
+   PRESENTATION OVERLAY (NATIVE WEB SLIDES)
+   ========================================= */
+#presentation-overlay {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: #ffffff; 
+    z-index: 99999; /* Luôn nổi trên cùng */
+    display: flex; 
+    flex-direction: column;
+    overflow: hidden; /* Ngăn cuộn trang */
+}
+
+/* Nền tối cho Đêm */
+html.dark #presentation-overlay {
+    background: #0f172a;
+}
+
+/* Nút Đóng Góc Phải */
+#presentation-overlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+html.dark #presentation-overlay .close-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+#presentation-overlay .close-btn:hover {
+    background: rgba(239, 68, 68, 0.8); /* Màu đỏ khi hover */
+    color: white;
+}
+
+/* Vùng chứa Slide */
+#presentation-overlay .slides-wrapper {
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Định dạng từng Slide */
+.web-slide {
+    display: none; /* Mặc định ẩn */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
+    font-size: 2.5rem; /* Cỡ chữ toặc PowerPoint */
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Kích hoạt Slide */
+.web-slide.active { 
+    display: flex; 
+    animation: pptFadeIn 0.5s ease-out forwards; 
+}
+
+@keyframes pptFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Nút Điều hướng Dưới Cùng */
+#presentation-overlay .nav-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+#presentation-overlay .nav-controls button {
+    background: rgba(45, 104, 255, 0.8);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 15px rgba(45, 104, 255, 0.4);
+}
+
+#presentation-overlay .nav-controls button:hover {
+    background: #2D68FF;
+    transform: scale(1.05);
+}
+
+#presentation-overlay .nav-controls button:active {
+    transform: scale(0.95);
+}

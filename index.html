@@ -127,6 +127,18 @@
         </div>
     </footer>
 
+    <!-- Presentation Overlay -->
+    <div id="presentation-overlay" class="hidden">
+        <button class="close-btn" onclick="if(window.Lesson && window.Lesson.stopPresentation) window.Lesson.stopPresentation(); else document.getElementById('presentation-overlay').classList.add('hidden');">Đóng &times;</button>
+        <div id="slides-wrapper" class="slides-wrapper">
+            <!-- Từng thẻ <section class="web-slide"> sẽ chứa nội dung và được inject qua JS -->
+        </div>
+        <div class="nav-controls">
+            <button onclick="if(window.Lesson && window.Lesson.moveSlide) window.Lesson.moveSlide(-1)">&#10094; Trước</button>
+            <button onclick="if(window.Lesson && window.Lesson.moveSlide) window.Lesson.moveSlide(1)">Sau &#10095;</button>
+        </div>
+    </div>
+
     <!-- Student Info Modal -->
     <div id="student-modal"
         class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity">

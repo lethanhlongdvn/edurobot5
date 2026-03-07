@@ -41,6 +41,11 @@ export const LessonCore = {
                         <button id="tab-pptx" onclick="router.switchTab('pptx')" class="tab-btn flex-1 py-4 rounded-full text-[16px] md:text-xl font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-orange-500 bg-orange-50/50 border border-orange-200">
                             <span class="text-2xl">🎦</span> Bài Giảng
                         </button>` : ''}
+                        
+                        ${(isTeacher && lesson.presentation && lesson.presentation.length > 0) ? `
+                        <button onclick="if(window.Lesson && window.Lesson.startPresentation) window.Lesson.startPresentation('${lesson.id || lesson.key || ''}')" class="tab-btn flex-1 py-4 rounded-full text-[16px] md:text-xl font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200">
+                            <span class="text-2xl">🖥️</span> Trình chiếu
+                        </button>` : ''}
 
                         ${lesson.audio ? `
                         <button id="btn-audio-play" onclick="router.toggleAudio()" title="Đọc mẫu" class="w-10 h-10 shrink-0 ml-1 bg-gradient-to-br from-indigo-50 to-cyan-50 hover:from-indigo-600 hover:to-cyan-600 text-white rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-lg shadow-blue-200/50 dark:shadow-blue-900/30">

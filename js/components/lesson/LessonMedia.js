@@ -280,5 +280,101 @@ export const LessonMedia = {
     openMapFullscreen(id) {
         const iframe = document.getElementById(`map-iframe-${id}`);
         if (iframe) this.openZoom(iframe.src, 'Bản đồ tương tác — cuộn chuột để zoom | kéo để di chuyển');
+    },
+
+    // =========================================
+    // NATIVE WEB PRESENTATION FEATURE
+    // =========================================
+    _currentSlideIndex: 0,
+    _presentationActive: false,
+
+    startPresentation(lessonId) {
+        // Find the lesson object from window globally (assuming it's loaded like window.lesson123)
+        const lessonObj = window[`lesson${lessonId.split('_').pop()}`] || window.currentLessonData;
+        
+        if (!lessonObj) {
+            alert('Không tìm thấy dữ liệu bài học để trình chiếu.');
+            return;
+        }
+
+        if (!lessonObj.presentation || lessonObj.presentation.length === 0) {
+            alert('Bài học này chưa được cấu hình nội dung trình chiếu (mảng `presentation` trống).');
+            return;
+        }
+
+        const overlay = document.getElementById('presentation-overlay');
+        const wrapper = document.getElementById('slides-wrapper');
+        
+        if (!overlay || !wrapper) {
+            console.error('Không tìm thấy khung Presentation Overlay trong HTML.');
+            return;
+        }
+
+        // Tạo các Slide từ mảng presentation
+        wrapper.innerHTML = '';
+        lessonObj.presentation.forEach((slideHTML, index) => {
+            const section = document.createElement('section');
+            section.className = `web-slide ${index === 0 ? 'active' : ''}`;
+            section.innerHTML = slideHTML;
+            wrapper.appendChild(section);
+        });
+
+        this._currentSlideIndex = 0;
+        this._presentationActive = true;
+        
+        // Hiện Overlay
+        overlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Khoá cuộn trang nền
+
+        // Đăng ký sự kiện bàn phím nếu chưa có
+        if (!this._pptKeyHandler) {
+            this._pptKeyHandler = (e) => {
+                if (!this._presentationActive) return;
+                if (e.key === "ArrowRight" || e.key === "Space") {
+                    e.preventDefault();
+                    this.moveSlide(1);
+                }
+                if (e.key === "ArrowLeft") {
+                    e.preventDefault();
+                    this.moveSlide(-1);
+                }
+                if (e.key === "Escape") {
+                    e.preventDefault();
+                    this.stopPresentation();
+                }
+            };
+            document.addEventListener('keydown', this._pptKeyHandler);
+        }
+    },
+
+    stopPresentation() {
+        this._presentationActive = false;
+        const overlay = document.getElementById('presentation-overlay');
+        if (overlay) {
+            overlay.classList.add('hidden');
+        }
+        document.body.style.overflow = ''; // Mở lại cuộn trang nền
+    },
+
+    moveSlide(step) {
+        if (!this._presentationActive) return;
+        const overlay = document.getElementById('presentation-overlay');
+        if (!overlay) return;
+
+        const slides = overlay.querySelectorAll('.web-slide');
+        if (slides.length === 0) return;
+
+        // Xóa class active ở slide hiện tại
+        if (slides[this._currentSlideIndex]) {
+            slides[this._currentSlideIndex].classList.remove('active');
+        }
+
+        // Tính slide tiếp theo (vòng lặp)
+        this._currentSlideIndex = (this._currentSlideIndex + step + slides.length) % slides.length;
+
+        // Thêm class active
+        if (slides[this._currentSlideIndex]) {
+            slides[this._currentSlideIndex].classList.add('active');
+        }
     }
 };
