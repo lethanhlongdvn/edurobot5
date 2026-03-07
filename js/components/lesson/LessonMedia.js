@@ -297,7 +297,7 @@ export const LessonMedia = {
             return;
         }
 
-        if (!lessonObj.presentation || lessonObj.presentation.length === 0) {
+        if (!Array.isArray(lessonObj.presentation) || lessonObj.presentation.length === 0) {
             alert('Bài học này chưa được cấu hình nội dung trình chiếu (mảng `presentation` trống).');
             return;
         }
@@ -325,6 +325,13 @@ export const LessonMedia = {
         // Hiện Overlay
         overlay.classList.remove('hidden');
         document.body.style.overflow = 'hidden'; // Khoá cuộn trang nền
+
+        // Đảm bảo nút điều hướng luôn hiển thị đúng text
+        const navBtns = overlay.querySelectorAll('.nav-controls button');
+        if (navBtns.length >= 2) {
+            navBtns[0].innerHTML = '&#10094; Trước';
+            navBtns[1].innerHTML = 'Sau &#10095;';
+        }
 
         // Đăng ký sự kiện bàn phím nếu chưa có
         if (!this._pptKeyHandler) {

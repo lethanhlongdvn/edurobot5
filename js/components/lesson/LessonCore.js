@@ -42,7 +42,7 @@ export const LessonCore = {
                             <span class="text-2xl">🎦</span> Bài Giảng
                         </button>` : ''}
                         
-                        ${(isTeacher && lesson.presentation && lesson.presentation.length > 0) ? `
+                        ${(isTeacher && Array.isArray(lesson.presentation) && lesson.presentation.length > 0) ? `
                         <button onclick="if(window.Lesson && window.Lesson.startPresentation) window.Lesson.startPresentation('${lesson.id || lesson.key || ''}')" class="tab-btn flex-1 py-4 rounded-full text-[16px] md:text-xl font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 active:scale-95 text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200">
                             <span class="text-2xl">🖥️</span> Trình chiếu
                         </button>` : ''}
