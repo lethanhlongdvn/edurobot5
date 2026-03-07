@@ -156,8 +156,37 @@ export const lesson120B = {
             }
         };
 
+        // Track active tab for keyboard navigation
+        window._activeTab120B = 'add';
+
+        // Keyboard navigation: ← → to change page
+        if (!window._keyHandler120B) {
+            window._keyHandler120B = function(e) {
+                // Skip if user is typing in an input
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+                // Only act if lesson 120B is visible
+                if (!document.getElementById('container-120B')) {
+                    document.removeEventListener('keydown', window._keyHandler120B);
+                    window._keyHandler120B = null;
+                    return;
+                }
+                const type = window._activeTab120B || 'add';
+                const totalPages = Math.ceil(problems[type].length / itemsPerPage);
+                const currentPage = window.currentPage120B[type];
+                if (e.key === 'ArrowRight' && currentPage < totalPages - 1) {
+                    e.preventDefault();
+                    window.goToPage120B(type, currentPage + 1);
+                } else if (e.key === 'ArrowLeft' && currentPage > 0) {
+                    e.preventDefault();
+                    window.goToPage120B(type, currentPage - 1);
+                }
+            };
+            document.addEventListener('keydown', window._keyHandler120B);
+        }
+
         // Actions: Define global handlers (only once)
         window.switchTab120B = function (type) {
+            window._activeTab120B = type; // Track for keyboard navigation
             const btns = document.querySelectorAll('.tab-btn-120B');
             btns.forEach(btn => {
                 btn.classList.remove('active', 'bg-blue-600', 'text-white', 'bg-indigo-600', 'bg-purple-600', 'bg-amber-600');
