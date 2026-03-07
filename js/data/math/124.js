@@ -592,6 +592,250 @@ export const lesson124 = {
     }
 };
 
+// Cấu hình Slide Trình chiếu (Native Presentation)
+lesson124.presentation = [
+    `
+        <div class="h-full flex flex-col justify-center items-center w-full px-10">
+            <div class="bg-white p-8 md:p-12 rounded-[40px] border-4 border-purple-200 shadow-2xl relative w-full max-w-6xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-4">
+                            <span class="bg-amber-500 text-white w-14 h-14 rounded-2xl flex items-center justify-center font-black text-3xl shadow-lg">?</span>
+                            <h4 class="text-4xl md:text-5xl font-black text-amber-700 uppercase">Khám phá công thức</h4>
+                        </div>
+                        <p class="text-3xl font-bold leading-tight text-gray-700 italic border-l-8 border-amber-400 pl-6 bg-amber-50 py-6 rounded-r-2xl">
+                            "Hình lập phương đó chứa được 3 × 3 × 3 = 27 (hình lập phương nhỏ)."
+                        </p>
+                        <div class="bg-purple-50 p-8 rounded-3xl border-2 border-purple-100 shadow-inner">
+                            <p class="text-3xl font-black text-purple-900 space-y-4">
+                                <span class="block">📏 Chiều dài: 3 cm</span>
+                                <span class="block">📏 Chiều rộng: 3 cm</span>
+                                <span class="block">📏 Chiều cao: 3 cm</span>
+                                <span class="block mt-6 text-4xl text-purple-600">3 &times; 3 &times; 3 = 27 (cm³)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center relative group">
+                        <img src="hinh_anh/toan/toan_tap_2/124-khampha.png" alt="Khám phá" class="w-full max-w-[600px] h-auto rounded-[40px] shadow-2xl border-8 border-white group-hover:rotate-1 transition-transform">
+                    </div>
+                </div>
+            </div>
+        </div>
+    `,
+    `
+        <div class="h-full flex flex-col justify-center items-center w-full px-10">
+            <h2 class="text-5xl font-black text-purple-600 mb-8 w-full max-w-6xl text-center">Mô phỏng Khối Lập Phương 3D</h2>
+            <div class="flex-1 w-full max-w-6xl flex flex-col items-center justify-center bg-gradient-to-br from-slate-800 to-purple-950 p-6 rounded-[40px] shadow-2xl border-4 border-purple-200 relative mb-8">
+                <!-- 3D SCENE -->
+                <div class="flex-grow flex items-center justify-center w-full relative perspective-[1500px] scale-90 md:scale-100" id="scene-124-pre">
+                    <div id="cube-wrapper-124-pre" class="relative transform-style-3d transition-transform duration-[0.1s] ease-out cursor-grab active:cursor-grabbing w-[240px] h-[240px]" style="transform: rotateX(-20deg) rotateY(-30deg);">
+                        <!-- Container for mini blocks -->
+                        <div id="cube-layers-124-pre" class="absolute left-[50%] top-[50%] transform-style-3d"></div>
+
+                        <!-- The Container Box -->
+                        <div class="absolute inset-0 transform-style-3d pointer-events-none">
+                            <div class="absolute border-2 border-purple-400/60 bg-purple-500/10 grid-bg-124 w-[240px] h-[240px] left-1/2 top-1/2 -ml-[120px] -mt-[120px]" style="transform: rotateY(180deg) translateZ(120px);"></div>
+                            <div class="absolute border-2 border-purple-400/60 bg-purple-500/10 grid-bg-124 w-[240px] h-[240px] left-1/2 top-1/2 -ml-[120px] -mt-[120px]" style="transform: rotateY(-90deg) translateZ(120px);"></div>
+                            <div class="absolute border-2 border-purple-400/60 bg-purple-500/10 grid-bg-124 w-[240px] h-[240px] left-1/2 top-1/2 -ml-[120px] -mt-[120px]" style="transform: rotateX(-90deg) translateZ(120px);"></div>
+                            <div class="absolute border-2 border-sky-400 shadow-[inset_0_0_20px_rgba(56,189,248,0.2)] bg-sky-300/10 grid-bg-124 w-[240px] h-[240px] left-1/2 top-1/2 -ml-[120px] -mt-[120px]" style="transform: rotateX(90deg) translateZ(120px);"></div>
+                            <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-124 flex items-end justify-center pb-2 w-[240px] h-[240px] left-1/2 top-1/2 -ml-[120px] -mt-[120px]" style="transform: rotateY(90deg) translateZ(120px);">
+                                <div class="bg-purple-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md text-sm md:text-xl">Rộng: 3 cm</div>
+                            </div>
+                            <div class="absolute border-2 border-sky-400 bg-sky-300/10 grid-bg-124 flex items-center justify-center flex-col justify-end pb-4 gap-2 w-[240px] h-[240px] left-1/2 top-1/2 -ml-[120px] -mt-[120px]" style="transform: translateZ(120px);">
+                                <div class="bg-purple-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md translate-y-[120px] absolute text-sm md:text-xl">Dài: 3 cm</div>
+                                <div class="bg-purple-900/80 px-3 py-1.5 rounded-lg text-sky-200 font-bold border border-sky-500/50 shadow-md -translate-x-[150px] absolute text-sm md:text-xl transform rotate-z">Cao: 3 cm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controls -->
+                <div class="flex flex-wrap items-center justify-center gap-4 z-10 w-full shrink-0 mt-4">
+                    <button onclick="window.fillKhamPha124Pre()" id="btn-fill-124-pre" class="px-8 py-4 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all flex items-center gap-3">
+                        🧊 Bấm lần 1: Xếp 1 hình
+                    </button>
+                    <button onclick="window.resetKhamPha124Pre()" class="px-8 py-4 bg-slate-600 hover:bg-slate-700 text-white rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
+                        ↺ Đặt lại
+                    </button>
+                    <div class="absolute bottom-4 right-4 bg-white/10 px-4 py-2 rounded-xl text-white font-bold opacity-70 text-sm hidden md:block border border-white/20">
+                        👆 Dùng chuột kéo xoay để nhìn khối 3D kĩ hơn nhé
+                    </div>
+                </div>
+                
+                <!-- Script specifically for presentation mode -->
+                <script>
+                    setTimeout(() => {
+                        if(window.dragInit124Pre) return;
+                        
+                        let isDragging124Pre = false;
+                        let startX124Pre, startY124Pre;
+                        let currentRotX124Pre = -20;
+                        let currentRotY124Pre = -30;
+
+                        const scene124Pre = document.getElementById('scene-124-pre');
+                        const wrapper124Pre = document.getElementById('cube-wrapper-124-pre');
+                        
+                        if (scene124Pre && wrapper124Pre) {
+                            function handleDragStartPre(e) {
+                                isDragging124Pre = true;
+                                wrapper124Pre.classList.replace('cursor-grab', 'cursor-grabbing');
+                                if (e.type === 'touchstart') {
+                                    startX124Pre = e.touches[0].clientX;
+                                    startY124Pre = e.touches[0].clientY;
+                                } else {
+                                    startX124Pre = e.clientX;
+                                    startY124Pre = e.clientY;
+                                }
+                            }
+
+                            function handleDragMovePre(e) {
+                                if (!isDragging124Pre) return;
+                                e.preventDefault();
+                                let currentX, currentY;
+                                if (e.type === 'touchmove') {
+                                    currentX = e.touches[0].clientX;
+                                    currentY = e.touches[0].clientY;
+                                } else {
+                                    currentX = e.clientX;
+                                    currentY = e.clientY;
+                                }
+                                const deltaX = currentX - startX124Pre;
+                                const deltaY = currentY - startY124Pre;
+                                currentRotY124Pre += deltaX * 0.5;
+                                currentRotX124Pre -= deltaY * 0.5;
+                                currentRotX124Pre = Math.max(-80, Math.min(80, currentRotX124Pre));
+                                wrapper124Pre.style.transform = 'rotateX(' + currentRotX124Pre + 'deg) rotateY(' + currentRotY124Pre + 'deg)';
+                                startX124Pre = currentX;
+                                startY124Pre = currentY;
+                            }
+
+                            function handleDragEndPre() {
+                                if (!isDragging124Pre) return;
+                                isDragging124Pre = false;
+                                wrapper124Pre.classList.replace('cursor-grabbing', 'cursor-grab');
+                            }
+
+                            scene124Pre.addEventListener('mousedown', handleDragStartPre);
+                            document.addEventListener('mousemove', handleDragMovePre);
+                            document.addEventListener('mouseup', handleDragEndPre);
+                            scene124Pre.addEventListener('touchstart', handleDragStartPre, {passive: false});
+                            document.addEventListener('touchmove', handleDragMovePre, {passive: false});
+                            document.addEventListener('touchend', handleDragEndPre);
+                            window.dragInit124Pre = true;
+                        }
+                        
+                        window.fillKhamPha124Pre = function() {
+                            const container = document.getElementById('cube-layers-124-pre');
+                            const btn = document.getElementById('btn-fill-124-pre');
+                            
+                            if (!window.fillStage124Pre) window.fillStage124Pre = 0;
+                            if (!window.currentBlockIdx124Pre) window.currentBlockIdx124Pre = 0;
+                            if (window.fillStage124Pre >= 4) return; 
+
+                            btn.disabled = true;
+                            btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+                            let delay = 0;
+                            const stageCounts = [1, 8, 9, 9];
+                            const blocksToStack = stageCounts[window.fillStage124Pre];
+
+                            for(let i = 0; i < blocksToStack; i++) {
+                                if (window.currentBlockIdx124Pre >= window.blocksData124.length) break;
+                                const b = window.blocksData124[window.currentBlockIdx124Pre++];
+                                
+                                const size = 80;
+                                const tx = -120 + (b.x * size) + (size/2);
+                                const ty = -120 + (b.y * size) + (size/2);
+                                const tz = -120 + (b.z * size) + (size/2);
+
+                                const block = document.createElement('div');
+                                block.className = 'minicube-124';
+                                block.style.transform = \`translate3d(\${tx}px, \${ty}px, \${tz}px) scale(0)\`;
+                                block.style.opacity = '0';
+                                block.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+
+                                block.innerHTML = \`
+                                    <div class="face front"></div>
+                                    <div class="face back"></div>
+                                    <div class="face right"></div>
+                                    <div class="face left"></div>
+                                    <div class="face top"></div>
+                                    <div class="face bottom"></div>
+                                \`;
+
+                                container.appendChild(block);
+
+                                setTimeout(() => {
+                                    block.style.transform = \`translate3d(\${tx}px, \${ty}px, \${tz}px) scale(1)\`;
+                                    block.style.opacity = '1';
+                                    if (window.Quiz && typeof window.Quiz.playSFX === 'function' && blocksToStack < 20) {
+                                       window.Quiz.playSFX('pop', 0.2); 
+                                    }
+                                }, delay);
+                                delay += (blocksToStack > 10) ? 20 : 100;
+                            }
+
+                            setTimeout(() => {
+                                window.fillStage124Pre++;
+                                btn.disabled = false;
+                                btn.classList.remove('opacity-50', 'cursor-not-allowed');
+                                
+                                if (window.fillStage124Pre === 1) btn.innerHTML = '🧊 Bấm lần 2: Đầy 1 lớp ngang';
+                                else if (window.fillStage124Pre === 2) btn.innerHTML = '🧊 Bấm lần 3: Đầy lớp 2';
+                                else if (window.fillStage124Pre === 3) btn.innerHTML = '🧊 Bấm lần 4: Đầy hộp !';
+                                else {
+                                    btn.innerHTML = '✨ Đã đầy hộp (27 khối)';
+                                    btn.disabled = true;
+                                    btn.classList.add('opacity-50', 'bg-emerald-500');
+                                    btn.classList.remove('from-amber-400', 'to-orange-500', 'hover:from-amber-500', 'hover:to-orange-600');
+                                }
+                            }, delay + 300);
+                        };
+
+                        window.resetKhamPha124Pre = function() {
+                            const container = document.getElementById('cube-layers-124-pre');
+                            if(container) container.innerHTML = '';
+                            window.fillStage124Pre = 0;
+                            window.currentBlockIdx124Pre = 0;
+                            
+                            const btn = document.getElementById('btn-fill-124-pre');
+                            if (btn) {
+                                btn.disabled = false;
+                                btn.innerHTML = '🧊 Bấm lần 1: Xếp 1 hình';
+                                btn.classList.remove('opacity-50', 'cursor-not-allowed', 'bg-emerald-500');
+                                btn.classList.add('from-amber-400', 'to-orange-500', 'hover:from-amber-500', 'hover:to-orange-600');
+                            }
+                            
+                            const wrapper = document.getElementById('cube-wrapper-124-pre');
+                            if(wrapper) {
+                                wrapper.style.transform = \`rotateX(-20deg) rotateY(-30deg)\`;
+                            }
+                        };
+                    }, 200);
+                </script>
+            </div>
+        </div>
+    `,
+    `
+        <div class="h-full flex flex-col justify-center items-center w-full px-10">
+            <div class="bg-gradient-to-r from-pink-500 to-rose-600 p-12 lg:p-16 rounded-[60px] text-white shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center gap-16 w-full max-w-6xl">
+                <div class="w-full lg:w-1/2 flex justify-center z-10">
+                    <img src="hinh_anh/toan/toan_tap_2/124-formula.png" alt="Công thức" class="w-full h-auto rounded-[40px] border-8 border-pink-400/50 shadow-2xl bg-white/5">
+                </div>
+                <div class="w-full lg:w-1/2 text-center lg:text-left space-y-8 z-10">
+                    <p class="text-xl md:text-2xl font-black uppercase tracking-[0.3em] opacity-80 bg-white/20 inline-block px-6 py-2 rounded-full mb-4 shadow-sm border border-white/30">Ghi nhớ quan trọng</p>
+                    <p class="text-3xl md:text-5xl font-bold text-white leading-tight">Thể tích V của hình lập phương có cạnh <span class="text-yellow-300 font-black">a</span> được tính theo công thức:</p>
+                    <div class="bg-rose-700/50 p-6 rounded-3xl mt-8 inline-block shadow-inner border-4 border-rose-400">
+                        <p class="text-5xl md:text-6xl font-black drop-shadow-lg italic text-yellow-50">V = a &times; a &times; a</p>
+                    </div>
+                </div>
+                <div class="absolute -right-20 -top-20 w-[600px] h-[600px] bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -left-20 -bottom-20 w-[400px] h-[400px] bg-yellow-400/10 rounded-full blur-3xl pointer-events-none"></div>
+            </div>
+        </div>
+    `
+];
+
 window.lesson124 = lesson124;
 
 // === Nút Kiểm tra Bài 1: Bảng tính thể tích ===

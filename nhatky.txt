@@ -644,3 +644,8 @@ Ng├áy 06/03/2026:
 - Mô tả thay đổi: Bổ sung các slide vào tính năng Trình chiếu Native cho Tab "Luyện tập" (gồm 3 bài tập), hỗ trợ giáo viên trực tiếp giảng bài thông qua các slides Luyện tập thay vì chỉ phần Tìm hiểu bài như trước.
 - Trạng thái: Đã cập nhật `123.js` và đồng bộ qua Git.
 - Trạng thái hiện tại: Đã hoàn thiện UI/UX (CSS, HTML), Logic điều khiển (LessonMedia.js), tích hợp nút bấm (LessonCore.js). Đã thêm dữ liệu mẫu vào bài 123. Sẵn sàng sử dụng.
+
+[19:05] Ngày 07/03/2026
+- Bài học: Toán 5 - Tiết 124
+- Mô tả thay đổi: Bổ sung 3 slide vào tính năng Trình chiếu Native cho phần "Khám phá" (Tìm hiểu bài). Slide 1: Khám phá công thức. Slide 2: Mô phỏng khối lập phương 3D. Slide 3: Ghi nhớ công thức. Tích hợp sẵn chức năng tương tác 3D ngay bên trong slide trình chiếu.
+- Trạng thái: Đã cập nhật `124.js` và đồng bộ qua Git.
