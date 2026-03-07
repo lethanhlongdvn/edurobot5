@@ -173,10 +173,10 @@ export const lesson120B = {
                 const type = window._activeTab120B || 'add';
                 const totalPages = Math.ceil(problems[type].length / itemsPerPage);
                 const currentPage = window.currentPage120B[type];
-                if (e.key === 'ArrowRight' && currentPage < totalPages - 1) {
+                if ((e.key === 'ArrowRight' || e.key === 'ArrowDown') && currentPage < totalPages - 1) {
                     e.preventDefault();
                     window.goToPage120B(type, currentPage + 1);
-                } else if (e.key === 'ArrowLeft' && currentPage > 0) {
+                } else if ((e.key === 'ArrowLeft' || e.key === 'ArrowUp') && currentPage > 0) {
                     e.preventDefault();
                     window.goToPage120B(type, currentPage - 1);
                 }
