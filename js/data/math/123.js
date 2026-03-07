@@ -215,6 +215,52 @@ lesson123.presentation = [
                 </div>
             </div>
         </div>
+    `,
+    `
+        <div class="h-full flex flex-col justify-center items-center w-full px-10">
+            <h2 class="text-5xl font-black text-indigo-600 mb-8 w-full max-w-6xl text-left">Bài tập 1</h2>
+            <div class="bg-indigo-50 p-10 rounded-[40px] shadow-xl w-full max-w-6xl border-4 border-indigo-200 flex flex-col lg:flex-row gap-8 items-center">
+                 <div class="w-full lg:w-3/5 space-y-6">
+                    <p class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">Nam muốn xếp các khối gỗ dạng hình hộp chữ nhật <span class="text-indigo-600">(4cm, 1cm, 1cm)</span> vào một chiếc hộp dạng hình hộp chữ nhật <span class="text-indigo-600">(8cm, 4cm, 4cm)</span>.</p>
+                    <p class="text-3xl md:text-4xl font-black text-indigo-800">Hỏi Nam có thể xếp được nhiều nhất bao nhiêu khối gỗ?</p>
+                 </div>
+                 <div class="w-full lg:w-2/5 flex flex-col gap-4">
+                    <img src="hinh_anh/toan/toan_tap_2/123-b1-box.png" alt="Exercise 1" class="w-full rounded-3xl shadow-md border-4 border-white transform rotate-2">
+                 </div>
+            </div>
+        </div>
+    `,
+    `
+        <div class="h-full flex flex-col justify-center items-center w-full px-10">
+            <h2 class="text-5xl font-black text-amber-600 mb-8 w-full max-w-6xl text-left">Bài tập 2</h2>
+            <div class="bg-amber-50 p-10 rounded-[40px] shadow-xl w-full max-w-6xl border-4 border-amber-200 flex flex-col lg:flex-row gap-8 items-center">
+                 <div class="w-full lg:w-1/2 space-y-6">
+                    <p class="text-3xl md:text-5xl font-black text-gray-800 leading-tight">Tính thể tích của khối gỗ có hình dạng và kích thước chữ L.</p>
+                    <div class="bg-white p-6 rounded-2xl border-2 border-amber-100 shadow-sm mt-6">
+                         <p class="text-2xl text-gray-600 italic font-bold">Gợi ý: Chia khối gỗ thành 2 hình hộp chữ nhật nhỏ để tính riêng từng phần.</p>
+                    </div>
+                 </div>
+                 <div class="w-full lg:w-1/2 flex justify-center">
+                    <img src="hinh_anh/toan/toan_tap_2/123-b2-l-shape.png" alt="Exercise 2" class="w-full max-w-[450px] rounded-3xl shadow-lg border-8 border-white">
+                 </div>
+            </div>
+        </div>
+    `,
+    `
+        <div class="h-full flex flex-col justify-center items-center w-full px-10">
+            <h2 class="text-5xl font-black text-blue-600 mb-8 w-full max-w-6xl text-left">Bài tập 3</h2>
+            <div class="bg-blue-50 p-10 rounded-[40px] shadow-xl w-full max-w-6xl border-4 border-blue-200 flex flex-col lg:flex-row gap-8 items-center">
+                 <div class="w-full lg:w-1/2 flex justify-center order-2 lg:order-1">
+                    <img src="hinh_anh/toan/toan_tap_2/123-b3-stone.png" alt="Exercise 3" class="w-full max-w-[450px] rounded-3xl shadow-lg border-8 border-white">
+                 </div>
+                 <div class="w-full lg:w-1/2 space-y-6 order-1 lg:order-2">
+                    <p class="text-3xl md:text-5xl font-black text-gray-800 leading-tight">Quan sát hình vẽ và tính <span class="text-blue-600">thể tích của tảng đá</span> nằm trong bể nước.</p>
+                    <div class="bg-white p-6 rounded-2xl border-2 border-blue-100 shadow-sm mt-6">
+                         <p class="text-2xl text-gray-600 italic font-bold">Gợi ý: Thể tích hòn đá chính bằng thể tích phần nước dâng lên.</p>
+                    </div>
+                 </div>
+            </div>
+        </div>
     `
 ];
 

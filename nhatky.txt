@@ -638,4 +638,9 @@ Ng├áy 06/03/2026:
 [16:30] Ngày 06/03/2026
 - Bài học: Toàn hệ thống (Tính năng Trình chiếu Nội vùng)
 - Mô tả thay đổi: Thêm hệ thống 'Native Web Presentation' vào trang Học tập. Cho phép giáo viên chiếu các slide bằng HTML/CSS tích hợp sẵn, hiển thị Fullscreen, có nút điều hướng, thay vì iframe bên ngoài. Dữ liệu slide được cấu hình trực tiếp trong mảng presentation của từng bài (ví dụ 123.js).
+
+[18:03] Ngày 07/03/2026
+- Bài học: Toán 5 - Tiết 123
+- Mô tả thay đổi: Bổ sung các slide vào tính năng Trình chiếu Native cho Tab "Luyện tập" (gồm 3 bài tập), hỗ trợ giáo viên trực tiếp giảng bài thông qua các slides Luyện tập thay vì chỉ phần Tìm hiểu bài như trước.
+- Trạng thái: Đã cập nhật `123.js` và đồng bộ qua Git.
 - Trạng thái hiện tại: Đã hoàn thiện UI/UX (CSS, HTML), Logic điều khiển (LessonMedia.js), tích hợp nút bấm (LessonCore.js). Đã thêm dữ liệu mẫu vào bài 123. Sẵn sàng sử dụng.
