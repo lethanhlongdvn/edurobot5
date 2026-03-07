@@ -317,6 +317,16 @@ export const LessonMedia = {
             section.className = `web-slide ${index === 0 ? 'active' : ''}`;
             section.innerHTML = slideHTML;
             wrapper.appendChild(section);
+
+            // Thực thi các thẻ script bên trong slide (do innerHTML không tự chạy script)
+            const scripts = section.querySelectorAll('script');
+            scripts.forEach(oldScript => {
+                const newScript = document.createElement('script');
+                Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                document.body.appendChild(newScript);
+                oldScript.parentNode.removeChild(oldScript);
+            });
         });
 
         this._currentSlideIndex = 0;
@@ -329,8 +339,8 @@ export const LessonMedia = {
         // Đảm bảo nút điều hướng luôn hiển thị đúng text
         const navBtns = overlay.querySelectorAll('.nav-controls button');
         if (navBtns.length >= 2) {
-            navBtns[0].innerHTML = '&#10094; Trước';
-            navBtns[1].innerHTML = 'Sau &#10095;';
+            navBtns[0].innerHTML = '&#10094;';
+            navBtns[1].innerHTML = '&#10095;';
         }
 
         // Đăng ký sự kiện bàn phím nếu chưa có
