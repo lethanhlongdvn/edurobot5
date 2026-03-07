@@ -667,6 +667,18 @@ lesson124.presentation = [
                     setTimeout(() => {
                         if(window.dragInit124Pre) return;
                         
+                        // Khởi tạo blocksData124 nếu chưa có (cần cho cả modal gốc và pre)
+                        if (!window.blocksData124) {
+                            window.blocksData124 = [];
+                            for(let y = 2; y >= 0; y--) {
+                                for(let z = 0; z < 3; z++) {
+                                    for(let x = 0; x < 3; x++) {
+                                        window.blocksData124.push({x, y, z});
+                                    }
+                                }
+                            }
+                        }
+                        
                         let isDragging124Pre = false;
                         let startX124Pre, startY124Pre;
                         let currentRotX124Pre = -20;
