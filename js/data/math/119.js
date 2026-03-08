@@ -47,7 +47,10 @@ export const lesson119 = {
             <div class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl relative overflow-hidden">
                 <p class="font-black text-xl md:text-2xl mb-1 text-indigo-700 flex items-center gap-2">
                     <span class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black">1</span>
-                    Tính diện tích xung quanh:
+                    <span class="flex-1">Tính diện tích xung quanh:</span>
+                    <button title="Kiểm tra" onclick="checkBox119_1()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 
                 <div class="bg-gray-50 p-1 rounded-[24px] border border-gray-100 flex flex-col items-center gap-1">
@@ -75,7 +78,10 @@ export const lesson119 = {
             <div class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-xl md:text-2xl mb-1 text-emerald-700 flex items-center gap-2">
                     <span class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">2</span>
-                    Tính diện tích kính (KHÔNG NẮP):
+                    <span class="flex-1">Tính diện tích kính (KHÔNG NẮP):</span>
+                    <button title="Kiểm tra" onclick="checkBox119_2()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-blue-900 p-1 rounded-[24px] flex flex-col items-center gap-1">
                     <img src="hinh_anh/toan/toan_tap_2/119-b2.png" alt="Bài 2 Tiết 119" class="w-full max-w-3xl h-auto rounded-xl">
@@ -106,10 +112,13 @@ export const lesson119 = {
             </div>
 
             <!-- Bài tập 3 -->
-            <div class="p-1 bg-amber-600 rounded-[40px] text-white shadow-xl relative overflow-hidden">
+            <div id="box-119-b3" class="p-1 bg-amber-600 rounded-[40px] text-white shadow-xl relative overflow-hidden">
                 <p class="font-black text-xl md:text-2xl mb-1 flex items-center gap-2">
                     <span class="w-10 h-10 bg-white text-amber-600 rounded-xl flex items-center justify-center font-black">3</span>
-                    Khuôn bánh vuông 16,5cm (Thanh gỗ 55cm?)
+                    <span class="flex-1">Khuôn bánh vuông 16,5cm (Thanh gỗ 55cm?)</span>
+                    <button title="Kiểm tra" onclick="checkBox119_3()" class="btn-check-mini bg-white text-emerald-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-1 bg-white/10 rounded-2xl border border-white/20">
                     <img src="hinh_anh/toan/toan_tap_2/119-b3.png" alt="Bài 3 Tiết 119" class="w-full h-auto rounded-xl">
@@ -124,12 +133,15 @@ export const lesson119 = {
             <div class="p-1 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-xl md:text-2xl mb-1 text-indigo-900 flex items-center gap-2">
                     <span class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black">4</span>
-                    So sánh 4 khối lập phương:
+                    <span class="flex-1">So sánh 4 khối lập phương:</span>
+                    <button title="Kiểm tra" onclick="checkBox119_4()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-gray-100 p-1 rounded-[24px] flex flex-col items-center gap-2">
                     <img src="hinh_anh/toan/toan_tap_2/119-b4.png" alt="Bài 4 Tiết 119" class="w-full max-w-2xl h-auto rounded-xl shadow-md border-4 border-white">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
-                        <div class="bg-white p-2 rounded-2xl shadow border border-indigo-50">
+                        <div id="box-119-b4a" class="bg-white p-2 rounded-2xl shadow border border-indigo-50">
                             <p class="text-xs font-black text-indigo-900 mb-1 uppercase opacity-50">A. Sxq lớn nhất?</p>
                             <div class="grid grid-cols-3 gap-1">
                                 <button onclick="selectChoice119('4a', 'MAI')" id="btn-119-4a-MAI" class="py-2 rounded-xl bg-indigo-50 border border-indigo-200 font-bold text-lg hover:bg-indigo-600 hover:text-white transition-all">Mai</button>
@@ -137,7 +149,7 @@ export const lesson119 = {
                                 <button onclick="selectChoice119('4a', 'NAM')" id="btn-119-4a-NAM" class="py-2 rounded-xl bg-indigo-50 border border-indigo-200 font-bold text-lg hover:bg-indigo-600 hover:text-white transition-all">Nam</button>
                             </div>
                         </div>
-                        <div class="bg-white p-2 rounded-2xl shadow border border-indigo-50">
+                        <div id="box-119-b4b" class="bg-white p-2 rounded-2xl shadow border border-indigo-50">
                             <p class="text-xs font-black text-indigo-900 mb-1 uppercase opacity-50">B. Stp bé nhất?</p>
                             <div class="grid grid-cols-3 gap-1">
                                 <button onclick="selectChoice119('4b', 'MAI')" id="btn-119-4b-MAI" class="py-2 rounded-xl bg-indigo-50 border border-indigo-200 font-bold text-lg hover:bg-indigo-600 hover:text-white transition-all">Mai</button>
@@ -150,7 +162,7 @@ export const lesson119 = {
             </div>
 
             <!-- Submit Button -->
-            <div class="flex justify-center mt-2">
+            <div class="flex justify-center gap-4 mt-4">
                 <button onclick="submit119()" id="submit-btn-119" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-2xl font-black text-xl shadow-xl active:scale-95 transition-all">
                     NỘP BÀI
                 </button>
@@ -176,6 +188,86 @@ export const lesson119 = {
                     });
                     const target = document.getElementById('btn-119-' + q + '-' + val);
                     target.className = "py-2 rounded-xl bg-indigo-600 border border-transparent font-bold text-lg text-white transition-all";
+                }
+            }
+
+            function checkBox119_1() {
+                const a1a = document.getElementById('ans-119-1a').value;
+                const a1b = document.getElementById('ans-119-1b').value;
+
+                ['1a', '1b'].forEach(id => {
+                    const box = document.getElementById('box-119-b' + id);
+                    if (box) box.className = box.className.replace(/border-emerald-400|bg-emerald-50|border-red-400|bg-red-50/g, '').trim();
+                });
+
+                if (a1a) {
+                    if (parseInt(a1a) === 126) document.getElementById('box-119-b1a').classList.add('border-emerald-400', 'bg-emerald-50');
+                    else document.getElementById('box-119-b1a').classList.add('border-red-400', 'bg-red-50');
+                }
+                if (a1b) {
+                    if (parseInt(a1b) === 126) document.getElementById('box-119-b1b').classList.add('border-emerald-400', 'bg-emerald-50');
+                    else document.getElementById('box-119-b1b').classList.add('border-red-400', 'bg-red-50');
+                }
+            }
+
+            function checkBox119_2() {
+                const a2a = document.getElementById('ans-119-2a').value;
+                const a2b = document.getElementById('ans-119-2b').value;
+                const a2c = document.getElementById('ans-119-2c').value;
+
+                ['2a', '2b', '2c'].forEach(id => {
+                    const box = document.getElementById('box-119-b' + id);
+                    if (box) box.className = box.className.replace(/border-emerald-400|bg-emerald-50|border-red-400|bg-red-50/g, '').trim();
+                });
+
+                if (a2a) {
+                    if (parseFloat(a2a) === 8) document.getElementById('box-119-b2a').classList.add('border-emerald-400', 'bg-emerald-50');
+                    else document.getElementById('box-119-b2a').classList.add('border-red-400', 'bg-red-50');
+                }
+                if (a2b) {
+                    if (parseInt(a2b) === 140000) document.getElementById('box-119-b2b').classList.add('border-emerald-400', 'bg-emerald-50');
+                    else document.getElementById('box-119-b2b').classList.add('border-red-400', 'bg-red-50');
+                }
+                if (a2c) {
+                    if (parseInt(a2c) === 250) document.getElementById('box-119-b2c').classList.add('border-emerald-400', 'bg-emerald-50');
+                    else document.getElementById('box-119-b2c').classList.add('border-red-400', 'bg-red-50');
+                }
+            }
+
+            function checkBox119_3() {
+                const box = document.getElementById('box-119-b3');
+                box.className = box.className.replace(/border-2|border-emerald-400|border-red-400|bg-emerald-50|bg-red-50/g, '').trim();
+                box.classList.add('border-2');
+                if (!selected119['3']) {
+                    box.classList.add('border-red-400');
+                    return;
+                }
+                if (selected119['3'] === 'KHONG') box.classList.add('border-emerald-400');
+                else box.classList.add('border-red-400');
+            }
+
+            function checkBox119_4() {
+                const boxA = document.getElementById('box-119-b4a');
+                const boxB = document.getElementById('box-119-b4b');
+
+                [boxA, boxB].forEach(b => {
+                    if (!b) return;
+                    b.className = b.className.replace(/border-emerald-400|bg-emerald-50|border-red-400|bg-red-50/g, '').trim();
+                    b.classList.add('border-2');
+                });
+
+                if (selected119['4a']) {
+                    if (selected119['4a'] === 'MAI') boxA.classList.add('border-emerald-400', 'bg-emerald-50');
+                    else boxA.classList.add('border-red-400', 'bg-red-50');
+                } else {
+                    boxA.classList.add('border-red-400', 'bg-red-50');
+                }
+
+                if (selected119['4b']) {
+                    if (selected119['4b'] === 'NAM') boxB.classList.add('border-emerald-400', 'bg-emerald-50');
+                    else boxB.classList.add('border-red-400', 'bg-red-50');
+                } else {
+                    boxB.classList.add('border-red-400', 'bg-red-50');
                 }
             }
 

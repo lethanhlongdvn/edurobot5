@@ -23,7 +23,10 @@ export const lesson111 = {
             <div id="box-111-1" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-blue-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">1</span>
-                    Đọc số đo bể bơi:
+                    <span class="flex-1">Đọc số đo bể bơi:</span>
+                    <button title="Kiểm tra" onclick="checkBox111_1()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-blue-50 p-4 md:p-6 rounded-[32px] grid grid-cols-1 gap-3">
                     <div class="bg-white p-4 rounded-2xl flex items-center gap-3">
@@ -41,24 +44,39 @@ export const lesson111 = {
             <div id="box-111-2" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-indigo-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">2</span>
-                    Đổi đơn vị đo (Số?):
+                    <span class="flex-1">Đổi đơn vị đo (Số?):</span>
+                    <button title="Kiểm tra" onclick="checkBox111_2()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-indigo-50 p-4 md:p-6 rounded-[32px] grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div class="bg-white p-4 rounded-2xl flex items-center gap-3">
-                        <span class="font-bold text-lg md:text-2xl lg:text-3xl">3 m³ =</span>
-                        <input type="text" id="b111-2a" onchange="checkB111Num('2a', '3000')" class="flex-1 bg-indigo-100 border-none rounded-xl font-black text-lg md:text-2xl lg:text-3xl p-4" placeholder="dm³">
+                    <div class="bg-white p-4 rounded-2xl grid grid-cols-1 md:grid-cols-12 items-center gap-3">
+                        <span class="md:col-span-4 lg:col-span-3 font-black text-xl md:text-2xl lg:text-3xl whitespace-nowrap">3 m³ =</span>
+                        <div class="md:col-span-8 lg:col-span-9 relative">
+                            <input type="text" id="b111-2a" onchange="checkB111Num('2a', '3000')" class="w-full bg-indigo-100 border-none rounded-xl font-black text-lg md:text-2xl lg:text-3xl p-4 pr-24 text-right" placeholder="Nhập số">
+                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 font-black text-lg md:text-2xl lg:text-3xl pointer-events-none">dm³</span>
+                        </div>
                     </div>
-                    <div class="bg-white p-4 rounded-2xl flex items-center gap-3">
-                        <span class="font-bold text-lg md:text-2xl lg:text-3xl">1,7 m³ =</span>
-                        <input type="text" id="b111-2b" onchange="checkB111Num('2b', '1700')" class="flex-1 bg-indigo-100 border-none rounded-xl font-black text-lg md:text-2xl lg:text-3xl p-4" placeholder="dm³">
+                    <div class="bg-white p-4 rounded-2xl grid grid-cols-1 md:grid-cols-12 items-center gap-3">
+                        <span class="md:col-span-4 lg:col-span-3 font-black text-xl md:text-2xl lg:text-3xl whitespace-nowrap">1,7 m³ =</span>
+                        <div class="md:col-span-8 lg:col-span-9 relative">
+                            <input type="text" id="b111-2b" onchange="checkB111Num('2b', '1700')" class="w-full bg-indigo-100 border-none rounded-xl font-black text-lg md:text-2xl lg:text-3xl p-4 pr-24 text-right" placeholder="Nhập số">
+                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 font-black text-lg md:text-2xl lg:text-3xl pointer-events-none">dm³</span>
+                        </div>
                     </div>
-                    <div class="bg-white p-4 rounded-2xl flex items-center gap-3">
-                        <span class="font-bold text-lg md:text-2xl lg:text-3xl">2400 dm³ =</span>
-                        <input type="text" id="b111-2c" onchange="checkB111Num('2c', '2.4')" class="flex-1 bg-indigo-100 border-none rounded-xl font-black text-lg md:text-2xl lg:text-3xl p-4" placeholder="m³">
+                    <div class="bg-white p-4 rounded-2xl grid grid-cols-1 md:grid-cols-12 items-center gap-3">
+                        <span class="md:col-span-4 lg:col-span-3 font-black text-xl md:text-2xl lg:text-3xl whitespace-nowrap">2400 dm³ =</span>
+                        <div class="md:col-span-8 lg:col-span-9 relative">
+                            <input type="text" id="b111-2c" onchange="checkB111Num('2c', '2.4')" class="w-full bg-indigo-100 border-none rounded-xl font-black text-lg md:text-2xl lg:text-3xl p-4 pr-24 text-right" placeholder="Nhập số">
+                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 font-black text-lg md:text-2xl lg:text-3xl pointer-events-none">m³</span>
+                        </div>
                     </div>
-                    <div class="bg-white p-4 rounded-2xl flex items-center gap-3">
-                        <span class="font-bold text-lg md:text-2xl lg:text-3xl">25 m³ =</span>
-                        <input type="text" id="b111-2d" onchange="checkB111Num('2d', '25000000')" class="flex-1 bg-indigo-100 border-none rounded-xl font-black text-lg md:text-2xl lg:text-3xl p-4" placeholder="cm³">
+                    <div class="bg-white p-4 rounded-2xl grid grid-cols-1 md:grid-cols-12 items-center gap-3">
+                        <span class="md:col-span-4 lg:col-span-3 font-black text-xl md:text-2xl lg:text-3xl whitespace-nowrap">25 m³ =</span>
+                        <div class="md:col-span-8 lg:col-span-9 relative">
+                            <input type="text" id="b111-2d" onchange="checkB111Num('2d', '25000000')" class="w-full bg-indigo-100 border-none rounded-xl font-black text-lg md:text-2xl lg:text-3xl p-4 pr-24 text-right" placeholder="Nhập số">
+                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 font-black text-lg md:text-2xl lg:text-3xl pointer-events-none">cm³</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,6 +130,18 @@ export const lesson111 = {
                         const res = await AI.tutor(text, "Toán 5", "33.2 * 0.2 = 6.64");
                         fb.innerHTML = res;
                     } catch(e) { fb.innerHTML = "Lỗi kết nối AI."; }
+                };
+
+                window.checkBox111_1 = function() {
+                    window.checkB111Read('1-1', 'một phẩy hai mươi lăm mét khối');
+                    window.checkB111Read('1-2', 'ba trăm mét khối');
+                };
+
+                window.checkBox111_2 = function() {
+                    window.checkB111Num('2a', '3000');
+                    window.checkB111Num('2b', '1700');
+                    window.checkB111Num('2c', '2.4');
+                    window.checkB111Num('2d', '25000000');
                 };
 
                 window.submit111 = function() {

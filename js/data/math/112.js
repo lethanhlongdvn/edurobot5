@@ -23,7 +23,10 @@ export const lesson112 = {
             <div id="box-112-1" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-blue-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">1</span>
-                    Chọn số đo phù hợp:
+                    <span class="flex-1">Chọn số đo phù hợp:</span>
+                    <button title="Kiểm tra" onclick="checkBox112_1()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-blue-50 p-4 md:p-6 rounded-[32px] grid grid-cols-1 md:grid-cols-3 gap-3">
                     <div class="bg-white p-4 rounded-2xl flex flex-col items-center">
@@ -60,7 +63,10 @@ export const lesson112 = {
             <div id="box-112-2" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-indigo-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">2</span>
-                    Đổi đơn vị đo (Số?):
+                    <span class="flex-1">Đổi đơn vị đo (Số?):</span>
+                    <button title="Kiểm tra" onclick="checkBox112_2()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-indigo-50 p-4 md:p-6 rounded-[32px] grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div class="bg-white p-4 rounded-2xl flex items-center gap-3">
@@ -139,6 +145,17 @@ export const lesson112 = {
                         const res = await AI.tutor(text, "Toán 5", "10*5973 + 5*7052 = 94990");
                         fb.innerHTML = res;
                     } catch(e) { fb.innerHTML = "Lỗi kết nối AI."; }
+                };
+
+                window.checkBox112_1 = function() {
+                    window.checkB112B1();
+                };
+
+                window.checkBox112_2 = function() {
+                    window.checkB112Num('2a-1', '2500');
+                    window.checkB112Num('2a-2', '3.9');
+                    window.checkB112Num('2b-1', '4.6');
+                    window.checkB112Num('2b-2', '7.5');
                 };
 
                 window.submit112 = function() {

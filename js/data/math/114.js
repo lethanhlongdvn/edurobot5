@@ -23,7 +23,10 @@ export const lesson114 = {
             <div id="box-114-1" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-emerald-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">1</span>
-                    Hình nào có thể tích lớn nhất?
+                    <span class="flex-1">Hình nào có thể tích lớn nhất?</span>
+                    <button title="Kiểm tra" onclick="checkBox114_1()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-emerald-50 p-4 md:p-6 rounded-[32px] grid grid-cols-2 md:grid-cols-4 gap-3">
                     <button onclick="checkB114B1('A')" class="b114-1-opt bg-white p-4 rounded-2xl border-2 border-gray-100 flex flex-col items-center">
@@ -64,7 +67,10 @@ export const lesson114 = {
             <div id="box-114-3" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-emerald-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">3</span>
-                    Hộp đỏ, xanh, vàng: 25cm³; 24,5cm³; 25,75dm³.
+                    <span class="flex-1">Hộp đỏ, xanh, vàng: 25cm³; 24,5cm³; 25,75dm³.</span>
+                    <button title="Kiểm tra" onclick="checkBox114_3()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-yellow-50 p-4 md:p-6 rounded-[32px] grid grid-cols-1 md:grid-cols-3 gap-3">
                     <div class="bg-white p-4 rounded-2xl">
@@ -138,6 +144,34 @@ export const lesson114 = {
                         const res = await AI.tutor(text, "Toán 5", req);
                         fb.innerHTML = res;
                     } catch(e) { fb.innerHTML = "Lỗi kết nối AI."; }
+                };
+
+                window.checkBox114_1 = function() {
+                    const box = document.getElementById('box-114-1');
+                    if (!window.ans114B1) {
+                        box.className = box.className.replace(/border-emerald-400|bg-emerald-50|border-red-400|bg-red-50/g, '').trim();
+                        box.classList.add('border-2', 'border-red-400', 'bg-red-50');
+                        return;
+                    }
+                    window.checkB114B1(window.ans114B1);
+                };
+
+                window.checkBox114_3 = function() {
+                    const r3 = document.getElementById('b114-3-do').value;
+                    const b3 = document.getElementById('b114-3-xanh').value;
+                    const v3 = document.getElementById('b114-3-vang').value;
+                    const box3 = document.getElementById('box-114-3');
+                    box3.className = box3.className.replace(/border-emerald-400|bg-emerald-50|border-red-400|bg-red-50/g, '').trim();
+                    box3.classList.add('border-2');
+                    if (r3 && b3 && v3) {
+                        if (r3 === '24.5 cm3' && b3 === '25 cm3' && v3 === '25.75 dm3') {
+                            box3.classList.add('border-emerald-400', 'bg-emerald-50');
+                        } else {
+                            box3.classList.add('border-red-400', 'bg-red-50');
+                        }
+                    } else {
+                        box3.classList.add('border-red-400', 'bg-red-50');
+                    }
                 };
 
                 window.submit114 = function() {

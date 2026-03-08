@@ -23,7 +23,10 @@ export const lesson113 = {
             <div id="box-113-1" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-blue-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">1</span>
-                    Hoàn thành bảng đọc viết:
+                    <span class="flex-1">Hoàn thành bảng đọc viết:</span>
+                    <button title="Kiểm tra" onclick="checkBox113_1()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-blue-50 p-4 md:p-6 rounded-[32px]">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
@@ -51,7 +54,10 @@ export const lesson113 = {
             <div id="box-113-2" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-emerald-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">2</span>
-                    Thể tích khối băng khoảng (Chọn C):
+                    <span class="flex-1">Thể tích khối băng khoảng (Chọn C):</span>
+                    <button title="Kiểm tra" onclick="checkBox113_2()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-emerald-50 p-4 md:p-6 rounded-[32px] flex flex-col md:flex-row items-center gap-4">
                     <img src="hinh_anh/toan/113_b2.png" class="w-full max-w-[260px] md:max-w-[360px] lg:max-w-[460px] h-auto rounded-2xl border-2 border-white shadow-md">
@@ -68,7 +74,10 @@ export const lesson113 = {
             <div id="box-113-3" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-indigo-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">3</span>
-                    Thể tích hình bên (cm³):
+                    <span class="flex-1">Thể tích hình bên (cm³):</span>
+                    <button title="Kiểm tra" onclick="checkBox113_3()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-indigo-50 p-4 md:p-6 rounded-[32px] flex flex-col md:flex-row items-center gap-4">
                     <img src="hinh_anh/toan/113_b3.png" class="w-full max-w-[260px] md:max-w-[360px] lg:max-w-[460px] h-auto rounded-2xl border-2 border-white shadow-md">
@@ -80,7 +89,10 @@ export const lesson113 = {
             <div id="box-113-4" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-purple-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-purple-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">4</span>
-                    Đổi đơn vị đo:
+                    <span class="flex-1">Đổi đơn vị đo:</span>
+                    <button title="Kiểm tra" onclick="checkBox113_4()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-purple-50 p-4 md:p-6 rounded-[32px] grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div class="bg-white p-4 rounded-2xl flex items-center gap-3">
@@ -124,6 +136,47 @@ export const lesson113 = {
                     el.classList.remove('bg-emerald-100', 'bg-red-100', 'bg-purple-100', 'bg-indigo-100', 'bg-white');
                     if (isCorrect) el.classList.add('bg-emerald-100');
                     else if (val) el.classList.add('bg-red-100');
+                };
+
+                window.checkBox113_1 = function() {
+                    const w1 = document.getElementById('b113-t1-w1');
+                    const r2 = document.getElementById('b113-t1-r2');
+                    const w3 = document.getElementById('b113-t1-w3');
+                    const r4 = document.getElementById('b113-t1-r4');
+
+                    const v11 = (w1.value || '').trim();
+                    const v12 = (r2.value || '').toLowerCase().trim();
+                    const v13 = (w3.value || '').trim();
+                    const v14 = (r4.value || '').toLowerCase().trim();
+
+                    const mark = (el, ok) => {
+                        el.classList.remove('bg-emerald-100', 'bg-red-100', 'bg-blue-100');
+                        if (ok) el.classList.add('bg-emerald-100');
+                        else if ((el.value || '').trim()) el.classList.add('bg-red-100');
+                    };
+
+                    mark(w1, v11.includes('100,05') || v11.includes('100.05'));
+                    mark(w3, v13 === '821');
+
+                    const okR2 = v12.includes('không phẩy') && v12.includes('mười lăm') && v12.includes('mét khối');
+                    const okR4 = v14.includes('một trăm') && v14.includes('phẩy') && v14.includes('xen') && v14.includes('khối');
+                    mark(r2, okR2);
+                    mark(r4, okR4);
+                };
+
+                window.checkBox113_2 = function() {
+                    window.checkB113Sel();
+                };
+
+                window.checkBox113_3 = function() {
+                    window.checkB113Num('3', '44');
+                };
+
+                window.checkBox113_4 = function() {
+                    window.checkB113Num('4a1', '5000');
+                    window.checkB113Num('4a2', '0.48');
+                    window.checkB113Num('4b1', '250000');
+                    window.checkB113Num('4b2', '0.005');
                 };
 
                 window.submit113 = function() {

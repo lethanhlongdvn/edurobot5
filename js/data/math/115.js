@@ -23,7 +23,10 @@ export const lesson115 = {
             <div id="box-115-1" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
                 <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-blue-700 flex items-center gap-3">
                     <span class="w-14 h-14 md:w-16 md:h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">1</span>
-                    Ghép đèn lồng với hình khai triển:
+                    <span class="flex-1">Ghép đèn lồng với hình khai triển:</span>
+                    <button title="Kiểm tra" onclick="checkBox115_1()" class="btn-check-mini bg-emerald-600 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
                 </p>
                 <div class="bg-blue-50 p-4 md:p-6 rounded-[32px]">
                     <img src="hinh_anh/toan/115_b1.png" alt="SGK B1" class="w-full max-w-[760px] lg:max-w-[980px] h-auto mx-auto rounded-2xl mb-4 border-2 border-white shadow-md">
@@ -159,6 +162,21 @@ export const lesson115 = {
                         box.classList.add('border-emerald-400', 'bg-emerald-50');
                     } else {
                         box.classList.add('border-red-400', 'bg-red-50');
+                    }
+                };
+
+                window.checkBox115_1 = function() {
+                    const v1 = document.getElementById('b115-1-1').value;
+                    const v2 = document.getElementById('b115-1-2').value;
+                    const v3 = document.getElementById('b115-1-3').value;
+                    const box1 = document.getElementById('box-115-1');
+                    box1.className = box1.className.replace(/border-emerald-400|bg-emerald-50|border-red-400|bg-red-50/g, '').trim();
+                    box1.classList.add('border-2');
+                    if (v1 && v2 && v3) {
+                        if (v1 === 'B' && v2 === 'A' && v3 === 'C') box1.classList.add('border-emerald-400', 'bg-emerald-50');
+                        else box1.classList.add('border-red-400', 'bg-red-50');
+                    } else {
+                        box1.classList.add('border-red-400', 'bg-red-50');
                     }
                 };
 
