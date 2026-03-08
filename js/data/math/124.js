@@ -592,36 +592,332 @@ export const lesson124 = {
     }
 };
 
+// === Logic cho phần Khởi động (Trắc nghiệm trong Slide) ===
+window.checkPreQuiz124 = function(btn, isCorrect, qIdx) {
+    const slide = btn.closest('.presentation-slide-content');
+    const feedback = slide.querySelector('.quiz-feedback');
+    const options = slide.querySelectorAll('.quiz-opt');
+    
+    // Vô hiệu hóa các nút khác
+    options.forEach(opt => {
+        opt.disabled = true;
+        opt.classList.add('opacity-50', 'bg-gray-100');
+    });
+
+    if (isCorrect) {
+        btn.classList.remove('bg-gray-100', 'opacity-50');
+        btn.classList.add('bg-emerald-500', 'text-white', 'border-emerald-600', 'opacity-100', 'scale-105', 'shadow-emerald-200');
+        feedback.innerHTML = `<div class="animate-bounce-subtle text-emerald-600 font-black text-4xl mt-6">🌟 Tuyệt vời! Chính xác! 🌟</div>`;
+        if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('correct');
+        if (typeof confetti === 'function') confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+        
+        // Tự động chuyển slide sau 1.5s khi chọn đúng
+        setTimeout(() => {
+             if (window.Lesson && typeof window.Lesson.moveSlide === 'function') {
+                 window.Lesson.moveSlide(1);
+             } else {
+                 // Fallback: Tìm nút chuyển slide trong overlay và click
+                 const nextBtn = document.querySelector('#presentation-overlay .nav-controls button:last-child');
+                 if (nextBtn) nextBtn.click();
+             }
+        }, 1500);
+
+    } else {
+        btn.classList.remove('bg-gray-100', 'opacity-50');
+        btn.classList.add('bg-rose-500', 'text-white', 'border-rose-600', 'opacity-100');
+        feedback.innerHTML = `
+            <div class="text-rose-500 font-bold text-2xl mt-4">Chưa đúng rồi, cố gắng lên nhé!</div>
+            <button onclick="window.resetPreQuiz124(this)" class="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-black shadow-lg transition-all active:scale-95">LÀM LẠI 🔄</button>
+        `;
+        if (window.Quiz && typeof window.Quiz.playSFX === 'function') window.Quiz.playSFX('wrong');
+    }
+};
+
+window.resetPreQuiz124 = function(btn) {
+    const slide = btn.closest('.presentation-slide-content');
+    const feedback = slide.querySelector('.quiz-feedback');
+    const options = slide.querySelectorAll('.quiz-opt');
+    
+    feedback.innerHTML = '';
+    options.forEach(opt => {
+        opt.disabled = false;
+        opt.classList.remove('opacity-50', 'bg-emerald-500', 'bg-rose-500', 'text-white', 'border-emerald-600', 'border-rose-600', 'scale-105', 'shadow-emerald-200', 'bg-gray-100');
+        opt.classList.add('bg-white', 'hover:bg-purple-50');
+    });
+};
+
 // Cấu hình Slide Trình chiếu (Native Presentation)
 lesson124.presentation = [
+    // Trang 1: KHỞI ĐỘNG
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10 bg-gradient-to-br from-indigo-600 to-purple-700 text-white rounded-[40px] shadow-inner overflow-hidden relative">
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-yellow-400 rounded-full blur-3xl opacity-50"></div>
+        </div>
+        <div class="z-10 text-center space-y-10">
+            <div class="inline-block p-6 bg-white/20 backdrop-blur-md rounded-3xl border-4 border-white/30 shadow-2xl animate-pop-in">
+                <h1 class="text-8xl md:text-[10rem] font-black tracking-[0.2em] drop-shadow-2xl">KHỞI ĐỘNG</h1>
+            </div>
+            <p class="text-3xl md:text-5xl font-bold opacity-90 tracking-widest animate-fade-in delay-300">Sẵn sàng vượt qua thử thách!</p>
+            <div class="flex justify-center pt-10">
+                <div class="w-3 h-20 bg-white/30 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </div>
+    `,
+    // Câu 1
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10">
+        <div class="w-full max-w-5xl bg-white p-12 rounded-[50px] shadow-2xl border-4 border-indigo-100 flex flex-col items-center">
+            <div class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-2xl mb-8 shadow-lg">CÂU HỎI 1</div>
+            <h3 class="text-4xl md:text-5xl font-black text-gray-800 text-center mb-12 leading-tight">Hình hộp chữ nhật bao gồm tất cả bao nhiêu mặt?</h3>
+            <div class="grid grid-cols-2 gap-6 w-full">
+                <button onclick="window.checkPreQuiz124(this, false, 1)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">A</span> 4 mặt
+                </button>
+                <button onclick="window.checkPreQuiz124(this, true, 1)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">B</span> 6 mặt
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 1)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">C</span> 8 mặt
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 1)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">D</span> 12 mặt
+                </button>
+            </div>
+            <div class="quiz-feedback h-24 flex items-center"></div>
+        </div>
+    </div>
+    `,
+    // Câu 2
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10">
+        <div class="w-full max-w-5xl bg-white p-12 rounded-[50px] shadow-2xl border-4 border-indigo-100 flex flex-col items-center">
+            <div class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-2xl mb-8 shadow-lg">CÂU HỎI 2</div>
+            <h3 class="text-4xl md:text-5xl font-black text-gray-800 text-center mb-12 leading-tight">Một hình hộp chữ nhật có mấy kích thước đặc trưng?</h3>
+            <div class="grid grid-cols-2 gap-6 w-full">
+                <button onclick="window.checkPreQuiz124(this, false, 2)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">A</span> 1 kích thước
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 2)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">B</span> 2 kích thước
+                </button>
+                <button onclick="window.checkPreQuiz124(this, true, 2)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">C</span> 3 kích thước
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 2)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">D</span> 4 kích thước
+                </button>
+            </div>
+            <div class="quiz-feedback h-24 flex items-center"></div>
+        </div>
+    </div>
+    `,
+    // Câu 3
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10">
+        <div class="w-full max-w-5xl bg-white p-12 rounded-[50px] shadow-2xl border-4 border-indigo-100 flex flex-col items-center">
+            <div class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-2xl mb-8 shadow-lg">CÂU HỎI 3</div>
+            <h3 class="text-4xl md:text-5xl font-black text-gray-800 text-center mb-12 leading-tight">Đặc điểm của các mặt trong hình hộp chữ nhật là gì?</h3>
+            <div class="grid grid-cols-2 gap-6 w-full">
+                <button onclick="window.checkPreQuiz124(this, false, 3)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">A</span> Đều là hình tam giác
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 3)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">B</span> Đều là hình thoi
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 3)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">C</span> Đều là hình vuông
+                </button>
+                <button onclick="window.checkPreQuiz124(this, true, 3)" class="quiz-opt p-6 text-3xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-center gap-4">
+                    <span class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">D</span> Là các hình chữ nhật
+                </button>
+            </div>
+            <div class="quiz-feedback h-24 flex items-center"></div>
+        </div>
+    </div>
+    `,
+    // Câu 4
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10">
+        <div class="w-full max-w-5xl bg-white p-12 rounded-[50px] shadow-2xl border-4 border-indigo-100 flex flex-col items-center">
+            <div class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-2xl mb-8 shadow-lg">CÂU HỎI 4</div>
+            <h3 class="text-3xl md:text-4xl font-black text-gray-800 text-center mb-12 leading-tight">Công thức tính thể tích V của hình hộp chữ nhật có chiều dài a, chiều rộng b và chiều cao c là gì?</h3>
+            <div class="grid grid-cols-2 gap-6 w-full text-2xl md:text-3xl font-black text-purple-600 italic">
+                <button onclick="window.checkPreQuiz124(this, false, 4)" class="quiz-opt p-6 border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    A. V = a + b + c
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 4)" class="quiz-opt p-6 border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    B. V = (a + b) &times; c
+                </button>
+                <button onclick="window.checkPreQuiz124(this, true, 4)" class="quiz-opt p-6 border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    C. V = a &times; b &times; c
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 4)" class="quiz-opt p-6 border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    D. V = a &times; a &times; a
+                </button>
+            </div>
+            <div class="quiz-feedback h-24 flex items-center"></div>
+        </div>
+    </div>
+    `,
+    // Câu 5
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10">
+        <div class="w-full max-w-5xl bg-white p-12 rounded-[50px] shadow-2xl border-4 border-indigo-100 flex flex-col items-center">
+            <div class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-2xl mb-8 shadow-lg">CÂU HỎI 5</div>
+            <h3 class="text-4xl font-black text-gray-800 text-center mb-10 leading-tight italic bg-indigo-50 p-6 rounded-3xl border-2 border-indigo-100 shadow-inner">Tính thể tích hình hộp chữ nhật có chiều dài 8 cm, chiều rộng 5 cm và chiều cao 6 cm.</h3>
+            <div class="grid grid-cols-2 gap-6 w-full">
+                <button onclick="window.checkPreQuiz124(this, false, 5)" class="quiz-opt p-6 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    A. 120 cm³
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 5)" class="quiz-opt p-6 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    B. 240 cm²
+                </button>
+                <button onclick="window.checkPreQuiz124(this, true, 5)" class="quiz-opt p-6 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    C. 240 cm³
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 5)" class="quiz-opt p-6 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    D. 120 cm²
+                </button>
+            </div>
+            <div class="quiz-feedback h-20 flex items-center"></div>
+        </div>
+    </div>
+    `,
+    // Câu 6
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10">
+        <div class="w-full max-w-5xl bg-white p-12 rounded-[50px] shadow-2xl border-4 border-indigo-100 flex flex-col items-center">
+            <div class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-2xl mb-6 shadow-lg">CÂU HỎI 6</div>
+            <h3 class="text-3xl md:text-4xl font-black text-gray-800 text-center mb-8 leading-snug">Một khối lập phương ghép từ các khối nhỏ tạo thành hình hộp chữ nhật có chiều dài 6 dm, chiều rộng 5 dm và chiều cao 4 dm. Thể tích là bao nhiêu?</h3>
+            <div class="grid grid-cols-2 gap-6 w-full">
+                <button onclick="window.checkPreQuiz124(this, true, 6)" class="quiz-opt p-6 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    A. 120 dm³
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 6)" class="quiz-opt p-6 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    B. 120 dm²
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 6)" class="quiz-opt p-6 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    C. 150 dm³
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 6)" class="quiz-opt p-6 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    D. 30 dm³
+                </button>
+            </div>
+            <div class="quiz-feedback h-20 flex items-center"></div>
+        </div>
+    </div>
+    `,
+    // Câu 7
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10">
+        <div class="w-full max-w-5xl bg-white p-12 rounded-[50px] shadow-2xl border-4 border-indigo-100 flex flex-col items-center">
+            <div class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-2xl mb-8 shadow-lg">CÂU HỎI 7</div>
+            <h3 class="text-3xl md:text-3xl font-black text-gray-800 text-center mb-10 leading-tight">Khẳng định nào sau đây là ĐÚNG khi nói về hình lập phương?</h3>
+            <div class="space-y-4 w-full">
+                <button onclick="window.checkPreQuiz124(this, false, 7)" class="quiz-opt w-full p-5 text-xl md:text-2xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-start gap-4">
+                    <span class="w-10 h-10 rounded-full bg-indigo-50 text-indigo-500 flex items-center justify-center shrink-0">A</span> Hình lập phương có sáu mặt là các hình chữ nhật bằng nhau.
+                </button>
+                <button onclick="window.checkPreQuiz124(this, true, 7)" class="quiz-opt w-full p-5 text-xl md:text-2xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-start gap-4">
+                    <span class="w-10 h-10 rounded-full bg-indigo-50 text-indigo-500 flex items-center justify-center shrink-0">B</span> Hình lập phương có sáu mặt là các hình vuông bằng nhau.
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 7)" class="quiz-opt w-full p-5 text-xl md:text-2xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-start gap-4">
+                    <span class="w-10 h-10 rounded-full bg-indigo-50 text-indigo-500 flex items-center justify-center shrink-0">C</span> Hình lập phương có bốn mặt là các hình vuông bằng nhau.
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 7)" class="quiz-opt w-full p-5 text-xl md:text-2xl font-bold border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-left flex items-start gap-4">
+                    <span class="w-10 h-10 rounded-full bg-indigo-50 text-indigo-500 flex items-center justify-center shrink-0">D</span> Hình lập phương có sáu mặt là các hình thoi bằng nhau.
+                </button>
+            </div>
+            <div class="quiz-feedback h-20 flex items-center"></div>
+        </div>
+    </div>
+    `,
+    // Câu 8
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10">
+        <div class="w-full max-w-5xl bg-white p-12 rounded-[50px] shadow-2xl border-4 border-indigo-100 flex flex-col items-center">
+            <div class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-2xl mb-8 shadow-lg">CÂU HỎI 8</div>
+            <h3 class="text-4xl md:text-4xl font-black text-gray-800 text-center mb-12 leading-tight">Hình khai triển của một hình lập phương (để gấp thành hình) bao gồm bao nhiêu hình vuông?</h3>
+            <div class="grid grid-cols-2 gap-8 w-full">
+                <button onclick="window.checkPreQuiz124(this, false, 8)" class="quiz-opt p-8 text-4xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    A. 4
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 8)" class="quiz-opt p-8 text-4xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    B. 5
+                </button>
+                <button onclick="window.checkPreQuiz124(this, true, 8)" class="quiz-opt p-8 text-4xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    C. 6
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 8)" class="quiz-opt p-8 text-4xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    D. 8
+                </button>
+            </div>
+            <div class="quiz-feedback h-24 flex items-center"></div>
+        </div>
+    </div>
+    `,
+    // Câu 9
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10">
+        <div class="w-full max-w-5xl bg-white p-12 rounded-[50px] shadow-2xl border-4 border-indigo-100 flex flex-col items-center">
+            <div class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-2xl mb-8 shadow-lg">CÂU HỎI 9</div>
+            <h3 class="text-3xl md:text-4xl font-black text-gray-800 text-center mb-10 leading-tight border-b-4 border-dashed border-indigo-100 pb-8">Tính diện tích xung quanh của hình lập phương có độ dài cạnh là 12 cm.</h3>
+            <div class="grid grid-cols-2 gap-6 w-full">
+                <button onclick="window.checkPreQuiz124(this, false, 9)" class="quiz-opt p-8 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    A. 144 cm²
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 9)" class="quiz-opt p-8 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    B. 576 cm³
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 9)" class="quiz-opt p-8 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    C. 864 cm²
+                </button>
+                <button onclick="window.checkPreQuiz124(this, true, 9)" class="quiz-opt p-8 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    D. 576 cm²
+                </button>
+            </div>
+            <div class="quiz-feedback h-20 flex items-center"></div>
+        </div>
+    </div>
+    `,
+    // Câu 10
+    `
+    <div class="presentation-slide-content h-full flex flex-col justify-center items-center w-full px-10">
+        <div class="w-full max-w-5xl bg-white p-12 rounded-[50px] shadow-2xl border-4 border-indigo-100 flex flex-col items-center">
+            <div class="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-2xl mb-8 shadow-lg">CÂU HỎI 10</div>
+            <h3 class="text-3xl md:text-4xl font-black text-gray-800 text-center mb-10 leading-tight">Tính diện tích toàn phần của hình lập phương có độ dài cạnh là 1,5 m.</h3>
+            <div class="grid grid-cols-2 gap-6 w-full">
+                <button onclick="window.checkPreQuiz124(this, false, 10)" class="quiz-opt p-8 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    A. 9 m²
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 10)" class="quiz-opt p-8 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    B. 13,5 m³
+                </button>
+                <button onclick="window.checkPreQuiz124(this, true, 10)" class="quiz-opt p-8 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    C. 13,5 m²
+                </button>
+                <button onclick="window.checkPreQuiz124(this, false, 10)" class="quiz-opt p-8 text-3xl font-black border-4 border-gray-100 rounded-3xl bg-white hover:bg-purple-50 transition-all text-center">
+                    D. 2,25 m²
+                </button>
+            </div>
+            <div class="quiz-feedback h-20 flex items-center"></div>
+        </div>
+    </div>
+    `,
+    // Trang 11: KHÁM PHÁ
     `
         <div class="h-full flex flex-col justify-center items-center w-full px-10">
-            <div class="bg-white p-8 md:p-12 rounded-[40px] border-4 border-purple-200 shadow-2xl relative w-full max-w-6xl">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                    <div class="space-y-8">
-                        <div class="flex items-center gap-4">
-                            <span class="bg-amber-500 text-white w-14 h-14 rounded-2xl flex items-center justify-center font-black text-3xl shadow-lg">?</span>
-                            <h4 class="text-4xl md:text-5xl font-black text-amber-700 uppercase">Khám phá công thức</h4>
-                        </div>
-                        <p class="text-3xl font-bold leading-tight text-gray-700 italic border-l-8 border-amber-400 pl-6 bg-amber-50 py-6 rounded-r-2xl">
-                            "Hình lập phương đó chứa được 3 × 3 × 3 = 27 (hình lập phương nhỏ)."
-                        </p>
-                        <div class="bg-purple-50 p-8 rounded-3xl border-2 border-purple-100 shadow-inner">
-                            <p class="text-3xl font-black text-purple-900 space-y-4">
-                                <span class="block">📏 Chiều dài: 3 cm</span>
-                                <span class="block">📏 Chiều rộng: 3 cm</span>
-                                <span class="block">📏 Chiều cao: 3 cm</span>
-                                <span class="block mt-6 text-4xl text-purple-600">3 &times; 3 &times; 3 = 27 (cm³)</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex justify-center relative group">
-                        <img src="hinh_anh/toan/toan_tap_2/124-khampha.png" alt="Khám phá" class="w-full max-w-[600px] h-auto rounded-[40px] shadow-2xl border-8 border-white group-hover:rotate-1 transition-transform">
-                    </div>
+            <h2 class="text-5xl md:text-7xl font-black text-purple-600 mb-10 tracking-widest uppercase animate-slide-in-top">KHÁM PHÁ</h2>
+            <div class="bg-white p-8 md:p-12 rounded-[40px] border-4 border-purple-200 shadow-2xl relative w-full max-w-6xl flex justify-center items-center">
+                <div class="flex justify-center relative group">
+                    <img src="hinh_anh/toan/toan_tap_2/124-khampha.png" alt="Khám phá" class="w-full max-w-[700px] h-auto rounded-[40px] shadow-2xl border-8 border-white group-hover:rotate-1 transition-transform">
                 </div>
             </div>
         </div>
     `,
+    // Trang 12: Mô phỏng Khối Lập Phương 3D
     `
         <div class="h-full flex flex-col justify-center items-center w-full px-10">
             <h2 class="text-5xl font-black text-purple-600 mb-8 w-full max-w-6xl text-center">Mô phỏng Khối Lập Phương 3D</h2>
@@ -828,6 +1124,7 @@ lesson124.presentation = [
             </div>
         </div>
     `,
+    // Trang 13: Công thức Thể tích hình lập phương
     `
         <div class="h-full flex flex-col justify-center items-center w-full px-10">
             <div class="bg-gradient-to-r from-pink-500 to-rose-600 p-12 lg:p-16 rounded-[60px] text-white shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center gap-16 w-full max-w-6xl">

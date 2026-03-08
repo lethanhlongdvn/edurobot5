@@ -390,23 +390,11 @@ export const Quiz = {
 
         if (isCorrect) {
             quiz.streak++;
-            let earnedPoints = 10;
-            let comboMulti = false;
+            const earnedPoints = 10;
+            if (quiz.streak >= 3) quiz.playSFX('streak');
+            else quiz.playSFX('correct');
 
-            // Streak Bonus
-            if (quiz.streak >= 3) {
-                earnedPoints += 5; // combo bonus x3
-                quiz.playSFX('streak');
-                comboMulti = 3;
-            } else if (quiz.streak >= 5) {
-                earnedPoints += 10; // combo bonus x5
-                quiz.playSFX('streak');
-                comboMulti = 5;
-            } else {
-                quiz.playSFX('correct');
-            }
-
-            quiz.score += earnedPoints;
+            quiz.score = Math.min(100, quiz.score + earnedPoints);
             const sDisplay = document.getElementById('quiz-score-display');
             if (sDisplay) {
                 sDisplay.innerText = quiz.score;
@@ -415,16 +403,6 @@ export const Quiz = {
             }
 
             quiz.showLottieFeedback(true);
-            if (comboMulti) {
-                // Flash combo message
-                const layer = document.getElementById('quiz-gamification-layer');
-                if (layer) {
-                    const combo = document.createElement('div');
-                    combo.className = 'absolute bottom-10 animate-bounce text-2xl font-black text-rose-500 bg-white/90 px-4 py-1 rounded-full border-2 border-rose-300 drop-shadow-lg z-50';
-                    combo.innerText = `COMBO X${quiz.streak}! +${earnedPoints} Điểm`;
-                    layer.appendChild(combo);
-                }
-            }
 
             if (typeof confetti === 'function') confetti({ particleCount: 50, spread: 60, origin: { y: 0.8 } });
         } else {

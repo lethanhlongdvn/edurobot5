@@ -11,8 +11,8 @@ export const lesson114 = {
                     <span class="text-4xl md:text-5xl">🎯</span>
                 </div>
                 <div>
-                    <h3 class="text-2xl md:text-4xl font-black italic tracking-tight">Luyện tập chung</h3>
-                    <p class="text-base md:text-2xl font-bold opacity-90">Giải toán thực tế về thể tích</p>
+                    <h3 class="text-3xl md:text-5xl lg:text-6xl font-black italic tracking-tight">Luyện tập chung</h3>
+                    <p class="text-xl md:text-3xl lg:text-4xl font-bold opacity-90">Giải toán thực tế về thể tích</p>
                 </div>
             </div>
         </div>
@@ -21,55 +21,55 @@ export const lesson114 = {
         <div class="space-y-6">
             <!-- Bài 1 -->
             <div id="box-114-1" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <p class="font-black text-2xl md:text-3xl mb-4 text-emerald-700 flex items-center gap-3">
-                    <span class="w-12 h-12 md:w-14 md:h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black">1</span>
+                <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-emerald-700 flex items-center gap-3">
+                    <span class="w-14 h-14 md:w-16 md:h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">1</span>
                     Hình nào có thể tích lớn nhất?
                 </p>
                 <div class="bg-emerald-50 p-4 md:p-6 rounded-[32px] grid grid-cols-2 md:grid-cols-4 gap-3">
                     <button onclick="checkB114B1('A')" class="b114-1-opt bg-white p-4 rounded-2xl border-2 border-gray-100 flex flex-col items-center">
-                        <img src="hinh_anh/toan/114-b1-A.png" class="h-24 md:h-28 object-contain mb-2">
-                        <span class="font-black text-xl text-gray-300">A</span>
+                        <img src="hinh_anh/toan/114-b1-A.png" class="h-28 md:h-40 lg:h-48 object-contain mb-2">
+                        <span class="font-black text-2xl md:text-3xl lg:text-4xl text-gray-300">A</span>
                     </button>
                     <button onclick="checkB114B1('B')" class="b114-1-opt bg-white p-4 rounded-2xl border-2 border-gray-100 flex flex-col items-center">
-                        <img src="hinh_anh/toan/114-b1-B.png" class="h-24 md:h-28 object-contain mb-2">
-                        <span class="font-black text-xl text-gray-300">B</span>
+                        <img src="hinh_anh/toan/114-b1-B.png" class="h-28 md:h-40 lg:h-48 object-contain mb-2">
+                        <span class="font-black text-2xl md:text-3xl lg:text-4xl text-gray-300">B</span>
                     </button>
                     <button onclick="checkB114B1('C')" class="b114-1-opt bg-white p-4 rounded-2xl border-2 border-gray-100 flex flex-col items-center">
-                        <img src="hinh_anh/toan/114-b1-C.png" class="h-24 md:h-28 object-contain mb-2">
-                        <span class="font-black text-xl text-gray-300">C</span>
+                        <img src="hinh_anh/toan/114-b1-C.png" class="h-28 md:h-40 lg:h-48 object-contain mb-2">
+                        <span class="font-black text-2xl md:text-3xl lg:text-4xl text-gray-300">C</span>
                     </button>
                     <button onclick="checkB114B1('D')" class="b114-1-opt bg-white p-4 rounded-2xl border-2 border-gray-100 flex flex-col items-center">
-                        <img src="hinh_anh/toan/114-b1-D.png" class="h-24 md:h-28 object-contain mb-2">
-                        <span class="font-black text-xl text-gray-300">D</span>
+                        <img src="hinh_anh/toan/114-b1-D.png" class="h-28 md:h-40 lg:h-48 object-contain mb-2">
+                        <span class="font-black text-2xl md:text-3xl lg:text-4xl text-gray-300">D</span>
                     </button>
                 </div>
             </div>
 
             <!-- Bài 2 -->
             <div id="box-114-2" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <p class="font-black text-2xl md:text-3xl mb-4 text-emerald-700 flex items-center gap-3">
-                    <span class="w-12 h-12 md:w-14 md:h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black">2</span>
+                <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-emerald-700 flex items-center gap-3">
+                    <span class="w-14 h-14 md:w-16 md:h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">2</span>
                     Dùng hết 174m³ nước/năm. Trung bình mỗi tháng?
                 </p>
                 <div class="bg-emerald-50 p-4 md:p-6 rounded-[32px] flex flex-col gap-3">
-                    <textarea id="ans-b114-2-text" rows="3" class="w-full bg-white border-none rounded-2xl p-4 text-xl md:text-2xl font-bold shadow-inner" placeholder="Nhập lời giải..."></textarea>
+                    <textarea id="ans-b114-2-text" rows="4" class="w-full bg-white border-none rounded-2xl p-4 text-xl md:text-3xl lg:text-4xl font-bold shadow-inner" placeholder="Nhập lời giải..."></textarea>
                     <div class="flex justify-end gap-2">
-                        <button onclick="checkLesson114AI('2')" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-2xl text-sm md:text-base font-black">AI CHẤM ✨</button>
+                        <button onclick="checkLesson114AI('2')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-2xl text-base md:text-xl lg:text-2xl font-black">AI CHẤM ✨</button>
                     </div>
-                    <div id="fb-b114-2-ai" class="hidden text-sm md:text-base font-bold p-3 bg-white rounded-xl border-l-4 border-blue-500"></div>
+                    <div id="fb-b114-2-ai" class="hidden text-base md:text-xl lg:text-2xl font-bold p-4 bg-white rounded-xl border-l-4 border-blue-500"></div>
                 </div>
             </div>
 
             <!-- Bài 3 -->
             <div id="box-114-3" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <p class="font-black text-2xl md:text-3xl mb-4 text-emerald-700 flex items-center gap-3">
-                    <span class="w-12 h-12 md:w-14 md:h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black">3</span>
+                <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-emerald-700 flex items-center gap-3">
+                    <span class="w-14 h-14 md:w-16 md:h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">3</span>
                     Hộp đỏ, xanh, vàng: 25cm³; 24,5cm³; 25,75dm³.
                 </p>
                 <div class="bg-yellow-50 p-4 md:p-6 rounded-[32px] grid grid-cols-1 md:grid-cols-3 gap-3">
                     <div class="bg-white p-4 rounded-2xl">
-                        <p class="text-sm md:text-base font-bold text-red-500">Hộp Đỏ</p>
-                        <select id="b114-3-do" class="w-full bg-red-50 border-none rounded-xl text-base font-black p-2">
+                        <p class="text-base md:text-xl lg:text-2xl font-bold text-red-500">Hộp Đỏ</p>
+                        <select id="b114-3-do" class="w-full bg-red-50 border-none rounded-xl text-lg md:text-2xl lg:text-3xl font-black p-3">
                             <option value="">Chọn...</option>
                             <option value="25 cm3">25 cm³</option>
                             <option value="24.5 cm3">24,5 cm³</option>
@@ -77,8 +77,8 @@ export const lesson114 = {
                         </select>
                     </div>
                     <div class="bg-white p-4 rounded-2xl">
-                        <p class="text-sm md:text-base font-bold text-blue-500">Hộp Xanh</p>
-                        <select id="b114-3-xanh" class="w-full bg-blue-50 border-none rounded-xl text-base font-black p-2">
+                        <p class="text-base md:text-xl lg:text-2xl font-bold text-blue-500">Hộp Xanh</p>
+                        <select id="b114-3-xanh" class="w-full bg-blue-50 border-none rounded-xl text-lg md:text-2xl lg:text-3xl font-black p-3">
                             <option value="">Chọn...</option>
                             <option value="25 cm3">25 cm³</option>
                             <option value="24.5 cm3">24,5 cm³</option>
@@ -86,8 +86,8 @@ export const lesson114 = {
                         </select>
                     </div>
                     <div class="bg-white p-4 rounded-2xl">
-                        <p class="text-sm md:text-base font-bold text-yellow-500">Hộp Vàng</p>
-                        <select id="b114-3-vang" class="w-full bg-yellow-50 border-none rounded-xl text-base font-black p-2">
+                        <p class="text-base md:text-xl lg:text-2xl font-bold text-yellow-500">Hộp Vàng</p>
+                        <select id="b114-3-vang" class="w-full bg-yellow-50 border-none rounded-xl text-lg md:text-2xl lg:text-3xl font-black p-3">
                             <option value="">Chọn...</option>
                             <option value="25 cm³">25 cm³</option>
                             <option value="24.5 cm3">24,5 cm³</option>
@@ -99,16 +99,16 @@ export const lesson114 = {
 
             <!-- Bài 4 -->
             <div id="box-114-4" class="p-6 md:p-8 bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden">
-                <p class="font-black text-2xl md:text-3xl mb-4 text-emerald-700 flex items-center gap-3">
-                    <span class="w-12 h-12 md:w-14 md:h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black">4</span>
+                <p class="font-black text-3xl md:text-4xl lg:text-5xl mb-4 text-emerald-700 flex items-center gap-3">
+                    <span class="w-14 h-14 md:w-16 md:h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl md:text-3xl">4</span>
                     Bể 240 m³, giảm 15%. Còn lại?
                 </p>
                 <div class="bg-emerald-50 p-4 md:p-6 rounded-[32px] flex flex-col gap-3">
-                    <textarea id="ans-b114-4-text" rows="3" class="w-full bg-white border-none rounded-2xl p-4 text-xl md:text-2xl font-bold shadow-inner" placeholder="Nhập lời giải..."></textarea>
+                    <textarea id="ans-b114-4-text" rows="4" class="w-full bg-white border-none rounded-2xl p-4 text-xl md:text-3xl lg:text-4xl font-bold shadow-inner" placeholder="Nhập lời giải..."></textarea>
                     <div class="flex justify-end gap-2">
-                        <button onclick="checkLesson114AI('4')" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-2xl text-sm md:text-base font-black">AI CHẤM ✨</button>
+                        <button onclick="checkLesson114AI('4')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-2xl text-base md:text-xl lg:text-2xl font-black">AI CHẤM ✨</button>
                     </div>
-                    <div id="fb-b114-4-ai" class="hidden text-sm md:text-base font-bold p-3 bg-white rounded-xl border-l-4 border-blue-500"></div>
+                    <div id="fb-b114-4-ai" class="hidden text-base md:text-xl lg:text-2xl font-bold p-4 bg-white rounded-xl border-l-4 border-blue-500"></div>
                 </div>
             </div>
 
@@ -166,5 +166,7 @@ export const lesson114 = {
             </script>
         </div>
     `,
-    "quizPool": []
+    "quizPool": [
+        { "question": "Đổi 2400 dm³ ra m³ được:", "options": ["2,4 m³", "24 m³", "0,24 m³", "240 m³"], "answer": 0, "level": 1 }
+    ]
 };

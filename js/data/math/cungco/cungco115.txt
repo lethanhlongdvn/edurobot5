@@ -1,0 +1,15 @@
+1. Hình khai triển của hình lập phương gồm mấy hình vuông bằng nhau? | 4 hình, 5 hình, 6 hình, 8 hình | 3
+2. Hình khai triển của hình trụ gồm mấy hình tròn? | 0 hình, 1 hình, 2 hình, 3 hình | 3
+3. Phần mặt bên của hình trụ khi khai triển là hình gì? | Hình vuông, Hình tròn, Hình chữ nhật, Hình tam giác | 3
+4. Hình khai triển của hình hộp chữ nhật thường có bao nhiêu hình chữ nhật? | 4 hình, 5 hình, 6 hình, 8 hình | 3
+5. Khi gấp hình khai triển, các cạnh trùng nhau phải: | Khác độ dài, Bằng nhau, Gấp đôi nhau, Không cần bằng nhau | 2
+6. Một hình khai triển có 6 hình vuông nhưng sắp xếp sai có gấp được hình lập phương không? | Luôn gấp được, Không bao giờ, Có thể có hoặc không, Chỉ gấp được hình trụ | 3
+7. Hình khai triển của hình trụ có 2 hình tròn là: | 2 đáy, 2 mặt bên, 2 nắp, 2 cạnh | 1
+8. Khi khai triển hình hộp chữ nhật ta có mấy cặp mặt đối diện bằng nhau? | 1 cặp, 2 cặp, 3 cặp, 4 cặp | 3
+9. Hình lập phương là trường hợp đặc biệt của hình hộp chữ nhật vì: | Có 6 mặt, Có 4 mặt, Các cạnh bằng nhau, Có 2 đáy | 3
+10. Nếu cắt một hình trụ dọc theo một đường sinh rồi trải ra, phần mặt bên là: | Hình tròn, Hình chữ nhật, Hình vuông, Hình tam giác | 2
+11. Trong hình khai triển của hình lập phương, tổng số mặt là: | 4, 5, 6, 7 | 3
+12. Hình nào chắc chắn không thể là khai triển của hình lập phương? | 6 hình vuông, 5 hình vuông, 6 hình chữ nhật, 6 hình tròn | 2
+13. Khi gấp khai triển, mặt nào chạm vào nhau? | Các mặt kề nhau, Các mặt đối diện, Mặt đáy luôn chạm, Không mặt nào chạm | 1
+14. Hình khai triển của hình trụ gồm: | 1 hình chữ nhật, 2 hình chữ nhật, 1 hình chữ nhật và 2 hình tròn, 2 hình vuông | 3
+15. Để gấp thành hình hộp chữ nhật, các mặt phải là: | Hình chữ nhật, Hình tròn, Hình tam giác, Hình thoi | 1

@@ -255,5 +255,7 @@ export const lesson116 = {
             </script>
         </div>
     `,
-    "quizPool": []
+    "quizPool": [
+        { "question": "Hình khai triển của hình lập phương gồm mấy hình vuông bằng nhau?", "options": ["4", "5", "6", "8"], "answer": 2, "level": 1 }
+    ]
 };

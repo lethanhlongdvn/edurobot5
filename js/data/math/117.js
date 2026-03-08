@@ -314,5 +314,7 @@ export const lesson117 = {
             </script>
         </div>
     `,
-    "quizPool": []
+    "quizPool": [
+        { "question": "Diện tích xung quanh của hình hộp chữ nhật bằng tổng diện tích của:", "options": ["6 mặt", "4 mặt bên", "2 mặt đáy", "1 mặt"], "answer": 1, "level": 1 }
+    ]
 };

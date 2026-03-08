@@ -1,0 +1,15 @@
+1. 1 m³ bằng bao nhiêu dm³? | 10 dm³, 100 dm³, 1000 dm³, 10 000 dm³ | 3
+2. 1 dm³ bằng bao nhiêu cm³? | 10 cm³, 100 cm³, 1000 cm³, 10 000 cm³ | 3
+3. 2 m³ bằng bao nhiêu dm³? | 200 dm³, 2000 dm³, 20 000 dm³, 200 000 dm³ | 2
+4. 0,5 m³ bằng bao nhiêu dm³? | 50 dm³, 500 dm³, 5000 dm³, 5 dm³ | 2
+5. 1500 dm³ đổi ra m³ được: | 0.15 m³, 1.5 m³, 15 m³, 150 m³ | 2
+6. 300 000 cm³ đổi ra dm³ được: | 3 dm³, 30 dm³, 300 dm³, 3000 dm³ | 3
+7. 1 m³ bằng bao nhiêu cm³? | 1000 cm³, 10 000 cm³, 100 000 cm³, 1 000 000 cm³ | 4
+8. 2500 dm³ bằng bao nhiêu m³? | 0.25 m³, 2.5 m³, 25 m³, 250 m³ | 2
+9. 0,08 m³ bằng bao nhiêu dm³? | 8 dm³, 80 dm³, 800 dm³, 0,8 dm³ | 2
+10. 720 dm³ bằng bao nhiêu cm³? | 7200 cm³, 72 000 cm³, 720 000 cm³, 7 200 000 cm³ | 3
+11. Số đo 3,2 m³ đọc là: | Ba phẩy hai mét khối, Ba phẩy hai đề xi mét khối, Ba mươi hai mét khối, Ba hai mét khối | 1
+12. 1,75 m³ bằng bao nhiêu dm³? | 175 dm³, 1750 dm³, 17 500 dm³, 1.75 dm³ | 2
+13. 900 000 cm³ đổi ra m³ được: | 0.09 m³, 0.9 m³, 9 m³, 90 m³ | 2
+14. 4,06 m³ bằng bao nhiêu dm³? | 406 dm³, 4060 dm³, 40 600 dm³, 4.06 dm³ | 2
+15. 0,004 m³ bằng bao nhiêu cm³? | 4 cm³, 40 cm³, 400 cm³, 4000 cm³ | 4

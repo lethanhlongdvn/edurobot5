@@ -215,5 +215,7 @@ export const lesson118 = {
         </div>
     `,
 
-    "quizPool": []
+    "quizPool": [
+        { "question": "Diện tích toàn phần của hình hộp chữ nhật bằng:", "options": ["Sxq", "Sxq + 1 đáy", "Sxq + 2 đáy", "Chu vi đáy"], "answer": 2, "level": 1 }
+    ]
 };

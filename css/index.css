@@ -688,14 +688,9 @@ html.dark #presentation-overlay .close-btn {
     background: rgba(45, 104, 255, 0.8);
     color: white;
     border: none;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 800;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-size: 1.2rem;
     font-weight: 800;
     cursor: pointer;
     transition: transform 0.2s, background 0.2s;

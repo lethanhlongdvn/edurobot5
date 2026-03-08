@@ -17,3 +17,10 @@ Thumbs.db
 
 # IDE
 .vscode/
+
+# Local logs
+debug.log
+
+# Office documents
+*.doc
+*.docx

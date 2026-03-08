@@ -218,5 +218,7 @@ export const lesson119 = {
             }
         </script>
     `,
-    "quizPool": []
+    "quizPool": [
+        { "question": "Nếu biết Sxq và Stp của hình hộp chữ nhật, ta suy ra được:", "options": ["Diện tích 1 đáy", "Diện tích 2 đáy", "Chu vi đáy", "Thể tích"], "answer": 0, "level": 1 }
+    ]
 };
